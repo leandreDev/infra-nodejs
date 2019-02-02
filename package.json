@@ -1,0 +1,62 @@
+{
+  "name": "infra-nodejs",
+  "version": "1.0.1",
+  "description": "librarie de communication avec la base infra for nodeJS",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "buildGen": "tsc -p ./generator/src/gen-tsconfig.json",
+    "generator": "node ./generator/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "testing": "node dist/test.js",
+    "pub": "git checkout master && npm version $npm_package_version && git checkout dev",
+    "vMajor": "npm run initNewVBrach && npm --no-git-tag-version version major  && npm run pub",
+    "vMinor": "npm run initNewVBrach && npm --no-git-tag-version version minor && npm run pub",
+    "initNewVBrach": "git checkout -b V$npm_package_version && git push --set-upstream origin V$npm_package_version && git add -A && git push && git checkout dev ",
+    "vPatch": "npm --no-git-tag-version version patch && npm run pub",
+    "postversion": "git tag dev_$npm_package_version && git add -A && git commit -m 'dev_$npm_package_version' && git push && git push --tags ",
+    "publi": "npm run build && npm run vPatch"
+  },
+  "scriptsDev": {
+    "pub": "git checkout master && npm version $npm_package_version && git checkout dev",
+    "vMajor": "npm run initNewVBrach && npm --no-git-tag-version version major  && npm run pub",
+    "vMinor": "npm run initNewVBrach && npm --no-git-tag-version version minor && npm run pub",
+    "initNewVBrach": "git checkout -b V$npm_package_version && git push --set-upstream origin V$npm_package_version && git add -A && git push && git checkout dev ",
+    "vPatch": "npm --no-git-tag-version version patch && npm run pub",
+    "postversion": "git tag dev_$npm_package_version && git add -A && git commit -m 'dev_$npm_package_version' && git push && git push --tags ",
+    "publi": "npm run build && npm run vPatch"
+  },
+  "scriptsMaster": {
+    "rmDist": "rm -r dist",
+    "devDistToMaster": "git checkout dev -- dist",
+    "updateMaster": "npm run rmDist && npm run devDistToMaster",
+    "version": "npm run updateMaster && git add -A ",
+    "postversion": "git push && git push --tags "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HF-dev/infra-nodejs.git"
+  },
+  "author": "hf-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HF-dev/infra-nodejs/issues"
+  },
+  "homepage": "https://github.com/HF-dev/infra-nodejs#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "fs-extra": "^3.0.1",
+    "lodash": "^4.17.4",
+    "node-jose": "^1.0.0",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5",
+    "utils": "github:hf-dev/utils"
+  },
+  "devDependencies": {
+    "@types/assert": "0.0.31",
+    "@types/fs-extra": "^3.0.3",
+    "@types/lodash": "^4.14.66",
+    "cross-env": "^5.1.1"
+  }
+}
