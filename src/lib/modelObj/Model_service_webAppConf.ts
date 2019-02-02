@@ -26,6 +26,14 @@ export class Model_service_webAppConf extends   Model_service   implements Inter
         }
         
     
+        
+        if(obj["ssoBddUrl"] != undefined){
+          
+           this["ssoBddUrl"] = obj["ssoBddUrl"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -35,7 +43,13 @@ export class Model_service_webAppConf extends   Model_service   implements Inter
               /**
         url de la bdd de l'infra
         */
-               public "infraBddUrl"?:string ;
+               public "infraBddUrl":string ;
+              
+       
+              /**
+        url de la bdd du sso
+        */
+               public "ssoBddUrl":string ;
               
        
 
@@ -46,6 +60,10 @@ export class Model_service_webAppConf extends   Model_service   implements Inter
           var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
           
               
+              if( isCompleteObj && (target["infraBddUrl"] == null || target["infraBddUrl"] == undefined) ){
+                  throw new Error(path + "infraBddUrl is required") ;
+              }
+              
               if(target["infraBddUrl"] != null && target["infraBddUrl"] != undefined ){
               
                 let _infraBddUrl  = target["infraBddUrl"] ;
@@ -53,6 +71,27 @@ export class Model_service_webAppConf extends   Model_service   implements Inter
 
                  if(! _.isString(_infraBddUrl)){
                     throw new Error(path+"infraBddUrl is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["ssoBddUrl"] == null || target["ssoBddUrl"] == undefined) ){
+                  throw new Error(path + "ssoBddUrl is required") ;
+              }
+              
+              if(target["ssoBddUrl"] != null && target["ssoBddUrl"] != undefined ){
+              
+                let _ssoBddUrl  = target["ssoBddUrl"] ;
+                
+
+                 if(! _.isString(_ssoBddUrl)){
+                    throw new Error(path+"ssoBddUrl is not a string") ;
                     
                   }
                   

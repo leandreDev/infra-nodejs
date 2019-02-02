@@ -15,15 +15,30 @@ class Model_service_webAppConf extends Model_service_1.Model_service {
         if (obj["infraBddUrl"] != undefined) {
             this["infraBddUrl"] = obj["infraBddUrl"].toString();
         }
+        if (obj["ssoBddUrl"] != undefined) {
+            this["ssoBddUrl"] = obj["ssoBddUrl"].toString();
+        }
     }
     static check(target, isCompleteObj = true, path = "") {
         return super.check(target, isCompleteObj, path)
             .then((boolean) => {
             var promArr = [Promise.resolve(true)];
+            if (isCompleteObj && (target["infraBddUrl"] == null || target["infraBddUrl"] == undefined)) {
+                throw new Error(path + "infraBddUrl is required");
+            }
             if (target["infraBddUrl"] != null && target["infraBddUrl"] != undefined) {
                 let _infraBddUrl = target["infraBddUrl"];
                 if (!_.isString(_infraBddUrl)) {
                     throw new Error(path + "infraBddUrl is not a string");
+                }
+            }
+            if (isCompleteObj && (target["ssoBddUrl"] == null || target["ssoBddUrl"] == undefined)) {
+                throw new Error(path + "ssoBddUrl is required");
+            }
+            if (target["ssoBddUrl"] != null && target["ssoBddUrl"] != undefined) {
+                let _ssoBddUrl = target["ssoBddUrl"];
+                if (!_.isString(_ssoBddUrl)) {
+                    throw new Error(path + "ssoBddUrl is not a string");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });

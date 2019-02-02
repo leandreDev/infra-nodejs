@@ -1325,5 +1325,6 @@ interface de la class service_webAppConf
 description permet de générer les fichier de conf des app (css, js, ...)
 */
 export interface Iservice_webAppConf extends Iservice {
-    "infraBddUrl"?: string;
+    "infraBddUrl": string;
+    "ssoBddUrl": string;
 }

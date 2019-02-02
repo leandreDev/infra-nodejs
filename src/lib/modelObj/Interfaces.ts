@@ -3222,7 +3222,11 @@
     export interface Iservice_webAppConf extends   Iservice{
         
               
-               "infraBddUrl"?:string;
+               "infraBddUrl":string;
+              
+       
+              
+               "ssoBddUrl":string;
               
        
    }
