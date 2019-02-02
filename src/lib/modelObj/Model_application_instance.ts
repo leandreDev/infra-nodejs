@@ -49,17 +49,34 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
         
     
         
-        if(obj["users"] != undefined && obj["users"] != null && _.isArray(obj["users"])){
+        if(obj["end_client"] != undefined){
           
-          this["users"] = obj["users"].map((value)=>{
-            if(_.isString(value)){
-              return value ;
-            }else if(value._id){
-              return value._id ;
-            }
-          })
+          if(_.isString(obj["end_client"])){
+            this["end_client"] = obj["end_client"];
+          }else if(obj["end_client"]._id){
+            this["end_client"] = obj["end_client"]._id ;
+          }
           
+        }
+        
+    
+        
+        if(obj["oidc_client"] != undefined){
           
+          if(_.isString(obj["oidc_client"])){
+            this["oidc_client"] = obj["oidc_client"];
+          }else if(obj["oidc_client"]._id){
+            this["oidc_client"] = obj["oidc_client"]._id ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["css"] != undefined){
+          
+           this["css"] = obj["css"].toString() ;
+           
         }
         
     
@@ -88,9 +105,21 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
               
        
               /**
-        les utilisateurs
+        le end_client de l aplli
         */
-               public "users"?:string[] ;
+               public "end_client":string ;
+              
+       
+              /**
+        le compte oidc du client pour la connection
+        */
+               public "oidc_client":string ;
+              
+       
+              /**
+        la css root de l'app
+        */
+               public "css"?:string ;
               
        
 
@@ -146,15 +175,54 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
            }
            
               
-              if(target["users"] != null && target["users"] != undefined ){
+              if( isCompleteObj && (target["end_client"] == null || target["end_client"] == undefined) ){
+                  throw new Error(path + "end_client is required") ;
+              }
               
-                  target["users"].forEach((_users , index:number)=>{
+              if(target["end_client"] != null && target["end_client"] != undefined ){
+              
+                  let _end_client  = target["end_client"] ;
                   
-                  if( ! _.isString(_users)){
-                   throw new Error(path + "users is not a string") ;
+                  if( ! _.isString(_end_client)){
+                   throw new Error(path + "end_client is not a string") ;
                   }
-                  });
+                  
 
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["oidc_client"] == null || target["oidc_client"] == undefined) ){
+                  throw new Error(path + "oidc_client is required") ;
+              }
+              
+              if(target["oidc_client"] != null && target["oidc_client"] != undefined ){
+              
+                  let _oidc_client  = target["oidc_client"] ;
+                  
+                  if( ! _.isString(_oidc_client)){
+                   throw new Error(path + "oidc_client is not a string") ;
+                  }
+                  
+
+              
+              
+           }
+           
+              
+              if(target["css"] != null && target["css"] != undefined ){
+              
+                let _css  = target["css"] ;
+                
+
+                 if(! _.isString(_css)){
+                    throw new Error(path+"css is not a string") ;
+                    
+                  }
+                  
+                  
+                 
               
               
            }

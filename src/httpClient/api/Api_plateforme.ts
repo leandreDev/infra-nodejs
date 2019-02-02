@@ -53,11 +53,14 @@ export class api_collection_plateform {
 		this.application_configuration_appApprenant= new HttpServiceBase<Interfaces.Iapplication_configuration_appApprenant>({url:conf.url + "collection/application_configuration_appApprenant/" , secure:conf.secure})  ;
 
 		 
-	
+		 
+		this.AppConf_minds_up= new HttpServiceBase<Interfaces.IAppConf_minds_up>({url:conf.url + "collection/AppConf_minds_up/" , secure:conf.secure})  ;
 
-		this.application_instance= new HttpServiceBase<Interfaces.Iapplication_instance>( {url:conf.url + "collection/application_instance/" , secure:conf.secure} )  ;
+		 
+		 
+		this.AppConf_minds_up_admin= new HttpServiceBase<Interfaces.IAppConf_minds_up_admin>({url:conf.url + "collection/AppConf_minds_up_admin/" , secure:conf.secure})  ;
 
-		
+		 
 	
 
 		this.oidc_account= new HttpServiceBase<Interfaces.Ioidc_account>( {url:conf.url + "collection/oidc_account/" , secure:conf.secure} )  ;
@@ -173,6 +176,14 @@ export class api_collection_plateform {
 		this.Service_scorm_gateway= new HttpServiceBase<Interfaces.IService_scorm_gateway>({url:conf.url + "collection/Service_scorm_gateway/" , secure:conf.secure})  ;
 
 		 
+		 
+		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_webAppConf= new HttpServiceBase<Interfaces.Iservice_webAppConf>({url:conf.url + "collection/service_webAppConf/" , secure:conf.secure})  ;
+
+		 
 	
 
 		this.protoschema= new HttpServiceBase<Interfaces.Iprotoschema>( {url:conf.url + "collection/protoschema/" , secure:conf.secure} )  ;
@@ -235,6 +246,21 @@ export class api_collection_plateform {
 
 		
 	
+
+		this.Request= new HttpServiceBase<Interfaces.IRequest>( {url:conf.url + "collection/Request/" , secure:conf.secure} )  ;
+
+		
+	
+
+		this.ftpsConfig= new HttpServiceBase<Interfaces.IftpsConfig>( {url:conf.url + "collection/ftpsConfig/" , secure:conf.secure} )  ;
+
+		
+	
+
+		this.application_instance= new HttpServiceBase<Interfaces.Iapplication_instance>( {url:conf.url + "collection/application_instance/" , secure:conf.secure} )  ;
+
+		
+	
 	}
 	protected url:string ;
 	protected secure: UtilsSecu = null
@@ -292,6 +318,10 @@ export class api_collection_plateform {
 		 
 		 	Iapplication_configuration_appApprenant      c'est la configuration d'une application Apprenant
 		 
+		 	IAppConf_minds_up      config de l'app minds up
+		 
+		 	IAppConf_minds_up_admin      config de l'app minds up admin
+		 
 		 
 		*/
 		public application_configuration:HttpServiceBase<Interfaces.Iapplication_configuration> ;
@@ -345,17 +375,22 @@ export class api_collection_plateform {
 		public application_configuration_appApprenant:HttpServiceBase<Interfaces.Iapplication_configuration_appApprenant> ;
 
 		 
-	
-		/**
-		 service d'accès à la collection :application_instance
-		 desc: c'est le couple application configuration 
-		 
-
-		 
+		 /**
+		 service d'accès a la sous-collection :AppConf_minds_up
+		 desc: config de l'app minds up
+		 info: vous ne pouvez voir que ce type d'objet
 		*/
-		public application_instance:HttpServiceBase<Interfaces.Iapplication_instance> ;
+		public AppConf_minds_up:HttpServiceBase<Interfaces.IAppConf_minds_up> ;
 
-		
+		 
+		 /**
+		 service d'accès a la sous-collection :AppConf_minds_up_admin
+		 desc: config de l'app minds up admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public AppConf_minds_up_admin:HttpServiceBase<Interfaces.IAppConf_minds_up_admin> ;
+
+		 
 	
 		/**
 		 service d'accès à la collection :oidc_account
@@ -435,6 +470,10 @@ export class api_collection_plateform {
 		 	Iservice_planned_tasks      Service de Taches planifiées
 		 
 		 	IService_scorm_gateway      service passerelle d'un package scorm vers l'interne
+		 
+		 	Iservice_mindsUp      service minds up metier
+		 
+		 	Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
 		 
 		 
 		*/
@@ -641,6 +680,22 @@ export class api_collection_plateform {
 		public Service_scorm_gateway:HttpServiceBase<Interfaces.IService_scorm_gateway> ;
 
 		 
+		 /**
+		 service d'accès a la sous-collection :service_mindsUp
+		 desc: service minds up metier
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_webAppConf
+		 desc: permet de générer les fichier de conf des app (css, js, ...)
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_webAppConf:HttpServiceBase<Interfaces.Iservice_webAppConf> ;
+
+		 
 	
 		/**
 		 service d'accès à la collection :protoschema
@@ -786,6 +841,39 @@ export class api_collection_plateform {
 		 
 		*/
 		public end_client:HttpServiceBase<Interfaces.Iend_client> ;
+
+		
+	
+		/**
+		 service d'accès à la collection :Request
+		 desc: description d'une requete avec request
+		 
+
+		 
+		*/
+		public Request:HttpServiceBase<Interfaces.IRequest> ;
+
+		
+	
+		/**
+		 service d'accès à la collection :ftpsConfig
+		 desc: configuration pour un service sftp
+		 
+
+		 
+		*/
+		public ftpsConfig:HttpServiceBase<Interfaces.IftpsConfig> ;
+
+		
+	
+		/**
+		 service d'accès à la collection :application_instance
+		 desc: c'est le couple application configuration 
+		 
+
+		 
+		*/
+		public application_instance:HttpServiceBase<Interfaces.Iapplication_instance> ;
 
 		
 	

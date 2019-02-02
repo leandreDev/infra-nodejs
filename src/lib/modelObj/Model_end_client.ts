@@ -86,7 +86,7 @@ export class Model_end_client extends  Base  implements Interface.Iend_client {
               if(value._class){
                 return new Index[value._class](value) ;
               }else{
-                return new Index[""](value) ;
+                return new Index["notice_field"](value) ;
               }
             })
             
@@ -133,7 +133,7 @@ export class Model_end_client extends  Base  implements Interface.Iend_client {
               /**
         client notices
         */
-               public "client_notices"?:Interface.I[];
+               public "client_notices"?:Interface.Inotice_field[];
               
        
 
@@ -238,9 +238,9 @@ export class Model_end_client extends  Base  implements Interface.Iend_client {
                   target["client_notices"].forEach((_client_notices , index:number)=>{
                   
                   
-                    promArr.push( Index[""].check(_client_notices, isCompleteObj , path+"client_notices.")
+                    promArr.push( Index["notice_field"].check(_client_notices, isCompleteObj , path+"client_notices.")
                       .catch((err)=>{
-                        throw new Error(path+"client_notices index: "+ index +"is not ")
+                        throw new Error(path+"client_notices index: "+ index +"is not notice_field")
                         
 
                       }) )

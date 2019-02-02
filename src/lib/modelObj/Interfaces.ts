@@ -1088,30 +1088,6 @@
    }
 
     /**
-    interface de la class application_instance 
-    description c'est le couple application configuration 
-   */
-    export interface Iapplication_instance extends  IBase {
-        
-              
-               "name"?:string;
-              
-       
-              
-               "application"?:string | Iapplication;
-              
-       
-              
-               "configuration"?:string | Iapplication_configuration;
-              
-       
-              
-               "users"?:string[] | Ioidc_account[];
-              
-       
-   }
-
-    /**
     interface de la class passport_strategie_twitter 
     description Passport strategy for authenticating with Twitter using the OAuth 1.0a API. (https://github.com/jaredhanson/passport-twitter)
    */
@@ -2994,7 +2970,7 @@
               
        
               
-               "client_notices"?:I[];
+               "client_notices"?:Inotice_field[];
               
        
    }
@@ -3031,6 +3007,222 @@
        
               
                "apiUrl"?:string;
+              
+       
+   }
+
+    /**
+    interface de la class notice_field 
+    description notice field
+   */
+    export interface Inotice_field extends  IBase {
+        
+              
+               "name"?:string;
+              
+       
+              
+               "content"?:string;
+              
+       
+   }
+
+    /**
+    interface de la class client_notices 
+    description notices for client
+   */
+    export interface Iclient_notices extends  IBase {
+        
+              
+               "values"?:Inotice_field[];
+              
+       
+   }
+
+    /**
+    interface de la class Request 
+    description description d'une requete avec request
+   */
+    export interface IRequest extends  IBase {
+        
+              
+               "url":string;
+              
+       
+              
+               "method":string;
+              
+       
+              
+               "headers"?:Iname_value[];
+              
+       
+              
+               "body"?:any;              
+              
+       
+   }
+
+    /**
+    interface de la class ftpsConfig 
+    description configuration pour un service sftp
+   */
+    export interface IftpsConfig extends  IBase {
+        
+              
+               "port":number;
+              
+       
+              
+               "certPath":string;
+              
+       
+              
+               "folderPath":string;
+              
+       
+              
+               "login":string;
+              
+       
+              
+               "password"?:string;
+              
+       
+              
+               "newFileHook"?:IRequest;
+              
+       
+   }
+
+    /**
+    interface de la class AppConf_minds_up 
+    description config de l'app minds up
+   */
+    export interface IAppConf_minds_up extends   Iapplication_configuration{
+        
+              
+               "apiUrl":string;
+              
+       
+              
+               "serviceMindsUpUrl":string;
+              
+       
+              
+               "videoUrl"?:string;
+              
+       
+              
+               "introTitle"?:string;
+              
+       
+              
+               "introText"?:string;
+              
+       
+   }
+
+    /**
+    interface de la class AppConf_minds_up_admin 
+    description config de l'app minds up admin
+   */
+    export interface IAppConf_minds_up_admin extends   Iapplication_configuration{
+        
+              
+               "apiUrl":string;
+              
+       
+              
+               "serviceMindsUpUrl":string;
+              
+       
+   }
+
+    /**
+    interface de la class service_mindsUp 
+    description service minds up metier
+   */
+    export interface Iservice_mindsUp extends   Iservice{
+        
+              
+               "urlApi":string;
+              
+       
+              
+               "urlSsoApi":string;
+              
+       
+              
+               "urlLicenceService":string;
+              
+       
+              
+               "ftpConf"?:IftpsConfig;
+              
+       
+              
+               "appId":string | Iapplication_instance;
+              
+       
+              
+               "adminAppId":string | Iapplication_instance;
+              
+       
+              
+               "end_client"?:string | Iend_client;
+              
+       
+              
+               "licenceStoreId":string;
+              
+       
+              
+               "adminLicenceStoreId":string;
+              
+       
+   }
+
+    /**
+    interface de la class application_instance 
+    description c'est le couple application configuration 
+   */
+    export interface Iapplication_instance extends  IBase {
+        
+              
+               "name"?:string;
+              
+       
+              
+               "application"?:string | Iapplication;
+              
+       
+              
+               "configuration"?:string | Iapplication_configuration;
+              
+       
+              
+               "end_client":string | Iend_client;
+              
+       
+              
+               "oidc_client":string | Ioidc_Client;
+              
+       
+              
+               "css"?:string;
+              
+       
+   }
+
+    /**
+    interface de la class service_webAppConf 
+    description permet de générer les fichier de conf des app (css, js, ...)
+   */
+    export interface Iservice_webAppConf extends   Iservice{
+        
+              
+               "infraBddUrl"?:string;
               
        
    }
