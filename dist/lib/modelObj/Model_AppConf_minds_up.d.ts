@@ -10,18 +10,6 @@ export declare class Model_AppConf_minds_up extends Model_application_configurat
     constructor(obj?: any);
     _class: string;
     /**
-url de l'api de la bdd minds Up
-*/
-    "apiUrl": string;
-    /**
-url du service metier mindsUp
-*/
-    "serviceMindsUpUrl": string;
-    /**
-url de la video d intro sur youtub
-*/
-    "videoUrl"?: string;
-    /**
 titre de l'introduction
 */
     "introTitle"?: string;
@@ -29,6 +17,30 @@ titre de l'introduction
 texte de l'introduction
 */
     "introText"?: string;
+    /**
+url de la video d intro sur youtub
+*/
+    "videoUrl"?: string;
+    /**
+texte à afficher pour valider la rgpd
+*/
+    "rgpd"?: string;
+    /**
+url du service metier mindsUp
+*/
+    "serviceMindsUpUrl": string;
+    /**
+indique si l'on peut observer son manager
+*/
+    "managerObservable"?: boolean;
+    /**
+défini si le manager peut créer un échange sur lui même
+*/
+    "managerAutoExchange"?: boolean;
+    /**
+url de l'api de la bdd minds Up
+*/
+    "apiUrl": string;
     static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
     static create(target: any, path?: string): Promise<Model_AppConf_minds_up>;
 }

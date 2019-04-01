@@ -22,6 +22,18 @@ urlLicenceService
 */
     "urlLicenceService": string;
     /**
+url du service d'infra
+*/
+    "urlInfraBdd": string;
+    /**
+id de la configuration de l'app cliente
+*/
+    "applicationClienteConfig": string;
+    /**
+id de la configuration de l'app admin
+*/
+    "applicationAdminConfig": string;
+    /**
 configuration du ftp
 */
     "ftpConf"?: Interface.IftpsConfig;

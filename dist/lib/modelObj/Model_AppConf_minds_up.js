@@ -12,33 +12,57 @@ class Model_AppConf_minds_up extends Model_application_configuration_1.Model_app
     constructor(obj = {}) {
         super(obj);
         this._class = "AppConf_minds_up";
-        if (obj["apiUrl"] != undefined) {
-            this["apiUrl"] = obj["apiUrl"].toString();
-        }
-        if (obj["serviceMindsUpUrl"] != undefined) {
-            this["serviceMindsUpUrl"] = obj["serviceMindsUpUrl"].toString();
-        }
-        if (obj["videoUrl"] != undefined) {
-            this["videoUrl"] = obj["videoUrl"].toString();
-        }
         if (obj["introTitle"] != undefined) {
             this["introTitle"] = obj["introTitle"].toString();
         }
         if (obj["introText"] != undefined) {
             this["introText"] = obj["introText"].toString();
         }
+        if (obj["videoUrl"] != undefined) {
+            this["videoUrl"] = obj["videoUrl"].toString();
+        }
+        if (obj["rgpd"] != undefined) {
+            this["rgpd"] = obj["rgpd"].toString();
+        }
+        if (obj["serviceMindsUpUrl"] != undefined) {
+            this["serviceMindsUpUrl"] = obj["serviceMindsUpUrl"].toString();
+        }
+        if (obj["managerObservable"] != undefined) {
+            this["managerObservable"] = new Boolean(obj["managerObservable"]).valueOf();
+        }
+        if (obj["managerAutoExchange"] != undefined) {
+            this["managerAutoExchange"] = new Boolean(obj["managerAutoExchange"]).valueOf();
+        }
+        if (obj["apiUrl"] != undefined) {
+            this["apiUrl"] = obj["apiUrl"].toString();
+        }
     }
     static check(target, isCompleteObj = true, path = "") {
         return super.check(target, isCompleteObj, path)
             .then((boolean) => {
             var promArr = [Promise.resolve(true)];
-            if (isCompleteObj && (target["apiUrl"] == null || target["apiUrl"] == undefined)) {
-                throw new Error(path + "apiUrl is required");
+            if (target["introTitle"] != null && target["introTitle"] != undefined) {
+                let _introTitle = target["introTitle"];
+                if (!_.isString(_introTitle)) {
+                    throw new Error(path + "introTitle is not a string");
+                }
             }
-            if (target["apiUrl"] != null && target["apiUrl"] != undefined) {
-                let _apiUrl = target["apiUrl"];
-                if (!_.isString(_apiUrl)) {
-                    throw new Error(path + "apiUrl is not a string");
+            if (target["introText"] != null && target["introText"] != undefined) {
+                let _introText = target["introText"];
+                if (!_.isString(_introText)) {
+                    throw new Error(path + "introText is not a string");
+                }
+            }
+            if (target["videoUrl"] != null && target["videoUrl"] != undefined) {
+                let _videoUrl = target["videoUrl"];
+                if (!_.isString(_videoUrl)) {
+                    throw new Error(path + "videoUrl is not a string");
+                }
+            }
+            if (target["rgpd"] != null && target["rgpd"] != undefined) {
+                let _rgpd = target["rgpd"];
+                if (!_.isString(_rgpd)) {
+                    throw new Error(path + "rgpd is not a string");
                 }
             }
             if (isCompleteObj && (target["serviceMindsUpUrl"] == null || target["serviceMindsUpUrl"] == undefined)) {
@@ -50,22 +74,25 @@ class Model_AppConf_minds_up extends Model_application_configuration_1.Model_app
                     throw new Error(path + "serviceMindsUpUrl is not a string");
                 }
             }
-            if (target["videoUrl"] != null && target["videoUrl"] != undefined) {
-                let _videoUrl = target["videoUrl"];
-                if (!_.isString(_videoUrl)) {
-                    throw new Error(path + "videoUrl is not a string");
+            if (target["managerObservable"] != null && target["managerObservable"] != undefined) {
+                let _managerObservable = target["managerObservable"];
+                if (!_.isBoolean(_managerObservable)) {
+                    throw new Error(path + "managerObservable is not a boolean");
                 }
             }
-            if (target["introTitle"] != null && target["introTitle"] != undefined) {
-                let _introTitle = target["introTitle"];
-                if (!_.isString(_introTitle)) {
-                    throw new Error(path + "introTitle is not a string");
+            if (target["managerAutoExchange"] != null && target["managerAutoExchange"] != undefined) {
+                let _managerAutoExchange = target["managerAutoExchange"];
+                if (!_.isBoolean(_managerAutoExchange)) {
+                    throw new Error(path + "managerAutoExchange is not a boolean");
                 }
             }
-            if (target["introText"] != null && target["introText"] != undefined) {
-                let _introText = target["introText"];
-                if (!_.isString(_introText)) {
-                    throw new Error(path + "introText is not a string");
+            if (isCompleteObj && (target["apiUrl"] == null || target["apiUrl"] == undefined)) {
+                throw new Error(path + "apiUrl is required");
+            }
+            if (target["apiUrl"] != null && target["apiUrl"] != undefined) {
+                let _apiUrl = target["apiUrl"];
+                if (!_.isString(_apiUrl)) {
+                    throw new Error(path + "apiUrl is not a string");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });

@@ -18,6 +18,9 @@ class Model_AppConf_minds_up_admin extends Model_application_configuration_1.Mod
         if (obj["serviceMindsUpUrl"] != undefined) {
             this["serviceMindsUpUrl"] = obj["serviceMindsUpUrl"].toString();
         }
+        if (obj["rgpd"] != undefined) {
+            this["rgpd"] = obj["rgpd"].toString();
+        }
     }
     static check(target, isCompleteObj = true, path = "") {
         return super.check(target, isCompleteObj, path)
@@ -39,6 +42,12 @@ class Model_AppConf_minds_up_admin extends Model_application_configuration_1.Mod
                 let _serviceMindsUpUrl = target["serviceMindsUpUrl"];
                 if (!_.isString(_serviceMindsUpUrl)) {
                     throw new Error(path + "serviceMindsUpUrl is not a string");
+                }
+            }
+            if (target["rgpd"] != null && target["rgpd"] != undefined) {
+                let _rgpd = target["rgpd"];
+                if (!_.isString(_rgpd)) {
+                    throw new Error(path + "rgpd is not a string");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });

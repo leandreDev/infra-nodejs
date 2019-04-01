@@ -17,6 +17,10 @@ url de l'api
 url du service métier mindsUp
 */
     "serviceMindsUpUrl": string;
+    /**
+texte a afficher pour valider la rgpd
+*/
+    "rgpd"?: string;
     static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
     static create(target: any, path?: string): Promise<Model_AppConf_minds_up_admin>;
 }

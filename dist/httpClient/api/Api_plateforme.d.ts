@@ -1,4 +1,4 @@
-import { UtilsSecu, CtxInterpretor, IHttpResult, HttpServiceBase, HttpAbstractService, MiddleWareConfig } from "utils";
+import { UtilsSecu, CtxInterpretor, IHttpResult, HttpServiceBase, HttpServiceAdminBase, HttpAbstractService, MiddleWareConfig } from "utils";
 import * as Interfaces from "../../lib/modelObj/Interfaces";
 export declare class api_collection_plateform {
     constructor(conf: any);
@@ -16,12 +16,14 @@ export declare class api_collection_plateform {
      
     */
     certificat: HttpServiceBase<Interfaces.Icertificat>;
+    admin_certificat: HttpServiceAdminBase<Interfaces.Icertificat>;
     /**
     service d'accès a la sous-collection :rsa
     desc: certificat RSA
     info: vous ne pouvez voir que ce type d'objet
    */
     rsa: HttpServiceBase<Interfaces.Irsa>;
+    admin_rsa: HttpServiceAdminBase<Interfaces.Irsa>;
     /**
      service d'accès à la collection :oidc_Client
      desc: description d'un client openId (c'est une application)
@@ -30,6 +32,7 @@ export declare class api_collection_plateform {
      
     */
     oidc_Client: HttpServiceBase<Interfaces.Ioidc_Client>;
+    admin_oidc_Client: HttpServiceAdminBase<Interfaces.Ioidc_Client>;
     /**
      service d'accès à la collection :application_configuration
      desc: c'est la configuration d'une application
@@ -49,61 +52,70 @@ export declare class api_collection_plateform {
      
         Iapplication_configuration_appApprenant      c'est la configuration d'une application Apprenant
      
-        IAppConf_minds_up      config de l'app minds up
-     
         IAppConf_minds_up_admin      config de l'app minds up admin
+     
+        IAppConf_minds_up      config de l'app minds up
      
      
     */
     application_configuration: HttpServiceBase<Interfaces.Iapplication_configuration>;
+    admin_application_configuration: HttpServiceAdminBase<Interfaces.Iapplication_configuration>;
     /**
     service d'accès a la sous-collection :application_configuration_phoneCard
     desc: configuration d'une application phoneCard
     info: vous ne pouvez voir que ce type d'objet
    */
     application_configuration_phoneCard: HttpServiceBase<Interfaces.Iapplication_configuration_phoneCard>;
+    admin_application_configuration_phoneCard: HttpServiceAdminBase<Interfaces.Iapplication_configuration_phoneCard>;
     /**
     service d'accès a la sous-collection :application_configuration_appCoach
     desc: c'est la configuration d'une application Coach
     info: vous ne pouvez voir que ce type d'objet
    */
     application_configuration_appCoach: HttpServiceBase<Interfaces.Iapplication_configuration_appCoach>;
+    admin_application_configuration_appCoach: HttpServiceAdminBase<Interfaces.Iapplication_configuration_appCoach>;
     /**
     service d'accès a la sous-collection :application_configuration_super_admin_mongo
     desc: configuration de l'application superAdminMongo
     info: vous ne pouvez voir que ce type d'objet
    */
     application_configuration_super_admin_mongo: HttpServiceBase<Interfaces.Iapplication_configuration_super_admin_mongo>;
+    admin_application_configuration_super_admin_mongo: HttpServiceAdminBase<Interfaces.Iapplication_configuration_super_admin_mongo>;
     /**
     service d'accès a la sous-collection :application_configuration_antico
     desc: configuration d'un parcourt anticoruption
     info: vous ne pouvez voir que ce type d'objet
    */
     application_configuration_antico: HttpServiceBase<Interfaces.Iapplication_configuration_antico>;
+    admin_application_configuration_antico: HttpServiceAdminBase<Interfaces.Iapplication_configuration_antico>;
     /**
     service d'accès a la sous-collection :application_configuration_appClient
     desc: c'est la configuration d'une application Client
     info: vous ne pouvez voir que ce type d'objet
    */
     application_configuration_appClient: HttpServiceBase<Interfaces.Iapplication_configuration_appClient>;
+    admin_application_configuration_appClient: HttpServiceAdminBase<Interfaces.Iapplication_configuration_appClient>;
     /**
     service d'accès a la sous-collection :application_configuration_appApprenant
     desc: c'est la configuration d'une application Apprenant
     info: vous ne pouvez voir que ce type d'objet
    */
     application_configuration_appApprenant: HttpServiceBase<Interfaces.Iapplication_configuration_appApprenant>;
-    /**
-    service d'accès a la sous-collection :AppConf_minds_up
-    desc: config de l'app minds up
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    AppConf_minds_up: HttpServiceBase<Interfaces.IAppConf_minds_up>;
+    admin_application_configuration_appApprenant: HttpServiceAdminBase<Interfaces.Iapplication_configuration_appApprenant>;
     /**
     service d'accès a la sous-collection :AppConf_minds_up_admin
     desc: config de l'app minds up admin
     info: vous ne pouvez voir que ce type d'objet
    */
     AppConf_minds_up_admin: HttpServiceBase<Interfaces.IAppConf_minds_up_admin>;
+    admin_AppConf_minds_up_admin: HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>;
+    /**
+    service d'accès a la sous-collection :AppConf_minds_up
+    desc: config de l'app minds up
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    AppConf_minds_up: HttpServiceBase<Interfaces.IAppConf_minds_up>;
+    admin_AppConf_minds_up: HttpServiceAdminBase<Interfaces.IAppConf_minds_up>;
     /**
      service d'accès à la collection :oidc_account
      desc: compte de l'utilisateur
@@ -112,6 +124,7 @@ export declare class api_collection_plateform {
      
     */
     oidc_account: HttpServiceBase<Interfaces.Ioidc_account>;
+    admin_oidc_account: HttpServiceAdminBase<Interfaces.Ioidc_account>;
     /**
      service d'accès à la collection :service_access
      desc: décrit les régles de paramètre des servies
@@ -120,6 +133,7 @@ export declare class api_collection_plateform {
      
     */
     service_access: HttpServiceBase<Interfaces.Iservice_access>;
+    admin_service_access: HttpServiceAdminBase<Interfaces.Iservice_access>;
     /**
      service d'accès à la collection :service
      desc: identification du service
@@ -146,8 +160,6 @@ export declare class api_collection_plateform {
         Iservice_configuration      c'est le service de distribution des configurations des services
      
         Iservice_nginxConfigurator      service_nginxConfigurator
-     
-        Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
      
         Iservice_push_notification      Service pour gérer les notifications push des applications
      
@@ -177,175 +189,214 @@ export declare class api_collection_plateform {
      
         IService_scorm_gateway      service passerelle d'un package scorm vers l'interne
      
+        Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
+     
+        Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
+     
         Iservice_mindsUp      service minds up metier
      
-        Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
+        Iservice_client_ftp      client ftps
      
      
     */
     service: HttpServiceBase<Interfaces.Iservice>;
+    admin_service: HttpServiceAdminBase<Interfaces.Iservice>;
     /**
     service d'accès a la sous-collection :service_sso
     desc: c'est un sso
     info: vous ne pouvez voir que ce type d'objet
    */
     service_sso: HttpServiceBase<Interfaces.Iservice_sso>;
+    admin_service_sso: HttpServiceAdminBase<Interfaces.Iservice_sso>;
     /**
     service d'accès a la sous-collection :service_init
     desc: service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
     info: vous ne pouvez voir que ce type d'objet
    */
     service_init: HttpServiceBase<Interfaces.Iservice_init>;
+    admin_service_init: HttpServiceAdminBase<Interfaces.Iservice_init>;
     /**
     service d'accès a la sous-collection :service_mailtoinfra
     desc: service qui permet de configurer l'authentification a partir d'un mail
     info: vous ne pouvez voir que ce type d'objet
    */
     service_mailtoinfra: HttpServiceBase<Interfaces.Iservice_mailtoinfra>;
+    admin_service_mailtoinfra: HttpServiceAdminBase<Interfaces.Iservice_mailtoinfra>;
     /**
     service d'accès a la sous-collection :service_licence_token
     desc: c'est un service en charge de valider les licences et retourner les configurations des applications web
     info: vous ne pouvez voir que ce type d'objet
    */
     service_licence_token: HttpServiceBase<Interfaces.Iservice_licence_token>;
+    admin_service_licence_token: HttpServiceAdminBase<Interfaces.Iservice_licence_token>;
     /**
     service d'accès a la sous-collection :service_goshabaGateway
     desc: passerelle pour goshaba
     info: vous ne pouvez voir que ce type d'objet
    */
     service_goshabaGateway: HttpServiceBase<Interfaces.Iservice_goshabaGateway>;
+    admin_service_goshabaGateway: HttpServiceAdminBase<Interfaces.Iservice_goshabaGateway>;
     /**
     service d'accès a la sous-collection :service_mongo
     desc: configure un service mongo
     info: vous ne pouvez voir que ce type d'objet
    */
     service_mongo: HttpServiceBase<Interfaces.Iservice_mongo>;
+    admin_service_mongo: HttpServiceAdminBase<Interfaces.Iservice_mongo>;
     /**
     service d'accès a la sous-collection :service_socketIo
     desc: communication temps réelle multi format
     info: vous ne pouvez voir que ce type d'objet
    */
     service_socketIo: HttpServiceBase<Interfaces.Iservice_socketIo>;
+    admin_service_socketIo: HttpServiceAdminBase<Interfaces.Iservice_socketIo>;
     /**
     service d'accès a la sous-collection :service_supervision
     desc: service_supervision
     info: vous ne pouvez voir que ce type d'objet
    */
     service_supervision: HttpServiceBase<Interfaces.Iservice_supervision>;
+    admin_service_supervision: HttpServiceAdminBase<Interfaces.Iservice_supervision>;
     /**
     service d'accès a la sous-collection :service_configuration
     desc: c'est le service de distribution des configurations des services
     info: vous ne pouvez voir que ce type d'objet
    */
     service_configuration: HttpServiceBase<Interfaces.Iservice_configuration>;
+    admin_service_configuration: HttpServiceAdminBase<Interfaces.Iservice_configuration>;
     /**
     service d'accès a la sous-collection :service_nginxConfigurator
     desc: service_nginxConfigurator
     info: vous ne pouvez voir que ce type d'objet
    */
     service_nginxConfigurator: HttpServiceBase<Interfaces.Iservice_nginxConfigurator>;
-    /**
-    service d'accès a la sous-collection :service_nginxMultiConfigurator
-    desc: configuration d'un service nginx multi configuration
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_nginxMultiConfigurator: HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator>;
+    admin_service_nginxConfigurator: HttpServiceAdminBase<Interfaces.Iservice_nginxConfigurator>;
     /**
     service d'accès a la sous-collection :service_push_notification
     desc: Service pour gérer les notifications push des applications
     info: vous ne pouvez voir que ce type d'objet
    */
     service_push_notification: HttpServiceBase<Interfaces.Iservice_push_notification>;
+    admin_service_push_notification: HttpServiceAdminBase<Interfaces.Iservice_push_notification>;
     /**
     service d'accès a la sous-collection :service_like
     desc: service permettant de liker un objet de la base
     info: vous ne pouvez voir que ce type d'objet
    */
     service_like: HttpServiceBase<Interfaces.Iservice_like>;
+    admin_service_like: HttpServiceAdminBase<Interfaces.Iservice_like>;
     /**
     service d'accès a la sous-collection :service_dumy_fso
     desc: simple remote file system a n utiliser que pour des test
     info: vous ne pouvez voir que ce type d'objet
    */
     service_dumy_fso: HttpServiceBase<Interfaces.Iservice_dumy_fso>;
+    admin_service_dumy_fso: HttpServiceAdminBase<Interfaces.Iservice_dumy_fso>;
     /**
     service d'accès a la sous-collection :service_signin
     desc: service d'enregistrement
     info: vous ne pouvez voir que ce type d'objet
    */
     service_signin: HttpServiceBase<Interfaces.Iservice_signin>;
+    admin_service_signin: HttpServiceAdminBase<Interfaces.Iservice_signin>;
     /**
     service d'accès a la sous-collection :service_sendGrid
     desc: permet d'envoyer des mail via l'api send grid v3
     info: vous ne pouvez voir que ce type d'objet
    */
     service_sendGrid: HttpServiceBase<Interfaces.Iservice_sendGrid>;
+    admin_service_sendGrid: HttpServiceAdminBase<Interfaces.Iservice_sendGrid>;
     /**
     service d'accès a la sous-collection :service_trainingCoursesService
     desc: service de gestion des parcourts de formation
     info: vous ne pouvez voir que ce type d'objet
    */
     service_trainingCoursesService: HttpServiceBase<Interfaces.Iservice_trainingCoursesService>;
+    admin_service_trainingCoursesService: HttpServiceAdminBase<Interfaces.Iservice_trainingCoursesService>;
     /**
     service d'accès a la sous-collection :service_orchestrator
     desc: service d'orchestration
     info: vous ne pouvez voir que ce type d'objet
    */
     service_orchestrator: HttpServiceBase<Interfaces.Iservice_orchestrator>;
+    admin_service_orchestrator: HttpServiceAdminBase<Interfaces.Iservice_orchestrator>;
     /**
     service d'accès a la sous-collection :service_socket_io
     desc: service messagerie de soket.io
     info: vous ne pouvez voir que ce type d'objet
    */
     service_socket_io: HttpServiceBase<Interfaces.Iservice_socket_io>;
+    admin_service_socket_io: HttpServiceAdminBase<Interfaces.Iservice_socket_io>;
     /**
     service d'accès a la sous-collection :service_tutor
     desc: service de gestion des message tutoré
     info: vous ne pouvez voir que ce type d'objet
    */
     service_tutor: HttpServiceBase<Interfaces.Iservice_tutor>;
+    admin_service_tutor: HttpServiceAdminBase<Interfaces.Iservice_tutor>;
     /**
     service d'accès a la sous-collection :service_init_js
     desc: service qui retourne un init.js
     info: vous ne pouvez voir que ce type d'objet
    */
     service_init_js: HttpServiceBase<Interfaces.Iservice_init_js>;
+    admin_service_init_js: HttpServiceAdminBase<Interfaces.Iservice_init_js>;
     /**
     service d'accès a la sous-collection :service_infra_admin
     desc: administration de l'infra
     info: vous ne pouvez voir que ce type d'objet
    */
     service_infra_admin: HttpServiceBase<Interfaces.Iservice_infra_admin>;
+    admin_service_infra_admin: HttpServiceAdminBase<Interfaces.Iservice_infra_admin>;
     /**
     service d'accès a la sous-collection :mailtoinfra2
     desc: retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
     info: vous ne pouvez voir que ce type d'objet
    */
     mailtoinfra2: HttpServiceBase<Interfaces.Imailtoinfra2>;
+    admin_mailtoinfra2: HttpServiceAdminBase<Interfaces.Imailtoinfra2>;
     /**
     service d'accès a la sous-collection :service_planned_tasks
     desc: Service de Taches planifiées
     info: vous ne pouvez voir que ce type d'objet
    */
     service_planned_tasks: HttpServiceBase<Interfaces.Iservice_planned_tasks>;
+    admin_service_planned_tasks: HttpServiceAdminBase<Interfaces.Iservice_planned_tasks>;
     /**
     service d'accès a la sous-collection :Service_scorm_gateway
     desc: service passerelle d'un package scorm vers l'interne
     info: vous ne pouvez voir que ce type d'objet
    */
     Service_scorm_gateway: HttpServiceBase<Interfaces.IService_scorm_gateway>;
-    /**
-    service d'accès a la sous-collection :service_mindsUp
-    desc: service minds up metier
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_mindsUp: HttpServiceBase<Interfaces.Iservice_mindsUp>;
+    admin_Service_scorm_gateway: HttpServiceAdminBase<Interfaces.IService_scorm_gateway>;
     /**
     service d'accès a la sous-collection :service_webAppConf
     desc: permet de générer les fichier de conf des app (css, js, ...)
     info: vous ne pouvez voir que ce type d'objet
    */
     service_webAppConf: HttpServiceBase<Interfaces.Iservice_webAppConf>;
+    admin_service_webAppConf: HttpServiceAdminBase<Interfaces.Iservice_webAppConf>;
+    /**
+    service d'accès a la sous-collection :service_nginxMultiConfigurator
+    desc: configuration d'un service nginx multi configuration
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_nginxMultiConfigurator: HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator>;
+    admin_service_nginxMultiConfigurator: HttpServiceAdminBase<Interfaces.Iservice_nginxMultiConfigurator>;
+    /**
+    service d'accès a la sous-collection :service_mindsUp
+    desc: service minds up metier
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_mindsUp: HttpServiceBase<Interfaces.Iservice_mindsUp>;
+    admin_service_mindsUp: HttpServiceAdminBase<Interfaces.Iservice_mindsUp>;
+    /**
+    service d'accès a la sous-collection :service_client_ftp
+    desc: client ftps
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_client_ftp: HttpServiceBase<Interfaces.Iservice_client_ftp>;
+    admin_service_client_ftp: HttpServiceAdminBase<Interfaces.Iservice_client_ftp>;
     /**
      service d'accès à la collection :protoschema
      desc: protoschema est un méta modéle. il permet de créer les autres modèle de la base
@@ -354,6 +405,7 @@ export declare class api_collection_plateform {
      
     */
     protoschema: HttpServiceBase<Interfaces.Iprotoschema>;
+    admin_protoschema: HttpServiceAdminBase<Interfaces.Iprotoschema>;
     /**
      service d'accès à la collection :mail
      desc: collection de mail
@@ -366,12 +418,14 @@ export declare class api_collection_plateform {
      
     */
     mail: HttpServiceBase<Interfaces.Imail>;
+    admin_mail: HttpServiceAdminBase<Interfaces.Imail>;
     /**
     service d'accès a la sous-collection :mail_sendgrid
     desc: objet envoyé a l'api sendgrid
     info: vous ne pouvez voir que ce type d'objet
    */
     mail_sendgrid: HttpServiceBase<Interfaces.Imail_sendgrid>;
+    admin_mail_sendgrid: HttpServiceAdminBase<Interfaces.Imail_sendgrid>;
     /**
      service d'accès à la collection :service_serviceOrchestrator
      desc: service d'orchestration de service. ce service permet de créer des routes qui enchaîne des middleware paramétré qui consomment les autres services
@@ -380,6 +434,7 @@ export declare class api_collection_plateform {
      
     */
     service_serviceOrchestrator: HttpServiceBase<Interfaces.Iservice_serviceOrchestrator>;
+    admin_service_serviceOrchestrator: HttpServiceAdminBase<Interfaces.Iservice_serviceOrchestrator>;
     /**
      service d'accès à la collection :_view
      desc: créer des pipe d'agrégation intérogeable https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/
@@ -392,12 +447,14 @@ export declare class api_collection_plateform {
      
     */
     _view: HttpServiceBase<Interfaces.I_view>;
+    admin__view: HttpServiceAdminBase<Interfaces.I_view>;
     /**
     service d'accès a la sous-collection :_view_params
     desc: view avec des params
     info: vous ne pouvez voir que ce type d'objet
    */
     _view_params: HttpServiceBase<Interfaces.I_view_params>;
+    admin__view_params: HttpServiceAdminBase<Interfaces.I_view_params>;
     /**
      service d'accès à la collection :licence
      desc: représente la licence d'un utilisateur pour un service (ou application) distribué par un end_client
@@ -410,12 +467,14 @@ export declare class api_collection_plateform {
      
     */
     licence: HttpServiceBase<Interfaces.Ilicence>;
+    admin_licence: HttpServiceAdminBase<Interfaces.Ilicence>;
     /**
     service d'accès a la sous-collection :licence_temporelle
     desc: c'est une licence qui dure un certain temps
     info: vous ne pouvez voir que ce type d'objet
    */
     licence_temporelle: HttpServiceBase<Interfaces.Ilicence_temporelle>;
+    admin_licence_temporelle: HttpServiceAdminBase<Interfaces.Ilicence_temporelle>;
     /**
      service d'accès à la collection :MultilangSendGridTemplate
      desc: décrit un template multi langue d'envoie de mail avec sendGrid
@@ -424,6 +483,7 @@ export declare class api_collection_plateform {
      
     */
     MultilangSendGridTemplate: HttpServiceBase<Interfaces.IMultilangSendGridTemplate>;
+    admin_MultilangSendGridTemplate: HttpServiceAdminBase<Interfaces.IMultilangSendGridTemplate>;
     /**
      service d'accès à la collection :application
      desc: liste des applications
@@ -436,12 +496,14 @@ export declare class api_collection_plateform {
      
     */
     application: HttpServiceBase<Interfaces.Iapplication>;
+    admin_application: HttpServiceAdminBase<Interfaces.Iapplication>;
     /**
     service d'accès a la sous-collection :pack_card
     desc: c'est un paquet de carte
     info: vous ne pouvez voir que ce type d'objet
    */
     pack_card: HttpServiceBase<Interfaces.Ipack_card>;
+    admin_pack_card: HttpServiceAdminBase<Interfaces.Ipack_card>;
     /**
      service d'accès à la collection :TemplateLodash
      desc: template lodash + nom
@@ -450,6 +512,7 @@ export declare class api_collection_plateform {
      
     */
     TemplateLodash: HttpServiceBase<Interfaces.ITemplateLodash>;
+    admin_TemplateLodash: HttpServiceAdminBase<Interfaces.ITemplateLodash>;
     /**
      service d'accès à la collection :end_client
      desc: c'est le client que l'on facture
@@ -458,6 +521,7 @@ export declare class api_collection_plateform {
      
     */
     end_client: HttpServiceBase<Interfaces.Iend_client>;
+    admin_end_client: HttpServiceAdminBase<Interfaces.Iend_client>;
     /**
      service d'accès à la collection :Request
      desc: description d'une requete avec request
@@ -466,6 +530,7 @@ export declare class api_collection_plateform {
      
     */
     Request: HttpServiceBase<Interfaces.IRequest>;
+    admin_Request: HttpServiceAdminBase<Interfaces.IRequest>;
     /**
      service d'accès à la collection :ftpsConfig
      desc: configuration pour un service sftp
@@ -474,6 +539,7 @@ export declare class api_collection_plateform {
      
     */
     ftpsConfig: HttpServiceBase<Interfaces.IftpsConfig>;
+    admin_ftpsConfig: HttpServiceAdminBase<Interfaces.IftpsConfig>;
     /**
      service d'accès à la collection :application_instance
      desc: c'est le couple application configuration
@@ -482,6 +548,7 @@ export declare class api_collection_plateform {
      
     */
     application_instance: HttpServiceBase<Interfaces.Iapplication_instance>;
+    admin_application_instance: HttpServiceAdminBase<Interfaces.Iapplication_instance>;
 }
 /**
     accès à la vue :Client
