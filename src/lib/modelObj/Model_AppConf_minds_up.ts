@@ -19,30 +19,6 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
     super(obj);
     
         
-        if(obj["apiUrl"] != undefined){
-          
-           this["apiUrl"] = obj["apiUrl"].toString() ;
-           
-        }
-        
-    
-        
-        if(obj["serviceMindsUpUrl"] != undefined){
-          
-           this["serviceMindsUpUrl"] = obj["serviceMindsUpUrl"].toString() ;
-           
-        }
-        
-    
-        
-        if(obj["videoUrl"] != undefined){
-          
-           this["videoUrl"] = obj["videoUrl"].toString() ;
-           
-        }
-        
-    
-        
         if(obj["introTitle"] != undefined){
           
            this["introTitle"] = obj["introTitle"].toString() ;
@@ -58,30 +34,60 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
         }
         
     
+        
+        if(obj["videoUrl"] != undefined){
+          
+           this["videoUrl"] = obj["videoUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["rgpd"] != undefined){
+          
+           this["rgpd"] = obj["rgpd"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["serviceMindsUpUrl"] != undefined){
+          
+           this["serviceMindsUpUrl"] = obj["serviceMindsUpUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["managerObservable"] != undefined){
+          
+           this["managerObservable"] = new Boolean(obj["managerObservable"]).valueOf() ;
+          
+        }
+        
+    
+        
+        if(obj["managerAutoExchange"] != undefined){
+          
+           this["managerAutoExchange"] = new Boolean(obj["managerAutoExchange"]).valueOf() ;
+          
+        }
+        
+    
+        
+        if(obj["apiUrl"] != undefined){
+          
+           this["apiUrl"] = obj["apiUrl"].toString() ;
+           
+        }
+        
+    
   }
   
 
     public _class:string  = "AppConf_minds_up" ;
 
         
-              /**
-        url de l'api de la bdd minds Up
-        */
-               public "apiUrl":string ;
-              
-       
-              /**
-        url du service metier mindsUp
-        */
-               public "serviceMindsUpUrl":string ;
-              
-       
-              /**
-        url de la video d intro sur youtub
-        */
-               public "videoUrl"?:string ;
-              
-       
               /**
         titre de l'introduction
         */
@@ -94,6 +100,42 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
                public "introText"?:string ;
               
        
+              /**
+        url de la video d intro sur youtub
+        */
+               public "videoUrl"?:string ;
+              
+       
+              /**
+        texte à afficher pour valider la rgpd
+        */
+               public "rgpd"?:string ;
+              
+       
+              /**
+        url du service metier mindsUp
+        */
+               public "serviceMindsUpUrl":string ;
+              
+       
+              /**
+        indique si l'on peut observer son manager
+        */
+               public "managerObservable"?:boolean ;
+              
+       
+              /**
+        défini si le manager peut créer un échange sur lui même
+        */
+               public "managerAutoExchange"?:boolean ;
+              
+       
+              /**
+        url de l'api de la bdd minds Up
+        */
+               public "apiUrl":string ;
+              
+       
 
 
        public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
@@ -102,17 +144,64 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
           var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
           
               
-              if( isCompleteObj && (target["apiUrl"] == null || target["apiUrl"] == undefined) ){
-                  throw new Error(path + "apiUrl is required") ;
-              }
+              if(target["introTitle"] != null && target["introTitle"] != undefined ){
               
-              if(target["apiUrl"] != null && target["apiUrl"] != undefined ){
-              
-                let _apiUrl  = target["apiUrl"] ;
+                let _introTitle  = target["introTitle"] ;
                 
 
-                 if(! _.isString(_apiUrl)){
-                    throw new Error(path+"apiUrl is not a string") ;
+                 if(! _.isString(_introTitle)){
+                    throw new Error(path+"introTitle is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if(target["introText"] != null && target["introText"] != undefined ){
+              
+                let _introText  = target["introText"] ;
+                
+
+                 if(! _.isString(_introText)){
+                    throw new Error(path+"introText is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if(target["videoUrl"] != null && target["videoUrl"] != undefined ){
+              
+                let _videoUrl  = target["videoUrl"] ;
+                
+
+                 if(! _.isString(_videoUrl)){
+                    throw new Error(path+"videoUrl is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if(target["rgpd"] != null && target["rgpd"] != undefined ){
+              
+                let _rgpd  = target["rgpd"] ;
+                
+
+                 if(! _.isString(_rgpd)){
+                    throw new Error(path+"rgpd is not a string") ;
                     
                   }
                   
@@ -144,47 +233,47 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
            }
            
               
-              if(target["videoUrl"] != null && target["videoUrl"] != undefined ){
+              if(target["managerObservable"] != null && target["managerObservable"] != undefined ){
               
-                let _videoUrl  = target["videoUrl"] ;
+                let _managerObservable  = target["managerObservable"] ;
                 
-
-                 if(! _.isString(_videoUrl)){
-                    throw new Error(path+"videoUrl is not a string") ;
+                  if(! _.isBoolean(_managerObservable)){
+                    throw new Error(path+"managerObservable is not a boolean") ;
                     
                   }
-                  
-                  
-                 
+                
+
               
               
            }
            
               
-              if(target["introTitle"] != null && target["introTitle"] != undefined ){
+              if(target["managerAutoExchange"] != null && target["managerAutoExchange"] != undefined ){
               
-                let _introTitle  = target["introTitle"] ;
+                let _managerAutoExchange  = target["managerAutoExchange"] ;
                 
-
-                 if(! _.isString(_introTitle)){
-                    throw new Error(path+"introTitle is not a string") ;
+                  if(! _.isBoolean(_managerAutoExchange)){
+                    throw new Error(path+"managerAutoExchange is not a boolean") ;
                     
                   }
-                  
-                  
-                 
+                
+
               
               
            }
            
               
-              if(target["introText"] != null && target["introText"] != undefined ){
+              if( isCompleteObj && (target["apiUrl"] == null || target["apiUrl"] == undefined) ){
+                  throw new Error(path + "apiUrl is required") ;
+              }
               
-                let _introText  = target["introText"] ;
+              if(target["apiUrl"] != null && target["apiUrl"] != undefined ){
+              
+                let _apiUrl  = target["apiUrl"] ;
                 
 
-                 if(! _.isString(_introText)){
-                    throw new Error(path+"introText is not a string") ;
+                 if(! _.isString(_apiUrl)){
+                    throw new Error(path+"apiUrl is not a string") ;
                     
                   }
                   

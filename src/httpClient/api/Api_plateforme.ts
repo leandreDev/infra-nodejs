@@ -1,6 +1,6 @@
 
 
-import {UtilsSecu , CtxInterpretor ,IHttpResult , IBase ,HttpServiceBase  ,HttpAbstractService ,  MiddleWareConfig } from "utils" ;
+import {UtilsSecu , CtxInterpretor ,IHttpResult , IBase ,HttpServiceBase , HttpServiceAdminBase ,HttpAbstractService ,  MiddleWareConfig } from "utils" ;
 
 import * as Interfaces from "../../lib/modelObj/Interfaces" ;
 
@@ -13,251 +13,332 @@ export class api_collection_plateform {
 	
 
 		this.certificat= new HttpServiceBase<Interfaces.Icertificat>( {url:conf.url + "collection/certificat/" , secure:conf.secure} )  ;
+		
+		this.admin_certificat= new HttpServiceAdminBase<Interfaces.Icertificat>( {url:conf.url + "admin/certificat/" , secure:conf.secure} )  ;
 
 		
 		 
 		this.rsa= new HttpServiceBase<Interfaces.Irsa>({url:conf.url + "collection/rsa/" , secure:conf.secure})  ;
+		this.admin_rsa= new HttpServiceAdminBase<Interfaces.Irsa>({url:conf.url + "admin/rsa/" , secure:conf.secure})  ;
 
 		 
 	
 
 		this.oidc_Client= new HttpServiceBase<Interfaces.Ioidc_Client>( {url:conf.url + "collection/oidc_Client/" , secure:conf.secure} )  ;
+		
+		this.admin_oidc_Client= new HttpServiceAdminBase<Interfaces.Ioidc_Client>( {url:conf.url + "admin/oidc_Client/" , secure:conf.secure} )  ;
 
 		
 	
 
 		this.application_configuration= new HttpServiceBase<Interfaces.Iapplication_configuration>( {url:conf.url + "collection/application_configuration/" , secure:conf.secure} )  ;
+		
+		this.admin_application_configuration= new HttpServiceAdminBase<Interfaces.Iapplication_configuration>( {url:conf.url + "admin/application_configuration/" , secure:conf.secure} )  ;
 
 		
 		 
 		this.application_configuration_phoneCard= new HttpServiceBase<Interfaces.Iapplication_configuration_phoneCard>({url:conf.url + "collection/application_configuration_phoneCard/" , secure:conf.secure})  ;
+		this.admin_application_configuration_phoneCard= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_phoneCard>({url:conf.url + "admin/application_configuration_phoneCard/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.application_configuration_appCoach= new HttpServiceBase<Interfaces.Iapplication_configuration_appCoach>({url:conf.url + "collection/application_configuration_appCoach/" , secure:conf.secure})  ;
+		this.admin_application_configuration_appCoach= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_appCoach>({url:conf.url + "admin/application_configuration_appCoach/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.application_configuration_super_admin_mongo= new HttpServiceBase<Interfaces.Iapplication_configuration_super_admin_mongo>({url:conf.url + "collection/application_configuration_super_admin_mongo/" , secure:conf.secure})  ;
+		this.admin_application_configuration_super_admin_mongo= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_super_admin_mongo>({url:conf.url + "admin/application_configuration_super_admin_mongo/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.application_configuration_antico= new HttpServiceBase<Interfaces.Iapplication_configuration_antico>({url:conf.url + "collection/application_configuration_antico/" , secure:conf.secure})  ;
+		this.admin_application_configuration_antico= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_antico>({url:conf.url + "admin/application_configuration_antico/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.application_configuration_appClient= new HttpServiceBase<Interfaces.Iapplication_configuration_appClient>({url:conf.url + "collection/application_configuration_appClient/" , secure:conf.secure})  ;
+		this.admin_application_configuration_appClient= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_appClient>({url:conf.url + "admin/application_configuration_appClient/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.application_configuration_appApprenant= new HttpServiceBase<Interfaces.Iapplication_configuration_appApprenant>({url:conf.url + "collection/application_configuration_appApprenant/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.AppConf_minds_up= new HttpServiceBase<Interfaces.IAppConf_minds_up>({url:conf.url + "collection/AppConf_minds_up/" , secure:conf.secure})  ;
+		this.admin_application_configuration_appApprenant= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_appApprenant>({url:conf.url + "admin/application_configuration_appApprenant/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.AppConf_minds_up_admin= new HttpServiceBase<Interfaces.IAppConf_minds_up_admin>({url:conf.url + "collection/AppConf_minds_up_admin/" , secure:conf.secure})  ;
+		this.admin_AppConf_minds_up_admin= new HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>({url:conf.url + "admin/AppConf_minds_up_admin/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.AppConf_minds_up= new HttpServiceBase<Interfaces.IAppConf_minds_up>({url:conf.url + "collection/AppConf_minds_up/" , secure:conf.secure})  ;
+		this.admin_AppConf_minds_up= new HttpServiceAdminBase<Interfaces.IAppConf_minds_up>({url:conf.url + "admin/AppConf_minds_up/" , secure:conf.secure})  ;
 
 		 
 	
 
 		this.oidc_account= new HttpServiceBase<Interfaces.Ioidc_account>( {url:conf.url + "collection/oidc_account/" , secure:conf.secure} )  ;
+		
+		this.admin_oidc_account= new HttpServiceAdminBase<Interfaces.Ioidc_account>( {url:conf.url + "admin/oidc_account/" , secure:conf.secure} )  ;
 
 		
 	
 
 		this.service_access= new HttpServiceBase<Interfaces.Iservice_access>( {url:conf.url + "collection/service_access/" , secure:conf.secure} )  ;
+		
+		this.admin_service_access= new HttpServiceAdminBase<Interfaces.Iservice_access>( {url:conf.url + "admin/service_access/" , secure:conf.secure} )  ;
 
 		
 	
 
 		this.service= new HttpServiceBase<Interfaces.Iservice>( {url:conf.url + "collection/service/" , secure:conf.secure} )  ;
+		
+		this.admin_service= new HttpServiceAdminBase<Interfaces.Iservice>( {url:conf.url + "admin/service/" , secure:conf.secure} )  ;
 
 		
 		 
 		this.service_sso= new HttpServiceBase<Interfaces.Iservice_sso>({url:conf.url + "collection/service_sso/" , secure:conf.secure})  ;
+		this.admin_service_sso= new HttpServiceAdminBase<Interfaces.Iservice_sso>({url:conf.url + "admin/service_sso/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_init= new HttpServiceBase<Interfaces.Iservice_init>({url:conf.url + "collection/service_init/" , secure:conf.secure})  ;
+		this.admin_service_init= new HttpServiceAdminBase<Interfaces.Iservice_init>({url:conf.url + "admin/service_init/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_mailtoinfra= new HttpServiceBase<Interfaces.Iservice_mailtoinfra>({url:conf.url + "collection/service_mailtoinfra/" , secure:conf.secure})  ;
+		this.admin_service_mailtoinfra= new HttpServiceAdminBase<Interfaces.Iservice_mailtoinfra>({url:conf.url + "admin/service_mailtoinfra/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_licence_token= new HttpServiceBase<Interfaces.Iservice_licence_token>({url:conf.url + "collection/service_licence_token/" , secure:conf.secure})  ;
+		this.admin_service_licence_token= new HttpServiceAdminBase<Interfaces.Iservice_licence_token>({url:conf.url + "admin/service_licence_token/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_goshabaGateway= new HttpServiceBase<Interfaces.Iservice_goshabaGateway>({url:conf.url + "collection/service_goshabaGateway/" , secure:conf.secure})  ;
+		this.admin_service_goshabaGateway= new HttpServiceAdminBase<Interfaces.Iservice_goshabaGateway>({url:conf.url + "admin/service_goshabaGateway/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_mongo= new HttpServiceBase<Interfaces.Iservice_mongo>({url:conf.url + "collection/service_mongo/" , secure:conf.secure})  ;
+		this.admin_service_mongo= new HttpServiceAdminBase<Interfaces.Iservice_mongo>({url:conf.url + "admin/service_mongo/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_socketIo= new HttpServiceBase<Interfaces.Iservice_socketIo>({url:conf.url + "collection/service_socketIo/" , secure:conf.secure})  ;
+		this.admin_service_socketIo= new HttpServiceAdminBase<Interfaces.Iservice_socketIo>({url:conf.url + "admin/service_socketIo/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_supervision= new HttpServiceBase<Interfaces.Iservice_supervision>({url:conf.url + "collection/service_supervision/" , secure:conf.secure})  ;
+		this.admin_service_supervision= new HttpServiceAdminBase<Interfaces.Iservice_supervision>({url:conf.url + "admin/service_supervision/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_configuration= new HttpServiceBase<Interfaces.Iservice_configuration>({url:conf.url + "collection/service_configuration/" , secure:conf.secure})  ;
+		this.admin_service_configuration= new HttpServiceAdminBase<Interfaces.Iservice_configuration>({url:conf.url + "admin/service_configuration/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_nginxConfigurator= new HttpServiceBase<Interfaces.Iservice_nginxConfigurator>({url:conf.url + "collection/service_nginxConfigurator/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_nginxMultiConfigurator= new HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator>({url:conf.url + "collection/service_nginxMultiConfigurator/" , secure:conf.secure})  ;
+		this.admin_service_nginxConfigurator= new HttpServiceAdminBase<Interfaces.Iservice_nginxConfigurator>({url:conf.url + "admin/service_nginxConfigurator/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_push_notification= new HttpServiceBase<Interfaces.Iservice_push_notification>({url:conf.url + "collection/service_push_notification/" , secure:conf.secure})  ;
+		this.admin_service_push_notification= new HttpServiceAdminBase<Interfaces.Iservice_push_notification>({url:conf.url + "admin/service_push_notification/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_like= new HttpServiceBase<Interfaces.Iservice_like>({url:conf.url + "collection/service_like/" , secure:conf.secure})  ;
+		this.admin_service_like= new HttpServiceAdminBase<Interfaces.Iservice_like>({url:conf.url + "admin/service_like/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_dumy_fso= new HttpServiceBase<Interfaces.Iservice_dumy_fso>({url:conf.url + "collection/service_dumy_fso/" , secure:conf.secure})  ;
+		this.admin_service_dumy_fso= new HttpServiceAdminBase<Interfaces.Iservice_dumy_fso>({url:conf.url + "admin/service_dumy_fso/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_signin= new HttpServiceBase<Interfaces.Iservice_signin>({url:conf.url + "collection/service_signin/" , secure:conf.secure})  ;
+		this.admin_service_signin= new HttpServiceAdminBase<Interfaces.Iservice_signin>({url:conf.url + "admin/service_signin/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_sendGrid= new HttpServiceBase<Interfaces.Iservice_sendGrid>({url:conf.url + "collection/service_sendGrid/" , secure:conf.secure})  ;
+		this.admin_service_sendGrid= new HttpServiceAdminBase<Interfaces.Iservice_sendGrid>({url:conf.url + "admin/service_sendGrid/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_trainingCoursesService= new HttpServiceBase<Interfaces.Iservice_trainingCoursesService>({url:conf.url + "collection/service_trainingCoursesService/" , secure:conf.secure})  ;
+		this.admin_service_trainingCoursesService= new HttpServiceAdminBase<Interfaces.Iservice_trainingCoursesService>({url:conf.url + "admin/service_trainingCoursesService/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_orchestrator= new HttpServiceBase<Interfaces.Iservice_orchestrator>({url:conf.url + "collection/service_orchestrator/" , secure:conf.secure})  ;
+		this.admin_service_orchestrator= new HttpServiceAdminBase<Interfaces.Iservice_orchestrator>({url:conf.url + "admin/service_orchestrator/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_socket_io= new HttpServiceBase<Interfaces.Iservice_socket_io>({url:conf.url + "collection/service_socket_io/" , secure:conf.secure})  ;
+		this.admin_service_socket_io= new HttpServiceAdminBase<Interfaces.Iservice_socket_io>({url:conf.url + "admin/service_socket_io/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_tutor= new HttpServiceBase<Interfaces.Iservice_tutor>({url:conf.url + "collection/service_tutor/" , secure:conf.secure})  ;
+		this.admin_service_tutor= new HttpServiceAdminBase<Interfaces.Iservice_tutor>({url:conf.url + "admin/service_tutor/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_init_js= new HttpServiceBase<Interfaces.Iservice_init_js>({url:conf.url + "collection/service_init_js/" , secure:conf.secure})  ;
+		this.admin_service_init_js= new HttpServiceAdminBase<Interfaces.Iservice_init_js>({url:conf.url + "admin/service_init_js/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_infra_admin= new HttpServiceBase<Interfaces.Iservice_infra_admin>({url:conf.url + "collection/service_infra_admin/" , secure:conf.secure})  ;
+		this.admin_service_infra_admin= new HttpServiceAdminBase<Interfaces.Iservice_infra_admin>({url:conf.url + "admin/service_infra_admin/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.mailtoinfra2= new HttpServiceBase<Interfaces.Imailtoinfra2>({url:conf.url + "collection/mailtoinfra2/" , secure:conf.secure})  ;
+		this.admin_mailtoinfra2= new HttpServiceAdminBase<Interfaces.Imailtoinfra2>({url:conf.url + "admin/mailtoinfra2/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_planned_tasks= new HttpServiceBase<Interfaces.Iservice_planned_tasks>({url:conf.url + "collection/service_planned_tasks/" , secure:conf.secure})  ;
+		this.admin_service_planned_tasks= new HttpServiceAdminBase<Interfaces.Iservice_planned_tasks>({url:conf.url + "admin/service_planned_tasks/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.Service_scorm_gateway= new HttpServiceBase<Interfaces.IService_scorm_gateway>({url:conf.url + "collection/Service_scorm_gateway/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
+		this.admin_Service_scorm_gateway= new HttpServiceAdminBase<Interfaces.IService_scorm_gateway>({url:conf.url + "admin/Service_scorm_gateway/" , secure:conf.secure})  ;
 
 		 
 		 
 		this.service_webAppConf= new HttpServiceBase<Interfaces.Iservice_webAppConf>({url:conf.url + "collection/service_webAppConf/" , secure:conf.secure})  ;
+		this.admin_service_webAppConf= new HttpServiceAdminBase<Interfaces.Iservice_webAppConf>({url:conf.url + "admin/service_webAppConf/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_nginxMultiConfigurator= new HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator>({url:conf.url + "collection/service_nginxMultiConfigurator/" , secure:conf.secure})  ;
+		this.admin_service_nginxMultiConfigurator= new HttpServiceAdminBase<Interfaces.Iservice_nginxMultiConfigurator>({url:conf.url + "admin/service_nginxMultiConfigurator/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
+		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_client_ftp= new HttpServiceBase<Interfaces.Iservice_client_ftp>({url:conf.url + "collection/service_client_ftp/" , secure:conf.secure})  ;
+		this.admin_service_client_ftp= new HttpServiceAdminBase<Interfaces.Iservice_client_ftp>({url:conf.url + "admin/service_client_ftp/" , secure:conf.secure})  ;
 
 		 
 	
 
 		this.protoschema= new HttpServiceBase<Interfaces.Iprotoschema>( {url:conf.url + "collection/protoschema/" , secure:conf.secure} )  ;
+		
+		this.admin_protoschema= new HttpServiceAdminBase<Interfaces.Iprotoschema>( {url:conf.url + "admin/protoschema/" , secure:conf.secure} )  ;
 
 		
 	
 
 		this.mail= new HttpServiceBase<Interfaces.Imail>( {url:conf.url + "collection/mail/" , secure:conf.secure} )  ;
+		
+		this.admin_mail= new HttpServiceAdminBase<Interfaces.Imail>( {url:conf.url + "admin/mail/" , secure:conf.secure} )  ;
 
 		
 		 
 		this.mail_sendgrid= new HttpServiceBase<Interfaces.Imail_sendgrid>({url:conf.url + "collection/mail_sendgrid/" , secure:conf.secure})  ;
+		this.admin_mail_sendgrid= new HttpServiceAdminBase<Interfaces.Imail_sendgrid>({url:conf.url + "admin/mail_sendgrid/" , secure:conf.secure})  ;
 
 		 
 	
 
 		this.service_serviceOrchestrator= new HttpServiceBase<Interfaces.Iservice_serviceOrchestrator>( {url:conf.url + "collection/service_serviceOrchestrator/" , secure:conf.secure} )  ;
+		
+		this.admin_service_serviceOrchestrator= new HttpServiceAdminBase<Interfaces.Iservice_serviceOrchestrator>( {url:conf.url + "admin/service_serviceOrchestrator/" , secure:conf.secure} )  ;
 
 		
 	
 
 		this._view= new HttpServiceBase<Interfaces.I_view>( {url:conf.url + "collection/_view/" , secure:conf.secure} )  ;
+		
+		this.admin__view= new HttpServiceAdminBase<Interfaces.I_view>( {url:conf.url + "admin/_view/" , secure:conf.secure} )  ;
 
 		
 		 
 		this._view_params= new HttpServiceBase<Interfaces.I_view_params>({url:conf.url + "collection/_view_params/" , secure:conf.secure})  ;
+		this.admin__view_params= new HttpServiceAdminBase<Interfaces.I_view_params>({url:conf.url + "admin/_view_params/" , secure:conf.secure})  ;
 
 		 
 	
 
 		this.licence= new HttpServiceBase<Interfaces.Ilicence>( {url:conf.url + "collection/licence/" , secure:conf.secure} )  ;
+		
+		this.admin_licence= new HttpServiceAdminBase<Interfaces.Ilicence>( {url:conf.url + "admin/licence/" , secure:conf.secure} )  ;
 
 		
 		 
 		this.licence_temporelle= new HttpServiceBase<Interfaces.Ilicence_temporelle>({url:conf.url + "collection/licence_temporelle/" , secure:conf.secure})  ;
+		this.admin_licence_temporelle= new HttpServiceAdminBase<Interfaces.Ilicence_temporelle>({url:conf.url + "admin/licence_temporelle/" , secure:conf.secure})  ;
 
 		 
 	
 
 		this.MultilangSendGridTemplate= new HttpServiceBase<Interfaces.IMultilangSendGridTemplate>( {url:conf.url + "collection/MultilangSendGridTemplate/" , secure:conf.secure} )  ;
+		
+		this.admin_MultilangSendGridTemplate= new HttpServiceAdminBase<Interfaces.IMultilangSendGridTemplate>( {url:conf.url + "admin/MultilangSendGridTemplate/" , secure:conf.secure} )  ;
 
 		
 	
 
 		this.application= new HttpServiceBase<Interfaces.Iapplication>( {url:conf.url + "collection/application/" , secure:conf.secure} )  ;
+		
+		this.admin_application= new HttpServiceAdminBase<Interfaces.Iapplication>( {url:conf.url + "admin/application/" , secure:conf.secure} )  ;
 
 		
 		 
 		this.pack_card= new HttpServiceBase<Interfaces.Ipack_card>({url:conf.url + "collection/pack_card/" , secure:conf.secure})  ;
+		this.admin_pack_card= new HttpServiceAdminBase<Interfaces.Ipack_card>({url:conf.url + "admin/pack_card/" , secure:conf.secure})  ;
 
 		 
 	
 
 		this.TemplateLodash= new HttpServiceBase<Interfaces.ITemplateLodash>( {url:conf.url + "collection/TemplateLodash/" , secure:conf.secure} )  ;
+		
+		this.admin_TemplateLodash= new HttpServiceAdminBase<Interfaces.ITemplateLodash>( {url:conf.url + "admin/TemplateLodash/" , secure:conf.secure} )  ;
 
 		
 	
 
 		this.end_client= new HttpServiceBase<Interfaces.Iend_client>( {url:conf.url + "collection/end_client/" , secure:conf.secure} )  ;
+		
+		this.admin_end_client= new HttpServiceAdminBase<Interfaces.Iend_client>( {url:conf.url + "admin/end_client/" , secure:conf.secure} )  ;
 
 		
 	
 
 		this.Request= new HttpServiceBase<Interfaces.IRequest>( {url:conf.url + "collection/Request/" , secure:conf.secure} )  ;
+		
+		this.admin_Request= new HttpServiceAdminBase<Interfaces.IRequest>( {url:conf.url + "admin/Request/" , secure:conf.secure} )  ;
 
 		
 	
 
 		this.ftpsConfig= new HttpServiceBase<Interfaces.IftpsConfig>( {url:conf.url + "collection/ftpsConfig/" , secure:conf.secure} )  ;
+		
+		this.admin_ftpsConfig= new HttpServiceAdminBase<Interfaces.IftpsConfig>( {url:conf.url + "admin/ftpsConfig/" , secure:conf.secure} )  ;
 
 		
 	
 
 		this.application_instance= new HttpServiceBase<Interfaces.Iapplication_instance>( {url:conf.url + "collection/application_instance/" , secure:conf.secure} )  ;
+		
+		this.admin_application_instance= new HttpServiceAdminBase<Interfaces.Iapplication_instance>( {url:conf.url + "admin/application_instance/" , secure:conf.secure} )  ;
 
 		
 	
@@ -278,6 +359,8 @@ export class api_collection_plateform {
 		*/
 		public certificat:HttpServiceBase<Interfaces.Icertificat> ;
 
+		public admin_certificat:HttpServiceAdminBase<Interfaces.Icertificat> ;
+
 		
 		 /**
 		 service d'accès a la sous-collection :rsa
@@ -285,6 +368,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public rsa:HttpServiceBase<Interfaces.Irsa> ;
+
+		public admin_rsa:HttpServiceAdminBase<Interfaces.Irsa> ;
+
 
 		 
 	
@@ -296,6 +382,8 @@ export class api_collection_plateform {
 		 
 		*/
 		public oidc_Client:HttpServiceBase<Interfaces.Ioidc_Client> ;
+
+		public admin_oidc_Client:HttpServiceAdminBase<Interfaces.Ioidc_Client> ;
 
 		
 	
@@ -318,13 +406,15 @@ export class api_collection_plateform {
 		 
 		 	Iapplication_configuration_appApprenant      c'est la configuration d'une application Apprenant
 		 
-		 	IAppConf_minds_up      config de l'app minds up
-		 
 		 	IAppConf_minds_up_admin      config de l'app minds up admin
+		 
+		 	IAppConf_minds_up      config de l'app minds up
 		 
 		 
 		*/
 		public application_configuration:HttpServiceBase<Interfaces.Iapplication_configuration> ;
+
+		public admin_application_configuration:HttpServiceAdminBase<Interfaces.Iapplication_configuration> ;
 
 		
 		 /**
@@ -334,6 +424,9 @@ export class api_collection_plateform {
 		*/
 		public application_configuration_phoneCard:HttpServiceBase<Interfaces.Iapplication_configuration_phoneCard> ;
 
+		public admin_application_configuration_phoneCard:HttpServiceAdminBase<Interfaces.Iapplication_configuration_phoneCard> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :application_configuration_appCoach
@@ -341,6 +434,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public application_configuration_appCoach:HttpServiceBase<Interfaces.Iapplication_configuration_appCoach> ;
+
+		public admin_application_configuration_appCoach:HttpServiceAdminBase<Interfaces.Iapplication_configuration_appCoach> ;
+
 
 		 
 		 /**
@@ -350,6 +446,9 @@ export class api_collection_plateform {
 		*/
 		public application_configuration_super_admin_mongo:HttpServiceBase<Interfaces.Iapplication_configuration_super_admin_mongo> ;
 
+		public admin_application_configuration_super_admin_mongo:HttpServiceAdminBase<Interfaces.Iapplication_configuration_super_admin_mongo> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :application_configuration_antico
@@ -357,6 +456,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public application_configuration_antico:HttpServiceBase<Interfaces.Iapplication_configuration_antico> ;
+
+		public admin_application_configuration_antico:HttpServiceAdminBase<Interfaces.Iapplication_configuration_antico> ;
+
 
 		 
 		 /**
@@ -366,6 +468,9 @@ export class api_collection_plateform {
 		*/
 		public application_configuration_appClient:HttpServiceBase<Interfaces.Iapplication_configuration_appClient> ;
 
+		public admin_application_configuration_appClient:HttpServiceAdminBase<Interfaces.Iapplication_configuration_appClient> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :application_configuration_appApprenant
@@ -373,6 +478,20 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public application_configuration_appApprenant:HttpServiceBase<Interfaces.Iapplication_configuration_appApprenant> ;
+
+		public admin_application_configuration_appApprenant:HttpServiceAdminBase<Interfaces.Iapplication_configuration_appApprenant> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :AppConf_minds_up_admin
+		 desc: config de l'app minds up admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public AppConf_minds_up_admin:HttpServiceBase<Interfaces.IAppConf_minds_up_admin> ;
+
+		public admin_AppConf_minds_up_admin:HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin> ;
+
 
 		 
 		 /**
@@ -382,13 +501,8 @@ export class api_collection_plateform {
 		*/
 		public AppConf_minds_up:HttpServiceBase<Interfaces.IAppConf_minds_up> ;
 
-		 
-		 /**
-		 service d'accès a la sous-collection :AppConf_minds_up_admin
-		 desc: config de l'app minds up admin
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public AppConf_minds_up_admin:HttpServiceBase<Interfaces.IAppConf_minds_up_admin> ;
+		public admin_AppConf_minds_up:HttpServiceAdminBase<Interfaces.IAppConf_minds_up> ;
+
 
 		 
 	
@@ -401,6 +515,8 @@ export class api_collection_plateform {
 		*/
 		public oidc_account:HttpServiceBase<Interfaces.Ioidc_account> ;
 
+		public admin_oidc_account:HttpServiceAdminBase<Interfaces.Ioidc_account> ;
+
 		
 	
 		/**
@@ -411,6 +527,8 @@ export class api_collection_plateform {
 		 
 		*/
 		public service_access:HttpServiceBase<Interfaces.Iservice_access> ;
+
+		public admin_service_access:HttpServiceAdminBase<Interfaces.Iservice_access> ;
 
 		
 	
@@ -441,8 +559,6 @@ export class api_collection_plateform {
 		 
 		 	Iservice_nginxConfigurator      service_nginxConfigurator
 		 
-		 	Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
-		 
 		 	Iservice_push_notification      Service pour gérer les notifications push des applications
 		 
 		 	Iservice_like      service permettant de liker un objet de la base
@@ -471,13 +587,19 @@ export class api_collection_plateform {
 		 
 		 	IService_scorm_gateway      service passerelle d'un package scorm vers l'interne
 		 
+		 	Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
+		 
+		 	Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
+		 
 		 	Iservice_mindsUp      service minds up metier
 		 
-		 	Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
+		 	Iservice_client_ftp      client ftps
 		 
 		 
 		*/
 		public service:HttpServiceBase<Interfaces.Iservice> ;
+
+		public admin_service:HttpServiceAdminBase<Interfaces.Iservice> ;
 
 		
 		 /**
@@ -487,6 +609,9 @@ export class api_collection_plateform {
 		*/
 		public service_sso:HttpServiceBase<Interfaces.Iservice_sso> ;
 
+		public admin_service_sso:HttpServiceAdminBase<Interfaces.Iservice_sso> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :service_init
@@ -494,6 +619,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public service_init:HttpServiceBase<Interfaces.Iservice_init> ;
+
+		public admin_service_init:HttpServiceAdminBase<Interfaces.Iservice_init> ;
+
 
 		 
 		 /**
@@ -503,6 +631,9 @@ export class api_collection_plateform {
 		*/
 		public service_mailtoinfra:HttpServiceBase<Interfaces.Iservice_mailtoinfra> ;
 
+		public admin_service_mailtoinfra:HttpServiceAdminBase<Interfaces.Iservice_mailtoinfra> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :service_licence_token
@@ -510,6 +641,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public service_licence_token:HttpServiceBase<Interfaces.Iservice_licence_token> ;
+
+		public admin_service_licence_token:HttpServiceAdminBase<Interfaces.Iservice_licence_token> ;
+
 
 		 
 		 /**
@@ -519,6 +653,9 @@ export class api_collection_plateform {
 		*/
 		public service_goshabaGateway:HttpServiceBase<Interfaces.Iservice_goshabaGateway> ;
 
+		public admin_service_goshabaGateway:HttpServiceAdminBase<Interfaces.Iservice_goshabaGateway> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :service_mongo
@@ -526,6 +663,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public service_mongo:HttpServiceBase<Interfaces.Iservice_mongo> ;
+
+		public admin_service_mongo:HttpServiceAdminBase<Interfaces.Iservice_mongo> ;
+
 
 		 
 		 /**
@@ -535,6 +675,9 @@ export class api_collection_plateform {
 		*/
 		public service_socketIo:HttpServiceBase<Interfaces.Iservice_socketIo> ;
 
+		public admin_service_socketIo:HttpServiceAdminBase<Interfaces.Iservice_socketIo> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :service_supervision
@@ -542,6 +685,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public service_supervision:HttpServiceBase<Interfaces.Iservice_supervision> ;
+
+		public admin_service_supervision:HttpServiceAdminBase<Interfaces.Iservice_supervision> ;
+
 
 		 
 		 /**
@@ -551,6 +697,9 @@ export class api_collection_plateform {
 		*/
 		public service_configuration:HttpServiceBase<Interfaces.Iservice_configuration> ;
 
+		public admin_service_configuration:HttpServiceAdminBase<Interfaces.Iservice_configuration> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :service_nginxConfigurator
@@ -559,13 +708,8 @@ export class api_collection_plateform {
 		*/
 		public service_nginxConfigurator:HttpServiceBase<Interfaces.Iservice_nginxConfigurator> ;
 
-		 
-		 /**
-		 service d'accès a la sous-collection :service_nginxMultiConfigurator
-		 desc: configuration d'un service nginx multi configuration
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_nginxMultiConfigurator:HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator> ;
+		public admin_service_nginxConfigurator:HttpServiceAdminBase<Interfaces.Iservice_nginxConfigurator> ;
+
 
 		 
 		 /**
@@ -575,6 +719,9 @@ export class api_collection_plateform {
 		*/
 		public service_push_notification:HttpServiceBase<Interfaces.Iservice_push_notification> ;
 
+		public admin_service_push_notification:HttpServiceAdminBase<Interfaces.Iservice_push_notification> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :service_like
@@ -582,6 +729,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public service_like:HttpServiceBase<Interfaces.Iservice_like> ;
+
+		public admin_service_like:HttpServiceAdminBase<Interfaces.Iservice_like> ;
+
 
 		 
 		 /**
@@ -591,6 +741,9 @@ export class api_collection_plateform {
 		*/
 		public service_dumy_fso:HttpServiceBase<Interfaces.Iservice_dumy_fso> ;
 
+		public admin_service_dumy_fso:HttpServiceAdminBase<Interfaces.Iservice_dumy_fso> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :service_signin
@@ -598,6 +751,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public service_signin:HttpServiceBase<Interfaces.Iservice_signin> ;
+
+		public admin_service_signin:HttpServiceAdminBase<Interfaces.Iservice_signin> ;
+
 
 		 
 		 /**
@@ -607,6 +763,9 @@ export class api_collection_plateform {
 		*/
 		public service_sendGrid:HttpServiceBase<Interfaces.Iservice_sendGrid> ;
 
+		public admin_service_sendGrid:HttpServiceAdminBase<Interfaces.Iservice_sendGrid> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :service_trainingCoursesService
@@ -614,6 +773,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public service_trainingCoursesService:HttpServiceBase<Interfaces.Iservice_trainingCoursesService> ;
+
+		public admin_service_trainingCoursesService:HttpServiceAdminBase<Interfaces.Iservice_trainingCoursesService> ;
+
 
 		 
 		 /**
@@ -623,6 +785,9 @@ export class api_collection_plateform {
 		*/
 		public service_orchestrator:HttpServiceBase<Interfaces.Iservice_orchestrator> ;
 
+		public admin_service_orchestrator:HttpServiceAdminBase<Interfaces.Iservice_orchestrator> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :service_socket_io
@@ -630,6 +795,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public service_socket_io:HttpServiceBase<Interfaces.Iservice_socket_io> ;
+
+		public admin_service_socket_io:HttpServiceAdminBase<Interfaces.Iservice_socket_io> ;
+
 
 		 
 		 /**
@@ -639,6 +807,9 @@ export class api_collection_plateform {
 		*/
 		public service_tutor:HttpServiceBase<Interfaces.Iservice_tutor> ;
 
+		public admin_service_tutor:HttpServiceAdminBase<Interfaces.Iservice_tutor> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :service_init_js
@@ -646,6 +817,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public service_init_js:HttpServiceBase<Interfaces.Iservice_init_js> ;
+
+		public admin_service_init_js:HttpServiceAdminBase<Interfaces.Iservice_init_js> ;
+
 
 		 
 		 /**
@@ -655,6 +829,9 @@ export class api_collection_plateform {
 		*/
 		public service_infra_admin:HttpServiceBase<Interfaces.Iservice_infra_admin> ;
 
+		public admin_service_infra_admin:HttpServiceAdminBase<Interfaces.Iservice_infra_admin> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :mailtoinfra2
@@ -662,6 +839,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public mailtoinfra2:HttpServiceBase<Interfaces.Imailtoinfra2> ;
+
+		public admin_mailtoinfra2:HttpServiceAdminBase<Interfaces.Imailtoinfra2> ;
+
 
 		 
 		 /**
@@ -671,6 +851,9 @@ export class api_collection_plateform {
 		*/
 		public service_planned_tasks:HttpServiceBase<Interfaces.Iservice_planned_tasks> ;
 
+		public admin_service_planned_tasks:HttpServiceAdminBase<Interfaces.Iservice_planned_tasks> ;
+
+
 		 
 		 /**
 		 service d'accès a la sous-collection :Service_scorm_gateway
@@ -678,6 +861,31 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public Service_scorm_gateway:HttpServiceBase<Interfaces.IService_scorm_gateway> ;
+
+		public admin_Service_scorm_gateway:HttpServiceAdminBase<Interfaces.IService_scorm_gateway> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_webAppConf
+		 desc: permet de générer les fichier de conf des app (css, js, ...)
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_webAppConf:HttpServiceBase<Interfaces.Iservice_webAppConf> ;
+
+		public admin_service_webAppConf:HttpServiceAdminBase<Interfaces.Iservice_webAppConf> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_nginxMultiConfigurator
+		 desc: configuration d'un service nginx multi configuration
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_nginxMultiConfigurator:HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator> ;
+
+		public admin_service_nginxMultiConfigurator:HttpServiceAdminBase<Interfaces.Iservice_nginxMultiConfigurator> ;
+
 
 		 
 		 /**
@@ -687,13 +895,19 @@ export class api_collection_plateform {
 		*/
 		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
 
+		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
+
+
 		 
 		 /**
-		 service d'accès a la sous-collection :service_webAppConf
-		 desc: permet de générer les fichier de conf des app (css, js, ...)
+		 service d'accès a la sous-collection :service_client_ftp
+		 desc: client ftps
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
-		public service_webAppConf:HttpServiceBase<Interfaces.Iservice_webAppConf> ;
+		public service_client_ftp:HttpServiceBase<Interfaces.Iservice_client_ftp> ;
+
+		public admin_service_client_ftp:HttpServiceAdminBase<Interfaces.Iservice_client_ftp> ;
+
 
 		 
 	
@@ -705,6 +919,8 @@ export class api_collection_plateform {
 		 
 		*/
 		public protoschema:HttpServiceBase<Interfaces.Iprotoschema> ;
+
+		public admin_protoschema:HttpServiceAdminBase<Interfaces.Iprotoschema> ;
 
 		
 	
@@ -721,6 +937,8 @@ export class api_collection_plateform {
 		*/
 		public mail:HttpServiceBase<Interfaces.Imail> ;
 
+		public admin_mail:HttpServiceAdminBase<Interfaces.Imail> ;
+
 		
 		 /**
 		 service d'accès a la sous-collection :mail_sendgrid
@@ -728,6 +946,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public mail_sendgrid:HttpServiceBase<Interfaces.Imail_sendgrid> ;
+
+		public admin_mail_sendgrid:HttpServiceAdminBase<Interfaces.Imail_sendgrid> ;
+
 
 		 
 	
@@ -739,6 +960,8 @@ export class api_collection_plateform {
 		 
 		*/
 		public service_serviceOrchestrator:HttpServiceBase<Interfaces.Iservice_serviceOrchestrator> ;
+
+		public admin_service_serviceOrchestrator:HttpServiceAdminBase<Interfaces.Iservice_serviceOrchestrator> ;
 
 		
 	
@@ -755,6 +978,8 @@ export class api_collection_plateform {
 		*/
 		public _view:HttpServiceBase<Interfaces.I_view> ;
 
+		public admin__view:HttpServiceAdminBase<Interfaces.I_view> ;
+
 		
 		 /**
 		 service d'accès a la sous-collection :_view_params
@@ -762,6 +987,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public _view_params:HttpServiceBase<Interfaces.I_view_params> ;
+
+		public admin__view_params:HttpServiceAdminBase<Interfaces.I_view_params> ;
+
 
 		 
 	
@@ -778,6 +1006,8 @@ export class api_collection_plateform {
 		*/
 		public licence:HttpServiceBase<Interfaces.Ilicence> ;
 
+		public admin_licence:HttpServiceAdminBase<Interfaces.Ilicence> ;
+
 		
 		 /**
 		 service d'accès a la sous-collection :licence_temporelle
@@ -785,6 +1015,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public licence_temporelle:HttpServiceBase<Interfaces.Ilicence_temporelle> ;
+
+		public admin_licence_temporelle:HttpServiceAdminBase<Interfaces.Ilicence_temporelle> ;
+
 
 		 
 	
@@ -796,6 +1029,8 @@ export class api_collection_plateform {
 		 
 		*/
 		public MultilangSendGridTemplate:HttpServiceBase<Interfaces.IMultilangSendGridTemplate> ;
+
+		public admin_MultilangSendGridTemplate:HttpServiceAdminBase<Interfaces.IMultilangSendGridTemplate> ;
 
 		
 	
@@ -812,6 +1047,8 @@ export class api_collection_plateform {
 		*/
 		public application:HttpServiceBase<Interfaces.Iapplication> ;
 
+		public admin_application:HttpServiceAdminBase<Interfaces.Iapplication> ;
+
 		
 		 /**
 		 service d'accès a la sous-collection :pack_card
@@ -819,6 +1056,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public pack_card:HttpServiceBase<Interfaces.Ipack_card> ;
+
+		public admin_pack_card:HttpServiceAdminBase<Interfaces.Ipack_card> ;
+
 
 		 
 	
@@ -831,6 +1071,8 @@ export class api_collection_plateform {
 		*/
 		public TemplateLodash:HttpServiceBase<Interfaces.ITemplateLodash> ;
 
+		public admin_TemplateLodash:HttpServiceAdminBase<Interfaces.ITemplateLodash> ;
+
 		
 	
 		/**
@@ -841,6 +1083,8 @@ export class api_collection_plateform {
 		 
 		*/
 		public end_client:HttpServiceBase<Interfaces.Iend_client> ;
+
+		public admin_end_client:HttpServiceAdminBase<Interfaces.Iend_client> ;
 
 		
 	
@@ -853,6 +1097,8 @@ export class api_collection_plateform {
 		*/
 		public Request:HttpServiceBase<Interfaces.IRequest> ;
 
+		public admin_Request:HttpServiceAdminBase<Interfaces.IRequest> ;
+
 		
 	
 		/**
@@ -864,6 +1110,8 @@ export class api_collection_plateform {
 		*/
 		public ftpsConfig:HttpServiceBase<Interfaces.IftpsConfig> ;
 
+		public admin_ftpsConfig:HttpServiceAdminBase<Interfaces.IftpsConfig> ;
+
 		
 	
 		/**
@@ -874,6 +1122,8 @@ export class api_collection_plateform {
 		 
 		*/
 		public application_instance:HttpServiceBase<Interfaces.Iapplication_instance> ;
+
+		public admin_application_instance:HttpServiceAdminBase<Interfaces.Iapplication_instance> ;
 
 		
 	

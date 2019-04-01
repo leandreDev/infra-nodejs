@@ -43,6 +43,38 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         
     
         
+        if(obj["urlInfraBdd"] != undefined){
+          
+           this["urlInfraBdd"] = obj["urlInfraBdd"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["applicationClienteConfig"] != undefined){
+          
+          if(_.isString(obj["applicationClienteConfig"])){
+            this["applicationClienteConfig"] = obj["applicationClienteConfig"];
+          }else if(obj["applicationClienteConfig"]._id){
+            this["applicationClienteConfig"] = obj["applicationClienteConfig"]._id ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["applicationAdminConfig"] != undefined){
+          
+          if(_.isString(obj["applicationAdminConfig"])){
+            this["applicationAdminConfig"] = obj["applicationAdminConfig"];
+          }else if(obj["applicationAdminConfig"]._id){
+            this["applicationAdminConfig"] = obj["applicationAdminConfig"]._id ;
+          }
+          
+        }
+        
+    
+        
         if(obj["ftpConf"] != undefined){
           
             if(obj._class){
@@ -128,6 +160,24 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         urlLicenceService
         */
                public "urlLicenceService":string ;
+              
+       
+              /**
+        url du service d'infra
+        */
+               public "urlInfraBdd":string ;
+              
+       
+              /**
+        id de la configuration de l'app cliente
+        */
+               public "applicationClienteConfig":string ;
+              
+       
+              /**
+        id de la configuration de l'app admin
+        */
+               public "applicationAdminConfig":string ;
               
        
               /**
@@ -232,6 +282,63 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
                   
                   
                  
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["urlInfraBdd"] == null || target["urlInfraBdd"] == undefined) ){
+                  throw new Error(path + "urlInfraBdd is required") ;
+              }
+              
+              if(target["urlInfraBdd"] != null && target["urlInfraBdd"] != undefined ){
+              
+                let _urlInfraBdd  = target["urlInfraBdd"] ;
+                
+
+                 if(! _.isString(_urlInfraBdd)){
+                    throw new Error(path+"urlInfraBdd is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["applicationClienteConfig"] == null || target["applicationClienteConfig"] == undefined) ){
+                  throw new Error(path + "applicationClienteConfig is required") ;
+              }
+              
+              if(target["applicationClienteConfig"] != null && target["applicationClienteConfig"] != undefined ){
+              
+                  let _applicationClienteConfig  = target["applicationClienteConfig"] ;
+                  
+                  if( ! _.isString(_applicationClienteConfig)){
+                   throw new Error(path + "applicationClienteConfig is not a string") ;
+                  }
+                  
+
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["applicationAdminConfig"] == null || target["applicationAdminConfig"] == undefined) ){
+                  throw new Error(path + "applicationAdminConfig is required") ;
+              }
+              
+              if(target["applicationAdminConfig"] != null && target["applicationAdminConfig"] != undefined ){
+              
+                  let _applicationAdminConfig  = target["applicationAdminConfig"] ;
+                  
+                  if( ! _.isString(_applicationAdminConfig)){
+                   throw new Error(path + "applicationAdminConfig is not a string") ;
+                  }
+                  
+
               
               
            }

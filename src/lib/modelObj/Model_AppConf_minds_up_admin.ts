@@ -34,6 +34,14 @@ export class Model_AppConf_minds_up_admin extends   Model_application_configurat
         }
         
     
+        
+        if(obj["rgpd"] != undefined){
+          
+           this["rgpd"] = obj["rgpd"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -50,6 +58,12 @@ export class Model_AppConf_minds_up_admin extends   Model_application_configurat
         url du service métier mindsUp
         */
                public "serviceMindsUpUrl":string ;
+              
+       
+              /**
+        texte a afficher pour valider la rgpd
+        */
+               public "rgpd"?:string ;
               
        
 
@@ -92,6 +106,23 @@ export class Model_AppConf_minds_up_admin extends   Model_application_configurat
 
                  if(! _.isString(_serviceMindsUpUrl)){
                     throw new Error(path+"serviceMindsUpUrl is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if(target["rgpd"] != null && target["rgpd"] != undefined ){
+              
+                let _rgpd  = target["rgpd"] ;
+                
+
+                 if(! _.isString(_rgpd)){
+                    throw new Error(path+"rgpd is not a string") ;
                     
                   }
                   

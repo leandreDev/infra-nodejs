@@ -1,6 +1,6 @@
 
 
-import {UtilsSecu , CtxInterpretor ,IHttpResult , IBase ,HttpServiceBase  ,HttpAbstractService ,  MiddleWareConfig } from "utils" ;
+import {UtilsSecu , CtxInterpretor ,IHttpResult , IBase ,HttpServiceBase , HttpServiceAdminBase ,HttpAbstractService ,  MiddleWareConfig } from "utils" ;
 
 import * as Interfaces from "../../lib/modelObj/Interfaces" ;
 
@@ -13,10 +13,13 @@ export class api_collection_plateform {
 	<% _.forEach(datas , function(collection){ %>
 
 		this.<%=collection.name%>= new HttpServiceBase<Interfaces.I<%=collection.name%>>( {url:conf.url + "collection/<%=collection.name%>/" , secure:conf.secure} )  ;
+		
+		this.admin_<%=collection.name%>= new HttpServiceAdminBase<Interfaces.I<%=collection.name%>>( {url:conf.url + "admin/<%=collection.name%>/" , secure:conf.secure} )  ;
 
 		<% _.forEach(collection._child , function(subcollection){ %>
 		 
 		this.<%=subcollection.name%>= new HttpServiceBase<Interfaces.I<%=subcollection.name%>>({url:conf.url + "collection/<%=subcollection.name%>/" , secure:conf.secure})  ;
+		this.admin_<%=subcollection.name%>= new HttpServiceAdminBase<Interfaces.I<%=subcollection.name%>>({url:conf.url + "admin/<%=subcollection.name%>/" , secure:conf.secure})  ;
 
 		 <%}) %>
 	<%}) %>
@@ -39,6 +42,8 @@ export class api_collection_plateform {
 		*/
 		public <%=collection.name%>:HttpServiceBase<Interfaces.I<%=collection.name%>> ;
 
+		public admin_<%=collection.name%>:HttpServiceAdminBase<Interfaces.I<%=collection.name%>> ;
+
 		<% _.forEach(collection._child , function(subcollection){ %>
 		 /**
 		 service d'accès a la sous-collection :<%=subcollection.name%>
@@ -46,6 +51,9 @@ export class api_collection_plateform {
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public <%=subcollection.name%>:HttpServiceBase<Interfaces.I<%=subcollection.name%>> ;
+
+		public admin_<%=subcollection.name%>:HttpServiceAdminBase<Interfaces.I<%=subcollection.name%>> ;
+
 
 		 <%}) %>
 	<%}) %>

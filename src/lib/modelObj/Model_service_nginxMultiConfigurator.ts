@@ -75,10 +75,10 @@ export class Model_service_nginxMultiConfigurator extends   Model_service_nginxC
         
     
         
-        if(obj["configurationApplication"] != undefined && obj["configurationApplication"] != null && _.isArray(obj["configurationApplication"])){
+        if(obj["confApplication"] != undefined && obj["confApplication"] != null && _.isArray(obj["confApplication"])){
           
 
-            this["configurationApplication"] = obj["configurationApplication"].map((value)=>{
+            this["confApplication"] = obj["confApplication"].map((value)=>{
               if(value._class){
                 return new Index[value._class](value) ;
               }else{
@@ -133,9 +133,9 @@ export class Model_service_nginxMultiConfigurator extends   Model_service_nginxC
               
        
               /**
-        liste des application a publier
+        liste des applications a publier
         */
-               public "configurationApplication"?:Interface.InginxConfigurationFileApp[];
+               public "confApplication"?:Interface.InginxConfigurationFileApp[];
               
        
 
@@ -266,21 +266,21 @@ export class Model_service_nginxMultiConfigurator extends   Model_service_nginxC
            }
            
               
-              if(target["configurationApplication"] != null && target["configurationApplication"] != undefined ){
+              if(target["confApplication"] != null && target["confApplication"] != undefined ){
               
-                  target["configurationApplication"].forEach((_configurationApplication , index:number)=>{
+                  target["confApplication"].forEach((_confApplication , index:number)=>{
                   
                   
-                    promArr.push( Index["nginxConfigurationFileApp"].check(_configurationApplication, isCompleteObj , path+"configurationApplication.")
+                    promArr.push( Index["nginxConfigurationFileApp"].check(_confApplication, isCompleteObj , path+"confApplication.")
                       .catch((err)=>{
-                        throw new Error(path+"configurationApplication index: "+ index +"is not nginxConfigurationFileApp")
+                        throw new Error(path+"confApplication index: "+ index +"is not nginxConfigurationFileApp")
                         
 
                       }) )
-                  if(_configurationApplication._class != null && _configurationApplication._class != undefined){
-                    promArr.push( Index[_configurationApplication._class].check(_configurationApplication, isCompleteObj , path+"configurationApplication.")
+                  if(_confApplication._class != null && _confApplication._class != undefined){
+                    promArr.push( Index[_confApplication._class].check(_confApplication, isCompleteObj , path+"confApplication.")
                       .catch((err)=>{
-                        throw new Error(path+"configurationApplication index: "+ index +"is not a " + _configurationApplication._class )
+                        throw new Error(path+"confApplication index: "+ index +"is not a " + _confApplication._class )
                         
 
                       })

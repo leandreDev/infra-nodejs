@@ -2104,42 +2104,6 @@
    }
 
     /**
-    interface de la class service_nginxMultiConfigurator 
-    description configuration d'un service nginx multi configuration
-   */
-    export interface Iservice_nginxMultiConfigurator extends   Iservice_nginxConfigurator{
-        
-              
-               "nginxUser"?:string;
-              
-       
-              
-               "serviceUrl"?:string;
-              
-       
-              
-               "clientUrl":string;
-              
-       
-              
-               "appInstanceUrl"?:string;
-              
-       
-              
-               "appUrl":string;
-              
-       
-              
-               "configurationFile"?:InginxConfigurationFile[];
-              
-       
-              
-               "configurationApplication"?:InginxConfigurationFileApp[];
-              
-       
-   }
-
-    /**
     interface de la class application_configuration_appCoach 
     description c'est la configuration d'une application Coach
    */
@@ -3096,94 +3060,6 @@
    }
 
     /**
-    interface de la class AppConf_minds_up 
-    description config de l'app minds up
-   */
-    export interface IAppConf_minds_up extends   Iapplication_configuration{
-        
-              
-               "apiUrl":string;
-              
-       
-              
-               "serviceMindsUpUrl":string;
-              
-       
-              
-               "videoUrl"?:string;
-              
-       
-              
-               "introTitle"?:string;
-              
-       
-              
-               "introText"?:string;
-              
-       
-   }
-
-    /**
-    interface de la class AppConf_minds_up_admin 
-    description config de l'app minds up admin
-   */
-    export interface IAppConf_minds_up_admin extends   Iapplication_configuration{
-        
-              
-               "apiUrl":string;
-              
-       
-              
-               "serviceMindsUpUrl":string;
-              
-       
-   }
-
-    /**
-    interface de la class service_mindsUp 
-    description service minds up metier
-   */
-    export interface Iservice_mindsUp extends   Iservice{
-        
-              
-               "urlApi":string;
-              
-       
-              
-               "urlSsoApi":string;
-              
-       
-              
-               "urlLicenceService":string;
-              
-       
-              
-               "ftpConf"?:IftpsConfig;
-              
-       
-              
-               "appId":string | Iapplication_instance;
-              
-       
-              
-               "adminAppId":string | Iapplication_instance;
-              
-       
-              
-               "end_client"?:string | Iend_client;
-              
-       
-              
-               "licenceStoreId":string;
-              
-       
-              
-               "adminLicenceStoreId":string;
-              
-       
-   }
-
-    /**
     interface de la class application_instance 
     description c'est le couple application configuration 
    */
@@ -3227,6 +3103,186 @@
        
               
                "ssoBddUrl":string;
+              
+       
+   }
+
+    /**
+    interface de la class service_nginxMultiConfigurator 
+    description configuration d'un service nginx multi configuration
+   */
+    export interface Iservice_nginxMultiConfigurator extends   Iservice_nginxConfigurator{
+        
+              
+               "nginxUser"?:string;
+              
+       
+              
+               "serviceUrl"?:string;
+              
+       
+              
+               "clientUrl":string;
+              
+       
+              
+               "appInstanceUrl"?:string;
+              
+       
+              
+               "appUrl":string;
+              
+       
+              
+               "configurationFile"?:InginxConfigurationFile[];
+              
+       
+              
+               "confApplication"?:InginxConfigurationFileApp[];
+              
+       
+   }
+
+    /**
+    interface de la class AppConf_minds_up_admin 
+    description config de l'app minds up admin
+   */
+    export interface IAppConf_minds_up_admin extends   Iapplication_configuration{
+        
+              
+               "apiUrl":string;
+              
+       
+              
+               "serviceMindsUpUrl":string;
+              
+       
+              
+               "rgpd"?:string;
+              
+       
+   }
+
+    /**
+    interface de la class service_mindsUp 
+    description service minds up metier
+   */
+    export interface Iservice_mindsUp extends   Iservice{
+        
+              
+               "urlApi":string;
+              
+       
+              
+               "urlSsoApi":string;
+              
+       
+              
+               "urlLicenceService":string;
+              
+       
+              
+               "urlInfraBdd":string;
+              
+       
+              
+               "applicationClienteConfig":string | IAppConf_minds_up;
+              
+       
+              
+               "applicationAdminConfig":string | IAppConf_minds_up_admin;
+              
+       
+              
+               "ftpConf"?:IftpsConfig;
+              
+       
+              
+               "appId":string | Iapplication_instance;
+              
+       
+              
+               "adminAppId":string | Iapplication_instance;
+              
+       
+              
+               "end_client"?:string | Iend_client;
+              
+       
+              
+               "licenceStoreId":string;
+              
+       
+              
+               "adminLicenceStoreId":string;
+              
+       
+   }
+
+    /**
+    interface de la class AppConf_minds_up 
+    description config de l'app minds up
+   */
+    export interface IAppConf_minds_up extends   Iapplication_configuration{
+        
+              
+               "introTitle"?:string;
+              
+       
+              
+               "introText"?:string;
+              
+       
+              
+               "videoUrl"?:string;
+              
+       
+              
+               "rgpd"?:string;
+              
+       
+              
+               "serviceMindsUpUrl":string;
+              
+       
+              
+               "managerObservable"?:boolean;
+              
+       
+              
+               "managerAutoExchange"?:boolean;
+              
+       
+              
+               "apiUrl":string;
+              
+       
+   }
+
+    /**
+    interface de la class service_client_ftp 
+    description client ftps
+   */
+    export interface Iservice_client_ftp extends   Iservice{
+        
+              
+               "host":string;
+              
+       
+              
+               "port":number;
+              
+       
+              
+               "user":string;
+              
+       
+              
+               "password":string;
+              
+       
+              
+               "downloadPath":string;
               
        
    }

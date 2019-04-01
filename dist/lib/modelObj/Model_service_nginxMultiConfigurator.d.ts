@@ -34,9 +34,9 @@ fichier de configuration a générer
 */
     "configurationFile"?: Interface.InginxConfigurationFile[];
     /**
-liste des application a publier
+liste des applications a publier
 */
-    "configurationApplication"?: Interface.InginxConfigurationFileApp[];
+    "confApplication"?: Interface.InginxConfigurationFileApp[];
     static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
     static create(target: any, path?: string): Promise<Model_service_nginxMultiConfigurator>;
 }
