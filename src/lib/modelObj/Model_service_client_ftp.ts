@@ -27,9 +27,9 @@ export class Model_service_client_ftp extends   Model_service   implements Inter
         
     
         
-        if(obj["port"] != undefined){
+        if(obj["ftpPort"] != undefined){
           
-           this["port"] = new Number(obj["port"]).valueOf();
+           this["ftpPort"] = new Number(obj["ftpPort"]).valueOf();
           
         }
         
@@ -73,7 +73,7 @@ export class Model_service_client_ftp extends   Model_service   implements Inter
               /**
         port
         */
-               public "port":number =21;
+               public "ftpPort":number =21;
               
        
               /**
@@ -123,16 +123,16 @@ export class Model_service_client_ftp extends   Model_service   implements Inter
            }
            
               
-              if( isCompleteObj && (target["port"] == null || target["port"] == undefined) ){
-                  throw new Error(path + "port is required") ;
+              if( isCompleteObj && (target["ftpPort"] == null || target["ftpPort"] == undefined) ){
+                  throw new Error(path + "ftpPort is required") ;
               }
               
-              if(target["port"] != null && target["port"] != undefined ){
+              if(target["ftpPort"] != null && target["ftpPort"] != undefined ){
               
-                let _port  = target["port"] ;
+                let _ftpPort  = target["ftpPort"] ;
                 
-                  if(! _.isNumber(_port)){
-                      throw new Error(path+"port is not a number") ;
+                  if(! _.isNumber(_ftpPort)){
+                      throw new Error(path+"ftpPort is not a number") ;
                       
                   }
                   

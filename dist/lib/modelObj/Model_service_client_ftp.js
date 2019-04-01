@@ -15,12 +15,12 @@ class Model_service_client_ftp extends Model_service_1.Model_service {
         /**
   port
   */
-        this["port"] = 21;
+        this["ftpPort"] = 21;
         if (obj["host"] != undefined) {
             this["host"] = obj["host"].toString();
         }
-        if (obj["port"] != undefined) {
-            this["port"] = new Number(obj["port"]).valueOf();
+        if (obj["ftpPort"] != undefined) {
+            this["ftpPort"] = new Number(obj["ftpPort"]).valueOf();
         }
         if (obj["user"] != undefined) {
             this["user"] = obj["user"].toString();
@@ -45,13 +45,13 @@ class Model_service_client_ftp extends Model_service_1.Model_service {
                     throw new Error(path + "host is not a string");
                 }
             }
-            if (isCompleteObj && (target["port"] == null || target["port"] == undefined)) {
-                throw new Error(path + "port is required");
+            if (isCompleteObj && (target["ftpPort"] == null || target["ftpPort"] == undefined)) {
+                throw new Error(path + "ftpPort is required");
             }
-            if (target["port"] != null && target["port"] != undefined) {
-                let _port = target["port"];
-                if (!_.isNumber(_port)) {
-                    throw new Error(path + "port is not a number");
+            if (target["ftpPort"] != null && target["ftpPort"] != undefined) {
+                let _ftpPort = target["ftpPort"];
+                if (!_.isNumber(_ftpPort)) {
+                    throw new Error(path + "ftpPort is not a number");
                 }
             }
             if (isCompleteObj && (target["user"] == null || target["user"] == undefined)) {

@@ -3270,7 +3270,7 @@
               
        
               
-               "port":number;
+               "ftpPort":number;
               
        
               

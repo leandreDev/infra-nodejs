@@ -16,7 +16,7 @@ host
     /**
 port
 */
-    "port": number;
+    "ftpPort": number;
     /**
 user
 */
