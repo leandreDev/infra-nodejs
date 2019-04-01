@@ -1341,7 +1341,7 @@ description client ftps
 */
 export interface Iservice_client_ftp extends Iservice {
     "host": string;
-    "port": number;
+    "ftpPort": number;
     "user": string;
     "password": string;
     "downloadPath": string;
