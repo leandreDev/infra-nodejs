@@ -30,6 +30,9 @@ class Model_field extends utils_1.Base {
         if (obj["index"] != undefined) {
             this["index"] = new Boolean(obj["index"]).valueOf();
         }
+        if (obj["humanName"] != undefined) {
+            this["humanName"] = obj["humanName"].toString();
+        }
     }
     static check(target, isCompleteObj = true, path = "") {
         return super.check(target, isCompleteObj, path)
@@ -75,6 +78,12 @@ class Model_field extends utils_1.Base {
                 let _index = target["index"];
                 if (!_.isBoolean(_index)) {
                     throw new Error(path + "index is not a boolean");
+                }
+            }
+            if (target["humanName"] != null && target["humanName"] != undefined) {
+                let _humanName = target["humanName"];
+                if (!_.isString(_humanName)) {
+                    throw new Error(path + "humanName is not a string");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });

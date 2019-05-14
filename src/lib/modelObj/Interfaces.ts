@@ -436,38 +436,6 @@
    }
 
     /**
-    interface de la class field 
-    description ce champ est le champ représente les champs de la base. Il est abstrait, vous devez utiliser ces enfants
-   */
-    export interface Ifield extends  IBase {
-        
-              
-               "name":string;
-              
-       
-              
-               "description":string;
-              
-       
-              
-               "isArrayOf"?:boolean;
-              
-       
-              
-               "required"?:boolean;
-              
-       
-              
-               "unique"?:boolean;
-              
-       
-              
-               "index"?:boolean;
-              
-       
-   }
-
-    /**
     interface de la class texte 
     description champ pour texte long
    */
@@ -1063,26 +1031,6 @@
        
               
                "userManagment"?:Ioidc_clientUserManagment;
-              
-       
-   }
-
-    /**
-    interface de la class application_configuration 
-    description c'est la configuration d'une application
-   */
-    export interface Iapplication_configuration extends  IBase {
-        
-              
-               "name"?:string;
-              
-       
-              
-               "services"?:string[] | Iservice_access[];
-              
-       
-              
-               "appName"?:string;
               
        
    }
@@ -3220,6 +3168,90 @@
    }
 
     /**
+    interface de la class service_client_ftp 
+    description client ftps
+   */
+    export interface Iservice_client_ftp extends   Iservice{
+        
+              
+               "host":string;
+              
+       
+              
+               "ftpPort":number;
+              
+       
+              
+               "user":string;
+              
+       
+              
+               "password":string;
+              
+       
+              
+               "downloadPath":string;
+              
+       
+   }
+
+    /**
+    interface de la class field 
+    description ce champ est le champ représente les champs de la base. Il est abstrait, vous devez utiliser ces enfants
+   */
+    export interface Ifield extends  IBase {
+        
+              
+               "name":string;
+              
+       
+              
+               "description":string;
+              
+       
+              
+               "isArrayOf"?:boolean;
+              
+       
+              
+               "required"?:boolean;
+              
+       
+              
+               "unique"?:boolean;
+              
+       
+              
+               "index"?:boolean;
+              
+       
+              
+               "humanName"?:string;
+              
+       
+   }
+
+    /**
+    interface de la class application_configuration 
+    description c'est la configuration d'une application
+   */
+    export interface Iapplication_configuration extends  IBase {
+        
+              
+               "name"?:string;
+              
+       
+              
+               "services"?:string[] | Iservice_access[];
+              
+       
+              
+               "appName"?:string;
+              
+       
+   }
+
+    /**
     interface de la class AppConf_minds_up 
     description config de l'app minds up
    */
@@ -3260,29 +3292,9 @@
    }
 
     /**
-    interface de la class service_client_ftp 
-    description client ftps
+    interface de la class service_polo_celio 
+    description service de tirage au sort de polo
    */
-    export interface Iservice_client_ftp extends   Iservice{
+    export interface Iservice_polo_celio extends   Iservice{
         
-              
-               "host":string;
-              
-       
-              
-               "ftpPort":number;
-              
-       
-              
-               "user":string;
-              
-       
-              
-               "password":string;
-              
-       
-              
-               "downloadPath":string;
-              
-       
    }

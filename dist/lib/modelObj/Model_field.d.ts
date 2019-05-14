@@ -33,6 +33,10 @@ indique que la valeur du champ doit être unique
 ????? je suis plus sure
 */
     "index"?: boolean;
+    /**
+nom pour les interfaces
+*/
+    "humanName"?: string;
     static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
     static create(target: any, path?: string): Promise<Model_field>;
 }

@@ -64,6 +64,14 @@ export class Model_field extends  Base  implements Interface.Ifield {
         }
         
     
+        
+        if(obj["humanName"] != undefined){
+          
+           this["humanName"] = obj["humanName"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -104,6 +112,12 @@ export class Model_field extends  Base  implements Interface.Ifield {
         ????? je suis plus sure
         */
                public "index"?:boolean ;
+              
+       
+              /**
+        nom pour les interfaces
+        */
+               public "humanName"?:string ;
               
        
 
@@ -211,6 +225,23 @@ export class Model_field extends  Base  implements Interface.Ifield {
                   }
                 
 
+              
+              
+           }
+           
+              
+              if(target["humanName"] != null && target["humanName"] != undefined ){
+              
+                let _humanName  = target["humanName"] ;
+                
+
+                 if(! _.isString(_humanName)){
+                    throw new Error(path+"humanName is not a string") ;
+                    
+                  }
+                  
+                  
+                 
               
               
            }
