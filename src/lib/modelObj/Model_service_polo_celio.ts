@@ -18,12 +18,26 @@ export class Model_service_polo_celio extends   Model_service   implements Inter
   constructor(obj:any={}){
     super(obj);
     
+        
+        if(obj["bdd_url"] != undefined){
+          
+           this["bdd_url"] = obj["bdd_url"].toString() ;
+           
+        }
+        
+    
   }
   
 
     public _class:string  = "service_polo_celio" ;
 
         
+              /**
+        url du service de bdd
+        */
+               public "bdd_url"?:string ;
+              
+       
 
 
        public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
@@ -31,6 +45,23 @@ export class Model_service_polo_celio extends   Model_service   implements Inter
         .then((boolean)=>{
           var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
           
+              
+              if(target["bdd_url"] != null && target["bdd_url"] != undefined ){
+              
+                let _bdd_url  = target["bdd_url"] ;
+                
+
+                 if(! _.isString(_bdd_url)){
+                    throw new Error(path+"bdd_url is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
            
           return Promise.all(promArr).then(()=>{return true}) ;
         }).catch((err)=>{

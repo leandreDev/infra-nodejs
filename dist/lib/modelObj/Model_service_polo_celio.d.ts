@@ -9,6 +9,10 @@ export declare class Model_service_polo_celio extends Model_service implements I
     */
     constructor(obj?: any);
     _class: string;
+    /**
+url du service de bdd
+*/
+    "bdd_url"?: string;
     static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
     static create(target: any, path?: string): Promise<Model_service_polo_celio>;
 }

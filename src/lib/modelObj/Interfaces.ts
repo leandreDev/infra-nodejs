@@ -3297,4 +3297,8 @@
    */
     export interface Iservice_polo_celio extends   Iservice{
         
+              
+               "bdd_url"?:string;
+              
+       
    }
