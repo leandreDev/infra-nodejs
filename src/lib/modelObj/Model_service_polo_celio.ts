@@ -26,6 +26,14 @@ export class Model_service_polo_celio extends   Model_service   implements Inter
         }
         
     
+        
+        if(obj["maxNumberOfWinner"] != undefined){
+          
+           this["maxNumberOfWinner"] = new Number(obj["maxNumberOfWinner"]).valueOf();
+          
+        }
+        
+    
   }
   
 
@@ -36,6 +44,12 @@ export class Model_service_polo_celio extends   Model_service   implements Inter
         url du service de bdd
         */
                public "bdd_url"?:string ;
+              
+       
+              /**
+        nombre maximum de gagnan
+        */
+               public "maxNumberOfWinner":number =500;
               
        
 
@@ -58,6 +72,28 @@ export class Model_service_polo_celio extends   Model_service   implements Inter
                   
                   
                  
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["maxNumberOfWinner"] == null || target["maxNumberOfWinner"] == undefined) ){
+                  throw new Error(path + "maxNumberOfWinner is required") ;
+              }
+              
+              if(target["maxNumberOfWinner"] != null && target["maxNumberOfWinner"] != undefined ){
+              
+                let _maxNumberOfWinner  = target["maxNumberOfWinner"] ;
+                
+                  if(! _.isNumber(_maxNumberOfWinner)){
+                      throw new Error(path+"maxNumberOfWinner is not a number") ;
+                      
+                  }
+                  
+                
+                
+
+                
               
               
            }

@@ -3301,4 +3301,8 @@
                "bdd_url"?:string;
               
        
+              
+               "maxNumberOfWinner":number;
+              
+       
    }
