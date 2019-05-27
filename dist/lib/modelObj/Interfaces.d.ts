@@ -1352,4 +1352,5 @@ interface de la class service_polo_celio
 description service de tirage au sort de polo
 */
 export interface Iservice_polo_celio extends Iservice {
+    "bdd_url"?: string;
 }
