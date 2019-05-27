@@ -1354,4 +1354,6 @@ description service de tirage au sort de polo
 export interface Iservice_polo_celio extends Iservice {
     "bdd_url"?: string;
     "maxNumberOfWinner": number;
+    "drawStat"?: number;
+    "bigDrawStat"?: number;
 }

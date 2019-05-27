@@ -17,6 +17,14 @@ url du service de bdd
 nombre maximum de gagnan
 */
     "maxNumberOfWinner": number;
+    /**
+stat de tirage
+*/
+    "drawStat"?: number;
+    /**
+stat de tirage du gros lot
+*/
+    "bigDrawStat"?: number;
     static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
     static create(target: any, path?: string): Promise<Model_service_polo_celio>;
 }

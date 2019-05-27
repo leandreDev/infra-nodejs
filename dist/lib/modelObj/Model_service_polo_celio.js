@@ -22,6 +22,12 @@ class Model_service_polo_celio extends Model_service_1.Model_service {
         if (obj["maxNumberOfWinner"] != undefined) {
             this["maxNumberOfWinner"] = new Number(obj["maxNumberOfWinner"]).valueOf();
         }
+        if (obj["drawStat"] != undefined) {
+            this["drawStat"] = new Number(obj["drawStat"]).valueOf();
+        }
+        if (obj["bigDrawStat"] != undefined) {
+            this["bigDrawStat"] = new Number(obj["bigDrawStat"]).valueOf();
+        }
     }
     static check(target, isCompleteObj = true, path = "") {
         return super.check(target, isCompleteObj, path)
@@ -40,6 +46,18 @@ class Model_service_polo_celio extends Model_service_1.Model_service {
                 let _maxNumberOfWinner = target["maxNumberOfWinner"];
                 if (!_.isNumber(_maxNumberOfWinner)) {
                     throw new Error(path + "maxNumberOfWinner is not a number");
+                }
+            }
+            if (target["drawStat"] != null && target["drawStat"] != undefined) {
+                let _drawStat = target["drawStat"];
+                if (!_.isNumber(_drawStat)) {
+                    throw new Error(path + "drawStat is not a number");
+                }
+            }
+            if (target["bigDrawStat"] != null && target["bigDrawStat"] != undefined) {
+                let _bigDrawStat = target["bigDrawStat"];
+                if (!_.isNumber(_bigDrawStat)) {
+                    throw new Error(path + "bigDrawStat is not a number");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });

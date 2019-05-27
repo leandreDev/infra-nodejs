@@ -34,6 +34,22 @@ export class Model_service_polo_celio extends   Model_service   implements Inter
         }
         
     
+        
+        if(obj["drawStat"] != undefined){
+          
+           this["drawStat"] = new Number(obj["drawStat"]).valueOf();
+          
+        }
+        
+    
+        
+        if(obj["bigDrawStat"] != undefined){
+          
+           this["bigDrawStat"] = new Number(obj["bigDrawStat"]).valueOf();
+          
+        }
+        
+    
   }
   
 
@@ -50,6 +66,18 @@ export class Model_service_polo_celio extends   Model_service   implements Inter
         nombre maximum de gagnan
         */
                public "maxNumberOfWinner":number =500;
+              
+       
+              /**
+        stat de tirage
+        */
+               public "drawStat"?:number ;
+              
+       
+              /**
+        stat de tirage du gros lot
+        */
+               public "bigDrawStat"?:number ;
               
        
 
@@ -87,6 +115,42 @@ export class Model_service_polo_celio extends   Model_service   implements Inter
                 
                   if(! _.isNumber(_maxNumberOfWinner)){
                       throw new Error(path+"maxNumberOfWinner is not a number") ;
+                      
+                  }
+                  
+                
+                
+
+                
+              
+              
+           }
+           
+              
+              if(target["drawStat"] != null && target["drawStat"] != undefined ){
+              
+                let _drawStat  = target["drawStat"] ;
+                
+                  if(! _.isNumber(_drawStat)){
+                      throw new Error(path+"drawStat is not a number") ;
+                      
+                  }
+                  
+                
+                
+
+                
+              
+              
+           }
+           
+              
+              if(target["bigDrawStat"] != null && target["bigDrawStat"] != undefined ){
+              
+                let _bigDrawStat  = target["bigDrawStat"] ;
+                
+                  if(! _.isNumber(_bigDrawStat)){
+                      throw new Error(path+"bigDrawStat is not a number") ;
                       
                   }
                   

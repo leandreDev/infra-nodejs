@@ -3305,4 +3305,12 @@
                "maxNumberOfWinner":number;
               
        
+              
+               "drawStat"?:number;
+              
+       
+              
+               "bigDrawStat"?:number;
+              
+       
    }
