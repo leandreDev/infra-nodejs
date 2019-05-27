@@ -12,8 +12,15 @@ class Model_service_polo_celio extends Model_service_1.Model_service {
     constructor(obj = {}) {
         super(obj);
         this._class = "service_polo_celio";
+        /**
+  nombre maximum de gagnan
+  */
+        this["maxNumberOfWinner"] = 500;
         if (obj["bdd_url"] != undefined) {
             this["bdd_url"] = obj["bdd_url"].toString();
+        }
+        if (obj["maxNumberOfWinner"] != undefined) {
+            this["maxNumberOfWinner"] = new Number(obj["maxNumberOfWinner"]).valueOf();
         }
     }
     static check(target, isCompleteObj = true, path = "") {
@@ -24,6 +31,15 @@ class Model_service_polo_celio extends Model_service_1.Model_service {
                 let _bdd_url = target["bdd_url"];
                 if (!_.isString(_bdd_url)) {
                     throw new Error(path + "bdd_url is not a string");
+                }
+            }
+            if (isCompleteObj && (target["maxNumberOfWinner"] == null || target["maxNumberOfWinner"] == undefined)) {
+                throw new Error(path + "maxNumberOfWinner is required");
+            }
+            if (target["maxNumberOfWinner"] != null && target["maxNumberOfWinner"] != undefined) {
+                let _maxNumberOfWinner = target["maxNumberOfWinner"];
+                if (!_.isNumber(_maxNumberOfWinner)) {
+                    throw new Error(path + "maxNumberOfWinner is not a number");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });
