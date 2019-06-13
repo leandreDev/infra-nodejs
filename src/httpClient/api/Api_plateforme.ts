@@ -181,11 +181,6 @@ export class api_collection_plateform {
 
 		 
 		 
-		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
-		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
-
-		 
-		 
 		this.service_client_ftp= new HttpServiceBase<Interfaces.Iservice_client_ftp>({url:conf.url + "collection/service_client_ftp/" , secure:conf.secure})  ;
 		this.admin_service_client_ftp= new HttpServiceAdminBase<Interfaces.Iservice_client_ftp>({url:conf.url + "admin/service_client_ftp/" , secure:conf.secure})  ;
 
@@ -193,6 +188,11 @@ export class api_collection_plateform {
 		 
 		this.service_polo_celio= new HttpServiceBase<Interfaces.Iservice_polo_celio>({url:conf.url + "collection/service_polo_celio/" , secure:conf.secure})  ;
 		this.admin_service_polo_celio= new HttpServiceAdminBase<Interfaces.Iservice_polo_celio>({url:conf.url + "admin/service_polo_celio/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
+		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
 
 		 
 	
@@ -477,11 +477,11 @@ export class api_collection_plateform {
 		 
 		 	Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
 		 
-		 	Iservice_mindsUp      service minds up metier
-		 
 		 	Iservice_client_ftp      client ftps
 		 
 		 	Iservice_polo_celio      service de tirage au sort de polo
+		 
+		 	Iservice_mindsUp      service minds up metier
 		 
 		 
 		*/
@@ -777,17 +777,6 @@ export class api_collection_plateform {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :service_mindsUp
-		 desc: service minds up metier
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
-
-		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
-
-
-		 
-		 /**
 		 service d'accès a la sous-collection :service_client_ftp
 		 desc: client ftps
 		 info: vous ne pouvez voir que ce type d'objet
@@ -806,6 +795,17 @@ export class api_collection_plateform {
 		public service_polo_celio:HttpServiceBase<Interfaces.Iservice_polo_celio> ;
 
 		public admin_service_polo_celio:HttpServiceAdminBase<Interfaces.Iservice_polo_celio> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_mindsUp
+		 desc: service minds up metier
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
+
+		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
 
 
 		 

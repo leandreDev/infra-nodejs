@@ -138,6 +138,14 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         }
         
     
+        
+        if(obj["urlMailerService"] != undefined){
+          
+           this["urlMailerService"] = obj["urlMailerService"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -214,6 +222,12 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         id du licence store du l app admin
         */
                public "adminLicenceStoreId":string ;
+              
+       
+              /**
+        urlMailerService
+        */
+               public "urlMailerService":string ;
               
        
 
@@ -453,6 +467,27 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
 
                  if(! _.isString(_adminLicenceStoreId)){
                     throw new Error(path+"adminLicenceStoreId is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["urlMailerService"] == null || target["urlMailerService"] == undefined) ){
+                  throw new Error(path + "urlMailerService is required") ;
+              }
+              
+              if(target["urlMailerService"] != null && target["urlMailerService"] != undefined ){
+              
+                let _urlMailerService  = target["urlMailerService"] ;
+                
+
+                 if(! _.isString(_urlMailerService)){
+                    throw new Error(path+"urlMailerService is not a string") ;
                     
                   }
                   

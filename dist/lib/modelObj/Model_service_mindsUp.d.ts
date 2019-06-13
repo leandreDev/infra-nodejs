@@ -57,6 +57,10 @@ licenceStoreId de l app cliente
 id du licence store du l app admin
 */
     "adminLicenceStoreId": string;
+    /**
+urlMailerService
+*/
+    "urlMailerService": string;
     static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
     static create(target: any, path?: string): Promise<Model_service_mindsUp>;
 }

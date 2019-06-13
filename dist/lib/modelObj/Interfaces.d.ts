@@ -1283,24 +1283,6 @@ export interface IAppConf_minds_up_admin extends Iapplication_configuration {
     "rgpd"?: string;
 }
 /**
-interface de la class service_mindsUp
-description service minds up metier
-*/
-export interface Iservice_mindsUp extends Iservice {
-    "urlApi": string;
-    "urlSsoApi": string;
-    "urlLicenceService": string;
-    "urlInfraBdd": string;
-    "applicationClienteConfig": string | IAppConf_minds_up;
-    "applicationAdminConfig": string | IAppConf_minds_up_admin;
-    "ftpConf"?: IftpsConfig;
-    "appId": string | Iapplication_instance;
-    "adminAppId": string | Iapplication_instance;
-    "end_client"?: string | Iend_client;
-    "licenceStoreId": string;
-    "adminLicenceStoreId": string;
-}
-/**
 interface de la class service_client_ftp
 description client ftps
 */
@@ -1356,4 +1338,23 @@ export interface Iservice_polo_celio extends Iservice {
     "maxNumberOfWinner": number;
     "drawStat"?: number;
     "bigDrawStat"?: number;
+}
+/**
+interface de la class service_mindsUp
+description service minds up metier
+*/
+export interface Iservice_mindsUp extends Iservice {
+    "urlApi": string;
+    "urlSsoApi": string;
+    "urlLicenceService": string;
+    "urlInfraBdd": string;
+    "applicationClienteConfig": string | IAppConf_minds_up;
+    "applicationAdminConfig": string | IAppConf_minds_up_admin;
+    "ftpConf"?: IftpsConfig;
+    "appId": string | Iapplication_instance;
+    "adminAppId": string | Iapplication_instance;
+    "end_client"?: string | Iend_client;
+    "licenceStoreId": string;
+    "adminLicenceStoreId": string;
+    "urlMailerService": string;
 }
