@@ -79,6 +79,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
         if (obj["adminLicenceStoreId"] != undefined) {
             this["adminLicenceStoreId"] = obj["adminLicenceStoreId"].toString();
         }
+        if (obj["urlMailerService"] != undefined) {
+            this["urlMailerService"] = obj["urlMailerService"].toString();
+        }
     }
     static check(target, isCompleteObj = true, path = "") {
         return super.check(target, isCompleteObj, path)
@@ -191,6 +194,15 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
                 let _adminLicenceStoreId = target["adminLicenceStoreId"];
                 if (!_.isString(_adminLicenceStoreId)) {
                     throw new Error(path + "adminLicenceStoreId is not a string");
+                }
+            }
+            if (isCompleteObj && (target["urlMailerService"] == null || target["urlMailerService"] == undefined)) {
+                throw new Error(path + "urlMailerService is required");
+            }
+            if (target["urlMailerService"] != null && target["urlMailerService"] != undefined) {
+                let _urlMailerService = target["urlMailerService"];
+                if (!_.isString(_urlMailerService)) {
+                    throw new Error(path + "urlMailerService is not a string");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });
