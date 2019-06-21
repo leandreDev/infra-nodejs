@@ -61,6 +61,22 @@ id du licence store du l app admin
 urlMailerService
 */
     "urlMailerService": string;
+    /**
+reference du mail d'invitation a un 360
+*/
+    "mailInvitation360": string;
+    /**
+mailIRelance360
+*/
+    "mailIRelance360": string;
+    /**
+name of the mailer
+*/
+    "emailSenderName": string;
+    /**
+Email du mailer
+*/
+    "emailSenderEmail": string;
     static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
     static create(target: any, path?: string): Promise<Model_service_mindsUp>;
 }

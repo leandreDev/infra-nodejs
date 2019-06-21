@@ -41,6 +41,14 @@ défini si le manager peut créer un échange sur lui même
 url de l'api de la bdd minds Up
 */
     "apiUrl": string;
+    /**
+definit si le module 360 est actif
+*/
+    "module360"?: boolean;
+    /**
+définie si le module repo est accéssible
+*/
+    "moduleRepo"?: boolean;
     static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
     static create(target: any, path?: string): Promise<Model_AppConf_minds_up>;
 }

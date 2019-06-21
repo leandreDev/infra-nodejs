@@ -146,6 +146,46 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         }
         
     
+        
+        if(obj["mailInvitation360"] != undefined){
+          
+          if(_.isString(obj["mailInvitation360"])){
+            this["mailInvitation360"] = obj["mailInvitation360"];
+          }else if(obj["mailInvitation360"]._id){
+            this["mailInvitation360"] = obj["mailInvitation360"]._id ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["mailIRelance360"] != undefined){
+          
+          if(_.isString(obj["mailIRelance360"])){
+            this["mailIRelance360"] = obj["mailIRelance360"];
+          }else if(obj["mailIRelance360"]._id){
+            this["mailIRelance360"] = obj["mailIRelance360"]._id ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["emailSenderName"] != undefined){
+          
+           this["emailSenderName"] = obj["emailSenderName"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["emailSenderEmail"] != undefined){
+          
+           this["emailSenderEmail"] = obj["emailSenderEmail"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -228,6 +268,30 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         urlMailerService
         */
                public "urlMailerService":string ;
+              
+       
+              /**
+        reference du mail d'invitation a un 360
+        */
+               public "mailInvitation360":string ;
+              
+       
+              /**
+        mailIRelance360
+        */
+               public "mailIRelance360":string ;
+              
+       
+              /**
+        name of the mailer
+        */
+               public "emailSenderName":string ;
+              
+       
+              /**
+        Email du mailer
+        */
+               public "emailSenderEmail":string ;
               
        
 
@@ -488,6 +552,84 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
 
                  if(! _.isString(_urlMailerService)){
                     throw new Error(path+"urlMailerService is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["mailInvitation360"] == null || target["mailInvitation360"] == undefined) ){
+                  throw new Error(path + "mailInvitation360 is required") ;
+              }
+              
+              if(target["mailInvitation360"] != null && target["mailInvitation360"] != undefined ){
+              
+                  let _mailInvitation360  = target["mailInvitation360"] ;
+                  
+                  if( ! _.isString(_mailInvitation360)){
+                   throw new Error(path + "mailInvitation360 is not a string") ;
+                  }
+                  
+
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["mailIRelance360"] == null || target["mailIRelance360"] == undefined) ){
+                  throw new Error(path + "mailIRelance360 is required") ;
+              }
+              
+              if(target["mailIRelance360"] != null && target["mailIRelance360"] != undefined ){
+              
+                  let _mailIRelance360  = target["mailIRelance360"] ;
+                  
+                  if( ! _.isString(_mailIRelance360)){
+                   throw new Error(path + "mailIRelance360 is not a string") ;
+                  }
+                  
+
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["emailSenderName"] == null || target["emailSenderName"] == undefined) ){
+                  throw new Error(path + "emailSenderName is required") ;
+              }
+              
+              if(target["emailSenderName"] != null && target["emailSenderName"] != undefined ){
+              
+                let _emailSenderName  = target["emailSenderName"] ;
+                
+
+                 if(! _.isString(_emailSenderName)){
+                    throw new Error(path+"emailSenderName is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["emailSenderEmail"] == null || target["emailSenderEmail"] == undefined) ){
+                  throw new Error(path + "emailSenderEmail is required") ;
+              }
+              
+              if(target["emailSenderEmail"] != null && target["emailSenderEmail"] != undefined ){
+              
+                let _emailSenderEmail  = target["emailSenderEmail"] ;
+                
+
+                 if(! _.isString(_emailSenderEmail)){
+                    throw new Error(path+"emailSenderEmail is not a string") ;
                     
                   }
                   

@@ -82,6 +82,22 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
         }
         
     
+        
+        if(obj["module360"] != undefined){
+          
+           this["module360"] = new Boolean(obj["module360"]).valueOf() ;
+          
+        }
+        
+    
+        
+        if(obj["moduleRepo"] != undefined){
+          
+           this["moduleRepo"] = new Boolean(obj["moduleRepo"]).valueOf() ;
+          
+        }
+        
+    
   }
   
 
@@ -134,6 +150,18 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
         url de l'api de la bdd minds Up
         */
                public "apiUrl":string ;
+              
+       
+              /**
+        definit si le module 360 est actif
+        */
+               public "module360"?:boolean ;
+              
+       
+              /**
+        définie si le module repo est accéssible
+        */
+               public "moduleRepo"?:boolean =true;
               
        
 
@@ -279,6 +307,36 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
                   
                   
                  
+              
+              
+           }
+           
+              
+              if(target["module360"] != null && target["module360"] != undefined ){
+              
+                let _module360  = target["module360"] ;
+                
+                  if(! _.isBoolean(_module360)){
+                    throw new Error(path+"module360 is not a boolean") ;
+                    
+                  }
+                
+
+              
+              
+           }
+           
+              
+              if(target["moduleRepo"] != null && target["moduleRepo"] != undefined ){
+              
+                let _moduleRepo  = target["moduleRepo"] ;
+                
+                  if(! _.isBoolean(_moduleRepo)){
+                    throw new Error(path+"moduleRepo is not a boolean") ;
+                    
+                  }
+                
+
               
               
            }

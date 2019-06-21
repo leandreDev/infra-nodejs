@@ -12,6 +12,10 @@ class Model_AppConf_minds_up extends Model_application_configuration_1.Model_app
     constructor(obj = {}) {
         super(obj);
         this._class = "AppConf_minds_up";
+        /**
+  définie si le module repo est accéssible
+  */
+        this["moduleRepo"] = true;
         if (obj["introTitle"] != undefined) {
             this["introTitle"] = obj["introTitle"].toString();
         }
@@ -35,6 +39,12 @@ class Model_AppConf_minds_up extends Model_application_configuration_1.Model_app
         }
         if (obj["apiUrl"] != undefined) {
             this["apiUrl"] = obj["apiUrl"].toString();
+        }
+        if (obj["module360"] != undefined) {
+            this["module360"] = new Boolean(obj["module360"]).valueOf();
+        }
+        if (obj["moduleRepo"] != undefined) {
+            this["moduleRepo"] = new Boolean(obj["moduleRepo"]).valueOf();
         }
     }
     static check(target, isCompleteObj = true, path = "") {
@@ -93,6 +103,18 @@ class Model_AppConf_minds_up extends Model_application_configuration_1.Model_app
                 let _apiUrl = target["apiUrl"];
                 if (!_.isString(_apiUrl)) {
                     throw new Error(path + "apiUrl is not a string");
+                }
+            }
+            if (target["module360"] != null && target["module360"] != undefined) {
+                let _module360 = target["module360"];
+                if (!_.isBoolean(_module360)) {
+                    throw new Error(path + "module360 is not a boolean");
+                }
+            }
+            if (target["moduleRepo"] != null && target["moduleRepo"] != undefined) {
+                let _moduleRepo = target["moduleRepo"];
+                if (!_.isBoolean(_moduleRepo)) {
+                    throw new Error(path + "moduleRepo is not a boolean");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });

@@ -3196,46 +3196,6 @@
    }
 
     /**
-    interface de la class AppConf_minds_up 
-    description config de l'app minds up
-   */
-    export interface IAppConf_minds_up extends   Iapplication_configuration{
-        
-              
-               "introTitle"?:string;
-              
-       
-              
-               "introText"?:string;
-              
-       
-              
-               "videoUrl"?:string;
-              
-       
-              
-               "rgpd"?:string;
-              
-       
-              
-               "serviceMindsUpUrl":string;
-              
-       
-              
-               "managerObservable"?:boolean;
-              
-       
-              
-               "managerAutoExchange"?:boolean;
-              
-       
-              
-               "apiUrl":string;
-              
-       
-   }
-
-    /**
     interface de la class service_polo_celio 
     description service de tirage au sort de polo
    */
@@ -3315,6 +3275,86 @@
        
               
                "urlMailerService":string;
+              
+       
+              
+               "mailInvitation360":string | IMultilangSendGridTemplate;
+              
+       
+              
+               "mailIRelance360":string | IMultilangSendGridTemplate;
+              
+       
+              
+               "emailSenderName":string;
+              
+       
+              
+               "emailSenderEmail":string;
+              
+       
+   }
+
+    /**
+    interface de la class AppConf_minds_up 
+    description config de l'app minds up
+   */
+    export interface IAppConf_minds_up extends   Iapplication_configuration{
+        
+              
+               "introTitle"?:string;
+              
+       
+              
+               "introText"?:string;
+              
+       
+              
+               "videoUrl"?:string;
+              
+       
+              
+               "rgpd"?:string;
+              
+       
+              
+               "serviceMindsUpUrl":string;
+              
+       
+              
+               "managerObservable"?:boolean;
+              
+       
+              
+               "managerAutoExchange"?:boolean;
+              
+       
+              
+               "apiUrl":string;
+              
+       
+              
+               "module360"?:boolean;
+              
+       
+              
+               "moduleRepo"?:boolean;
+              
+       
+   }
+
+    /**
+    interface de la class service_fso 
+    description remote file system
+   */
+    export interface Iservice_fso extends   Iservice{
+        
+              
+               "filePath":string;
+              
+       
+              
+               "bddServiceUrl":string;
               
        
    }

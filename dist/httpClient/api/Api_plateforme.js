@@ -76,6 +76,8 @@ class api_collection_plateform {
         this.admin_service_polo_celio = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_polo_celio/", secure: conf.secure });
         this.service_mindsUp = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_mindsUp/", secure: conf.secure });
         this.admin_service_mindsUp = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_mindsUp/", secure: conf.secure });
+        this.service_fso = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_fso/", secure: conf.secure });
+        this.admin_service_fso = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_fso/", secure: conf.secure });
         this.protoschema = new utils_1.HttpServiceBase({ url: conf.url + "collection/protoschema/", secure: conf.secure });
         this.admin_protoschema = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/protoschema/", secure: conf.secure });
         this.mail = new utils_1.HttpServiceBase({ url: conf.url + "collection/mail/", secure: conf.secure });
