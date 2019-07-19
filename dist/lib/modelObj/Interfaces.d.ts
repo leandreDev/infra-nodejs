@@ -1274,15 +1274,6 @@ export interface Iservice_nginxMultiConfigurator extends Iservice_nginxConfigura
     "confApplication"?: InginxConfigurationFileApp[];
 }
 /**
-interface de la class AppConf_minds_up_admin
-description config de l'app minds up admin
-*/
-export interface IAppConf_minds_up_admin extends Iapplication_configuration {
-    "apiUrl": string;
-    "serviceMindsUpUrl": string;
-    "rgpd"?: string;
-}
-/**
 interface de la class service_client_ftp
 description client ftps
 */
@@ -1326,6 +1317,40 @@ export interface Iservice_polo_celio extends Iservice {
     "bigDrawStat"?: number;
 }
 /**
+interface de la class service_fso
+description remote file system
+*/
+export interface Iservice_fso extends Iservice {
+    "filePath": string;
+    "bddServiceUrl": string;
+}
+/**
+interface de la class AppConf_minds_up
+description config de l'app minds up
+*/
+export interface IAppConf_minds_up extends Iapplication_configuration {
+    "introTitle"?: string;
+    "introText"?: string;
+    "videoUrl"?: string;
+    "rgpd"?: string;
+    "serviceMindsUpUrl": string;
+    "managerObservable"?: boolean;
+    "managerAutoExchange"?: boolean;
+    "apiUrl": string;
+    "module360"?: boolean;
+    "moduleRepo"?: boolean;
+}
+/**
+interface de la class AppConf_minds_up_admin
+description config de l'app minds up admin
+*/
+export interface IAppConf_minds_up_admin extends Iapplication_configuration {
+    "apiUrl": string;
+    "serviceMindsUpUrl": string;
+    "rgpd"?: string;
+    "uploadUrl": string;
+}
+/**
 interface de la class service_mindsUp
 description service minds up metier
 */
@@ -1347,28 +1372,5 @@ export interface Iservice_mindsUp extends Iservice {
     "mailIRelance360": string | IMultilangSendGridTemplate;
     "emailSenderName": string;
     "emailSenderEmail": string;
-}
-/**
-interface de la class AppConf_minds_up
-description config de l'app minds up
-*/
-export interface IAppConf_minds_up extends Iapplication_configuration {
-    "introTitle"?: string;
-    "introText"?: string;
-    "videoUrl"?: string;
-    "rgpd"?: string;
-    "serviceMindsUpUrl": string;
-    "managerObservable"?: boolean;
-    "managerAutoExchange"?: boolean;
-    "apiUrl": string;
-    "module360"?: boolean;
-    "moduleRepo"?: boolean;
-}
-/**
-interface de la class service_fso
-description remote file system
-*/
-export interface Iservice_fso extends Iservice {
-    "filePath": string;
-    "bddServiceUrl": string;
+    "urlFsoService": string;
 }

@@ -114,9 +114,9 @@ export declare class api_collection_plateform {
      
         Iservice_polo_celio      service de tirage au sort de polo
      
-        Iservice_mindsUp      service minds up metier
-     
         Iservice_fso      remote file system
+     
+        Iservice_mindsUp      service minds up metier
      
      
     */
@@ -319,19 +319,19 @@ export declare class api_collection_plateform {
     service_polo_celio: HttpServiceBase<Interfaces.Iservice_polo_celio>;
     admin_service_polo_celio: HttpServiceAdminBase<Interfaces.Iservice_polo_celio>;
     /**
-    service d'accès a la sous-collection :service_mindsUp
-    desc: service minds up metier
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_mindsUp: HttpServiceBase<Interfaces.Iservice_mindsUp>;
-    admin_service_mindsUp: HttpServiceAdminBase<Interfaces.Iservice_mindsUp>;
-    /**
     service d'accès a la sous-collection :service_fso
     desc: remote file system
     info: vous ne pouvez voir que ce type d'objet
    */
     service_fso: HttpServiceBase<Interfaces.Iservice_fso>;
     admin_service_fso: HttpServiceAdminBase<Interfaces.Iservice_fso>;
+    /**
+    service d'accès a la sous-collection :service_mindsUp
+    desc: service minds up metier
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_mindsUp: HttpServiceBase<Interfaces.Iservice_mindsUp>;
+    admin_service_mindsUp: HttpServiceAdminBase<Interfaces.Iservice_mindsUp>;
     /**
      service d'accès à la collection :protoschema
      desc: protoschema est un méta modéle. il permet de créer les autres modèle de la base
@@ -503,9 +503,9 @@ export declare class api_collection_plateform {
      
         Iapplication_configuration_appApprenant      c'est la configuration d'une application Apprenant
      
-        IAppConf_minds_up_admin      config de l'app minds up admin
-     
         IAppConf_minds_up      config de l'app minds up
+     
+        IAppConf_minds_up_admin      config de l'app minds up admin
      
      
     */
@@ -554,19 +554,19 @@ export declare class api_collection_plateform {
     application_configuration_appApprenant: HttpServiceBase<Interfaces.Iapplication_configuration_appApprenant>;
     admin_application_configuration_appApprenant: HttpServiceAdminBase<Interfaces.Iapplication_configuration_appApprenant>;
     /**
-    service d'accès a la sous-collection :AppConf_minds_up_admin
-    desc: config de l'app minds up admin
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    AppConf_minds_up_admin: HttpServiceBase<Interfaces.IAppConf_minds_up_admin>;
-    admin_AppConf_minds_up_admin: HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>;
-    /**
     service d'accès a la sous-collection :AppConf_minds_up
     desc: config de l'app minds up
     info: vous ne pouvez voir que ce type d'objet
    */
     AppConf_minds_up: HttpServiceBase<Interfaces.IAppConf_minds_up>;
     admin_AppConf_minds_up: HttpServiceAdminBase<Interfaces.IAppConf_minds_up>;
+    /**
+    service d'accès a la sous-collection :AppConf_minds_up_admin
+    desc: config de l'app minds up admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    AppConf_minds_up_admin: HttpServiceBase<Interfaces.IAppConf_minds_up_admin>;
+    admin_AppConf_minds_up_admin: HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>;
 }
 /**
     accès à la vue :Client

@@ -21,6 +21,9 @@ class Model_AppConf_minds_up_admin extends Model_application_configuration_1.Mod
         if (obj["rgpd"] != undefined) {
             this["rgpd"] = obj["rgpd"].toString();
         }
+        if (obj["uploadUrl"] != undefined) {
+            this["uploadUrl"] = obj["uploadUrl"].toString();
+        }
     }
     static check(target, isCompleteObj = true, path = "") {
         return super.check(target, isCompleteObj, path)
@@ -48,6 +51,15 @@ class Model_AppConf_minds_up_admin extends Model_application_configuration_1.Mod
                 let _rgpd = target["rgpd"];
                 if (!_.isString(_rgpd)) {
                     throw new Error(path + "rgpd is not a string");
+                }
+            }
+            if (isCompleteObj && (target["uploadUrl"] == null || target["uploadUrl"] == undefined)) {
+                throw new Error(path + "uploadUrl is required");
+            }
+            if (target["uploadUrl"] != null && target["uploadUrl"] != undefined) {
+                let _uploadUrl = target["uploadUrl"];
+                if (!_.isString(_uploadUrl)) {
+                    throw new Error(path + "uploadUrl is not a string");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });
