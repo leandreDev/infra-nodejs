@@ -104,6 +104,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
         if (obj["emailSenderEmail"] != undefined) {
             this["emailSenderEmail"] = obj["emailSenderEmail"].toString();
         }
+        if (obj["urlFsoService"] != undefined) {
+            this["urlFsoService"] = obj["urlFsoService"].toString();
+        }
     }
     static check(target, isCompleteObj = true, path = "") {
         return super.check(target, isCompleteObj, path)
@@ -261,6 +264,15 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
                 let _emailSenderEmail = target["emailSenderEmail"];
                 if (!_.isString(_emailSenderEmail)) {
                     throw new Error(path + "emailSenderEmail is not a string");
+                }
+            }
+            if (isCompleteObj && (target["urlFsoService"] == null || target["urlFsoService"] == undefined)) {
+                throw new Error(path + "urlFsoService is required");
+            }
+            if (target["urlFsoService"] != null && target["urlFsoService"] != undefined) {
+                let _urlFsoService = target["urlFsoService"];
+                if (!_.isString(_urlFsoService)) {
+                    throw new Error(path + "urlFsoService is not a string");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });

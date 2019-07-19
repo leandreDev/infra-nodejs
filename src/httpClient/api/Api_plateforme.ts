@@ -191,13 +191,13 @@ export class api_collection_plateform {
 
 		 
 		 
-		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
-		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
+		this.service_fso= new HttpServiceBase<Interfaces.Iservice_fso>({url:conf.url + "collection/service_fso/" , secure:conf.secure})  ;
+		this.admin_service_fso= new HttpServiceAdminBase<Interfaces.Iservice_fso>({url:conf.url + "admin/service_fso/" , secure:conf.secure})  ;
 
 		 
 		 
-		this.service_fso= new HttpServiceBase<Interfaces.Iservice_fso>({url:conf.url + "collection/service_fso/" , secure:conf.secure})  ;
-		this.admin_service_fso= new HttpServiceAdminBase<Interfaces.Iservice_fso>({url:conf.url + "admin/service_fso/" , secure:conf.secure})  ;
+		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
+		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
 
 		 
 	
@@ -342,13 +342,13 @@ export class api_collection_plateform {
 
 		 
 		 
-		this.AppConf_minds_up_admin= new HttpServiceBase<Interfaces.IAppConf_minds_up_admin>({url:conf.url + "collection/AppConf_minds_up_admin/" , secure:conf.secure})  ;
-		this.admin_AppConf_minds_up_admin= new HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>({url:conf.url + "admin/AppConf_minds_up_admin/" , secure:conf.secure})  ;
+		this.AppConf_minds_up= new HttpServiceBase<Interfaces.IAppConf_minds_up>({url:conf.url + "collection/AppConf_minds_up/" , secure:conf.secure})  ;
+		this.admin_AppConf_minds_up= new HttpServiceAdminBase<Interfaces.IAppConf_minds_up>({url:conf.url + "admin/AppConf_minds_up/" , secure:conf.secure})  ;
 
 		 
 		 
-		this.AppConf_minds_up= new HttpServiceBase<Interfaces.IAppConf_minds_up>({url:conf.url + "collection/AppConf_minds_up/" , secure:conf.secure})  ;
-		this.admin_AppConf_minds_up= new HttpServiceAdminBase<Interfaces.IAppConf_minds_up>({url:conf.url + "admin/AppConf_minds_up/" , secure:conf.secure})  ;
+		this.AppConf_minds_up_admin= new HttpServiceBase<Interfaces.IAppConf_minds_up_admin>({url:conf.url + "collection/AppConf_minds_up_admin/" , secure:conf.secure})  ;
+		this.admin_AppConf_minds_up_admin= new HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>({url:conf.url + "admin/AppConf_minds_up_admin/" , secure:conf.secure})  ;
 
 		 
 	
@@ -486,9 +486,9 @@ export class api_collection_plateform {
 		 
 		 	Iservice_polo_celio      service de tirage au sort de polo
 		 
-		 	Iservice_mindsUp      service minds up metier
-		 
 		 	Iservice_fso      remote file system
+		 
+		 	Iservice_mindsUp      service minds up metier
 		 
 		 
 		*/
@@ -806,17 +806,6 @@ export class api_collection_plateform {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :service_mindsUp
-		 desc: service minds up metier
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
-
-		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
-
-
-		 
-		 /**
 		 service d'accès a la sous-collection :service_fso
 		 desc: remote file system
 		 info: vous ne pouvez voir que ce type d'objet
@@ -824,6 +813,17 @@ export class api_collection_plateform {
 		public service_fso:HttpServiceBase<Interfaces.Iservice_fso> ;
 
 		public admin_service_fso:HttpServiceAdminBase<Interfaces.Iservice_fso> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_mindsUp
+		 desc: service minds up metier
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
+
+		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
 
 
 		 
@@ -1063,9 +1063,9 @@ export class api_collection_plateform {
 		 
 		 	Iapplication_configuration_appApprenant      c'est la configuration d'une application Apprenant
 		 
-		 	IAppConf_minds_up_admin      config de l'app minds up admin
-		 
 		 	IAppConf_minds_up      config de l'app minds up
+		 
+		 	IAppConf_minds_up_admin      config de l'app minds up admin
 		 
 		 
 		*/
@@ -1141,17 +1141,6 @@ export class api_collection_plateform {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :AppConf_minds_up_admin
-		 desc: config de l'app minds up admin
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public AppConf_minds_up_admin:HttpServiceBase<Interfaces.IAppConf_minds_up_admin> ;
-
-		public admin_AppConf_minds_up_admin:HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin> ;
-
-
-		 
-		 /**
 		 service d'accès a la sous-collection :AppConf_minds_up
 		 desc: config de l'app minds up
 		 info: vous ne pouvez voir que ce type d'objet
@@ -1159,6 +1148,17 @@ export class api_collection_plateform {
 		public AppConf_minds_up:HttpServiceBase<Interfaces.IAppConf_minds_up> ;
 
 		public admin_AppConf_minds_up:HttpServiceAdminBase<Interfaces.IAppConf_minds_up> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :AppConf_minds_up_admin
+		 desc: config de l'app minds up admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public AppConf_minds_up_admin:HttpServiceBase<Interfaces.IAppConf_minds_up_admin> ;
+
+		public admin_AppConf_minds_up_admin:HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin> ;
 
 
 		 

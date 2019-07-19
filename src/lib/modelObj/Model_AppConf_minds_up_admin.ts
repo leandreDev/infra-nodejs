@@ -42,6 +42,14 @@ export class Model_AppConf_minds_up_admin extends   Model_application_configurat
         }
         
     
+        
+        if(obj["uploadUrl"] != undefined){
+          
+           this["uploadUrl"] = obj["uploadUrl"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -64,6 +72,12 @@ export class Model_AppConf_minds_up_admin extends   Model_application_configurat
         texte a afficher pour valider la rgpd
         */
                public "rgpd"?:string ;
+              
+       
+              /**
+        url de l'api d'upload
+        */
+               public "uploadUrl":string ;
               
        
 
@@ -123,6 +137,27 @@ export class Model_AppConf_minds_up_admin extends   Model_application_configurat
 
                  if(! _.isString(_rgpd)){
                     throw new Error(path+"rgpd is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["uploadUrl"] == null || target["uploadUrl"] == undefined) ){
+                  throw new Error(path + "uploadUrl is required") ;
+              }
+              
+              if(target["uploadUrl"] != null && target["uploadUrl"] != undefined ){
+              
+                let _uploadUrl  = target["uploadUrl"] ;
+                
+
+                 if(! _.isString(_uploadUrl)){
+                    throw new Error(path+"uploadUrl is not a string") ;
                     
                   }
                   

@@ -186,6 +186,14 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         }
         
     
+        
+        if(obj["urlFsoService"] != undefined){
+          
+           this["urlFsoService"] = obj["urlFsoService"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -292,6 +300,12 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         Email du mailer
         */
                public "emailSenderEmail":string ;
+              
+       
+              /**
+        url du service fso
+        */
+               public "urlFsoService":string ;
               
        
 
@@ -630,6 +644,27 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
 
                  if(! _.isString(_emailSenderEmail)){
                     throw new Error(path+"emailSenderEmail is not a string") ;
+                    
+                  }
+                  
+                  
+                 
+              
+              
+           }
+           
+              
+              if( isCompleteObj && (target["urlFsoService"] == null || target["urlFsoService"] == undefined) ){
+                  throw new Error(path + "urlFsoService is required") ;
+              }
+              
+              if(target["urlFsoService"] != null && target["urlFsoService"] != undefined ){
+              
+                let _urlFsoService  = target["urlFsoService"] ;
+                
+
+                 if(! _.isString(_urlFsoService)){
+                    throw new Error(path+"urlFsoService is not a string") ;
                     
                   }
                   
