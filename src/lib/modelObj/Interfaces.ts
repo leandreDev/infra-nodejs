@@ -3366,3 +3366,11 @@
               
        
    }
+
+    /**
+    interface de la class service_pdfrip 
+    description service de creation de pdf
+   */
+    export interface Iservice_pdfrip extends   Iservice{
+        
+   }

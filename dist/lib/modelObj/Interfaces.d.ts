@@ -1374,3 +1374,9 @@ export interface Iservice_mindsUp extends Iservice {
     "emailSenderEmail": string;
     "urlFsoService": string;
 }
+/**
+interface de la class service_pdfrip
+description service de creation de pdf
+*/
+export interface Iservice_pdfrip extends Iservice {
+}

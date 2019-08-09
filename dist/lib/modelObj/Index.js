@@ -268,4 +268,6 @@ const Model_AppConf_minds_up_admin_1 = require("./Model_AppConf_minds_up_admin")
 exports.AppConf_minds_up_admin = Model_AppConf_minds_up_admin_1.Model_AppConf_minds_up_admin;
 const Model_service_mindsUp_1 = require("./Model_service_mindsUp");
 exports.service_mindsUp = Model_service_mindsUp_1.Model_service_mindsUp;
+const Model_service_pdfrip_1 = require("./Model_service_pdfrip");
+exports.service_pdfrip = Model_service_pdfrip_1.Model_service_pdfrip;
 //# sourceMappingURL=Index.js.map

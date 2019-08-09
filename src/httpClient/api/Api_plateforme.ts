@@ -200,6 +200,11 @@ export class api_collection_plateform {
 		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
 
 		 
+		 
+		this.service_pdfrip= new HttpServiceBase<Interfaces.Iservice_pdfrip>({url:conf.url + "collection/service_pdfrip/" , secure:conf.secure})  ;
+		this.admin_service_pdfrip= new HttpServiceAdminBase<Interfaces.Iservice_pdfrip>({url:conf.url + "admin/service_pdfrip/" , secure:conf.secure})  ;
+
+		 
 	
 
 		this.protoschema= new HttpServiceBase<Interfaces.Iprotoschema>( {url:conf.url + "collection/protoschema/" , secure:conf.secure} )  ;
@@ -489,6 +494,8 @@ export class api_collection_plateform {
 		 	Iservice_fso      remote file system
 		 
 		 	Iservice_mindsUp      service minds up metier
+		 
+		 	Iservice_pdfrip      service de creation de pdf
 		 
 		 
 		*/
@@ -824,6 +831,17 @@ export class api_collection_plateform {
 		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
 
 		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_pdfrip
+		 desc: service de creation de pdf
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_pdfrip:HttpServiceBase<Interfaces.Iservice_pdfrip> ;
+
+		public admin_service_pdfrip:HttpServiceAdminBase<Interfaces.Iservice_pdfrip> ;
 
 
 		 
