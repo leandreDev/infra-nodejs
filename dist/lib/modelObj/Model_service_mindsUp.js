@@ -107,6 +107,14 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
         if (obj["urlFsoService"] != undefined) {
             this["urlFsoService"] = obj["urlFsoService"].toString();
         }
+        if (obj["mailInvitationCampaign360"] != undefined) {
+            if (_.isString(obj["mailInvitationCampaign360"])) {
+                this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"];
+            }
+            else if (obj["mailInvitationCampaign360"]._id) {
+                this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"]._id;
+            }
+        }
     }
     static check(target, isCompleteObj = true, path = "") {
         return super.check(target, isCompleteObj, path)
@@ -273,6 +281,12 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
                 let _urlFsoService = target["urlFsoService"];
                 if (!_.isString(_urlFsoService)) {
                     throw new Error(path + "urlFsoService is not a string");
+                }
+            }
+            if (target["mailInvitationCampaign360"] != null && target["mailInvitationCampaign360"] != undefined) {
+                let _mailInvitationCampaign360 = target["mailInvitationCampaign360"];
+                if (!_.isString(_mailInvitationCampaign360)) {
+                    throw new Error(path + "mailInvitationCampaign360 is not a string");
                 }
             }
             return Promise.all(promArr).then(() => { return true; });
