@@ -1351,6 +1351,12 @@ export interface IAppConf_minds_up_admin extends Iapplication_configuration {
     "uploadUrl": string;
 }
 /**
+interface de la class service_pdfrip
+description service de creation de pdf
+*/
+export interface Iservice_pdfrip extends Iservice {
+}
+/**
 interface de la class service_mindsUp
 description service minds up metier
 */
@@ -1373,10 +1379,5 @@ export interface Iservice_mindsUp extends Iservice {
     "emailSenderName": string;
     "emailSenderEmail": string;
     "urlFsoService": string;
-}
-/**
-interface de la class service_pdfrip
-description service de creation de pdf
-*/
-export interface Iservice_pdfrip extends Iservice {
+    "mailInvitationCampaign360"?: string | IMultilangSendGridTemplate;
 }

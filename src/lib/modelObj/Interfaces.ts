@@ -3288,6 +3288,14 @@
    }
 
     /**
+    interface de la class service_pdfrip 
+    description service de creation de pdf
+   */
+    export interface Iservice_pdfrip extends   Iservice{
+        
+   }
+
+    /**
     interface de la class service_mindsUp 
     description service minds up metier
    */
@@ -3365,12 +3373,8 @@
                "urlFsoService":string;
               
        
-   }
-
-    /**
-    interface de la class service_pdfrip 
-    description service de creation de pdf
-   */
-    export interface Iservice_pdfrip extends   Iservice{
-        
+              
+               "mailInvitationCampaign360"?:string | IMultilangSendGridTemplate;
+              
+       
    }

@@ -81,6 +81,10 @@ Email du mailer
 url du service fso
 */
     "urlFsoService": string;
+    /**
+mail d'invitation a participer a une campagne 360
+*/
+    "mailInvitationCampaign360"?: string;
     static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
     static create(target: any, path?: string): Promise<Model_service_mindsUp>;
 }

@@ -116,9 +116,9 @@ export declare class api_collection_plateform {
      
         Iservice_fso      remote file system
      
-        Iservice_mindsUp      service minds up metier
-     
         Iservice_pdfrip      service de creation de pdf
+     
+        Iservice_mindsUp      service minds up metier
      
      
     */
@@ -328,19 +328,19 @@ export declare class api_collection_plateform {
     service_fso: HttpServiceBase<Interfaces.Iservice_fso>;
     admin_service_fso: HttpServiceAdminBase<Interfaces.Iservice_fso>;
     /**
-    service d'accès a la sous-collection :service_mindsUp
-    desc: service minds up metier
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_mindsUp: HttpServiceBase<Interfaces.Iservice_mindsUp>;
-    admin_service_mindsUp: HttpServiceAdminBase<Interfaces.Iservice_mindsUp>;
-    /**
     service d'accès a la sous-collection :service_pdfrip
     desc: service de creation de pdf
     info: vous ne pouvez voir que ce type d'objet
    */
     service_pdfrip: HttpServiceBase<Interfaces.Iservice_pdfrip>;
     admin_service_pdfrip: HttpServiceAdminBase<Interfaces.Iservice_pdfrip>;
+    /**
+    service d'accès a la sous-collection :service_mindsUp
+    desc: service minds up metier
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_mindsUp: HttpServiceBase<Interfaces.Iservice_mindsUp>;
+    admin_service_mindsUp: HttpServiceAdminBase<Interfaces.Iservice_mindsUp>;
     /**
      service d'accès à la collection :protoschema
      desc: protoschema est un méta modéle. il permet de créer les autres modèle de la base

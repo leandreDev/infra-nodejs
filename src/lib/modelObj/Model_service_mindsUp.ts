@@ -194,6 +194,18 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         }
         
     
+        
+        if(obj["mailInvitationCampaign360"] != undefined){
+          
+          if(_.isString(obj["mailInvitationCampaign360"])){
+            this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"];
+          }else if(obj["mailInvitationCampaign360"]._id){
+            this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"]._id ;
+          }
+          
+        }
+        
+    
   }
   
 
@@ -306,6 +318,12 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         url du service fso
         */
                public "urlFsoService":string ;
+              
+       
+              /**
+        mail d'invitation a participer a une campagne 360
+        */
+               public "mailInvitationCampaign360"?:string ;
               
        
 
@@ -670,6 +688,20 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
                   
                   
                  
+              
+              
+           }
+           
+              
+              if(target["mailInvitationCampaign360"] != null && target["mailInvitationCampaign360"] != undefined ){
+              
+                  let _mailInvitationCampaign360  = target["mailInvitationCampaign360"] ;
+                  
+                  if( ! _.isString(_mailInvitationCampaign360)){
+                   throw new Error(path + "mailInvitationCampaign360 is not a string") ;
+                  }
+                  
+
               
               
            }
