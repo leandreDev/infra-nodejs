@@ -17,6 +17,4 @@ Current working directory of the child process
 Environment key-value pairs
 */
     "env"?: Interface.Inode_fork_option_env;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_node_fork_option>;
 }

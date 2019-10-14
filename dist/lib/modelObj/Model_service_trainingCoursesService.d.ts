@@ -29,6 +29,4 @@ url du service d'envoie de mail
 l'url de la bd d'infra
 */
     "clientInfraUrl": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_trainingCoursesService>;
 }

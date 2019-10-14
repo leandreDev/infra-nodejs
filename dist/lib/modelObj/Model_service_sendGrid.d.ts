@@ -25,6 +25,4 @@ l'url de la collection de user
 liste des templates
 */
     "templates"?: string[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_sendGrid>;
 }

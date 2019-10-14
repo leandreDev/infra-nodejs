@@ -58,61 +58,6 @@ export class Model_user_roles extends  Base  implements Interface.Iuser_roles {
        
 
 
-       public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
-        return super.check(target, isCompleteObj , path)
-        .then((boolean)=>{
-          var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
-          
-              
-              if(target["user"] != null && target["user"] != undefined ){
-              
-                  let _user  = target["user"] ;
-                  
-                  if( ! _.isString(_user)){
-                   throw new Error(path + "user is not a string") ;
-                  }
-                  
-
-              
-              
-           }
-           
-              
-              if(target["roles"] != null && target["roles"] != undefined ){
-              
-                target["roles"].forEach((_roles , index:number)=>{
-                
-
-                 if(! _.isString(_roles)){
-                    throw new Error(path+"roles index: "+ index +"is not a string")
-                    
-                  }
-                  
-                  
-                    let _enum_roles:string[] = ["client","admin"] ;
-                    if(_enum_roles.indexOf(_roles)==-1){
-                        throw new Error(path+"roles index: "+ index + " dont match one of client , admin" ) ;
-                        
-                    }
-                  
-                 });
-              
-              
-           }
-           
-           
-          return Promise.all(promArr).then(()=>{return true}) ;
-        }).catch((err)=>{
-          throw err ;
-        })
-
-
-      }
-
-      public static create(target:any, path:string=""):Promise<Model_user_roles>{
-        return Model_user_roles.check(target, true, path).then(()=>{
-          return new Model_user_roles(target) ;
-        })
-      }
+       
 
    }

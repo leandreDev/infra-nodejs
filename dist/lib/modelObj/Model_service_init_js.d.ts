@@ -13,6 +13,4 @@ export declare class Model_service_init_js extends Model_service implements Inte
 liste des templates disponnibles
 */
     "templates": Interface.ITemplateLodash[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_init_js>;
 }

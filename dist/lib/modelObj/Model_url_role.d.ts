@@ -29,6 +29,4 @@ règle de sécurité du verbe update
 règle de sécurité du verbe patch
 */
     "_$patch"?: Interface.Iroute_role[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_url_role>;
 }

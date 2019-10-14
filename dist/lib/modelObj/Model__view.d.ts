@@ -29,6 +29,4 @@ model sur le quelle on opère l'agrégation
 liste des operation du pipeline
 */
     "pipeline"?: any[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model__view>;
 }

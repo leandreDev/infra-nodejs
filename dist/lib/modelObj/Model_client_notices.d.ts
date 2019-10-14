@@ -13,6 +13,4 @@ export declare class Model_client_notices extends Base implements Interface.Icli
 client notices values
 */
     "values"?: Interface.Inotice_field[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_client_notices>;
 }

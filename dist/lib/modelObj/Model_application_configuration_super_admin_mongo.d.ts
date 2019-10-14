@@ -45,6 +45,4 @@ entityUrl
 permet de paramétrer le rendu des schemas
 */
     "entityName"?: Interface.Ischema_name[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_application_configuration_super_admin_mongo>;
 }

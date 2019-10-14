@@ -33,6 +33,4 @@ distributeur de licence
 client notices
 */
     "client_notices"?: Interface.Inotice_field[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_end_client>;
 }

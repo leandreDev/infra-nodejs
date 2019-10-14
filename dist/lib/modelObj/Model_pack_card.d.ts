@@ -21,6 +21,4 @@ nom de la compagnie dans l'infra de goshaba
 l'id de la compagnie dans l'infra de goshaba
 */
     "companyId"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_pack_card>;
 }

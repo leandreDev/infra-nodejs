@@ -53,6 +53,4 @@ active le bouton clone
 active le bouton enregistrer
 */
     "update"?: boolean;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_schema_name>;
 }

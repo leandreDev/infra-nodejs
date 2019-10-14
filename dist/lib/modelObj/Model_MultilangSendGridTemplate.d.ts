@@ -17,6 +17,4 @@ le nom du template
 liste des Template sendgrid
 */
     "sendGridTemplates"?: Interface.IsendGridTemplate[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_MultilangSendGridTemplate>;
 }

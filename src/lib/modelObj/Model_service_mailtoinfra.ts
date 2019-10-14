@@ -48,51 +48,6 @@ export class Model_service_mailtoinfra extends   Model_service   implements Inte
        
 
 
-       public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
-        return super.check(target, isCompleteObj , path)
-        .then((boolean)=>{
-          var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
-          
-              
-              if(target["mailsMapping"] != null && target["mailsMapping"] != undefined ){
-              
-                  target["mailsMapping"].forEach((_mailsMapping , index:number)=>{
-                  
-                  
-                    promArr.push( Index["mail_connexion_conf"].check(_mailsMapping, isCompleteObj , path+"mailsMapping.")
-                      .catch((err)=>{
-                        throw new Error(path+"mailsMapping index: "+ index +"is not mail_connexion_conf")
-                        
-
-                      }) )
-                  if(_mailsMapping._class != null && _mailsMapping._class != undefined){
-                    promArr.push( Index[_mailsMapping._class].check(_mailsMapping, isCompleteObj , path+"mailsMapping.")
-                      .catch((err)=>{
-                        throw new Error(path+"mailsMapping index: "+ index +"is not a " + _mailsMapping._class )
-                        
-
-                      })
-                    )
-                  }
-
-                  });
-              
-              
-           }
-           
-           
-          return Promise.all(promArr).then(()=>{return true}) ;
-        }).catch((err)=>{
-          throw err ;
-        })
-
-
-      }
-
-      public static create(target:any, path:string=""):Promise<Model_service_mailtoinfra>{
-        return Model_service_mailtoinfra.check(target, true, path).then(()=>{
-          return new Model_service_mailtoinfra(target) ;
-        })
-      }
+       
 
    }

@@ -17,6 +17,4 @@ liste des paramètres de la route
 parametre a caster
 */
     "castParams"?: Interface.IcastParam[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model__view_params>;
 }

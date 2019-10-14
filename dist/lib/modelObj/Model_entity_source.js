@@ -21,33 +21,6 @@ class Model_entity_source extends utils_1.Base {
             });
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (target["url"] != null && target["url"] != undefined) {
-                let _url = target["url"];
-                if (!_.isString(_url)) {
-                    throw new Error(path + "url is not a string");
-                }
-            }
-            if (target["entityName"] != null && target["entityName"] != undefined) {
-                target["entityName"].forEach((_entityName, index) => {
-                    if (!_.isString(_entityName)) {
-                        throw new Error(path + "entityName index: " + index + "is not a string");
-                    }
-                });
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_entity_source.check(target, true, path).then(() => {
-            return new Model_entity_source(target);
-        });
-    }
 }
 exports.Model_entity_source = Model_entity_source;
 //# sourceMappingURL=Model_entity_source.js.map

@@ -42,40 +42,6 @@ export class Model_mongo_aggregation extends  Base  implements Interface.Imongo_
        
 
 
-       public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
-        return super.check(target, isCompleteObj , path)
-        .then((boolean)=>{
-          var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
-          
-              
-              if(target["from"] != null && target["from"] != undefined ){
-              
-                  let _from  = target["from"] ;
-                  
-                  if( ! _.isString(_from)){
-                      if( ! _.isString(_from)){
-                       throw new Error(path + "from is not a string") ;
-                      }
-                  }
-                  
-               
-              
-              
-           }
-           
-           
-          return Promise.all(promArr).then(()=>{return true}) ;
-        }).catch((err)=>{
-          throw err ;
-        })
-
-
-      }
-
-      public static create(target:any, path:string=""):Promise<Model_mongo_aggregation>{
-        return Model_mongo_aggregation.check(target, true, path).then(()=>{
-          return new Model_mongo_aggregation(target) ;
-        })
-      }
+       
 
    }

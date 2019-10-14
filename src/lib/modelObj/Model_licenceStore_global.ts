@@ -26,24 +26,6 @@ export class Model_licenceStore_global extends   Model_licenceStore   implements
         
 
 
-       public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
-        return super.check(target, isCompleteObj , path)
-        .then((boolean)=>{
-          var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
-          
-           
-          return Promise.all(promArr).then(()=>{return true}) ;
-        }).catch((err)=>{
-          throw err ;
-        })
-
-
-      }
-
-      public static create(target:any, path:string=""):Promise<Model_licenceStore_global>{
-        return Model_licenceStore_global.check(target, true, path).then(()=>{
-          return new Model_licenceStore_global(target) ;
-        })
-      }
+       
 
    }

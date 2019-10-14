@@ -21,28 +21,6 @@ class Model_mongo_aggregation extends utils_1.Base {
             }
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (target["from"] != null && target["from"] != undefined) {
-                let _from = target["from"];
-                if (!_.isString(_from)) {
-                    if (!_.isString(_from)) {
-                        throw new Error(path + "from is not a string");
-                    }
-                }
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_mongo_aggregation.check(target, true, path).then(() => {
-            return new Model_mongo_aggregation(target);
-        });
-    }
 }
 exports.Model_mongo_aggregation = Model_mongo_aggregation;
 //# sourceMappingURL=Model_mongo_aggregation.js.map

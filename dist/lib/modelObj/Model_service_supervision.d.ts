@@ -21,6 +21,4 @@ base sur laquelle la connexion s'etabli
 configuration de démarrages des services
 */
     "services"?: Interface.Iservice_supervision_service_conf[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_supervision>;
 }

@@ -12,20 +12,6 @@ class Model_application_configuration_phoneCard extends Model_application_config
         super(obj);
         this._class = "application_configuration_phoneCard";
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_application_configuration_phoneCard.check(target, true, path).then(() => {
-            return new Model_application_configuration_phoneCard(target);
-        });
-    }
 }
 exports.Model_application_configuration_phoneCard = Model_application_configuration_phoneCard;
 //# sourceMappingURL=Model_application_configuration_phoneCard.js.map

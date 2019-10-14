@@ -40,45 +40,6 @@ export class Model_service_orchestrator extends   Model_service   implements Int
        
 
 
-       public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
-        return super.check(target, isCompleteObj , path)
-        .then((boolean)=>{
-          var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
-          
-              
-              if( isCompleteObj && (target["apiUrl"] == null || target["apiUrl"] == undefined) ){
-                  throw new Error(path + "apiUrl is required") ;
-              }
-              
-              if(target["apiUrl"] != null && target["apiUrl"] != undefined ){
-              
-                let _apiUrl  = target["apiUrl"] ;
-                
-
-                 if(! _.isString(_apiUrl)){
-                    throw new Error(path+"apiUrl is not a string") ;
-                    
-                  }
-                  
-                  
-                 
-              
-              
-           }
-           
-           
-          return Promise.all(promArr).then(()=>{return true}) ;
-        }).catch((err)=>{
-          throw err ;
-        })
-
-
-      }
-
-      public static create(target:any, path:string=""):Promise<Model_service_orchestrator>{
-        return Model_service_orchestrator.check(target, true, path).then(()=>{
-          return new Model_service_orchestrator(target) ;
-        })
-      }
+       
 
    }

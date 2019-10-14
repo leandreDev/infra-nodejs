@@ -21,6 +21,8 @@ id du template de mail chez sendGrid
 liste des substitutions a réaliser sur le template
 */
     "parametre"?: Interface.Iname_value[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_sendGridTemplate>;
+    /**
+dynamic_template_data de send grid
+*/
+    "dynamic_template_data"?: Interface.Iname_value[];
 }

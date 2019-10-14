@@ -29,42 +29,6 @@ class Model_nginxConfigurationFile extends utils_1.Base {
             });
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (target["suffix"] != null && target["suffix"] != undefined) {
-                let _suffix = target["suffix"];
-                if (!_.isString(_suffix)) {
-                    throw new Error(path + "suffix is not a string");
-                }
-                if (!_suffix.match(/[^ \/\\]*/)) {
-                    throw new Error(path + "suffix dont match [^ \/\\]*");
-                }
-            }
-            if (target["template"] != null && target["template"] != undefined) {
-                let _template = target["template"];
-                if (!_.isString(_template)) {
-                    throw new Error(path + "template is not a string");
-                }
-            }
-            if (target["services"] != null && target["services"] != undefined) {
-                target["services"].forEach((_services, index) => {
-                    if (!_.isString(_services)) {
-                        throw new Error(path + "services is not a string");
-                    }
-                });
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_nginxConfigurationFile.check(target, true, path).then(() => {
-            return new Model_nginxConfigurationFile(target);
-        });
-    }
 }
 exports.Model_nginxConfigurationFile = Model_nginxConfigurationFile;
 //# sourceMappingURL=Model_nginxConfigurationFile.js.map

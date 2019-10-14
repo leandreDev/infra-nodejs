@@ -28,43 +28,6 @@ class Model_mongo_expression_array extends Model_mongo_expression_1.Model_mongo_
             this["isArray"] = new Boolean(obj["isArray"]).valueOf();
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (target["value"] != null && target["value"] != undefined) {
-                target["value"].forEach((_value, index) => {
-                    if (!_.isString(_value)) {
-                        throw new Error(path + "value index: " + index + "is not a string");
-                    }
-                });
-            }
-            if (target["valueType"] != null && target["valueType"] != undefined) {
-                let _valueType = target["valueType"];
-                if (!_.isString(_valueType)) {
-                    throw new Error(path + "valueType is not a string");
-                }
-                let _enum_valueType = ["string", "number", "boolean", "date"];
-                if (_enum_valueType.indexOf(_valueType) == -1) {
-                    throw new Error(path + "valueType dont match one of string , number , boolean , date");
-                }
-            }
-            if (target["isArray"] != null && target["isArray"] != undefined) {
-                let _isArray = target["isArray"];
-                if (!_.isBoolean(_isArray)) {
-                    throw new Error(path + "isArray is not a boolean");
-                }
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_mongo_expression_array.check(target, true, path).then(() => {
-            return new Model_mongo_expression_array(target);
-        });
-    }
 }
 exports.Model_mongo_expression_array = Model_mongo_expression_array;
 //# sourceMappingURL=Model_mongo_expression_array.js.map

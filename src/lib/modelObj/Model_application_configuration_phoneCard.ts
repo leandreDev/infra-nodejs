@@ -26,24 +26,6 @@ export class Model_application_configuration_phoneCard extends   Model_applicati
         
 
 
-       public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
-        return super.check(target, isCompleteObj , path)
-        .then((boolean)=>{
-          var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
-          
-           
-          return Promise.all(promArr).then(()=>{return true}) ;
-        }).catch((err)=>{
-          throw err ;
-        })
-
-
-      }
-
-      public static create(target:any, path:string=""):Promise<Model_application_configuration_phoneCard>{
-        return Model_application_configuration_phoneCard.check(target, true, path).then(()=>{
-          return new Model_application_configuration_phoneCard(target) ;
-        })
-      }
+       
 
    }

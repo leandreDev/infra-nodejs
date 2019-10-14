@@ -12,20 +12,6 @@ class Model_service_push_notification extends Model_service_1.Model_service {
         super(obj);
         this._class = "service_push_notification";
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_service_push_notification.check(target, true, path).then(() => {
-            return new Model_service_push_notification(target);
-        });
-    }
 }
 exports.Model_service_push_notification = Model_service_push_notification;
 //# sourceMappingURL=Model_service_push_notification.js.map

@@ -48,6 +48,22 @@ export class Model_sendGridTemplate extends  Base  implements Interface.IsendGri
         }
         
     
+        
+        if(obj["dynamic_template_data"] != undefined && obj["dynamic_template_data"] != null && _.isArray(obj["dynamic_template_data"])){
+          
+
+            this["dynamic_template_data"] = obj["dynamic_template_data"].map((value)=>{
+              if(value._class){
+                return new Index[value._class](value) ;
+              }else{
+                return new Index["name_value"](value) ;
+              }
+            })
+            
+          
+        }
+        
+    
   }
   
 
@@ -72,95 +88,14 @@ export class Model_sendGridTemplate extends  Base  implements Interface.IsendGri
                public "parametre"?:Interface.Iname_value[];
               
        
+              /**
+        dynamic_template_data de send grid
+        */
+               public "dynamic_template_data"?:Interface.Iname_value[];
+              
+       
 
 
-       public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
-        return super.check(target, isCompleteObj , path)
-        .then((boolean)=>{
-          var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
-          
-              
-              if( isCompleteObj && (target["lang"] == null || target["lang"] == undefined) ){
-                  throw new Error(path + "lang is required") ;
-              }
-              
-              if(target["lang"] != null && target["lang"] != undefined ){
-              
-                let _lang  = target["lang"] ;
-                
-
-                 if(! _.isString(_lang)){
-                    throw new Error(path+"lang is not a string") ;
-                    
-                  }
-                  
-                  
-                 
-              
-              
-           }
-           
-              
-              if( isCompleteObj && (target["templateId"] == null || target["templateId"] == undefined) ){
-                  throw new Error(path + "templateId is required") ;
-              }
-              
-              if(target["templateId"] != null && target["templateId"] != undefined ){
-              
-                let _templateId  = target["templateId"] ;
-                
-
-                 if(! _.isString(_templateId)){
-                    throw new Error(path+"templateId is not a string") ;
-                    
-                  }
-                  
-                  
-                 
-              
-              
-           }
-           
-              
-              if(target["parametre"] != null && target["parametre"] != undefined ){
-              
-                  target["parametre"].forEach((_parametre , index:number)=>{
-                  
-                  
-                    promArr.push( Index["name_value"].check(_parametre, isCompleteObj , path+"parametre.")
-                      .catch((err)=>{
-                        throw new Error(path+"parametre index: "+ index +"is not name_value")
-                        
-
-                      }) )
-                  if(_parametre._class != null && _parametre._class != undefined){
-                    promArr.push( Index[_parametre._class].check(_parametre, isCompleteObj , path+"parametre.")
-                      .catch((err)=>{
-                        throw new Error(path+"parametre index: "+ index +"is not a " + _parametre._class )
-                        
-
-                      })
-                    )
-                  }
-
-                  });
-              
-              
-           }
-           
-           
-          return Promise.all(promArr).then(()=>{return true}) ;
-        }).catch((err)=>{
-          throw err ;
-        })
-
-
-      }
-
-      public static create(target:any, path:string=""):Promise<Model_sendGridTemplate>{
-        return Model_sendGridTemplate.check(target, true, path).then(()=>{
-          return new Model_sendGridTemplate(target) ;
-        })
-      }
+       
 
    }

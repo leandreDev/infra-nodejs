@@ -40,41 +40,6 @@ export class Model_ui_menu_mongo_editor_separateur extends   Model_ui_menu_mongo
        
 
 
-       public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
-        return super.check(target, isCompleteObj , path)
-        .then((boolean)=>{
-          var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
-          
-              
-              if(target["cssClass"] != null && target["cssClass"] != undefined ){
-              
-                let _cssClass  = target["cssClass"] ;
-                
-
-                 if(! _.isString(_cssClass)){
-                    throw new Error(path+"cssClass is not a string") ;
-                    
-                  }
-                  
-                  
-                 
-              
-              
-           }
-           
-           
-          return Promise.all(promArr).then(()=>{return true}) ;
-        }).catch((err)=>{
-          throw err ;
-        })
-
-
-      }
-
-      public static create(target:any, path:string=""):Promise<Model_ui_menu_mongo_editor_separateur>{
-        return Model_ui_menu_mongo_editor_separateur.check(target, true, path).then(()=>{
-          return new Model_ui_menu_mongo_editor_separateur(target) ;
-        })
-      }
+       
 
    }

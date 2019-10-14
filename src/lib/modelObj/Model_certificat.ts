@@ -38,41 +38,6 @@ export class Model_certificat extends  Base  implements Interface.Icertificat {
        
 
 
-       public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
-        return super.check(target, isCompleteObj , path)
-        .then((boolean)=>{
-          var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
-          
-              
-              if(target["name"] != null && target["name"] != undefined ){
-              
-                let _name  = target["name"] ;
-                
-
-                 if(! _.isString(_name)){
-                    throw new Error(path+"name is not a string") ;
-                    
-                  }
-                  
-                  
-                 
-              
-              
-           }
-           
-           
-          return Promise.all(promArr).then(()=>{return true}) ;
-        }).catch((err)=>{
-          throw err ;
-        })
-
-
-      }
-
-      public static create(target:any, path:string=""):Promise<Model_certificat>{
-        return Model_certificat.check(target, true, path).then(()=>{
-          return new Model_certificat(target) ;
-        })
-      }
+       
 
    }

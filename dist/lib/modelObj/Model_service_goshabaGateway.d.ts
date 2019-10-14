@@ -17,6 +17,4 @@ clef privée d'echange entre les serveurs
 url de la collection de pack de carte
 */
     "packUrl": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_goshabaGateway>;
 }

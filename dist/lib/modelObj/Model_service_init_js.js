@@ -24,37 +24,6 @@ class Model_service_init_js extends Model_service_1.Model_service {
             });
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (isCompleteObj && (target["templates"] == null || target["templates"] == undefined)) {
-                throw new Error(path + "templates is required");
-            }
-            if (target["templates"] != null && target["templates"] != undefined) {
-                target["templates"].forEach((_templates, index) => {
-                    promArr.push(Index["TemplateLodash"].check(_templates, isCompleteObj, path + "templates.")
-                        .catch((err) => {
-                        throw new Error(path + "templates index: " + index + "is not TemplateLodash");
-                    }));
-                    if (_templates._class != null && _templates._class != undefined) {
-                        promArr.push(Index[_templates._class].check(_templates, isCompleteObj, path + "templates.")
-                            .catch((err) => {
-                            throw new Error(path + "templates index: " + index + "is not a " + _templates._class);
-                        }));
-                    }
-                });
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_service_init_js.check(target, true, path).then(() => {
-            return new Model_service_init_js(target);
-        });
-    }
 }
 exports.Model_service_init_js = Model_service_init_js;
 //# sourceMappingURL=Model_service_init_js.js.map

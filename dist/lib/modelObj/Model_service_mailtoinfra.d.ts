@@ -13,6 +13,4 @@ export declare class Model_service_mailtoinfra extends Model_service implements 
 liste des configuration attacher a un mail
 */
     "mailsMapping"?: Interface.Imail_connexion_conf[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_mailtoinfra>;
 }

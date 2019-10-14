@@ -56,68 +56,6 @@ export class Model_node_fork_option extends  Base  implements Interface.Inode_fo
        
 
 
-       public static check(target:any , isCompleteObj:boolean=true,  path:string=""):Promise<boolean>{
-        return super.check(target, isCompleteObj , path)
-        .then((boolean)=>{
-          var promArr:Array<Promise<boolean>> = [Promise.resolve(true)] ;
-          
-              
-              if(target["cwd"] != null && target["cwd"] != undefined ){
-              
-                let _cwd  = target["cwd"] ;
-                
-
-                 if(! _.isString(_cwd)){
-                    throw new Error(path+"cwd is not a string") ;
-                    
-                  }
-                  
-                  
-                 
-              
-              
-           }
-           
-              
-              if(target["env"] != null && target["env"] != undefined ){
-              
-                  let _env  = target["env"] ;
-                  
-                  
-                    promArr.push( Index["node_fork_option_env"].check(_env, isCompleteObj , path+"env.")
-                      .catch((err)=>{
-                        throw new Error(path+"env is not ") ;
-                        
-
-                      }) )
-                  if(_env._class != null && _env._class != undefined){
-                    promArr.push( Index[_env._class].check(_env, isCompleteObj , path+"env.")
-                      .catch((err)=>{
-                        throw new Error(path+"env is not a " + _env._class ) ;
-                        
-
-                      })
-                    )
-                  }
-
-                  
-              
-              
-           }
-           
-           
-          return Promise.all(promArr).then(()=>{return true}) ;
-        }).catch((err)=>{
-          throw err ;
-        })
-
-
-      }
-
-      public static create(target:any, path:string=""):Promise<Model_node_fork_option>{
-        return Model_node_fork_option.check(target, true, path).then(()=>{
-          return new Model_node_fork_option(target) ;
-        })
-      }
+       
 
    }

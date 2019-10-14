@@ -37,6 +37,4 @@ clef secrète de signature inter service
 paramétrage des accès public
 */
     "publicAccess"?: Interface.Iurl_role;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service>;
 }

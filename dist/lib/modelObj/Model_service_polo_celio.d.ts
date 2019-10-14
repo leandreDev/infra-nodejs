@@ -25,6 +25,4 @@ stat de tirage
 stat de tirage du gros lot
 */
     "bigDrawStat"?: number;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_polo_celio>;
 }

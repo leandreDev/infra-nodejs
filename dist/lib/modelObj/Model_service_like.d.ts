@@ -17,6 +17,4 @@ url de la collection des like
 url de la collection de notes
 */
     "noteCollection": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_like>;
 }

@@ -37,6 +37,4 @@ nombre maximum de redémarrage automatique
 définit le temps maximum qui peut s'écouler entre un démarrage et une fermeture pour considérer que c'est un crache au démarrage
 */
     "minTime"?: number;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_supervision_service_conf>;
 }

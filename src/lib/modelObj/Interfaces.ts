@@ -1552,26 +1552,6 @@
    }
 
     /**
-    interface de la class sendGridTemplate 
-    description template send grid
-   */
-    export interface IsendGridTemplate extends  IBase {
-        
-              
-               "lang":string;
-              
-       
-              
-               "templateId":string;
-              
-       
-              
-               "parametre"?:Iname_value[];
-              
-       
-   }
-
-    /**
     interface de la class schema_name 
     description mapping de schema et de nom
    */
@@ -3375,6 +3355,30 @@
        
               
                "mailInvitationCampaign360"?:string | IMultilangSendGridTemplate;
+              
+       
+   }
+
+    /**
+    interface de la class sendGridTemplate 
+    description template send grid
+   */
+    export interface IsendGridTemplate extends  IBase {
+        
+              
+               "lang":string;
+              
+       
+              
+               "templateId":string;
+              
+       
+              
+               "parametre"?:Iname_value[];
+              
+       
+              
+               "dynamic_template_data"?:Iname_value[];
               
        
    }

@@ -17,6 +17,4 @@ url du service d'enregistrement
 url du service de récupération de mot de passe
 */
     "password_recovery_uri": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_oidc_clientUserManagment>;
 }

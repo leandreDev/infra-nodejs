@@ -9,6 +9,4 @@ export declare class Model_mongo_expression_ne extends Model_mongo_expression_co
     */
     constructor(obj?: any);
     _class: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_mongo_expression_ne>;
 }
