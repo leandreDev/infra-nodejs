@@ -33,6 +33,4 @@ le compte oidc du client pour la connection
 la css root de l'app
 */
     "css"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_application_instance>;
 }

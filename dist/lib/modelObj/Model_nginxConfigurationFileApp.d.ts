@@ -25,6 +25,4 @@ liste des applications
 le client associé
 */
     "clients": string[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_nginxConfigurationFileApp>;
 }

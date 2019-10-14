@@ -58,67 +58,6 @@ class Model_licence extends utils_1.Base {
             this["usingDate"] = new Date(obj["usingDate"]);
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (target["end_client"] != null && target["end_client"] != undefined) {
-                let _end_client = target["end_client"];
-                if (!_.isString(_end_client)) {
-                    throw new Error(path + "end_client is not a string");
-                }
-            }
-            if (target["user"] != null && target["user"] != undefined) {
-                let _user = target["user"];
-                if (!_.isString(_user)) {
-                    throw new Error(path + "user is not a string");
-                }
-            }
-            if (target["application_instance"] != null && target["application_instance"] != undefined) {
-                target["application_instance"].forEach((_application_instance, index) => {
-                    if (!_.isString(_application_instance)) {
-                        throw new Error(path + "application_instance is not a string");
-                    }
-                });
-            }
-            if (target["ressource"] != null && target["ressource"] != undefined) {
-                target["ressource"].forEach((_ressource, index) => {
-                    if (!_.isString(_ressource)) {
-                        throw new Error(path + "ressource is not a string");
-                    }
-                });
-            }
-            if (target["licenceStoreRef"] != null && target["licenceStoreRef"] != undefined) {
-                let _licenceStoreRef = target["licenceStoreRef"];
-                if (!_.isString(_licenceStoreRef)) {
-                    throw new Error(path + "licenceStoreRef is not a string");
-                }
-            }
-            if (isCompleteObj && (target["creationDate"] == null || target["creationDate"] == undefined)) {
-                throw new Error(path + "creationDate is required");
-            }
-            if (target["creationDate"] != null && target["creationDate"] != undefined) {
-                let _creationDate = target["creationDate"];
-                if (!_.isDate(_creationDate)) {
-                    throw new Error(path + "creationDate is not a Date");
-                }
-            }
-            if (target["usingDate"] != null && target["usingDate"] != undefined) {
-                let _usingDate = target["usingDate"];
-                if (!_.isDate(_usingDate)) {
-                    throw new Error(path + "usingDate is not a Date");
-                }
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_licence.check(target, true, path).then(() => {
-            return new Model_licence(target);
-        });
-    }
 }
 exports.Model_licence = Model_licence;
 //# sourceMappingURL=Model_licence.js.map

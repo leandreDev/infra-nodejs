@@ -21,6 +21,4 @@ type de paramétre
 contexte a caster
 */
     "param": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_castParam>;
 }

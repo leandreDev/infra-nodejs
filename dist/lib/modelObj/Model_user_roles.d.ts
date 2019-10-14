@@ -17,6 +17,4 @@ utilisateur
 liste des roles de l'utilisateur
 */
     "roles"?: string[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_user_roles>;
 }

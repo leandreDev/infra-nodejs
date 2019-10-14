@@ -13,6 +13,4 @@ export declare class Model_ui_menu_mongo_editor_separateur extends Model_ui_menu
 nom de la classe css à appliquer
 */
     "cssClass"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_ui_menu_mongo_editor_separateur>;
 }

@@ -13,6 +13,4 @@ export declare class Model_mongo_aggregation extends Base implements Interface.I
 Target collection for the $graphLookup operation to search, recursively matching the connectFromField to the connectToField. The from collection cannot be sharded and must be in the same database as any other collections used in the operation.
 */
     "from"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_mongo_aggregation>;
 }

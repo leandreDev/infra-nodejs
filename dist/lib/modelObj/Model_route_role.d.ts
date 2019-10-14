@@ -17,6 +17,4 @@ route à protéger
 liste des roles
 */
     "role"?: string[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_route_role>;
 }

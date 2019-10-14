@@ -17,6 +17,4 @@ date de début de distribution
 date de fin de distribution
 */
     "endDate"?: Date;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_periodicalDistrution_periode>;
 }

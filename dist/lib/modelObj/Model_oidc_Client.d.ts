@@ -153,6 +153,4 @@ configuration des connecteurs sociaux
 paramètre de gestion des utilisateurs
 */
     "userManagment"?: Interface.Ioidc_clientUserManagment;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_oidc_Client>;
 }

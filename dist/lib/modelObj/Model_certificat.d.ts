@@ -13,6 +13,4 @@ export declare class Model_certificat extends Base implements Interface.Icertifi
 nom du certificat
 */
     "name"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_certificat>;
 }

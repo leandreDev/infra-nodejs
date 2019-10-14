@@ -37,6 +37,4 @@ indique que la valeur du champ doit être unique
 c'est la référence a la collection dans lequelle  sont les document a référencer
 */
     "ref": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_objectid>;
 }

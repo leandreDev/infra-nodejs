@@ -17,6 +17,4 @@ paramètre de la route
 type de paramétre
 */
     "type"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_routeParam>;
 }

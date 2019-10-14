@@ -37,6 +37,4 @@ licencesService_url
 url de la base de donnée
 */
     "apiUrl": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_planned_tasks>;
 }

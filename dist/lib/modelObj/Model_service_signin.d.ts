@@ -37,6 +37,4 @@ url de la collection des user de l'app
 url des profiles des users
 */
     "userProfileUrl": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_signin>;
 }

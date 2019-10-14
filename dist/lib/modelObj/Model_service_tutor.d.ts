@@ -13,6 +13,4 @@ export declare class Model_service_tutor extends Model_service implements Interf
 url du service de bd a utiliser
 */
     "apiSession": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_tutor>;
 }

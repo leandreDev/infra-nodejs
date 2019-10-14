@@ -25,6 +25,4 @@ id de l'application savy
 confMapping
 */
     "confMapping"?: Interface.Imail_connexion_conf[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_mailtoinfra2>;
 }

@@ -17,6 +17,4 @@ l'url du serveur de configuration
 configuration du service
 */
     "SRV_ID"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_node_fork_option_env>;
 }

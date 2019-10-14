@@ -25,6 +25,4 @@ icon
 liste des sous menu
 */
     "child"?: Interface.Iui_menu_mongo_editor[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_ui_menu_mongo_editor>;
 }

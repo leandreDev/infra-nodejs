@@ -13,6 +13,4 @@ export declare class Model_socketIoConfig extends Base implements Interface.Isoc
 serverOptionPath
 */
     "serverOptionPath"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_socketIoConfig>;
 }

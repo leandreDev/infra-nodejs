@@ -24,37 +24,6 @@ class Model_mongo_expression_or extends Model_mongo_expression_logical_1.Model_m
             });
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (isCompleteObj && (target["expression"] == null || target["expression"] == undefined)) {
-                throw new Error(path + "expression is required");
-            }
-            if (target["expression"] != null && target["expression"] != undefined) {
-                target["expression"].forEach((_expression, index) => {
-                    promArr.push(Index["mongo_expression"].check(_expression, isCompleteObj, path + "expression.")
-                        .catch((err) => {
-                        throw new Error(path + "expression index: " + index + "is not mongo_expression");
-                    }));
-                    if (_expression._class != null && _expression._class != undefined) {
-                        promArr.push(Index[_expression._class].check(_expression, isCompleteObj, path + "expression.")
-                            .catch((err) => {
-                            throw new Error(path + "expression index: " + index + "is not a " + _expression._class);
-                        }));
-                    }
-                });
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_mongo_expression_or.check(target, true, path).then(() => {
-            return new Model_mongo_expression_or(target);
-        });
-    }
 }
 exports.Model_mongo_expression_or = Model_mongo_expression_or;
 //# sourceMappingURL=Model_mongo_expression_or.js.map

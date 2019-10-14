@@ -13,6 +13,4 @@ export declare class Model_service_orchestrator extends Model_service implements
 url de la configuration de l'orchestrateur
 */
     "apiUrl": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_orchestrator>;
 }

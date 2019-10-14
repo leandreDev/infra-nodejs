@@ -45,6 +45,4 @@ nombre de licence mise a disposition
 référence du licenceStore
 */
     "ref"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_licenceStore>;
 }

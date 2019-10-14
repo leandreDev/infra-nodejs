@@ -17,6 +17,4 @@ url de la bdd de l'infra
 url de la bdd du sso
 */
     "ssoBddUrl": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_webAppConf>;
 }

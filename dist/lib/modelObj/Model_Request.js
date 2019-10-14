@@ -41,59 +41,6 @@ class Model_Request extends utils_1.Base {
             this["body"] = obj["body"];
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (isCompleteObj && (target["url"] == null || target["url"] == undefined)) {
-                throw new Error(path + "url is required");
-            }
-            if (target["url"] != null && target["url"] != undefined) {
-                let _url = target["url"];
-                if (!_.isString(_url)) {
-                    throw new Error(path + "url is not a string");
-                }
-            }
-            if (isCompleteObj && (target["method"] == null || target["method"] == undefined)) {
-                throw new Error(path + "method is required");
-            }
-            if (target["method"] != null && target["method"] != undefined) {
-                let _method = target["method"];
-                if (!_.isString(_method)) {
-                    throw new Error(path + "method is not a string");
-                }
-                let _enum_method = ["GET", "POST", "PUT", "PATCH", "DELETE"];
-                if (_enum_method.indexOf(_method) == -1) {
-                    throw new Error(path + "method dont match one of GET , POST , PUT , PATCH , DELETE");
-                }
-            }
-            if (target["headers"] != null && target["headers"] != undefined) {
-                target["headers"].forEach((_headers, index) => {
-                    promArr.push(Index["name_value"].check(_headers, isCompleteObj, path + "headers.")
-                        .catch((err) => {
-                        throw new Error(path + "headers index: " + index + "is not name_value");
-                    }));
-                    if (_headers._class != null && _headers._class != undefined) {
-                        promArr.push(Index[_headers._class].check(_headers, isCompleteObj, path + "headers.")
-                            .catch((err) => {
-                            throw new Error(path + "headers index: " + index + "is not a " + _headers._class);
-                        }));
-                    }
-                });
-            }
-            if (target["body"] != null && target["body"] != undefined) {
-                // public "body":Iobject;
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_Request.check(target, true, path).then(() => {
-            return new Model_Request(target);
-        });
-    }
 }
 exports.Model_Request = Model_Request;
 //# sourceMappingURL=Model_Request.js.map

@@ -13,6 +13,4 @@ export declare class Model_service_socket_io extends Model_service implements In
 liste des namespace a créer sur le serveur
 */
     "namespaces"?: string[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_socket_io>;
 }

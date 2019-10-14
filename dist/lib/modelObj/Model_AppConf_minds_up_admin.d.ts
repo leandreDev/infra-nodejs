@@ -25,6 +25,4 @@ texte a afficher pour valider la rgpd
 url de l'api d'upload
 */
     "uploadUrl": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_AppConf_minds_up_admin>;
 }

@@ -33,6 +33,4 @@ permet d'hériter du schema parentMadel
 liste des champs du documents
 */
     "fields"?: Interface.Ifield[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_protoschema>;
 }

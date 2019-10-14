@@ -9,6 +9,4 @@ export declare class Model_service_init extends Model_service implements Interfa
     */
     constructor(obj?: any);
     _class: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_init>;
 }

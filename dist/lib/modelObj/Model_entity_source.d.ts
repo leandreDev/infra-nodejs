@@ -17,6 +17,4 @@ url du service
 nom de l'entité
 */
     "entityName"?: string[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_entity_source>;
 }

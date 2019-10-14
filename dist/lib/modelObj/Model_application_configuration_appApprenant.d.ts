@@ -57,6 +57,4 @@ url du service de video call
 url du service de tutora
 */
     "tutorServiceUrl": string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_application_configuration_appApprenant>;
 }

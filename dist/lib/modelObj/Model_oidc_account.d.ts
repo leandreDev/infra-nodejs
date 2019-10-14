@@ -73,6 +73,4 @@ url de l'avatar
 profile sociaux
 */
     "connector"?: Interface.Isocial_data[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_oidc_account>;
 }

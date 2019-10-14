@@ -25,6 +25,4 @@ liste des ayants droit d'  criture
 liste des ayants doit de modification
 */
     "admins"?: Interface.IaclIdentity[];
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model__acl>;
 }

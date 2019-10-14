@@ -21,6 +21,4 @@ service au qu'elle s'applique la configuration
 liste les règles d’accès aux routes d'un service
 */
     "httAccess"?: Interface.Iurl_role;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_access>;
 }

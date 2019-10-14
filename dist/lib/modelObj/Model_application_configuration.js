@@ -29,39 +29,6 @@ class Model_application_configuration extends utils_1.Base {
             this["appName"] = obj["appName"].toString();
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (target["name"] != null && target["name"] != undefined) {
-                let _name = target["name"];
-                if (!_.isString(_name)) {
-                    throw new Error(path + "name is not a string");
-                }
-            }
-            if (target["services"] != null && target["services"] != undefined) {
-                target["services"].forEach((_services, index) => {
-                    if (!_.isString(_services)) {
-                        throw new Error(path + "services is not a string");
-                    }
-                });
-            }
-            if (target["appName"] != null && target["appName"] != undefined) {
-                let _appName = target["appName"];
-                if (!_.isString(_appName)) {
-                    throw new Error(path + "appName is not a string");
-                }
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_application_configuration.check(target, true, path).then(() => {
-            return new Model_application_configuration(target);
-        });
-    }
 }
 exports.Model_application_configuration = Model_application_configuration;
 //# sourceMappingURL=Model_application_configuration.js.map

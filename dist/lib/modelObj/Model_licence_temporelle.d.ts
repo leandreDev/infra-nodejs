@@ -25,6 +25,4 @@ c'est la durée d’accès au service grâce a cette licence (en seconde)
 c'est la date de fin de licence (si elle n'est pas renseigné, c'est la date de première utilisation + la durée de la licence)
 */
     "licenceEndDate"?: Date;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_licence_temporelle>;
 }

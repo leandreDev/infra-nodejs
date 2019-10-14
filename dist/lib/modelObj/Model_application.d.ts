@@ -21,6 +21,4 @@ la description public de l'appli
 nom du depot de l'app
 */
     "depot"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_application>;
 }

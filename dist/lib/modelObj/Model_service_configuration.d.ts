@@ -21,6 +21,4 @@ le nom de la collection des services
 les configurations de service des applications
 */
     "serviceConfigCollectionName"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_configuration>;
 }

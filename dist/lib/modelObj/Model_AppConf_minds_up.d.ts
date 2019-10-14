@@ -49,6 +49,4 @@ definit si le module 360 est actif
 définie si le module repo est accéssible
 */
     "moduleRepo"?: boolean;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_AppConf_minds_up>;
 }

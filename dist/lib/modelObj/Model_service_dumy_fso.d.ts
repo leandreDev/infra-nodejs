@@ -33,6 +33,4 @@ URL du service
 Repertoire ou seront sauvegardé les fichiers
 */
     "root_file_directory"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_dumy_fso>;
 }

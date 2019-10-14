@@ -33,6 +33,4 @@ hash of password
 hook when new file create
 */
     "newFileHook"?: Interface.IRequest;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_ftpsConfig>;
 }

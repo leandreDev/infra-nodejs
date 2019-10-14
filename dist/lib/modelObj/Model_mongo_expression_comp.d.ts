@@ -25,6 +25,4 @@ type de donnée a comparer
 la donnée est un tableau
 */
     "isArray"?: boolean;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_mongo_expression_comp>;
 }

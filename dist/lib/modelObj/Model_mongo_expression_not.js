@@ -27,46 +27,6 @@ class Model_mongo_expression_not extends Model_mongo_expression_logical_1.Model_
             });
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (isCompleteObj && (target["field"] == null || target["field"] == undefined)) {
-                throw new Error(path + "field is required");
-            }
-            if (target["field"] != null && target["field"] != undefined) {
-                let _field = target["field"];
-                if (!_.isString(_field)) {
-                    throw new Error(path + "field is not a string");
-                }
-            }
-            if (isCompleteObj && (target["expression"] == null || target["expression"] == undefined)) {
-                throw new Error(path + "expression is required");
-            }
-            if (target["expression"] != null && target["expression"] != undefined) {
-                target["expression"].forEach((_expression, index) => {
-                    promArr.push(Index["mongo_expression"].check(_expression, isCompleteObj, path + "expression.")
-                        .catch((err) => {
-                        throw new Error(path + "expression index: " + index + "is not mongo_expression");
-                    }));
-                    if (_expression._class != null && _expression._class != undefined) {
-                        promArr.push(Index[_expression._class].check(_expression, isCompleteObj, path + "expression.")
-                            .catch((err) => {
-                            throw new Error(path + "expression index: " + index + "is not a " + _expression._class);
-                        }));
-                    }
-                });
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_mongo_expression_not.check(target, true, path).then(() => {
-            return new Model_mongo_expression_not(target);
-        });
-    }
 }
 exports.Model_mongo_expression_not = Model_mongo_expression_not;
 //# sourceMappingURL=Model_mongo_expression_not.js.map

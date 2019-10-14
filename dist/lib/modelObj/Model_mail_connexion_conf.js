@@ -45,56 +45,6 @@ class Model_mail_connexion_conf extends utils_1.Base {
             this["licence_service"] = obj["licence_service"].toString();
         }
     }
-    static check(target, isCompleteObj = true, path = "") {
-        return super.check(target, isCompleteObj, path)
-            .then((boolean) => {
-            var promArr = [Promise.resolve(true)];
-            if (target["mailPatern"] != null && target["mailPatern"] != undefined) {
-                let _mailPatern = target["mailPatern"];
-                if (!_.isString(_mailPatern)) {
-                    throw new Error(path + "mailPatern is not a string");
-                }
-            }
-            if (target["clientId"] != null && target["clientId"] != undefined) {
-                let _clientId = target["clientId"];
-                if (!_.isString(_clientId)) {
-                    throw new Error(path + "clientId is not a string");
-                }
-            }
-            if (target["redirectUri"] != null && target["redirectUri"] != undefined) {
-                let _redirectUri = target["redirectUri"];
-                if (!_.isString(_redirectUri)) {
-                    throw new Error(path + "redirectUri is not a string");
-                }
-            }
-            if (target["end_client"] != null && target["end_client"] != undefined) {
-                let _end_client = target["end_client"];
-                if (!_.isString(_end_client)) {
-                    throw new Error(path + "end_client is not a string");
-                }
-            }
-            if (target["application_instance"] != null && target["application_instance"] != undefined) {
-                let _application_instance = target["application_instance"];
-                if (!_.isString(_application_instance)) {
-                    throw new Error(path + "application_instance is not a string");
-                }
-            }
-            if (target["licence_service"] != null && target["licence_service"] != undefined) {
-                let _licence_service = target["licence_service"];
-                if (!_.isString(_licence_service)) {
-                    throw new Error(path + "licence_service is not a string");
-                }
-            }
-            return Promise.all(promArr).then(() => { return true; });
-        }).catch((err) => {
-            throw err;
-        });
-    }
-    static create(target, path = "") {
-        return Model_mail_connexion_conf.check(target, true, path).then(() => {
-            return new Model_mail_connexion_conf(target);
-        });
-    }
 }
 exports.Model_mail_connexion_conf = Model_mail_connexion_conf;
 //# sourceMappingURL=Model_mail_connexion_conf.js.map

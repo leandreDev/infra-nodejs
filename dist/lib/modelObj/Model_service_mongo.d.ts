@@ -21,6 +21,4 @@ le nom de la base sur laquelle la connexion doit s'établir. Cela permet de pouv
 clef secrète de communication interne a l'infra
 */
     "secretKey"?: string;
-    static check(target: any, isCompleteObj?: boolean, path?: string): Promise<boolean>;
-    static create(target: any, path?: string): Promise<Model_service_mongo>;
 }

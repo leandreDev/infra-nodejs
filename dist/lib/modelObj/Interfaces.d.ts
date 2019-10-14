@@ -597,15 +597,6 @@ export interface Iservice extends IBase {
     "publicAccess"?: Iurl_role;
 }
 /**
-interface de la class sendGridTemplate
-description template send grid
-*/
-export interface IsendGridTemplate extends IBase {
-    "lang": string;
-    "templateId": string;
-    "parametre"?: Iname_value[];
-}
-/**
 interface de la class schema_name
 description mapping de schema et de nom
 */
@@ -1380,4 +1371,14 @@ export interface Iservice_mindsUp extends Iservice {
     "emailSenderEmail": string;
     "urlFsoService": string;
     "mailInvitationCampaign360"?: string | IMultilangSendGridTemplate;
+}
+/**
+interface de la class sendGridTemplate
+description template send grid
+*/
+export interface IsendGridTemplate extends IBase {
+    "lang": string;
+    "templateId": string;
+    "parametre"?: Iname_value[];
+    "dynamic_template_data"?: Iname_value[];
 }
