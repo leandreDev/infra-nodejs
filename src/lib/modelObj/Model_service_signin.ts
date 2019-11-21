@@ -74,6 +74,62 @@ export class Model_service_signin extends   Model_service   implements Interface
         }
         
     
+        
+        if(obj["bddSsoUrl"] != undefined){
+          
+           this["bddSsoUrl"] = obj["bddSsoUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["mailerUrl"] != undefined){
+          
+           this["mailerUrl"] = obj["mailerUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["mailerName"] != undefined){
+          
+           this["mailerName"] = obj["mailerName"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["mailerMail"] != undefined){
+          
+           this["mailerMail"] = obj["mailerMail"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["resetMail"] != undefined){
+          
+          if(_.isString(obj["resetMail"])){
+            this["resetMail"] = obj["resetMail"];
+          }else if(obj["resetMail"]._id){
+            this["resetMail"] = obj["resetMail"]._id ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["updateMail"] != undefined){
+          
+          if(_.isString(obj["updateMail"])){
+            this["updateMail"] = obj["updateMail"];
+          }else if(obj["updateMail"]._id){
+            this["updateMail"] = obj["updateMail"]._id ;
+          }
+          
+        }
+        
+    
   }
   
 
@@ -120,6 +176,42 @@ export class Model_service_signin extends   Model_service   implements Interface
         url des profiles des users 
         */
                public "userProfileUrl":string ;
+              
+       
+              /**
+        url du service de bd de la bdd du sso
+        */
+               public "bddSsoUrl"?:string ;
+              
+       
+              /**
+        url du service de mail
+        */
+               public "mailerUrl"?:string ;
+              
+       
+              /**
+        nom a faire apparaitre dans les mails
+        */
+               public "mailerName"?:string ;
+              
+       
+              /**
+        email d'envoie des mail
+        */
+               public "mailerMail"?:string ;
+              
+       
+              /**
+        mail de demande de reset de mot de pass
+        */
+               public "resetMail"?:string ;
+              
+       
+              /**
+        mail d'information de l'update d'un compte
+        */
+               public "updateMail"?:string ;
               
        
 

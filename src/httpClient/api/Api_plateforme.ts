@@ -116,11 +116,6 @@ export class api_collection_plateform {
 
 		 
 		 
-		this.service_signin= new HttpServiceBase<Interfaces.Iservice_signin>({url:conf.url + "collection/service_signin/" , secure:conf.secure})  ;
-		this.admin_service_signin= new HttpServiceAdminBase<Interfaces.Iservice_signin>({url:conf.url + "admin/service_signin/" , secure:conf.secure})  ;
-
-		 
-		 
 		this.service_sendGrid= new HttpServiceBase<Interfaces.Iservice_sendGrid>({url:conf.url + "collection/service_sendGrid/" , secure:conf.secure})  ;
 		this.admin_service_sendGrid= new HttpServiceAdminBase<Interfaces.Iservice_sendGrid>({url:conf.url + "admin/service_sendGrid/" , secure:conf.secure})  ;
 
@@ -203,6 +198,11 @@ export class api_collection_plateform {
 		 
 		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
 		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_signin= new HttpServiceBase<Interfaces.Iservice_signin>({url:conf.url + "collection/service_signin/" , secure:conf.secure})  ;
+		this.admin_service_signin= new HttpServiceAdminBase<Interfaces.Iservice_signin>({url:conf.url + "admin/service_signin/" , secure:conf.secure})  ;
 
 		 
 	
@@ -461,8 +461,6 @@ export class api_collection_plateform {
 		 
 		 	Iservice_dumy_fso      simple remote file system a n utiliser que pour des test
 		 
-		 	Iservice_signin      service d'enregistrement
-		 
 		 	Iservice_sendGrid      permet d'envoyer des mail via l'api send grid v3
 		 
 		 	Iservice_trainingCoursesService      service de gestion des parcourts de formation
@@ -496,6 +494,8 @@ export class api_collection_plateform {
 		 	Iservice_pdfrip      service de creation de pdf
 		 
 		 	Iservice_mindsUp      service minds up metier
+		 
+		 	Iservice_signin      service d'enregistrement
 		 
 		 
 		*/
@@ -644,17 +644,6 @@ export class api_collection_plateform {
 		public service_dumy_fso:HttpServiceBase<Interfaces.Iservice_dumy_fso> ;
 
 		public admin_service_dumy_fso:HttpServiceAdminBase<Interfaces.Iservice_dumy_fso> ;
-
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_signin
-		 desc: service d'enregistrement
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_signin:HttpServiceBase<Interfaces.Iservice_signin> ;
-
-		public admin_service_signin:HttpServiceAdminBase<Interfaces.Iservice_signin> ;
 
 
 		 
@@ -842,6 +831,17 @@ export class api_collection_plateform {
 		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
 
 		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_signin
+		 desc: service d'enregistrement
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_signin:HttpServiceBase<Interfaces.Iservice_signin> ;
+
+		public admin_service_signin:HttpServiceAdminBase<Interfaces.Iservice_signin> ;
 
 
 		 

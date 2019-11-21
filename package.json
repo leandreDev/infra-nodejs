@@ -1,6 +1,6 @@
 {
   "name": "infra-nodejs",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "librarie de communication avec la base infra for nodeJS",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -16,7 +16,8 @@
     "initNewVBrach": "git checkout -b V$npm_package_version && git push --set-upstream origin V$npm_package_version && git add -A && git push && git checkout dev ",
     "vPatch": "npm --no-git-tag-version version patch && npm run pub",
     "postversion": "export minorTag=$(node -e \"console.log(process.env.npm_package_version.split('.')[1]);\") && export majorTag=$(node -e \"console.log(process.env.npm_package_version.split('.')[0]);\") && git tag -f dev_$majorTag &&  git tag -f dev_$majorTag.$minorTag && git tag dev_$npm_package_version && git add -A && git commit -m 'dev_$npm_package_version' && git push && git push -f --tags ",
-    "publi": "npm run build && npm run vPatch"
+    "publi": "npm run build && npm run vPatch",
+    "u": "npm install github:hf-dev/utils"
   },
   "scriptsDev": {
     "pub": "git checkout master  && git pull && npm version $npm_package_version && git checkout dev",

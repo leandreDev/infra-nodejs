@@ -37,4 +37,28 @@ url de la collection des user de l'app
 url des profiles des users
 */
     "userProfileUrl": string;
+    /**
+url du service de bd de la bdd du sso
+*/
+    "bddSsoUrl"?: string;
+    /**
+url du service de mail
+*/
+    "mailerUrl"?: string;
+    /**
+nom a faire apparaitre dans les mails
+*/
+    "mailerName"?: string;
+    /**
+email d'envoie des mail
+*/
+    "mailerMail"?: string;
+    /**
+mail de demande de reset de mot de pass
+*/
+    "resetMail"?: string;
+    /**
+mail d'information de l'update d'un compte
+*/
+    "updateMail"?: string;
 }

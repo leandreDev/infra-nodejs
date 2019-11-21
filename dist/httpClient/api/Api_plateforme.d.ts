@@ -84,8 +84,6 @@ export declare class api_collection_plateform {
      
         Iservice_dumy_fso      simple remote file system a n utiliser que pour des test
      
-        Iservice_signin      service d'enregistrement
-     
         Iservice_sendGrid      permet d'envoyer des mail via l'api send grid v3
      
         Iservice_trainingCoursesService      service de gestion des parcourts de formation
@@ -119,6 +117,8 @@ export declare class api_collection_plateform {
         Iservice_pdfrip      service de creation de pdf
      
         Iservice_mindsUp      service minds up metier
+     
+        Iservice_signin      service d'enregistrement
      
      
     */
@@ -215,13 +215,6 @@ export declare class api_collection_plateform {
    */
     service_dumy_fso: HttpServiceBase<Interfaces.Iservice_dumy_fso>;
     admin_service_dumy_fso: HttpServiceAdminBase<Interfaces.Iservice_dumy_fso>;
-    /**
-    service d'accès a la sous-collection :service_signin
-    desc: service d'enregistrement
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_signin: HttpServiceBase<Interfaces.Iservice_signin>;
-    admin_service_signin: HttpServiceAdminBase<Interfaces.Iservice_signin>;
     /**
     service d'accès a la sous-collection :service_sendGrid
     desc: permet d'envoyer des mail via l'api send grid v3
@@ -341,6 +334,13 @@ export declare class api_collection_plateform {
    */
     service_mindsUp: HttpServiceBase<Interfaces.Iservice_mindsUp>;
     admin_service_mindsUp: HttpServiceAdminBase<Interfaces.Iservice_mindsUp>;
+    /**
+    service d'accès a la sous-collection :service_signin
+    desc: service d'enregistrement
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_signin: HttpServiceBase<Interfaces.Iservice_signin>;
+    admin_service_signin: HttpServiceAdminBase<Interfaces.Iservice_signin>;
     /**
      service d'accès à la collection :protoschema
      desc: protoschema est un méta modéle. il permet de créer les autres modèle de la base

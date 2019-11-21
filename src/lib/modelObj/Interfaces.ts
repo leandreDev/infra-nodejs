@@ -2324,42 +2324,6 @@
    }
 
     /**
-    interface de la class service_signin 
-    description service d'enregistrement
-   */
-    export interface Iservice_signin extends   Iservice{
-        
-              
-               "userUrl":string;
-              
-       
-              
-               "mailResetUrl":string;
-              
-       
-              
-               "mailInfoUrl":string;
-              
-       
-              
-               "mailAccountCreatedUrl":string;
-              
-       
-              
-               "durationResetDay":number;
-              
-       
-              
-               "userAppUrl":string;
-              
-       
-              
-               "userProfileUrl":string;
-              
-       
-   }
-
-    /**
     interface de la class MultilangSendGridTemplate 
     description décrit un template multi langue d'envoie de mail avec sendGrid
    */
@@ -3276,6 +3240,30 @@
    }
 
     /**
+    interface de la class sendGridTemplate 
+    description template send grid
+   */
+    export interface IsendGridTemplate extends  IBase {
+        
+              
+               "lang":string;
+              
+       
+              
+               "templateId":string;
+              
+       
+              
+               "parametre"?:Iname_value[];
+              
+       
+              
+               "dynamic_template_data"?:Iname_value[];
+              
+       
+   }
+
+    /**
     interface de la class service_mindsUp 
     description service minds up metier
    */
@@ -3295,6 +3283,22 @@
        
               
                "urlInfraBdd":string;
+              
+       
+              
+               "urlMailerService":string;
+              
+       
+              
+               "urlPdfrip"?:string;
+              
+       
+              
+               "reportUrl"?:string;
+              
+       
+              
+               "urlFsoService":string;
               
        
               
@@ -3330,18 +3334,6 @@
               
        
               
-               "urlMailerService":string;
-              
-       
-              
-               "mailInvitation360":string | IMultilangSendGridTemplate;
-              
-       
-              
-               "mailIRelance360":string | IMultilangSendGridTemplate;
-              
-       
-              
                "emailSenderName":string;
               
        
@@ -3350,35 +3342,95 @@
               
        
               
-               "urlFsoService":string;
+               "mailIRelance360":string | IMultilangSendGridTemplate;
+              
+       
+              
+               "mailInvitation360":string | IMultilangSendGridTemplate;
               
        
               
                "mailInvitationCampaign360"?:string | IMultilangSendGridTemplate;
               
        
+              
+               "mailCreation360"?:string | IMultilangSendGridTemplate;
+              
+       
+              
+               "appName"?:string;
+              
+       
+              
+               "appUrl"?:string;
+              
+       
+              
+               "mailInquiry360UserResponseInfo"?:string | IMultilangSendGridTemplate;
+              
+       
+              
+               "mailInquiry360UserResponse"?:string | IMultilangSendGridTemplate;
+              
+       
    }
 
     /**
-    interface de la class sendGridTemplate 
-    description template send grid
+    interface de la class service_signin 
+    description service d'enregistrement
    */
-    export interface IsendGridTemplate extends  IBase {
+    export interface Iservice_signin extends   Iservice{
         
               
-               "lang":string;
+               "userUrl":string;
               
        
               
-               "templateId":string;
+               "mailResetUrl":string;
               
        
               
-               "parametre"?:Iname_value[];
+               "mailInfoUrl":string;
               
        
               
-               "dynamic_template_data"?:Iname_value[];
+               "mailAccountCreatedUrl":string;
+              
+       
+              
+               "durationResetDay":number;
+              
+       
+              
+               "userAppUrl":string;
+              
+       
+              
+               "userProfileUrl":string;
+              
+       
+              
+               "bddSsoUrl"?:string;
+              
+       
+              
+               "mailerUrl"?:string;
+              
+       
+              
+               "mailerName"?:string;
+              
+       
+              
+               "mailerMail"?:string;
+              
+       
+              
+               "resetMail"?:string | IMultilangSendGridTemplate;
+              
+       
+              
+               "updateMail"?:string | IMultilangSendGridTemplate;
               
        
    }

@@ -26,6 +26,22 @@ url du service d'infra
 */
     "urlInfraBdd": string;
     /**
+urlMailerService
+*/
+    "urlMailerService": string;
+    /**
+url du rip de pdf
+*/
+    "urlPdfrip"?: string;
+    /**
+url des rapport
+*/
+    "reportUrl"?: string;
+    /**
+url du service fso
+*/
+    "urlFsoService": string;
+    /**
 id de la configuration de l'app cliente
 */
     "applicationClienteConfig": string;
@@ -58,18 +74,6 @@ id du licence store du l app admin
 */
     "adminLicenceStoreId": string;
     /**
-urlMailerService
-*/
-    "urlMailerService": string;
-    /**
-reference du mail d'invitation a un 360
-*/
-    "mailInvitation360": string;
-    /**
-mailIRelance360
-*/
-    "mailIRelance360": string;
-    /**
 name of the mailer
 */
     "emailSenderName": string;
@@ -78,11 +82,35 @@ Email du mailer
 */
     "emailSenderEmail": string;
     /**
-url du service fso
+mailIRelance360
 */
-    "urlFsoService": string;
+    "mailIRelance360": string;
+    /**
+reference du mail d'invitation a un 360
+*/
+    "mailInvitation360": string;
     /**
 mail d'invitation a participer a une campagne 360
 */
     "mailInvitationCampaign360"?: string;
+    /**
+mailCreation360
+*/
+    "mailCreation360"?: string;
+    /**
+nom de l'application cliente chez le client
+*/
+    "appName"?: string;
+    /**
+url de publication de l'application cliente
+*/
+    "appUrl"?: string;
+    /**
+Inquiry360UserResponseInfo
+*/
+    "mailInquiry360UserResponseInfo"?: string;
+    /**
+Inquiry360UserResponse
+*/
+    "mailInquiry360UserResponse"?: string;
 }

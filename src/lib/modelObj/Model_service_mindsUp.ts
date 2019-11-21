@@ -51,6 +51,38 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         
     
         
+        if(obj["urlMailerService"] != undefined){
+          
+           this["urlMailerService"] = obj["urlMailerService"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["urlPdfrip"] != undefined){
+          
+           this["urlPdfrip"] = obj["urlPdfrip"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["reportUrl"] != undefined){
+          
+           this["reportUrl"] = obj["reportUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["urlFsoService"] != undefined){
+          
+           this["urlFsoService"] = obj["urlFsoService"].toString() ;
+           
+        }
+        
+    
+        
         if(obj["applicationClienteConfig"] != undefined){
           
           if(_.isString(obj["applicationClienteConfig"])){
@@ -139,38 +171,6 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         
     
         
-        if(obj["urlMailerService"] != undefined){
-          
-           this["urlMailerService"] = obj["urlMailerService"].toString() ;
-           
-        }
-        
-    
-        
-        if(obj["mailInvitation360"] != undefined){
-          
-          if(_.isString(obj["mailInvitation360"])){
-            this["mailInvitation360"] = obj["mailInvitation360"];
-          }else if(obj["mailInvitation360"]._id){
-            this["mailInvitation360"] = obj["mailInvitation360"]._id ;
-          }
-          
-        }
-        
-    
-        
-        if(obj["mailIRelance360"] != undefined){
-          
-          if(_.isString(obj["mailIRelance360"])){
-            this["mailIRelance360"] = obj["mailIRelance360"];
-          }else if(obj["mailIRelance360"]._id){
-            this["mailIRelance360"] = obj["mailIRelance360"]._id ;
-          }
-          
-        }
-        
-    
-        
         if(obj["emailSenderName"] != undefined){
           
            this["emailSenderName"] = obj["emailSenderName"].toString() ;
@@ -187,10 +187,26 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         
     
         
-        if(obj["urlFsoService"] != undefined){
+        if(obj["mailIRelance360"] != undefined){
           
-           this["urlFsoService"] = obj["urlFsoService"].toString() ;
-           
+          if(_.isString(obj["mailIRelance360"])){
+            this["mailIRelance360"] = obj["mailIRelance360"];
+          }else if(obj["mailIRelance360"]._id){
+            this["mailIRelance360"] = obj["mailIRelance360"]._id ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["mailInvitation360"] != undefined){
+          
+          if(_.isString(obj["mailInvitation360"])){
+            this["mailInvitation360"] = obj["mailInvitation360"];
+          }else if(obj["mailInvitation360"]._id){
+            this["mailInvitation360"] = obj["mailInvitation360"]._id ;
+          }
+          
         }
         
     
@@ -201,6 +217,58 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"];
           }else if(obj["mailInvitationCampaign360"]._id){
             this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"]._id ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["mailCreation360"] != undefined){
+          
+          if(_.isString(obj["mailCreation360"])){
+            this["mailCreation360"] = obj["mailCreation360"];
+          }else if(obj["mailCreation360"]._id){
+            this["mailCreation360"] = obj["mailCreation360"]._id ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["appName"] != undefined){
+          
+           this["appName"] = obj["appName"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["appUrl"] != undefined){
+          
+           this["appUrl"] = obj["appUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["mailInquiry360UserResponseInfo"] != undefined){
+          
+          if(_.isString(obj["mailInquiry360UserResponseInfo"])){
+            this["mailInquiry360UserResponseInfo"] = obj["mailInquiry360UserResponseInfo"];
+          }else if(obj["mailInquiry360UserResponseInfo"]._id){
+            this["mailInquiry360UserResponseInfo"] = obj["mailInquiry360UserResponseInfo"]._id ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["mailInquiry360UserResponse"] != undefined){
+          
+          if(_.isString(obj["mailInquiry360UserResponse"])){
+            this["mailInquiry360UserResponse"] = obj["mailInquiry360UserResponse"];
+          }else if(obj["mailInquiry360UserResponse"]._id){
+            this["mailInquiry360UserResponse"] = obj["mailInquiry360UserResponse"]._id ;
           }
           
         }
@@ -234,6 +302,30 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         url du service d'infra
         */
                public "urlInfraBdd":string ;
+              
+       
+              /**
+        urlMailerService
+        */
+               public "urlMailerService":string ;
+              
+       
+              /**
+        url du rip de pdf
+        */
+               public "urlPdfrip"?:string ;
+              
+       
+              /**
+        url des rapport
+        */
+               public "reportUrl"?:string ;
+              
+       
+              /**
+        url du service fso
+        */
+               public "urlFsoService":string ;
               
        
               /**
@@ -285,24 +377,6 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
               
        
               /**
-        urlMailerService
-        */
-               public "urlMailerService":string ;
-              
-       
-              /**
-        reference du mail d'invitation a un 360
-        */
-               public "mailInvitation360":string ;
-              
-       
-              /**
-        mailIRelance360
-        */
-               public "mailIRelance360":string ;
-              
-       
-              /**
         name of the mailer
         */
                public "emailSenderName":string ;
@@ -315,15 +389,51 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
               
        
               /**
-        url du service fso
+        mailIRelance360
         */
-               public "urlFsoService":string ;
+               public "mailIRelance360":string ;
+              
+       
+              /**
+        reference du mail d'invitation a un 360
+        */
+               public "mailInvitation360":string ;
               
        
               /**
         mail d'invitation a participer a une campagne 360
         */
                public "mailInvitationCampaign360"?:string ;
+              
+       
+              /**
+        mailCreation360
+        */
+               public "mailCreation360"?:string ;
+              
+       
+              /**
+        nom de l'application cliente chez le client
+        */
+               public "appName"?:string ;
+              
+       
+              /**
+        url de publication de l'application cliente
+        */
+               public "appUrl"?:string ;
+              
+       
+              /**
+        Inquiry360UserResponseInfo
+        */
+               public "mailInquiry360UserResponseInfo"?:string ;
+              
+       
+              /**
+        Inquiry360UserResponse
+        */
+               public "mailInquiry360UserResponse"?:string ;
               
        
 
