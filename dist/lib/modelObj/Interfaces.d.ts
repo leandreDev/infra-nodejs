@@ -970,19 +970,6 @@ description configuration d'un parcourt anticoruption
 export interface Iapplication_configuration_antico extends Iapplication_configuration {
 }
 /**
-interface de la class service_signin
-description service d'enregistrement
-*/
-export interface Iservice_signin extends Iservice {
-    "userUrl": string;
-    "mailResetUrl": string;
-    "mailInfoUrl": string;
-    "mailAccountCreatedUrl": string;
-    "durationResetDay": number;
-    "userAppUrl": string;
-    "userProfileUrl": string;
-}
-/**
 interface de la class MultilangSendGridTemplate
 description décrit un template multi langue d'envoie de mail avec sendGrid
 */
@@ -1348,31 +1335,6 @@ description service de creation de pdf
 export interface Iservice_pdfrip extends Iservice {
 }
 /**
-interface de la class service_mindsUp
-description service minds up metier
-*/
-export interface Iservice_mindsUp extends Iservice {
-    "urlApi": string;
-    "urlSsoApi": string;
-    "urlLicenceService": string;
-    "urlInfraBdd": string;
-    "applicationClienteConfig": string | IAppConf_minds_up;
-    "applicationAdminConfig": string | IAppConf_minds_up_admin;
-    "ftpConf"?: IftpsConfig;
-    "appId": string | Iapplication_instance;
-    "adminAppId": string | Iapplication_instance;
-    "end_client"?: string | Iend_client;
-    "licenceStoreId": string;
-    "adminLicenceStoreId": string;
-    "urlMailerService": string;
-    "mailInvitation360": string | IMultilangSendGridTemplate;
-    "mailIRelance360": string | IMultilangSendGridTemplate;
-    "emailSenderName": string;
-    "emailSenderEmail": string;
-    "urlFsoService": string;
-    "mailInvitationCampaign360"?: string | IMultilangSendGridTemplate;
-}
-/**
 interface de la class sendGridTemplate
 description template send grid
 */
@@ -1381,4 +1343,55 @@ export interface IsendGridTemplate extends IBase {
     "templateId": string;
     "parametre"?: Iname_value[];
     "dynamic_template_data"?: Iname_value[];
+}
+/**
+interface de la class service_mindsUp
+description service minds up metier
+*/
+export interface Iservice_mindsUp extends Iservice {
+    "urlApi": string;
+    "urlSsoApi": string;
+    "urlLicenceService": string;
+    "urlInfraBdd": string;
+    "urlMailerService": string;
+    "urlPdfrip"?: string;
+    "reportUrl"?: string;
+    "urlFsoService": string;
+    "applicationClienteConfig": string | IAppConf_minds_up;
+    "applicationAdminConfig": string | IAppConf_minds_up_admin;
+    "ftpConf"?: IftpsConfig;
+    "appId": string | Iapplication_instance;
+    "adminAppId": string | Iapplication_instance;
+    "end_client"?: string | Iend_client;
+    "licenceStoreId": string;
+    "adminLicenceStoreId": string;
+    "emailSenderName": string;
+    "emailSenderEmail": string;
+    "mailIRelance360": string | IMultilangSendGridTemplate;
+    "mailInvitation360": string | IMultilangSendGridTemplate;
+    "mailInvitationCampaign360"?: string | IMultilangSendGridTemplate;
+    "mailCreation360"?: string | IMultilangSendGridTemplate;
+    "appName"?: string;
+    "appUrl"?: string;
+    "mailInquiry360UserResponseInfo"?: string | IMultilangSendGridTemplate;
+    "mailInquiry360UserResponse"?: string | IMultilangSendGridTemplate;
+}
+/**
+interface de la class service_signin
+description service d'enregistrement
+*/
+export interface Iservice_signin extends Iservice {
+    "userUrl": string;
+    "mailResetUrl": string;
+    "mailInfoUrl": string;
+    "mailAccountCreatedUrl": string;
+    "durationResetDay": number;
+    "userAppUrl": string;
+    "userProfileUrl": string;
+    "bddSsoUrl"?: string;
+    "mailerUrl"?: string;
+    "mailerName"?: string;
+    "mailerMail"?: string;
+    "resetMail"?: string | IMultilangSendGridTemplate;
+    "updateMail"?: string | IMultilangSendGridTemplate;
 }

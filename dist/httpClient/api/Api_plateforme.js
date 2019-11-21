@@ -44,8 +44,6 @@ class api_collection_plateform {
         this.admin_service_like = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_like/", secure: conf.secure });
         this.service_dumy_fso = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_dumy_fso/", secure: conf.secure });
         this.admin_service_dumy_fso = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_dumy_fso/", secure: conf.secure });
-        this.service_signin = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_signin/", secure: conf.secure });
-        this.admin_service_signin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_signin/", secure: conf.secure });
         this.service_sendGrid = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_sendGrid/", secure: conf.secure });
         this.admin_service_sendGrid = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_sendGrid/", secure: conf.secure });
         this.service_trainingCoursesService = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_trainingCoursesService/", secure: conf.secure });
@@ -80,6 +78,8 @@ class api_collection_plateform {
         this.admin_service_pdfrip = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_pdfrip/", secure: conf.secure });
         this.service_mindsUp = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_mindsUp/", secure: conf.secure });
         this.admin_service_mindsUp = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_mindsUp/", secure: conf.secure });
+        this.service_signin = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_signin/", secure: conf.secure });
+        this.admin_service_signin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_signin/", secure: conf.secure });
         this.protoschema = new utils_1.HttpServiceBase({ url: conf.url + "collection/protoschema/", secure: conf.secure });
         this.admin_protoschema = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/protoschema/", secure: conf.secure });
         this.mail = new utils_1.HttpServiceBase({ url: conf.url + "collection/mail/", secure: conf.secure });
