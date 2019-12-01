@@ -50,6 +50,9 @@ class Model_application_instance extends utils_1.Base {
         if (obj["css"] != undefined) {
             this["css"] = obj["css"].toString();
         }
+        if (obj["public_data"] != undefined) {
+            this["public_data"] = obj["public_data"];
+        }
     }
 }
 exports.Model_application_instance = Model_application_instance;
