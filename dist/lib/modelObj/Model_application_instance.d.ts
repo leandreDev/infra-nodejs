@@ -33,4 +33,8 @@ le compte oidc du client pour la connection
 la css root de l'app
 */
     "css"?: string;
+    /**
+public_data
+*/
+    "public_data"?: any;
 }

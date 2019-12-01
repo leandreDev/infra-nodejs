@@ -110,8 +110,6 @@ class api_collection_plateform {
         this.admin_Request = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/Request/", secure: conf.secure });
         this.ftpsConfig = new utils_1.HttpServiceBase({ url: conf.url + "collection/ftpsConfig/", secure: conf.secure });
         this.admin_ftpsConfig = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/ftpsConfig/", secure: conf.secure });
-        this.application_instance = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_instance/", secure: conf.secure });
-        this.admin_application_instance = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_instance/", secure: conf.secure });
         this.application_configuration = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration/", secure: conf.secure });
         this.admin_application_configuration = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration/", secure: conf.secure });
         this.application_configuration_phoneCard = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_phoneCard/", secure: conf.secure });
@@ -130,6 +128,8 @@ class api_collection_plateform {
         this.admin_AppConf_minds_up = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/AppConf_minds_up/", secure: conf.secure });
         this.AppConf_minds_up_admin = new utils_1.HttpServiceBase({ url: conf.url + "collection/AppConf_minds_up_admin/", secure: conf.secure });
         this.admin_AppConf_minds_up_admin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/AppConf_minds_up_admin/", secure: conf.secure });
+        this.application_instance = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_instance/", secure: conf.secure });
+        this.admin_application_instance = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_instance/", secure: conf.secure });
     }
 }
 exports.api_collection_plateform = api_collection_plateform;

@@ -485,15 +485,6 @@ export declare class api_collection_plateform {
     ftpsConfig: HttpServiceBase<Interfaces.IftpsConfig>;
     admin_ftpsConfig: HttpServiceAdminBase<Interfaces.IftpsConfig>;
     /**
-     service d'accès à la collection :application_instance
-     desc: c'est le couple application configuration
-     
-
-     
-    */
-    application_instance: HttpServiceBase<Interfaces.Iapplication_instance>;
-    admin_application_instance: HttpServiceAdminBase<Interfaces.Iapplication_instance>;
-    /**
      service d'accès à la collection :application_configuration
      desc: c'est la configuration d'une application
      
@@ -576,6 +567,15 @@ export declare class api_collection_plateform {
    */
     AppConf_minds_up_admin: HttpServiceBase<Interfaces.IAppConf_minds_up_admin>;
     admin_AppConf_minds_up_admin: HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>;
+    /**
+     service d'accès à la collection :application_instance
+     desc: c'est le couple application configuration
+     
+
+     
+    */
+    application_instance: HttpServiceBase<Interfaces.Iapplication_instance>;
+    admin_application_instance: HttpServiceAdminBase<Interfaces.Iapplication_instance>;
 }
 /**
     accès à la vue :Client

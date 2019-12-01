@@ -304,13 +304,6 @@ export class api_collection_plateform {
 		
 	
 
-		this.application_instance= new HttpServiceBase<Interfaces.Iapplication_instance>( {url:conf.url + "collection/application_instance/" , secure:conf.secure} )  ;
-		
-		this.admin_application_instance= new HttpServiceAdminBase<Interfaces.Iapplication_instance>( {url:conf.url + "admin/application_instance/" , secure:conf.secure} )  ;
-
-		
-	
-
 		this.application_configuration= new HttpServiceBase<Interfaces.Iapplication_configuration>( {url:conf.url + "collection/application_configuration/" , secure:conf.secure} )  ;
 		
 		this.admin_application_configuration= new HttpServiceAdminBase<Interfaces.Iapplication_configuration>( {url:conf.url + "admin/application_configuration/" , secure:conf.secure} )  ;
@@ -356,6 +349,13 @@ export class api_collection_plateform {
 		this.admin_AppConf_minds_up_admin= new HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>({url:conf.url + "admin/AppConf_minds_up_admin/" , secure:conf.secure})  ;
 
 		 
+	
+
+		this.application_instance= new HttpServiceBase<Interfaces.Iapplication_instance>( {url:conf.url + "collection/application_instance/" , secure:conf.secure} )  ;
+		
+		this.admin_application_instance= new HttpServiceAdminBase<Interfaces.Iapplication_instance>( {url:conf.url + "admin/application_instance/" , secure:conf.secure} )  ;
+
+		
 	
 	}
 	protected url:string ;
@@ -1050,19 +1050,6 @@ export class api_collection_plateform {
 		
 	
 		/**
-		 service d'accès à la collection :application_instance
-		 desc: c'est le couple application configuration 
-		 
-
-		 
-		*/
-		public application_instance:HttpServiceBase<Interfaces.Iapplication_instance> ;
-
-		public admin_application_instance:HttpServiceAdminBase<Interfaces.Iapplication_instance> ;
-
-		
-	
-		/**
 		 service d'accès à la collection :application_configuration
 		 desc: c'est la configuration d'une application
 		 
@@ -1180,6 +1167,19 @@ export class api_collection_plateform {
 
 
 		 
+	
+		/**
+		 service d'accès à la collection :application_instance
+		 desc: c'est le couple application configuration 
+		 
+
+		 
+		*/
+		public application_instance:HttpServiceBase<Interfaces.Iapplication_instance> ;
+
+		public admin_application_instance:HttpServiceAdminBase<Interfaces.Iapplication_instance> ;
+
+		
 	
 	
 }

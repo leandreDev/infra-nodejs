@@ -2952,38 +2952,6 @@
    }
 
     /**
-    interface de la class application_instance 
-    description c'est le couple application configuration 
-   */
-    export interface Iapplication_instance extends  IBase {
-        
-              
-               "name"?:string;
-              
-       
-              
-               "application"?:string | Iapplication;
-              
-       
-              
-               "configuration"?:string | Iapplication_configuration;
-              
-       
-              
-               "end_client":string | Iend_client;
-              
-       
-              
-               "oidc_client":string | Ioidc_Client;
-              
-       
-              
-               "css"?:string;
-              
-       
-   }
-
-    /**
     interface de la class service_webAppConf 
     description permet de générer les fichier de conf des app (css, js, ...)
    */
@@ -3431,6 +3399,42 @@
        
               
                "updateMail"?:string | IMultilangSendGridTemplate;
+              
+       
+   }
+
+    /**
+    interface de la class application_instance 
+    description c'est le couple application configuration 
+   */
+    export interface Iapplication_instance extends  IBase {
+        
+              
+               "name"?:string;
+              
+       
+              
+               "application"?:string | Iapplication;
+              
+       
+              
+               "configuration"?:string | Iapplication_configuration;
+              
+       
+              
+               "end_client":string | Iend_client;
+              
+       
+              
+               "oidc_client":string | Ioidc_Client;
+              
+       
+              
+               "css"?:string;
+              
+       
+              
+               "public_data"?:any;              
               
        
    }

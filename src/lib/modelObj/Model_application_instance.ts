@@ -80,6 +80,14 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
         }
         
     
+        
+        if(obj["public_data"] != undefined){
+          
+           this["public_data"] = obj["public_data"] ;
+          
+        }
+        
+    
   }
   
 
@@ -120,6 +128,12 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
         la css root de l'app
         */
                public "css"?:string ;
+              
+       
+              /**
+        public_data
+        */
+               public "public_data"?:any ;
               
        
 
