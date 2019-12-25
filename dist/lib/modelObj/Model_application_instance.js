@@ -12,6 +12,10 @@ class Model_application_instance extends utils_1.Base {
     constructor(obj = {}) {
         super(obj);
         this._class = "application_instance";
+        /**
+  port de publication
+  */
+        this["port"] = 80;
         if (obj["name"] != undefined) {
             this["name"] = obj["name"].toString();
         }
@@ -52,6 +56,9 @@ class Model_application_instance extends utils_1.Base {
         }
         if (obj["public_data"] != undefined) {
             this["public_data"] = obj["public_data"];
+        }
+        if (obj["port"] != undefined) {
+            this["port"] = new Number(obj["port"]).valueOf();
         }
     }
 }

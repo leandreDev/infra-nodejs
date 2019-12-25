@@ -34,7 +34,11 @@ la css root de l'app
 */
     "css"?: string;
     /**
-public_data
+data public
 */
     "public_data"?: any;
+    /**
+port de publication
+*/
+    "port"?: number;
 }
