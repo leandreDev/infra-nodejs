@@ -668,22 +668,6 @@
    }
 
     /**
-    interface de la class route_role 
-    description paire route et role
-   */
-    export interface Iroute_role extends  IBase {
-        
-              
-               "route"?:string;
-              
-       
-              
-               "role"?:string[];
-              
-       
-   }
-
-    /**
     interface de la class service_mailtoinfra 
     description service qui permet de configurer l'authentification a partir d'un mail
    */
@@ -1511,42 +1495,6 @@
        
               
                "template_id"?:string;
-              
-       
-   }
-
-    /**
-    interface de la class service 
-    description identification du service
-   */
-    export interface Iservice extends  IBase {
-        
-              
-               "name"?:string;
-              
-       
-              
-               "urlBase"?:string;
-              
-       
-              
-               "port"?:number;
-              
-       
-              
-               "debug"?:boolean;
-              
-       
-              
-               "licence_well-known"?:string;
-              
-       
-              
-               "secretKey"?:string;
-              
-       
-              
-               "publicAccess"?:Iurl_role;
               
        
    }
@@ -3435,6 +3383,130 @@
        
               
                "public_data"?:any;              
+              
+       
+              
+               "port"?:number;
+              
+       
+   }
+
+    /**
+    interface de la class application_configuration_reportApp 
+    description configuration d'un app template
+   */
+    export interface Iapplication_configuration_reportApp extends   Iapplication_configuration{
+        
+   }
+
+    /**
+    interface de la class application_configuration_celio2020Admin 
+    description conf de l'app celio 2020
+   */
+    export interface Iapplication_configuration_celio2020Admin extends   Iapplication_configuration{
+        
+              
+               "serviceBddUrl"?:string;
+              
+       
+   }
+
+    /**
+    interface de la class application_configuration_manu_admin 
+    description cond des comptoire de l'or admin
+   */
+    export interface Iapplication_configuration_manu_admin extends   Iapplication_configuration{
+        
+              
+               "bddApiUrl"?:string;
+              
+       
+              
+               "serviceUrl"?:string;
+              
+       
+   }
+
+    /**
+    interface de la class application_configuration_comptoire_or_admin 
+    description cond des comptoire de l'or admin
+   */
+    export interface Iapplication_configuration_comptoire_or_admin extends   Iapplication_configuration{
+        
+              
+               "bddApiUrl"?:string;
+              
+       
+              
+               "serviceUrl"?:string;
+              
+       
+   }
+
+    /**
+    interface de la class service_comptoireOr 
+    description service_comptoireOr
+   */
+    export interface Iservice_comptoireOr extends   Iservice{
+        
+              
+               "bddApiUrl"?:string;
+              
+       
+              
+               "confId"?:string | Iapplication_configuration_comptoire_or_admin;
+              
+       
+   }
+
+    /**
+    interface de la class service 
+    description identification du service
+   */
+    export interface Iservice extends  IBase {
+        
+              
+               "name"?:string;
+              
+       
+              
+               "urlBase"?:string;
+              
+       
+              
+               "port"?:number;
+              
+       
+              
+               "debug"?:boolean;
+              
+       
+              
+               "licence_well-known"?:string;
+              
+       
+              
+               "secretKey"?:string;
+              
+       
+              
+               "publicAccess"?:Iurl_role;
+              
+       
+   }
+
+    /**
+    interface de la class route_role 
+    description paire route et role
+   */
+    export interface Iroute_role extends  IBase {
+        
+              
+               "route"?:string;
+              
+       
+              
+               "role"?:string[];
               
        
    }

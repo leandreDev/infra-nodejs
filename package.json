@@ -1,6 +1,6 @@
 {
   "name": "infra-nodejs",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "librarie de communication avec la base infra for nodeJS",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

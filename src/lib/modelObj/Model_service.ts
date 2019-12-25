@@ -91,7 +91,7 @@ export class Model_service extends  Base  implements Interface.Iservice {
               /**
         l'url racine du service
         */
-               public "urlBase"?:string ;
+               public "urlBase"?:string ="$ENV.DOMAINE$$/";
               
        
               /**
@@ -103,19 +103,19 @@ export class Model_service extends  Base  implements Interface.Iservice {
               /**
         active le debug
         */
-               public "debug"?:boolean ;
+               public "debug"?:boolean =true;
               
        
               /**
         licence_well-known
         */
-               public "licence_well-known"?:string ;
+               public "licence_well-known"?:string ="$ENV.WELL_KNOWN";
               
        
               /**
         clef secrète de signature inter service
         */
-               public "secretKey"?:string ;
+               public "secretKey"?:string ="$ENV.SECRET";
               
        
               /**

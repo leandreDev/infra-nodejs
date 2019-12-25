@@ -12,6 +12,22 @@ class Model_service extends utils_1.Base {
     constructor(obj = {}) {
         super(obj);
         this._class = "service";
+        /**
+  l'url racine du service
+  */
+        this["urlBase"] = "$ENV.DOMAINE$$/";
+        /**
+  active le debug
+  */
+        this["debug"] = true;
+        /**
+  licence_well-known
+  */
+        this["licence_well-known"] = "$ENV.WELL_KNOWN";
+        /**
+  clef secrète de signature inter service
+  */
+        this["secretKey"] = "$ENV.SECRET";
         if (obj["name"] != undefined) {
             this["name"] = obj["name"].toString();
         }

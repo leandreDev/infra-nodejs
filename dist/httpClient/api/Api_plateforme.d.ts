@@ -52,6 +52,277 @@ export declare class api_collection_plateform {
     service_access: HttpServiceBase<Interfaces.Iservice_access>;
     admin_service_access: HttpServiceAdminBase<Interfaces.Iservice_access>;
     /**
+     service d'accès à la collection :protoschema
+     desc: protoschema est un méta modéle. il permet de créer les autres modèle de la base
+     
+
+     
+    */
+    protoschema: HttpServiceBase<Interfaces.Iprotoschema>;
+    admin_protoschema: HttpServiceAdminBase<Interfaces.Iprotoschema>;
+    /**
+     service d'accès à la collection :mail
+     desc: collection de mail
+     
+     info: vous pouvez voir tous les objets de cette collection y compris les enfants
+     liste des interfaces héritées possibles:
+     
+        Imail_sendgrid      objet envoyé a l'api sendgrid
+     
+     
+    */
+    mail: HttpServiceBase<Interfaces.Imail>;
+    admin_mail: HttpServiceAdminBase<Interfaces.Imail>;
+    /**
+    service d'accès a la sous-collection :mail_sendgrid
+    desc: objet envoyé a l'api sendgrid
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    mail_sendgrid: HttpServiceBase<Interfaces.Imail_sendgrid>;
+    admin_mail_sendgrid: HttpServiceAdminBase<Interfaces.Imail_sendgrid>;
+    /**
+     service d'accès à la collection :service_serviceOrchestrator
+     desc: service d'orchestration de service. ce service permet de créer des routes qui enchaîne des middleware paramétré qui consomment les autres services
+     
+
+     
+    */
+    service_serviceOrchestrator: HttpServiceBase<Interfaces.Iservice_serviceOrchestrator>;
+    admin_service_serviceOrchestrator: HttpServiceAdminBase<Interfaces.Iservice_serviceOrchestrator>;
+    /**
+     service d'accès à la collection :_view
+     desc: créer des pipe d'agrégation intérogeable https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/
+     
+     info: vous pouvez voir tous les objets de cette collection y compris les enfants
+     liste des interfaces héritées possibles:
+     
+        I_view_params      view avec des params
+     
+     
+    */
+    _view: HttpServiceBase<Interfaces.I_view>;
+    admin__view: HttpServiceAdminBase<Interfaces.I_view>;
+    /**
+    service d'accès a la sous-collection :_view_params
+    desc: view avec des params
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    _view_params: HttpServiceBase<Interfaces.I_view_params>;
+    admin__view_params: HttpServiceAdminBase<Interfaces.I_view_params>;
+    /**
+     service d'accès à la collection :licence
+     desc: représente la licence d'un utilisateur pour un service (ou application) distribué par un end_client
+     
+     info: vous pouvez voir tous les objets de cette collection y compris les enfants
+     liste des interfaces héritées possibles:
+     
+        Ilicence_temporelle      c'est une licence qui dure un certain temps
+     
+     
+    */
+    licence: HttpServiceBase<Interfaces.Ilicence>;
+    admin_licence: HttpServiceAdminBase<Interfaces.Ilicence>;
+    /**
+    service d'accès a la sous-collection :licence_temporelle
+    desc: c'est une licence qui dure un certain temps
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    licence_temporelle: HttpServiceBase<Interfaces.Ilicence_temporelle>;
+    admin_licence_temporelle: HttpServiceAdminBase<Interfaces.Ilicence_temporelle>;
+    /**
+     service d'accès à la collection :MultilangSendGridTemplate
+     desc: décrit un template multi langue d'envoie de mail avec sendGrid
+     
+
+     
+    */
+    MultilangSendGridTemplate: HttpServiceBase<Interfaces.IMultilangSendGridTemplate>;
+    admin_MultilangSendGridTemplate: HttpServiceAdminBase<Interfaces.IMultilangSendGridTemplate>;
+    /**
+     service d'accès à la collection :application
+     desc: liste des applications
+     
+     info: vous pouvez voir tous les objets de cette collection y compris les enfants
+     liste des interfaces héritées possibles:
+     
+        Ipack_card      c'est un paquet de carte
+     
+     
+    */
+    application: HttpServiceBase<Interfaces.Iapplication>;
+    admin_application: HttpServiceAdminBase<Interfaces.Iapplication>;
+    /**
+    service d'accès a la sous-collection :pack_card
+    desc: c'est un paquet de carte
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    pack_card: HttpServiceBase<Interfaces.Ipack_card>;
+    admin_pack_card: HttpServiceAdminBase<Interfaces.Ipack_card>;
+    /**
+     service d'accès à la collection :TemplateLodash
+     desc: template lodash + nom
+     
+
+     
+    */
+    TemplateLodash: HttpServiceBase<Interfaces.ITemplateLodash>;
+    admin_TemplateLodash: HttpServiceAdminBase<Interfaces.ITemplateLodash>;
+    /**
+     service d'accès à la collection :end_client
+     desc: c'est le client que l'on facture
+     
+
+     
+    */
+    end_client: HttpServiceBase<Interfaces.Iend_client>;
+    admin_end_client: HttpServiceAdminBase<Interfaces.Iend_client>;
+    /**
+     service d'accès à la collection :Request
+     desc: description d'une requete avec request
+     
+
+     
+    */
+    Request: HttpServiceBase<Interfaces.IRequest>;
+    admin_Request: HttpServiceAdminBase<Interfaces.IRequest>;
+    /**
+     service d'accès à la collection :ftpsConfig
+     desc: configuration pour un service sftp
+     
+
+     
+    */
+    ftpsConfig: HttpServiceBase<Interfaces.IftpsConfig>;
+    admin_ftpsConfig: HttpServiceAdminBase<Interfaces.IftpsConfig>;
+    /**
+     service d'accès à la collection :application_configuration
+     desc: c'est la configuration d'une application
+     
+     info: vous pouvez voir tous les objets de cette collection y compris les enfants
+     liste des interfaces héritées possibles:
+     
+        Iapplication_configuration_phoneCard      configuration d'une application phoneCard
+     
+        Iapplication_configuration_appCoach      c'est la configuration d'une application Coach
+     
+        Iapplication_configuration_super_admin_mongo      configuration de l'application superAdminMongo
+     
+        Iapplication_configuration_antico      configuration d'un parcourt anticoruption
+     
+        Iapplication_configuration_appClient      c'est la configuration d'une application Client
+     
+        Iapplication_configuration_appApprenant      c'est la configuration d'une application Apprenant
+     
+        IAppConf_minds_up      config de l'app minds up
+     
+        IAppConf_minds_up_admin      config de l'app minds up admin
+     
+        Iapplication_configuration_reportApp      configuration d'un app template
+     
+        Iapplication_configuration_celio2020Admin      conf de l'app celio 2020
+     
+        Iapplication_configuration_manu_admin      cond des comptoire de l'or admin
+     
+        Iapplication_configuration_comptoire_or_admin      cond des comptoire de l'or admin
+     
+     
+    */
+    application_configuration: HttpServiceBase<Interfaces.Iapplication_configuration>;
+    admin_application_configuration: HttpServiceAdminBase<Interfaces.Iapplication_configuration>;
+    /**
+    service d'accès a la sous-collection :application_configuration_phoneCard
+    desc: configuration d'une application phoneCard
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_phoneCard: HttpServiceBase<Interfaces.Iapplication_configuration_phoneCard>;
+    admin_application_configuration_phoneCard: HttpServiceAdminBase<Interfaces.Iapplication_configuration_phoneCard>;
+    /**
+    service d'accès a la sous-collection :application_configuration_appCoach
+    desc: c'est la configuration d'une application Coach
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_appCoach: HttpServiceBase<Interfaces.Iapplication_configuration_appCoach>;
+    admin_application_configuration_appCoach: HttpServiceAdminBase<Interfaces.Iapplication_configuration_appCoach>;
+    /**
+    service d'accès a la sous-collection :application_configuration_super_admin_mongo
+    desc: configuration de l'application superAdminMongo
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_super_admin_mongo: HttpServiceBase<Interfaces.Iapplication_configuration_super_admin_mongo>;
+    admin_application_configuration_super_admin_mongo: HttpServiceAdminBase<Interfaces.Iapplication_configuration_super_admin_mongo>;
+    /**
+    service d'accès a la sous-collection :application_configuration_antico
+    desc: configuration d'un parcourt anticoruption
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_antico: HttpServiceBase<Interfaces.Iapplication_configuration_antico>;
+    admin_application_configuration_antico: HttpServiceAdminBase<Interfaces.Iapplication_configuration_antico>;
+    /**
+    service d'accès a la sous-collection :application_configuration_appClient
+    desc: c'est la configuration d'une application Client
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_appClient: HttpServiceBase<Interfaces.Iapplication_configuration_appClient>;
+    admin_application_configuration_appClient: HttpServiceAdminBase<Interfaces.Iapplication_configuration_appClient>;
+    /**
+    service d'accès a la sous-collection :application_configuration_appApprenant
+    desc: c'est la configuration d'une application Apprenant
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_appApprenant: HttpServiceBase<Interfaces.Iapplication_configuration_appApprenant>;
+    admin_application_configuration_appApprenant: HttpServiceAdminBase<Interfaces.Iapplication_configuration_appApprenant>;
+    /**
+    service d'accès a la sous-collection :AppConf_minds_up
+    desc: config de l'app minds up
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    AppConf_minds_up: HttpServiceBase<Interfaces.IAppConf_minds_up>;
+    admin_AppConf_minds_up: HttpServiceAdminBase<Interfaces.IAppConf_minds_up>;
+    /**
+    service d'accès a la sous-collection :AppConf_minds_up_admin
+    desc: config de l'app minds up admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    AppConf_minds_up_admin: HttpServiceBase<Interfaces.IAppConf_minds_up_admin>;
+    admin_AppConf_minds_up_admin: HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>;
+    /**
+    service d'accès a la sous-collection :application_configuration_reportApp
+    desc: configuration d'un app template
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_reportApp: HttpServiceBase<Interfaces.Iapplication_configuration_reportApp>;
+    admin_application_configuration_reportApp: HttpServiceAdminBase<Interfaces.Iapplication_configuration_reportApp>;
+    /**
+    service d'accès a la sous-collection :application_configuration_celio2020Admin
+    desc: conf de l'app celio 2020
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_celio2020Admin: HttpServiceBase<Interfaces.Iapplication_configuration_celio2020Admin>;
+    admin_application_configuration_celio2020Admin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_celio2020Admin>;
+    /**
+    service d'accès a la sous-collection :application_configuration_manu_admin
+    desc: cond des comptoire de l'or admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_manu_admin: HttpServiceBase<Interfaces.Iapplication_configuration_manu_admin>;
+    admin_application_configuration_manu_admin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_manu_admin>;
+    /**
+    service d'accès a la sous-collection :application_configuration_comptoire_or_admin
+    desc: cond des comptoire de l'or admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_comptoire_or_admin: HttpServiceBase<Interfaces.Iapplication_configuration_comptoire_or_admin>;
+    admin_application_configuration_comptoire_or_admin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_comptoire_or_admin>;
+    /**
+     service d'accès à la collection :application_instance
+     desc: c'est le couple application configuration
+     
+
+     
+    */
+    application_instance: HttpServiceBase<Interfaces.Iapplication_instance>;
+    admin_application_instance: HttpServiceAdminBase<Interfaces.Iapplication_instance>;
+    /**
      service d'accès à la collection :service
      desc: identification du service
      
@@ -119,6 +390,8 @@ export declare class api_collection_plateform {
         Iservice_mindsUp      service minds up metier
      
         Iservice_signin      service d'enregistrement
+     
+        Iservice_comptoireOr      service_comptoireOr
      
      
     */
@@ -342,240 +615,12 @@ export declare class api_collection_plateform {
     service_signin: HttpServiceBase<Interfaces.Iservice_signin>;
     admin_service_signin: HttpServiceAdminBase<Interfaces.Iservice_signin>;
     /**
-     service d'accès à la collection :protoschema
-     desc: protoschema est un méta modéle. il permet de créer les autres modèle de la base
-     
-
-     
-    */
-    protoschema: HttpServiceBase<Interfaces.Iprotoschema>;
-    admin_protoschema: HttpServiceAdminBase<Interfaces.Iprotoschema>;
-    /**
-     service d'accès à la collection :mail
-     desc: collection de mail
-     
-     info: vous pouvez voir tous les objets de cette collection y compris les enfants
-     liste des interfaces héritées possibles:
-     
-        Imail_sendgrid      objet envoyé a l'api sendgrid
-     
-     
-    */
-    mail: HttpServiceBase<Interfaces.Imail>;
-    admin_mail: HttpServiceAdminBase<Interfaces.Imail>;
-    /**
-    service d'accès a la sous-collection :mail_sendgrid
-    desc: objet envoyé a l'api sendgrid
+    service d'accès a la sous-collection :service_comptoireOr
+    desc: service_comptoireOr
     info: vous ne pouvez voir que ce type d'objet
    */
-    mail_sendgrid: HttpServiceBase<Interfaces.Imail_sendgrid>;
-    admin_mail_sendgrid: HttpServiceAdminBase<Interfaces.Imail_sendgrid>;
-    /**
-     service d'accès à la collection :service_serviceOrchestrator
-     desc: service d'orchestration de service. ce service permet de créer des routes qui enchaîne des middleware paramétré qui consomment les autres services
-     
-
-     
-    */
-    service_serviceOrchestrator: HttpServiceBase<Interfaces.Iservice_serviceOrchestrator>;
-    admin_service_serviceOrchestrator: HttpServiceAdminBase<Interfaces.Iservice_serviceOrchestrator>;
-    /**
-     service d'accès à la collection :_view
-     desc: créer des pipe d'agrégation intérogeable https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/
-     
-     info: vous pouvez voir tous les objets de cette collection y compris les enfants
-     liste des interfaces héritées possibles:
-     
-        I_view_params      view avec des params
-     
-     
-    */
-    _view: HttpServiceBase<Interfaces.I_view>;
-    admin__view: HttpServiceAdminBase<Interfaces.I_view>;
-    /**
-    service d'accès a la sous-collection :_view_params
-    desc: view avec des params
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    _view_params: HttpServiceBase<Interfaces.I_view_params>;
-    admin__view_params: HttpServiceAdminBase<Interfaces.I_view_params>;
-    /**
-     service d'accès à la collection :licence
-     desc: représente la licence d'un utilisateur pour un service (ou application) distribué par un end_client
-     
-     info: vous pouvez voir tous les objets de cette collection y compris les enfants
-     liste des interfaces héritées possibles:
-     
-        Ilicence_temporelle      c'est une licence qui dure un certain temps
-     
-     
-    */
-    licence: HttpServiceBase<Interfaces.Ilicence>;
-    admin_licence: HttpServiceAdminBase<Interfaces.Ilicence>;
-    /**
-    service d'accès a la sous-collection :licence_temporelle
-    desc: c'est une licence qui dure un certain temps
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    licence_temporelle: HttpServiceBase<Interfaces.Ilicence_temporelle>;
-    admin_licence_temporelle: HttpServiceAdminBase<Interfaces.Ilicence_temporelle>;
-    /**
-     service d'accès à la collection :MultilangSendGridTemplate
-     desc: décrit un template multi langue d'envoie de mail avec sendGrid
-     
-
-     
-    */
-    MultilangSendGridTemplate: HttpServiceBase<Interfaces.IMultilangSendGridTemplate>;
-    admin_MultilangSendGridTemplate: HttpServiceAdminBase<Interfaces.IMultilangSendGridTemplate>;
-    /**
-     service d'accès à la collection :application
-     desc: liste des applications
-     
-     info: vous pouvez voir tous les objets de cette collection y compris les enfants
-     liste des interfaces héritées possibles:
-     
-        Ipack_card      c'est un paquet de carte
-     
-     
-    */
-    application: HttpServiceBase<Interfaces.Iapplication>;
-    admin_application: HttpServiceAdminBase<Interfaces.Iapplication>;
-    /**
-    service d'accès a la sous-collection :pack_card
-    desc: c'est un paquet de carte
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    pack_card: HttpServiceBase<Interfaces.Ipack_card>;
-    admin_pack_card: HttpServiceAdminBase<Interfaces.Ipack_card>;
-    /**
-     service d'accès à la collection :TemplateLodash
-     desc: template lodash + nom
-     
-
-     
-    */
-    TemplateLodash: HttpServiceBase<Interfaces.ITemplateLodash>;
-    admin_TemplateLodash: HttpServiceAdminBase<Interfaces.ITemplateLodash>;
-    /**
-     service d'accès à la collection :end_client
-     desc: c'est le client que l'on facture
-     
-
-     
-    */
-    end_client: HttpServiceBase<Interfaces.Iend_client>;
-    admin_end_client: HttpServiceAdminBase<Interfaces.Iend_client>;
-    /**
-     service d'accès à la collection :Request
-     desc: description d'une requete avec request
-     
-
-     
-    */
-    Request: HttpServiceBase<Interfaces.IRequest>;
-    admin_Request: HttpServiceAdminBase<Interfaces.IRequest>;
-    /**
-     service d'accès à la collection :ftpsConfig
-     desc: configuration pour un service sftp
-     
-
-     
-    */
-    ftpsConfig: HttpServiceBase<Interfaces.IftpsConfig>;
-    admin_ftpsConfig: HttpServiceAdminBase<Interfaces.IftpsConfig>;
-    /**
-     service d'accès à la collection :application_configuration
-     desc: c'est la configuration d'une application
-     
-     info: vous pouvez voir tous les objets de cette collection y compris les enfants
-     liste des interfaces héritées possibles:
-     
-        Iapplication_configuration_phoneCard      configuration d'une application phoneCard
-     
-        Iapplication_configuration_appCoach      c'est la configuration d'une application Coach
-     
-        Iapplication_configuration_super_admin_mongo      configuration de l'application superAdminMongo
-     
-        Iapplication_configuration_antico      configuration d'un parcourt anticoruption
-     
-        Iapplication_configuration_appClient      c'est la configuration d'une application Client
-     
-        Iapplication_configuration_appApprenant      c'est la configuration d'une application Apprenant
-     
-        IAppConf_minds_up      config de l'app minds up
-     
-        IAppConf_minds_up_admin      config de l'app minds up admin
-     
-     
-    */
-    application_configuration: HttpServiceBase<Interfaces.Iapplication_configuration>;
-    admin_application_configuration: HttpServiceAdminBase<Interfaces.Iapplication_configuration>;
-    /**
-    service d'accès a la sous-collection :application_configuration_phoneCard
-    desc: configuration d'une application phoneCard
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    application_configuration_phoneCard: HttpServiceBase<Interfaces.Iapplication_configuration_phoneCard>;
-    admin_application_configuration_phoneCard: HttpServiceAdminBase<Interfaces.Iapplication_configuration_phoneCard>;
-    /**
-    service d'accès a la sous-collection :application_configuration_appCoach
-    desc: c'est la configuration d'une application Coach
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    application_configuration_appCoach: HttpServiceBase<Interfaces.Iapplication_configuration_appCoach>;
-    admin_application_configuration_appCoach: HttpServiceAdminBase<Interfaces.Iapplication_configuration_appCoach>;
-    /**
-    service d'accès a la sous-collection :application_configuration_super_admin_mongo
-    desc: configuration de l'application superAdminMongo
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    application_configuration_super_admin_mongo: HttpServiceBase<Interfaces.Iapplication_configuration_super_admin_mongo>;
-    admin_application_configuration_super_admin_mongo: HttpServiceAdminBase<Interfaces.Iapplication_configuration_super_admin_mongo>;
-    /**
-    service d'accès a la sous-collection :application_configuration_antico
-    desc: configuration d'un parcourt anticoruption
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    application_configuration_antico: HttpServiceBase<Interfaces.Iapplication_configuration_antico>;
-    admin_application_configuration_antico: HttpServiceAdminBase<Interfaces.Iapplication_configuration_antico>;
-    /**
-    service d'accès a la sous-collection :application_configuration_appClient
-    desc: c'est la configuration d'une application Client
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    application_configuration_appClient: HttpServiceBase<Interfaces.Iapplication_configuration_appClient>;
-    admin_application_configuration_appClient: HttpServiceAdminBase<Interfaces.Iapplication_configuration_appClient>;
-    /**
-    service d'accès a la sous-collection :application_configuration_appApprenant
-    desc: c'est la configuration d'une application Apprenant
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    application_configuration_appApprenant: HttpServiceBase<Interfaces.Iapplication_configuration_appApprenant>;
-    admin_application_configuration_appApprenant: HttpServiceAdminBase<Interfaces.Iapplication_configuration_appApprenant>;
-    /**
-    service d'accès a la sous-collection :AppConf_minds_up
-    desc: config de l'app minds up
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    AppConf_minds_up: HttpServiceBase<Interfaces.IAppConf_minds_up>;
-    admin_AppConf_minds_up: HttpServiceAdminBase<Interfaces.IAppConf_minds_up>;
-    /**
-    service d'accès a la sous-collection :AppConf_minds_up_admin
-    desc: config de l'app minds up admin
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    AppConf_minds_up_admin: HttpServiceBase<Interfaces.IAppConf_minds_up_admin>;
-    admin_AppConf_minds_up_admin: HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>;
-    /**
-     service d'accès à la collection :application_instance
-     desc: c'est le couple application configuration
-     
-
-     
-    */
-    application_instance: HttpServiceBase<Interfaces.Iapplication_instance>;
-    admin_application_instance: HttpServiceAdminBase<Interfaces.Iapplication_instance>;
+    service_comptoireOr: HttpServiceBase<Interfaces.Iservice_comptoireOr>;
+    admin_service_comptoireOr: HttpServiceAdminBase<Interfaces.Iservice_comptoireOr>;
 }
 /**
     accès à la vue :Client

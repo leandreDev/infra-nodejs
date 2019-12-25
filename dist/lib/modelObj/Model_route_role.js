@@ -12,6 +12,10 @@ class Model_route_role extends utils_1.Base {
     constructor(obj = {}) {
         super(obj);
         this._class = "route_role";
+        /**
+  route à protéger
+  */
+        this["route"] = "/";
         if (obj["route"] != undefined) {
             this["route"] = obj["route"].toString();
         }

@@ -88,6 +88,14 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
         }
         
     
+        
+        if(obj["port"] != undefined){
+          
+           this["port"] = new Number(obj["port"]).valueOf();
+          
+        }
+        
+    
   }
   
 
@@ -131,9 +139,15 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
               
        
               /**
-        public_data
+        data public
         */
                public "public_data"?:any ;
+              
+       
+              /**
+        port de publication
+        */
+               public "port"?:number =80;
               
        
 

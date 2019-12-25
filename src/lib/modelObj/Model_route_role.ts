@@ -43,7 +43,7 @@ export class Model_route_role extends  Base  implements Interface.Iroute_role {
               /**
         route à protéger
         */
-               public "route"?:string ;
+               public "route"?:string ="/";
               
        
               /**
