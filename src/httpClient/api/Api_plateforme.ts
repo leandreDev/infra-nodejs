@@ -178,11 +178,6 @@ export class api_collection_plateform {
 
 		 
 		 
-		this.AppConf_minds_up= new HttpServiceBase<Interfaces.IAppConf_minds_up>({url:conf.url + "collection/AppConf_minds_up/" , secure:conf.secure})  ;
-		this.admin_AppConf_minds_up= new HttpServiceAdminBase<Interfaces.IAppConf_minds_up>({url:conf.url + "admin/AppConf_minds_up/" , secure:conf.secure})  ;
-
-		 
-		 
 		this.AppConf_minds_up_admin= new HttpServiceBase<Interfaces.IAppConf_minds_up_admin>({url:conf.url + "collection/AppConf_minds_up_admin/" , secure:conf.secure})  ;
 		this.admin_AppConf_minds_up_admin= new HttpServiceAdminBase<Interfaces.IAppConf_minds_up_admin>({url:conf.url + "admin/AppConf_minds_up_admin/" , secure:conf.secure})  ;
 
@@ -205,6 +200,26 @@ export class api_collection_plateform {
 		 
 		this.application_configuration_comptoire_or_admin= new HttpServiceBase<Interfaces.Iapplication_configuration_comptoire_or_admin>({url:conf.url + "collection/application_configuration_comptoire_or_admin/" , secure:conf.secure})  ;
 		this.admin_application_configuration_comptoire_or_admin= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_comptoire_or_admin>({url:conf.url + "admin/application_configuration_comptoire_or_admin/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.AppConf_minds_up= new HttpServiceBase<Interfaces.IAppConf_minds_up>({url:conf.url + "collection/AppConf_minds_up/" , secure:conf.secure})  ;
+		this.admin_AppConf_minds_up= new HttpServiceAdminBase<Interfaces.IAppConf_minds_up>({url:conf.url + "admin/AppConf_minds_up/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.application_configuration_celiofront= new HttpServiceBase<Interfaces.Iapplication_configuration_celiofront>({url:conf.url + "collection/application_configuration_celiofront/" , secure:conf.secure})  ;
+		this.admin_application_configuration_celiofront= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_celiofront>({url:conf.url + "admin/application_configuration_celiofront/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.application_configuration_celioback= new HttpServiceBase<Interfaces.Iapplication_configuration_celioback>({url:conf.url + "collection/application_configuration_celioback/" , secure:conf.secure})  ;
+		this.admin_application_configuration_celioback= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_celioback>({url:conf.url + "admin/application_configuration_celioback/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.application_configuration_celioadmin= new HttpServiceBase<Interfaces.Iapplication_configuration_celioadmin>({url:conf.url + "collection/application_configuration_celioadmin/" , secure:conf.secure})  ;
+		this.admin_application_configuration_celioadmin= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_celioadmin>({url:conf.url + "admin/application_configuration_celioadmin/" , secure:conf.secure})  ;
 
 		 
 	
@@ -337,11 +352,6 @@ export class api_collection_plateform {
 
 		 
 		 
-		this.service_webAppConf= new HttpServiceBase<Interfaces.Iservice_webAppConf>({url:conf.url + "collection/service_webAppConf/" , secure:conf.secure})  ;
-		this.admin_service_webAppConf= new HttpServiceAdminBase<Interfaces.Iservice_webAppConf>({url:conf.url + "admin/service_webAppConf/" , secure:conf.secure})  ;
-
-		 
-		 
 		this.service_nginxMultiConfigurator= new HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator>({url:conf.url + "collection/service_nginxMultiConfigurator/" , secure:conf.secure})  ;
 		this.admin_service_nginxMultiConfigurator= new HttpServiceAdminBase<Interfaces.Iservice_nginxMultiConfigurator>({url:conf.url + "admin/service_nginxMultiConfigurator/" , secure:conf.secure})  ;
 
@@ -367,11 +377,6 @@ export class api_collection_plateform {
 
 		 
 		 
-		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
-		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
-
-		 
-		 
 		this.service_signin= new HttpServiceBase<Interfaces.Iservice_signin>({url:conf.url + "collection/service_signin/" , secure:conf.secure})  ;
 		this.admin_service_signin= new HttpServiceAdminBase<Interfaces.Iservice_signin>({url:conf.url + "admin/service_signin/" , secure:conf.secure})  ;
 
@@ -379,6 +384,21 @@ export class api_collection_plateform {
 		 
 		this.service_comptoireOr= new HttpServiceBase<Interfaces.Iservice_comptoireOr>({url:conf.url + "collection/service_comptoireOr/" , secure:conf.secure})  ;
 		this.admin_service_comptoireOr= new HttpServiceAdminBase<Interfaces.Iservice_comptoireOr>({url:conf.url + "admin/service_comptoireOr/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
+		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_celio2020= new HttpServiceBase<Interfaces.Iservice_celio2020>({url:conf.url + "collection/service_celio2020/" , secure:conf.secure})  ;
+		this.admin_service_celio2020= new HttpServiceAdminBase<Interfaces.Iservice_celio2020>({url:conf.url + "admin/service_celio2020/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_webAppConf= new HttpServiceBase<Interfaces.Iservice_webAppConf>({url:conf.url + "collection/service_webAppConf/" , secure:conf.secure})  ;
+		this.admin_service_webAppConf= new HttpServiceAdminBase<Interfaces.Iservice_webAppConf>({url:conf.url + "admin/service_webAppConf/" , secure:conf.secure})  ;
 
 		 
 	
@@ -675,8 +695,6 @@ export class api_collection_plateform {
 		 
 		 	Iapplication_configuration_appApprenant      c'est la configuration d'une application Apprenant
 		 
-		 	IAppConf_minds_up      config de l'app minds up
-		 
 		 	IAppConf_minds_up_admin      config de l'app minds up admin
 		 
 		 	Iapplication_configuration_reportApp      configuration d'un app template
@@ -686,6 +704,14 @@ export class api_collection_plateform {
 		 	Iapplication_configuration_manu_admin      cond des comptoire de l'or admin
 		 
 		 	Iapplication_configuration_comptoire_or_admin      cond des comptoire de l'or admin
+		 
+		 	IAppConf_minds_up      config de l'app minds up
+		 
+		 	Iapplication_configuration_celiofront      configuration de l appli celio front
+		 
+		 	Iapplication_configuration_celioback      configuration de l appli celio back
+		 
+		 	Iapplication_configuration_celioadmin      configuration de l appli celio admin
 		 
 		 
 		*/
@@ -761,17 +787,6 @@ export class api_collection_plateform {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :AppConf_minds_up
-		 desc: config de l'app minds up
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public AppConf_minds_up:HttpServiceBase<Interfaces.IAppConf_minds_up> ;
-
-		public admin_AppConf_minds_up:HttpServiceAdminBase<Interfaces.IAppConf_minds_up> ;
-
-
-		 
-		 /**
 		 service d'accès a la sous-collection :AppConf_minds_up_admin
 		 desc: config de l'app minds up admin
 		 info: vous ne pouvez voir que ce type d'objet
@@ -823,6 +838,50 @@ export class api_collection_plateform {
 		public application_configuration_comptoire_or_admin:HttpServiceBase<Interfaces.Iapplication_configuration_comptoire_or_admin> ;
 
 		public admin_application_configuration_comptoire_or_admin:HttpServiceAdminBase<Interfaces.Iapplication_configuration_comptoire_or_admin> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :AppConf_minds_up
+		 desc: config de l'app minds up
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public AppConf_minds_up:HttpServiceBase<Interfaces.IAppConf_minds_up> ;
+
+		public admin_AppConf_minds_up:HttpServiceAdminBase<Interfaces.IAppConf_minds_up> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_celiofront
+		 desc: configuration de l appli celio front
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_celiofront:HttpServiceBase<Interfaces.Iapplication_configuration_celiofront> ;
+
+		public admin_application_configuration_celiofront:HttpServiceAdminBase<Interfaces.Iapplication_configuration_celiofront> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_celioback
+		 desc: configuration de l appli celio back
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_celioback:HttpServiceBase<Interfaces.Iapplication_configuration_celioback> ;
+
+		public admin_application_configuration_celioback:HttpServiceAdminBase<Interfaces.Iapplication_configuration_celioback> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_celioadmin
+		 desc: configuration de l appli celio admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_celioadmin:HttpServiceBase<Interfaces.Iapplication_configuration_celioadmin> ;
+
+		public admin_application_configuration_celioadmin:HttpServiceAdminBase<Interfaces.Iapplication_configuration_celioadmin> ;
 
 
 		 
@@ -893,8 +952,6 @@ export class api_collection_plateform {
 		 
 		 	IService_scorm_gateway      service passerelle d'un package scorm vers l'interne
 		 
-		 	Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
-		 
 		 	Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
 		 
 		 	Iservice_client_ftp      client ftps
@@ -905,11 +962,15 @@ export class api_collection_plateform {
 		 
 		 	Iservice_pdfrip      service de creation de pdf
 		 
-		 	Iservice_mindsUp      service minds up metier
-		 
 		 	Iservice_signin      service d'enregistrement
 		 
 		 	Iservice_comptoireOr      service_comptoireOr
+		 
+		 	Iservice_mindsUp      service minds up metier
+		 
+		 	Iservice_celio2020      service celio 2020
+		 
+		 	Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
 		 
 		 
 		*/
@@ -1172,17 +1233,6 @@ export class api_collection_plateform {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :service_webAppConf
-		 desc: permet de générer les fichier de conf des app (css, js, ...)
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_webAppConf:HttpServiceBase<Interfaces.Iservice_webAppConf> ;
-
-		public admin_service_webAppConf:HttpServiceAdminBase<Interfaces.Iservice_webAppConf> ;
-
-
-		 
-		 /**
 		 service d'accès a la sous-collection :service_nginxMultiConfigurator
 		 desc: configuration d'un service nginx multi configuration
 		 info: vous ne pouvez voir que ce type d'objet
@@ -1238,17 +1288,6 @@ export class api_collection_plateform {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :service_mindsUp
-		 desc: service minds up metier
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
-
-		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
-
-
-		 
-		 /**
 		 service d'accès a la sous-collection :service_signin
 		 desc: service d'enregistrement
 		 info: vous ne pouvez voir que ce type d'objet
@@ -1267,6 +1306,39 @@ export class api_collection_plateform {
 		public service_comptoireOr:HttpServiceBase<Interfaces.Iservice_comptoireOr> ;
 
 		public admin_service_comptoireOr:HttpServiceAdminBase<Interfaces.Iservice_comptoireOr> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_mindsUp
+		 desc: service minds up metier
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
+
+		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio2020
+		 desc: service celio 2020
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio2020:HttpServiceBase<Interfaces.Iservice_celio2020> ;
+
+		public admin_service_celio2020:HttpServiceAdminBase<Interfaces.Iservice_celio2020> ;
+
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_webAppConf
+		 desc: permet de générer les fichier de conf des app (css, js, ...)
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_webAppConf:HttpServiceBase<Interfaces.Iservice_webAppConf> ;
+
+		public admin_service_webAppConf:HttpServiceAdminBase<Interfaces.Iservice_webAppConf> ;
 
 
 		 

@@ -1198,14 +1198,6 @@ export interface IftpsConfig extends IBase {
     "newFileHook"?: IRequest;
 }
 /**
-interface de la class service_webAppConf
-description permet de générer les fichier de conf des app (css, js, ...)
-*/
-export interface Iservice_webAppConf extends Iservice {
-    "infraBddUrl": string;
-    "ssoBddUrl": string;
-}
-/**
 interface de la class service_nginxMultiConfigurator
 description configuration d'un service nginx multi configuration
 */
@@ -1270,22 +1262,6 @@ export interface Iservice_fso extends Iservice {
     "bddServiceUrl": string;
 }
 /**
-interface de la class AppConf_minds_up
-description config de l'app minds up
-*/
-export interface IAppConf_minds_up extends Iapplication_configuration {
-    "introTitle"?: string;
-    "introText"?: string;
-    "videoUrl"?: string;
-    "rgpd"?: string;
-    "serviceMindsUpUrl": string;
-    "managerObservable"?: boolean;
-    "managerAutoExchange"?: boolean;
-    "apiUrl": string;
-    "module360"?: boolean;
-    "moduleRepo"?: boolean;
-}
-/**
 interface de la class AppConf_minds_up_admin
 description config de l'app minds up admin
 */
@@ -1310,38 +1286,6 @@ export interface IsendGridTemplate extends IBase {
     "templateId": string;
     "parametre"?: Iname_value[];
     "dynamic_template_data"?: Iname_value[];
-}
-/**
-interface de la class service_mindsUp
-description service minds up metier
-*/
-export interface Iservice_mindsUp extends Iservice {
-    "urlApi": string;
-    "urlSsoApi": string;
-    "urlLicenceService": string;
-    "urlInfraBdd": string;
-    "urlMailerService": string;
-    "urlPdfrip"?: string;
-    "reportUrl"?: string;
-    "urlFsoService": string;
-    "applicationClienteConfig": string | IAppConf_minds_up;
-    "applicationAdminConfig": string | IAppConf_minds_up_admin;
-    "ftpConf"?: IftpsConfig;
-    "appId": string | Iapplication_instance;
-    "adminAppId": string | Iapplication_instance;
-    "end_client"?: string | Iend_client;
-    "licenceStoreId": string;
-    "adminLicenceStoreId": string;
-    "emailSenderName": string;
-    "emailSenderEmail": string;
-    "mailIRelance360": string | IMultilangSendGridTemplate;
-    "mailInvitation360": string | IMultilangSendGridTemplate;
-    "mailInvitationCampaign360"?: string | IMultilangSendGridTemplate;
-    "mailCreation360"?: string | IMultilangSendGridTemplate;
-    "appName"?: string;
-    "appUrl"?: string;
-    "mailInquiry360UserResponseInfo"?: string | IMultilangSendGridTemplate;
-    "mailInquiry360UserResponse"?: string | IMultilangSendGridTemplate;
 }
 /**
 interface de la class service_signin
@@ -1406,14 +1350,6 @@ export interface Iapplication_configuration_comptoire_or_admin extends Iapplicat
     "serviceUrl"?: string;
 }
 /**
-interface de la class service_comptoireOr
-description service_comptoireOr
-*/
-export interface Iservice_comptoireOr extends Iservice {
-    "bddApiUrl"?: string;
-    "confId"?: string | Iapplication_configuration_comptoire_or_admin;
-}
-/**
 interface de la class service
 description identification du service
 */
@@ -1433,4 +1369,104 @@ description paire route et role
 export interface Iroute_role extends IBase {
     "route"?: string;
     "role"?: string[];
+}
+/**
+interface de la class service_comptoireOr
+description service_comptoireOr
+*/
+export interface Iservice_comptoireOr extends Iservice {
+    "bddApiUrl"?: string;
+    "ssoApiUrl"?: string;
+    "licenceApiUrl"?: string;
+    "infraBddUrl"?: string;
+    "adminConfId"?: string | Iapplication_configuration_comptoire_or_admin;
+    "end_client"?: string | Iend_client;
+    "adminLicenceStoreId"?: string;
+    "adminAppId"?: string | Iapplication_instance;
+}
+/**
+interface de la class AppConf_minds_up
+description config de l'app minds up
+*/
+export interface IAppConf_minds_up extends Iapplication_configuration {
+    "introTitle"?: string;
+    "introText"?: string;
+    "videoUrl"?: string;
+    "rgpd"?: string;
+    "serviceMindsUpUrl": string;
+    "managerObservable"?: boolean;
+    "managerAutoExchange"?: boolean;
+    "apiUrl": string;
+    "module360"?: boolean;
+    "moduleRepo"?: boolean;
+    "lang"?: Iname_value[];
+}
+/**
+interface de la class service_mindsUp
+description service minds up metier
+*/
+export interface Iservice_mindsUp extends Iservice {
+    "urlApi": string;
+    "urlSsoApi": string;
+    "urlLicenceService": string;
+    "urlInfraBdd": string;
+    "urlMailerService": string;
+    "urlPdfrip"?: string;
+    "reportUrl"?: string;
+    "urlFsoService": string;
+    "applicationClienteConfig": string | IAppConf_minds_up;
+    "applicationAdminConfig": string | IAppConf_minds_up_admin;
+    "ftpConf"?: IftpsConfig;
+    "appId": string | Iapplication_instance;
+    "adminAppId": string | Iapplication_instance;
+    "end_client"?: string | Iend_client;
+    "licenceStoreId": string;
+    "adminLicenceStoreId": string;
+    "emailSenderName": string;
+    "emailSenderEmail": string;
+    "mailIRelance360": string | IMultilangSendGridTemplate;
+    "mailInvitation360": string | IMultilangSendGridTemplate;
+    "mailInvitationCampaign360"?: string | IMultilangSendGridTemplate;
+    "mailCreation360"?: string | IMultilangSendGridTemplate;
+    "appName"?: string;
+    "appUrl"?: string;
+    "mailInquiry360UserResponseInfo"?: string | IMultilangSendGridTemplate;
+    "mailInquiry360UserResponse"?: string | IMultilangSendGridTemplate;
+    "langUrl"?: Iname_value[];
+}
+/**
+interface de la class service_celio2020
+description service celio 2020
+*/
+export interface Iservice_celio2020 extends Iservice {
+    "bddUrl"?: string;
+}
+/**
+interface de la class application_configuration_celiofront
+description configuration de l appli celio front
+*/
+export interface Iapplication_configuration_celiofront extends Iapplication_configuration {
+}
+/**
+interface de la class application_configuration_celioback
+description configuration de l appli celio back
+*/
+export interface Iapplication_configuration_celioback extends Iapplication_configuration {
+}
+/**
+interface de la class application_configuration_celioadmin
+description configuration de l appli celio admin
+*/
+export interface Iapplication_configuration_celioadmin extends Iapplication_configuration {
+}
+/**
+interface de la class service_webAppConf
+description permet de générer les fichier de conf des app (css, js, ...)
+*/
+export interface Iservice_webAppConf extends Iservice {
+    "infraBddUrl": string;
+    "ssoBddUrl": string;
+    "ssoUrl"?: string;
+    "ssoIssuer"?: string;
+    "configurationUrl"?: string;
 }

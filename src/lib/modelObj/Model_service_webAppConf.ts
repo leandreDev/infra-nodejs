@@ -34,6 +34,30 @@ export class Model_service_webAppConf extends   Model_service   implements Inter
         }
         
     
+        
+        if(obj["ssoUrl"] != undefined){
+          
+           this["ssoUrl"] = obj["ssoUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["ssoIssuer"] != undefined){
+          
+           this["ssoIssuer"] = obj["ssoIssuer"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["configurationUrl"] != undefined){
+          
+           this["configurationUrl"] = obj["configurationUrl"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -50,6 +74,24 @@ export class Model_service_webAppConf extends   Model_service   implements Inter
         url de la bdd du sso
         */
                public "ssoBddUrl":string ;
+              
+       
+              /**
+        url  de l openid-configuration du sso
+        */
+               public "ssoUrl"?:string ;
+              
+       
+              /**
+        ssoIssuer
+        */
+               public "ssoIssuer"?:string ;
+              
+       
+              /**
+        url du serveur de licence
+        */
+               public "configurationUrl"?:string ;
               
        
 

@@ -14,7 +14,31 @@ bddApiUrl
 */
     "bddApiUrl"?: string;
     /**
-confId
+url du service de bdd du sso
 */
-    "confId"?: string;
+    "ssoApiUrl"?: string;
+    /**
+licenceApiUrl
+*/
+    "licenceApiUrl"?: string;
+    /**
+url de la bdd infra
+*/
+    "infraBddUrl"?: string;
+    /**
+Id de la configuration de l'app admin
+*/
+    "adminConfId"?: string;
+    /**
+end_client
+*/
+    "end_client"?: string;
+    /**
+adminLicenceStoreId
+*/
+    "adminLicenceStoreId"?: string;
+    /**
+id de l'app adminApp
+*/
+    "adminAppId"?: string;
 }

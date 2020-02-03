@@ -151,6 +151,16 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
                 this["mailInquiry360UserResponse"] = obj["mailInquiry360UserResponse"]._id;
             }
         }
+        if (obj["langUrl"] != undefined && obj["langUrl"] != null && _.isArray(obj["langUrl"])) {
+            this["langUrl"] = obj["langUrl"].map((value) => {
+                if (value._class) {
+                    return new Index[value._class](value);
+                }
+                else {
+                    return new Index["name_value"](value);
+                }
+            });
+        }
     }
 }
 exports.Model_service_mindsUp = Model_service_mindsUp;

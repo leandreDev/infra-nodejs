@@ -98,6 +98,22 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
         }
         
     
+        
+        if(obj["lang"] != undefined && obj["lang"] != null && _.isArray(obj["lang"])){
+          
+
+            this["lang"] = obj["lang"].map((value)=>{
+              if(value._class){
+                return new Index[value._class](value) ;
+              }else{
+                return new Index["name_value"](value) ;
+              }
+            })
+            
+          
+        }
+        
+    
   }
   
 
@@ -162,6 +178,12 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
         définie si le module repo est accéssible
         */
                public "moduleRepo"?:boolean =true;
+              
+       
+              /**
+        liste des langues disponibles
+        */
+               public "lang"?:Interface.Iname_value[];
               
        
 

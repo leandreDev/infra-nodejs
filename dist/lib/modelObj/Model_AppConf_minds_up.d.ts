@@ -49,4 +49,8 @@ definit si le module 360 est actif
 définie si le module repo est accéssible
 */
     "moduleRepo"?: boolean;
+    /**
+liste des langues disponibles
+*/
+    "lang"?: Interface.Iname_value[];
 }

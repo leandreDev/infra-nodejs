@@ -274,6 +274,22 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         }
         
     
+        
+        if(obj["langUrl"] != undefined && obj["langUrl"] != null && _.isArray(obj["langUrl"])){
+          
+
+            this["langUrl"] = obj["langUrl"].map((value)=>{
+              if(value._class){
+                return new Index[value._class](value) ;
+              }else{
+                return new Index["name_value"](value) ;
+              }
+            })
+            
+          
+        }
+        
+    
   }
   
 
@@ -434,6 +450,12 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         Inquiry360UserResponse
         */
                public "mailInquiry360UserResponse"?:string ;
+              
+       
+              /**
+        url des app en fonction de la langue
+        */
+               public "langUrl"?:Interface.Iname_value[];
               
        
 

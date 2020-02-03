@@ -113,4 +113,8 @@ Inquiry360UserResponseInfo
 Inquiry360UserResponse
 */
     "mailInquiry360UserResponse"?: string;
+    /**
+url des app en fonction de la langue
+*/
+    "langUrl"?: Interface.Iname_value[];
 }
