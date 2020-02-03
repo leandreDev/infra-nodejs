@@ -17,4 +17,16 @@ url de la bdd de l'infra
 url de la bdd du sso
 */
     "ssoBddUrl": string;
+    /**
+url  de l openid-configuration du sso
+*/
+    "ssoUrl"?: string;
+    /**
+ssoIssuer
+*/
+    "ssoIssuer"?: string;
+    /**
+url du serveur de licence
+*/
+    "configurationUrl"?: string;
 }

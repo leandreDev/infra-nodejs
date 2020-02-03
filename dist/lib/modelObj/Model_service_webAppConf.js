@@ -17,6 +17,15 @@ class Model_service_webAppConf extends Model_service_1.Model_service {
         if (obj["ssoBddUrl"] != undefined) {
             this["ssoBddUrl"] = obj["ssoBddUrl"].toString();
         }
+        if (obj["ssoUrl"] != undefined) {
+            this["ssoUrl"] = obj["ssoUrl"].toString();
+        }
+        if (obj["ssoIssuer"] != undefined) {
+            this["ssoIssuer"] = obj["ssoIssuer"].toString();
+        }
+        if (obj["configurationUrl"] != undefined) {
+            this["configurationUrl"] = obj["configurationUrl"].toString();
+        }
     }
 }
 exports.Model_service_webAppConf = Model_service_webAppConf;

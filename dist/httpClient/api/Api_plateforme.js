@@ -60,8 +60,6 @@ class api_collection_plateform {
         this.admin_application_configuration_appClient = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_appClient/", secure: conf.secure });
         this.application_configuration_appApprenant = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_appApprenant/", secure: conf.secure });
         this.admin_application_configuration_appApprenant = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_appApprenant/", secure: conf.secure });
-        this.AppConf_minds_up = new utils_1.HttpServiceBase({ url: conf.url + "collection/AppConf_minds_up/", secure: conf.secure });
-        this.admin_AppConf_minds_up = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/AppConf_minds_up/", secure: conf.secure });
         this.AppConf_minds_up_admin = new utils_1.HttpServiceBase({ url: conf.url + "collection/AppConf_minds_up_admin/", secure: conf.secure });
         this.admin_AppConf_minds_up_admin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/AppConf_minds_up_admin/", secure: conf.secure });
         this.application_configuration_reportApp = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_reportApp/", secure: conf.secure });
@@ -72,6 +70,14 @@ class api_collection_plateform {
         this.admin_application_configuration_manu_admin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_manu_admin/", secure: conf.secure });
         this.application_configuration_comptoire_or_admin = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_comptoire_or_admin/", secure: conf.secure });
         this.admin_application_configuration_comptoire_or_admin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_comptoire_or_admin/", secure: conf.secure });
+        this.AppConf_minds_up = new utils_1.HttpServiceBase({ url: conf.url + "collection/AppConf_minds_up/", secure: conf.secure });
+        this.admin_AppConf_minds_up = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/AppConf_minds_up/", secure: conf.secure });
+        this.application_configuration_celiofront = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_celiofront/", secure: conf.secure });
+        this.admin_application_configuration_celiofront = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_celiofront/", secure: conf.secure });
+        this.application_configuration_celioback = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_celioback/", secure: conf.secure });
+        this.admin_application_configuration_celioback = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_celioback/", secure: conf.secure });
+        this.application_configuration_celioadmin = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_celioadmin/", secure: conf.secure });
+        this.admin_application_configuration_celioadmin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_celioadmin/", secure: conf.secure });
         this.application_instance = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_instance/", secure: conf.secure });
         this.admin_application_instance = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_instance/", secure: conf.secure });
         this.service = new utils_1.HttpServiceBase({ url: conf.url + "collection/service/", secure: conf.secure });
@@ -122,8 +128,6 @@ class api_collection_plateform {
         this.admin_service_planned_tasks = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_planned_tasks/", secure: conf.secure });
         this.Service_scorm_gateway = new utils_1.HttpServiceBase({ url: conf.url + "collection/Service_scorm_gateway/", secure: conf.secure });
         this.admin_Service_scorm_gateway = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/Service_scorm_gateway/", secure: conf.secure });
-        this.service_webAppConf = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_webAppConf/", secure: conf.secure });
-        this.admin_service_webAppConf = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_webAppConf/", secure: conf.secure });
         this.service_nginxMultiConfigurator = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_nginxMultiConfigurator/", secure: conf.secure });
         this.admin_service_nginxMultiConfigurator = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_nginxMultiConfigurator/", secure: conf.secure });
         this.service_client_ftp = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_client_ftp/", secure: conf.secure });
@@ -134,12 +138,16 @@ class api_collection_plateform {
         this.admin_service_fso = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_fso/", secure: conf.secure });
         this.service_pdfrip = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_pdfrip/", secure: conf.secure });
         this.admin_service_pdfrip = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_pdfrip/", secure: conf.secure });
-        this.service_mindsUp = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_mindsUp/", secure: conf.secure });
-        this.admin_service_mindsUp = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_mindsUp/", secure: conf.secure });
         this.service_signin = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_signin/", secure: conf.secure });
         this.admin_service_signin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_signin/", secure: conf.secure });
         this.service_comptoireOr = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_comptoireOr/", secure: conf.secure });
         this.admin_service_comptoireOr = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_comptoireOr/", secure: conf.secure });
+        this.service_mindsUp = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_mindsUp/", secure: conf.secure });
+        this.admin_service_mindsUp = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_mindsUp/", secure: conf.secure });
+        this.service_celio2020 = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_celio2020/", secure: conf.secure });
+        this.admin_service_celio2020 = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_celio2020/", secure: conf.secure });
+        this.service_webAppConf = new utils_1.HttpServiceBase({ url: conf.url + "collection/service_webAppConf/", secure: conf.secure });
+        this.admin_service_webAppConf = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/service_webAppConf/", secure: conf.secure });
     }
 }
 exports.api_collection_plateform = api_collection_plateform;

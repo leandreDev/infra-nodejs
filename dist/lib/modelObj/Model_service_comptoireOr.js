@@ -15,12 +15,40 @@ class Model_service_comptoireOr extends Model_service_1.Model_service {
         if (obj["bddApiUrl"] != undefined) {
             this["bddApiUrl"] = obj["bddApiUrl"].toString();
         }
-        if (obj["confId"] != undefined) {
-            if (_.isString(obj["confId"])) {
-                this["confId"] = obj["confId"];
+        if (obj["ssoApiUrl"] != undefined) {
+            this["ssoApiUrl"] = obj["ssoApiUrl"].toString();
+        }
+        if (obj["licenceApiUrl"] != undefined) {
+            this["licenceApiUrl"] = obj["licenceApiUrl"].toString();
+        }
+        if (obj["infraBddUrl"] != undefined) {
+            this["infraBddUrl"] = obj["infraBddUrl"].toString();
+        }
+        if (obj["adminConfId"] != undefined) {
+            if (_.isString(obj["adminConfId"])) {
+                this["adminConfId"] = obj["adminConfId"];
             }
-            else if (obj["confId"]._id) {
-                this["confId"] = obj["confId"]._id;
+            else if (obj["adminConfId"]._id) {
+                this["adminConfId"] = obj["adminConfId"]._id;
+            }
+        }
+        if (obj["end_client"] != undefined) {
+            if (_.isString(obj["end_client"])) {
+                this["end_client"] = obj["end_client"];
+            }
+            else if (obj["end_client"]._id) {
+                this["end_client"] = obj["end_client"]._id;
+            }
+        }
+        if (obj["adminLicenceStoreId"] != undefined) {
+            this["adminLicenceStoreId"] = obj["adminLicenceStoreId"].toString();
+        }
+        if (obj["adminAppId"] != undefined) {
+            if (_.isString(obj["adminAppId"])) {
+                this["adminAppId"] = obj["adminAppId"];
+            }
+            else if (obj["adminAppId"]._id) {
+                this["adminAppId"] = obj["adminAppId"]._id;
             }
         }
     }

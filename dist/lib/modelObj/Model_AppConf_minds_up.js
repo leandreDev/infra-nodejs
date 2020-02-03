@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const _ = require("lodash");
+const Index = require("./Index");
 const Model_application_configuration_1 = require("./Model_application_configuration");
 /**
   config de l'app minds up
@@ -44,6 +46,16 @@ class Model_AppConf_minds_up extends Model_application_configuration_1.Model_app
         }
         if (obj["moduleRepo"] != undefined) {
             this["moduleRepo"] = new Boolean(obj["moduleRepo"]).valueOf();
+        }
+        if (obj["lang"] != undefined && obj["lang"] != null && _.isArray(obj["lang"])) {
+            this["lang"] = obj["lang"].map((value) => {
+                if (value._class) {
+                    return new Index[value._class](value);
+                }
+                else {
+                    return new Index["name_value"](value);
+                }
+            });
         }
     }
 }
