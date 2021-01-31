@@ -27,8 +27,8 @@ export class Model_node_fork_option extends  Base  implements Interface.Inode_fo
         
         if(obj["env"] != undefined){
           
-            if(obj._class){
-              this["env"] =  new Index[obj._class](obj["env"]) ;
+            if(obj["env"]._class){
+              this["env"] =  new Index[obj["env"]._class](obj["env"]) ;
             }else{
               this["env"] =  new Index["node_fork_option_env"](obj["env"]) ;
             }

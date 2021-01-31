@@ -109,8 +109,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
         
         if(obj["ftpConf"] != undefined){
           
-            if(obj._class){
-              this["ftpConf"] =  new Index[obj._class](obj["ftpConf"]) ;
+            if(obj["ftpConf"]._class){
+              this["ftpConf"] =  new Index[obj["ftpConf"]._class](obj["ftpConf"]) ;
             }else{
               this["ftpConf"] =  new Index["ftpsConfig"](obj["ftpConf"]) ;
             }

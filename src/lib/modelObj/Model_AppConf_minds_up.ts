@@ -99,6 +99,14 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
         
     
         
+        if(obj["moduleProgress"] != undefined){
+          
+           this["moduleProgress"] = new Boolean(obj["moduleProgress"]).valueOf() ;
+          
+        }
+        
+    
+        
         if(obj["lang"] != undefined && obj["lang"] != null && _.isArray(obj["lang"])){
           
 
@@ -111,6 +119,30 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
             })
             
           
+        }
+        
+    
+        
+        if(obj["collaborateurAnonyme"] != undefined){
+          
+           this["collaborateurAnonyme"] = new Boolean(obj["collaborateurAnonyme"]).valueOf() ;
+          
+        }
+        
+    
+        
+        if(obj["emailValidator"] != undefined){
+          
+           this["emailValidator"] = obj["emailValidator"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["emailValidatorErrorMessage"] != undefined){
+          
+           this["emailValidatorErrorMessage"] = obj["emailValidatorErrorMessage"].toString() ;
+           
         }
         
     
@@ -181,9 +213,33 @@ export class Model_AppConf_minds_up extends   Model_application_configuration   
               
        
               /**
+        active la partie progression
+        */
+               public "moduleProgress"?:boolean ;
+              
+       
+              /**
         liste des langues disponibles
         */
                public "lang"?:Interface.Iname_value[];
+              
+       
+              /**
+        force les collaborateurs des 360 a être anonyme
+        */
+               public "collaborateurAnonyme"?:boolean ;
+              
+       
+              /**
+        email validation pour l'ajout de nouveau utilisateur
+        */
+               public "emailValidator"?:string ;
+              
+       
+              /**
+        message d'erreur pour le validateur de mail
+        */
+               public "emailValidatorErrorMessage"?:string ;
               
        
 

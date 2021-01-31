@@ -69,8 +69,8 @@ export class Model_application_configuration_appApprenant extends   Model_applic
         
         if(obj["aclTemplate"] != undefined){
           
-            if(obj._class){
-              this["aclTemplate"] =  new Index[obj._class](obj["aclTemplate"]) ;
+            if(obj["aclTemplate"]._class){
+              this["aclTemplate"] =  new Index[obj["aclTemplate"]._class](obj["aclTemplate"]) ;
             }else{
               this["aclTemplate"] =  new Index["_acl"](obj["aclTemplate"]) ;
             }

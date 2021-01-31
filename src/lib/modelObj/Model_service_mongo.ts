@@ -34,14 +34,6 @@ export class Model_service_mongo extends   Model_service   implements Interface.
         }
         
     
-        
-        if(obj["secretKey"] != undefined){
-          
-           this["secretKey"] = obj["secretKey"].toString() ;
-           
-        }
-        
-    
   }
   
 
@@ -58,12 +50,6 @@ export class Model_service_mongo extends   Model_service   implements Interface.
         le nom de la base sur laquelle la connexion doit s'établir. Cela permet de pouvoir créer des bases automatiquements
         */
                public "mongoAuthSource"?:string ;
-              
-       
-              /**
-        clef secrète de communication interne a l'infra
-        */
-               public "secretKey"?:string ="$$ENV.SECRET";
               
        
 

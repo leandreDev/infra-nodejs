@@ -77,8 +77,8 @@ export class Model_schema_name extends  Base  implements Interface.Ischema_name 
         
         if(obj["listParameter"] != undefined){
           
-            if(obj._class){
-              this["listParameter"] =  new Index[obj._class](obj["listParameter"]) ;
+            if(obj["listParameter"]._class){
+              this["listParameter"] =  new Index[obj["listParameter"]._class](obj["listParameter"]) ;
             }else{
               this["listParameter"] =  new Index["dataTableInit"](obj["listParameter"]) ;
             }

@@ -59,8 +59,8 @@ export class Model_ftpsConfig extends  Base  implements Interface.IftpsConfig {
         
         if(obj["newFileHook"] != undefined){
           
-            if(obj._class){
-              this["newFileHook"] =  new Index[obj._class](obj["newFileHook"]) ;
+            if(obj["newFileHook"]._class){
+              this["newFileHook"] =  new Index[obj["newFileHook"]._class](obj["newFileHook"]) ;
             }else{
               this["newFileHook"] =  new Index["Request"](obj["newFileHook"]) ;
             }

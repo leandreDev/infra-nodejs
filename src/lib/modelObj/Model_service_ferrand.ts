@@ -8,12 +8,12 @@ import {Model_service } from "./Model_service"
 
 
 /**
-  service celio 2020
+  service ferrand
 */
-export class Model_service_celio2020 extends   Model_service   implements Interface.Iservice_celio2020 {
+export class Model_service_ferrand extends   Model_service   implements Interface.Iservice_ferrand {
 
 /**
-  service celio 2020
+  service ferrand
 */
   constructor(obj:any={}){
     super(obj);
@@ -29,13 +29,13 @@ export class Model_service_celio2020 extends   Model_service   implements Interf
   }
   
 
-    public _class:string  = "service_celio2020" ;
+    public _class:string  = "service_ferrand" ;
 
         
               /**
         url du service de bdd
         */
-               public "bddUrl"?:string ;
+               public "bddUrl":string ;
               
        
 

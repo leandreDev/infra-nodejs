@@ -37,8 +37,8 @@ export class Model_service_socketIo extends   Model_service   implements Interfa
         
         if(obj["socketIo"] != undefined){
           
-            if(obj._class){
-              this["socketIo"] =  new Index[obj._class](obj["socketIo"]) ;
+            if(obj["socketIo"]._class){
+              this["socketIo"] =  new Index[obj["socketIo"]._class](obj["socketIo"]) ;
             }else{
               this["socketIo"] =  new Index["socketIoConfig"](obj["socketIo"]) ;
             }

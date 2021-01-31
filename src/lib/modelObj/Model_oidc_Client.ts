@@ -131,8 +131,8 @@ export class Model_oidc_Client extends  Base  implements Interface.Ioidc_Client 
         
         if(obj["jwks"] != undefined){
           
-            if(obj._class){
-              this["jwks"] =  new Index[obj._class](obj["jwks"]) ;
+            if(obj["jwks"]._class){
+              this["jwks"] =  new Index[obj["jwks"]._class](obj["jwks"]) ;
             }else{
               this["jwks"] =  new Index["jwks"](obj["jwks"]) ;
             }
@@ -333,8 +333,8 @@ export class Model_oidc_Client extends  Base  implements Interface.Ioidc_Client 
         
         if(obj["userManagment"] != undefined){
           
-            if(obj._class){
-              this["userManagment"] =  new Index[obj._class](obj["userManagment"]) ;
+            if(obj["userManagment"]._class){
+              this["userManagment"] =  new Index[obj["userManagment"]._class](obj["userManagment"]) ;
             }else{
               this["userManagment"] =  new Index["oidc_clientUserManagment"](obj["userManagment"]) ;
             }

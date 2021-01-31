@@ -85,8 +85,8 @@ export class Model_<%= protoSchema.name %> extends <%if(protoSchema.parentModel)
             this["<%= field.name%>"] = obj["<%= field.name%>"]._id ;
           }
           <% }else if( field._class == "subdoc"){ %>
-            if(obj._class){
-              this["<%= field.name%>"] =  new Index[obj._class](obj["<%= field.name%>"]) ;
+            if(obj["<%= field.name%>"]._class){
+              this["<%= field.name%>"] =  new Index[obj["<%= field.name%>"]._class](obj["<%= field.name%>"]) ;
             }else{
               this["<%= field.name%>"] =  new Index["<%=idName[field.protoSchemaId] %>"](obj["<%= field.name%>"]) ;
             }

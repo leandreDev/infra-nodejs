@@ -94,6 +94,42 @@ export class Model_service_comptoireOr extends   Model_service   implements Inte
         }
         
     
+        
+        if(obj["sendgridApiUrl"] != undefined){
+          
+           this["sendgridApiUrl"] = obj["sendgridApiUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["senderName"] != undefined){
+          
+           this["senderName"] = obj["senderName"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["senderEmail"] != undefined){
+          
+           this["senderEmail"] = obj["senderEmail"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["transactionEmailTemplate"] != undefined){
+          
+          if(_.isString(obj["transactionEmailTemplate"])){
+            this["transactionEmailTemplate"] = obj["transactionEmailTemplate"];
+          }else if(obj["transactionEmailTemplate"]._id){
+            this["transactionEmailTemplate"] = obj["transactionEmailTemplate"]._id ;
+          }
+          
+        }
+        
+    
   }
   
 
@@ -146,6 +182,30 @@ export class Model_service_comptoireOr extends   Model_service   implements Inte
         id de l'app adminApp
         */
                public "adminAppId"?:string ;
+              
+       
+              /**
+        url de l api send grid
+        */
+               public "sendgridApiUrl"?:string ;
+              
+       
+              /**
+        nom de l emeteur
+        */
+               public "senderName"?:string ;
+              
+       
+              /**
+        email de l'emeteur
+        */
+               public "senderEmail"?:string ;
+              
+       
+              /**
+        template du mail envoyé lors d une transaction
+        */
+               public "transactionEmailTemplate"?:string ;
               
        
 

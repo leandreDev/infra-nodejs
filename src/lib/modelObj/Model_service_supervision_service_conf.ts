@@ -45,8 +45,8 @@ export class Model_service_supervision_service_conf extends  Base  implements In
         
         if(obj["options"] != undefined){
           
-            if(obj._class){
-              this["options"] =  new Index[obj._class](obj["options"]) ;
+            if(obj["options"]._class){
+              this["options"] =  new Index[obj["options"]._class](obj["options"]) ;
             }else{
               this["options"] =  new Index["node_fork_option"](obj["options"]) ;
             }

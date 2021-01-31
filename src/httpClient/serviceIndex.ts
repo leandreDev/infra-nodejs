@@ -1,5 +1,11 @@
-import {IHttpResult} from "utils" ;
+import {IHttpResult , IHttpServiceBase , IHttpServiceAdminBase } from "utils" ;
     
-        import {Api_plateforme} from "./api/Api_plateforme" ;
+        export * from "./api/Api_plateforme" ;
     
-    export { IHttpResult , Api_plateforme };
+        export * from "./api/Bdd_plateforme" ;
+    
+        export * from "./api/IPlateforme" ;
+    
+        export * from "./api/ApiExpressRouter" ;
+    
+    export { IHttpResult , IHttpServiceBase , IHttpServiceAdminBase  };

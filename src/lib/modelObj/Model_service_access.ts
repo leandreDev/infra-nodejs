@@ -39,8 +39,8 @@ export class Model_service_access extends  Base  implements Interface.Iservice_a
         
         if(obj["httAccess"] != undefined){
           
-            if(obj._class){
-              this["httAccess"] =  new Index[obj._class](obj["httAccess"]) ;
+            if(obj["httAccess"]._class){
+              this["httAccess"] =  new Index[obj["httAccess"]._class](obj["httAccess"]) ;
             }else{
               this["httAccess"] =  new Index["url_role"](obj["httAccess"]) ;
             }
