@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_AppConf_minds_up = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
 const Model_application_configuration_1 = require("./Model_application_configuration");
@@ -47,6 +48,9 @@ class Model_AppConf_minds_up extends Model_application_configuration_1.Model_app
         if (obj["moduleRepo"] != undefined) {
             this["moduleRepo"] = new Boolean(obj["moduleRepo"]).valueOf();
         }
+        if (obj["moduleProgress"] != undefined) {
+            this["moduleProgress"] = new Boolean(obj["moduleProgress"]).valueOf();
+        }
         if (obj["lang"] != undefined && obj["lang"] != null && _.isArray(obj["lang"])) {
             this["lang"] = obj["lang"].map((value) => {
                 if (value._class) {
@@ -56,6 +60,15 @@ class Model_AppConf_minds_up extends Model_application_configuration_1.Model_app
                     return new Index["name_value"](value);
                 }
             });
+        }
+        if (obj["collaborateurAnonyme"] != undefined) {
+            this["collaborateurAnonyme"] = new Boolean(obj["collaborateurAnonyme"]).valueOf();
+        }
+        if (obj["emailValidator"] != undefined) {
+            this["emailValidator"] = obj["emailValidator"].toString();
+        }
+        if (obj["emailValidatorErrorMessage"] != undefined) {
+            this["emailValidatorErrorMessage"] = obj["emailValidatorErrorMessage"].toString();
         }
     }
 }

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_field = void 0;
 const utils_1 = require("utils");
 /**
   ce champ est le champ représente les champs de la base. Il est abstrait, vous devez utiliser ces enfants

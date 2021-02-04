@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_pack_card = void 0;
 const Model_application_1 = require("./Model_application");
 /**
   c'est un paquet de carte

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_application = void 0;
 const utils_1 = require("utils");
 /**
   liste des applications

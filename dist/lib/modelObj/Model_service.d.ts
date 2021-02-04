@@ -37,4 +37,20 @@ clef secrète de signature inter service
 paramétrage des accès public
 */
     "publicAccess"?: Interface.Iurl_role;
+    /**
+ip to bind
+*/
+    "bindIp"?: string;
+    /**
+liste des headers à ajouter dans les requêtes
+*/
+    "headers"?: Interface.Iname_value[];
+    /**
+liste des domaines autorisé
+*/
+    "accessControlAllowOrigin"?: string[];
+    /**
+url du serveur de configuration
+*/
+    "confServiceUrl"?: string;
 }

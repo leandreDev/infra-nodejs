@@ -1474,7 +1474,7 @@ export class bdd_collection_plateform  {
 	accès à la vue :Client 
 	retourne la donnée du client connecté
 */
-export class bdd_view_Client extends HttpServiceBddBaseView<Interface.Iend_client> {
+export class bdd_view_Client extends HttpServiceBddBaseView<Interfaces.Iend_client> {
 /**
 	accès à la vue :Client 
 	
@@ -1491,7 +1491,7 @@ export class bdd_view_Client extends HttpServiceBddBaseView<Interface.Iend_clien
 	*/
   private agregate:any[] = [{"$match":{"_id":"$ctx.params.clientId"}}] ;
 
-	public get(  query: string = '*', headers: any = {} , ctx:any={}  ): Promise<IHttpResult<Interface.Iend_client>> {
+	public get(  query: string = '*', headers: any = {} , ctx:any={}  ): Promise<IHttpResult<Interfaces.Iend_client>> {
 		//ajouter les params dans ctx
     ctx.params = {} ;
     return super.get( query , headers , this.agregate , ctx)
@@ -1502,7 +1502,7 @@ export class bdd_view_Client extends HttpServiceBddBaseView<Interface.Iend_clien
 	accès à la vue :UserLicence 
 	retourne la liste des licences d'un utilisateur pour le client courrant
 */
-export class bdd_view_UserLicence extends HttpServiceBddBaseView<Interface.Ilicence> {
+export class bdd_view_UserLicence extends HttpServiceBddBaseView<Interfaces.Ilicence> {
 /**
 	accès à la vue :UserLicence 
 	
@@ -1519,7 +1519,7 @@ export class bdd_view_UserLicence extends HttpServiceBddBaseView<Interface.Ilice
 	*/
   private agregate:any[] = [{"$match":{"user":"$ctx.params.userId","end_client":"$ctx.params.clientId"}}] ;
 
-	public get( userId:string ,  query: string = '*', headers: any = {} , ctx:any={}  ): Promise<IHttpResult<Interface.Ilicence>> {
+	public get( userId:string ,  query: string = '*', headers: any = {} , ctx:any={}  ): Promise<IHttpResult<Interfaces.Ilicence>> {
 		//ajouter les params dans ctx
     ctx.params = {} ;
     return super.get( query , headers , this.agregate , ctx)

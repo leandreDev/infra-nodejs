@@ -319,7 +319,7 @@ public static checkx5t(val:any, path:string =null):string[]{
        
  
 
-public static checkx5t#S256(val:any, path:string =null):string[]{
+public static "checkx5t#S256"(val:any, path:string =null):string[]{
          if(val == null){
             return null ;
          }
@@ -496,10 +496,10 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
 
               
 
-              if(target.x5t#S256 != null && target.x5t#S256 != undefined ){
+              if(target['x5t#S256'] != null && target['x5t#S256'] != undefined ){
                 
                 
-                res = Entity_jwk.checkx5t#S256(target.x5t#S256 , `${path}.x5t#S256`) ;
+                res = Entity_jwk['checkx5t#S256'](target['x5t#S256'] , `${path}.x5t#S256`) ;
                 if(res && res.length > 0){
                   err = [...err , ...res] ;
                 }               

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_service_dumy_fso = void 0;
 const Model_service_1 = require("./Model_service");
 /**
   simple remote file system a n utiliser que pour des test

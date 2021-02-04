@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_service_mindsUp = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
 const Model_service_1 = require("./Model_service");
@@ -54,8 +55,8 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             }
         }
         if (obj["ftpConf"] != undefined) {
-            if (obj._class) {
-                this["ftpConf"] = new Index[obj._class](obj["ftpConf"]);
+            if (obj["ftpConf"]._class) {
+                this["ftpConf"] = new Index[obj["ftpConf"]._class](obj["ftpConf"]);
             }
             else {
                 this["ftpConf"] = new Index["ftpsConfig"](obj["ftpConf"]);

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_service_socketIo = void 0;
 const Index = require("./Index");
 const Model_service_1 = require("./Model_service");
 /**
@@ -19,8 +20,8 @@ class Model_service_socketIo extends Model_service_1.Model_service {
             this["allowCrossOrigin"] = new Boolean(obj["allowCrossOrigin"]).valueOf();
         }
         if (obj["socketIo"] != undefined) {
-            if (obj._class) {
-                this["socketIo"] = new Index[obj._class](obj["socketIo"]);
+            if (obj["socketIo"]._class) {
+                this["socketIo"] = new Index[obj["socketIo"]._class](obj["socketIo"]);
             }
             else {
                 this["socketIo"] = new Index["socketIoConfig"](obj["socketIo"]);

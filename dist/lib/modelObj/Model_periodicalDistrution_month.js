@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_periodicalDistrution_month = void 0;
 const Model_periodicalDistrution_1 = require("./Model_periodicalDistrution");
 /**
   permet de limiter la distribution chaque jour du mois

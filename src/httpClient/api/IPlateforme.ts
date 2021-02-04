@@ -17,7 +17,7 @@ export interface IPlateforme_view_Client {
 	génére une requette sur la vue Client
 	
 	 */
-	get(  query?: string, headers?: any ,  ): Promise<IHttpResult<Interface.Iend_client>> 
+	get(  query?: string, headers?: any ,  ): Promise<IHttpResult<Interfaces.Iend_client>> 
 
 }
 
@@ -29,7 +29,7 @@ export interface IPlateforme_view_UserLicence {
 	génére une requette sur la vue UserLicence
 	
 	 */
-	get( userId:string ,  query?: string, headers?: any ,  ): Promise<IHttpResult<Interface.Ilicence>> 
+	get( userId:string ,  query?: string, headers?: any ,  ): Promise<IHttpResult<Interfaces.Ilicence>> 
 
 }
 

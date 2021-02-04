@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_oidc_clientUserManagment = void 0;
 const utils_1 = require("utils");
 /**
   configuration du gestionnaire d'utilisateur

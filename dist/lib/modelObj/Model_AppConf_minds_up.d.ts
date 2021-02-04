@@ -50,7 +50,23 @@ définie si le module repo est accéssible
 */
     "moduleRepo"?: boolean;
     /**
+active la partie progression
+*/
+    "moduleProgress"?: boolean;
+    /**
 liste des langues disponibles
 */
     "lang"?: Interface.Iname_value[];
+    /**
+force les collaborateurs des 360 a être anonyme
+*/
+    "collaborateurAnonyme"?: boolean;
+    /**
+email validation pour l'ajout de nouveau utilisateur
+*/
+    "emailValidator"?: string;
+    /**
+message d'erreur pour le validateur de mail
+*/
+    "emailValidatorErrorMessage"?: string;
 }

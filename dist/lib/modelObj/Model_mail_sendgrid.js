@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_mail_sendgrid = void 0;
 const Model_mail_1 = require("./Model_mail");
 /**
   objet envoyé a l'api sendgrid

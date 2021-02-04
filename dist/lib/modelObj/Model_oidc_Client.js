@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_oidc_Client = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
 const utils_1 = require("utils");
@@ -61,8 +62,8 @@ class Model_oidc_Client extends utils_1.Base {
             this["jwks_uri"] = obj["jwks_uri"].toString();
         }
         if (obj["jwks"] != undefined) {
-            if (obj._class) {
-                this["jwks"] = new Index[obj._class](obj["jwks"]);
+            if (obj["jwks"]._class) {
+                this["jwks"] = new Index[obj["jwks"]._class](obj["jwks"]);
             }
             else {
                 this["jwks"] = new Index["jwks"](obj["jwks"]);
@@ -152,8 +153,8 @@ class Model_oidc_Client extends utils_1.Base {
             });
         }
         if (obj["userManagment"] != undefined) {
-            if (obj._class) {
-                this["userManagment"] = new Index[obj._class](obj["userManagment"]);
+            if (obj["userManagment"]._class) {
+                this["userManagment"] = new Index[obj["userManagment"]._class](obj["userManagment"]);
             }
             else {
                 this["userManagment"] = new Index["oidc_clientUserManagment"](obj["userManagment"]);
