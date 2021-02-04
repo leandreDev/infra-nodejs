@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_service_access = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
 const utils_1 = require("utils");
@@ -25,8 +26,8 @@ class Model_service_access extends utils_1.Base {
             }
         }
         if (obj["httAccess"] != undefined) {
-            if (obj._class) {
-                this["httAccess"] = new Index[obj._class](obj["httAccess"]);
+            if (obj["httAccess"]._class) {
+                this["httAccess"] = new Index[obj["httAccess"]._class](obj["httAccess"]);
             }
             else {
                 this["httAccess"] = new Index["url_role"](obj["httAccess"]);

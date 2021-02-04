@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_number = void 0;
 const Model_field_1 = require("./Model_field");
 /**
   ce champ représente les valeurs numériques

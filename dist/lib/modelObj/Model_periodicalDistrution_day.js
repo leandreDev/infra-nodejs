@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_periodicalDistrution_day = void 0;
 const Model_periodicalDistrution_1 = require("./Model_periodicalDistrution");
 /**
   journée autorisé

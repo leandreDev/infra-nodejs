@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_application_configuration_super_admin_mongo = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
 const Model_application_configuration_1 = require("./Model_application_configuration");

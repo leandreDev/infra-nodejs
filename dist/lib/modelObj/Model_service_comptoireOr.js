@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_service_comptoireOr = void 0;
 const _ = require("lodash");
 const Model_service_1 = require("./Model_service");
 /**
@@ -49,6 +50,23 @@ class Model_service_comptoireOr extends Model_service_1.Model_service {
             }
             else if (obj["adminAppId"]._id) {
                 this["adminAppId"] = obj["adminAppId"]._id;
+            }
+        }
+        if (obj["sendgridApiUrl"] != undefined) {
+            this["sendgridApiUrl"] = obj["sendgridApiUrl"].toString();
+        }
+        if (obj["senderName"] != undefined) {
+            this["senderName"] = obj["senderName"].toString();
+        }
+        if (obj["senderEmail"] != undefined) {
+            this["senderEmail"] = obj["senderEmail"].toString();
+        }
+        if (obj["transactionEmailTemplate"] != undefined) {
+            if (_.isString(obj["transactionEmailTemplate"])) {
+                this["transactionEmailTemplate"] = obj["transactionEmailTemplate"];
+            }
+            else if (obj["transactionEmailTemplate"]._id) {
+                this["transactionEmailTemplate"] = obj["transactionEmailTemplate"]._id;
             }
         }
     }

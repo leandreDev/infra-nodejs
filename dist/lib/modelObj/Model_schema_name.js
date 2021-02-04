@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_schema_name = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
 const utils_1 = require("utils");
@@ -41,8 +42,8 @@ class Model_schema_name extends utils_1.Base {
             });
         }
         if (obj["listParameter"] != undefined) {
-            if (obj._class) {
-                this["listParameter"] = new Index[obj._class](obj["listParameter"]);
+            if (obj["listParameter"]._class) {
+                this["listParameter"] = new Index[obj["listParameter"]._class](obj["listParameter"]);
             }
             else {
                 this["listParameter"] = new Index["dataTableInit"](obj["listParameter"]);

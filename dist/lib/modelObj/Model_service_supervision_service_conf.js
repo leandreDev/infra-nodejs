@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_service_supervision_service_conf = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
 const utils_1 = require("utils");
@@ -33,8 +34,8 @@ class Model_service_supervision_service_conf extends utils_1.Base {
             });
         }
         if (obj["options"] != undefined) {
-            if (obj._class) {
-                this["options"] = new Index[obj._class](obj["options"]);
+            if (obj["options"]._class) {
+                this["options"] = new Index[obj["options"]._class](obj["options"]);
             }
             else {
                 this["options"] = new Index["node_fork_option"](obj["options"]);

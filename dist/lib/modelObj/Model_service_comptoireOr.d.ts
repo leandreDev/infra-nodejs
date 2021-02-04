@@ -41,4 +41,20 @@ adminLicenceStoreId
 id de l'app adminApp
 */
     "adminAppId"?: string;
+    /**
+url de l api send grid
+*/
+    "sendgridApiUrl"?: string;
+    /**
+nom de l emeteur
+*/
+    "senderName"?: string;
+    /**
+email de l'emeteur
+*/
+    "senderEmail"?: string;
+    /**
+template du mail envoyé lors d une transaction
+*/
+    "transactionEmailTemplate"?: string;
 }

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_application_configuration_appCoach = void 0;
 const Model_application_configuration_1 = require("./Model_application_configuration");
 /**
   c'est la configuration d'une application Coach

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_passport_strategie_saml = void 0;
 const Model_passport_strategie_1 = require("./Model_passport_strategie");
 /**
   strategie saml pour passport (https://github.com/bergie/passport-saml)

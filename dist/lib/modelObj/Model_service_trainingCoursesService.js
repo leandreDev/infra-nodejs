@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_service_trainingCoursesService = void 0;
 const Model_service_1 = require("./Model_service");
 /**
   service de gestion des parcourts de formation

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_service_init = void 0;
 const Model_service_1 = require("./Model_service");
 /**
   service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)

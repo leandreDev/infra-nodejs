@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_service = void 0;
+const _ = require("lodash");
 const Index = require("./Index");
 const utils_1 = require("utils");
 /**
@@ -28,6 +30,10 @@ class Model_service extends utils_1.Base {
   clef secrète de signature inter service
   */
         this["secretKey"] = "$ENV.SECRET";
+        /**
+  ip to bind
+  */
+        this["bindIp"] = "0.0.0.0";
         if (obj["name"] != undefined) {
             this["name"] = obj["name"].toString();
         }
@@ -47,12 +53,33 @@ class Model_service extends utils_1.Base {
             this["secretKey"] = obj["secretKey"].toString();
         }
         if (obj["publicAccess"] != undefined) {
-            if (obj._class) {
-                this["publicAccess"] = new Index[obj._class](obj["publicAccess"]);
+            if (obj["publicAccess"]._class) {
+                this["publicAccess"] = new Index[obj["publicAccess"]._class](obj["publicAccess"]);
             }
             else {
                 this["publicAccess"] = new Index["url_role"](obj["publicAccess"]);
             }
+        }
+        if (obj["bindIp"] != undefined) {
+            this["bindIp"] = obj["bindIp"].toString();
+        }
+        if (obj["headers"] != undefined && obj["headers"] != null && _.isArray(obj["headers"])) {
+            this["headers"] = obj["headers"].map((value) => {
+                if (value._class) {
+                    return new Index[value._class](value);
+                }
+                else {
+                    return new Index["name_value"](value);
+                }
+            });
+        }
+        if (obj["accessControlAllowOrigin"] != undefined && obj["accessControlAllowOrigin"] != null && _.isArray(obj["accessControlAllowOrigin"])) {
+            this["accessControlAllowOrigin"] = obj["accessControlAllowOrigin"].map((value) => {
+                return value.toString();
+            });
+        }
+        if (obj["confServiceUrl"] != undefined) {
+            this["confServiceUrl"] = obj["confServiceUrl"].toString();
         }
     }
 }

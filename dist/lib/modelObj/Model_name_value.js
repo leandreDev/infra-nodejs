@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_name_value = void 0;
 const utils_1 = require("utils");
 /**
   paire clef valeur

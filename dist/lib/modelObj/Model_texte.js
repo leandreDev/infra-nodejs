@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_texte = void 0;
 const _ = require("lodash");
 const Model_string_1 = require("./Model_string");
 /**

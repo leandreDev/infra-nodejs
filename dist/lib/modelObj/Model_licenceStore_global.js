@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_licenceStore_global = void 0;
 const Model_licenceStore_1 = require("./Model_licenceStore");
 /**
   licence store dont les applications sont le catalogue du client

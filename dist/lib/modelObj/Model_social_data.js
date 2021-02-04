@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_social_data = void 0;
 const utils_1 = require("utils");
 /**
   donnée des connecteur sociaux

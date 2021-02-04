@@ -1,5 +1,6 @@
-import { UtilsSecu, CtxInterpretor, IHttpResult, HttpServiceBase, HttpServiceAdminBase, HttpAbstractService, MiddleWareConfig } from "utils";
+import { UtilsSecu, CtxInterpretor, IHttpResult, HttpServiceBase, HttpServiceAdminBase, HttpAbstractService } from "utils";
 import * as Interfaces from "../../lib/modelObj/Interfaces";
+import { IPlateforme } from './IPlateforme';
 export declare class api_collection_plateform {
     constructor(conf: any);
     protected url: string;
@@ -223,13 +224,27 @@ export declare class api_collection_plateform {
      
         Iapplication_configuration_comptoire_or_admin      cond des comptoire de l'or admin
      
-        IAppConf_minds_up      config de l'app minds up
-     
         Iapplication_configuration_celiofront      configuration de l appli celio front
      
         Iapplication_configuration_celioback      configuration de l appli celio back
      
         Iapplication_configuration_celioadmin      configuration de l appli celio admin
+     
+        Iapplication_configuration_ferrand      la conf ferrand
+     
+        Iapplication_configuration_celio      configuration générale application celio
+     
+        IAppConf_minds_up      config de l'app minds up
+     
+        Iapplication_configuration_petit_moulin      conf petit_moulin
+     
+        Iapplication_configuration_qbp      config qbp
+     
+        Iapplication_configuration_petit_moulin_admin      conf petit_moulin_admin
+     
+        Iapplication_configuration_qbp_admin_seller      config qbp admin
+     
+        Iapplication_configuration_qbp_admin      config qbp admin
      
      
     */
@@ -313,13 +328,6 @@ export declare class api_collection_plateform {
     application_configuration_comptoire_or_admin: HttpServiceBase<Interfaces.Iapplication_configuration_comptoire_or_admin>;
     admin_application_configuration_comptoire_or_admin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_comptoire_or_admin>;
     /**
-    service d'accès a la sous-collection :AppConf_minds_up
-    desc: config de l'app minds up
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    AppConf_minds_up: HttpServiceBase<Interfaces.IAppConf_minds_up>;
-    admin_AppConf_minds_up: HttpServiceAdminBase<Interfaces.IAppConf_minds_up>;
-    /**
     service d'accès a la sous-collection :application_configuration_celiofront
     desc: configuration de l appli celio front
     info: vous ne pouvez voir que ce type d'objet
@@ -340,6 +348,62 @@ export declare class api_collection_plateform {
    */
     application_configuration_celioadmin: HttpServiceBase<Interfaces.Iapplication_configuration_celioadmin>;
     admin_application_configuration_celioadmin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_celioadmin>;
+    /**
+    service d'accès a la sous-collection :application_configuration_ferrand
+    desc: la conf ferrand
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_ferrand: HttpServiceBase<Interfaces.Iapplication_configuration_ferrand>;
+    admin_application_configuration_ferrand: HttpServiceAdminBase<Interfaces.Iapplication_configuration_ferrand>;
+    /**
+    service d'accès a la sous-collection :application_configuration_celio
+    desc: configuration générale application celio
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_celio: HttpServiceBase<Interfaces.Iapplication_configuration_celio>;
+    admin_application_configuration_celio: HttpServiceAdminBase<Interfaces.Iapplication_configuration_celio>;
+    /**
+    service d'accès a la sous-collection :AppConf_minds_up
+    desc: config de l'app minds up
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    AppConf_minds_up: HttpServiceBase<Interfaces.IAppConf_minds_up>;
+    admin_AppConf_minds_up: HttpServiceAdminBase<Interfaces.IAppConf_minds_up>;
+    /**
+    service d'accès a la sous-collection :application_configuration_petit_moulin
+    desc: conf petit_moulin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_petit_moulin: HttpServiceBase<Interfaces.Iapplication_configuration_petit_moulin>;
+    admin_application_configuration_petit_moulin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_petit_moulin>;
+    /**
+    service d'accès a la sous-collection :application_configuration_qbp
+    desc: config qbp
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_qbp: HttpServiceBase<Interfaces.Iapplication_configuration_qbp>;
+    admin_application_configuration_qbp: HttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp>;
+    /**
+    service d'accès a la sous-collection :application_configuration_petit_moulin_admin
+    desc: conf petit_moulin_admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_petit_moulin_admin: HttpServiceBase<Interfaces.Iapplication_configuration_petit_moulin_admin>;
+    admin_application_configuration_petit_moulin_admin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_petit_moulin_admin>;
+    /**
+    service d'accès a la sous-collection :application_configuration_qbp_admin_seller
+    desc: config qbp admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_qbp_admin_seller: HttpServiceBase<Interfaces.Iapplication_configuration_qbp_admin_seller>;
+    admin_application_configuration_qbp_admin_seller: HttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp_admin_seller>;
+    /**
+    service d'accès a la sous-collection :application_configuration_qbp_admin
+    desc: config qbp admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_qbp_admin: HttpServiceBase<Interfaces.Iapplication_configuration_qbp_admin>;
+    admin_application_configuration_qbp_admin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp_admin>;
     /**
      service d'accès à la collection :application_instance
      desc: c'est le couple application configuration
@@ -365,8 +429,6 @@ export declare class api_collection_plateform {
         Iservice_licence_token      c'est un service en charge de valider les licences et retourner les configurations des applications web
      
         Iservice_goshabaGateway      passerelle pour goshaba
-     
-        Iservice_mongo      configure un service mongo
      
         Iservice_socketIo      communication temps réelle multi format
      
@@ -414,13 +476,33 @@ export declare class api_collection_plateform {
      
         Iservice_signin      service d'enregistrement
      
-        Iservice_comptoireOr      service_comptoireOr
-     
         Iservice_mindsUp      service minds up metier
      
-        Iservice_celio2020      service celio 2020
-     
         Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
+     
+        Iswagger_conv      convertisseur de swagger
+     
+        Iservice_mongo      configure un service mongo
+     
+        Iservice_celio_qcm_admin      service celio qcm admin
+     
+        Iservice_ferrand      service ferrand
+     
+        Iservice_petit_moulin      service petit moulin
+     
+        Iservice_celio_fid      service celio fid
+     
+        Iservice_celio_qcm      service celio qcm
+     
+        Iservice_comptoireOr      service_comptoireOr
+     
+        Iservice_celio_back_task      service celio back_task
+     
+        Iservice_celio_fid_admin      service celio fid admin
+     
+        Iservice_airport      service airport
+     
+        IQBP_service      service métier de QBP
      
      
     */
@@ -461,13 +543,6 @@ export declare class api_collection_plateform {
    */
     service_goshabaGateway: HttpServiceBase<Interfaces.Iservice_goshabaGateway>;
     admin_service_goshabaGateway: HttpServiceAdminBase<Interfaces.Iservice_goshabaGateway>;
-    /**
-    service d'accès a la sous-collection :service_mongo
-    desc: configure un service mongo
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_mongo: HttpServiceBase<Interfaces.Iservice_mongo>;
-    admin_service_mongo: HttpServiceAdminBase<Interfaces.Iservice_mongo>;
     /**
     service d'accès a la sous-collection :service_socketIo
     desc: communication temps réelle multi format
@@ -630,13 +705,6 @@ export declare class api_collection_plateform {
     service_signin: HttpServiceBase<Interfaces.Iservice_signin>;
     admin_service_signin: HttpServiceAdminBase<Interfaces.Iservice_signin>;
     /**
-    service d'accès a la sous-collection :service_comptoireOr
-    desc: service_comptoireOr
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_comptoireOr: HttpServiceBase<Interfaces.Iservice_comptoireOr>;
-    admin_service_comptoireOr: HttpServiceAdminBase<Interfaces.Iservice_comptoireOr>;
-    /**
     service d'accès a la sous-collection :service_mindsUp
     desc: service minds up metier
     info: vous ne pouvez voir que ce type d'objet
@@ -644,19 +712,96 @@ export declare class api_collection_plateform {
     service_mindsUp: HttpServiceBase<Interfaces.Iservice_mindsUp>;
     admin_service_mindsUp: HttpServiceAdminBase<Interfaces.Iservice_mindsUp>;
     /**
-    service d'accès a la sous-collection :service_celio2020
-    desc: service celio 2020
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_celio2020: HttpServiceBase<Interfaces.Iservice_celio2020>;
-    admin_service_celio2020: HttpServiceAdminBase<Interfaces.Iservice_celio2020>;
-    /**
     service d'accès a la sous-collection :service_webAppConf
     desc: permet de générer les fichier de conf des app (css, js, ...)
     info: vous ne pouvez voir que ce type d'objet
    */
     service_webAppConf: HttpServiceBase<Interfaces.Iservice_webAppConf>;
     admin_service_webAppConf: HttpServiceAdminBase<Interfaces.Iservice_webAppConf>;
+    /**
+    service d'accès a la sous-collection :swagger_conv
+    desc: convertisseur de swagger
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    swagger_conv: HttpServiceBase<Interfaces.Iswagger_conv>;
+    admin_swagger_conv: HttpServiceAdminBase<Interfaces.Iswagger_conv>;
+    /**
+    service d'accès a la sous-collection :service_mongo
+    desc: configure un service mongo
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_mongo: HttpServiceBase<Interfaces.Iservice_mongo>;
+    admin_service_mongo: HttpServiceAdminBase<Interfaces.Iservice_mongo>;
+    /**
+    service d'accès a la sous-collection :service_celio_qcm_admin
+    desc: service celio qcm admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_celio_qcm_admin: HttpServiceBase<Interfaces.Iservice_celio_qcm_admin>;
+    admin_service_celio_qcm_admin: HttpServiceAdminBase<Interfaces.Iservice_celio_qcm_admin>;
+    /**
+    service d'accès a la sous-collection :service_ferrand
+    desc: service ferrand
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_ferrand: HttpServiceBase<Interfaces.Iservice_ferrand>;
+    admin_service_ferrand: HttpServiceAdminBase<Interfaces.Iservice_ferrand>;
+    /**
+    service d'accès a la sous-collection :service_petit_moulin
+    desc: service petit moulin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_petit_moulin: HttpServiceBase<Interfaces.Iservice_petit_moulin>;
+    admin_service_petit_moulin: HttpServiceAdminBase<Interfaces.Iservice_petit_moulin>;
+    /**
+    service d'accès a la sous-collection :service_celio_fid
+    desc: service celio fid
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_celio_fid: HttpServiceBase<Interfaces.Iservice_celio_fid>;
+    admin_service_celio_fid: HttpServiceAdminBase<Interfaces.Iservice_celio_fid>;
+    /**
+    service d'accès a la sous-collection :service_celio_qcm
+    desc: service celio qcm
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_celio_qcm: HttpServiceBase<Interfaces.Iservice_celio_qcm>;
+    admin_service_celio_qcm: HttpServiceAdminBase<Interfaces.Iservice_celio_qcm>;
+    /**
+    service d'accès a la sous-collection :service_comptoireOr
+    desc: service_comptoireOr
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_comptoireOr: HttpServiceBase<Interfaces.Iservice_comptoireOr>;
+    admin_service_comptoireOr: HttpServiceAdminBase<Interfaces.Iservice_comptoireOr>;
+    /**
+    service d'accès a la sous-collection :service_celio_back_task
+    desc: service celio back_task
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_celio_back_task: HttpServiceBase<Interfaces.Iservice_celio_back_task>;
+    admin_service_celio_back_task: HttpServiceAdminBase<Interfaces.Iservice_celio_back_task>;
+    /**
+    service d'accès a la sous-collection :service_celio_fid_admin
+    desc: service celio fid admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_celio_fid_admin: HttpServiceBase<Interfaces.Iservice_celio_fid_admin>;
+    admin_service_celio_fid_admin: HttpServiceAdminBase<Interfaces.Iservice_celio_fid_admin>;
+    /**
+    service d'accès a la sous-collection :service_airport
+    desc: service airport
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_airport: HttpServiceBase<Interfaces.Iservice_airport>;
+    admin_service_airport: HttpServiceAdminBase<Interfaces.Iservice_airport>;
+    /**
+    service d'accès a la sous-collection :QBP_service
+    desc: service métier de QBP
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    QBP_service: HttpServiceBase<Interfaces.IQBP_service>;
+    admin_QBP_service: HttpServiceAdminBase<Interfaces.IQBP_service>;
 }
 /**
     accès à la vue :Client
@@ -676,11 +821,6 @@ export declare class api_view_Client extends HttpAbstractService {
     
     */
     get(query?: string, headers?: any): Promise<IHttpResult<Interfaces.Iend_client>>;
-    /** middleware
-    génére une requette sur la vue Client
-    
-    */
-    getMiddleware: (config: MiddleWareConfig) => (req: any, res: any, next: any) => void;
 }
 /**
     accès à la vue :UserLicence
@@ -700,11 +840,6 @@ export declare class api_view_UserLicence extends HttpAbstractService {
     
     */
     get(userId: string, query?: string, headers?: any): Promise<IHttpResult<Interfaces.Ilicence>>;
-    /** middleware
-    génére une requette sur la vue UserLicence
-    
-    */
-    getMiddleware: (config: MiddleWareConfig) => (req: any, res: any, next: any) => void;
 }
 export declare class api_view_plateform {
     conf: any;
@@ -718,7 +853,7 @@ export declare class api_view_plateform {
     */
     UserLicence: api_view_UserLicence;
 }
-export declare class Api_plateforme {
+export declare class Api_plateforme implements IPlateforme {
     conf: any;
     constructor(conf: any);
     /**

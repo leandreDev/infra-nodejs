@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_licence_temporelle = void 0;
 const Model_licence_1 = require("./Model_licence");
 /**
   c'est une licence qui dure un certain temps

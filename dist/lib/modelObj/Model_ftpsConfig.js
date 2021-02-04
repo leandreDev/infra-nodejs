@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_ftpsConfig = void 0;
 const Index = require("./Index");
 const utils_1 = require("utils");
 /**
@@ -28,8 +29,8 @@ class Model_ftpsConfig extends utils_1.Base {
             this["password"] = obj["password"].toString();
         }
         if (obj["newFileHook"] != undefined) {
-            if (obj._class) {
-                this["newFileHook"] = new Index[obj._class](obj["newFileHook"]);
+            if (obj["newFileHook"]._class) {
+                this["newFileHook"] = new Index[obj["newFileHook"]._class](obj["newFileHook"]);
             }
             else {
                 this["newFileHook"] = new Index["Request"](obj["newFileHook"]);

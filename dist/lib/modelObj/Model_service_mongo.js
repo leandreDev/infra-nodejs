@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_service_mongo = void 0;
 const Model_service_1 = require("./Model_service");
 /**
   configure un service mongo
@@ -11,18 +12,11 @@ class Model_service_mongo extends Model_service_1.Model_service {
     constructor(obj = {}) {
         super(obj);
         this._class = "service_mongo";
-        /**
-  clef secrète de communication interne a l'infra
-  */
-        this["secretKey"] = "$$ENV.SECRET";
         if (obj["mongoosePath"] != undefined) {
             this["mongoosePath"] = obj["mongoosePath"].toString();
         }
         if (obj["mongoAuthSource"] != undefined) {
             this["mongoAuthSource"] = obj["mongoAuthSource"].toString();
-        }
-        if (obj["secretKey"] != undefined) {
-            this["secretKey"] = obj["secretKey"].toString();
         }
     }
 }

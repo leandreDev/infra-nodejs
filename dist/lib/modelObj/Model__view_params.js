@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model__view_params = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
 const Model__view_1 = require("./Model__view");

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model_passport_strategie_twitter = void 0;
 const Model_passport_strategie_1 = require("./Model_passport_strategie");
 /**
   Passport strategy for authenticating with Twitter using the OAuth 1.0a API. (https://github.com/jaredhanson/passport-twitter)

@@ -17,8 +17,4 @@ l'url de connection a mongodb
 le nom de la base sur laquelle la connexion doit s'établir. Cela permet de pouvoir créer des bases automatiquements
 */
     "mongoAuthSource"?: string;
-    /**
-clef secrète de communication interne a l'infra
-*/
-    "secretKey"?: string;
 }
