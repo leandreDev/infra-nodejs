@@ -85,10 +85,10 @@ class api_collection_plateform {
         this.admin_AppConf_minds_up = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/AppConf_minds_up/", secure: conf.secure });
         this.application_configuration_petit_moulin = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_petit_moulin/", secure: conf.secure });
         this.admin_application_configuration_petit_moulin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_petit_moulin/", secure: conf.secure });
-        this.application_configuration_qbp = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_qbp/", secure: conf.secure });
-        this.admin_application_configuration_qbp = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_qbp/", secure: conf.secure });
         this.application_configuration_petit_moulin_admin = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_petit_moulin_admin/", secure: conf.secure });
         this.admin_application_configuration_petit_moulin_admin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_petit_moulin_admin/", secure: conf.secure });
+        this.application_configuration_qbp = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_qbp/", secure: conf.secure });
+        this.admin_application_configuration_qbp = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_qbp/", secure: conf.secure });
         this.application_configuration_qbp_admin_seller = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_qbp_admin_seller/", secure: conf.secure });
         this.admin_application_configuration_qbp_admin_seller = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_qbp_admin_seller/", secure: conf.secure });
         this.application_configuration_qbp_admin = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_qbp_admin/", secure: conf.secure });

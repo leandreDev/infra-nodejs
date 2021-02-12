@@ -33,6 +33,9 @@ class Model_service_licence_token extends Model_service_1.Model_service {
                 else if (value._id) {
                     return value._id;
                 }
+                else if (value._bsontype && value._bsontype === 'ObjectID') {
+                    return `${value}`;
+                }
             });
         }
         if (obj["end_clientUrl"] != undefined) {

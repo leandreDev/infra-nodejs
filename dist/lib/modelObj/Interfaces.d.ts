@@ -3438,12 +3438,6 @@ export interface Iservice_celio_qcm extends Iservice {
     "caPath"?: string;
 }
 /**
-interface de la class application_configuration_qbp
-description config qbp
-*/
-export interface Iapplication_configuration_qbp extends Iapplication_configuration {
-}
-/**
 interface de la class service_comptoireOr
 description service_comptoireOr
 */
@@ -3718,26 +3712,6 @@ export interface Iservice_airport extends Iservice {
     "bddUrl"?: string;
 }
 /**
-interface de la class application_configuration_qbp_admin_seller
-description config qbp admin
-*/
-export interface Iapplication_configuration_qbp_admin_seller extends Iapplication_configuration {
-    /**
-     *url de la bdd
-     */
-    "bddUrl"?: string;
-}
-/**
-interface de la class application_configuration_qbp_admin
-description config qbp admin
-*/
-export interface Iapplication_configuration_qbp_admin extends Iapplication_configuration {
-    /**
-     *url de la bdd
-     */
-    "bddUrl"?: string;
-}
-/**
 interface de la class QBP_service
 description service métier de QBP
 */
@@ -3814,4 +3788,58 @@ export interface IQBP_service extends Iservice {
      *template de l application instance du vendeur
      */
     "sellerAppInstanceTemplate"?: string;
+}
+/**
+interface de la class application_configuration_qbp
+description config qbp
+*/
+export interface Iapplication_configuration_qbp extends Iapplication_configuration {
+    /**
+     *url du service client de qbp
+     */
+    "qbpCustomerApi"?: string;
+    /**
+     *url de lapi de bdd qbp
+     */
+    "qbpBddUrl"?: string;
+    /**
+     *url du service fso qbp
+     */
+    "qbpFsoUrl"?: string;
+}
+/**
+interface de la class application_configuration_qbp_admin_seller
+description config qbp admin
+*/
+export interface Iapplication_configuration_qbp_admin_seller extends Iapplication_configuration {
+    /**
+     *url du service seller
+     */
+    "qbpSellerApi"?: string;
+    /**
+     *qbpBddUrl
+     */
+    "qbpBddUrl"?: string;
+    /**
+     *url du service de fso
+     */
+    "qbpFsoUrl"?: string;
+}
+/**
+interface de la class application_configuration_qbp_admin
+description config qbp admin
+*/
+export interface Iapplication_configuration_qbp_admin extends Iapplication_configuration {
+    /**
+     *url de la bdd
+     */
+    "qbpBddUrl"?: string;
+    /**
+     *url du service qbp
+     */
+    "qbpAdminService"?: string;
+    /**
+     *url du service fso
+     */
+    "qbpFsoUrl"?: string;
 }

@@ -13,11 +13,41 @@ class Entity_application_configuration_qbp_admin_seller extends application_conf
             return;
         }
         application_configuration_1.Entity_application_configuration.cast(obj, true);
-        if (obj["bddUrl"] != undefined) {
-            obj["bddUrl"] = obj["bddUrl"].toString();
+        if (obj["qbpSellerApi"] != undefined) {
+            obj["qbpSellerApi"] = obj["qbpSellerApi"].toString();
+        }
+        if (obj["qbpBddUrl"] != undefined) {
+            obj["qbpBddUrl"] = obj["qbpBddUrl"].toString();
+        }
+        if (obj["qbpFsoUrl"] != undefined) {
+            obj["qbpFsoUrl"] = obj["qbpFsoUrl"].toString();
         }
     }
-    static checkbddUrl(val, path = null) {
+    static checkqbpSellerApi(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkqbpBddUrl(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkqbpFsoUrl(val, path = null) {
         if (val == null) {
             return null;
         }
@@ -33,8 +63,20 @@ class Entity_application_configuration_qbp_admin_seller extends application_conf
         var err = [];
         let res;
         err = application_configuration_1.Entity_application_configuration.check(target, isCompleteObj, path);
-        if (target.bddUrl != null && target.bddUrl != undefined) {
-            res = Entity_application_configuration_qbp_admin_seller.checkbddUrl(target.bddUrl, `${path}.bddUrl`);
+        if (target.qbpSellerApi != null && target.qbpSellerApi != undefined) {
+            res = Entity_application_configuration_qbp_admin_seller.checkqbpSellerApi(target.qbpSellerApi, `${path}.qbpSellerApi`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.qbpBddUrl != null && target.qbpBddUrl != undefined) {
+            res = Entity_application_configuration_qbp_admin_seller.checkqbpBddUrl(target.qbpBddUrl, `${path}.qbpBddUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.qbpFsoUrl != null && target.qbpFsoUrl != undefined) {
+            res = Entity_application_configuration_qbp_admin_seller.checkqbpFsoUrl(target.qbpFsoUrl, `${path}.qbpFsoUrl`);
             if (res && res.length > 0) {
                 err = [...err, ...res];
             }
@@ -62,7 +104,15 @@ class Entity_application_configuration_qbp_admin_seller extends application_conf
             throw new Error(`key path is empty for ${path} ${value}`);
         }
         switch (key) {
-            case 'bddUrl':
+            case 'qbpSellerApi':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'qbpBddUrl':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'qbpFsoUrl':
                 //string
                 return new String(value).valueOf();
                 break;
@@ -89,7 +139,11 @@ class Entity_application_configuration_qbp_admin_seller extends application_conf
             throw new Error(`key path is empty for ${path}`);
         }
         switch (key) {
-            case 'bddUrl':
+            case 'qbpSellerApi':
+                return null;
+            case 'qbpBddUrl':
+                return null;
+            case 'qbpFsoUrl':
                 return null;
             default:
                 return application_configuration_1.Entity_application_configuration.getClassNameOfProp(key);

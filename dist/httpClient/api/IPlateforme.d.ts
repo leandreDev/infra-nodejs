@@ -110,10 +110,10 @@ export interface IPlateforme {
         admin_AppConf_minds_up: IHttpServiceAdminBase<Interfaces.IAppConf_minds_up>;
         application_configuration_petit_moulin: IHttpServiceBase<Interfaces.Iapplication_configuration_petit_moulin>;
         admin_application_configuration_petit_moulin: IHttpServiceAdminBase<Interfaces.Iapplication_configuration_petit_moulin>;
-        application_configuration_qbp: IHttpServiceBase<Interfaces.Iapplication_configuration_qbp>;
-        admin_application_configuration_qbp: IHttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp>;
         application_configuration_petit_moulin_admin: IHttpServiceBase<Interfaces.Iapplication_configuration_petit_moulin_admin>;
         admin_application_configuration_petit_moulin_admin: IHttpServiceAdminBase<Interfaces.Iapplication_configuration_petit_moulin_admin>;
+        application_configuration_qbp: IHttpServiceBase<Interfaces.Iapplication_configuration_qbp>;
+        admin_application_configuration_qbp: IHttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp>;
         application_configuration_qbp_admin_seller: IHttpServiceBase<Interfaces.Iapplication_configuration_qbp_admin_seller>;
         admin_application_configuration_qbp_admin_seller: IHttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp_admin_seller>;
         application_configuration_qbp_admin: IHttpServiceBase<Interfaces.Iapplication_configuration_qbp_admin>;

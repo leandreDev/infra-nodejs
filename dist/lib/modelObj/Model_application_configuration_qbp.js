@@ -12,6 +12,15 @@ class Model_application_configuration_qbp extends Model_application_configuratio
     constructor(obj = {}) {
         super(obj);
         this._class = "application_configuration_qbp";
+        if (obj["qbpCustomerApi"] != undefined) {
+            this["qbpCustomerApi"] = obj["qbpCustomerApi"].toString();
+        }
+        if (obj["qbpBddUrl"] != undefined) {
+            this["qbpBddUrl"] = obj["qbpBddUrl"].toString();
+        }
+        if (obj["qbpFsoUrl"] != undefined) {
+            this["qbpFsoUrl"] = obj["qbpFsoUrl"].toString();
+        }
     }
 }
 exports.Model_application_configuration_qbp = Model_application_configuration_qbp;

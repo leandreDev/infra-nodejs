@@ -13,11 +13,74 @@ class Entity_application_configuration_qbp extends application_configuration_1.E
             return;
         }
         application_configuration_1.Entity_application_configuration.cast(obj, true);
+        if (obj["qbpCustomerApi"] != undefined) {
+            obj["qbpCustomerApi"] = obj["qbpCustomerApi"].toString();
+        }
+        if (obj["qbpBddUrl"] != undefined) {
+            obj["qbpBddUrl"] = obj["qbpBddUrl"].toString();
+        }
+        if (obj["qbpFsoUrl"] != undefined) {
+            obj["qbpFsoUrl"] = obj["qbpFsoUrl"].toString();
+        }
+    }
+    static checkqbpCustomerApi(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkqbpBddUrl(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkqbpFsoUrl(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
     }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
         err = application_configuration_1.Entity_application_configuration.check(target, isCompleteObj, path);
+        if (target.qbpCustomerApi != null && target.qbpCustomerApi != undefined) {
+            res = Entity_application_configuration_qbp.checkqbpCustomerApi(target.qbpCustomerApi, `${path}.qbpCustomerApi`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.qbpBddUrl != null && target.qbpBddUrl != undefined) {
+            res = Entity_application_configuration_qbp.checkqbpBddUrl(target.qbpBddUrl, `${path}.qbpBddUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.qbpFsoUrl != null && target.qbpFsoUrl != undefined) {
+            res = Entity_application_configuration_qbp.checkqbpFsoUrl(target.qbpFsoUrl, `${path}.qbpFsoUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
         return err;
     }
     static castQueryParam(path, value) {
@@ -41,6 +104,18 @@ class Entity_application_configuration_qbp extends application_configuration_1.E
             throw new Error(`key path is empty for ${path} ${value}`);
         }
         switch (key) {
+            case 'qbpCustomerApi':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'qbpBddUrl':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'qbpFsoUrl':
+                //string
+                return new String(value).valueOf();
+                break;
             default:
                 return application_configuration_1.Entity_application_configuration.castQueryParam(key, value);
                 break;
@@ -64,6 +139,12 @@ class Entity_application_configuration_qbp extends application_configuration_1.E
             throw new Error(`key path is empty for ${path}`);
         }
         switch (key) {
+            case 'qbpCustomerApi':
+                return null;
+            case 'qbpBddUrl':
+                return null;
+            case 'qbpFsoUrl':
+                return null;
             default:
                 return application_configuration_1.Entity_application_configuration.getClassNameOfProp(key);
                 break;

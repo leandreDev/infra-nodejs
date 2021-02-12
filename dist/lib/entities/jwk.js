@@ -209,8 +209,8 @@ class Entity_jwk extends utils_1.Entity {
                 err = [...err, ...res];
             }
         }
-        if (target['x5t#S256'] != null && target['x5t#S256'] != undefined) {
-            res = Entity_jwk['checkx5t#S256'](target['x5t#S256'], `${path}.x5t#S256`);
+        if (target["x5t#S256"] != null && target["x5t#S256"] != undefined) {
+            res = Entity_jwk["checkx5t#S256"](target["x5t#S256"], `${path}.x5t#S256`);
             if (res && res.length > 0) {
                 err = [...err, ...res];
             }

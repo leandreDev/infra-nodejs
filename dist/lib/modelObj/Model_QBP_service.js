@@ -54,13 +54,23 @@ class Model_QBP_service extends Model_service_1.Model_service {
             this["client_secret"] = obj["client_secret"].toString();
         }
         if (obj["sellerAppId"] != undefined) {
-            this["sellerAppId"] = obj["sellerAppId"].toString();
+            if (_.isString(obj["sellerAppId"])) {
+                this["sellerAppId"] = obj["sellerAppId"];
+            }
+            else if (obj["sellerAppId"]._id) {
+                this["sellerAppId"] = obj["sellerAppId"]._id;
+            }
         }
         if (obj["sellerLicenceStoreId"] != undefined) {
             this["sellerLicenceStoreId"] = obj["sellerLicenceStoreId"].toString();
         }
         if (obj["adminAppId"] != undefined) {
-            this["adminAppId"] = obj["adminAppId"].toString();
+            if (_.isString(obj["adminAppId"])) {
+                this["adminAppId"] = obj["adminAppId"];
+            }
+            else if (obj["adminAppId"]._id) {
+                this["adminAppId"] = obj["adminAppId"]._id;
+            }
         }
         if (obj["adminLicenceStoreId"] != undefined) {
             this["adminLicenceStoreId"] = obj["adminLicenceStoreId"].toString();
@@ -69,12 +79,7 @@ class Model_QBP_service extends Model_service_1.Model_service {
             this["infraBddUrl"] = obj["infraBddUrl"].toString();
         }
         if (obj["sellerSso_Client_template"] != undefined) {
-            if (_.isString(obj["sellerSso_Client_template"])) {
-                this["sellerSso_Client_template"] = obj["sellerSso_Client_template"];
-            }
-            else if (obj["sellerSso_Client_template"]._id) {
-                this["sellerSso_Client_template"] = obj["sellerSso_Client_template"]._id;
-            }
+            this["sellerSso_Client_template"] = obj["sellerSso_Client_template"].toString();
         }
         if (obj["sellerEndClientTemplate"] != undefined) {
             if (_.isString(obj["sellerEndClientTemplate"])) {

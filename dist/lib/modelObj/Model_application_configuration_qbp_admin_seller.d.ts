@@ -10,7 +10,15 @@ export declare class Model_application_configuration_qbp_admin_seller extends Mo
     constructor(obj?: any);
     _class: string;
     /**
-url de la bdd
+url du service seller
 */
-    "bddUrl"?: string;
+    "qbpSellerApi"?: string;
+    /**
+qbpBddUrl
+*/
+    "qbpBddUrl"?: string;
+    /**
+url du service de fso
+*/
+    "qbpFsoUrl"?: string;
 }

@@ -238,9 +238,9 @@ export declare class api_collection_plateform {
      
         Iapplication_configuration_petit_moulin      conf petit_moulin
      
-        Iapplication_configuration_qbp      config qbp
-     
         Iapplication_configuration_petit_moulin_admin      conf petit_moulin_admin
+     
+        Iapplication_configuration_qbp      config qbp
      
         Iapplication_configuration_qbp_admin_seller      config qbp admin
      
@@ -377,19 +377,19 @@ export declare class api_collection_plateform {
     application_configuration_petit_moulin: HttpServiceBase<Interfaces.Iapplication_configuration_petit_moulin>;
     admin_application_configuration_petit_moulin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_petit_moulin>;
     /**
-    service d'accès a la sous-collection :application_configuration_qbp
-    desc: config qbp
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    application_configuration_qbp: HttpServiceBase<Interfaces.Iapplication_configuration_qbp>;
-    admin_application_configuration_qbp: HttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp>;
-    /**
     service d'accès a la sous-collection :application_configuration_petit_moulin_admin
     desc: conf petit_moulin_admin
     info: vous ne pouvez voir que ce type d'objet
    */
     application_configuration_petit_moulin_admin: HttpServiceBase<Interfaces.Iapplication_configuration_petit_moulin_admin>;
     admin_application_configuration_petit_moulin_admin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_petit_moulin_admin>;
+    /**
+    service d'accès a la sous-collection :application_configuration_qbp
+    desc: config qbp
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    application_configuration_qbp: HttpServiceBase<Interfaces.Iapplication_configuration_qbp>;
+    admin_application_configuration_qbp: HttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp>;
     /**
     service d'accès a la sous-collection :application_configuration_qbp_admin_seller
     desc: config qbp admin
