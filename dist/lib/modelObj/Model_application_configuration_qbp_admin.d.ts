@@ -12,5 +12,13 @@ export declare class Model_application_configuration_qbp_admin extends Model_app
     /**
 url de la bdd
 */
-    "bddUrl"?: string;
+    "qbpBddUrl"?: string;
+    /**
+url du service qbp
+*/
+    "qbpAdminService"?: string;
+    /**
+url du service fso
+*/
+    "qbpFsoUrl"?: string;
 }

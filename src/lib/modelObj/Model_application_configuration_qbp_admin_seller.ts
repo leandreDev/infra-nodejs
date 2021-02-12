@@ -19,9 +19,25 @@ export class Model_application_configuration_qbp_admin_seller extends   Model_ap
     super(obj);
     
         
-        if(obj["bddUrl"] != undefined){
+        if(obj["qbpSellerApi"] != undefined){
           
-           this["bddUrl"] = obj["bddUrl"].toString() ;
+           this["qbpSellerApi"] = obj["qbpSellerApi"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpBddUrl"] != undefined){
+          
+           this["qbpBddUrl"] = obj["qbpBddUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpFsoUrl"] != undefined){
+          
+           this["qbpFsoUrl"] = obj["qbpFsoUrl"].toString() ;
            
         }
         
@@ -33,9 +49,21 @@ export class Model_application_configuration_qbp_admin_seller extends   Model_ap
 
         
               /**
-        url de la bdd
+        url du service seller
         */
-               public "bddUrl"?:string ;
+               public "qbpSellerApi"?:string ;
+              
+       
+              /**
+        qbpBddUrl
+        */
+               public "qbpBddUrl"?:string ;
+              
+       
+              /**
+        url du service de fso
+        */
+               public "qbpFsoUrl"?:string ;
               
        
 

@@ -25,9 +25,25 @@ export class Entity_application_configuration_qbp_admin extends   Entity_applica
     
     
         
-        if(obj["bddUrl"] != undefined){
+        if(obj["qbpBddUrl"] != undefined){
           
-           obj["bddUrl"] = obj["bddUrl"].toString() ;
+           obj["qbpBddUrl"] = obj["qbpBddUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpAdminService"] != undefined){
+          
+           obj["qbpAdminService"] = obj["qbpAdminService"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpFsoUrl"] != undefined){
+          
+           obj["qbpFsoUrl"] = obj["qbpFsoUrl"].toString() ;
            
         }
         
@@ -37,7 +53,61 @@ export class Entity_application_configuration_qbp_admin extends   Entity_applica
 
  
 
-public static checkbddUrl(val:any, path:string =null):string[]{
+public static checkqbpBddUrl(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkqbpAdminService(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkqbpFsoUrl(val:any, path:string =null):string[]{
          if(val == null){
             return null ;
          }
@@ -74,10 +144,44 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
 
               
 
-              if(target.bddUrl != null && target.bddUrl != undefined ){
+              if(target.qbpBddUrl != null && target.qbpBddUrl != undefined ){
                 
                 
-                res = Entity_application_configuration_qbp_admin.checkbddUrl(target.bddUrl , `${path}.bddUrl`) ;
+                res = Entity_application_configuration_qbp_admin.checkqbpBddUrl(target.qbpBddUrl , `${path}.qbpBddUrl`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.qbpAdminService != null && target.qbpAdminService != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp_admin.checkqbpAdminService(target.qbpAdminService , `${path}.qbpAdminService`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.qbpFsoUrl != null && target.qbpFsoUrl != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp_admin.checkqbpFsoUrl(target.qbpFsoUrl , `${path}.qbpFsoUrl`) ;
                 if(res && res.length > 0){
                   err = [...err , ...res] ;
                 }               
@@ -114,7 +218,33 @@ public static castQueryParam(path: string, value: any): any {
         }
         switch (key) {
           
-            case 'bddUrl':
+            case 'qbpBddUrl':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'qbpAdminService':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'qbpFsoUrl':
               //string
               
               
@@ -154,7 +284,23 @@ public static getClassNameOfProp(path:string):string{
         switch (key) {
           
       
-      case 'bddUrl':
+      case 'qbpBddUrl':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'qbpAdminService':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'qbpFsoUrl':
        
              return null ;
        

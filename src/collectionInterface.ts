@@ -1702,16 +1702,6 @@
    
 
     /**
-    interface de la class application_configuration_qbp 
-    description config qbp
-   */
-    export class application_configuration_qbp extends   Iapplication_configuration{
-        
-   }
-  
-   
-
-    /**
     interface de la class application_configuration_petit_moulin_admin 
     description conf petit_moulin_admin
    */
@@ -1743,16 +1733,61 @@
    
 
     /**
+    interface de la class application_configuration_qbp 
+    description config qbp
+   */
+    export class application_configuration_qbp extends   Iapplication_configuration{
+        
+              /**
+               *url du service client de qbp 
+               */
+              
+               "qbpCustomerApi"?:string;
+              
+       
+              /**
+               *url de lapi de bdd qbp 
+               */
+              
+               "qbpBddUrl"?:string;
+              
+       
+              /**
+               *url du service fso qbp 
+               */
+              
+               "qbpFsoUrl"?:string;
+              
+       
+   }
+  
+   
+
+    /**
     interface de la class application_configuration_qbp_admin_seller 
     description config qbp admin
    */
     export class application_configuration_qbp_admin_seller extends   Iapplication_configuration{
         
               /**
-               *url de la bdd 
+               *url du service seller 
                */
               
-               "bddUrl"?:string;
+               "qbpSellerApi"?:string;
+              
+       
+              /**
+               *qbpBddUrl 
+               */
+              
+               "qbpBddUrl"?:string;
+              
+       
+              /**
+               *url du service de fso 
+               */
+              
+               "qbpFsoUrl"?:string;
               
        
    }
@@ -1769,7 +1804,21 @@
                *url de la bdd 
                */
               
-               "bddUrl"?:string;
+               "qbpBddUrl"?:string;
+              
+       
+              /**
+               *url du service qbp 
+               */
+              
+               "qbpAdminService"?:string;
+              
+       
+              /**
+               *url du service fso 
+               */
+              
+               "qbpFsoUrl"?:string;
               
        
    }

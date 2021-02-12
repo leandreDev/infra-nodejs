@@ -40,6 +40,8 @@ export class Model_nginxConfigurationFileApp extends  Base  implements Interface
               return value ;
             }else if(value._id){
               return value._id ;
+            }else if(value._bsontype && value._bsontype === 'ObjectID'){
+                return `${value}` ;
             }
           })
           
@@ -55,6 +57,8 @@ export class Model_nginxConfigurationFileApp extends  Base  implements Interface
               return value ;
             }else if(value._id){
               return value._id ;
+            }else if(value._bsontype && value._bsontype === 'ObjectID'){
+                return `${value}` ;
             }
           })
           

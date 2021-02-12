@@ -223,13 +223,13 @@ export class api_collection_plateform  {
 
 		 
 		 
-		this.application_configuration_qbp= new HttpServiceBase<Interfaces.Iapplication_configuration_qbp>({url:conf.url + "collection/application_configuration_qbp/" , secure:conf.secure})  ;
-		this.admin_application_configuration_qbp= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp>({url:conf.url + "admin/application_configuration_qbp/" , secure:conf.secure})  ;
+		this.application_configuration_petit_moulin_admin= new HttpServiceBase<Interfaces.Iapplication_configuration_petit_moulin_admin>({url:conf.url + "collection/application_configuration_petit_moulin_admin/" , secure:conf.secure})  ;
+		this.admin_application_configuration_petit_moulin_admin= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_petit_moulin_admin>({url:conf.url + "admin/application_configuration_petit_moulin_admin/" , secure:conf.secure})  ;
 
 		 
 		 
-		this.application_configuration_petit_moulin_admin= new HttpServiceBase<Interfaces.Iapplication_configuration_petit_moulin_admin>({url:conf.url + "collection/application_configuration_petit_moulin_admin/" , secure:conf.secure})  ;
-		this.admin_application_configuration_petit_moulin_admin= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_petit_moulin_admin>({url:conf.url + "admin/application_configuration_petit_moulin_admin/" , secure:conf.secure})  ;
+		this.application_configuration_qbp= new HttpServiceBase<Interfaces.Iapplication_configuration_qbp>({url:conf.url + "collection/application_configuration_qbp/" , secure:conf.secure})  ;
+		this.admin_application_configuration_qbp= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp>({url:conf.url + "admin/application_configuration_qbp/" , secure:conf.secure})  ;
 
 		 
 		 
@@ -757,9 +757,9 @@ export class api_collection_plateform  {
 		 
 		 	Iapplication_configuration_petit_moulin      conf petit_moulin
 		 
-		 	Iapplication_configuration_qbp      config qbp
-		 
 		 	Iapplication_configuration_petit_moulin_admin      conf petit_moulin_admin
+		 
+		 	Iapplication_configuration_qbp      config qbp
 		 
 		 	Iapplication_configuration_qbp_admin_seller      config qbp admin
 		 
@@ -934,21 +934,21 @@ export class api_collection_plateform  {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :application_configuration_qbp
-		 desc: config qbp
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public application_configuration_qbp:HttpServiceBase<Interfaces.Iapplication_configuration_qbp> ;
-		public admin_application_configuration_qbp:HttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp> ;
-
-		 
-		 /**
 		 service d'accès a la sous-collection :application_configuration_petit_moulin_admin
 		 desc: conf petit_moulin_admin
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public application_configuration_petit_moulin_admin:HttpServiceBase<Interfaces.Iapplication_configuration_petit_moulin_admin> ;
 		public admin_application_configuration_petit_moulin_admin:HttpServiceAdminBase<Interfaces.Iapplication_configuration_petit_moulin_admin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_qbp
+		 desc: config qbp
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_qbp:HttpServiceBase<Interfaces.Iapplication_configuration_qbp> ;
+		public admin_application_configuration_qbp:HttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp> ;
 
 		 
 		 /**

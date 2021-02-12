@@ -58,6 +58,8 @@ export class Model_service_licence_token extends   Model_service   implements In
               return value ;
             }else if(value._id){
               return value._id ;
+            }else if(value._bsontype && value._bsontype === 'ObjectID'){
+                return `${value}` ;
             }
           })
           

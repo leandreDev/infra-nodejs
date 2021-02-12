@@ -24,9 +24,114 @@ export class Entity_application_configuration_qbp extends   Entity_application_c
     Entity_application_configuration.cast(obj , true)
     
     
+        
+        if(obj["qbpCustomerApi"] != undefined){
+          
+           obj["qbpCustomerApi"] = obj["qbpCustomerApi"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpBddUrl"] != undefined){
+          
+           obj["qbpBddUrl"] = obj["qbpBddUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpFsoUrl"] != undefined){
+          
+           obj["qbpFsoUrl"] = obj["qbpFsoUrl"].toString() ;
+           
+        }
+        
+    
   }
 
 
+ 
+
+public static checkqbpCustomerApi(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkqbpBddUrl(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkqbpFsoUrl(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
  
 
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
@@ -35,6 +140,57 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
         
           err = Entity_application_configuration.check(target, isCompleteObj , path) ;
           
+              
+
+              
+
+              if(target.qbpCustomerApi != null && target.qbpCustomerApi != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp.checkqbpCustomerApi(target.qbpCustomerApi , `${path}.qbpCustomerApi`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.qbpBddUrl != null && target.qbpBddUrl != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp.checkqbpBddUrl(target.qbpBddUrl , `${path}.qbpBddUrl`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.qbpFsoUrl != null && target.qbpFsoUrl != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp.checkqbpFsoUrl(target.qbpFsoUrl , `${path}.qbpFsoUrl`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -62,6 +218,45 @@ public static castQueryParam(path: string, value: any): any {
         }
         switch (key) {
           
+            case 'qbpCustomerApi':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'qbpBddUrl':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'qbpFsoUrl':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
          
           default:
             return Entity_application_configuration  .castQueryParam(key, value) ;
@@ -88,6 +283,30 @@ public static getClassNameOfProp(path:string):string{
         }
         switch (key) {
           
+      
+      case 'qbpCustomerApi':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'qbpBddUrl':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'qbpFsoUrl':
+       
+             return null ;
+       
+        
+       
+      
       
         default:
             return Entity_application_configuration  .getClassNameOfProp(key) ;

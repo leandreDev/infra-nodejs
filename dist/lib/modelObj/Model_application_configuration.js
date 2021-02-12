@@ -24,6 +24,9 @@ class Model_application_configuration extends utils_1.Base {
                 else if (value._id) {
                     return value._id;
                 }
+                else if (value._bsontype && value._bsontype === 'ObjectID') {
+                    return `${value}`;
+                }
             });
         }
         if (obj["appName"] != undefined) {

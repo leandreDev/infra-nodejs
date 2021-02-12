@@ -115,8 +115,12 @@ export class Entity_QBP_service extends   Entity_service    {
         
         if(obj["sellerAppId"] != undefined){
           
-           obj["sellerAppId"] = obj["sellerAppId"].toString() ;
-           
+          if(_.isString(obj["sellerAppId"])){
+            obj["sellerAppId"] = new mongo.ObjectId(obj["sellerAppId"]);
+          }else if(obj["sellerAppId"]._id){
+            obj["sellerAppId"] = new mongo.ObjectId(obj["sellerAppId"]._id) ;
+          }
+          
         }
         
     
@@ -131,8 +135,12 @@ export class Entity_QBP_service extends   Entity_service    {
         
         if(obj["adminAppId"] != undefined){
           
-           obj["adminAppId"] = obj["adminAppId"].toString() ;
-           
+          if(_.isString(obj["adminAppId"])){
+            obj["adminAppId"] = new mongo.ObjectId(obj["adminAppId"]);
+          }else if(obj["adminAppId"]._id){
+            obj["adminAppId"] = new mongo.ObjectId(obj["adminAppId"]._id) ;
+          }
+          
         }
         
     
@@ -155,12 +163,8 @@ export class Entity_QBP_service extends   Entity_service    {
         
         if(obj["sellerSso_Client_template"] != undefined){
           
-          if(_.isString(obj["sellerSso_Client_template"])){
-            obj["sellerSso_Client_template"] = new mongo.ObjectId(obj["sellerSso_Client_template"]);
-          }else if(obj["sellerSso_Client_template"]._id){
-            obj["sellerSso_Client_template"] = new mongo.ObjectId(obj["sellerSso_Client_template"]._id) ;
-          }
-          
+           obj["sellerSso_Client_template"] = obj["sellerSso_Client_template"].toString() ;
+           
         }
         
     
@@ -471,9 +475,10 @@ public static checksellerAppId(val:any, path:string =null):string[]{
          }
          let res:string[] = [] ;
          
+          if( ! mongo.ObjectId.isValid(val)){
+            res.push(`${path}  is not an ObjectId`) ;     
+          }
          
-          
-          
          
          
 
@@ -525,9 +530,10 @@ public static checkadminAppId(val:any, path:string =null):string[]{
          }
          let res:string[] = [] ;
          
+          if( ! mongo.ObjectId.isValid(val)){
+            res.push(`${path}  is not an ObjectId`) ;     
+          }
          
-          
-          
          
          
 
@@ -606,10 +612,9 @@ public static checksellerSso_Client_template(val:any, path:string =null):string[
          }
          let res:string[] = [] ;
          
-          if( ! mongo.ObjectId.isValid(val)){
-            res.push(`${path}  is not an ObjectId`) ;     
-          }
          
+          
+          
          
          
 
@@ -1158,15 +1163,15 @@ public static castQueryParam(path: string, value: any): any {
             break;
           
             case 'sellerAppId':
-              //string
+              //objectid
               
               
               
               
               
               
+              return new mongo.ObjectId(value) ;
               
-              return new String(value).valueOf() ;
               
             break;
           
@@ -1184,15 +1189,15 @@ public static castQueryParam(path: string, value: any): any {
             break;
           
             case 'adminAppId':
-              //string
+              //objectid
               
               
               
               
               
               
+              return new mongo.ObjectId(value) ;
               
-              return new String(value).valueOf() ;
               
             break;
           
@@ -1223,15 +1228,15 @@ public static castQueryParam(path: string, value: any): any {
             break;
           
             case 'sellerSso_Client_template':
-              //objectid
+              //string
               
               
               
               
               
               
-              return new mongo.ObjectId(value) ;
               
+              return new String(value).valueOf() ;
               
             break;
           
@@ -1370,10 +1375,10 @@ public static getClassNameOfProp(path:string):string{
       
       case 'sellerAppId':
        
-             return null ;
-       
         
        
+              return 'application_instance' ;
+              
       
       
       case 'sellerLicenceStoreId':
@@ -1386,10 +1391,10 @@ public static getClassNameOfProp(path:string):string{
       
       case 'adminAppId':
        
-             return null ;
-       
         
        
+              return 'application_instance' ;
+              
       
       
       case 'adminLicenceStoreId':
@@ -1410,10 +1415,10 @@ public static getClassNameOfProp(path:string):string{
       
       case 'sellerSso_Client_template':
        
+             return null ;
+       
         
        
-              return 'oidc_Client' ;
-              
       
       
       case 'sellerEndClientTemplate':

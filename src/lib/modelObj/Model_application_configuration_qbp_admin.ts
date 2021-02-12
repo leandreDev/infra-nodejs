@@ -19,9 +19,25 @@ export class Model_application_configuration_qbp_admin extends   Model_applicati
     super(obj);
     
         
-        if(obj["bddUrl"] != undefined){
+        if(obj["qbpBddUrl"] != undefined){
           
-           this["bddUrl"] = obj["bddUrl"].toString() ;
+           this["qbpBddUrl"] = obj["qbpBddUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpAdminService"] != undefined){
+          
+           this["qbpAdminService"] = obj["qbpAdminService"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpFsoUrl"] != undefined){
+          
+           this["qbpFsoUrl"] = obj["qbpFsoUrl"].toString() ;
            
         }
         
@@ -35,7 +51,19 @@ export class Model_application_configuration_qbp_admin extends   Model_applicati
               /**
         url de la bdd
         */
-               public "bddUrl"?:string ;
+               public "qbpBddUrl"?:string ;
+              
+       
+              /**
+        url du service qbp
+        */
+               public "qbpAdminService"?:string ;
+              
+       
+              /**
+        url du service fso
+        */
+               public "qbpFsoUrl"?:string ;
               
        
 

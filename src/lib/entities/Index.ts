@@ -299,8 +299,6 @@
     
         export * from "./service_celio_qcm" ;
     
-        export * from "./application_configuration_qbp" ;
-    
         export * from "./service_comptoireOr" ;
     
         export * from "./MarketingCloudApisConf" ;
@@ -315,10 +313,12 @@
     
         export * from "./service_airport" ;
     
+        export * from "./QBP_service" ;
+    
+        export * from "./application_configuration_qbp" ;
+    
         export * from "./application_configuration_qbp_admin_seller" ;
     
         export * from "./application_configuration_qbp_admin" ;
-    
-        export * from "./QBP_service" ;
     
     

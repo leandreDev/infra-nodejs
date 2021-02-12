@@ -12,8 +12,14 @@ class Model_application_configuration_qbp_admin extends Model_application_config
     constructor(obj = {}) {
         super(obj);
         this._class = "application_configuration_qbp_admin";
-        if (obj["bddUrl"] != undefined) {
-            this["bddUrl"] = obj["bddUrl"].toString();
+        if (obj["qbpBddUrl"] != undefined) {
+            this["qbpBddUrl"] = obj["qbpBddUrl"].toString();
+        }
+        if (obj["qbpAdminService"] != undefined) {
+            this["qbpAdminService"] = obj["qbpAdminService"].toString();
+        }
+        if (obj["qbpFsoUrl"] != undefined) {
+            this["qbpFsoUrl"] = obj["qbpFsoUrl"].toString();
         }
     }
 }

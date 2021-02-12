@@ -56,13 +56,23 @@ class Entity_QBP_service extends service_1.Entity_service {
             obj["client_secret"] = obj["client_secret"].toString();
         }
         if (obj["sellerAppId"] != undefined) {
-            obj["sellerAppId"] = obj["sellerAppId"].toString();
+            if (_.isString(obj["sellerAppId"])) {
+                obj["sellerAppId"] = new utils_1.mongo.ObjectId(obj["sellerAppId"]);
+            }
+            else if (obj["sellerAppId"]._id) {
+                obj["sellerAppId"] = new utils_1.mongo.ObjectId(obj["sellerAppId"]._id);
+            }
         }
         if (obj["sellerLicenceStoreId"] != undefined) {
             obj["sellerLicenceStoreId"] = obj["sellerLicenceStoreId"].toString();
         }
         if (obj["adminAppId"] != undefined) {
-            obj["adminAppId"] = obj["adminAppId"].toString();
+            if (_.isString(obj["adminAppId"])) {
+                obj["adminAppId"] = new utils_1.mongo.ObjectId(obj["adminAppId"]);
+            }
+            else if (obj["adminAppId"]._id) {
+                obj["adminAppId"] = new utils_1.mongo.ObjectId(obj["adminAppId"]._id);
+            }
         }
         if (obj["adminLicenceStoreId"] != undefined) {
             obj["adminLicenceStoreId"] = obj["adminLicenceStoreId"].toString();
@@ -71,12 +81,7 @@ class Entity_QBP_service extends service_1.Entity_service {
             obj["infraBddUrl"] = obj["infraBddUrl"].toString();
         }
         if (obj["sellerSso_Client_template"] != undefined) {
-            if (_.isString(obj["sellerSso_Client_template"])) {
-                obj["sellerSso_Client_template"] = new utils_1.mongo.ObjectId(obj["sellerSso_Client_template"]);
-            }
-            else if (obj["sellerSso_Client_template"]._id) {
-                obj["sellerSso_Client_template"] = new utils_1.mongo.ObjectId(obj["sellerSso_Client_template"]._id);
-            }
+            obj["sellerSso_Client_template"] = obj["sellerSso_Client_template"].toString();
         }
         if (obj["sellerEndClientTemplate"] != undefined) {
             if (_.isString(obj["sellerEndClientTemplate"])) {
@@ -226,6 +231,9 @@ class Entity_QBP_service extends service_1.Entity_service {
             return null;
         }
         let res = [];
+        if (!utils_1.mongo.ObjectId.isValid(val)) {
+            res.push(`${path}  is not an ObjectId`);
+        }
         if (res.length === 0) {
             return null;
         }
@@ -250,6 +258,9 @@ class Entity_QBP_service extends service_1.Entity_service {
             return null;
         }
         let res = [];
+        if (!utils_1.mongo.ObjectId.isValid(val)) {
+            res.push(`${path}  is not an ObjectId`);
+        }
         if (res.length === 0) {
             return null;
         }
@@ -286,9 +297,6 @@ class Entity_QBP_service extends service_1.Entity_service {
             return null;
         }
         let res = [];
-        if (!utils_1.mongo.ObjectId.isValid(val)) {
-            res.push(`${path}  is not an ObjectId`);
-        }
         if (res.length === 0) {
             return null;
         }
@@ -505,16 +513,16 @@ class Entity_QBP_service extends service_1.Entity_service {
                 return new String(value).valueOf();
                 break;
             case 'sellerAppId':
-                //string
-                return new String(value).valueOf();
+                //objectid
+                return new utils_1.mongo.ObjectId(value);
                 break;
             case 'sellerLicenceStoreId':
                 //string
                 return new String(value).valueOf();
                 break;
             case 'adminAppId':
-                //string
-                return new String(value).valueOf();
+                //objectid
+                return new utils_1.mongo.ObjectId(value);
                 break;
             case 'adminLicenceStoreId':
                 //string
@@ -525,8 +533,8 @@ class Entity_QBP_service extends service_1.Entity_service {
                 return new String(value).valueOf();
                 break;
             case 'sellerSso_Client_template':
-                //objectid
-                return new utils_1.mongo.ObjectId(value);
+                //string
+                return new String(value).valueOf();
                 break;
             case 'sellerEndClientTemplate':
                 //objectid
@@ -580,17 +588,17 @@ class Entity_QBP_service extends service_1.Entity_service {
             case 'client_secret':
                 return null;
             case 'sellerAppId':
-                return null;
+                return 'application_instance';
             case 'sellerLicenceStoreId':
                 return null;
             case 'adminAppId':
-                return null;
+                return 'application_instance';
             case 'adminLicenceStoreId':
                 return null;
             case 'infraBddUrl':
                 return null;
             case 'sellerSso_Client_template':
-                return 'oidc_Client';
+                return null;
             case 'sellerEndClientTemplate':
                 return 'end_client';
             case 'sellerAppInstanceTemplate':

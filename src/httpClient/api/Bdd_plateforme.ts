@@ -226,13 +226,13 @@ export class bdd_collection_plateform  {
 
 		 
 		 
-		this.application_configuration_qbp= new HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_qbp , _class:'application_configuration_qbp' , debug:conf.debug ,  collections:this })  ;
-		this.admin_application_configuration_qbp= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_qbp , _class:'application_configuration_qbp' , debug:conf.debug})  ;
+		this.application_configuration_petit_moulin_admin= new HttpServiceBddBase<Interfaces.Iapplication_configuration_petit_moulin_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_petit_moulin_admin , _class:'application_configuration_petit_moulin_admin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_petit_moulin_admin= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_petit_moulin_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_petit_moulin_admin , _class:'application_configuration_petit_moulin_admin' , debug:conf.debug})  ;
 
 		 
 		 
-		this.application_configuration_petit_moulin_admin= new HttpServiceBddBase<Interfaces.Iapplication_configuration_petit_moulin_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_petit_moulin_admin , _class:'application_configuration_petit_moulin_admin' , debug:conf.debug ,  collections:this })  ;
-		this.admin_application_configuration_petit_moulin_admin= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_petit_moulin_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_petit_moulin_admin , _class:'application_configuration_petit_moulin_admin' , debug:conf.debug})  ;
+		this.application_configuration_qbp= new HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_qbp , _class:'application_configuration_qbp' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_qbp= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_qbp , _class:'application_configuration_qbp' , debug:conf.debug})  ;
 
 		 
 		 
@@ -765,9 +765,9 @@ export class bdd_collection_plateform  {
 		 
 		 	Iapplication_configuration_petit_moulin      conf petit_moulin
 		 
-		 	Iapplication_configuration_qbp      config qbp
-		 
 		 	Iapplication_configuration_petit_moulin_admin      conf petit_moulin_admin
+		 
+		 	Iapplication_configuration_qbp      config qbp
 		 
 		 	Iapplication_configuration_qbp_admin_seller      config qbp admin
 		 
@@ -942,21 +942,21 @@ export class bdd_collection_plateform  {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :application_configuration_qbp
-		 desc: config qbp
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public application_configuration_qbp:HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp> ;
-		public admin_application_configuration_qbp:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp> ;
-
-		 
-		 /**
 		 service d'accès a la sous-collection :application_configuration_petit_moulin_admin
 		 desc: conf petit_moulin_admin
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public application_configuration_petit_moulin_admin:HttpServiceBddBase<Interfaces.Iapplication_configuration_petit_moulin_admin> ;
 		public admin_application_configuration_petit_moulin_admin:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_petit_moulin_admin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_qbp
+		 desc: config qbp
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_qbp:HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp> ;
+		public admin_application_configuration_qbp:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp> ;
 
 		 
 		 /**

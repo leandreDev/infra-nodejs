@@ -50,6 +50,8 @@ export class Model_service_sendGrid extends   Model_service   implements Interfa
               return value ;
             }else if(value._id){
               return value._id ;
+            }else if(value._bsontype && value._bsontype === 'ObjectID'){
+                return `${value}` ;
             }
           })
           

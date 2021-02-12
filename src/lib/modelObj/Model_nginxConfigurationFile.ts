@@ -40,6 +40,8 @@ export class Model_nginxConfigurationFile extends  Base  implements Interface.In
               return value ;
             }else if(value._id){
               return value._id ;
+            }else if(value._bsontype && value._bsontype === 'ObjectID'){
+                return `${value}` ;
             }
           })
           

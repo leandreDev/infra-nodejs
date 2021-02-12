@@ -109,8 +109,12 @@ export class Model_QBP_service extends   Model_service   implements Interface.IQ
         
         if(obj["sellerAppId"] != undefined){
           
-           this["sellerAppId"] = obj["sellerAppId"].toString() ;
-           
+          if(_.isString(obj["sellerAppId"])){
+            this["sellerAppId"] = obj["sellerAppId"];
+          }else if(obj["sellerAppId"]._id){
+            this["sellerAppId"] = obj["sellerAppId"]._id ;
+          }
+          
         }
         
     
@@ -125,8 +129,12 @@ export class Model_QBP_service extends   Model_service   implements Interface.IQ
         
         if(obj["adminAppId"] != undefined){
           
-           this["adminAppId"] = obj["adminAppId"].toString() ;
-           
+          if(_.isString(obj["adminAppId"])){
+            this["adminAppId"] = obj["adminAppId"];
+          }else if(obj["adminAppId"]._id){
+            this["adminAppId"] = obj["adminAppId"]._id ;
+          }
+          
         }
         
     
@@ -149,12 +157,8 @@ export class Model_QBP_service extends   Model_service   implements Interface.IQ
         
         if(obj["sellerSso_Client_template"] != undefined){
           
-          if(_.isString(obj["sellerSso_Client_template"])){
-            this["sellerSso_Client_template"] = obj["sellerSso_Client_template"];
-          }else if(obj["sellerSso_Client_template"]._id){
-            this["sellerSso_Client_template"] = obj["sellerSso_Client_template"]._id ;
-          }
-          
+           this["sellerSso_Client_template"] = obj["sellerSso_Client_template"].toString() ;
+           
         }
         
     

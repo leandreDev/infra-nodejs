@@ -18,12 +18,54 @@ export class Model_application_configuration_qbp extends   Model_application_con
   constructor(obj:any={}){
     super(obj);
     
+        
+        if(obj["qbpCustomerApi"] != undefined){
+          
+           this["qbpCustomerApi"] = obj["qbpCustomerApi"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpBddUrl"] != undefined){
+          
+           this["qbpBddUrl"] = obj["qbpBddUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpFsoUrl"] != undefined){
+          
+           this["qbpFsoUrl"] = obj["qbpFsoUrl"].toString() ;
+           
+        }
+        
+    
   }
   
 
     public _class:string  = "application_configuration_qbp" ;
 
         
+              /**
+        url du service client de qbp
+        */
+               public "qbpCustomerApi"?:string ;
+              
+       
+              /**
+        url de lapi de bdd qbp
+        */
+               public "qbpBddUrl"?:string ;
+              
+       
+              /**
+        url du service fso qbp
+        */
+               public "qbpFsoUrl"?:string ;
+              
+       
 
 
        
