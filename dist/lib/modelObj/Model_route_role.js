@@ -28,4 +28,3 @@ class Model_route_role extends utils_1.Base {
     }
 }
 exports.Model_route_role = Model_route_role;
-//# sourceMappingURL=Model_route_role.js.map

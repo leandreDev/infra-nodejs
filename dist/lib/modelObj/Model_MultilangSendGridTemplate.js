@@ -30,4 +30,3 @@ class Model_MultilangSendGridTemplate extends utils_1.Base {
     }
 }
 exports.Model_MultilangSendGridTemplate = Model_MultilangSendGridTemplate;
-//# sourceMappingURL=Model_MultilangSendGridTemplate.js.map

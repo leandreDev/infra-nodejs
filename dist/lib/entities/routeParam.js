@@ -131,4 +131,3 @@ class Entity_routeParam extends utils_1.Entity {
     }
 }
 exports.Entity_routeParam = Entity_routeParam;
-//# sourceMappingURL=routeParam.js.map

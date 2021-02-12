@@ -288,4 +288,3 @@ class Entity_service_supervision_service_conf extends utils_1.Entity {
     }
 }
 exports.Entity_service_supervision_service_conf = Entity_service_supervision_service_conf;
-//# sourceMappingURL=service_supervision_service_conf.js.map

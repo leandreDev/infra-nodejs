@@ -276,4 +276,3 @@ class Bdd_plateforme {
     }
 }
 exports.Bdd_plateforme = Bdd_plateforme;
-//# sourceMappingURL=Bdd_plateforme.js.map

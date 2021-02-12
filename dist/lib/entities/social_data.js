@@ -70,4 +70,3 @@ class Entity_social_data extends utils_1.Entity {
     }
 }
 exports.Entity_social_data = Entity_social_data;
-//# sourceMappingURL=social_data.js.map

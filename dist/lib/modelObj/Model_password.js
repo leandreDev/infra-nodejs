@@ -15,4 +15,3 @@ class Model_password extends Model_string_1.Model_string {
     }
 }
 exports.Model_password = Model_password;
-//# sourceMappingURL=Model_password.js.map

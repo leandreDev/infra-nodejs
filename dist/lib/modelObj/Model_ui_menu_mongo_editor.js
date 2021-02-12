@@ -40,4 +40,3 @@ class Model_ui_menu_mongo_editor extends utils_1.Base {
     }
 }
 exports.Model_ui_menu_mongo_editor = Model_ui_menu_mongo_editor;
-//# sourceMappingURL=Model_ui_menu_mongo_editor.js.map

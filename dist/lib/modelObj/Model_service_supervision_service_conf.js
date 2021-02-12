@@ -53,4 +53,3 @@ class Model_service_supervision_service_conf extends utils_1.Base {
     }
 }
 exports.Model_service_supervision_service_conf = Model_service_supervision_service_conf;
-//# sourceMappingURL=Model_service_supervision_service_conf.js.map

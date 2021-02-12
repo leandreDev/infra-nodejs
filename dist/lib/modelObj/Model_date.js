@@ -42,4 +42,3 @@ class Model_date extends Model_field_1.Model_field {
     }
 }
 exports.Model_date = Model_date;
-//# sourceMappingURL=Model_date.js.map

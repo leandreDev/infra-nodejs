@@ -71,4 +71,3 @@ class Entity_application_configuration_appCoach extends application_configuratio
     }
 }
 exports.Entity_application_configuration_appCoach = Entity_application_configuration_appCoach;
-//# sourceMappingURL=application_configuration_appCoach.js.map

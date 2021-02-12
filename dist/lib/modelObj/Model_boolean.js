@@ -36,4 +36,3 @@ class Model_boolean extends Model_field_1.Model_field {
     }
 }
 exports.Model_boolean = Model_boolean;
-//# sourceMappingURL=Model_boolean.js.map

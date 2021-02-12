@@ -288,4 +288,3 @@ class Entity_subdoc extends field_1.Entity_field {
     }
 }
 exports.Entity_subdoc = Entity_subdoc;
-//# sourceMappingURL=subdoc.js.map

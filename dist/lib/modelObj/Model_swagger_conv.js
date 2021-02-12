@@ -18,4 +18,3 @@ class Model_swagger_conv extends Model_service_1.Model_service {
     }
 }
 exports.Model_swagger_conv = Model_swagger_conv;
-//# sourceMappingURL=Model_swagger_conv.js.map

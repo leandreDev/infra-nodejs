@@ -139,4 +139,3 @@ class Entity_node_fork_option extends utils_1.Entity {
     }
 }
 exports.Entity_node_fork_option = Entity_node_fork_option;
-//# sourceMappingURL=node_fork_option.js.map

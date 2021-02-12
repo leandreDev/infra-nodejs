@@ -225,4 +225,3 @@ class Entity_service_infra_admin extends service_1.Entity_service {
     }
 }
 exports.Entity_service_infra_admin = Entity_service_infra_admin;
-//# sourceMappingURL=service_infra_admin.js.map

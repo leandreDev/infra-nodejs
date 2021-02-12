@@ -35,4 +35,3 @@ class Model_application_configuration extends utils_1.Base {
     }
 }
 exports.Model_application_configuration = Model_application_configuration;
-//# sourceMappingURL=Model_application_configuration.js.map

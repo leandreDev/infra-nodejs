@@ -39,4 +39,3 @@ class Model_application_configuration_appClient extends Model_application_config
     }
 }
 exports.Model_application_configuration_appClient = Model_application_configuration_appClient;
-//# sourceMappingURL=Model_application_configuration_appClient.js.map

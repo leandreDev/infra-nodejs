@@ -27,4 +27,3 @@ class Model_client_notices extends utils_1.Base {
     }
 }
 exports.Model_client_notices = Model_client_notices;
-//# sourceMappingURL=Model_client_notices.js.map

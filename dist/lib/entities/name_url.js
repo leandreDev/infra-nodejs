@@ -157,4 +157,3 @@ class Entity_name_url extends utils_1.Entity {
     }
 }
 exports.Entity_name_url = Entity_name_url;
-//# sourceMappingURL=name_url.js.map

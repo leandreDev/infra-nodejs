@@ -125,4 +125,3 @@ class Entity_service_mongo extends service_1.Entity_service {
     }
 }
 exports.Entity_service_mongo = Entity_service_mongo;
-//# sourceMappingURL=service_mongo.js.map

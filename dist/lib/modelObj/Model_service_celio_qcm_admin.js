@@ -21,4 +21,3 @@ class Model_service_celio_qcm_admin extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_celio_qcm_admin = Model_service_celio_qcm_admin;
-//# sourceMappingURL=Model_service_celio_qcm_admin.js.map

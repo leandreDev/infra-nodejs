@@ -129,4 +129,3 @@ class Entity_route_role extends utils_1.Entity {
     }
 }
 exports.Entity_route_role = Entity_route_role;
-//# sourceMappingURL=route_role.js.map

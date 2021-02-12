@@ -71,4 +71,3 @@ class Entity_licenceStore_global extends licenceStore_1.Entity_licenceStore {
     }
 }
 exports.Entity_licenceStore_global = Entity_licenceStore_global;
-//# sourceMappingURL=licenceStore_global.js.map

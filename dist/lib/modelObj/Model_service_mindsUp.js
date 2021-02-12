@@ -165,4 +165,3 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_mindsUp = Model_service_mindsUp;
-//# sourceMappingURL=Model_service_mindsUp.js.map

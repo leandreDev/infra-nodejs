@@ -31,4 +31,3 @@ class Model_service_polo_celio extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_polo_celio = Model_service_polo_celio;
-//# sourceMappingURL=Model_service_polo_celio.js.map

@@ -42,4 +42,3 @@ class Model_objectid extends Model_field_1.Model_field {
     }
 }
 exports.Model_objectid = Model_objectid;
-//# sourceMappingURL=Model_objectid.js.map

@@ -71,4 +71,3 @@ class Entity_application_configuration_antico extends application_configuration_
     }
 }
 exports.Entity_application_configuration_antico = Entity_application_configuration_antico;
-//# sourceMappingURL=application_configuration_antico.js.map

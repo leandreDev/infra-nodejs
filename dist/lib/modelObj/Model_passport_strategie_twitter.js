@@ -38,4 +38,3 @@ class Model_passport_strategie_twitter extends Model_passport_strategie_1.Model_
     }
 }
 exports.Model_passport_strategie_twitter = Model_passport_strategie_twitter;
-//# sourceMappingURL=Model_passport_strategie_twitter.js.map

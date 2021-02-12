@@ -233,4 +233,3 @@ class Entity_service_dumy_fso extends service_1.Entity_service {
     }
 }
 exports.Entity_service_dumy_fso = Entity_service_dumy_fso;
-//# sourceMappingURL=service_dumy_fso.js.map

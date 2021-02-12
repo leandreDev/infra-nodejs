@@ -71,4 +71,3 @@ class Entity_service_pdfrip extends service_1.Entity_service {
     }
 }
 exports.Entity_service_pdfrip = Entity_service_pdfrip;
-//# sourceMappingURL=service_pdfrip.js.map

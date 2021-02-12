@@ -151,4 +151,3 @@ class Entity_application extends utils_1.Entity {
     }
 }
 exports.Entity_application = Entity_application;
-//# sourceMappingURL=application.js.map

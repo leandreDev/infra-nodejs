@@ -192,4 +192,3 @@ class Entity_service_polo_celio extends service_1.Entity_service {
     }
 }
 exports.Entity_service_polo_celio = Entity_service_polo_celio;
-//# sourceMappingURL=service_polo_celio.js.map

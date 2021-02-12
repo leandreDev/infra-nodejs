@@ -36,4 +36,3 @@ class Model_field extends utils_1.Base {
     }
 }
 exports.Model_field = Model_field;
-//# sourceMappingURL=Model_field.js.map

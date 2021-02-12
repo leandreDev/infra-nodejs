@@ -52,4 +52,3 @@ class Model_passport_strategie_facebook extends Model_passport_strategie_1.Model
     }
 }
 exports.Model_passport_strategie_facebook = Model_passport_strategie_facebook;
-//# sourceMappingURL=Model_passport_strategie_facebook.js.map

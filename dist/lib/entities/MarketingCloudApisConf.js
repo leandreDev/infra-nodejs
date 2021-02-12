@@ -205,4 +205,3 @@ class Entity_MarketingCloudApisConf extends utils_1.Entity {
     }
 }
 exports.Entity_MarketingCloudApisConf = Entity_MarketingCloudApisConf;
-//# sourceMappingURL=MarketingCloudApisConf.js.map

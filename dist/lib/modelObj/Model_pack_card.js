@@ -24,4 +24,3 @@ class Model_pack_card extends Model_application_1.Model_application {
     }
 }
 exports.Model_pack_card = Model_pack_card;
-//# sourceMappingURL=Model_pack_card.js.map

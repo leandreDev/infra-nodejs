@@ -101,4 +101,3 @@ class Entity_service_ferrand extends service_1.Entity_service {
     }
 }
 exports.Entity_service_ferrand = Entity_service_ferrand;
-//# sourceMappingURL=service_ferrand.js.map

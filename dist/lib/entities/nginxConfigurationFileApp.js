@@ -212,4 +212,3 @@ class Entity_nginxConfigurationFileApp extends utils_1.Entity {
     }
 }
 exports.Entity_nginxConfigurationFileApp = Entity_nginxConfigurationFileApp;
-//# sourceMappingURL=nginxConfigurationFileApp.js.map

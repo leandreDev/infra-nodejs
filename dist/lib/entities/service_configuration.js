@@ -152,4 +152,3 @@ class Entity_service_configuration extends service_1.Entity_service {
     }
 }
 exports.Entity_service_configuration = Entity_service_configuration;
-//# sourceMappingURL=service_configuration.js.map

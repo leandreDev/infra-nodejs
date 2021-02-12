@@ -15,4 +15,3 @@ class Model_social_data extends utils_1.Base {
     }
 }
 exports.Model_social_data = Model_social_data;
-//# sourceMappingURL=Model_social_data.js.map

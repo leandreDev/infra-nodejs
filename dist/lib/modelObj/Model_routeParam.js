@@ -21,4 +21,3 @@ class Model_routeParam extends utils_1.Base {
     }
 }
 exports.Model_routeParam = Model_routeParam;
-//# sourceMappingURL=Model_routeParam.js.map

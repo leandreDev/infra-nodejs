@@ -21,4 +21,3 @@ class Model_application_configuration_comptoire_or_admin extends Model_applicati
     }
 }
 exports.Model_application_configuration_comptoire_or_admin = Model_application_configuration_comptoire_or_admin;
-//# sourceMappingURL=Model_application_configuration_comptoire_or_admin.js.map

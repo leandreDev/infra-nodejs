@@ -30,4 +30,3 @@ class Model_MarketingCloudApisConf extends utils_1.Base {
     }
 }
 exports.Model_MarketingCloudApisConf = Model_MarketingCloudApisConf;
-//# sourceMappingURL=Model_MarketingCloudApisConf.js.map

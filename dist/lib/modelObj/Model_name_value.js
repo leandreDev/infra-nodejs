@@ -21,4 +21,3 @@ class Model_name_value extends utils_1.Base {
     }
 }
 exports.Model_name_value = Model_name_value;
-//# sourceMappingURL=Model_name_value.js.map

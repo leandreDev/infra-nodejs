@@ -322,4 +322,3 @@ class Entity_jwk extends utils_1.Entity {
     }
 }
 exports.Entity_jwk = Entity_jwk;
-//# sourceMappingURL=jwk.js.map

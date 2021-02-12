@@ -296,4 +296,3 @@ class Entity_url_role extends utils_1.Entity {
     }
 }
 exports.Entity_url_role = Entity_url_role;
-//# sourceMappingURL=url_role.js.map

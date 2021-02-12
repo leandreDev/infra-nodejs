@@ -131,4 +131,3 @@ class Entity_service_celio_qcm_admin extends service_1.Entity_service {
     }
 }
 exports.Entity_service_celio_qcm_admin = Entity_service_celio_qcm_admin;
-//# sourceMappingURL=service_celio_qcm_admin.js.map

@@ -171,4 +171,3 @@ class Entity_service_supervision extends service_1.Entity_service {
     }
 }
 exports.Entity_service_supervision = Entity_service_supervision;
-//# sourceMappingURL=service_supervision.js.map

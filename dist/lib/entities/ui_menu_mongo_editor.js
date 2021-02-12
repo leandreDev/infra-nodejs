@@ -201,4 +201,3 @@ class Entity_ui_menu_mongo_editor extends utils_1.Entity {
     }
 }
 exports.Entity_ui_menu_mongo_editor = Entity_ui_menu_mongo_editor;
-//# sourceMappingURL=ui_menu_mongo_editor.js.map

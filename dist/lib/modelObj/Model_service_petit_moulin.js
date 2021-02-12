@@ -18,4 +18,3 @@ class Model_service_petit_moulin extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_petit_moulin = Model_service_petit_moulin;
-//# sourceMappingURL=Model_service_petit_moulin.js.map

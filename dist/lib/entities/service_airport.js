@@ -98,4 +98,3 @@ class Entity_service_airport extends service_1.Entity_service {
     }
 }
 exports.Entity_service_airport = Entity_service_airport;
-//# sourceMappingURL=service_airport.js.map

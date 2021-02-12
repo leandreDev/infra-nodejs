@@ -175,4 +175,3 @@ class Entity_service_access extends utils_1.Entity {
     }
 }
 exports.Entity_service_access = Entity_service_access;
-//# sourceMappingURL=service_access.js.map

@@ -29,4 +29,3 @@ class Model_user_roles extends utils_1.Base {
     }
 }
 exports.Model_user_roles = Model_user_roles;
-//# sourceMappingURL=Model_user_roles.js.map

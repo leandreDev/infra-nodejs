@@ -70,4 +70,3 @@ class Entity_mail extends utils_1.Entity {
     }
 }
 exports.Entity_mail = Entity_mail;
-//# sourceMappingURL=mail.js.map

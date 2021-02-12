@@ -6,7 +6,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "dist",
-    "sourceMap": true,
+    "sourceMap": false,
     "target": "es2017"
   },
   "exclude": [

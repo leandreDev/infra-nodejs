@@ -467,4 +467,3 @@ class Entity_service_signin extends service_1.Entity_service {
     }
 }
 exports.Entity_service_signin = Entity_service_signin;
-//# sourceMappingURL=service_signin.js.map

@@ -125,4 +125,3 @@ class Entity_application_configuration_comptoire_or_admin extends application_co
     }
 }
 exports.Entity_application_configuration_comptoire_or_admin = Entity_application_configuration_comptoire_or_admin;
-//# sourceMappingURL=application_configuration_comptoire_or_admin.js.map

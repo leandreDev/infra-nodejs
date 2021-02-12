@@ -21,4 +21,3 @@ class Model_periodicalDistrution extends utils_1.Base {
     }
 }
 exports.Model_periodicalDistrution = Model_periodicalDistrution;
-//# sourceMappingURL=Model_periodicalDistrution.js.map

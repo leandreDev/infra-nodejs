@@ -70,4 +70,3 @@ class Entity_mongo_queryfilter extends utils_1.Entity {
     }
 }
 exports.Entity_mongo_queryfilter = Entity_mongo_queryfilter;
-//# sourceMappingURL=mongo_queryfilter.js.map

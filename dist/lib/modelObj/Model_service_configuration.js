@@ -32,4 +32,3 @@ class Model_service_configuration extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_configuration = Model_service_configuration;
-//# sourceMappingURL=Model_service_configuration.js.map

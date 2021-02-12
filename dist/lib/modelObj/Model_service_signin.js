@@ -65,4 +65,3 @@ class Model_service_signin extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_signin = Model_service_signin;
-//# sourceMappingURL=Model_service_signin.js.map

@@ -22,4 +22,3 @@ class Model_ui_menu_mongo_editor_separateur extends Model_ui_menu_mongo_editor_1
     }
 }
 exports.Model_ui_menu_mongo_editor_separateur = Model_ui_menu_mongo_editor_separateur;
-//# sourceMappingURL=Model_ui_menu_mongo_editor_separateur.js.map

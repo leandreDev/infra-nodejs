@@ -137,4 +137,3 @@ class Entity_periodicalDistrution extends utils_1.Entity {
     }
 }
 exports.Entity_periodicalDistrution = Entity_periodicalDistrution;
-//# sourceMappingURL=periodicalDistrution.js.map

@@ -27,4 +27,3 @@ class Model_licence_temporelle extends Model_licence_1.Model_licence {
     }
 }
 exports.Model_licence_temporelle = Model_licence_temporelle;
-//# sourceMappingURL=Model_licence_temporelle.js.map

@@ -21,4 +21,3 @@ class Model_application_configuration_ferrand extends Model_application_configur
     }
 }
 exports.Model_application_configuration_ferrand = Model_application_configuration_ferrand;
-//# sourceMappingURL=Model_application_configuration_ferrand.js.map

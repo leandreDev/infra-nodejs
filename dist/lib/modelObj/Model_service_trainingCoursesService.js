@@ -30,4 +30,3 @@ class Model_service_trainingCoursesService extends Model_service_1.Model_service
     }
 }
 exports.Model_service_trainingCoursesService = Model_service_trainingCoursesService;
-//# sourceMappingURL=Model_service_trainingCoursesService.js.map

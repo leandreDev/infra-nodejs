@@ -54,4 +54,3 @@ class Model_string extends Model_field_1.Model_field {
     }
 }
 exports.Model_string = Model_string;
-//# sourceMappingURL=Model_string.js.map

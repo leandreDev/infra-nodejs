@@ -15,4 +15,3 @@ class Model_application_configuration_celiofront extends Model_application_confi
     }
 }
 exports.Model_application_configuration_celiofront = Model_application_configuration_celiofront;
-//# sourceMappingURL=Model_application_configuration_celiofront.js.map

@@ -29,4 +29,3 @@ class Model_periodicalDistrution_month extends Model_periodicalDistrution_1.Mode
     }
 }
 exports.Model_periodicalDistrution_month = Model_periodicalDistrution_month;
-//# sourceMappingURL=Model_periodicalDistrution_month.js.map

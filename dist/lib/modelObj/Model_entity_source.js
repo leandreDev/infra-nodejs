@@ -24,4 +24,3 @@ class Model_entity_source extends utils_1.Base {
     }
 }
 exports.Model_entity_source = Model_entity_source;
-//# sourceMappingURL=Model_entity_source.js.map

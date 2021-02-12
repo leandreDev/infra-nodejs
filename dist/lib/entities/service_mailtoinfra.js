@@ -117,4 +117,3 @@ class Entity_service_mailtoinfra extends service_1.Entity_service {
     }
 }
 exports.Entity_service_mailtoinfra = Entity_service_mailtoinfra;
-//# sourceMappingURL=service_mailtoinfra.js.map

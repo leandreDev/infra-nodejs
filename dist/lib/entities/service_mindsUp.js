@@ -971,4 +971,3 @@ class Entity_service_mindsUp extends service_1.Entity_service {
     }
 }
 exports.Entity_service_mindsUp = Entity_service_mindsUp;
-//# sourceMappingURL=service_mindsUp.js.map

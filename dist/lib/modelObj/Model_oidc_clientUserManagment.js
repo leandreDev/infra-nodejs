@@ -21,4 +21,3 @@ class Model_oidc_clientUserManagment extends utils_1.Base {
     }
 }
 exports.Model_oidc_clientUserManagment = Model_oidc_clientUserManagment;
-//# sourceMappingURL=Model_oidc_clientUserManagment.js.map

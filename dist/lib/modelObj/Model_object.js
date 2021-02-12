@@ -15,4 +15,3 @@ class Model_object extends Model_field_1.Model_field {
     }
 }
 exports.Model_object = Model_object;
-//# sourceMappingURL=Model_object.js.map

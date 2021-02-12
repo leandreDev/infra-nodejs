@@ -724,4 +724,3 @@ class Entity_passport_strategie_saml extends passport_strategie_1.Entity_passpor
     }
 }
 exports.Entity_passport_strategie_saml = Entity_passport_strategie_saml;
-//# sourceMappingURL=passport_strategie_saml.js.map

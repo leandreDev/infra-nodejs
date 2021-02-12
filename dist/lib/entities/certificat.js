@@ -97,4 +97,3 @@ class Entity_certificat extends utils_1.Entity {
     }
 }
 exports.Entity_certificat = Entity_certificat;
-//# sourceMappingURL=certificat.js.map

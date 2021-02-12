@@ -24,4 +24,3 @@ class Model_mongo_aggregation extends utils_1.Base {
     }
 }
 exports.Model_mongo_aggregation = Model_mongo_aggregation;
-//# sourceMappingURL=Model_mongo_aggregation.js.map

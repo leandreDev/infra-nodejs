@@ -125,4 +125,3 @@ class Entity_application_configuration_manu_admin extends application_configurat
     }
 }
 exports.Entity_application_configuration_manu_admin = Entity_application_configuration_manu_admin;
-//# sourceMappingURL=application_configuration_manu_admin.js.map

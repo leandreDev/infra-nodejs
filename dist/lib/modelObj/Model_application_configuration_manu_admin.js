@@ -21,4 +21,3 @@ class Model_application_configuration_manu_admin extends Model_application_confi
     }
 }
 exports.Model_application_configuration_manu_admin = Model_application_configuration_manu_admin;
-//# sourceMappingURL=Model_application_configuration_manu_admin.js.map

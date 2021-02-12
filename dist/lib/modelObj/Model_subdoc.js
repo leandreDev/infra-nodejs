@@ -42,4 +42,3 @@ class Model_subdoc extends Model_field_1.Model_field {
     }
 }
 exports.Model_subdoc = Model_subdoc;
-//# sourceMappingURL=Model_subdoc.js.map

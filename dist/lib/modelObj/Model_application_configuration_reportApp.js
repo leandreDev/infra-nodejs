@@ -15,4 +15,3 @@ class Model_application_configuration_reportApp extends Model_application_config
     }
 }
 exports.Model_application_configuration_reportApp = Model_application_configuration_reportApp;
-//# sourceMappingURL=Model_application_configuration_reportApp.js.map

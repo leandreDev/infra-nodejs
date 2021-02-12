@@ -213,4 +213,3 @@ class Entity_mailtoinfra2 extends service_1.Entity_service {
     }
 }
 exports.Entity_mailtoinfra2 = Entity_mailtoinfra2;
-//# sourceMappingURL=mailtoinfra2.js.map

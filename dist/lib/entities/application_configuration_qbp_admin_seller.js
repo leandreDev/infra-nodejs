@@ -152,4 +152,3 @@ class Entity_application_configuration_qbp_admin_seller extends application_conf
     }
 }
 exports.Entity_application_configuration_qbp_admin_seller = Entity_application_configuration_qbp_admin_seller;
-//# sourceMappingURL=application_configuration_qbp_admin_seller.js.map

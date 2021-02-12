@@ -132,4 +132,3 @@ class Entity_periodicalDistrution_periode extends periodicalDistrution_1.Entity_
     }
 }
 exports.Entity_periodicalDistrution_periode = Entity_periodicalDistrution_periode;
-//# sourceMappingURL=periodicalDistrution_periode.js.map

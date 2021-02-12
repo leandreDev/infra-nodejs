@@ -207,4 +207,3 @@ class Entity_Request extends utils_1.Entity {
     }
 }
 exports.Entity_Request = Entity_Request;
-//# sourceMappingURL=Request.js.map

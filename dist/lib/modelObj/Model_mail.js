@@ -15,4 +15,3 @@ class Model_mail extends utils_1.Base {
     }
 }
 exports.Model_mail = Model_mail;
-//# sourceMappingURL=Model_mail.js.map

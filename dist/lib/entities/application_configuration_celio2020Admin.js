@@ -98,4 +98,3 @@ class Entity_application_configuration_celio2020Admin extends application_config
     }
 }
 exports.Entity_application_configuration_celio2020Admin = Entity_application_configuration_celio2020Admin;
-//# sourceMappingURL=application_configuration_celio2020Admin.js.map

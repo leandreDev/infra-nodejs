@@ -24,4 +24,3 @@ class Model_application extends utils_1.Base {
     }
 }
 exports.Model_application = Model_application;
-//# sourceMappingURL=Model_application.js.map

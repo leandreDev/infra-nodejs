@@ -116,4 +116,3 @@ class Entity_client_notices extends utils_1.Entity {
     }
 }
 exports.Entity_client_notices = Entity_client_notices;
-//# sourceMappingURL=client_notices.js.map

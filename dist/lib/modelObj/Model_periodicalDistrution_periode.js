@@ -21,4 +21,3 @@ class Model_periodicalDistrution_periode extends Model_periodicalDistrution_1.Mo
     }
 }
 exports.Model_periodicalDistrution_periode = Model_periodicalDistrution_periode;
-//# sourceMappingURL=Model_periodicalDistrution_periode.js.map

@@ -21,4 +21,3 @@ class Model_service_like extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_like = Model_service_like;
-//# sourceMappingURL=Model_service_like.js.map

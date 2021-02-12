@@ -221,4 +221,3 @@ class Entity_service_trainingCoursesService extends service_1.Entity_service {
     }
 }
 exports.Entity_service_trainingCoursesService = Entity_service_trainingCoursesService;
-//# sourceMappingURL=service_trainingCoursesService.js.map

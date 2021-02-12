@@ -15,4 +15,3 @@ class Model_application_configuration_petit_moulin extends Model_application_con
     }
 }
 exports.Model_application_configuration_petit_moulin = Model_application_configuration_petit_moulin;
-//# sourceMappingURL=Model_application_configuration_petit_moulin.js.map

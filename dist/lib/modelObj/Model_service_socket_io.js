@@ -21,4 +21,3 @@ class Model_service_socket_io extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_socket_io = Model_service_socket_io;
-//# sourceMappingURL=Model_service_socket_io.js.map

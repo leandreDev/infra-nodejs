@@ -71,4 +71,3 @@ class Entity_application_configuration_petit_moulin extends application_configur
     }
 }
 exports.Entity_application_configuration_petit_moulin = Entity_application_configuration_petit_moulin;
-//# sourceMappingURL=application_configuration_petit_moulin.js.map

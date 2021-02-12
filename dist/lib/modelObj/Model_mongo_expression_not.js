@@ -30,4 +30,3 @@ class Model_mongo_expression_not extends Model_mongo_expression_logical_1.Model_
     }
 }
 exports.Model_mongo_expression_not = Model_mongo_expression_not;
-//# sourceMappingURL=Model_mongo_expression_not.js.map

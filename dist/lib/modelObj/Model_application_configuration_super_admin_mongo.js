@@ -81,4 +81,3 @@ class Model_application_configuration_super_admin_mongo extends Model_applicatio
     }
 }
 exports.Model_application_configuration_super_admin_mongo = Model_application_configuration_super_admin_mongo;
-//# sourceMappingURL=Model_application_configuration_super_admin_mongo.js.map

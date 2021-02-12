@@ -130,4 +130,3 @@ class Entity_oidc_clientUserManagment extends utils_1.Entity {
     }
 }
 exports.Entity_oidc_clientUserManagment = Entity_oidc_clientUserManagment;
-//# sourceMappingURL=oidc_clientUserManagment.js.map

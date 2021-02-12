@@ -35,4 +35,3 @@ class Model_nginxConfigurationFile extends utils_1.Base {
     }
 }
 exports.Model_nginxConfigurationFile = Model_nginxConfigurationFile;
-//# sourceMappingURL=Model_nginxConfigurationFile.js.map

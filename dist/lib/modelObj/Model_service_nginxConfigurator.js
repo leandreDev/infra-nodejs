@@ -15,4 +15,3 @@ class Model_service_nginxConfigurator extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_nginxConfigurator = Model_service_nginxConfigurator;
-//# sourceMappingURL=Model_service_nginxConfigurator.js.map
