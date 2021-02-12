@@ -1,6 +1,6 @@
 import * as _ from "lodash" ;
 import * as Index from "./Index" ;
-import {mongo , Entity} from "utils" ;
+import {mongo , Entity} from "@hfdev/utils" ;
 
 
 
@@ -319,7 +319,7 @@ public static checkx5t(val:any, path:string =null):string[]{
        
  
 
-public static "checkx5t#S256"(val:any, path:string =null):string[]{
+public static ["checkx5t#S256"](val:any, path:string =null):string[]{
          if(val == null){
             return null ;
          }

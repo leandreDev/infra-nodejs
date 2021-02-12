@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Entity_licence = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
-const utils_1 = require("utils");
+const utils_1 = require("@hfdev/utils");
 /**
   représente la licence d'un utilisateur pour un service (ou application) distribué par un end_client
 */

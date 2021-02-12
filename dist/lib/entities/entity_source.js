@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Entity_entity_source = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
-const utils_1 = require("utils");
+const utils_1 = require("@hfdev/utils");
 /**
   association d'une entité et de l'url de son service
 */

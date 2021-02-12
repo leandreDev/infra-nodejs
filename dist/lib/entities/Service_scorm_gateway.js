@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Entity_Service_scorm_gateway = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
-const utils_1 = require("utils");
+const utils_1 = require("@hfdev/utils");
 const service_1 = require("./service");
 /**
   service passerelle d'un package scorm vers l'interne

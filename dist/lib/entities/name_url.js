@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Entity_name_url = void 0;
 const Index = require("./Index");
-const utils_1 = require("utils");
+const utils_1 = require("@hfdev/utils");
 /**
   c'est une paire nom url
 */

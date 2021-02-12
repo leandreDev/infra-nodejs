@@ -1,7 +1,7 @@
 import * as _ from "lodash" ;
 import * as Interface from "./Interfaces" ;
 import * as Index from "./Index" ;
-import {Base } from "utils" ;
+import {Base } from "@hfdev/utils" ;
 
 
 import {Model_mongo_expression_comp } from "./Model_mongo_expression_comp"

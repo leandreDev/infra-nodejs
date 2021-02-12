@@ -1,4 +1,4 @@
-import {IHttpResult , IHttpServiceBase , IHttpServiceAdminBase } from "utils" ;
+import {IHttpResult , IHttpServiceBase , IHttpServiceAdminBase } from "@hfdev/utils" ;
     
         export * from "./api/Api_plateforme" ;
     

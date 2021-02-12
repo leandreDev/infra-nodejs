@@ -1,4 +1,4 @@
-import { Entity } from "utils";
+import { Entity } from "@hfdev/utils";
 /**
   les opérateurs d'aggregation du pipe de mongo
 */

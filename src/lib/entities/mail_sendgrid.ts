@@ -1,6 +1,6 @@
 import * as _ from "lodash" ;
 import * as Index from "./Index" ;
-import {mongo , Entity} from "utils" ;
+import {mongo , Entity} from "@hfdev/utils" ;
 
 
 import {Entity_mail } from "./mail"

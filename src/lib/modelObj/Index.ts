@@ -1,4 +1,4 @@
-import {Base } from "utils" ;
+import {Base } from "@hfdev/utils" ;
     
         import {Model_string} from "./Model_string" ;
     

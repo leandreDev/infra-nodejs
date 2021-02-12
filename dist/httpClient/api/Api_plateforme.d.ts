@@ -1,4 +1,4 @@
-import { UtilsSecu, CtxInterpretor, IHttpResult, HttpServiceBase, HttpServiceAdminBase, HttpAbstractService } from "utils";
+import { UtilsSecu, CtxInterpretor, IHttpResult, HttpServiceBase, HttpServiceAdminBase, HttpAbstractService } from "@hfdev/utils";
 import * as Interfaces from "../../lib/modelObj/Interfaces";
 import { IPlateforme } from './IPlateforme';
 export declare class api_collection_plateform {

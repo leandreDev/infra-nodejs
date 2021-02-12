@@ -1,5 +1,5 @@
 import * as Interface from "./Interfaces";
-import { Base } from "utils";
+import { Base } from "@hfdev/utils";
 /**
   représente la licence d'un utilisateur pour un service (ou application) distribué par un end_client
 */
