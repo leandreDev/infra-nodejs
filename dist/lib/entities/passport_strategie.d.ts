@@ -1,4 +1,4 @@
-import { Entity } from "utils";
+import { Entity } from "@hfdev/utils";
 /**
   configuration d'une stratégie passport à déployer sur le sso
 */

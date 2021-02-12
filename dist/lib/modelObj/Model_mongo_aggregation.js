@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Model_mongo_aggregation = void 0;
 const _ = require("lodash");
-const utils_1 = require("utils");
+const utils_1 = require("@hfdev/utils");
 /**
   les opérateurs d'aggregation du pipe de mongo
 */

@@ -1,4 +1,4 @@
-import { Entity } from "utils";
+import { Entity } from "@hfdev/utils";
 /**
   stock de licence distribuable
 */

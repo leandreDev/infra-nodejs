@@ -1,4 +1,4 @@
-import { Entity } from "utils";
+import { Entity } from "@hfdev/utils";
 /**
   paramètre d'une querry qui doit être casté
 */

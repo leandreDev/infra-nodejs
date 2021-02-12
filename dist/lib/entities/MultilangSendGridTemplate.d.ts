@@ -1,4 +1,4 @@
-import { Entity } from "utils";
+import { Entity } from "@hfdev/utils";
 /**
   décrit un template multi langue d'envoie de mail avec sendGrid
 */

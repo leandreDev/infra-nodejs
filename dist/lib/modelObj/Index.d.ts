@@ -1,4 +1,4 @@
-import { Base } from "utils";
+import { Base } from "@hfdev/utils";
 import { Model_string } from "./Model_string";
 import { Model_licence_temporelle } from "./Model_licence_temporelle";
 import { Model_ui_menu_mongo_editor_separateur } from "./Model_ui_menu_mongo_editor_separateur";

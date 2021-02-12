@@ -1,4 +1,4 @@
-import { Entity } from "utils";
+import { Entity } from "@hfdev/utils";
 /**
   représente la licence d'un utilisateur pour un service (ou application) distribué par un end_client
 */

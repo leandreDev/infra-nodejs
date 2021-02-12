@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Api_plateforme = exports.api_view_plateform = exports.api_view_UserLicence = exports.api_view_Client = exports.api_collection_plateform = void 0;
-const utils_1 = require("utils");
+const utils_1 = require("@hfdev/utils");
 class api_collection_plateform {
     constructor(conf) {
         this.secure = null;

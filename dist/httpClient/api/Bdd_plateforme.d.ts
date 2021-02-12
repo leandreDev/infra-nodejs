@@ -1,4 +1,4 @@
-import { UtilsSecu, HttpServiceBddBase, HttpServiceBddAdminBase, HttpServiceBddBaseView, mongo, IBase, IHttpResult } from "utils";
+import { UtilsSecu, HttpServiceBddBase, HttpServiceBddAdminBase, HttpServiceBddBaseView, mongo, IBase, IHttpResult } from "@hfdev/utils";
 import * as Interfaces from "../../lib/modelObj/Interfaces";
 import { IPlateforme } from './IPlateforme';
 export declare class bdd_collection_plateform {

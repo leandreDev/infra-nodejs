@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Entity_node_fork_option_env = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
-const utils_1 = require("utils");
+const utils_1 = require("@hfdev/utils");
 /**
   les paramètres d’environnement a passer aux sous-processus
 */

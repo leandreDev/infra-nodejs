@@ -1,5 +1,5 @@
 import * as Interface from "./Interfaces";
-import { Base } from "utils";
+import { Base } from "@hfdev/utils";
 /**
   template lodash + nom
 */

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Model_passport_strategie = void 0;
-const utils_1 = require("utils");
+const utils_1 = require("@hfdev/utils");
 /**
   configuration d'une stratégie passport à déployer sur le sso
 */

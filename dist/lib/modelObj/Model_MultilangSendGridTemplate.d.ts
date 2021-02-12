@@ -1,5 +1,5 @@
 import * as Interface from "./Interfaces";
-import { Base } from "utils";
+import { Base } from "@hfdev/utils";
 /**
   décrit un template multi langue d'envoie de mail avec sendGrid
 */
