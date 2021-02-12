@@ -71,4 +71,3 @@ class Entity_application_configuration_celioback extends application_configurati
     }
 }
 exports.Entity_application_configuration_celioback = Entity_application_configuration_celioback;
-//# sourceMappingURL=application_configuration_celioback.js.map

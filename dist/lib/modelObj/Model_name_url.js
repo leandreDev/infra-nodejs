@@ -24,4 +24,3 @@ class Model_name_url extends utils_1.Base {
     }
 }
 exports.Model_name_url = Model_name_url;
-//# sourceMappingURL=Model_name_url.js.map

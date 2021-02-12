@@ -249,4 +249,3 @@ class Entity_mail_connexion_conf extends utils_1.Entity {
     }
 }
 exports.Entity_mail_connexion_conf = Entity_mail_connexion_conf;
-//# sourceMappingURL=mail_connexion_conf.js.map

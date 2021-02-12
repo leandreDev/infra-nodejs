@@ -221,4 +221,3 @@ class Entity_passport_strategie_twitter extends passport_strategie_1.Entity_pass
     }
 }
 exports.Entity_passport_strategie_twitter = Entity_passport_strategie_twitter;
-//# sourceMappingURL=passport_strategie_twitter.js.map

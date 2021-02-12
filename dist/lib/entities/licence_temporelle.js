@@ -192,4 +192,3 @@ class Entity_licence_temporelle extends licence_1.Entity_licence {
     }
 }
 exports.Entity_licence_temporelle = Entity_licence_temporelle;
-//# sourceMappingURL=licence_temporelle.js.map

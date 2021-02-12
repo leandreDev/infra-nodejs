@@ -18,4 +18,3 @@ class Model_service_tutor extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_tutor = Model_service_tutor;
-//# sourceMappingURL=Model_service_tutor.js.map

@@ -42,4 +42,3 @@ class Model_service_celio_fid extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_celio_fid = Model_service_celio_fid;
-//# sourceMappingURL=Model_service_celio_fid.js.map

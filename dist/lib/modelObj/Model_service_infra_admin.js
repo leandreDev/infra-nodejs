@@ -36,4 +36,3 @@ class Model_service_infra_admin extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_infra_admin = Model_service_infra_admin;
-//# sourceMappingURL=Model_service_infra_admin.js.map

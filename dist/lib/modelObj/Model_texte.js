@@ -54,4 +54,3 @@ class Model_texte extends Model_string_1.Model_string {
     }
 }
 exports.Model_texte = Model_texte;
-//# sourceMappingURL=Model_texte.js.map

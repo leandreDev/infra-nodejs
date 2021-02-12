@@ -84,4 +84,3 @@ class Model_service extends utils_1.Base {
     }
 }
 exports.Model_service = Model_service;
-//# sourceMappingURL=Model_service.js.map

@@ -37,4 +37,3 @@ class Model__view_params extends Model__view_1.Model__view {
     }
 }
 exports.Model__view_params = Model__view_params;
-//# sourceMappingURL=Model__view_params.js.map

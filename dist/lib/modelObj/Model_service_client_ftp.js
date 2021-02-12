@@ -34,4 +34,3 @@ class Model_service_client_ftp extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_client_ftp = Model_service_client_ftp;
-//# sourceMappingURL=Model_service_client_ftp.js.map

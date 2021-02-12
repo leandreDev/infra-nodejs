@@ -15,4 +15,3 @@ class Model_licenceStore_global extends Model_licenceStore_1.Model_licenceStore 
     }
 }
 exports.Model_licenceStore_global = Model_licenceStore_global;
-//# sourceMappingURL=Model_licenceStore_global.js.map

@@ -248,4 +248,3 @@ class Api_plateforme {
     }
 }
 exports.Api_plateforme = Api_plateforme;
-//# sourceMappingURL=Api_plateforme.js.map

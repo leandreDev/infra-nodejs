@@ -67,4 +67,3 @@ class Model_url_role extends utils_1.Base {
     }
 }
 exports.Model_url_role = Model_url_role;
-//# sourceMappingURL=Model_url_role.js.map

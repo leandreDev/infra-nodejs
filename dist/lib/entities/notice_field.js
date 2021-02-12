@@ -124,4 +124,3 @@ class Entity_notice_field extends utils_1.Entity {
     }
 }
 exports.Entity_notice_field = Entity_notice_field;
-//# sourceMappingURL=notice_field.js.map

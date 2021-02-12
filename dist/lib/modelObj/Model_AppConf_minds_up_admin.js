@@ -27,4 +27,3 @@ class Model_AppConf_minds_up_admin extends Model_application_configuration_1.Mod
     }
 }
 exports.Model_AppConf_minds_up_admin = Model_AppConf_minds_up_admin;
-//# sourceMappingURL=Model_AppConf_minds_up_admin.js.map

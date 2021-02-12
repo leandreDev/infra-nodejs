@@ -202,4 +202,3 @@ class Entity_service_sendGrid extends service_1.Entity_service {
     }
 }
 exports.Entity_service_sendGrid = Entity_service_sendGrid;
-//# sourceMappingURL=service_sendGrid.js.map

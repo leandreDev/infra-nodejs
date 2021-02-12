@@ -21,4 +21,3 @@ class Model_service_goshabaGateway extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_goshabaGateway = Model_service_goshabaGateway;
-//# sourceMappingURL=Model_service_goshabaGateway.js.map

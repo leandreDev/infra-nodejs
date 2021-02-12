@@ -152,4 +152,3 @@ class Entity_application_configuration_petit_moulin_admin extends application_co
     }
 }
 exports.Entity_application_configuration_petit_moulin_admin = Entity_application_configuration_petit_moulin_admin;
-//# sourceMappingURL=application_configuration_petit_moulin_admin.js.map

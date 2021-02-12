@@ -309,4 +309,3 @@ class Entity_licence extends utils_1.Entity {
     }
 }
 exports.Entity_licence = Entity_licence;
-//# sourceMappingURL=licence.js.map

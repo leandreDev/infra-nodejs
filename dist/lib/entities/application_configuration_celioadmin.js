@@ -71,4 +71,3 @@ class Entity_application_configuration_celioadmin extends application_configurat
     }
 }
 exports.Entity_application_configuration_celioadmin = Entity_application_configuration_celioadmin;
-//# sourceMappingURL=application_configuration_celioadmin.js.map

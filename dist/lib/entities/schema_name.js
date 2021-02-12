@@ -417,4 +417,3 @@ class Entity_schema_name extends utils_1.Entity {
     }
 }
 exports.Entity_schema_name = Entity_schema_name;
-//# sourceMappingURL=schema_name.js.map

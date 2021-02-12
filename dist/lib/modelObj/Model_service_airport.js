@@ -18,4 +18,3 @@ class Model_service_airport extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_airport = Model_service_airport;
-//# sourceMappingURL=Model_service_airport.js.map

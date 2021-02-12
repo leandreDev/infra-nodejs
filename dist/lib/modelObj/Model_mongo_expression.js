@@ -15,4 +15,3 @@ class Model_mongo_expression extends utils_1.Base {
     }
 }
 exports.Model_mongo_expression = Model_mongo_expression;
-//# sourceMappingURL=Model_mongo_expression.js.map

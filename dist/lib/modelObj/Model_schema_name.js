@@ -64,4 +64,3 @@ class Model_schema_name extends utils_1.Base {
     }
 }
 exports.Model_schema_name = Model_schema_name;
-//# sourceMappingURL=Model_schema_name.js.map

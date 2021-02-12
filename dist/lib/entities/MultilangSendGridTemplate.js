@@ -146,4 +146,3 @@ class Entity_MultilangSendGridTemplate extends utils_1.Entity {
     }
 }
 exports.Entity_MultilangSendGridTemplate = Entity_MultilangSendGridTemplate;
-//# sourceMappingURL=MultilangSendGridTemplate.js.map

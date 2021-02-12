@@ -41,4 +41,3 @@ class Model_mailtoinfra2 extends Model_service_1.Model_service {
     }
 }
 exports.Model_mailtoinfra2 = Model_mailtoinfra2;
-//# sourceMappingURL=Model_mailtoinfra2.js.map

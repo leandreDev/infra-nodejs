@@ -27,4 +27,3 @@ class Model_node_fork_option extends utils_1.Base {
     }
 }
 exports.Model_node_fork_option = Model_node_fork_option;
-//# sourceMappingURL=Model_node_fork_option.js.map

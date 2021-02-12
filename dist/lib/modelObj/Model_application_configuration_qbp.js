@@ -24,4 +24,3 @@ class Model_application_configuration_qbp extends Model_application_configuratio
     }
 }
 exports.Model_application_configuration_qbp = Model_application_configuration_qbp;
-//# sourceMappingURL=Model_application_configuration_qbp.js.map

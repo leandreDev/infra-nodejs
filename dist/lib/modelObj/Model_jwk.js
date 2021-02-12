@@ -47,4 +47,3 @@ class Model_jwk extends utils_1.Base {
     }
 }
 exports.Model_jwk = Model_jwk;
-//# sourceMappingURL=Model_jwk.js.map

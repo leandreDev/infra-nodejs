@@ -15,4 +15,3 @@ class Model_application_configuration_antico extends Model_application_configura
     }
 }
 exports.Model_application_configuration_antico = Model_application_configuration_antico;
-//# sourceMappingURL=Model_application_configuration_antico.js.map

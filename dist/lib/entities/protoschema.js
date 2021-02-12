@@ -271,4 +271,3 @@ class Entity_protoschema extends utils_1.Entity {
     }
 }
 exports.Entity_protoschema = Entity_protoschema;
-//# sourceMappingURL=protoschema.js.map

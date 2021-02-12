@@ -67,4 +67,3 @@ class Model_licence extends utils_1.Base {
     }
 }
 exports.Model_licence = Model_licence;
-//# sourceMappingURL=Model_licence.js.map

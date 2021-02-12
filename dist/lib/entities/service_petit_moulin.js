@@ -98,4 +98,3 @@ class Entity_service_petit_moulin extends service_1.Entity_service {
     }
 }
 exports.Entity_service_petit_moulin = Entity_service_petit_moulin;
-//# sourceMappingURL=service_petit_moulin.js.map

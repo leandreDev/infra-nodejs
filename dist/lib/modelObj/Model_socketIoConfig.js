@@ -18,4 +18,3 @@ class Model_socketIoConfig extends utils_1.Base {
     }
 }
 exports.Model_socketIoConfig = Model_socketIoConfig;
-//# sourceMappingURL=Model_socketIoConfig.js.map

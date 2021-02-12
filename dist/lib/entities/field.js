@@ -278,4 +278,3 @@ class Entity_field extends utils_1.Entity {
     }
 }
 exports.Entity_field = Entity_field;
-//# sourceMappingURL=field.js.map

@@ -24,4 +24,3 @@ class Model_application_configuration_petit_moulin_admin extends Model_applicati
     }
 }
 exports.Model_application_configuration_petit_moulin_admin = Model_application_configuration_petit_moulin_admin;
-//# sourceMappingURL=Model_application_configuration_petit_moulin_admin.js.map

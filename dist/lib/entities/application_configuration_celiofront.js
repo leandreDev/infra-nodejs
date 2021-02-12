@@ -71,4 +71,3 @@ class Entity_application_configuration_celiofront extends application_configurat
     }
 }
 exports.Entity_application_configuration_celiofront = Entity_application_configuration_celiofront;
-//# sourceMappingURL=application_configuration_celiofront.js.map

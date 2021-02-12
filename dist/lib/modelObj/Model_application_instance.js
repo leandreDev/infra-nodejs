@@ -64,4 +64,3 @@ class Model_application_instance extends utils_1.Base {
     }
 }
 exports.Model_application_instance = Model_application_instance;
-//# sourceMappingURL=Model_application_instance.js.map

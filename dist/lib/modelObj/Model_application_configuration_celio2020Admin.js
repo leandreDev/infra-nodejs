@@ -18,4 +18,3 @@ class Model_application_configuration_celio2020Admin extends Model_application_c
     }
 }
 exports.Model_application_configuration_celio2020Admin = Model_application_configuration_celio2020Admin;
-//# sourceMappingURL=Model_application_configuration_celio2020Admin.js.map

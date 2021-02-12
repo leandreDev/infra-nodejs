@@ -31,4 +31,3 @@ class Model_ftpConf extends utils_1.Base {
     }
 }
 exports.Model_ftpConf = Model_ftpConf;
-//# sourceMappingURL=Model_ftpConf.js.map

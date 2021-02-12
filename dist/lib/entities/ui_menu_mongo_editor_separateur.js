@@ -98,4 +98,3 @@ class Entity_ui_menu_mongo_editor_separateur extends ui_menu_mongo_editor_1.Enti
     }
 }
 exports.Entity_ui_menu_mongo_editor_separateur = Entity_ui_menu_mongo_editor_separateur;
-//# sourceMappingURL=ui_menu_mongo_editor_separateur.js.map

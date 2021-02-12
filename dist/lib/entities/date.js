@@ -342,4 +342,3 @@ class Entity_date extends field_1.Entity_field {
     }
 }
 exports.Entity_date = Entity_date;
-//# sourceMappingURL=date.js.map

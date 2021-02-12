@@ -33,4 +33,3 @@ class Model_service_supervision extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_supervision = Model_service_supervision;
-//# sourceMappingURL=Model_service_supervision.js.map

@@ -152,4 +152,3 @@ class Entity_pack_card extends application_1.Entity_application {
     }
 }
 exports.Entity_pack_card = Entity_pack_card;
-//# sourceMappingURL=pack_card.js.map

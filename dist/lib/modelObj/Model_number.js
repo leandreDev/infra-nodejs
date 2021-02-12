@@ -45,4 +45,3 @@ class Model_number extends Model_field_1.Model_field {
     }
 }
 exports.Model_number = Model_number;
-//# sourceMappingURL=Model_number.js.map

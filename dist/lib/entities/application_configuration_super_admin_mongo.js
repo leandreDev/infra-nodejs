@@ -409,4 +409,3 @@ class Entity_application_configuration_super_admin_mongo extends application_con
     }
 }
 exports.Entity_application_configuration_super_admin_mongo = Entity_application_configuration_super_admin_mongo;
-//# sourceMappingURL=application_configuration_super_admin_mongo.js.map

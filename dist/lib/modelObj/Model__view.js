@@ -43,4 +43,3 @@ class Model__view extends utils_1.Base {
     }
 }
 exports.Model__view = Model__view;
-//# sourceMappingURL=Model__view.js.map

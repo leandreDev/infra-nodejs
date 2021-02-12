@@ -160,4 +160,3 @@ class Entity_dataTableInit extends utils_1.Entity {
     }
 }
 exports.Entity_dataTableInit = Entity_dataTableInit;
-//# sourceMappingURL=dataTableInit.js.map

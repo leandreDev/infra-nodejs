@@ -71,4 +71,3 @@ class Entity_service_push_notification extends service_1.Entity_service {
     }
 }
 exports.Entity_service_push_notification = Entity_service_push_notification;
-//# sourceMappingURL=service_push_notification.js.map

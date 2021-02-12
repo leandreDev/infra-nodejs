@@ -15,4 +15,3 @@ class Model_application_configuration_appCoach extends Model_application_configu
     }
 }
 exports.Model_application_configuration_appCoach = Model_application_configuration_appCoach;
-//# sourceMappingURL=Model_application_configuration_appCoach.js.map

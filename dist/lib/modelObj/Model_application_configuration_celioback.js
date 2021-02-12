@@ -15,4 +15,3 @@ class Model_application_configuration_celioback extends Model_application_config
     }
 }
 exports.Model_application_configuration_celioback = Model_application_configuration_celioback;
-//# sourceMappingURL=Model_application_configuration_celioback.js.map

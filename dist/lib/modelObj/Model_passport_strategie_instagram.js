@@ -38,4 +38,3 @@ class Model_passport_strategie_instagram extends Model_passport_strategie_1.Mode
     }
 }
 exports.Model_passport_strategie_instagram = Model_passport_strategie_instagram;
-//# sourceMappingURL=Model_passport_strategie_instagram.js.map

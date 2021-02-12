@@ -48,4 +48,3 @@ class Model_mail_connexion_conf extends utils_1.Base {
     }
 }
 exports.Model_mail_connexion_conf = Model_mail_connexion_conf;
-//# sourceMappingURL=Model_mail_connexion_conf.js.map

@@ -291,4 +291,3 @@ class Entity_objectid extends field_1.Entity_field {
     }
 }
 exports.Entity_objectid = Entity_objectid;
-//# sourceMappingURL=objectid.js.map

@@ -43,4 +43,3 @@ class Model_sendGridTemplate extends utils_1.Base {
     }
 }
 exports.Model_sendGridTemplate = Model_sendGridTemplate;
-//# sourceMappingURL=Model_sendGridTemplate.js.map

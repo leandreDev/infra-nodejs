@@ -15,4 +15,3 @@ class Model_application_configuration_celioadmin extends Model_application_confi
     }
 }
 exports.Model_application_configuration_celioadmin = Model_application_configuration_celioadmin;
-//# sourceMappingURL=Model_application_configuration_celioadmin.js.map

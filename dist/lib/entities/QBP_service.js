@@ -610,4 +610,3 @@ class Entity_QBP_service extends service_1.Entity_service {
     }
 }
 exports.Entity_QBP_service = Entity_QBP_service;
-//# sourceMappingURL=QBP_service.js.map

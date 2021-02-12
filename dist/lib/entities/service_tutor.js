@@ -101,4 +101,3 @@ class Entity_service_tutor extends service_1.Entity_service {
     }
 }
 exports.Entity_service_tutor = Entity_service_tutor;
-//# sourceMappingURL=service_tutor.js.map

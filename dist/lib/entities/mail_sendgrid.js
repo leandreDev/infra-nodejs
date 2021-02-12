@@ -264,4 +264,3 @@ class Entity_mail_sendgrid extends mail_1.Entity_mail {
     }
 }
 exports.Entity_mail_sendgrid = Entity_mail_sendgrid;
-//# sourceMappingURL=mail_sendgrid.js.map

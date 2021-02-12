@@ -15,4 +15,3 @@ class Model_mongo_expression_gt extends Model_mongo_expression_comp_1.Model_mong
     }
 }
 exports.Model_mongo_expression_gt = Model_mongo_expression_gt;
-//# sourceMappingURL=Model_mongo_expression_gt.js.map

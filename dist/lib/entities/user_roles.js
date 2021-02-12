@@ -141,4 +141,3 @@ class Entity_user_roles extends utils_1.Entity {
     }
 }
 exports.Entity_user_roles = Entity_user_roles;
-//# sourceMappingURL=user_roles.js.map

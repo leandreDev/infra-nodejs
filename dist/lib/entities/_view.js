@@ -238,4 +238,3 @@ class Entity__view extends utils_1.Entity {
     }
 }
 exports.Entity__view = Entity__view;
-//# sourceMappingURL=_view.js.map

@@ -30,4 +30,3 @@ class Model_service_celio_qcm extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_celio_qcm = Model_service_celio_qcm;
-//# sourceMappingURL=Model_service_celio_qcm.js.map

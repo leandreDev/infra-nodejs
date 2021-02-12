@@ -279,4 +279,3 @@ class Entity_modelid extends field_1.Entity_field {
     }
 }
 exports.Entity_modelid = Entity_modelid;
-//# sourceMappingURL=modelid.js.map

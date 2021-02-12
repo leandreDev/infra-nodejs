@@ -38,4 +38,3 @@ class Model_service_sendGrid extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_sendGrid = Model_service_sendGrid;
-//# sourceMappingURL=Model_service_sendGrid.js.map

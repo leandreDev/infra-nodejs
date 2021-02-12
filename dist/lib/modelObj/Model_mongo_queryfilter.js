@@ -15,4 +15,3 @@ class Model_mongo_queryfilter extends utils_1.Base {
     }
 }
 exports.Model_mongo_queryfilter = Model_mongo_queryfilter;
-//# sourceMappingURL=Model_mongo_queryfilter.js.map

@@ -98,4 +98,3 @@ class Entity_swagger_conv extends service_1.Entity_service {
     }
 }
 exports.Entity_swagger_conv = Entity_swagger_conv;
-//# sourceMappingURL=swagger_conv.js.map

@@ -393,4 +393,3 @@ class Entity_service extends utils_1.Entity {
     }
 }
 exports.Entity_service = Entity_service;
-//# sourceMappingURL=service.js.map

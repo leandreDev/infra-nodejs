@@ -427,4 +427,3 @@ class Entity_htmltexte extends string_1.Entity_string {
     }
 }
 exports.Entity_htmltexte = Entity_htmltexte;
-//# sourceMappingURL=htmltexte.js.map

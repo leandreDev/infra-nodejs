@@ -21,4 +21,3 @@ class Model_notice_field extends utils_1.Base {
     }
 }
 exports.Model_notice_field = Model_notice_field;
-//# sourceMappingURL=Model_notice_field.js.map

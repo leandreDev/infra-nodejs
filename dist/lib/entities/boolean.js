@@ -282,4 +282,3 @@ class Entity_boolean extends field_1.Entity_field {
     }
 }
 exports.Entity_boolean = Entity_boolean;
-//# sourceMappingURL=boolean.js.map

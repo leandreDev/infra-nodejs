@@ -372,4 +372,3 @@ class Entity_number extends field_1.Entity_field {
     }
 }
 exports.Entity_number = Entity_number;
-//# sourceMappingURL=number.js.map

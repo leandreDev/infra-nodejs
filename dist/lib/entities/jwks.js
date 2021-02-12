@@ -116,4 +116,3 @@ class Entity_jwks extends utils_1.Entity {
     }
 }
 exports.Entity_jwks = Entity_jwks;
-//# sourceMappingURL=jwks.js.map

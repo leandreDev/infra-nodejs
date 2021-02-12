@@ -95,4 +95,3 @@ class Model_service_celio_fid_admin extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_celio_fid_admin = Model_service_celio_fid_admin;
-//# sourceMappingURL=Model_service_celio_fid_admin.js.map

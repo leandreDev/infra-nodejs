@@ -36,4 +36,3 @@ class Model_periodicalDistrution_day extends Model_periodicalDistrution_1.Model_
     }
 }
 exports.Model_periodicalDistrution_day = Model_periodicalDistrution_day;
-//# sourceMappingURL=Model_periodicalDistrution_day.js.map

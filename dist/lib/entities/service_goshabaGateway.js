@@ -131,4 +131,3 @@ class Entity_service_goshabaGateway extends service_1.Entity_service {
     }
 }
 exports.Entity_service_goshabaGateway = Entity_service_goshabaGateway;
-//# sourceMappingURL=service_goshabaGateway.js.map

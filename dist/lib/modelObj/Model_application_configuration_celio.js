@@ -27,4 +27,3 @@ class Model_application_configuration_celio extends Model_application_configurat
     }
 }
 exports.Model_application_configuration_celio = Model_application_configuration_celio;
-//# sourceMappingURL=Model_application_configuration_celio.js.map

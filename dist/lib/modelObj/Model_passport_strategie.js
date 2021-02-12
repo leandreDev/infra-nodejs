@@ -24,4 +24,3 @@ class Model_passport_strategie extends utils_1.Base {
     }
 }
 exports.Model_passport_strategie = Model_passport_strategie;
-//# sourceMappingURL=Model_passport_strategie.js.map

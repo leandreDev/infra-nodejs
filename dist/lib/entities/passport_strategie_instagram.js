@@ -221,4 +221,3 @@ class Entity_passport_strategie_instagram extends passport_strategie_1.Entity_pa
     }
 }
 exports.Entity_passport_strategie_instagram = Entity_passport_strategie_instagram;
-//# sourceMappingURL=passport_strategie_instagram.js.map

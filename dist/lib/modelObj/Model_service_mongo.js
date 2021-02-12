@@ -21,4 +21,3 @@ class Model_service_mongo extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_mongo = Model_service_mongo;
-//# sourceMappingURL=Model_service_mongo.js.map

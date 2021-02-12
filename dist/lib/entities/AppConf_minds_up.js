@@ -519,4 +519,3 @@ class Entity_AppConf_minds_up extends application_configuration_1.Entity_applica
     }
 }
 exports.Entity_AppConf_minds_up = Entity_AppConf_minds_up;
-//# sourceMappingURL=AppConf_minds_up.js.map

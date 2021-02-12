@@ -225,4 +225,3 @@ class Entity_service_client_ftp extends service_1.Entity_service {
     }
 }
 exports.Entity_service_client_ftp = Entity_service_client_ftp;
-//# sourceMappingURL=service_client_ftp.js.map

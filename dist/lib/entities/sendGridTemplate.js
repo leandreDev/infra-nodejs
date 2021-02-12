@@ -221,4 +221,3 @@ class Entity_sendGridTemplate extends utils_1.Entity {
     }
 }
 exports.Entity_sendGridTemplate = Entity_sendGridTemplate;
-//# sourceMappingURL=sendGridTemplate.js.map

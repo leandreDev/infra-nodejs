@@ -100,4 +100,3 @@ class Model_QBP_service extends Model_service_1.Model_service {
     }
 }
 exports.Model_QBP_service = Model_QBP_service;
-//# sourceMappingURL=Model_QBP_service.js.map

@@ -427,4 +427,3 @@ class Entity_string extends field_1.Entity_field {
     }
 }
 exports.Entity_string = Entity_string;
-//# sourceMappingURL=string.js.map

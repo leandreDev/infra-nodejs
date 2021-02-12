@@ -27,4 +27,3 @@ class Model_dataTableInit extends utils_1.Base {
     }
 }
 exports.Model_dataTableInit = Model_dataTableInit;
-//# sourceMappingURL=Model_dataTableInit.js.map

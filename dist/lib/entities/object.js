@@ -71,4 +71,3 @@ class Entity_object extends field_1.Entity_field {
     }
 }
 exports.Entity_object = Entity_object;
-//# sourceMappingURL=object.js.map

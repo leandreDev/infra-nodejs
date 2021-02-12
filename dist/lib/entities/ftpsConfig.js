@@ -263,4 +263,3 @@ class Entity_ftpsConfig extends utils_1.Entity {
     }
 }
 exports.Entity_ftpsConfig = Entity_ftpsConfig;
-//# sourceMappingURL=ftpsConfig.js.map

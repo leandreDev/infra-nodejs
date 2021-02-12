@@ -15,4 +15,3 @@ class Model_service_init extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_init = Model_service_init;
-//# sourceMappingURL=Model_service_init.js.map

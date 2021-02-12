@@ -24,4 +24,3 @@ class Model_application_configuration_qbp_admin_seller extends Model_application
     }
 }
 exports.Model_application_configuration_qbp_admin_seller = Model_application_configuration_qbp_admin_seller;
-//# sourceMappingURL=Model_application_configuration_qbp_admin_seller.js.map

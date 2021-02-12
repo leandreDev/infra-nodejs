@@ -7,4 +7,3 @@ const interfaces = require("./lib/modelObj/Interfaces");
 exports.interfaces = interfaces;
 const services = require("./httpClient/serviceIndex");
 exports.services = services;
-//# sourceMappingURL=index.js.map

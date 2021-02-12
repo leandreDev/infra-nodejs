@@ -15,4 +15,3 @@ class Model_service_push_notification extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_push_notification = Model_service_push_notification;
-//# sourceMappingURL=Model_service_push_notification.js.map

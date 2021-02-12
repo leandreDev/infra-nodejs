@@ -18,4 +18,3 @@ class Model_certificat extends utils_1.Base {
     }
 }
 exports.Model_certificat = Model_certificat;
-//# sourceMappingURL=Model_certificat.js.map

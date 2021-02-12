@@ -52,4 +52,3 @@ class Model_service_nginxMultiConfigurator extends Model_service_nginxConfigurat
     }
 }
 exports.Model_service_nginxMultiConfigurator = Model_service_nginxMultiConfigurator;
-//# sourceMappingURL=Model_service_nginxMultiConfigurator.js.map

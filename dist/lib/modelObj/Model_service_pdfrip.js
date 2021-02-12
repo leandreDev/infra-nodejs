@@ -15,4 +15,3 @@ class Model_service_pdfrip extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_pdfrip = Model_service_pdfrip;
-//# sourceMappingURL=Model_service_pdfrip.js.map

@@ -120,4 +120,3 @@ class Entity_service_init_js extends service_1.Entity_service {
     }
 }
 exports.Entity_service_init_js = Entity_service_init_js;
-//# sourceMappingURL=service_init_js.js.map

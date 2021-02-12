@@ -97,4 +97,3 @@ class Entity_socketIoConfig extends utils_1.Entity {
     }
 }
 exports.Entity_socketIoConfig = Entity_socketIoConfig;
-//# sourceMappingURL=socketIoConfig.js.map

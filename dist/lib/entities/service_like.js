@@ -131,4 +131,3 @@ class Entity_service_like extends service_1.Entity_service {
     }
 }
 exports.Entity_service_like = Entity_service_like;
-//# sourceMappingURL=service_like.js.map

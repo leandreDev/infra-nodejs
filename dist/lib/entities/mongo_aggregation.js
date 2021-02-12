@@ -106,4 +106,3 @@ class Entity_mongo_aggregation extends utils_1.Entity {
     }
 }
 exports.Entity_mongo_aggregation = Entity_mongo_aggregation;
-//# sourceMappingURL=mongo_aggregation.js.map

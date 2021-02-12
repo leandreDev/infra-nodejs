@@ -33,4 +33,3 @@ class Model_service_dumy_fso extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_dumy_fso = Model_service_dumy_fso;
-//# sourceMappingURL=Model_service_dumy_fso.js.map

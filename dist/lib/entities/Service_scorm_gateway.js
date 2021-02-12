@@ -288,4 +288,3 @@ class Entity_Service_scorm_gateway extends service_1.Entity_service {
     }
 }
 exports.Entity_Service_scorm_gateway = Entity_Service_scorm_gateway;
-//# sourceMappingURL=Service_scorm_gateway.js.map

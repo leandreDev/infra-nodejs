@@ -14,4 +14,3 @@ __exportStar(require("./api/Api_plateforme"), exports);
 __exportStar(require("./api/Bdd_plateforme"), exports);
 __exportStar(require("./api/IPlateforme"), exports);
 __exportStar(require("./api/ApiExpressRouter"), exports);
-//# sourceMappingURL=serviceIndex.js.map

@@ -42,4 +42,3 @@ class Model_Service_scorm_gateway extends Model_service_1.Model_service {
     }
 }
 exports.Model_Service_scorm_gateway = Model_Service_scorm_gateway;
-//# sourceMappingURL=Model_Service_scorm_gateway.js.map

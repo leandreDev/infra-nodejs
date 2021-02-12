@@ -18,4 +18,3 @@ class Model_service_ferrand extends Model_service_1.Model_service {
     }
 }
 exports.Model_service_ferrand = Model_service_ferrand;
-//# sourceMappingURL=Model_service_ferrand.js.map

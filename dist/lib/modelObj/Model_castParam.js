@@ -24,4 +24,3 @@ class Model_castParam extends utils_1.Base {
     }
 }
 exports.Model_castParam = Model_castParam;
-//# sourceMappingURL=Model_castParam.js.map

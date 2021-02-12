@@ -36,4 +36,3 @@ class Model_mail_sendgrid extends Model_mail_1.Model_mail {
     }
 }
 exports.Model_mail_sendgrid = Model_mail_sendgrid;
-//# sourceMappingURL=Model_mail_sendgrid.js.map

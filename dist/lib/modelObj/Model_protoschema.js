@@ -47,4 +47,3 @@ class Model_protoschema extends utils_1.Base {
     }
 }
 exports.Model_protoschema = Model_protoschema;
-//# sourceMappingURL=Model_protoschema.js.map

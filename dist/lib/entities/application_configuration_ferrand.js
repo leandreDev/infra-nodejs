@@ -125,4 +125,3 @@ class Entity_application_configuration_ferrand extends application_configuration
     }
 }
 exports.Entity_application_configuration_ferrand = Entity_application_configuration_ferrand;
-//# sourceMappingURL=application_configuration_ferrand.js.map

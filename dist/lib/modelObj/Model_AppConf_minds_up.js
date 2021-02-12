@@ -73,4 +73,3 @@ class Model_AppConf_minds_up extends Model_application_configuration_1.Model_app
     }
 }
 exports.Model_AppConf_minds_up = Model_AppConf_minds_up;
-//# sourceMappingURL=Model_AppConf_minds_up.js.map
