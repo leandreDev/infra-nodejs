@@ -1,0 +1,36 @@
+on: 
+  push
+name: Standard Pipeline
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - 14.x
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          persist-credentials: false
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Npm install
+        run: |
+          git config --global url."https://${{ secrets.LEANDRE_DEV_AUTH_TOKEN }}@github.com/".insteadOf ssh://git@github.com/
+          npm run u
+          npm ci
+     
+      - name: Npm Build
+        run: |
+          npm build
+
