@@ -11,7 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-
+        with:
+          persist-credentials: false
       - name: Cache node modules
         uses: actions/cache@v1
         with:
@@ -25,10 +26,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Npm install
         run: |
+          git config --global url."https://${{ secrets.LEANDRE_DEV_AUTH_TOKEN }}@github.com/".insteadOf ssh://git@github.com/
           npm ci
-      - name: Test
-        run: |
-          npm run testing
+     
       - name: Npm Build
         run: |
           npm build
