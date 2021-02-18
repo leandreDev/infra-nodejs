@@ -27,6 +27,7 @@ jobs:
       - name: Npm install
         run: |
           git config --global url."https://${{ secrets.LEANDRE_DEV_AUTH_TOKEN }}@github.com/".insteadOf ssh://git@github.com/
+          npm run u
           npm ci
      
       - name: Npm Build

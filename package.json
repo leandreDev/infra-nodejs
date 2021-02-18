@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "testing": "node dist/test.js",
-    "u": "npm update @hfdev/*"
+    "u": "npm update @leandreDev/*"
   },
   "repository": {
     "type": "git",
