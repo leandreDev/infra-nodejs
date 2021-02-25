@@ -29,16 +29,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HF-dev/infra-nodejs.git"
+    "url": "git+https://github.com/leandreDev/infra-nodejs.git"
   },
   "author": "hf-dev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HF-dev/infra-nodejs/issues"
+    "url": "https://github.com/leandreDev/infra-nodejs/issues"
   },
-  "homepage": "https://github.com/HF-dev/infra-nodejs#readme",
+  "homepage": "https://github.com/leandreDev/infra-nodejs#readme",
   "peerDependencies": {
-    "@hfdev/utils": "github:hf-dev/utils#semver:^1.0.148"
+    "@hfdev/utils": "github:leandreDev/utils#semver:^1.0.148"
   },
   "devDependencies": {
     "@types/assert": "0.0.31",
