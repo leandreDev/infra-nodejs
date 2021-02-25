@@ -1,4 +1,4 @@
-import { IHttpServiceBase, IHttpServiceAdminBase, IHttpResult } from "@hfdev/utils";
+import { IHttpServiceBase, IHttpServiceAdminBase, IHttpResult } from "@leandredev/utils";
 import * as Interfaces from "../../lib/modelObj/Interfaces";
 /**
     accès à la vue :Client     retourne la donnée du client connecté

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Model_application_instance = void 0;
 const _ = require("lodash");
-const utils_1 = require("@hfdev/utils");
+const utils_1 = require("@leandredev/utils");
 /**
   c'est le couple application configuration
 */

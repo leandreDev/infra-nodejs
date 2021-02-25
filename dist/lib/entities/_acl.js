@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Entity__acl = void 0;
 const _ = require("lodash");
 const Index = require("./Index");
-const utils_1 = require("@hfdev/utils");
+const utils_1 = require("@leandredev/utils");
 /**
   Acl d'un enregistrement
 */

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Model__view = void 0;
 const _ = require("lodash");
-const utils_1 = require("@hfdev/utils");
+const utils_1 = require("@leandredev/utils");
 /**
   créer des pipe d'agrégation intérogeable https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/
 */

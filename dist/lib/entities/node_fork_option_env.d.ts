@@ -1,4 +1,4 @@
-import { Entity } from "@hfdev/utils";
+import { Entity } from "@leandredev/utils";
 /**
   les paramètres d’environnement a passer aux sous-processus
 */

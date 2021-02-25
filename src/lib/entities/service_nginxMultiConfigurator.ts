@@ -1,6 +1,6 @@
 import * as _ from "lodash" ;
 import * as Index from "./Index" ;
-import {mongo , Entity} from "@hfdev/utils" ;
+import {mongo , Entity} from "@leandredev/utils" ;
 
 
 import {Entity_service_nginxConfigurator } from "./service_nginxConfigurator"

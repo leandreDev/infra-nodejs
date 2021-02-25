@@ -1,4 +1,4 @@
-import { Entity } from "@hfdev/utils";
+import { Entity } from "@leandredev/utils";
 /**
   décrit les régles de paramètre des servies
 */

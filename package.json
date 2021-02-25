@@ -17,7 +17,7 @@
     "vPatch": "npm --no-git-tag-version version patch && npm run pub",
     "postversion": "export minorTag=$(node -e \"console.log(process.env.npm_package_version.split('.')[1]);\") && export majorTag=$(node -e \"console.log(process.env.npm_package_version.split('.')[0]);\") && git tag -f dev_$majorTag &&  git tag -f dev_$majorTag.$minorTag && git tag dev_$npm_package_version && git add -A && git commit -m 'dev_$npm_package_version' && git push && git push -f --tags ",
     "publi": "npm run build && npm run vPatch",
-    "u": "npm update @leandreDev/*"
+    "u": "npm update @leandredev/*"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
   },
   "peerDependenciesMeta": {},
   "devDependencies": {
-    "@leandreDev/utils": "github:leandreDev/utils#semver:^1.0.148",
+    "@leandredev/utils": "github:leandreDev/utils#semver:^1.0.148",
     "@types/assert": "0.0.31",
     "@types/fs-extra": "^3.0.3",
     "@types/lodash": "^4.14.66",

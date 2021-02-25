@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Entity_mongo_expression = void 0;
 const Index = require("./Index");
-const utils_1 = require("@hfdev/utils");
+const utils_1 = require("@leandredev/utils");
 /**
   mongo_expression
 */
