@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/leandreDev/infra-nodejs#readme",
   "peerDependencies": {
-    "@hfdev/utils": "github:leandreDev/utils#semver:^1.0.148"
+    "@leandredev/utils": "github:leandreDev/utils#semver:^1.0.148"
   },
   "devDependencies": {
     "@types/assert": "0.0.31",
