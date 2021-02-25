@@ -272,8 +272,8 @@ export interface IPlateforme {
 
 		 
 		 
-		application_configuration_qbp: IHttpServiceBase<Interfaces.Iapplication_configuration_qbp> ;
-		admin_application_configuration_qbp: IHttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp>  ;
+		application_configuration_qbp_admin: IHttpServiceBase<Interfaces.Iapplication_configuration_qbp_admin> ;
+		admin_application_configuration_qbp_admin: IHttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp_admin>  ;
 
 		 
 		 
@@ -282,8 +282,8 @@ export interface IPlateforme {
 
 		 
 		 
-		application_configuration_qbp_admin: IHttpServiceBase<Interfaces.Iapplication_configuration_qbp_admin> ;
-		admin_application_configuration_qbp_admin: IHttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp_admin>  ;
+		application_configuration_qbp: IHttpServiceBase<Interfaces.Iapplication_configuration_qbp> ;
+		admin_application_configuration_qbp: IHttpServiceAdminBase<Interfaces.Iapplication_configuration_qbp>  ;
 
 		 
 	

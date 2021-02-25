@@ -1733,30 +1733,37 @@
    
 
     /**
-    interface de la class application_configuration_qbp 
-    description config qbp
+    interface de la class application_configuration_qbp_admin 
+    description config qbp admin
    */
-    export class application_configuration_qbp extends   Iapplication_configuration{
+    export class application_configuration_qbp_admin extends   Iapplication_configuration{
         
               /**
-               *url du service client de qbp 
-               */
-              
-               "qbpCustomerApi"?:string;
-              
-       
-              /**
-               *url de lapi de bdd qbp 
+               *url de la bdd 
                */
               
                "qbpBddUrl"?:string;
               
        
               /**
-               *url du service fso qbp 
+               *url du service qbp 
                */
               
-               "qbpFsoUrl"?:string;
+               "qbpAdminService"?:string;
+              
+       
+              /**
+               *url du service fso 
+               */
+              
+               "fsoUrl"?:string;
+              
+       
+              /**
+               *données de configuration de mangopay 
+               */
+              
+              "mangoConf"?:IMangoConf;
               
        
    }
@@ -1787,7 +1794,14 @@
                *url du service de fso 
                */
               
-               "qbpFsoUrl"?:string;
+               "fsoUrl"?:string;
+              
+       
+              /**
+               *données de configuration de mangopay 
+               */
+              
+              "mangoConf"?:IMangoConf;
               
        
    }
@@ -1795,30 +1809,37 @@
    
 
     /**
-    interface de la class application_configuration_qbp_admin 
-    description config qbp admin
+    interface de la class application_configuration_qbp 
+    description config qbp
    */
-    export class application_configuration_qbp_admin extends   Iapplication_configuration{
+    export class application_configuration_qbp extends   Iapplication_configuration{
         
               /**
-               *url de la bdd 
+               *url du service client de qbp 
+               */
+              
+               "qbpCustomerApi"?:string;
+              
+       
+              /**
+               *url de lapi de bdd qbp 
                */
               
                "qbpBddUrl"?:string;
               
        
               /**
-               *url du service qbp 
+               *url du service fso qbp 
                */
               
-               "qbpAdminService"?:string;
+               "fsoUrl"?:string;
               
        
               /**
-               *url du service fso 
+               *données de l'api mangopay 
                */
               
-               "qbpFsoUrl"?:string;
+              "mangoConf"?:IMangoConf;
               
        
    }

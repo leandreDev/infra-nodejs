@@ -22,6 +22,7 @@ export declare class Entity_QBP_service extends Entity_service {
     static checksellerSso_Client_template(val: any, path?: string): string[];
     static checksellerEndClientTemplate(val: any, path?: string): string[];
     static checksellerAppInstanceTemplate(val: any, path?: string): string[];
+    static checkmangoConf(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

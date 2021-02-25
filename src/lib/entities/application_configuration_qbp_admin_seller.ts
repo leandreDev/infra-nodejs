@@ -41,10 +41,21 @@ export class Entity_application_configuration_qbp_admin_seller extends   Entity_
         
     
         
-        if(obj["qbpFsoUrl"] != undefined){
+        if(obj["fsoUrl"] != undefined){
           
-           obj["qbpFsoUrl"] = obj["qbpFsoUrl"].toString() ;
+           obj["fsoUrl"] = obj["fsoUrl"].toString() ;
            
+        }
+        
+    
+        
+        if(obj["mangoConf"] != undefined){
+          
+           
+              Index.Entity_MangoConf.cast(obj["mangoConf"]) ;
+              //602e35837d6c5b63b790117e
+            
+          
         }
         
     
@@ -107,7 +118,7 @@ public static checkqbpBddUrl(val:any, path:string =null):string[]{
        
  
 
-public static checkqbpFsoUrl(val:any, path:string =null):string[]{
+public static checkfsoUrl(val:any, path:string =null):string[]{
          if(val == null){
             return null ;
          }
@@ -122,6 +133,40 @@ public static checkqbpFsoUrl(val:any, path:string =null):string[]{
          
 
         
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkmangoConf(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+         
+
+         
+
+        
+        
+          let result:string[] ;
+          if( val._class ){
+            result = Index['Entity_' + val._class].check(val , false , path  ) ;
+          }else{
+            result = Index.Entity_MangoConf.check(val , false , path  ) ;
+            //602e35837d6c5b63b790117e
+
+          }
+          res = [...res , ...result] ;
         
           if(res.length === 0){
             return null ;
@@ -178,10 +223,27 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
 
               
 
-              if(target.qbpFsoUrl != null && target.qbpFsoUrl != undefined ){
+              if(target.fsoUrl != null && target.fsoUrl != undefined ){
                 
                 
-                res = Entity_application_configuration_qbp_admin_seller.checkqbpFsoUrl(target.qbpFsoUrl , `${path}.qbpFsoUrl`) ;
+                res = Entity_application_configuration_qbp_admin_seller.checkfsoUrl(target.fsoUrl , `${path}.fsoUrl`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.mangoConf != null && target.mangoConf != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp_admin_seller.checkmangoConf(target.mangoConf , `${path}.mangoConf`) ;
                 if(res && res.length > 0){
                   err = [...err , ...res] ;
                 }               
@@ -244,7 +306,7 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
-            case 'qbpFsoUrl':
+            case 'fsoUrl':
               //string
               
               
@@ -254,6 +316,23 @@ public static castQueryParam(path: string, value: any): any {
               
               
               return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'mangoConf':
+              //subdoc
+              
+              if(value._class){
+                return  Index['Entity_'+value._class].castQueryParam(subPath , value) ;
+              }else{
+                return Index.Entity_MangoConf.castQueryParam(subPath ,value) ;
+              }
+              
+              
+              
+              
+              
+              
               
             break;
           
@@ -300,11 +379,21 @@ public static getClassNameOfProp(path:string):string{
        
       
       
-      case 'qbpFsoUrl':
+      case 'fsoUrl':
        
              return null ;
        
         
+       
+      
+      
+      case 'mangoConf':
+       
+        
+              
+             return Index.Entity_MangoConf.getClassNameOfProp(subPath) ;
+              
+       
        
       
       

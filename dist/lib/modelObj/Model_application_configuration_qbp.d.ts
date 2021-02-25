@@ -20,5 +20,9 @@ url de lapi de bdd qbp
     /**
 url du service fso qbp
 */
-    "qbpFsoUrl"?: string;
+    "fsoUrl"?: string;
+    /**
+données de l'api mangopay
+*/
+    "mangoConf"?: Interface.IMangoConf;
 }

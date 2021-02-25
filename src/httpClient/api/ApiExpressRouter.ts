@@ -3960,10 +3960,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
 		
 		 
 		 
-        router.get('/collection/application_configuration_qbp/*' , (req , res)=>{
+        router.get('/collection/application_configuration_qbp_admin/*' , (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.application_configuration_qbp.get( req.params[0])
+                return bdd_plateforme.collections.application_configuration_qbp_admin.get( req.params[0])
                 })
                 .then(data => {
                 res.send(data);
@@ -3973,10 +3973,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
                 });
         })
 
-        router.post('/collection/application_configuration_qbp/*' , parseBody , (req , res)=>{
+        router.post('/collection/application_configuration_qbp_admin/*' , parseBody , (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.application_configuration_qbp.post(req.body, req.params[0])
+                return bdd_plateforme.collections.application_configuration_qbp_admin.post(req.body, req.params[0])
                 })
                 .then(data => {
                 res.send(data);
@@ -3986,10 +3986,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
                 });
         })
 
-        router.put('/collection/application_configuration_qbp/*' , parseBody , (req , res)=>{
+        router.put('/collection/application_configuration_qbp_admin/*' , parseBody , (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.application_configuration_qbp.put(req.body, req.params[0])
+                return bdd_plateforme.collections.application_configuration_qbp_admin.put(req.body, req.params[0])
                 })
                 .then(data => {
                 res.send(data);
@@ -3999,10 +3999,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
                 });
         })
 
-        router.patch('/collection/application_configuration_qbp' , parseBody , (req , res)=>{
+        router.patch('/collection/application_configuration_qbp_admin' , parseBody , (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.application_configuration_qbp.patch(req.body)
+                return bdd_plateforme.collections.application_configuration_qbp_admin.patch(req.body)
                 })
                 .then(data => {
                 res.send(data);
@@ -4012,10 +4012,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
                 });
         })
 
-        router.delete('/collection/application_configuration_qbp/:id' ,  (req , res)=>{
+        router.delete('/collection/application_configuration_qbp_admin/:id' ,  (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.application_configuration_qbp.delete(req.params.id)
+                return bdd_plateforme.collections.application_configuration_qbp_admin.delete(req.params.id)
                 })
                 .then(data => {
                 res.send(data);
@@ -4027,10 +4027,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
             
 		
 
-        router.patch('/admin/application_configuration_qbp/*' , parseBody , (req , res)=>{
+        router.patch('/admin/application_configuration_qbp_admin/*' , parseBody , (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.admin_application_configuration_qbp.patch(req.body, req.params[0])
+                return bdd_plateforme.collections.admin_application_configuration_qbp_admin.patch(req.body, req.params[0])
                 })
                 .then(data => {
                 res.send(data);
@@ -4040,10 +4040,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
                 });
         })
 
-        router.delete('/admin/application_configuration_qbp/*' ,  (req , res)=>{
+        router.delete('/admin/application_configuration_qbp_admin/*' ,  (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.admin_application_configuration_qbp.delete(req.params[0])
+                return bdd_plateforme.collections.admin_application_configuration_qbp_admin.delete(req.params[0])
                 })
                 .then(data => {
                 res.send(data);
@@ -4154,10 +4154,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
 		
 		 
 		 
-        router.get('/collection/application_configuration_qbp_admin/*' , (req , res)=>{
+        router.get('/collection/application_configuration_qbp/*' , (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.application_configuration_qbp_admin.get( req.params[0])
+                return bdd_plateforme.collections.application_configuration_qbp.get( req.params[0])
                 })
                 .then(data => {
                 res.send(data);
@@ -4167,10 +4167,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
                 });
         })
 
-        router.post('/collection/application_configuration_qbp_admin/*' , parseBody , (req , res)=>{
+        router.post('/collection/application_configuration_qbp/*' , parseBody , (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.application_configuration_qbp_admin.post(req.body, req.params[0])
+                return bdd_plateforme.collections.application_configuration_qbp.post(req.body, req.params[0])
                 })
                 .then(data => {
                 res.send(data);
@@ -4180,10 +4180,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
                 });
         })
 
-        router.put('/collection/application_configuration_qbp_admin/*' , parseBody , (req , res)=>{
+        router.put('/collection/application_configuration_qbp/*' , parseBody , (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.application_configuration_qbp_admin.put(req.body, req.params[0])
+                return bdd_plateforme.collections.application_configuration_qbp.put(req.body, req.params[0])
                 })
                 .then(data => {
                 res.send(data);
@@ -4193,10 +4193,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
                 });
         })
 
-        router.patch('/collection/application_configuration_qbp_admin' , parseBody , (req , res)=>{
+        router.patch('/collection/application_configuration_qbp' , parseBody , (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.application_configuration_qbp_admin.patch(req.body)
+                return bdd_plateforme.collections.application_configuration_qbp.patch(req.body)
                 })
                 .then(data => {
                 res.send(data);
@@ -4206,10 +4206,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
                 });
         })
 
-        router.delete('/collection/application_configuration_qbp_admin/:id' ,  (req , res)=>{
+        router.delete('/collection/application_configuration_qbp/:id' ,  (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.application_configuration_qbp_admin.delete(req.params.id)
+                return bdd_plateforme.collections.application_configuration_qbp.delete(req.params.id)
                 })
                 .then(data => {
                 res.send(data);
@@ -4221,10 +4221,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
             
 		
 
-        router.patch('/admin/application_configuration_qbp_admin/*' , parseBody , (req , res)=>{
+        router.patch('/admin/application_configuration_qbp/*' , parseBody , (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.admin_application_configuration_qbp_admin.patch(req.body, req.params[0])
+                return bdd_plateforme.collections.admin_application_configuration_qbp.patch(req.body, req.params[0])
                 })
                 .then(data => {
                 res.send(data);
@@ -4234,10 +4234,10 @@ var toJsonRes:Function = currentApp.toJsonRes ;
                 });
         })
 
-        router.delete('/admin/application_configuration_qbp_admin/*' ,  (req , res)=>{
+        router.delete('/admin/application_configuration_qbp/*' ,  (req , res)=>{
                 Promise.resolve()
                 .then(() => {
-                return bdd_plateforme.collections.admin_application_configuration_qbp_admin.delete(req.params[0])
+                return bdd_plateforme.collections.admin_application_configuration_qbp.delete(req.params[0])
                 })
                 .then(data => {
                 res.send(data);

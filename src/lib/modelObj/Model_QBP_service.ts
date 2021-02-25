@@ -186,6 +186,18 @@ export class Model_QBP_service extends   Model_service   implements Interface.IQ
         }
         
     
+        
+        if(obj["mangoConf"] != undefined){
+          
+            if(obj["mangoConf"]._class){
+              this["mangoConf"] =  new Index[obj["mangoConf"]._class](obj["mangoConf"]) ;
+            }else{
+              this["mangoConf"] =  new Index["MangoConf"](obj["mangoConf"]) ;
+            }
+          
+        }
+        
+    
   }
   
 
@@ -298,6 +310,12 @@ export class Model_QBP_service extends   Model_service   implements Interface.IQ
         template de l application instance du vendeur
         */
                public "sellerAppInstanceTemplate"?:string ;
+              
+       
+              /**
+        données de configuration de mangopay
+        */
+               public "mangoConf"?:Interface.IMangoConf;
               
        
 

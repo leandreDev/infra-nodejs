@@ -99,6 +99,10 @@ class Entity_QBP_service extends service_1.Entity_service {
                 obj["sellerAppInstanceTemplate"] = new utils_1.mongo.ObjectId(obj["sellerAppInstanceTemplate"]._id);
             }
         }
+        if (obj["mangoConf"] != undefined) {
+            Index.Entity_MangoConf.cast(obj["mangoConf"]);
+            //602e35837d6c5b63b790117e
+        }
     }
     static checkQbpBddUrl(val, path = null) {
         if (val == null) {
@@ -334,6 +338,27 @@ class Entity_QBP_service extends service_1.Entity_service {
             return res;
         }
     }
+    static checkmangoConf(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        let result;
+        if (val._class) {
+            result = Index['Entity_' + val._class].check(val, false, path);
+        }
+        else {
+            result = Index.Entity_MangoConf.check(val, false, path);
+            //602e35837d6c5b63b790117e
+        }
+        res = [...res, ...result];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -449,6 +474,12 @@ class Entity_QBP_service extends service_1.Entity_service {
                 err = [...err, ...res];
             }
         }
+        if (target.mangoConf != null && target.mangoConf != undefined) {
+            res = Entity_QBP_service.checkmangoConf(target.mangoConf, `${path}.mangoConf`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
         return err;
     }
     static castQueryParam(path, value) {
@@ -544,6 +575,15 @@ class Entity_QBP_service extends service_1.Entity_service {
                 //objectid
                 return new utils_1.mongo.ObjectId(value);
                 break;
+            case 'mangoConf':
+                //subdoc
+                if (value._class) {
+                    return Index['Entity_' + value._class].castQueryParam(subPath, value);
+                }
+                else {
+                    return Index.Entity_MangoConf.castQueryParam(subPath, value);
+                }
+                break;
             default:
                 return service_1.Entity_service.castQueryParam(key, value);
                 break;
@@ -603,6 +643,8 @@ class Entity_QBP_service extends service_1.Entity_service {
                 return 'end_client';
             case 'sellerAppInstanceTemplate':
                 return 'application_instance';
+            case 'mangoConf':
+                return Index.Entity_MangoConf.getClassNameOfProp(subPath);
             default:
                 return service_1.Entity_service.getClassNameOfProp(key);
                 break;

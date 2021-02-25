@@ -3,59 +3,70 @@ import * as Index from "./Index" ;
 import {mongo , Entity} from "@hfdev/utils" ;
 
 
-import {Entity_application_configuration } from "./application_configuration"
-
 
 /**
-  config qbp
+  Données de configuration
 */
-export class Entity_application_configuration_qbp extends   Entity_application_configuration    {
+export class Entity_MangoConf extends  Entity   {
 
 
 
    
   static cast(obj:any={} , castChildClass:boolean=false){
     
-    if((!castChildClass) && obj._class && obj._class != 'application_configuration_qbp' && [].indexOf(obj._class)!==-1){
+    if((!castChildClass) && obj._class && obj._class != 'MangoConf' && [].indexOf(obj._class)!==-1){
        Index['Entity_' + obj._class].cast(obj , true) ;
        return ;
     }
     
-    Entity_application_configuration.cast(obj , true)
+    Entity.cast(obj, true) 
     
     
         
-        if(obj["qbpCustomerApi"] != undefined){
+        if(obj["clientId"] != undefined){
           
-           obj["qbpCustomerApi"] = obj["qbpCustomerApi"].toString() ;
+           obj["clientId"] = obj["clientId"].toString() ;
            
         }
         
     
         
-        if(obj["qbpBddUrl"] != undefined){
+        if(obj["version"] != undefined){
           
-           obj["qbpBddUrl"] = obj["qbpBddUrl"].toString() ;
+           obj["version"] = obj["version"].toString() ;
            
         }
         
     
         
-        if(obj["fsoUrl"] != undefined){
+        if(obj["apiKey"] != undefined){
           
-           obj["fsoUrl"] = obj["fsoUrl"].toString() ;
+           obj["apiKey"] = obj["apiKey"].toString() ;
            
         }
         
     
         
-        if(obj["mangoConf"] != undefined){
+        if(obj["serverUrl"] != undefined){
           
+           obj["serverUrl"] = obj["serverUrl"].toString() ;
            
-              Index.Entity_MangoConf.cast(obj["mangoConf"]) ;
-              //602e35837d6c5b63b790117e
-            
+        }
+        
+    
+        
+        if(obj["paymentRedirectUrl"] != undefined){
           
+           obj["paymentRedirectUrl"] = obj["paymentRedirectUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["clientUserId"] != undefined){
+          
+           obj["clientUserId"] = obj["clientUserId"].toString() ;
+           
         }
         
     
@@ -64,7 +75,7 @@ export class Entity_application_configuration_qbp extends   Entity_application_c
 
  
 
-public static checkqbpCustomerApi(val:any, path:string =null):string[]{
+public static checkclientId(val:any, path:string =null):string[]{
          if(val == null){
             return null ;
          }
@@ -91,7 +102,7 @@ public static checkqbpCustomerApi(val:any, path:string =null):string[]{
        
  
 
-public static checkqbpBddUrl(val:any, path:string =null):string[]{
+public static checkversion(val:any, path:string =null):string[]{
          if(val == null){
             return null ;
          }
@@ -118,7 +129,7 @@ public static checkqbpBddUrl(val:any, path:string =null):string[]{
        
  
 
-public static checkfsoUrl(val:any, path:string =null):string[]{
+public static checkapiKey(val:any, path:string =null):string[]{
          if(val == null){
             return null ;
          }
@@ -145,28 +156,75 @@ public static checkfsoUrl(val:any, path:string =null):string[]{
        
  
 
-public static checkmangoConf(val:any, path:string =null):string[]{
+public static checkserverUrl(val:any, path:string =null):string[]{
          if(val == null){
             return null ;
          }
          let res:string[] = [] ;
          
          
+          
+          
+         
          
 
          
 
         
         
-          let result:string[] ;
-          if( val._class ){
-            result = Index['Entity_' + val._class].check(val , false , path  ) ;
+          if(res.length === 0){
+            return null ;
           }else{
-            result = Index.Entity_MangoConf.check(val , false , path  ) ;
-            //602e35837d6c5b63b790117e
-
+            return res ;
           }
-          res = [...res , ...result] ;
+        }
+
+
+       
+ 
+
+public static checkpaymentRedirectUrl(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkclientUserId(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
         
           if(res.length === 0){
             return null ;
@@ -183,16 +241,83 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
         var err:string[]  = []; 
         let res:string[] ;
         
-          err = Entity_application_configuration.check(target, isCompleteObj , path) ;
+          
           
               
 
               
+              if( isCompleteObj && (target.clientId == null || target.clientId == undefined) ){
+                err.push(path + ".clientId is required") ;
+              }
+              
 
-              if(target.qbpCustomerApi != null && target.qbpCustomerApi != undefined ){
+              if(target.clientId != null && target.clientId != undefined ){
                 
                 
-                res = Entity_application_configuration_qbp.checkqbpCustomerApi(target.qbpCustomerApi , `${path}.qbpCustomerApi`) ;
+                res = Entity_MangoConf.checkclientId(target.clientId , `${path}.clientId`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+              if( isCompleteObj && (target.version == null || target.version == undefined) ){
+                err.push(path + ".version is required") ;
+              }
+              
+
+              if(target.version != null && target.version != undefined ){
+                
+                
+                res = Entity_MangoConf.checkversion(target.version , `${path}.version`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+              if( isCompleteObj && (target.apiKey == null || target.apiKey == undefined) ){
+                err.push(path + ".apiKey is required") ;
+              }
+              
+
+              if(target.apiKey != null && target.apiKey != undefined ){
+                
+                
+                res = Entity_MangoConf.checkapiKey(target.apiKey , `${path}.apiKey`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+              if( isCompleteObj && (target.serverUrl == null || target.serverUrl == undefined) ){
+                err.push(path + ".serverUrl is required") ;
+              }
+              
+
+              if(target.serverUrl != null && target.serverUrl != undefined ){
+                
+                
+                res = Entity_MangoConf.checkserverUrl(target.serverUrl , `${path}.serverUrl`) ;
                 if(res && res.length > 0){
                   err = [...err , ...res] ;
                 }               
@@ -206,10 +331,10 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
 
               
 
-              if(target.qbpBddUrl != null && target.qbpBddUrl != undefined ){
+              if(target.paymentRedirectUrl != null && target.paymentRedirectUrl != undefined ){
                 
                 
-                res = Entity_application_configuration_qbp.checkqbpBddUrl(target.qbpBddUrl , `${path}.qbpBddUrl`) ;
+                res = Entity_MangoConf.checkpaymentRedirectUrl(target.paymentRedirectUrl , `${path}.paymentRedirectUrl`) ;
                 if(res && res.length > 0){
                   err = [...err , ...res] ;
                 }               
@@ -223,27 +348,10 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
 
               
 
-              if(target.fsoUrl != null && target.fsoUrl != undefined ){
+              if(target.clientUserId != null && target.clientUserId != undefined ){
                 
                 
-                res = Entity_application_configuration_qbp.checkfsoUrl(target.fsoUrl , `${path}.fsoUrl`) ;
-                if(res && res.length > 0){
-                  err = [...err , ...res] ;
-                }               
-                
-              }
-
-              
-              
-           
-              
-
-              
-
-              if(target.mangoConf != null && target.mangoConf != undefined ){
-                
-                
-                res = Entity_application_configuration_qbp.checkmangoConf(target.mangoConf , `${path}.mangoConf`) ;
+                res = Entity_MangoConf.checkclientUserId(target.clientUserId , `${path}.clientUserId`) ;
                 if(res && res.length > 0){
                   err = [...err , ...res] ;
                 }               
@@ -280,7 +388,7 @@ public static castQueryParam(path: string, value: any): any {
         }
         switch (key) {
           
-            case 'qbpCustomerApi':
+            case 'clientId':
               //string
               
               
@@ -293,7 +401,7 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
-            case 'qbpBddUrl':
+            case 'version':
               //string
               
               
@@ -306,7 +414,7 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
-            case 'fsoUrl':
+            case 'apiKey':
               //string
               
               
@@ -319,26 +427,48 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
-            case 'mangoConf':
-              //subdoc
-              
-              if(value._class){
-                return  Index['Entity_'+value._class].castQueryParam(subPath , value) ;
-              }else{
-                return Index.Entity_MangoConf.castQueryParam(subPath ,value) ;
-              }
+            case 'serverUrl':
+              //string
               
               
               
               
               
               
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'paymentRedirectUrl':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'clientUserId':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
               
             break;
           
          
           default:
-            return Entity_application_configuration  .castQueryParam(key, value) ;
+            return Entity.castQueryParam(key, value) ;
             break;
         }
       }
@@ -363,7 +493,7 @@ public static getClassNameOfProp(path:string):string{
         switch (key) {
           
       
-      case 'qbpCustomerApi':
+      case 'clientId':
        
              return null ;
        
@@ -371,7 +501,7 @@ public static getClassNameOfProp(path:string):string{
        
       
       
-      case 'qbpBddUrl':
+      case 'version':
        
              return null ;
        
@@ -379,7 +509,7 @@ public static getClassNameOfProp(path:string):string{
        
       
       
-      case 'fsoUrl':
+      case 'apiKey':
        
              return null ;
        
@@ -387,18 +517,32 @@ public static getClassNameOfProp(path:string):string{
        
       
       
-      case 'mangoConf':
+      case 'serverUrl':
+       
+             return null ;
        
         
-              
-             return Index.Entity_MangoConf.getClassNameOfProp(subPath) ;
-              
        
+      
+      
+      case 'paymentRedirectUrl':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'clientUserId':
+       
+             return null ;
+       
+        
        
       
       
         default:
-            return Entity_application_configuration  .getClassNameOfProp(key) ;
+            return Entity.getClassNameOfProp(key) ;
             break;
         }
        

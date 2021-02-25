@@ -192,6 +192,17 @@ export class Entity_QBP_service extends   Entity_service    {
         }
         
     
+        
+        if(obj["mangoConf"] != undefined){
+          
+           
+              Index.Entity_MangoConf.cast(obj["mangoConf"]) ;
+              //602e35837d6c5b63b790117e
+            
+          
+        }
+        
+    
   }
 
 
@@ -689,6 +700,40 @@ public static checksellerAppInstanceTemplate(val:any, path:string =null):string[
        
  
 
+public static checkmangoConf(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+         
+
+         
+
+        
+        
+          let result:string[] ;
+          if( val._class ){
+            result = Index['Entity_' + val._class].check(val , false , path  ) ;
+          }else{
+            result = Index.Entity_MangoConf.check(val , false , path  ) ;
+            //602e35837d6c5b63b790117e
+
+          }
+          res = [...res , ...result] ;
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -1005,6 +1050,23 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
               
               
            
+              
+
+              
+
+              if(target.mangoConf != null && target.mangoConf != undefined ){
+                
+                
+                res = Entity_QBP_service.checkmangoConf(target.mangoConf , `${path}.mangoConf`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -1266,6 +1328,23 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'mangoConf':
+              //subdoc
+              
+              if(value._class){
+                return  Index['Entity_'+value._class].castQueryParam(subPath , value) ;
+              }else{
+                return Index.Entity_MangoConf.castQueryParam(subPath ,value) ;
+              }
+              
+              
+              
+              
+              
+              
+              
+            break;
+          
          
           default:
             return Entity_service  .castQueryParam(key, value) ;
@@ -1435,6 +1514,16 @@ public static getClassNameOfProp(path:string):string{
        
               return 'application_instance' ;
               
+      
+      
+      case 'mangoConf':
+       
+        
+              
+             return Index.Entity_MangoConf.getClassNameOfProp(subPath) ;
+              
+       
+       
       
       
         default:

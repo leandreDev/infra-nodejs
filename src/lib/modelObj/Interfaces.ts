@@ -6104,6 +6104,92 @@
    }
 
     /**
+    interface de la class MangoConf 
+    description Données de configuration
+   */
+    export interface IMangoConf extends  IBase {
+        
+              /**
+               *Identifiant client spécifié au moment de l'activation de compte mango 
+               */
+              
+               "clientId":string;
+              
+       
+              /**
+               *API MangoPay Version 
+               */
+              
+               "version":string;
+              
+       
+              /**
+               *Clé secrète de l'API communiquée à l'activation de compte 
+               */
+              
+               "apiKey":string;
+              
+       
+              /**
+               *url de base de l'api mango 
+               */
+              
+               "serverUrl":string;
+              
+       
+              /**
+               *url de redirection après paiement 
+               */
+              
+               "paymentRedirectUrl"?:string;
+              
+       
+              /**
+               *UserId propriétaire de l'instance mangopay 
+               */
+              
+               "clientUserId"?:string;
+              
+       
+   }
+
+    /**
+    interface de la class application_configuration_qbp_admin 
+    description config qbp admin
+   */
+    export interface Iapplication_configuration_qbp_admin extends   Iapplication_configuration{
+        
+              /**
+               *url de la bdd 
+               */
+              
+               "qbpBddUrl"?:string;
+              
+       
+              /**
+               *url du service qbp 
+               */
+              
+               "qbpAdminService"?:string;
+              
+       
+              /**
+               *url du service fso 
+               */
+              
+               "fsoUrl"?:string;
+              
+       
+              /**
+               *données de configuration de mangopay 
+               */
+              
+              "mangoConf"?:IMangoConf;
+              
+       
+   }
+
+    /**
     interface de la class QBP_service 
     description service métier de QBP
    */
@@ -6235,33 +6321,11 @@
                "sellerAppInstanceTemplate"?:string;
               
        
-   }
-
-    /**
-    interface de la class application_configuration_qbp 
-    description config qbp
-   */
-    export interface Iapplication_configuration_qbp extends   Iapplication_configuration{
-        
               /**
-               *url du service client de qbp 
+               *données de configuration de mangopay 
                */
               
-               "qbpCustomerApi"?:string;
-              
-       
-              /**
-               *url de lapi de bdd qbp 
-               */
-              
-               "qbpBddUrl"?:string;
-              
-       
-              /**
-               *url du service fso qbp 
-               */
-              
-               "qbpFsoUrl"?:string;
+              "mangoConf"?:IMangoConf;
               
        
    }
@@ -6290,36 +6354,50 @@
                *url du service de fso 
                */
               
-               "qbpFsoUrl"?:string;
+               "fsoUrl"?:string;
+              
+       
+              /**
+               *données de configuration de mangopay 
+               */
+              
+              "mangoConf"?:IMangoConf;
               
        
    }
 
     /**
-    interface de la class application_configuration_qbp_admin 
-    description config qbp admin
+    interface de la class application_configuration_qbp 
+    description config qbp
    */
-    export interface Iapplication_configuration_qbp_admin extends   Iapplication_configuration{
+    export interface Iapplication_configuration_qbp extends   Iapplication_configuration{
         
               /**
-               *url de la bdd 
+               *url du service client de qbp 
+               */
+              
+               "qbpCustomerApi"?:string;
+              
+       
+              /**
+               *url de lapi de bdd qbp 
                */
               
                "qbpBddUrl"?:string;
               
        
               /**
-               *url du service qbp 
+               *url du service fso qbp 
                */
               
-               "qbpAdminService"?:string;
+               "fsoUrl"?:string;
               
        
               /**
-               *url du service fso 
+               *données de l'api mangopay 
                */
               
-               "qbpFsoUrl"?:string;
+              "mangoConf"?:IMangoConf;
               
        
    }

@@ -35,10 +35,22 @@ export class Model_application_configuration_qbp extends   Model_application_con
         
     
         
-        if(obj["qbpFsoUrl"] != undefined){
+        if(obj["fsoUrl"] != undefined){
           
-           this["qbpFsoUrl"] = obj["qbpFsoUrl"].toString() ;
+           this["fsoUrl"] = obj["fsoUrl"].toString() ;
            
+        }
+        
+    
+        
+        if(obj["mangoConf"] != undefined){
+          
+            if(obj["mangoConf"]._class){
+              this["mangoConf"] =  new Index[obj["mangoConf"]._class](obj["mangoConf"]) ;
+            }else{
+              this["mangoConf"] =  new Index["MangoConf"](obj["mangoConf"]) ;
+            }
+          
         }
         
     
@@ -63,7 +75,13 @@ export class Model_application_configuration_qbp extends   Model_application_con
               /**
         url du service fso qbp
         */
-               public "qbpFsoUrl"?:string ;
+               public "fsoUrl"?:string ;
+              
+       
+              /**
+        données de l'api mangopay
+        */
+               public "mangoConf"?:Interface.IMangoConf;
               
        
 
