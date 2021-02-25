@@ -1,5 +1,5 @@
 import * as Interface from "./Interfaces";
-import { Base } from "@hfdev/utils";
+import { Base } from "@leandredev/utils";
 /**
   les paramètres d’environnement a passer aux sous-processus
 */

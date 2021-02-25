@@ -1,4 +1,4 @@
-import { IBase } from "@hfdev/utils";
+import { IBase } from "@leandredev/utils";
 export interface I {
 }
 /**
