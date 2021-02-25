@@ -81,4 +81,8 @@ template du endClient seller
 template de l application instance du vendeur
 */
     "sellerAppInstanceTemplate"?: string;
+    /**
+données de configuration de mangopay
+*/
+    "mangoConf"?: Interface.IMangoConf;
 }

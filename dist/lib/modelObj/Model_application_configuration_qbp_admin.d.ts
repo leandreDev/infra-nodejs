@@ -20,5 +20,9 @@ url du service qbp
     /**
 url du service fso
 */
-    "qbpFsoUrl"?: string;
+    "fsoUrl"?: string;
+    /**
+données de configuration de mangopay
+*/
+    "mangoConf"?: Interface.IMangoConf;
 }

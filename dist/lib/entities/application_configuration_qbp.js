@@ -19,8 +19,12 @@ class Entity_application_configuration_qbp extends application_configuration_1.E
         if (obj["qbpBddUrl"] != undefined) {
             obj["qbpBddUrl"] = obj["qbpBddUrl"].toString();
         }
-        if (obj["qbpFsoUrl"] != undefined) {
-            obj["qbpFsoUrl"] = obj["qbpFsoUrl"].toString();
+        if (obj["fsoUrl"] != undefined) {
+            obj["fsoUrl"] = obj["fsoUrl"].toString();
+        }
+        if (obj["mangoConf"] != undefined) {
+            Index.Entity_MangoConf.cast(obj["mangoConf"]);
+            //602e35837d6c5b63b790117e
         }
     }
     static checkqbpCustomerApi(val, path = null) {
@@ -47,11 +51,32 @@ class Entity_application_configuration_qbp extends application_configuration_1.E
             return res;
         }
     }
-    static checkqbpFsoUrl(val, path = null) {
+    static checkfsoUrl(val, path = null) {
         if (val == null) {
             return null;
         }
         let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkmangoConf(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        let result;
+        if (val._class) {
+            result = Index['Entity_' + val._class].check(val, false, path);
+        }
+        else {
+            result = Index.Entity_MangoConf.check(val, false, path);
+            //602e35837d6c5b63b790117e
+        }
+        res = [...res, ...result];
         if (res.length === 0) {
             return null;
         }
@@ -75,8 +100,14 @@ class Entity_application_configuration_qbp extends application_configuration_1.E
                 err = [...err, ...res];
             }
         }
-        if (target.qbpFsoUrl != null && target.qbpFsoUrl != undefined) {
-            res = Entity_application_configuration_qbp.checkqbpFsoUrl(target.qbpFsoUrl, `${path}.qbpFsoUrl`);
+        if (target.fsoUrl != null && target.fsoUrl != undefined) {
+            res = Entity_application_configuration_qbp.checkfsoUrl(target.fsoUrl, `${path}.fsoUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.mangoConf != null && target.mangoConf != undefined) {
+            res = Entity_application_configuration_qbp.checkmangoConf(target.mangoConf, `${path}.mangoConf`);
             if (res && res.length > 0) {
                 err = [...err, ...res];
             }
@@ -112,9 +143,18 @@ class Entity_application_configuration_qbp extends application_configuration_1.E
                 //string
                 return new String(value).valueOf();
                 break;
-            case 'qbpFsoUrl':
+            case 'fsoUrl':
                 //string
                 return new String(value).valueOf();
+                break;
+            case 'mangoConf':
+                //subdoc
+                if (value._class) {
+                    return Index['Entity_' + value._class].castQueryParam(subPath, value);
+                }
+                else {
+                    return Index.Entity_MangoConf.castQueryParam(subPath, value);
+                }
                 break;
             default:
                 return application_configuration_1.Entity_application_configuration.castQueryParam(key, value);
@@ -143,8 +183,10 @@ class Entity_application_configuration_qbp extends application_configuration_1.E
                 return null;
             case 'qbpBddUrl':
                 return null;
-            case 'qbpFsoUrl':
+            case 'fsoUrl':
                 return null;
+            case 'mangoConf':
+                return Index.Entity_MangoConf.getClassNameOfProp(subPath);
             default:
                 return application_configuration_1.Entity_application_configuration.getClassNameOfProp(key);
                 break;

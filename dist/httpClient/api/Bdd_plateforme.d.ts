@@ -241,11 +241,11 @@ export declare class bdd_collection_plateform {
      
         Iapplication_configuration_petit_moulin_admin      conf petit_moulin_admin
      
-        Iapplication_configuration_qbp      config qbp
+        Iapplication_configuration_qbp_admin      config qbp admin
      
         Iapplication_configuration_qbp_admin_seller      config qbp admin
      
-        Iapplication_configuration_qbp_admin      config qbp admin
+        Iapplication_configuration_qbp      config qbp
      
      
     */
@@ -385,12 +385,12 @@ export declare class bdd_collection_plateform {
     application_configuration_petit_moulin_admin: HttpServiceBddBase<Interfaces.Iapplication_configuration_petit_moulin_admin>;
     admin_application_configuration_petit_moulin_admin: HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_petit_moulin_admin>;
     /**
-    service d'accès a la sous-collection :application_configuration_qbp
-    desc: config qbp
+    service d'accès a la sous-collection :application_configuration_qbp_admin
+    desc: config qbp admin
     info: vous ne pouvez voir que ce type d'objet
    */
-    application_configuration_qbp: HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp>;
-    admin_application_configuration_qbp: HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp>;
+    application_configuration_qbp_admin: HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp_admin>;
+    admin_application_configuration_qbp_admin: HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp_admin>;
     /**
     service d'accès a la sous-collection :application_configuration_qbp_admin_seller
     desc: config qbp admin
@@ -399,12 +399,12 @@ export declare class bdd_collection_plateform {
     application_configuration_qbp_admin_seller: HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp_admin_seller>;
     admin_application_configuration_qbp_admin_seller: HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp_admin_seller>;
     /**
-    service d'accès a la sous-collection :application_configuration_qbp_admin
-    desc: config qbp admin
+    service d'accès a la sous-collection :application_configuration_qbp
+    desc: config qbp
     info: vous ne pouvez voir que ce type d'objet
    */
-    application_configuration_qbp_admin: HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp_admin>;
-    admin_application_configuration_qbp_admin: HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp_admin>;
+    application_configuration_qbp: HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp>;
+    admin_application_configuration_qbp: HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp>;
     /**
      service d'accès à la collection :application_instance
      desc: c'est le couple application configuration

@@ -87,12 +87,12 @@ class api_collection_plateform {
         this.admin_application_configuration_petit_moulin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_petit_moulin/", secure: conf.secure });
         this.application_configuration_petit_moulin_admin = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_petit_moulin_admin/", secure: conf.secure });
         this.admin_application_configuration_petit_moulin_admin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_petit_moulin_admin/", secure: conf.secure });
-        this.application_configuration_qbp = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_qbp/", secure: conf.secure });
-        this.admin_application_configuration_qbp = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_qbp/", secure: conf.secure });
-        this.application_configuration_qbp_admin_seller = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_qbp_admin_seller/", secure: conf.secure });
-        this.admin_application_configuration_qbp_admin_seller = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_qbp_admin_seller/", secure: conf.secure });
         this.application_configuration_qbp_admin = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_qbp_admin/", secure: conf.secure });
         this.admin_application_configuration_qbp_admin = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_qbp_admin/", secure: conf.secure });
+        this.application_configuration_qbp_admin_seller = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_qbp_admin_seller/", secure: conf.secure });
+        this.admin_application_configuration_qbp_admin_seller = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_qbp_admin_seller/", secure: conf.secure });
+        this.application_configuration_qbp = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_configuration_qbp/", secure: conf.secure });
+        this.admin_application_configuration_qbp = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_configuration_qbp/", secure: conf.secure });
         this.application_instance = new utils_1.HttpServiceBase({ url: conf.url + "collection/application_instance/", secure: conf.secure });
         this.admin_application_instance = new utils_1.HttpServiceAdminBase({ url: conf.url + "admin/application_instance/", secure: conf.secure });
         this.service = new utils_1.HttpServiceBase({ url: conf.url + "collection/service/", secure: conf.secure });

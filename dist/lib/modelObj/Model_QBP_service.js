@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Model_QBP_service = void 0;
 const _ = require("lodash");
+const Index = require("./Index");
 const Model_service_1 = require("./Model_service");
 /**
   service métier de QBP
@@ -95,6 +96,14 @@ class Model_QBP_service extends Model_service_1.Model_service {
             }
             else if (obj["sellerAppInstanceTemplate"]._id) {
                 this["sellerAppInstanceTemplate"] = obj["sellerAppInstanceTemplate"]._id;
+            }
+        }
+        if (obj["mangoConf"] != undefined) {
+            if (obj["mangoConf"]._class) {
+                this["mangoConf"] = new Index[obj["mangoConf"]._class](obj["mangoConf"]);
+            }
+            else {
+                this["mangoConf"] = new Index["MangoConf"](obj["mangoConf"]);
             }
         }
     }
