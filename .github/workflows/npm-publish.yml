@@ -44,19 +44,36 @@ jobs:
           echo "${{ github.event.inputs.version }}"
           echo "::set-env name=VERSION_TYPE::${{ github.event.inputs.version }}"
       - uses: actions/checkout@v2
-        with:
-          ref: dev
       - name: Setup nodejs ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Npm CI installpackage from package-lock.json
         run: |
-          git config --global url."https://${{ secrets.LEANDRE_DEV_AUTH_TOKEN }}@github.com/".insteadOf ssh://git@github.com/
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.LEANDRE_DEV_AUTH_TOKEN }}" > ~/.npmrc
           npm ci
+      - name: Npm run build
+        run: |
+          npm run build
+
+      - name: Commit new Generate files
+        run: |
+          git config  user.email "diegopatino@doprr.com"
+          git config  user.name "Diego Patino"
+          git add .
+          git commit -am "Build new Version"
+          git push
       - name: Generate new version
         run: |
           npm  version ${{ env.VERSION_TYPE}} -m"New Version %s"
+      - name: Generate new  version
+        run: |
+          npm  version ${{ env.VERSION_TYPE}} -m"New Version"
+      - name: Commit new tagged files
+        run: |
+          git config  user.email "diegopatino@doprr.com"
+          git config  user.name "Diego Patino"
+          git push --follow-tags
       - name: Publish package to npm registry
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.LEANDRE_DEV_AUTH_TOKEN }}" > ~/.npmrc
