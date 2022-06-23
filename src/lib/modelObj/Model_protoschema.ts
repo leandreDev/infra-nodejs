@@ -55,7 +55,9 @@ export class Model_protoschema extends  Base  implements Interface.Iprotoschema 
             this["parentModel"] = obj["parentModel"];
           }else if(obj["parentModel"]._id){
             this["parentModel"] = obj["parentModel"]._id ;
-          }
+          }else if((obj["parentModel"]._bsontype && (obj["parentModel"]._bsontype === 'ObjectID'){
+              this["parentModel"] = `${value}` ;
+            }
           
         }
         

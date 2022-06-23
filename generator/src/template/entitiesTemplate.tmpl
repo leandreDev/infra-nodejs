@@ -32,6 +32,8 @@ export class Entity_<%= protoSchema.name %> extends <%if(protoSchema.parentModel
               return new mongo.ObjectId(value)  ;
             }else if(value._id){
               return new mongo.ObjectId(value._id)   ;
+            }else if(value._bsontype && value._bsontype === 'ObjectID'){
+                return value ;
             }
           })
           <% }else if( field._class == "subdoc"){ %>

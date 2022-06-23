@@ -70,6 +70,22 @@ export class Entity_MangoConf extends  Entity   {
         }
         
     
+        
+        if(obj["qbpUserIdInMangoPay"] != undefined){
+          
+           obj["qbpUserIdInMangoPay"] = obj["qbpUserIdInMangoPay"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpWalletIdInMangoPay"] != undefined){
+          
+           obj["qbpWalletIdInMangoPay"] = obj["qbpWalletIdInMangoPay"].toString() ;
+           
+        }
+        
+    
   }
 
 
@@ -237,6 +253,60 @@ public static checkclientUserId(val:any, path:string =null):string[]{
        
  
 
+public static checkqbpUserIdInMangoPay(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkqbpWalletIdInMangoPay(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -361,6 +431,48 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
               
               
            
+              
+
+              
+              if( isCompleteObj && (target.qbpUserIdInMangoPay == null || target.qbpUserIdInMangoPay == undefined) ){
+                err.push(path + ".qbpUserIdInMangoPay is required") ;
+              }
+              
+
+              if(target.qbpUserIdInMangoPay != null && target.qbpUserIdInMangoPay != undefined ){
+                
+                
+                res = Entity_MangoConf.checkqbpUserIdInMangoPay(target.qbpUserIdInMangoPay , `${path}.qbpUserIdInMangoPay`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+              if( isCompleteObj && (target.qbpWalletIdInMangoPay == null || target.qbpWalletIdInMangoPay == undefined) ){
+                err.push(path + ".qbpWalletIdInMangoPay is required") ;
+              }
+              
+
+              if(target.qbpWalletIdInMangoPay != null && target.qbpWalletIdInMangoPay != undefined ){
+                
+                
+                res = Entity_MangoConf.checkqbpWalletIdInMangoPay(target.qbpWalletIdInMangoPay , `${path}.qbpWalletIdInMangoPay`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -466,6 +578,32 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'qbpUserIdInMangoPay':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'qbpWalletIdInMangoPay':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
          
           default:
             return Entity.castQueryParam(key, value) ;
@@ -534,6 +672,22 @@ public static getClassNameOfProp(path:string):string{
       
       
       case 'clientUserId':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'qbpUserIdInMangoPay':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'qbpWalletIdInMangoPay':
        
              return null ;
        

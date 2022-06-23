@@ -123,6 +123,14 @@ export class Entity_service_celio_back_task extends   Entity_service    {
         }
         
     
+        
+        if(obj["customerPrefix"] != undefined){
+          
+           obj["customerPrefix"] = obj["customerPrefix"].toString() ;
+           
+        }
+        
+    
   }
 
 
@@ -459,6 +467,33 @@ public static checkmarketingCloudApisConf(val:any, path:string =null):string[]{
        
  
 
+public static checkcustomerPrefix(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -697,6 +732,23 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
               
               
            
+              
+
+              
+
+              if(target.customerPrefix != null && target.customerPrefix != undefined ){
+                
+                
+                res = Entity_service_celio_back_task.checkcustomerPrefix(target.customerPrefix , `${path}.customerPrefix`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -884,6 +936,19 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'customerPrefix':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
          
           default:
             return Entity_service  .castQueryParam(key, value) ;
@@ -1006,6 +1071,14 @@ public static getClassNameOfProp(path:string):string{
              return Index.Entity_MarketingCloudApisConf.getClassNameOfProp(subPath) ;
               
        
+       
+      
+      
+      case 'customerPrefix':
+       
+             return null ;
+       
+        
        
       
       

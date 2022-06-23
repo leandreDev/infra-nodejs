@@ -59,6 +59,25 @@ export class Entity_application_configuration_qbp extends   Entity_application_c
         }
         
     
+        
+        if(obj["assUrl"] != undefined){
+          
+           obj["assUrl"] = obj["assUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["featuresConf"] != undefined){
+          
+           
+              Index.Entity_QbpFeaturesConfiguration.cast(obj["featuresConf"]) ;
+              //62330e74ea547cc9374f149c
+            
+          
+        }
+        
+    
   }
 
 
@@ -179,6 +198,67 @@ public static checkmangoConf(val:any, path:string =null):string[]{
        
  
 
+public static checkassUrl(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkfeaturesConf(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+         
+
+         
+
+        
+        
+          let result:string[] ;
+          if( val._class ){
+            result = Index['Entity_' + val._class].check(val , false , path  ) ;
+          }else{
+            result = Index.Entity_QbpFeaturesConfiguration.check(val , false , path  ) ;
+            //62330e74ea547cc9374f149c
+
+          }
+          res = [...res , ...result] ;
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -244,6 +324,44 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
                 
                 
                 res = Entity_application_configuration_qbp.checkmangoConf(target.mangoConf , `${path}.mangoConf`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+              if( isCompleteObj && (target.assUrl == null || target.assUrl == undefined) ){
+                err.push(path + ".assUrl is required") ;
+              }
+              
+
+              if(target.assUrl != null && target.assUrl != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp.checkassUrl(target.assUrl , `${path}.assUrl`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.featuresConf != null && target.featuresConf != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp.checkfeaturesConf(target.featuresConf , `${path}.featuresConf`) ;
                 if(res && res.length > 0){
                   err = [...err , ...res] ;
                 }               
@@ -336,6 +454,36 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'assUrl':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'featuresConf':
+              //subdoc
+              
+              if(value._class){
+                return  Index['Entity_'+value._class].castQueryParam(subPath , value) ;
+              }else{
+                return Index.Entity_QbpFeaturesConfiguration.castQueryParam(subPath ,value) ;
+              }
+              
+              
+              
+              
+              
+              
+              
+            break;
+          
          
           default:
             return Entity_application_configuration  .castQueryParam(key, value) ;
@@ -392,6 +540,24 @@ public static getClassNameOfProp(path:string):string{
         
               
              return Index.Entity_MangoConf.getClassNameOfProp(subPath) ;
+              
+       
+       
+      
+      
+      case 'assUrl':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'featuresConf':
+       
+        
+              
+             return Index.Entity_QbpFeaturesConfiguration.getClassNameOfProp(subPath) ;
               
        
        

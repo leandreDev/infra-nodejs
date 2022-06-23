@@ -64,6 +64,22 @@ export class Model_MangoConf extends  Base  implements Interface.IMangoConf {
         }
         
     
+        
+        if(obj["qbpUserIdInMangoPay"] != undefined){
+          
+           this["qbpUserIdInMangoPay"] = obj["qbpUserIdInMangoPay"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpWalletIdInMangoPay"] != undefined){
+          
+           this["qbpWalletIdInMangoPay"] = obj["qbpWalletIdInMangoPay"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -104,6 +120,18 @@ export class Model_MangoConf extends  Base  implements Interface.IMangoConf {
         UserId propriétaire de l'instance mangopay
         */
                public "clientUserId"?:string ;
+              
+       
+              /**
+        l'id d'utilisateur pour le compte QBP dans mangopay,  cette utilisatuer est celui qui reçois les fonds des différents transactions la valeur par default est celle du sandbox
+        */
+               public "qbpUserIdInMangoPay":string ="108463446";
+              
+       
+              /**
+        l'id du portefeuille virtuelle pour le compte QBP dans mangopay,  cette portefeuille est celui qui reçois les fonds des différents transactions la valeur par default est celle du sandbox
+        */
+               public "qbpWalletIdInMangoPay":string ="108463447";
               
        
 

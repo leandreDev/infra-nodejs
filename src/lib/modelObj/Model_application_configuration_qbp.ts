@@ -54,6 +54,26 @@ export class Model_application_configuration_qbp extends   Model_application_con
         }
         
     
+        
+        if(obj["assUrl"] != undefined){
+          
+           this["assUrl"] = obj["assUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["featuresConf"] != undefined){
+          
+            if(obj["featuresConf"]._class){
+              this["featuresConf"] =  new Index[obj["featuresConf"]._class](obj["featuresConf"]) ;
+            }else{
+              this["featuresConf"] =  new Index["QbpFeaturesConfiguration"](obj["featuresConf"]) ;
+            }
+          
+        }
+        
+    
   }
   
 
@@ -82,6 +102,18 @@ export class Model_application_configuration_qbp extends   Model_application_con
         données de l'api mangopay
         */
                public "mangoConf"?:Interface.IMangoConf;
+              
+       
+              /**
+        url de base de redirection vers le site des assureurs
+        */
+               public "assUrl":string ;
+              
+       
+              /**
+        liste de functionalites a activer uo pas dans le site quelbon plan , exemple {bankWire: false | true}
+        */
+               public "featuresConf"?:Interface.IQbpFeaturesConfiguration;
               
        
 

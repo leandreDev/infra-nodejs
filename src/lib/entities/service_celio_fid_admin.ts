@@ -197,6 +197,46 @@ export class Entity_service_celio_fid_admin extends   Entity_service    {
         }
         
     
+        
+        if(obj["cashRegisterCapingFidPt"] != undefined){
+          
+           obj["cashRegisterCapingFidPt"] = new Number(obj["cashRegisterCapingFidPt"]).valueOf();
+          
+        }
+        
+    
+        
+        if(obj["cashRegisterApiKey"] != undefined){
+          
+           obj["cashRegisterApiKey"] = obj["cashRegisterApiKey"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["customerPrefix"] != undefined){
+          
+           obj["customerPrefix"] = obj["customerPrefix"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["globalCappingFidPoint"] != undefined){
+          
+           obj["globalCappingFidPoint"] = new Number(obj["globalCappingFidPoint"]).valueOf();
+          
+        }
+        
+    
+        
+        if(obj["disableEmbasment"] != undefined){
+          
+           obj["disableEmbasment"] = new Boolean(obj["disableEmbasment"]).valueOf() ;
+          
+        }
+        
+    
   }
 
 
@@ -804,6 +844,156 @@ public static checkscanOrderEaBurnPageSize(val:any, path:string =null):string[]{
        
  
 
+public static checkcashRegisterCapingFidPt(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+         
+
+         
+          if( ! _.isNumber(val)){
+            res.push(`${path} is not a number`) ; 
+          }
+        
+         
+        
+
+        
+
+        
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkcashRegisterApiKey(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkcustomerPrefix(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkglobalCappingFidPoint(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+         
+
+         
+          if( ! _.isNumber(val)){
+            res.push(`${path} is not a number`) ; 
+          }
+        
+         
+        
+
+        
+
+        
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkdisableEmbasment(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+         
+
+         
+
+        
+          if( ! _.isBoolean(val)){
+            res.push(`${path}  is not a boolean`) ;   
+          }
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -1209,6 +1399,91 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
               
               
            
+              
+
+              
+
+              if(target.cashRegisterCapingFidPt != null && target.cashRegisterCapingFidPt != undefined ){
+                
+                
+                res = Entity_service_celio_fid_admin.checkcashRegisterCapingFidPt(target.cashRegisterCapingFidPt , `${path}.cashRegisterCapingFidPt`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.cashRegisterApiKey != null && target.cashRegisterApiKey != undefined ){
+                
+                
+                res = Entity_service_celio_fid_admin.checkcashRegisterApiKey(target.cashRegisterApiKey , `${path}.cashRegisterApiKey`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.customerPrefix != null && target.customerPrefix != undefined ){
+                
+                
+                res = Entity_service_celio_fid_admin.checkcustomerPrefix(target.customerPrefix , `${path}.customerPrefix`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.globalCappingFidPoint != null && target.globalCappingFidPoint != undefined ){
+                
+                
+                res = Entity_service_celio_fid_admin.checkglobalCappingFidPoint(target.globalCappingFidPoint , `${path}.globalCappingFidPoint`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.disableEmbasment != null && target.disableEmbasment != undefined ){
+                
+                
+                res = Entity_service_celio_fid_admin.checkdisableEmbasment(target.disableEmbasment , `${path}.disableEmbasment`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -1513,6 +1788,71 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'cashRegisterCapingFidPt':
+              //number
+              
+              
+              return new Number(value).valueOf() ;
+              
+              
+              
+              
+              
+              
+            break;
+          
+            case 'cashRegisterApiKey':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'customerPrefix':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'globalCappingFidPoint':
+              //number
+              
+              
+              return new Number(value).valueOf() ;
+              
+              
+              
+              
+              
+              
+            break;
+          
+            case 'disableEmbasment':
+              //boolean
+              
+              
+              
+              return new Boolean(value).valueOf() ;
+              
+              
+              
+              
+              
+            break;
+          
          
           default:
             return Entity_service  .castQueryParam(key, value) ;
@@ -1703,6 +2043,46 @@ public static getClassNameOfProp(path:string):string{
       
       
       case 'scanOrderEaBurnPageSize':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'cashRegisterCapingFidPt':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'cashRegisterApiKey':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'customerPrefix':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'globalCappingFidPoint':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'disableEmbasment':
        
              return null ;
        

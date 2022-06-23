@@ -118,6 +118,14 @@ export class Model_service_celio_back_task extends   Model_service   implements 
         }
         
     
+        
+        if(obj["customerPrefix"] != undefined){
+          
+           this["customerPrefix"] = obj["customerPrefix"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -194,6 +202,12 @@ export class Model_service_celio_back_task extends   Model_service   implements 
         MarketingCloudApisConf
         */
                public "marketingCloudApisConf"?:Interface.IMarketingCloudApisConf;
+              
+       
+              /**
+        prefixe pour le customer de chez marketingCloud
+        */
+               public "customerPrefix"?:string ;
               
        
 

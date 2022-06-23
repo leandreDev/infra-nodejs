@@ -59,6 +59,30 @@ export class Entity_application_configuration_qbp_admin_seller extends   Entity_
         }
         
     
+        
+        if(obj["orderService"] != undefined){
+          
+           obj["orderService"] = obj["orderService"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["ticketService"] != undefined){
+          
+           obj["ticketService"] = obj["ticketService"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["savService"] != undefined){
+          
+           obj["savService"] = obj["savService"].toString() ;
+           
+        }
+        
+    
   }
 
 
@@ -179,6 +203,87 @@ public static checkmangoConf(val:any, path:string =null):string[]{
        
  
 
+public static checkorderService(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkticketService(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checksavService(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -244,6 +349,57 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
                 
                 
                 res = Entity_application_configuration_qbp_admin_seller.checkmangoConf(target.mangoConf , `${path}.mangoConf`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.orderService != null && target.orderService != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp_admin_seller.checkorderService(target.orderService , `${path}.orderService`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.ticketService != null && target.ticketService != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp_admin_seller.checkticketService(target.ticketService , `${path}.ticketService`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.savService != null && target.savService != undefined ){
+                
+                
+                res = Entity_application_configuration_qbp_admin_seller.checksavService(target.savService , `${path}.savService`) ;
                 if(res && res.length > 0){
                   err = [...err , ...res] ;
                 }               
@@ -336,6 +492,45 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'orderService':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'ticketService':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'savService':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
          
           default:
             return Entity_application_configuration  .castQueryParam(key, value) ;
@@ -394,6 +589,30 @@ public static getClassNameOfProp(path:string):string{
              return Index.Entity_MangoConf.getClassNameOfProp(subPath) ;
               
        
+       
+      
+      
+      case 'orderService':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'ticketService':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'savService':
+       
+             return null ;
+       
+        
        
       
       

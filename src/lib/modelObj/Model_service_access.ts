@@ -31,7 +31,9 @@ export class Model_service_access extends  Base  implements Interface.Iservice_a
             this["service"] = obj["service"];
           }else if(obj["service"]._id){
             this["service"] = obj["service"]._id ;
-          }
+          }else if((obj["service"]._bsontype && (obj["service"]._bsontype === 'ObjectID'){
+              this["service"] = `${value}` ;
+            }
           
         }
         

@@ -46,6 +46,8 @@ export class Entity_nginxConfigurationFile extends  Entity   {
               return new mongo.ObjectId(value)  ;
             }else if(value._id){
               return new mongo.ObjectId(value._id)   ;
+            }else if(value._bsontype && value._bsontype === 'ObjectID'){
+                return value ;
             }
           })
           

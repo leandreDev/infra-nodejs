@@ -54,6 +54,22 @@ export class Model_application_configuration_qbp_admin extends   Model_applicati
         }
         
     
+        
+        if(obj["orderService"] != undefined){
+          
+           this["orderService"] = obj["orderService"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["savService"] != undefined){
+          
+           this["savService"] = obj["savService"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -82,6 +98,18 @@ export class Model_application_configuration_qbp_admin extends   Model_applicati
         données de configuration de mangopay
         */
                public "mangoConf"?:Interface.IMangoConf;
+              
+       
+              /**
+        Order Service
+        */
+               public "orderService"?:string ;
+              
+       
+              /**
+        url du end point de l api sav
+        */
+               public "savService"?:string ;
               
        
 

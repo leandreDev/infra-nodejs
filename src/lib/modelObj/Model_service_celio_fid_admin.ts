@@ -192,6 +192,46 @@ export class Model_service_celio_fid_admin extends   Model_service   implements 
         }
         
     
+        
+        if(obj["cashRegisterCapingFidPt"] != undefined){
+          
+           this["cashRegisterCapingFidPt"] = new Number(obj["cashRegisterCapingFidPt"]).valueOf();
+          
+        }
+        
+    
+        
+        if(obj["cashRegisterApiKey"] != undefined){
+          
+           this["cashRegisterApiKey"] = obj["cashRegisterApiKey"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["customerPrefix"] != undefined){
+          
+           this["customerPrefix"] = obj["customerPrefix"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["globalCappingFidPoint"] != undefined){
+          
+           this["globalCappingFidPoint"] = new Number(obj["globalCappingFidPoint"]).valueOf();
+          
+        }
+        
+    
+        
+        if(obj["disableEmbasment"] != undefined){
+          
+           this["disableEmbasment"] = new Boolean(obj["disableEmbasment"]).valueOf() ;
+          
+        }
+        
+    
   }
   
 
@@ -322,6 +362,36 @@ export class Model_service_celio_fid_admin extends   Model_service   implements 
         taille des pages scan eaBurn
         */
                public "scanOrderEaBurnPageSize"?:number =200;
+              
+       
+              /**
+        nombre maximum de point que la caisse bloque lors de ça demande
+        */
+               public "cashRegisterCapingFidPt"?:number ;
+              
+       
+              /**
+        clef d'api pour les caisses enregistreuse
+        */
+               public "cashRegisterApiKey"?:string ;
+              
+       
+              /**
+        prefix d'export pour les customerId a destination de sfmc
+        */
+               public "customerPrefix"?:string ;
+              
+       
+              /**
+        nombre maximum de point avant l’arrêt du earn
+        */
+               public "globalCappingFidPoint"?:number ;
+              
+       
+              /**
+        désactive l'embasement
+        */
+               public "disableEmbasment"?:boolean ;
               
        
 

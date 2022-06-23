@@ -231,6 +231,31 @@ export class bdd_collection_plateform  {
 
 		 
 		 
+		this.application_configuration_airport_admin= new HttpServiceBddBase<Interfaces.Iapplication_configuration_airport_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_airport_admin , _class:'application_configuration_airport_admin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_airport_admin= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_airport_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_airport_admin , _class:'application_configuration_airport_admin' , debug:conf.debug})  ;
+
+		 
+		 
+		this.application_configuration_airport= new HttpServiceBddBase<Interfaces.Iapplication_configuration_airport>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_airport , _class:'application_configuration_airport' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_airport= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_airport>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_airport , _class:'application_configuration_airport' , debug:conf.debug})  ;
+
+		 
+		 
+		this.application_configuration_boisdor= new HttpServiceBddBase<Interfaces.Iapplication_configuration_boisdor>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_boisdor , _class:'application_configuration_boisdor' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_boisdor= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_boisdor>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_boisdor , _class:'application_configuration_boisdor' , debug:conf.debug})  ;
+
+		 
+		 
+		this.application_configuration_r3= new HttpServiceBddBase<Interfaces.Iapplication_configuration_r3>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_r3 , _class:'application_configuration_r3' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_r3= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_r3>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_r3 , _class:'application_configuration_r3' , debug:conf.debug})  ;
+
+		 
+		 
+		this.application_configuration_boisdor_admin_seller= new HttpServiceBddBase<Interfaces.Iapplication_configuration_boisdor_admin_seller>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_boisdor_admin_seller , _class:'application_configuration_boisdor_admin_seller' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_boisdor_admin_seller= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_boisdor_admin_seller>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_boisdor_admin_seller , _class:'application_configuration_boisdor_admin_seller' , debug:conf.debug})  ;
+
+		 
+		 
 		this.application_configuration_qbp_admin= new HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_qbp_admin , _class:'application_configuration_qbp_admin' , debug:conf.debug ,  collections:this })  ;
 		this.admin_application_configuration_qbp_admin= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_qbp_admin , _class:'application_configuration_qbp_admin' , debug:conf.debug})  ;
 
@@ -241,8 +266,28 @@ export class bdd_collection_plateform  {
 
 		 
 		 
+		this.application_configuration_boisdor_admin= new HttpServiceBddBase<Interfaces.Iapplication_configuration_boisdor_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_boisdor_admin , _class:'application_configuration_boisdor_admin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_boisdor_admin= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_boisdor_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_boisdor_admin , _class:'application_configuration_boisdor_admin' , debug:conf.debug})  ;
+
+		 
+		 
 		this.application_configuration_qbp= new HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_qbp , _class:'application_configuration_qbp' , debug:conf.debug ,  collections:this })  ;
 		this.admin_application_configuration_qbp= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_qbp , _class:'application_configuration_qbp' , debug:conf.debug})  ;
+
+		 
+		 
+		this.application_configuration_r3_admin_seller= new HttpServiceBddBase<Interfaces.Iapplication_configuration_r3_admin_seller>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_r3_admin_seller , _class:'application_configuration_r3_admin_seller' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_r3_admin_seller= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_r3_admin_seller>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_r3_admin_seller , _class:'application_configuration_r3_admin_seller' , debug:conf.debug})  ;
+
+		 
+		 
+		this.application_configuration_r3_admin= new HttpServiceBddBase<Interfaces.Iapplication_configuration_r3_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_r3_admin , _class:'application_configuration_r3_admin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_r3_admin= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_r3_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_r3_admin , _class:'application_configuration_r3_admin' , debug:conf.debug})  ;
+
+		 
+		 
+		this.application_configuration_dcbm_static= new HttpServiceBddBase<Interfaces.Iapplication_configuration_dcbm_static>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_dcbm_static , _class:'application_configuration_dcbm_static' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_dcbm_static= new HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_dcbm_static>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_dcbm_static , _class:'application_configuration_dcbm_static' , debug:conf.debug})  ;
 
 		 
 	
@@ -433,11 +478,6 @@ export class bdd_collection_plateform  {
 
 		 
 		 
-		this.service_celio_fid= new HttpServiceBddBase<Interfaces.Iservice_celio_fid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid , _class:'service_celio_fid' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_celio_fid= new HttpServiceBddAdminBase<Interfaces.Iservice_celio_fid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid , _class:'service_celio_fid' , debug:conf.debug})  ;
-
-		 
-		 
 		this.service_celio_qcm= new HttpServiceBddBase<Interfaces.Iservice_celio_qcm>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_qcm , _class:'service_celio_qcm' , debug:conf.debug ,  collections:this })  ;
 		this.admin_service_celio_qcm= new HttpServiceBddAdminBase<Interfaces.Iservice_celio_qcm>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_qcm , _class:'service_celio_qcm' , debug:conf.debug})  ;
 
@@ -448,8 +488,23 @@ export class bdd_collection_plateform  {
 
 		 
 		 
+		this.service_airport= new HttpServiceBddBase<Interfaces.Iservice_airport>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_airport , _class:'service_airport' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_airport= new HttpServiceBddAdminBase<Interfaces.Iservice_airport>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_airport , _class:'service_airport' , debug:conf.debug})  ;
+
+		 
+		 
 		this.service_celio_back_task= new HttpServiceBddBase<Interfaces.Iservice_celio_back_task>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_back_task , _class:'service_celio_back_task' , debug:conf.debug ,  collections:this })  ;
 		this.admin_service_celio_back_task= new HttpServiceBddAdminBase<Interfaces.Iservice_celio_back_task>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_back_task , _class:'service_celio_back_task' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_celio_fid= new HttpServiceBddBase<Interfaces.Iservice_celio_fid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid , _class:'service_celio_fid' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_celio_fid= new HttpServiceBddAdminBase<Interfaces.Iservice_celio_fid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid , _class:'service_celio_fid' , debug:conf.debug})  ;
+
+		 
+		 
+		this.dpd_dervice= new HttpServiceBddBase<Interfaces.Idpd_dervice>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_dpd_dervice , _class:'dpd_dervice' , debug:conf.debug ,  collections:this })  ;
+		this.admin_dpd_dervice= new HttpServiceBddAdminBase<Interfaces.Idpd_dervice>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_dpd_dervice , _class:'dpd_dervice' , debug:conf.debug})  ;
 
 		 
 		 
@@ -458,8 +513,8 @@ export class bdd_collection_plateform  {
 
 		 
 		 
-		this.service_airport= new HttpServiceBddBase<Interfaces.Iservice_airport>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_airport , _class:'service_airport' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_airport= new HttpServiceBddAdminBase<Interfaces.Iservice_airport>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_airport , _class:'service_airport' , debug:conf.debug})  ;
+		this.boisdor_service= new HttpServiceBddBase<Interfaces.Iboisdor_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_boisdor_service , _class:'boisdor_service' , debug:conf.debug ,  collections:this })  ;
+		this.admin_boisdor_service= new HttpServiceBddAdminBase<Interfaces.Iboisdor_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_boisdor_service , _class:'boisdor_service' , debug:conf.debug})  ;
 
 		 
 		 
@@ -467,6 +522,22 @@ export class bdd_collection_plateform  {
 		this.admin_QBP_service= new HttpServiceBddAdminBase<Interfaces.IQBP_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_QBP_service , _class:'QBP_service' , debug:conf.debug})  ;
 
 		 
+		 
+		this.service_qcbm= new HttpServiceBddBase<Interfaces.Iservice_qcbm>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_qcbm , _class:'service_qcbm' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_qcbm= new HttpServiceBddAdminBase<Interfaces.Iservice_qcbm>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_qcbm , _class:'service_qcbm' , debug:conf.debug})  ;
+
+		 
+		 
+		this.r3_service= new HttpServiceBddBase<Interfaces.Ir3_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_r3_service , _class:'r3_service' , debug:conf.debug ,  collections:this })  ;
+		this.admin_r3_service= new HttpServiceBddAdminBase<Interfaces.Ir3_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_r3_service , _class:'r3_service' , debug:conf.debug})  ;
+
+		 
+	
+
+		this.bois_dor_mailer= new HttpServiceBddBase<Interfaces.Ibois_dor_mailer>( {bdd: conf.bdd , collectionName:'bois_dor_mailers', entity:Index.Entity_bois_dor_mailer , debug:conf.debug ,  collections:this }  )  ;
+		this.admin_bois_dor_mailer= new HttpServiceBddAdminBase<Interfaces.Ibois_dor_mailer>( {bdd: conf.bdd , collectionName:'bois_dor_mailers', entity:Index.Entity_bois_dor_mailer , debug:conf.debug} )  ;
+
+		
 	
 	}
 
@@ -767,11 +838,29 @@ export class bdd_collection_plateform  {
 		 
 		 	Iapplication_configuration_petit_moulin_admin      conf petit_moulin_admin
 		 
+		 	Iapplication_configuration_airport_admin      config airport
+		 
+		 	Iapplication_configuration_airport      config airport
+		 
+		 	Iapplication_configuration_boisdor      config boisdor
+		 
+		 	Iapplication_configuration_r3      config r3
+		 
+		 	Iapplication_configuration_boisdor_admin_seller      config boisdor admin
+		 
 		 	Iapplication_configuration_qbp_admin      config qbp admin
 		 
 		 	Iapplication_configuration_qbp_admin_seller      config qbp admin
 		 
+		 	Iapplication_configuration_boisdor_admin      config boisdor admin
+		 
 		 	Iapplication_configuration_qbp      config qbp
+		 
+		 	Iapplication_configuration_r3_admin_seller      config r3 admin
+		 
+		 	Iapplication_configuration_r3_admin      config r3 admin
+		 
+		 	Iapplication_configuration_dcbm_static      dcbm static
 		 
 		 
 		*/
@@ -951,6 +1040,51 @@ export class bdd_collection_plateform  {
 
 		 
 		 /**
+		 service d'accès a la sous-collection :application_configuration_airport_admin
+		 desc: config airport
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_airport_admin:HttpServiceBddBase<Interfaces.Iapplication_configuration_airport_admin> ;
+		public admin_application_configuration_airport_admin:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_airport_admin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_airport
+		 desc: config airport
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_airport:HttpServiceBddBase<Interfaces.Iapplication_configuration_airport> ;
+		public admin_application_configuration_airport:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_airport> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_boisdor
+		 desc: config boisdor
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_boisdor:HttpServiceBddBase<Interfaces.Iapplication_configuration_boisdor> ;
+		public admin_application_configuration_boisdor:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_boisdor> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_r3
+		 desc: config r3
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_r3:HttpServiceBddBase<Interfaces.Iapplication_configuration_r3> ;
+		public admin_application_configuration_r3:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_r3> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_boisdor_admin_seller
+		 desc: config boisdor admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_boisdor_admin_seller:HttpServiceBddBase<Interfaces.Iapplication_configuration_boisdor_admin_seller> ;
+		public admin_application_configuration_boisdor_admin_seller:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_boisdor_admin_seller> ;
+
+		 
+		 /**
 		 service d'accès a la sous-collection :application_configuration_qbp_admin
 		 desc: config qbp admin
 		 info: vous ne pouvez voir que ce type d'objet
@@ -969,12 +1103,48 @@ export class bdd_collection_plateform  {
 
 		 
 		 /**
+		 service d'accès a la sous-collection :application_configuration_boisdor_admin
+		 desc: config boisdor admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_boisdor_admin:HttpServiceBddBase<Interfaces.Iapplication_configuration_boisdor_admin> ;
+		public admin_application_configuration_boisdor_admin:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_boisdor_admin> ;
+
+		 
+		 /**
 		 service d'accès a la sous-collection :application_configuration_qbp
 		 desc: config qbp
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public application_configuration_qbp:HttpServiceBddBase<Interfaces.Iapplication_configuration_qbp> ;
 		public admin_application_configuration_qbp:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_qbp> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_r3_admin_seller
+		 desc: config r3 admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_r3_admin_seller:HttpServiceBddBase<Interfaces.Iapplication_configuration_r3_admin_seller> ;
+		public admin_application_configuration_r3_admin_seller:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_r3_admin_seller> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_r3_admin
+		 desc: config r3 admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_r3_admin:HttpServiceBddBase<Interfaces.Iapplication_configuration_r3_admin> ;
+		public admin_application_configuration_r3_admin:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_r3_admin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :application_configuration_dcbm_static
+		 desc: dcbm static
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public application_configuration_dcbm_static:HttpServiceBddBase<Interfaces.Iapplication_configuration_dcbm_static> ;
+		public admin_application_configuration_dcbm_static:HttpServiceBddAdminBase<Interfaces.Iapplication_configuration_dcbm_static> ;
 
 		 
 	
@@ -1067,19 +1237,27 @@ export class bdd_collection_plateform  {
 		 
 		 	Iservice_petit_moulin      service petit moulin
 		 
-		 	Iservice_celio_fid      service celio fid
-		 
 		 	Iservice_celio_qcm      service celio qcm
 		 
 		 	Iservice_comptoireOr      service_comptoireOr
 		 
+		 	Iservice_airport      service airport
+		 
 		 	Iservice_celio_back_task      service celio back_task
+		 
+		 	Iservice_celio_fid      service celio fid
+		 
+		 	Idpd_dervice      Proxy pou rles service c'evoi de colis de DPD
 		 
 		 	Iservice_celio_fid_admin      service celio fid admin
 		 
-		 	Iservice_airport      service airport
+		 	Iboisdor_service      service métier de boisdor
 		 
 		 	IQBP_service      service métier de QBP
+		 
+		 	Iservice_qcbm      service_qcbm
+		 
+		 	Ir3_service      service métier de QBP
 		 
 		 
 		*/
@@ -1403,15 +1581,6 @@ export class bdd_collection_plateform  {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :service_celio_fid
-		 desc: service celio fid
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_fid:HttpServiceBddBase<Interfaces.Iservice_celio_fid> ;
-		public admin_service_celio_fid:HttpServiceBddAdminBase<Interfaces.Iservice_celio_fid> ;
-
-		 
-		 /**
 		 service d'accès a la sous-collection :service_celio_qcm
 		 desc: service celio qcm
 		 info: vous ne pouvez voir que ce type d'objet
@@ -1430,12 +1599,39 @@ export class bdd_collection_plateform  {
 
 		 
 		 /**
+		 service d'accès a la sous-collection :service_airport
+		 desc: service airport
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_airport:HttpServiceBddBase<Interfaces.Iservice_airport> ;
+		public admin_service_airport:HttpServiceBddAdminBase<Interfaces.Iservice_airport> ;
+
+		 
+		 /**
 		 service d'accès a la sous-collection :service_celio_back_task
 		 desc: service celio back_task
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
 		public service_celio_back_task:HttpServiceBddBase<Interfaces.Iservice_celio_back_task> ;
 		public admin_service_celio_back_task:HttpServiceBddAdminBase<Interfaces.Iservice_celio_back_task> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_fid
+		 desc: service celio fid
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_fid:HttpServiceBddBase<Interfaces.Iservice_celio_fid> ;
+		public admin_service_celio_fid:HttpServiceBddAdminBase<Interfaces.Iservice_celio_fid> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :dpd_dervice
+		 desc: Proxy pou rles service c'evoi de colis de DPD
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public dpd_dervice:HttpServiceBddBase<Interfaces.Idpd_dervice> ;
+		public admin_dpd_dervice:HttpServiceBddAdminBase<Interfaces.Idpd_dervice> ;
 
 		 
 		 /**
@@ -1448,12 +1644,12 @@ export class bdd_collection_plateform  {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :service_airport
-		 desc: service airport
+		 service d'accès a la sous-collection :boisdor_service
+		 desc: service métier de boisdor
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
-		public service_airport:HttpServiceBddBase<Interfaces.Iservice_airport> ;
-		public admin_service_airport:HttpServiceBddAdminBase<Interfaces.Iservice_airport> ;
+		public boisdor_service:HttpServiceBddBase<Interfaces.Iboisdor_service> ;
+		public admin_boisdor_service:HttpServiceBddAdminBase<Interfaces.Iboisdor_service> ;
 
 		 
 		 /**
@@ -1465,6 +1661,36 @@ export class bdd_collection_plateform  {
 		public admin_QBP_service:HttpServiceBddAdminBase<Interfaces.IQBP_service> ;
 
 		 
+		 /**
+		 service d'accès a la sous-collection :service_qcbm
+		 desc: service_qcbm
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_qcbm:HttpServiceBddBase<Interfaces.Iservice_qcbm> ;
+		public admin_service_qcbm:HttpServiceBddAdminBase<Interfaces.Iservice_qcbm> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :r3_service
+		 desc: service métier de QBP
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public r3_service:HttpServiceBddBase<Interfaces.Ir3_service> ;
+		public admin_r3_service:HttpServiceBddAdminBase<Interfaces.Ir3_service> ;
+
+		 
+	
+		/**
+		 service d'accès à la collection :bois_dor_mailer
+		 desc: liste de tous les templates de mail pour bois d'or
+		 
+
+		 
+		*/
+		public bois_dor_mailer:HttpServiceBddBase<Interfaces.Ibois_dor_mailer> ;
+		public admin_bois_dor_mailer:HttpServiceBddAdminBase<Interfaces.Ibois_dor_mailer> ;
+
+		
 	
 	
 }
@@ -1474,7 +1700,7 @@ export class bdd_collection_plateform  {
 	accès à la vue :Client 
 	retourne la donnée du client connecté
 */
-export class bdd_view_Client extends HttpServiceBddBaseView<Interfaces.Iend_client> {
+export class bdd_view_Client extends HttpServiceBddBaseView<Interface.Iend_client> {
 /**
 	accès à la vue :Client 
 	
@@ -1491,7 +1717,7 @@ export class bdd_view_Client extends HttpServiceBddBaseView<Interfaces.Iend_clie
 	*/
   private agregate:any[] = [{"$match":{"_id":"$ctx.params.clientId"}}] ;
 
-	public get(  query: string = '*', headers: any = {} , ctx:any={}  ): Promise<IHttpResult<Interfaces.Iend_client>> {
+	public get(  query: string = '*', headers: any = {} , ctx:any={}  ): Promise<IHttpResult<Interface.Iend_client>> {
 		//ajouter les params dans ctx
     ctx.params = {} ;
     return super.get( query , headers , this.agregate , ctx)
@@ -1502,7 +1728,7 @@ export class bdd_view_Client extends HttpServiceBddBaseView<Interfaces.Iend_clie
 	accès à la vue :UserLicence 
 	retourne la liste des licences d'un utilisateur pour le client courrant
 */
-export class bdd_view_UserLicence extends HttpServiceBddBaseView<Interfaces.Ilicence> {
+export class bdd_view_UserLicence extends HttpServiceBddBaseView<Interface.Ilicence> {
 /**
 	accès à la vue :UserLicence 
 	
@@ -1519,7 +1745,7 @@ export class bdd_view_UserLicence extends HttpServiceBddBaseView<Interfaces.Ilic
 	*/
   private agregate:any[] = [{"$match":{"user":"$ctx.params.userId","end_client":"$ctx.params.clientId"}}] ;
 
-	public get( userId:string ,  query: string = '*', headers: any = {} , ctx:any={}  ): Promise<IHttpResult<Interfaces.Ilicence>> {
+	public get( userId:string ,  query: string = '*', headers: any = {} , ctx:any={}  ): Promise<IHttpResult<Interface.Ilicence>> {
 		//ajouter les params dans ctx
     ctx.params = {} ;
     return super.get( query , headers , this.agregate , ctx)

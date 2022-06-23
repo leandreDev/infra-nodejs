@@ -64,6 +64,8 @@ export class Entity_service_licence_token extends   Entity_service    {
               return new mongo.ObjectId(value)  ;
             }else if(value._id){
               return new mongo.ObjectId(value._id)   ;
+            }else if(value._bsontype && value._bsontype === 'ObjectID'){
+                return value ;
             }
           })
           

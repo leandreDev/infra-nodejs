@@ -23,7 +23,9 @@ export class Model_aclIdentity extends  Base  implements Interface.IaclIdentity 
             this["end_client"] = obj["end_client"];
           }else if(obj["end_client"]._id){
             this["end_client"] = obj["end_client"]._id ;
-          }
+          }else if((obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID'){
+              this["end_client"] = `${value}` ;
+            }
           
         }
         
@@ -35,7 +37,9 @@ export class Model_aclIdentity extends  Base  implements Interface.IaclIdentity 
             this["applicaton_instance"] = obj["applicaton_instance"];
           }else if(obj["applicaton_instance"]._id){
             this["applicaton_instance"] = obj["applicaton_instance"]._id ;
-          }
+          }else if((obj["applicaton_instance"]._bsontype && (obj["applicaton_instance"]._bsontype === 'ObjectID'){
+              this["applicaton_instance"] = `${value}` ;
+            }
           
         }
         
@@ -55,7 +59,9 @@ export class Model_aclIdentity extends  Base  implements Interface.IaclIdentity 
             this["user"] = obj["user"];
           }else if(obj["user"]._id){
             this["user"] = obj["user"]._id ;
-          }
+          }else if((obj["user"]._bsontype && (obj["user"]._bsontype === 'ObjectID'){
+              this["user"] = `${value}` ;
+            }
           
         }
         

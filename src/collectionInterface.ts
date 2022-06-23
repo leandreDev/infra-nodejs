@@ -853,6 +853,136 @@
 
   
 
+  
+
+    /**
+    interface de la class bois_dor_mailer 
+    description liste de tous les templates de mail pour bois d'or
+   */
+    export class bois_dor_mailer extends  IBase {
+        
+              /**
+               *comptoirOr_info 
+               */
+              
+               "comptoirOr_info"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_orderDelivred 
+               */
+              
+               "boisdor_fr_orderDelivred"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_orderRegister 
+               */
+              
+               "boisdor_fr_orderRegister"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_resetPassword 
+               */
+              
+               "boisdor_fr_resetPassword"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_accountCreated 
+               */
+              
+               "boisdor_fr_accountCreated"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_orderRefund 
+               */
+              
+               "boisdor_fr_orderRefund"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_orderCancelled 
+               */
+              
+               "boisdor_fr_orderCancelled"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_orderValidatedForDelivery 
+               */
+              
+               "boisdor_fr_orderValidatedForDelivery"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_orderValidatedForPickup 
+               */
+              
+               "boisdor_fr_orderValidatedForPickup"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_orderToCustomer 
+               */
+              
+               "boisdor_fr_orderToCustomer"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_orderToSeller 
+               */
+              
+               "boisdor_fr_orderToSeller"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_sav 
+               */
+              
+               "boisdor_fr_sav"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_contact 
+               */
+              
+               "boisdor_fr_contact"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_reply_sav 
+               */
+              
+               "boisdor_fr_reply_sav"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_reply_contact 
+               */
+              
+               "boisdor_fr_reply_contact"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_orderToCustomerPending 
+               */
+              
+               "boisdor_fr_orderToCustomerPending"?:string | IMultilangSendGridTemplate;
+              
+       
+              /**
+               *boisdor_fr_orderToCustomerDiff 
+               */
+              
+               "boisdor_fr_orderToCustomerDiff"?:string | IMultilangSendGridTemplate;
+              
+       
+   }
+
+
 
 
   
@@ -956,63 +1086,6 @@
   
 
 
-    /**
-    interface de la class mail_sendgrid 
-    description objet envoyé a l'api sendgrid 
-   */
-    export class mail_sendgrid extends   Imail{
-        
-              /**
-               *content 
-               */
-              
-               "content"?:string;
-              
-       
-              /**
-               *from 
-               */
-              
-               "from"?:string;
-              
-       
-              /**
-               *personalizations 
-               */
-              
-               "personalizations"?:string;
-              
-       
-              /**
-               *reply_to 
-               */
-              
-               "reply_to"?:string;
-              
-       
-              /**
-               *subject 
-               */
-              
-               "subject"?:string;
-              
-       
-              /**
-               *la date d'envoie demandé 
-               */
-              
-               "send_at"?:Date;
-              
-       
-              /**
-               *template_id 
-               */
-              
-               "template_id"?:string;
-              
-       
-   }
-  
    
 
 
@@ -1733,6 +1806,168 @@
    
 
     /**
+    interface de la class application_configuration_airport_admin 
+    description config airport
+   */
+    export class application_configuration_airport_admin extends   Iapplication_configuration{
+        
+              /**
+               *url des api airport 
+               */
+              
+               "airportApi"?:string;
+              
+       
+              /**
+               *url de lapi de bdd airport 
+               */
+              
+               "airportBddUrl"?:string;
+              
+       
+              /**
+               *url du service fso airport 
+               */
+              
+               "fsoUrl"?:string;
+              
+       
+   }
+  
+   
+
+    /**
+    interface de la class application_configuration_airport 
+    description config airport
+   */
+    export class application_configuration_airport extends   Iapplication_configuration{
+        
+              /**
+               *url des api airport 
+               */
+              
+               "airportApi"?:string;
+              
+       
+              /**
+               *url de lapi de bdd airport 
+               */
+              
+               "airportBddUrl"?:string;
+              
+       
+              /**
+               *url du service fso airport 
+               */
+              
+               "fsoUrl"?:string;
+              
+       
+   }
+  
+   
+
+    /**
+    interface de la class application_configuration_boisdor 
+    description config boisdor
+   */
+    export class application_configuration_boisdor extends   Iapplication_configuration{
+        
+              /**
+               *url du service client de boisdor 
+               */
+              
+               "boisdorCustomerApi"?:string;
+              
+       
+              /**
+               *url de lapi de bdd boisdor 
+               */
+              
+               "boisdorBddUrl"?:string;
+              
+       
+              /**
+               *url du service fso boisdor 
+               */
+              
+               "fsoUrl"?:string;
+              
+       
+              /**
+               *url de l api de paiement 
+               */
+              
+               "payementUrl"?:string;
+              
+       
+   }
+  
+   
+
+    /**
+    interface de la class application_configuration_r3 
+    description config r3
+   */
+    export class application_configuration_r3 extends   Iapplication_configuration{
+        
+              /**
+               *url de la bdd 
+               */
+              
+               "bddUrl"?:string;
+              
+       
+   }
+  
+   
+
+    /**
+    interface de la class application_configuration_boisdor_admin_seller 
+    description config boisdor admin
+   */
+    export class application_configuration_boisdor_admin_seller extends   Iapplication_configuration{
+        
+              /**
+               *url du service seller 
+               */
+              
+               "boisdorSellerApi"?:string;
+              
+       
+              /**
+               *boisdorBddUrl 
+               */
+              
+               "boisdorBddUrl"?:string;
+              
+       
+              /**
+               *url du service de fso 
+               */
+              
+               "fsoUrl"?:string;
+              
+       
+              /**
+               *url api public 
+               */
+              
+               "apiPublicUrl"?:string;
+              
+       
+              /**
+               *url du service d'envoie de mail 
+               */
+              
+               "boisdorMailService"?:string;
+              
+       
+   }
+  
+   
+
+    /**
     interface de la class application_configuration_qbp_admin 
     description config qbp admin
    */
@@ -1764,6 +1999,20 @@
                */
               
               "mangoConf"?:IMangoConf;
+              
+       
+              /**
+               *Order Service 
+               */
+              
+               "orderService"?:string;
+              
+       
+              /**
+               *url du end point de l api sav 
+               */
+              
+               "savService"?:string;
               
        
    }
@@ -1804,6 +2053,65 @@
               "mangoConf"?:IMangoConf;
               
        
+              /**
+               *Order service 
+               */
+              
+               "orderService"?:string;
+              
+       
+              /**
+               *Service pour ticket 
+               */
+              
+               "ticketService"?:string;
+              
+       
+              /**
+               *url du end point de l api sav 
+               */
+              
+               "savService"?:string;
+              
+       
+   }
+  
+   
+
+    /**
+    interface de la class application_configuration_boisdor_admin 
+    description config boisdor admin
+   */
+    export class application_configuration_boisdor_admin extends   Iapplication_configuration{
+        
+              /**
+               *url de la bdd 
+               */
+              
+               "boisdorBddUrl"?:string;
+              
+       
+              /**
+               *url du service boisdor 
+               */
+              
+               "boisdorAdminService"?:string;
+              
+       
+              /**
+               *url du service fso 
+               */
+              
+               "fsoUrl"?:string;
+              
+       
+              /**
+               *boisdorMailService 
+               */
+              
+               "boisdorMailService"?:string;
+              
+       
    }
   
    
@@ -1842,6 +2150,92 @@
               "mangoConf"?:IMangoConf;
               
        
+              /**
+               *url de base de redirection vers le site des assureurs 
+               */
+              
+               "assUrl":string;
+              
+       
+              /**
+               *liste de functionalites a activer uo pas dans le site quelbon plan , exemple {bankWire: false | true} 
+               */
+              
+              "featuresConf"?:IQbpFeaturesConfiguration;
+              
+       
+   }
+  
+   
+
+    /**
+    interface de la class application_configuration_r3_admin_seller 
+    description config r3 admin
+   */
+    export class application_configuration_r3_admin_seller extends   Iapplication_configuration{
+        
+              /**
+               *url de la bdd 
+               */
+              
+               "bddUrl"?:string;
+              
+       
+              /**
+               *url du servie r3  
+               */
+              
+               "apiUrl"?:string;
+              
+       
+              /**
+               *url du service de fichiers (fso) 
+               */
+              
+               "fsoUrl"?:string;
+              
+       
+   }
+  
+   
+
+    /**
+    interface de la class application_configuration_r3_admin 
+    description config r3 admin
+   */
+    export class application_configuration_r3_admin extends   Iapplication_configuration{
+        
+              /**
+               *url de la bdd 
+               */
+              
+               "bddUrl"?:string;
+              
+       
+              /**
+               *uploadUrl url du service de telechargement des images 
+               */
+              
+               "uploadUrl"?:string;
+              
+       
+              /**
+               *l"url de l'api 
+               */
+              
+               "apiUrl"?:string;
+              
+       
+   }
+  
+   
+
+    /**
+    interface de la class application_configuration_dcbm_static 
+    description dcbm static
+   */
+    export class application_configuration_dcbm_static extends   Iapplication_configuration{
+        
    }
   
    
@@ -1852,3 +2246,7 @@
 
 
   
+
+  
+
+

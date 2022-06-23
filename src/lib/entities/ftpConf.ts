@@ -54,6 +54,14 @@ export class Entity_ftpConf extends  Entity   {
         }
         
     
+        
+        if(obj["privateKey"] != undefined){
+          
+           obj["privateKey"] = obj["privateKey"].toString() ;
+           
+        }
+        
+    
   }
 
 
@@ -174,6 +182,33 @@ public static checkpassword(val:any, path:string =null):string[]{
        
  
 
+public static checkprivateKey(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -251,6 +286,23 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
                 
                 
                 res = Entity_ftpConf.checkpassword(target.password , `${path}.password`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.privateKey != null && target.privateKey != undefined ){
+                
+                
+                res = Entity_ftpConf.checkprivateKey(target.privateKey , `${path}.privateKey`) ;
                 if(res && res.length > 0){
                   err = [...err , ...res] ;
                 }               
@@ -339,6 +391,19 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'privateKey':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
          
           default:
             return Entity.castQueryParam(key, value) ;
@@ -391,6 +456,14 @@ public static getClassNameOfProp(path:string):string{
       
       
       case 'password':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'privateKey':
        
              return null ;
        

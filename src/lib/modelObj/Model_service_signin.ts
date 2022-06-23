@@ -113,7 +113,9 @@ export class Model_service_signin extends   Model_service   implements Interface
             this["resetMail"] = obj["resetMail"];
           }else if(obj["resetMail"]._id){
             this["resetMail"] = obj["resetMail"]._id ;
-          }
+          }else if((obj["resetMail"]._bsontype && (obj["resetMail"]._bsontype === 'ObjectID'){
+              this["resetMail"] = `${value}` ;
+            }
           
         }
         
@@ -125,7 +127,9 @@ export class Model_service_signin extends   Model_service   implements Interface
             this["updateMail"] = obj["updateMail"];
           }else if(obj["updateMail"]._id){
             this["updateMail"] = obj["updateMail"]._id ;
-          }
+          }else if((obj["updateMail"]._bsontype && (obj["updateMail"]._bsontype === 'ObjectID'){
+              this["updateMail"] = `${value}` ;
+            }
           
         }
         

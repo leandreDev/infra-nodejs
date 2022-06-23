@@ -48,6 +48,14 @@ export class Model_ftpConf extends  Base  implements Interface.IftpConf {
         }
         
     
+        
+        if(obj["privateKey"] != undefined){
+          
+           this["privateKey"] = obj["privateKey"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -76,6 +84,12 @@ export class Model_ftpConf extends  Base  implements Interface.IftpConf {
         password
         */
                public "password"?:string ;
+              
+       
+              /**
+        chemin pour accéder privateKey pour identifier l'utyilisateur
+        */
+               public "privateKey"?:string ;
               
        
 

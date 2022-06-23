@@ -31,7 +31,9 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
             this["application"] = obj["application"];
           }else if(obj["application"]._id){
             this["application"] = obj["application"]._id ;
-          }
+          }else if((obj["application"]._bsontype && (obj["application"]._bsontype === 'ObjectID'){
+              this["application"] = `${value}` ;
+            }
           
         }
         
@@ -43,7 +45,9 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
             this["configuration"] = obj["configuration"];
           }else if(obj["configuration"]._id){
             this["configuration"] = obj["configuration"]._id ;
-          }
+          }else if((obj["configuration"]._bsontype && (obj["configuration"]._bsontype === 'ObjectID'){
+              this["configuration"] = `${value}` ;
+            }
           
         }
         
@@ -55,7 +59,9 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
             this["end_client"] = obj["end_client"];
           }else if(obj["end_client"]._id){
             this["end_client"] = obj["end_client"]._id ;
-          }
+          }else if((obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID'){
+              this["end_client"] = `${value}` ;
+            }
           
         }
         
@@ -67,7 +73,9 @@ export class Model_application_instance extends  Base  implements Interface.Iapp
             this["oidc_client"] = obj["oidc_client"];
           }else if(obj["oidc_client"]._id){
             this["oidc_client"] = obj["oidc_client"]._id ;
-          }
+          }else if((obj["oidc_client"]._bsontype && (obj["oidc_client"]._bsontype === 'ObjectID'){
+              this["oidc_client"] = `${value}` ;
+            }
           
         }
         

@@ -97,8 +97,6 @@
     
         export * from "./periodicalDistrution_periode" ;
     
-        export * from "./mail_sendgrid" ;
-    
         export * from "./schema_name" ;
     
         export * from "./pack_card" ;
@@ -295,32 +293,74 @@
     
         export * from "./service_petit_moulin" ;
     
-        export * from "./service_celio_fid" ;
-    
         export * from "./service_celio_qcm" ;
     
         export * from "./service_comptoireOr" ;
     
         export * from "./MarketingCloudApisConf" ;
     
-        export * from "./service_celio_back_task" ;
-    
-        export * from "./ftpConf" ;
-    
         export * from "./application_configuration_petit_moulin_admin" ;
-    
-        export * from "./service_celio_fid_admin" ;
     
         export * from "./service_airport" ;
     
+        export * from "./application_configuration_airport_admin" ;
+    
+        export * from "./application_configuration_airport" ;
+    
+        export * from "./service_celio_back_task" ;
+    
+        export * from "./service_celio_fid" ;
+    
+        export * from "./dpd_dervice" ;
+    
+        export * from "./service_celio_fid_admin" ;
+    
+        export * from "./ftpConf" ;
+    
         export * from "./MangoConf" ;
+    
+        export * from "./application_configuration_boisdor" ;
+    
+        export * from "./application_configuration_r3" ;
+    
+        export * from "./BigBenConf" ;
+    
+        export * from "./application_configuration_boisdor_admin_seller" ;
     
         export * from "./application_configuration_qbp_admin" ;
     
-        export * from "./QBP_service" ;
-    
         export * from "./application_configuration_qbp_admin_seller" ;
     
+        export * from "./application_configuration_boisdor_admin" ;
+    
+        export * from "./boisdor_service" ;
+    
+        export * from "./mail_sendgrid" ;
+    
+        export * from "./QbpFeaturesConfiguration" ;
+    
         export * from "./application_configuration_qbp" ;
+    
+        export * from "./bois_dor_mailer" ;
+    
+        export * from "./QBP_service" ;
+    
+        export * from "./ConfAutomation" ;
+    
+        export * from "./application_configuration_r3_admin_seller" ;
+    
+        export * from "./application_configuration_r3_admin" ;
+    
+        export * from "./QbpMailer" ;
+    
+        export * from "./service_qcbm" ;
+    
+        export * from "./R3Mailer" ;
+    
+        export * from "./application_configuration_dcbm_static" ;
+    
+        export * from "./ParnerDeployConf" ;
+    
+        export * from "./r3_service" ;
     
     
