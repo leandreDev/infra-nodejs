@@ -1,6 +1,6 @@
 {
   "name": "@leandredev/infra-nodejs",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "librarie de communication avec la base infra for nodeJS",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
