@@ -28,6 +28,9 @@ class Model_ftpConf extends utils_1.Base {
         if (obj["password"] != undefined) {
             this["password"] = obj["password"].toString();
         }
+        if (obj["privateKey"] != undefined) {
+            this["privateKey"] = obj["privateKey"].toString();
+        }
     }
 }
 exports.Model_ftpConf = Model_ftpConf;

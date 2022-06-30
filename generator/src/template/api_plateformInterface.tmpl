@@ -1,7 +1,7 @@
 
 import {IHttpServiceBase , IHttpServiceAdminBase, IHttpResult  } from "@leandredev/utils" ;
 
-import * as Interfaces from "../../lib/modelObj/Interfaces" ;
+import * as Interface from "../../lib/modelObj/Interfaces" ;
 
 
 
@@ -40,13 +40,13 @@ export interface IPlateforme {
   collections:{
     <% _.forEach(datas , function(collection){ %>
 
-		<%=collection.name%>:IHttpServiceBase<Interfaces.I<%=collection.name%>>  ;
-		admin_<%=collection.name%>: IHttpServiceAdminBase<Interfaces.I<%=collection.name%>> ;
+		<%=collection.name%>:IHttpServiceBase<Interface.I<%=collection.name%>>  ;
+		admin_<%=collection.name%>: IHttpServiceAdminBase<Interface.I<%=collection.name%>> ;
 
 		<% _.forEach(collection._child , function(subcollection){ %>
 		 
-		<%=subcollection.name%>: IHttpServiceBase<Interfaces.I<%=subcollection.name%>> ;
-		admin_<%=subcollection.name%>: IHttpServiceAdminBase<Interfaces.I<%=subcollection.name%>>  ;
+		<%=subcollection.name%>: IHttpServiceBase<Interface.I<%=subcollection.name%>> ;
+		admin_<%=subcollection.name%>: IHttpServiceAdminBase<Interface.I<%=subcollection.name%>>  ;
 
 		 <%}) %>
 	<%}) %>

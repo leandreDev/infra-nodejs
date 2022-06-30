@@ -31,6 +31,12 @@ class Entity_MangoConf extends utils_1.Entity {
         if (obj["clientUserId"] != undefined) {
             obj["clientUserId"] = obj["clientUserId"].toString();
         }
+        if (obj["qbpUserIdInMangoPay"] != undefined) {
+            obj["qbpUserIdInMangoPay"] = obj["qbpUserIdInMangoPay"].toString();
+        }
+        if (obj["qbpWalletIdInMangoPay"] != undefined) {
+            obj["qbpWalletIdInMangoPay"] = obj["qbpWalletIdInMangoPay"].toString();
+        }
     }
     static checkclientId(val, path = null) {
         if (val == null) {
@@ -104,6 +110,30 @@ class Entity_MangoConf extends utils_1.Entity {
             return res;
         }
     }
+    static checkqbpUserIdInMangoPay(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkqbpWalletIdInMangoPay(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -155,6 +185,24 @@ class Entity_MangoConf extends utils_1.Entity {
                 err = [...err, ...res];
             }
         }
+        if (isCompleteObj && (target.qbpUserIdInMangoPay == null || target.qbpUserIdInMangoPay == undefined)) {
+            err.push(path + ".qbpUserIdInMangoPay is required");
+        }
+        if (target.qbpUserIdInMangoPay != null && target.qbpUserIdInMangoPay != undefined) {
+            res = Entity_MangoConf.checkqbpUserIdInMangoPay(target.qbpUserIdInMangoPay, `${path}.qbpUserIdInMangoPay`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (isCompleteObj && (target.qbpWalletIdInMangoPay == null || target.qbpWalletIdInMangoPay == undefined)) {
+            err.push(path + ".qbpWalletIdInMangoPay is required");
+        }
+        if (target.qbpWalletIdInMangoPay != null && target.qbpWalletIdInMangoPay != undefined) {
+            res = Entity_MangoConf.checkqbpWalletIdInMangoPay(target.qbpWalletIdInMangoPay, `${path}.qbpWalletIdInMangoPay`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
         return err;
     }
     static castQueryParam(path, value) {
@@ -202,6 +250,14 @@ class Entity_MangoConf extends utils_1.Entity {
                 //string
                 return new String(value).valueOf();
                 break;
+            case 'qbpUserIdInMangoPay':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'qbpWalletIdInMangoPay':
+                //string
+                return new String(value).valueOf();
+                break;
             default:
                 return utils_1.Entity.castQueryParam(key, value);
                 break;
@@ -236,6 +292,10 @@ class Entity_MangoConf extends utils_1.Entity {
             case 'paymentRedirectUrl':
                 return null;
             case 'clientUserId':
+                return null;
+            case 'qbpUserIdInMangoPay':
+                return null;
+            case 'qbpWalletIdInMangoPay':
                 return null;
             default:
                 return utils_1.Entity.getClassNameOfProp(key);

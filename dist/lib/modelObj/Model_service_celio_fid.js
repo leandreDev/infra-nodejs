@@ -39,6 +39,30 @@ class Model_service_celio_fid extends Model_service_1.Model_service {
         if (obj["caPath"] != undefined) {
             this["caPath"] = obj["caPath"].toString();
         }
+        if (obj["sponsorPoints"] != undefined) {
+            this["sponsorPoints"] = new Number(obj["sponsorPoints"]).valueOf();
+        }
+        if (obj["childPoints"] != undefined) {
+            this["childPoints"] = new Number(obj["childPoints"]).valueOf();
+        }
+        if (obj["cappingThreshold"] != undefined) {
+            this["cappingThreshold"] = obj["cappingThreshold"].toString();
+        }
+        if (obj["sponsorshipFrequencyUnit"] != undefined) {
+            this["sponsorshipFrequencyUnit"] = new Number(obj["sponsorshipFrequencyUnit"]).valueOf();
+        }
+        if (obj["sponsorshipMaxCount"] != undefined) {
+            this["sponsorshipMaxCount"] = new Number(obj["sponsorshipMaxCount"]).valueOf();
+        }
+        if (obj["fixedEarnFrequencyUnit"] != undefined) {
+            this["fixedEarnFrequencyUnit"] = new Number(obj["fixedEarnFrequencyUnit"]).valueOf();
+        }
+        if (obj["fixedEarnValue"] != undefined) {
+            this["fixedEarnValue"] = new Number(obj["fixedEarnValue"]).valueOf();
+        }
+        if (obj["fixedEarnMaxCount"] != undefined) {
+            this["fixedEarnMaxCount"] = new Number(obj["fixedEarnMaxCount"]).valueOf();
+        }
     }
 }
 exports.Model_service_celio_fid = Model_service_celio_fid;

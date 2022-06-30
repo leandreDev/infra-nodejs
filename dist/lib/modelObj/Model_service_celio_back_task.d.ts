@@ -57,4 +57,8 @@ url de l accessToken
 MarketingCloudApisConf
 */
     "marketingCloudApisConf"?: Interface.IMarketingCloudApisConf;
+    /**
+prefixe pour le customer de chez marketingCloud
+*/
+    "customerPrefix"?: string;
 }

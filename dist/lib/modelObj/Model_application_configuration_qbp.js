@@ -30,6 +30,17 @@ class Model_application_configuration_qbp extends Model_application_configuratio
                 this["mangoConf"] = new Index["MangoConf"](obj["mangoConf"]);
             }
         }
+        if (obj["assUrl"] != undefined) {
+            this["assUrl"] = obj["assUrl"].toString();
+        }
+        if (obj["featuresConf"] != undefined) {
+            if (obj["featuresConf"]._class) {
+                this["featuresConf"] = new Index[obj["featuresConf"]._class](obj["featuresConf"]);
+            }
+            else {
+                this["featuresConf"] = new Index["QbpFeaturesConfiguration"](obj["featuresConf"]);
+            }
+        }
     }
 }
 exports.Model_application_configuration_qbp = Model_application_configuration_qbp;

@@ -50,6 +50,9 @@ class Entity_service_celio_back_task extends service_1.Entity_service {
             Index.Entity_MarketingCloudApisConf.cast(obj["marketingCloudApisConf"]);
             //5f58e011edf1f9ab75870cbf
         }
+        if (obj["customerPrefix"] != undefined) {
+            obj["customerPrefix"] = obj["customerPrefix"].toString();
+        }
     }
     static checkfidBddUrl(val, path = null) {
         if (val == null) {
@@ -204,6 +207,18 @@ class Entity_service_celio_back_task extends service_1.Entity_service {
             return res;
         }
     }
+    static checkcustomerPrefix(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -301,6 +316,12 @@ class Entity_service_celio_back_task extends service_1.Entity_service {
                 err = [...err, ...res];
             }
         }
+        if (target.customerPrefix != null && target.customerPrefix != undefined) {
+            res = Entity_service_celio_back_task.checkcustomerPrefix(target.customerPrefix, `${path}.customerPrefix`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
         return err;
     }
     static castQueryParam(path, value) {
@@ -377,6 +398,10 @@ class Entity_service_celio_back_task extends service_1.Entity_service {
                     return Index.Entity_MarketingCloudApisConf.castQueryParam(subPath, value);
                 }
                 break;
+            case 'customerPrefix':
+                //string
+                return new String(value).valueOf();
+                break;
             default:
                 return service_1.Entity_service.castQueryParam(key, value);
                 break;
@@ -424,6 +449,8 @@ class Entity_service_celio_back_task extends service_1.Entity_service {
                 return null;
             case 'marketingCloudApisConf':
                 return Index.Entity_MarketingCloudApisConf.getClassNameOfProp(subPath);
+            case 'customerPrefix':
+                return null;
             default:
                 return service_1.Entity_service.getClassNameOfProp(key);
                 break;

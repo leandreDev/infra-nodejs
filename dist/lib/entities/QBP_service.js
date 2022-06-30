@@ -103,6 +103,47 @@ class Entity_QBP_service extends service_1.Entity_service {
             Index.Entity_MangoConf.cast(obj["mangoConf"]);
             //602e35837d6c5b63b790117e
         }
+        if (obj["assuranceApiKey"] != undefined) {
+            obj["assuranceApiKey"] = obj["assuranceApiKey"].toString();
+        }
+        if (obj["bigBen"] != undefined) {
+            Index.Entity_BigBenConf.cast(obj["bigBen"]);
+            //6095124a9be3b6f47b75d69f
+        }
+        if (obj["dpdServiceUrl"] != undefined) {
+            obj["dpdServiceUrl"] = obj["dpdServiceUrl"].toString();
+        }
+        if (obj["sftpGS"] != undefined) {
+            Index.Entity_ftpConf.cast(obj["sftpGS"]);
+            //5f646c881d0d10a02389ba8f
+        }
+        if (obj["QbpBaseUrl"] != undefined) {
+            obj["QbpBaseUrl"] = obj["QbpBaseUrl"].toString();
+        }
+        if (obj["qbpServiceUrl"] != undefined) {
+            obj["qbpServiceUrl"] = obj["qbpServiceUrl"].toString();
+        }
+        if (obj["sellerDomainPatern"] != undefined) {
+            obj["sellerDomainPatern"] = obj["sellerDomainPatern"].toString();
+        }
+        if (obj["fsoServiceUrl"] != undefined) {
+            obj["fsoServiceUrl"] = obj["fsoServiceUrl"].toString();
+        }
+        if (obj["isInsuranceEnable"] != undefined) {
+            obj["isInsuranceEnable"] = new Boolean(obj["isInsuranceEnable"]).valueOf();
+        }
+        if (obj["sendGridConf"] != undefined) {
+            Index.Entity_QbpMailer.cast(obj["sendGridConf"]);
+            //618402d5351c4cb37eab1acb
+        }
+        if (obj["featuresConf"] != undefined) {
+            Index.Entity_QbpFeaturesConfiguration.cast(obj["featuresConf"]);
+            //62330e74ea547cc9374f149c
+        }
+        if (obj["automationConf"] != undefined) {
+            Index.Entity_ConfAutomation.cast(obj["automationConf"]);
+            //625416540ad16deb7903648a
+        }
     }
     static checkQbpBddUrl(val, path = null) {
         if (val == null) {
@@ -359,6 +400,198 @@ class Entity_QBP_service extends service_1.Entity_service {
             return res;
         }
     }
+    static checkassuranceApiKey(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkbigBen(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        let result;
+        if (val._class) {
+            result = Index['Entity_' + val._class].check(val, false, path);
+        }
+        else {
+            result = Index.Entity_BigBenConf.check(val, false, path);
+            //6095124a9be3b6f47b75d69f
+        }
+        res = [...res, ...result];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkdpdServiceUrl(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checksftpGS(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        let result;
+        if (val._class) {
+            result = Index['Entity_' + val._class].check(val, false, path);
+        }
+        else {
+            result = Index.Entity_ftpConf.check(val, false, path);
+            //5f646c881d0d10a02389ba8f
+        }
+        res = [...res, ...result];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkQbpBaseUrl(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkqbpServiceUrl(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checksellerDomainPatern(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkfsoServiceUrl(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkisInsuranceEnable(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isBoolean(val)) {
+            res.push(`${path}  is not a boolean`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checksendGridConf(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        let result;
+        if (val._class) {
+            result = Index['Entity_' + val._class].check(val, false, path);
+        }
+        else {
+            result = Index.Entity_QbpMailer.check(val, false, path);
+            //618402d5351c4cb37eab1acb
+        }
+        res = [...res, ...result];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkfeaturesConf(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        let result;
+        if (val._class) {
+            result = Index['Entity_' + val._class].check(val, false, path);
+        }
+        else {
+            result = Index.Entity_QbpFeaturesConfiguration.check(val, false, path);
+            //62330e74ea547cc9374f149c
+        }
+        res = [...res, ...result];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkautomationConf(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        let result;
+        if (val._class) {
+            result = Index['Entity_' + val._class].check(val, false, path);
+        }
+        else {
+            result = Index.Entity_ConfAutomation.check(val, false, path);
+            //625416540ad16deb7903648a
+        }
+        res = [...res, ...result];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -480,6 +713,81 @@ class Entity_QBP_service extends service_1.Entity_service {
                 err = [...err, ...res];
             }
         }
+        if (target.assuranceApiKey != null && target.assuranceApiKey != undefined) {
+            res = Entity_QBP_service.checkassuranceApiKey(target.assuranceApiKey, `${path}.assuranceApiKey`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.bigBen != null && target.bigBen != undefined) {
+            res = Entity_QBP_service.checkbigBen(target.bigBen, `${path}.bigBen`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.dpdServiceUrl != null && target.dpdServiceUrl != undefined) {
+            res = Entity_QBP_service.checkdpdServiceUrl(target.dpdServiceUrl, `${path}.dpdServiceUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.sftpGS != null && target.sftpGS != undefined) {
+            res = Entity_QBP_service.checksftpGS(target.sftpGS, `${path}.sftpGS`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.QbpBaseUrl != null && target.QbpBaseUrl != undefined) {
+            res = Entity_QBP_service.checkQbpBaseUrl(target.QbpBaseUrl, `${path}.QbpBaseUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.qbpServiceUrl != null && target.qbpServiceUrl != undefined) {
+            res = Entity_QBP_service.checkqbpServiceUrl(target.qbpServiceUrl, `${path}.qbpServiceUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.sellerDomainPatern != null && target.sellerDomainPatern != undefined) {
+            res = Entity_QBP_service.checksellerDomainPatern(target.sellerDomainPatern, `${path}.sellerDomainPatern`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (isCompleteObj && (target.fsoServiceUrl == null || target.fsoServiceUrl == undefined)) {
+            err.push(path + ".fsoServiceUrl is required");
+        }
+        if (target.fsoServiceUrl != null && target.fsoServiceUrl != undefined) {
+            res = Entity_QBP_service.checkfsoServiceUrl(target.fsoServiceUrl, `${path}.fsoServiceUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.isInsuranceEnable != null && target.isInsuranceEnable != undefined) {
+            res = Entity_QBP_service.checkisInsuranceEnable(target.isInsuranceEnable, `${path}.isInsuranceEnable`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.sendGridConf != null && target.sendGridConf != undefined) {
+            res = Entity_QBP_service.checksendGridConf(target.sendGridConf, `${path}.sendGridConf`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.featuresConf != null && target.featuresConf != undefined) {
+            res = Entity_QBP_service.checkfeaturesConf(target.featuresConf, `${path}.featuresConf`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.automationConf != null && target.automationConf != undefined) {
+            res = Entity_QBP_service.checkautomationConf(target.automationConf, `${path}.automationConf`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
         return err;
     }
     static castQueryParam(path, value) {
@@ -584,6 +892,79 @@ class Entity_QBP_service extends service_1.Entity_service {
                     return Index.Entity_MangoConf.castQueryParam(subPath, value);
                 }
                 break;
+            case 'assuranceApiKey':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'bigBen':
+                //subdoc
+                if (value._class) {
+                    return Index['Entity_' + value._class].castQueryParam(subPath, value);
+                }
+                else {
+                    return Index.Entity_BigBenConf.castQueryParam(subPath, value);
+                }
+                break;
+            case 'dpdServiceUrl':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'sftpGS':
+                //subdoc
+                if (value._class) {
+                    return Index['Entity_' + value._class].castQueryParam(subPath, value);
+                }
+                else {
+                    return Index.Entity_ftpConf.castQueryParam(subPath, value);
+                }
+                break;
+            case 'QbpBaseUrl':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'qbpServiceUrl':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'sellerDomainPatern':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'fsoServiceUrl':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'isInsuranceEnable':
+                //boolean
+                return new Boolean(value).valueOf();
+                break;
+            case 'sendGridConf':
+                //subdoc
+                if (value._class) {
+                    return Index['Entity_' + value._class].castQueryParam(subPath, value);
+                }
+                else {
+                    return Index.Entity_QbpMailer.castQueryParam(subPath, value);
+                }
+                break;
+            case 'featuresConf':
+                //subdoc
+                if (value._class) {
+                    return Index['Entity_' + value._class].castQueryParam(subPath, value);
+                }
+                else {
+                    return Index.Entity_QbpFeaturesConfiguration.castQueryParam(subPath, value);
+                }
+                break;
+            case 'automationConf':
+                //subdoc
+                if (value._class) {
+                    return Index['Entity_' + value._class].castQueryParam(subPath, value);
+                }
+                else {
+                    return Index.Entity_ConfAutomation.castQueryParam(subPath, value);
+                }
+                break;
             default:
                 return service_1.Entity_service.castQueryParam(key, value);
                 break;
@@ -645,6 +1026,30 @@ class Entity_QBP_service extends service_1.Entity_service {
                 return 'application_instance';
             case 'mangoConf':
                 return Index.Entity_MangoConf.getClassNameOfProp(subPath);
+            case 'assuranceApiKey':
+                return null;
+            case 'bigBen':
+                return Index.Entity_BigBenConf.getClassNameOfProp(subPath);
+            case 'dpdServiceUrl':
+                return null;
+            case 'sftpGS':
+                return Index.Entity_ftpConf.getClassNameOfProp(subPath);
+            case 'QbpBaseUrl':
+                return null;
+            case 'qbpServiceUrl':
+                return null;
+            case 'sellerDomainPatern':
+                return null;
+            case 'fsoServiceUrl':
+                return null;
+            case 'isInsuranceEnable':
+                return null;
+            case 'sendGridConf':
+                return Index.Entity_QbpMailer.getClassNameOfProp(subPath);
+            case 'featuresConf':
+                return Index.Entity_QbpFeaturesConfiguration.getClassNameOfProp(subPath);
+            case 'automationConf':
+                return Index.Entity_ConfAutomation.getClassNameOfProp(subPath);
             default:
                 return service_1.Entity_service.getClassNameOfProp(key);
                 break;

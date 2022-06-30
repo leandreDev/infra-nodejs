@@ -33,6 +33,9 @@ class Model_mail_connexion_conf extends utils_1.Base {
             else if (obj["end_client"]._id) {
                 this["end_client"] = obj["end_client"]._id;
             }
+            else if (obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')) {
+                this["end_client"] = obj["end_client"];
+            }
         }
         if (obj["application_instance"] != undefined) {
             if (_.isString(obj["application_instance"])) {
@@ -40,6 +43,9 @@ class Model_mail_connexion_conf extends utils_1.Base {
             }
             else if (obj["application_instance"]._id) {
                 this["application_instance"] = obj["application_instance"]._id;
+            }
+            else if (obj["application_instance"]._bsontype && (obj["application_instance"]._bsontype === 'ObjectID')) {
+                this["application_instance"] = obj["application_instance"];
             }
         }
         if (obj["licence_service"] != undefined) {

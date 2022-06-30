@@ -20,6 +20,9 @@ class Model_licence extends utils_1.Base {
             else if (obj["end_client"]._id) {
                 this["end_client"] = obj["end_client"]._id;
             }
+            else if (obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')) {
+                this["end_client"] = obj["end_client"];
+            }
         }
         if (obj["user"] != undefined) {
             if (_.isString(obj["user"])) {
@@ -27,6 +30,9 @@ class Model_licence extends utils_1.Base {
             }
             else if (obj["user"]._id) {
                 this["user"] = obj["user"]._id;
+            }
+            else if (obj["user"]._bsontype && (obj["user"]._bsontype === 'ObjectID')) {
+                this["user"] = obj["user"];
             }
         }
         if (obj["application_instance"] != undefined && obj["application_instance"] != null && _.isArray(obj["application_instance"])) {

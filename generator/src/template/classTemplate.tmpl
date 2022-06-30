@@ -85,8 +85,8 @@ export class Model_<%= protoSchema.name %> extends <%if(protoSchema.parentModel)
             this["<%= field.name%>"] = obj["<%= field.name%>"];
           }else if(obj["<%= field.name%>"]._id){
             this["<%= field.name%>"] = obj["<%= field.name%>"]._id ;
-          }else if((obj["<%= field.name%>"]._bsontype && (obj["<%= field.name%>"]._bsontype === 'ObjectID'){
-              this["<%= field.name%>"] = `<%="${value}"%>` ;
+          }else if(obj["<%= field.name%>"]._bsontype && (obj["<%= field.name%>"]._bsontype === 'ObjectID')){
+              this["<%= field.name%>"] = obj["<%= field.name%>"] ;
             }
           <% }else if( field._class == "subdoc"){ %>
             if(obj["<%= field.name%>"]._class){

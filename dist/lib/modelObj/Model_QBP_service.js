@@ -33,6 +33,9 @@ class Model_QBP_service extends Model_service_1.Model_service {
             else if (obj["appId"]._id) {
                 this["appId"] = obj["appId"]._id;
             }
+            else if (obj["appId"]._bsontype && (obj["appId"]._bsontype === 'ObjectID')) {
+                this["appId"] = obj["appId"];
+            }
         }
         if (obj["end_client"] != undefined) {
             if (_.isString(obj["end_client"])) {
@@ -40,6 +43,9 @@ class Model_QBP_service extends Model_service_1.Model_service {
             }
             else if (obj["end_client"]._id) {
                 this["end_client"] = obj["end_client"]._id;
+            }
+            else if (obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')) {
+                this["end_client"] = obj["end_client"];
             }
         }
         if (obj["licenceStoreId"] != undefined) {
@@ -61,6 +67,9 @@ class Model_QBP_service extends Model_service_1.Model_service {
             else if (obj["sellerAppId"]._id) {
                 this["sellerAppId"] = obj["sellerAppId"]._id;
             }
+            else if (obj["sellerAppId"]._bsontype && (obj["sellerAppId"]._bsontype === 'ObjectID')) {
+                this["sellerAppId"] = obj["sellerAppId"];
+            }
         }
         if (obj["sellerLicenceStoreId"] != undefined) {
             this["sellerLicenceStoreId"] = obj["sellerLicenceStoreId"].toString();
@@ -71,6 +80,9 @@ class Model_QBP_service extends Model_service_1.Model_service {
             }
             else if (obj["adminAppId"]._id) {
                 this["adminAppId"] = obj["adminAppId"]._id;
+            }
+            else if (obj["adminAppId"]._bsontype && (obj["adminAppId"]._bsontype === 'ObjectID')) {
+                this["adminAppId"] = obj["adminAppId"];
             }
         }
         if (obj["adminLicenceStoreId"] != undefined) {
@@ -89,6 +101,9 @@ class Model_QBP_service extends Model_service_1.Model_service {
             else if (obj["sellerEndClientTemplate"]._id) {
                 this["sellerEndClientTemplate"] = obj["sellerEndClientTemplate"]._id;
             }
+            else if (obj["sellerEndClientTemplate"]._bsontype && (obj["sellerEndClientTemplate"]._bsontype === 'ObjectID')) {
+                this["sellerEndClientTemplate"] = obj["sellerEndClientTemplate"];
+            }
         }
         if (obj["sellerAppInstanceTemplate"] != undefined) {
             if (_.isString(obj["sellerAppInstanceTemplate"])) {
@@ -97,6 +112,9 @@ class Model_QBP_service extends Model_service_1.Model_service {
             else if (obj["sellerAppInstanceTemplate"]._id) {
                 this["sellerAppInstanceTemplate"] = obj["sellerAppInstanceTemplate"]._id;
             }
+            else if (obj["sellerAppInstanceTemplate"]._bsontype && (obj["sellerAppInstanceTemplate"]._bsontype === 'ObjectID')) {
+                this["sellerAppInstanceTemplate"] = obj["sellerAppInstanceTemplate"];
+            }
         }
         if (obj["mangoConf"] != undefined) {
             if (obj["mangoConf"]._class) {
@@ -104,6 +122,67 @@ class Model_QBP_service extends Model_service_1.Model_service {
             }
             else {
                 this["mangoConf"] = new Index["MangoConf"](obj["mangoConf"]);
+            }
+        }
+        if (obj["assuranceApiKey"] != undefined) {
+            this["assuranceApiKey"] = obj["assuranceApiKey"].toString();
+        }
+        if (obj["bigBen"] != undefined) {
+            if (obj["bigBen"]._class) {
+                this["bigBen"] = new Index[obj["bigBen"]._class](obj["bigBen"]);
+            }
+            else {
+                this["bigBen"] = new Index["BigBenConf"](obj["bigBen"]);
+            }
+        }
+        if (obj["dpdServiceUrl"] != undefined) {
+            this["dpdServiceUrl"] = obj["dpdServiceUrl"].toString();
+        }
+        if (obj["sftpGS"] != undefined) {
+            if (obj["sftpGS"]._class) {
+                this["sftpGS"] = new Index[obj["sftpGS"]._class](obj["sftpGS"]);
+            }
+            else {
+                this["sftpGS"] = new Index["ftpConf"](obj["sftpGS"]);
+            }
+        }
+        if (obj["QbpBaseUrl"] != undefined) {
+            this["QbpBaseUrl"] = obj["QbpBaseUrl"].toString();
+        }
+        if (obj["qbpServiceUrl"] != undefined) {
+            this["qbpServiceUrl"] = obj["qbpServiceUrl"].toString();
+        }
+        if (obj["sellerDomainPatern"] != undefined) {
+            this["sellerDomainPatern"] = obj["sellerDomainPatern"].toString();
+        }
+        if (obj["fsoServiceUrl"] != undefined) {
+            this["fsoServiceUrl"] = obj["fsoServiceUrl"].toString();
+        }
+        if (obj["isInsuranceEnable"] != undefined) {
+            this["isInsuranceEnable"] = new Boolean(obj["isInsuranceEnable"]).valueOf();
+        }
+        if (obj["sendGridConf"] != undefined) {
+            if (obj["sendGridConf"]._class) {
+                this["sendGridConf"] = new Index[obj["sendGridConf"]._class](obj["sendGridConf"]);
+            }
+            else {
+                this["sendGridConf"] = new Index["QbpMailer"](obj["sendGridConf"]);
+            }
+        }
+        if (obj["featuresConf"] != undefined) {
+            if (obj["featuresConf"]._class) {
+                this["featuresConf"] = new Index[obj["featuresConf"]._class](obj["featuresConf"]);
+            }
+            else {
+                this["featuresConf"] = new Index["QbpFeaturesConfiguration"](obj["featuresConf"]);
+            }
+        }
+        if (obj["automationConf"] != undefined) {
+            if (obj["automationConf"]._class) {
+                this["automationConf"] = new Index[obj["automationConf"]._class](obj["automationConf"]);
+            }
+            else {
+                this["automationConf"] = new Index["ConfAutomation"](obj["automationConf"]);
             }
         }
     }

@@ -33,6 +33,9 @@ class Model_protoschema extends utils_1.Base {
             else if (obj["parentModel"]._id) {
                 this["parentModel"] = obj["parentModel"]._id;
             }
+            else if (obj["parentModel"]._bsontype && (obj["parentModel"]._bsontype === 'ObjectID')) {
+                this["parentModel"] = obj["parentModel"];
+            }
         }
         if (obj["fields"] != undefined && obj["fields"] != null && _.isArray(obj["fields"])) {
             this["fields"] = obj["fields"].map((value) => {

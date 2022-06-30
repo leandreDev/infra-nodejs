@@ -28,6 +28,9 @@ class Entity_nginxConfigurationFileApp extends utils_1.Entity {
                 else if (value._id) {
                     return new utils_1.mongo.ObjectId(value._id);
                 }
+                else if (value._bsontype && value._bsontype === 'ObjectID') {
+                    return value;
+                }
             });
         }
         if (obj["clients"] != undefined && obj["clients"] != null && _.isArray(obj["clients"])) {
@@ -37,6 +40,9 @@ class Entity_nginxConfigurationFileApp extends utils_1.Entity {
                 }
                 else if (value._id) {
                     return new utils_1.mongo.ObjectId(value._id);
+                }
+                else if (value._bsontype && value._bsontype === 'ObjectID') {
+                    return value;
                 }
             });
         }

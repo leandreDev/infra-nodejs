@@ -24,6 +24,9 @@ class Model_service_access extends utils_1.Base {
             else if (obj["service"]._id) {
                 this["service"] = obj["service"]._id;
             }
+            else if (obj["service"]._bsontype && (obj["service"]._bsontype === 'ObjectID')) {
+                this["service"] = obj["service"];
+            }
         }
         if (obj["httAccess"] != undefined) {
             if (obj["httAccess"]._class) {

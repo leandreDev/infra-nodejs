@@ -33,4 +33,12 @@ url de redirection après paiement
 UserId propriétaire de l'instance mangopay
 */
     "clientUserId"?: string;
+    /**
+l'id d'utilisateur pour le compte QBP dans mangopay,  cette utilisatuer est celui qui reçois les fonds des différents transactions la valeur par default est celle du sandbox
+*/
+    "qbpUserIdInMangoPay": string;
+    /**
+l'id du portefeuille virtuelle pour le compte QBP dans mangopay,  cette portefeuille est celui qui reçois les fonds des différents transactions la valeur par default est celle du sandbox
+*/
+    "qbpWalletIdInMangoPay": string;
 }

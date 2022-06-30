@@ -25,4 +25,12 @@ url du service fso qbp
 données de l'api mangopay
 */
     "mangoConf"?: Interface.IMangoConf;
+    /**
+url de base de redirection vers le site des assureurs
+*/
+    "assUrl": string;
+    /**
+liste de functionalites a activer uo pas dans le site quelbon plan , exemple {bankWire: false | true}
+*/
+    "featuresConf"?: Interface.IQbpFeaturesConfiguration;
 }

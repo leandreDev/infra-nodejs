@@ -27,6 +27,9 @@ class Model_mailtoinfra2 extends Model_service_1.Model_service {
             else if (obj["savyLearnerId"]._id) {
                 this["savyLearnerId"] = obj["savyLearnerId"]._id;
             }
+            else if (obj["savyLearnerId"]._bsontype && (obj["savyLearnerId"]._bsontype === 'ObjectID')) {
+                this["savyLearnerId"] = obj["savyLearnerId"];
+            }
         }
         if (obj["confMapping"] != undefined && obj["confMapping"] != null && _.isArray(obj["confMapping"])) {
             this["confMapping"] = obj["confMapping"].map((value) => {

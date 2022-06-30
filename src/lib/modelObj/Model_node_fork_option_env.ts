@@ -31,8 +31,8 @@ export class Model_node_fork_option_env extends  Base  implements Interface.Inod
             this["SRV_ID"] = obj["SRV_ID"];
           }else if(obj["SRV_ID"]._id){
             this["SRV_ID"] = obj["SRV_ID"]._id ;
-          }else if((obj["SRV_ID"]._bsontype && (obj["SRV_ID"]._bsontype === 'ObjectID'){
-              this["SRV_ID"] = `${value}` ;
+          }else if(obj["SRV_ID"]._bsontype && (obj["SRV_ID"]._bsontype === 'ObjectID')){
+              this["SRV_ID"] = obj["SRV_ID"] ;
             }
           
         }

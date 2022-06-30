@@ -30,7 +30,7 @@
   },
   "peerDependenciesMeta": {},
   "devDependencies": {
-    "@leandredev/utils": "^1.0.148",
+    "@leandredev/utils": "^1.2.6",
     "@types/assert": "0.0.31",
     "@types/fs-extra": "^3.0.3",
     "@types/lodash": "^4.14.66",

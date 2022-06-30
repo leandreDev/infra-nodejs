@@ -21,6 +21,9 @@ class Model__acl extends utils_1.Base {
             else if (obj["creator"]._id) {
                 this["creator"] = obj["creator"]._id;
             }
+            else if (obj["creator"]._bsontype && (obj["creator"]._bsontype === 'ObjectID')) {
+                this["creator"] = obj["creator"];
+            }
         }
         if (obj["readers"] != undefined && obj["readers"] != null && _.isArray(obj["readers"])) {
             this["readers"] = obj["readers"].map((value) => {

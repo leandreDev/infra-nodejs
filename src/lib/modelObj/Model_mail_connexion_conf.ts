@@ -47,8 +47,8 @@ export class Model_mail_connexion_conf extends  Base  implements Interface.Imail
             this["end_client"] = obj["end_client"];
           }else if(obj["end_client"]._id){
             this["end_client"] = obj["end_client"]._id ;
-          }else if((obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID'){
-              this["end_client"] = `${value}` ;
+          }else if(obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')){
+              this["end_client"] = obj["end_client"] ;
             }
           
         }
@@ -61,8 +61,8 @@ export class Model_mail_connexion_conf extends  Base  implements Interface.Imail
             this["application_instance"] = obj["application_instance"];
           }else if(obj["application_instance"]._id){
             this["application_instance"] = obj["application_instance"]._id ;
-          }else if((obj["application_instance"]._bsontype && (obj["application_instance"]._bsontype === 'ObjectID'){
-              this["application_instance"] = `${value}` ;
+          }else if(obj["application_instance"]._bsontype && (obj["application_instance"]._bsontype === 'ObjectID')){
+              this["application_instance"] = obj["application_instance"] ;
             }
           
         }

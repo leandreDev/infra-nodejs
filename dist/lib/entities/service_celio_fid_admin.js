@@ -80,6 +80,21 @@ class Entity_service_celio_fid_admin extends service_1.Entity_service {
         if (obj["scanOrderEaBurnPageSize"] != undefined) {
             obj["scanOrderEaBurnPageSize"] = new Number(obj["scanOrderEaBurnPageSize"]).valueOf();
         }
+        if (obj["cashRegisterCapingFidPt"] != undefined) {
+            obj["cashRegisterCapingFidPt"] = new Number(obj["cashRegisterCapingFidPt"]).valueOf();
+        }
+        if (obj["cashRegisterApiKey"] != undefined) {
+            obj["cashRegisterApiKey"] = obj["cashRegisterApiKey"].toString();
+        }
+        if (obj["customerPrefix"] != undefined) {
+            obj["customerPrefix"] = obj["customerPrefix"].toString();
+        }
+        if (obj["globalCappingFidPoint"] != undefined) {
+            obj["globalCappingFidPoint"] = new Number(obj["globalCappingFidPoint"]).valueOf();
+        }
+        if (obj["disableEmbasment"] != undefined) {
+            obj["disableEmbasment"] = new Boolean(obj["disableEmbasment"]).valueOf();
+        }
     }
     static checkfiBddUrl(val, path = null) {
         if (val == null) {
@@ -354,6 +369,75 @@ class Entity_service_celio_fid_admin extends service_1.Entity_service {
             return res;
         }
     }
+    static checkcashRegisterCapingFidPt(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isNumber(val)) {
+            res.push(`${path} is not a number`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkcashRegisterApiKey(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkcustomerPrefix(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkglobalCappingFidPoint(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isNumber(val)) {
+            res.push(`${path} is not a number`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkdisableEmbasment(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isBoolean(val)) {
+            res.push(`${path}  is not a boolean`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -516,6 +600,36 @@ class Entity_service_celio_fid_admin extends service_1.Entity_service {
                 err = [...err, ...res];
             }
         }
+        if (target.cashRegisterCapingFidPt != null && target.cashRegisterCapingFidPt != undefined) {
+            res = Entity_service_celio_fid_admin.checkcashRegisterCapingFidPt(target.cashRegisterCapingFidPt, `${path}.cashRegisterCapingFidPt`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.cashRegisterApiKey != null && target.cashRegisterApiKey != undefined) {
+            res = Entity_service_celio_fid_admin.checkcashRegisterApiKey(target.cashRegisterApiKey, `${path}.cashRegisterApiKey`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.customerPrefix != null && target.customerPrefix != undefined) {
+            res = Entity_service_celio_fid_admin.checkcustomerPrefix(target.customerPrefix, `${path}.customerPrefix`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.globalCappingFidPoint != null && target.globalCappingFidPoint != undefined) {
+            res = Entity_service_celio_fid_admin.checkglobalCappingFidPoint(target.globalCappingFidPoint, `${path}.globalCappingFidPoint`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.disableEmbasment != null && target.disableEmbasment != undefined) {
+            res = Entity_service_celio_fid_admin.checkdisableEmbasment(target.disableEmbasment, `${path}.disableEmbasment`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
         return err;
     }
     static castQueryParam(path, value) {
@@ -628,6 +742,26 @@ class Entity_service_celio_fid_admin extends service_1.Entity_service {
                 //number
                 return new Number(value).valueOf();
                 break;
+            case 'cashRegisterCapingFidPt':
+                //number
+                return new Number(value).valueOf();
+                break;
+            case 'cashRegisterApiKey':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'customerPrefix':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'globalCappingFidPoint':
+                //number
+                return new Number(value).valueOf();
+                break;
+            case 'disableEmbasment':
+                //boolean
+                return new Boolean(value).valueOf();
+                break;
             default:
                 return service_1.Entity_service.castQueryParam(key, value);
                 break;
@@ -692,6 +826,16 @@ class Entity_service_celio_fid_admin extends service_1.Entity_service {
             case 'scanOrderEarnPageSize':
                 return null;
             case 'scanOrderEaBurnPageSize':
+                return null;
+            case 'cashRegisterCapingFidPt':
+                return null;
+            case 'cashRegisterApiKey':
+                return null;
+            case 'customerPrefix':
+                return null;
+            case 'globalCappingFidPoint':
+                return null;
+            case 'disableEmbasment':
                 return null;
             default:
                 return service_1.Entity_service.getClassNameOfProp(key);

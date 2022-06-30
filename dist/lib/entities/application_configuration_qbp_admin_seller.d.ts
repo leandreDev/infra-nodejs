@@ -8,6 +8,9 @@ export declare class Entity_application_configuration_qbp_admin_seller extends E
     static checkqbpBddUrl(val: any, path?: string): string[];
     static checkfsoUrl(val: any, path?: string): string[];
     static checkmangoConf(val: any, path?: string): string[];
+    static checkorderService(val: any, path?: string): string[];
+    static checkticketService(val: any, path?: string): string[];
+    static checksavService(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

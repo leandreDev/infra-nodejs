@@ -30,6 +30,15 @@ class Model_application_configuration_qbp_admin_seller extends Model_application
                 this["mangoConf"] = new Index["MangoConf"](obj["mangoConf"]);
             }
         }
+        if (obj["orderService"] != undefined) {
+            this["orderService"] = obj["orderService"].toString();
+        }
+        if (obj["ticketService"] != undefined) {
+            this["ticketService"] = obj["ticketService"].toString();
+        }
+        if (obj["savService"] != undefined) {
+            this["savService"] = obj["savService"].toString();
+        }
     }
 }
 exports.Model_application_configuration_qbp_admin_seller = Model_application_configuration_qbp_admin_seller;

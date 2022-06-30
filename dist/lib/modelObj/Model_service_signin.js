@@ -53,6 +53,9 @@ class Model_service_signin extends Model_service_1.Model_service {
             else if (obj["resetMail"]._id) {
                 this["resetMail"] = obj["resetMail"]._id;
             }
+            else if (obj["resetMail"]._bsontype && (obj["resetMail"]._bsontype === 'ObjectID')) {
+                this["resetMail"] = obj["resetMail"];
+            }
         }
         if (obj["updateMail"] != undefined) {
             if (_.isString(obj["updateMail"])) {
@@ -60,6 +63,9 @@ class Model_service_signin extends Model_service_1.Model_service {
             }
             else if (obj["updateMail"]._id) {
                 this["updateMail"] = obj["updateMail"]._id;
+            }
+            else if (obj["updateMail"]._bsontype && (obj["updateMail"]._bsontype === 'ObjectID')) {
+                this["updateMail"] = obj["updateMail"];
             }
         }
     }

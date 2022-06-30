@@ -23,8 +23,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["comptoirOr_info"] = obj["comptoirOr_info"];
           }else if(obj["comptoirOr_info"]._id){
             this["comptoirOr_info"] = obj["comptoirOr_info"]._id ;
-          }else if((obj["comptoirOr_info"]._bsontype && (obj["comptoirOr_info"]._bsontype === 'ObjectID'){
-              this["comptoirOr_info"] = `${value}` ;
+          }else if(obj["comptoirOr_info"]._bsontype && (obj["comptoirOr_info"]._bsontype === 'ObjectID')){
+              this["comptoirOr_info"] = obj["comptoirOr_info"] ;
             }
           
         }
@@ -37,8 +37,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_orderDelivred"] = obj["boisdor_fr_orderDelivred"];
           }else if(obj["boisdor_fr_orderDelivred"]._id){
             this["boisdor_fr_orderDelivred"] = obj["boisdor_fr_orderDelivred"]._id ;
-          }else if((obj["boisdor_fr_orderDelivred"]._bsontype && (obj["boisdor_fr_orderDelivred"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_orderDelivred"] = `${value}` ;
+          }else if(obj["boisdor_fr_orderDelivred"]._bsontype && (obj["boisdor_fr_orderDelivred"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_orderDelivred"] = obj["boisdor_fr_orderDelivred"] ;
             }
           
         }
@@ -51,8 +51,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_orderRegister"] = obj["boisdor_fr_orderRegister"];
           }else if(obj["boisdor_fr_orderRegister"]._id){
             this["boisdor_fr_orderRegister"] = obj["boisdor_fr_orderRegister"]._id ;
-          }else if((obj["boisdor_fr_orderRegister"]._bsontype && (obj["boisdor_fr_orderRegister"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_orderRegister"] = `${value}` ;
+          }else if(obj["boisdor_fr_orderRegister"]._bsontype && (obj["boisdor_fr_orderRegister"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_orderRegister"] = obj["boisdor_fr_orderRegister"] ;
             }
           
         }
@@ -65,8 +65,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_resetPassword"] = obj["boisdor_fr_resetPassword"];
           }else if(obj["boisdor_fr_resetPassword"]._id){
             this["boisdor_fr_resetPassword"] = obj["boisdor_fr_resetPassword"]._id ;
-          }else if((obj["boisdor_fr_resetPassword"]._bsontype && (obj["boisdor_fr_resetPassword"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_resetPassword"] = `${value}` ;
+          }else if(obj["boisdor_fr_resetPassword"]._bsontype && (obj["boisdor_fr_resetPassword"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_resetPassword"] = obj["boisdor_fr_resetPassword"] ;
             }
           
         }
@@ -79,8 +79,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_accountCreated"] = obj["boisdor_fr_accountCreated"];
           }else if(obj["boisdor_fr_accountCreated"]._id){
             this["boisdor_fr_accountCreated"] = obj["boisdor_fr_accountCreated"]._id ;
-          }else if((obj["boisdor_fr_accountCreated"]._bsontype && (obj["boisdor_fr_accountCreated"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_accountCreated"] = `${value}` ;
+          }else if(obj["boisdor_fr_accountCreated"]._bsontype && (obj["boisdor_fr_accountCreated"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_accountCreated"] = obj["boisdor_fr_accountCreated"] ;
             }
           
         }
@@ -93,8 +93,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_orderRefund"] = obj["boisdor_fr_orderRefund"];
           }else if(obj["boisdor_fr_orderRefund"]._id){
             this["boisdor_fr_orderRefund"] = obj["boisdor_fr_orderRefund"]._id ;
-          }else if((obj["boisdor_fr_orderRefund"]._bsontype && (obj["boisdor_fr_orderRefund"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_orderRefund"] = `${value}` ;
+          }else if(obj["boisdor_fr_orderRefund"]._bsontype && (obj["boisdor_fr_orderRefund"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_orderRefund"] = obj["boisdor_fr_orderRefund"] ;
             }
           
         }
@@ -107,8 +107,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_orderCancelled"] = obj["boisdor_fr_orderCancelled"];
           }else if(obj["boisdor_fr_orderCancelled"]._id){
             this["boisdor_fr_orderCancelled"] = obj["boisdor_fr_orderCancelled"]._id ;
-          }else if((obj["boisdor_fr_orderCancelled"]._bsontype && (obj["boisdor_fr_orderCancelled"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_orderCancelled"] = `${value}` ;
+          }else if(obj["boisdor_fr_orderCancelled"]._bsontype && (obj["boisdor_fr_orderCancelled"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_orderCancelled"] = obj["boisdor_fr_orderCancelled"] ;
             }
           
         }
@@ -121,8 +121,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_orderValidatedForDelivery"] = obj["boisdor_fr_orderValidatedForDelivery"];
           }else if(obj["boisdor_fr_orderValidatedForDelivery"]._id){
             this["boisdor_fr_orderValidatedForDelivery"] = obj["boisdor_fr_orderValidatedForDelivery"]._id ;
-          }else if((obj["boisdor_fr_orderValidatedForDelivery"]._bsontype && (obj["boisdor_fr_orderValidatedForDelivery"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_orderValidatedForDelivery"] = `${value}` ;
+          }else if(obj["boisdor_fr_orderValidatedForDelivery"]._bsontype && (obj["boisdor_fr_orderValidatedForDelivery"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_orderValidatedForDelivery"] = obj["boisdor_fr_orderValidatedForDelivery"] ;
             }
           
         }
@@ -135,8 +135,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_orderValidatedForPickup"] = obj["boisdor_fr_orderValidatedForPickup"];
           }else if(obj["boisdor_fr_orderValidatedForPickup"]._id){
             this["boisdor_fr_orderValidatedForPickup"] = obj["boisdor_fr_orderValidatedForPickup"]._id ;
-          }else if((obj["boisdor_fr_orderValidatedForPickup"]._bsontype && (obj["boisdor_fr_orderValidatedForPickup"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_orderValidatedForPickup"] = `${value}` ;
+          }else if(obj["boisdor_fr_orderValidatedForPickup"]._bsontype && (obj["boisdor_fr_orderValidatedForPickup"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_orderValidatedForPickup"] = obj["boisdor_fr_orderValidatedForPickup"] ;
             }
           
         }
@@ -149,8 +149,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_orderToCustomer"] = obj["boisdor_fr_orderToCustomer"];
           }else if(obj["boisdor_fr_orderToCustomer"]._id){
             this["boisdor_fr_orderToCustomer"] = obj["boisdor_fr_orderToCustomer"]._id ;
-          }else if((obj["boisdor_fr_orderToCustomer"]._bsontype && (obj["boisdor_fr_orderToCustomer"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_orderToCustomer"] = `${value}` ;
+          }else if(obj["boisdor_fr_orderToCustomer"]._bsontype && (obj["boisdor_fr_orderToCustomer"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_orderToCustomer"] = obj["boisdor_fr_orderToCustomer"] ;
             }
           
         }
@@ -163,8 +163,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_orderToSeller"] = obj["boisdor_fr_orderToSeller"];
           }else if(obj["boisdor_fr_orderToSeller"]._id){
             this["boisdor_fr_orderToSeller"] = obj["boisdor_fr_orderToSeller"]._id ;
-          }else if((obj["boisdor_fr_orderToSeller"]._bsontype && (obj["boisdor_fr_orderToSeller"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_orderToSeller"] = `${value}` ;
+          }else if(obj["boisdor_fr_orderToSeller"]._bsontype && (obj["boisdor_fr_orderToSeller"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_orderToSeller"] = obj["boisdor_fr_orderToSeller"] ;
             }
           
         }
@@ -177,8 +177,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_sav"] = obj["boisdor_fr_sav"];
           }else if(obj["boisdor_fr_sav"]._id){
             this["boisdor_fr_sav"] = obj["boisdor_fr_sav"]._id ;
-          }else if((obj["boisdor_fr_sav"]._bsontype && (obj["boisdor_fr_sav"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_sav"] = `${value}` ;
+          }else if(obj["boisdor_fr_sav"]._bsontype && (obj["boisdor_fr_sav"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_sav"] = obj["boisdor_fr_sav"] ;
             }
           
         }
@@ -191,8 +191,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_contact"] = obj["boisdor_fr_contact"];
           }else if(obj["boisdor_fr_contact"]._id){
             this["boisdor_fr_contact"] = obj["boisdor_fr_contact"]._id ;
-          }else if((obj["boisdor_fr_contact"]._bsontype && (obj["boisdor_fr_contact"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_contact"] = `${value}` ;
+          }else if(obj["boisdor_fr_contact"]._bsontype && (obj["boisdor_fr_contact"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_contact"] = obj["boisdor_fr_contact"] ;
             }
           
         }
@@ -205,8 +205,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_reply_sav"] = obj["boisdor_fr_reply_sav"];
           }else if(obj["boisdor_fr_reply_sav"]._id){
             this["boisdor_fr_reply_sav"] = obj["boisdor_fr_reply_sav"]._id ;
-          }else if((obj["boisdor_fr_reply_sav"]._bsontype && (obj["boisdor_fr_reply_sav"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_reply_sav"] = `${value}` ;
+          }else if(obj["boisdor_fr_reply_sav"]._bsontype && (obj["boisdor_fr_reply_sav"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_reply_sav"] = obj["boisdor_fr_reply_sav"] ;
             }
           
         }
@@ -219,8 +219,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_reply_contact"] = obj["boisdor_fr_reply_contact"];
           }else if(obj["boisdor_fr_reply_contact"]._id){
             this["boisdor_fr_reply_contact"] = obj["boisdor_fr_reply_contact"]._id ;
-          }else if((obj["boisdor_fr_reply_contact"]._bsontype && (obj["boisdor_fr_reply_contact"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_reply_contact"] = `${value}` ;
+          }else if(obj["boisdor_fr_reply_contact"]._bsontype && (obj["boisdor_fr_reply_contact"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_reply_contact"] = obj["boisdor_fr_reply_contact"] ;
             }
           
         }
@@ -233,8 +233,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_orderToCustomerPending"] = obj["boisdor_fr_orderToCustomerPending"];
           }else if(obj["boisdor_fr_orderToCustomerPending"]._id){
             this["boisdor_fr_orderToCustomerPending"] = obj["boisdor_fr_orderToCustomerPending"]._id ;
-          }else if((obj["boisdor_fr_orderToCustomerPending"]._bsontype && (obj["boisdor_fr_orderToCustomerPending"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_orderToCustomerPending"] = `${value}` ;
+          }else if(obj["boisdor_fr_orderToCustomerPending"]._bsontype && (obj["boisdor_fr_orderToCustomerPending"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_orderToCustomerPending"] = obj["boisdor_fr_orderToCustomerPending"] ;
             }
           
         }
@@ -247,8 +247,8 @@ export class Model_bois_dor_mailer extends  Base  implements Interface.Ibois_dor
             this["boisdor_fr_orderToCustomerDiff"] = obj["boisdor_fr_orderToCustomerDiff"];
           }else if(obj["boisdor_fr_orderToCustomerDiff"]._id){
             this["boisdor_fr_orderToCustomerDiff"] = obj["boisdor_fr_orderToCustomerDiff"]._id ;
-          }else if((obj["boisdor_fr_orderToCustomerDiff"]._bsontype && (obj["boisdor_fr_orderToCustomerDiff"]._bsontype === 'ObjectID'){
-              this["boisdor_fr_orderToCustomerDiff"] = `${value}` ;
+          }else if(obj["boisdor_fr_orderToCustomerDiff"]._bsontype && (obj["boisdor_fr_orderToCustomerDiff"]._bsontype === 'ObjectID')){
+              this["boisdor_fr_orderToCustomerDiff"] = obj["boisdor_fr_orderToCustomerDiff"] ;
             }
           
         }

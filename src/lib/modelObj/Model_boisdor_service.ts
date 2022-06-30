@@ -57,8 +57,8 @@ export class Model_boisdor_service extends   Model_service   implements Interfac
             this["appId"] = obj["appId"];
           }else if(obj["appId"]._id){
             this["appId"] = obj["appId"]._id ;
-          }else if((obj["appId"]._bsontype && (obj["appId"]._bsontype === 'ObjectID'){
-              this["appId"] = `${value}` ;
+          }else if(obj["appId"]._bsontype && (obj["appId"]._bsontype === 'ObjectID')){
+              this["appId"] = obj["appId"] ;
             }
           
         }
@@ -71,8 +71,8 @@ export class Model_boisdor_service extends   Model_service   implements Interfac
             this["end_client"] = obj["end_client"];
           }else if(obj["end_client"]._id){
             this["end_client"] = obj["end_client"]._id ;
-          }else if((obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID'){
-              this["end_client"] = `${value}` ;
+          }else if(obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')){
+              this["end_client"] = obj["end_client"] ;
             }
           
         }
@@ -117,8 +117,8 @@ export class Model_boisdor_service extends   Model_service   implements Interfac
             this["sellerAppId"] = obj["sellerAppId"];
           }else if(obj["sellerAppId"]._id){
             this["sellerAppId"] = obj["sellerAppId"]._id ;
-          }else if((obj["sellerAppId"]._bsontype && (obj["sellerAppId"]._bsontype === 'ObjectID'){
-              this["sellerAppId"] = `${value}` ;
+          }else if(obj["sellerAppId"]._bsontype && (obj["sellerAppId"]._bsontype === 'ObjectID')){
+              this["sellerAppId"] = obj["sellerAppId"] ;
             }
           
         }
@@ -139,8 +139,8 @@ export class Model_boisdor_service extends   Model_service   implements Interfac
             this["adminAppId"] = obj["adminAppId"];
           }else if(obj["adminAppId"]._id){
             this["adminAppId"] = obj["adminAppId"]._id ;
-          }else if((obj["adminAppId"]._bsontype && (obj["adminAppId"]._bsontype === 'ObjectID'){
-              this["adminAppId"] = `${value}` ;
+          }else if(obj["adminAppId"]._bsontype && (obj["adminAppId"]._bsontype === 'ObjectID')){
+              this["adminAppId"] = obj["adminAppId"] ;
             }
           
         }
@@ -177,8 +177,8 @@ export class Model_boisdor_service extends   Model_service   implements Interfac
             this["sellerEndClientTemplate"] = obj["sellerEndClientTemplate"];
           }else if(obj["sellerEndClientTemplate"]._id){
             this["sellerEndClientTemplate"] = obj["sellerEndClientTemplate"]._id ;
-          }else if((obj["sellerEndClientTemplate"]._bsontype && (obj["sellerEndClientTemplate"]._bsontype === 'ObjectID'){
-              this["sellerEndClientTemplate"] = `${value}` ;
+          }else if(obj["sellerEndClientTemplate"]._bsontype && (obj["sellerEndClientTemplate"]._bsontype === 'ObjectID')){
+              this["sellerEndClientTemplate"] = obj["sellerEndClientTemplate"] ;
             }
           
         }
@@ -191,8 +191,8 @@ export class Model_boisdor_service extends   Model_service   implements Interfac
             this["sellerAppInstanceTemplate"] = obj["sellerAppInstanceTemplate"];
           }else if(obj["sellerAppInstanceTemplate"]._id){
             this["sellerAppInstanceTemplate"] = obj["sellerAppInstanceTemplate"]._id ;
-          }else if((obj["sellerAppInstanceTemplate"]._bsontype && (obj["sellerAppInstanceTemplate"]._bsontype === 'ObjectID'){
-              this["sellerAppInstanceTemplate"] = `${value}` ;
+          }else if(obj["sellerAppInstanceTemplate"]._bsontype && (obj["sellerAppInstanceTemplate"]._bsontype === 'ObjectID')){
+              this["sellerAppInstanceTemplate"] = obj["sellerAppInstanceTemplate"] ;
             }
           
         }

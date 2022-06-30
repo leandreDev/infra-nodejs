@@ -13,6 +13,14 @@ export declare class Entity_service_celio_fid extends Entity_service {
     static checksecretToken(val: any, path?: string): string[];
     static checkserverUrl(val: any, path?: string): string[];
     static checkcaPath(val: any, path?: string): string[];
+    static checksponsorPoints(val: any, path?: string): string[];
+    static checkchildPoints(val: any, path?: string): string[];
+    static checkcappingThreshold(val: any, path?: string): string[];
+    static checksponsorshipFrequencyUnit(val: any, path?: string): string[];
+    static checksponsorshipMaxCount(val: any, path?: string): string[];
+    static checkfixedEarnFrequencyUnit(val: any, path?: string): string[];
+    static checkfixedEarnValue(val: any, path?: string): string[];
+    static checkfixedEarnMaxCount(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

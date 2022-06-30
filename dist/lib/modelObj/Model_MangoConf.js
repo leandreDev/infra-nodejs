@@ -12,6 +12,14 @@ class Model_MangoConf extends utils_1.Base {
     constructor(obj = {}) {
         super(obj);
         this._class = "MangoConf";
+        /**
+  l'id d'utilisateur pour le compte QBP dans mangopay,  cette utilisatuer est celui qui reçois les fonds des différents transactions la valeur par default est celle du sandbox
+  */
+        this["qbpUserIdInMangoPay"] = "108463446";
+        /**
+  l'id du portefeuille virtuelle pour le compte QBP dans mangopay,  cette portefeuille est celui qui reçois les fonds des différents transactions la valeur par default est celle du sandbox
+  */
+        this["qbpWalletIdInMangoPay"] = "108463447";
         if (obj["clientId"] != undefined) {
             this["clientId"] = obj["clientId"].toString();
         }
@@ -29,6 +37,12 @@ class Model_MangoConf extends utils_1.Base {
         }
         if (obj["clientUserId"] != undefined) {
             this["clientUserId"] = obj["clientUserId"].toString();
+        }
+        if (obj["qbpUserIdInMangoPay"] != undefined) {
+            this["qbpUserIdInMangoPay"] = obj["qbpUserIdInMangoPay"].toString();
+        }
+        if (obj["qbpWalletIdInMangoPay"] != undefined) {
+            this["qbpWalletIdInMangoPay"] = obj["qbpWalletIdInMangoPay"].toString();
         }
     }
 }

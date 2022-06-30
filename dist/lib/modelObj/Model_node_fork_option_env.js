@@ -23,6 +23,9 @@ class Model_node_fork_option_env extends utils_1.Base {
             else if (obj["SRV_ID"]._id) {
                 this["SRV_ID"] = obj["SRV_ID"]._id;
             }
+            else if (obj["SRV_ID"]._bsontype && (obj["SRV_ID"]._bsontype === 'ObjectID')) {
+                this["SRV_ID"] = obj["SRV_ID"];
+            }
         }
     }
 }

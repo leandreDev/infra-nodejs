@@ -54,6 +54,9 @@ class Model_service_celio_back_task extends Model_service_1.Model_service {
                 this["marketingCloudApisConf"] = new Index["MarketingCloudApisConf"](obj["marketingCloudApisConf"]);
             }
         }
+        if (obj["customerPrefix"] != undefined) {
+            this["customerPrefix"] = obj["customerPrefix"].toString();
+        }
     }
 }
 exports.Model_service_celio_back_task = Model_service_celio_back_task;

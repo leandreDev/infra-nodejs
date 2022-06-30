@@ -26,6 +26,9 @@ class Entity_ftpConf extends utils_1.Entity {
         if (obj["password"] != undefined) {
             obj["password"] = obj["password"].toString();
         }
+        if (obj["privateKey"] != undefined) {
+            obj["privateKey"] = obj["privateKey"].toString();
+        }
     }
     static checkhost(val, path = null) {
         if (val == null) {
@@ -78,6 +81,18 @@ class Entity_ftpConf extends utils_1.Entity {
             return res;
         }
     }
+    static checkprivateKey(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -110,6 +125,12 @@ class Entity_ftpConf extends utils_1.Entity {
         }
         if (target.password != null && target.password != undefined) {
             res = Entity_ftpConf.checkpassword(target.password, `${path}.password`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.privateKey != null && target.privateKey != undefined) {
+            res = Entity_ftpConf.checkprivateKey(target.privateKey, `${path}.privateKey`);
             if (res && res.length > 0) {
                 err = [...err, ...res];
             }
@@ -153,6 +174,10 @@ class Entity_ftpConf extends utils_1.Entity {
                 //string
                 return new String(value).valueOf();
                 break;
+            case 'privateKey':
+                //string
+                return new String(value).valueOf();
+                break;
             default:
                 return utils_1.Entity.castQueryParam(key, value);
                 break;
@@ -183,6 +208,8 @@ class Entity_ftpConf extends utils_1.Entity {
             case 'username':
                 return null;
             case 'password':
+                return null;
+            case 'privateKey':
                 return null;
             default:
                 return utils_1.Entity.getClassNameOfProp(key);

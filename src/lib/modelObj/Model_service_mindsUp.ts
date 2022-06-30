@@ -89,8 +89,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["applicationClienteConfig"] = obj["applicationClienteConfig"];
           }else if(obj["applicationClienteConfig"]._id){
             this["applicationClienteConfig"] = obj["applicationClienteConfig"]._id ;
-          }else if((obj["applicationClienteConfig"]._bsontype && (obj["applicationClienteConfig"]._bsontype === 'ObjectID'){
-              this["applicationClienteConfig"] = `${value}` ;
+          }else if(obj["applicationClienteConfig"]._bsontype && (obj["applicationClienteConfig"]._bsontype === 'ObjectID')){
+              this["applicationClienteConfig"] = obj["applicationClienteConfig"] ;
             }
           
         }
@@ -103,8 +103,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["applicationAdminConfig"] = obj["applicationAdminConfig"];
           }else if(obj["applicationAdminConfig"]._id){
             this["applicationAdminConfig"] = obj["applicationAdminConfig"]._id ;
-          }else if((obj["applicationAdminConfig"]._bsontype && (obj["applicationAdminConfig"]._bsontype === 'ObjectID'){
-              this["applicationAdminConfig"] = `${value}` ;
+          }else if(obj["applicationAdminConfig"]._bsontype && (obj["applicationAdminConfig"]._bsontype === 'ObjectID')){
+              this["applicationAdminConfig"] = obj["applicationAdminConfig"] ;
             }
           
         }
@@ -129,8 +129,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["appId"] = obj["appId"];
           }else if(obj["appId"]._id){
             this["appId"] = obj["appId"]._id ;
-          }else if((obj["appId"]._bsontype && (obj["appId"]._bsontype === 'ObjectID'){
-              this["appId"] = `${value}` ;
+          }else if(obj["appId"]._bsontype && (obj["appId"]._bsontype === 'ObjectID')){
+              this["appId"] = obj["appId"] ;
             }
           
         }
@@ -143,8 +143,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["adminAppId"] = obj["adminAppId"];
           }else if(obj["adminAppId"]._id){
             this["adminAppId"] = obj["adminAppId"]._id ;
-          }else if((obj["adminAppId"]._bsontype && (obj["adminAppId"]._bsontype === 'ObjectID'){
-              this["adminAppId"] = `${value}` ;
+          }else if(obj["adminAppId"]._bsontype && (obj["adminAppId"]._bsontype === 'ObjectID')){
+              this["adminAppId"] = obj["adminAppId"] ;
             }
           
         }
@@ -157,8 +157,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["end_client"] = obj["end_client"];
           }else if(obj["end_client"]._id){
             this["end_client"] = obj["end_client"]._id ;
-          }else if((obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID'){
-              this["end_client"] = `${value}` ;
+          }else if(obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')){
+              this["end_client"] = obj["end_client"] ;
             }
           
         }
@@ -203,8 +203,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["mailIRelance360"] = obj["mailIRelance360"];
           }else if(obj["mailIRelance360"]._id){
             this["mailIRelance360"] = obj["mailIRelance360"]._id ;
-          }else if((obj["mailIRelance360"]._bsontype && (obj["mailIRelance360"]._bsontype === 'ObjectID'){
-              this["mailIRelance360"] = `${value}` ;
+          }else if(obj["mailIRelance360"]._bsontype && (obj["mailIRelance360"]._bsontype === 'ObjectID')){
+              this["mailIRelance360"] = obj["mailIRelance360"] ;
             }
           
         }
@@ -217,8 +217,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["mailInvitation360"] = obj["mailInvitation360"];
           }else if(obj["mailInvitation360"]._id){
             this["mailInvitation360"] = obj["mailInvitation360"]._id ;
-          }else if((obj["mailInvitation360"]._bsontype && (obj["mailInvitation360"]._bsontype === 'ObjectID'){
-              this["mailInvitation360"] = `${value}` ;
+          }else if(obj["mailInvitation360"]._bsontype && (obj["mailInvitation360"]._bsontype === 'ObjectID')){
+              this["mailInvitation360"] = obj["mailInvitation360"] ;
             }
           
         }
@@ -231,8 +231,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"];
           }else if(obj["mailInvitationCampaign360"]._id){
             this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"]._id ;
-          }else if((obj["mailInvitationCampaign360"]._bsontype && (obj["mailInvitationCampaign360"]._bsontype === 'ObjectID'){
-              this["mailInvitationCampaign360"] = `${value}` ;
+          }else if(obj["mailInvitationCampaign360"]._bsontype && (obj["mailInvitationCampaign360"]._bsontype === 'ObjectID')){
+              this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"] ;
             }
           
         }
@@ -245,8 +245,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["mailCreation360"] = obj["mailCreation360"];
           }else if(obj["mailCreation360"]._id){
             this["mailCreation360"] = obj["mailCreation360"]._id ;
-          }else if((obj["mailCreation360"]._bsontype && (obj["mailCreation360"]._bsontype === 'ObjectID'){
-              this["mailCreation360"] = `${value}` ;
+          }else if(obj["mailCreation360"]._bsontype && (obj["mailCreation360"]._bsontype === 'ObjectID')){
+              this["mailCreation360"] = obj["mailCreation360"] ;
             }
           
         }
@@ -275,8 +275,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["mailInquiry360UserResponseInfo"] = obj["mailInquiry360UserResponseInfo"];
           }else if(obj["mailInquiry360UserResponseInfo"]._id){
             this["mailInquiry360UserResponseInfo"] = obj["mailInquiry360UserResponseInfo"]._id ;
-          }else if((obj["mailInquiry360UserResponseInfo"]._bsontype && (obj["mailInquiry360UserResponseInfo"]._bsontype === 'ObjectID'){
-              this["mailInquiry360UserResponseInfo"] = `${value}` ;
+          }else if(obj["mailInquiry360UserResponseInfo"]._bsontype && (obj["mailInquiry360UserResponseInfo"]._bsontype === 'ObjectID')){
+              this["mailInquiry360UserResponseInfo"] = obj["mailInquiry360UserResponseInfo"] ;
             }
           
         }
@@ -289,8 +289,8 @@ export class Model_service_mindsUp extends   Model_service   implements Interfac
             this["mailInquiry360UserResponse"] = obj["mailInquiry360UserResponse"];
           }else if(obj["mailInquiry360UserResponse"]._id){
             this["mailInquiry360UserResponse"] = obj["mailInquiry360UserResponse"]._id ;
-          }else if((obj["mailInquiry360UserResponse"]._bsontype && (obj["mailInquiry360UserResponse"]._bsontype === 'ObjectID'){
-              this["mailInquiry360UserResponse"] = `${value}` ;
+          }else if(obj["mailInquiry360UserResponse"]._bsontype && (obj["mailInquiry360UserResponse"]._bsontype === 'ObjectID')){
+              this["mailInquiry360UserResponse"] = obj["mailInquiry360UserResponse"] ;
             }
           
         }

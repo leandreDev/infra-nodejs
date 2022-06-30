@@ -23,6 +23,9 @@ class Model_Service_scorm_gateway extends Model_service_1.Model_service {
             else if (obj["endClientId"]._id) {
                 this["endClientId"] = obj["endClientId"]._id;
             }
+            else if (obj["endClientId"]._bsontype && (obj["endClientId"]._bsontype === 'ObjectID')) {
+                this["endClientId"] = obj["endClientId"];
+            }
         }
         if (obj["signinUrl"] != undefined) {
             this["signinUrl"] = obj["signinUrl"].toString();

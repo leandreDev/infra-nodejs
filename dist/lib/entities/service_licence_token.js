@@ -35,6 +35,9 @@ class Entity_service_licence_token extends service_1.Entity_service {
                 else if (value._id) {
                     return new utils_1.mongo.ObjectId(value._id);
                 }
+                else if (value._bsontype && value._bsontype === 'ObjectID') {
+                    return value;
+                }
             });
         }
         if (obj["end_clientUrl"] != undefined) {

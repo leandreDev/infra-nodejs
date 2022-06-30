@@ -57,8 +57,8 @@ export class Model_service_comptoireOr extends   Model_service   implements Inte
             this["adminConfId"] = obj["adminConfId"];
           }else if(obj["adminConfId"]._id){
             this["adminConfId"] = obj["adminConfId"]._id ;
-          }else if((obj["adminConfId"]._bsontype && (obj["adminConfId"]._bsontype === 'ObjectID'){
-              this["adminConfId"] = `${value}` ;
+          }else if(obj["adminConfId"]._bsontype && (obj["adminConfId"]._bsontype === 'ObjectID')){
+              this["adminConfId"] = obj["adminConfId"] ;
             }
           
         }
@@ -71,8 +71,8 @@ export class Model_service_comptoireOr extends   Model_service   implements Inte
             this["end_client"] = obj["end_client"];
           }else if(obj["end_client"]._id){
             this["end_client"] = obj["end_client"]._id ;
-          }else if((obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID'){
-              this["end_client"] = `${value}` ;
+          }else if(obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')){
+              this["end_client"] = obj["end_client"] ;
             }
           
         }
@@ -93,8 +93,8 @@ export class Model_service_comptoireOr extends   Model_service   implements Inte
             this["adminAppId"] = obj["adminAppId"];
           }else if(obj["adminAppId"]._id){
             this["adminAppId"] = obj["adminAppId"]._id ;
-          }else if((obj["adminAppId"]._bsontype && (obj["adminAppId"]._bsontype === 'ObjectID'){
-              this["adminAppId"] = `${value}` ;
+          }else if(obj["adminAppId"]._bsontype && (obj["adminAppId"]._bsontype === 'ObjectID')){
+              this["adminAppId"] = obj["adminAppId"] ;
             }
           
         }
@@ -131,8 +131,8 @@ export class Model_service_comptoireOr extends   Model_service   implements Inte
             this["transactionEmailTemplate"] = obj["transactionEmailTemplate"];
           }else if(obj["transactionEmailTemplate"]._id){
             this["transactionEmailTemplate"] = obj["transactionEmailTemplate"]._id ;
-          }else if((obj["transactionEmailTemplate"]._bsontype && (obj["transactionEmailTemplate"]._bsontype === 'ObjectID'){
-              this["transactionEmailTemplate"] = `${value}` ;
+          }else if(obj["transactionEmailTemplate"]._bsontype && (obj["transactionEmailTemplate"]._bsontype === 'ObjectID')){
+              this["transactionEmailTemplate"] = obj["transactionEmailTemplate"] ;
             }
           
         }

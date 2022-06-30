@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Entity_service_celio_fid = void 0;
+const _ = require("lodash");
 const Index = require("./Index");
 const service_1 = require("./service");
 /**
@@ -39,6 +40,30 @@ class Entity_service_celio_fid extends service_1.Entity_service {
         }
         if (obj["caPath"] != undefined) {
             obj["caPath"] = obj["caPath"].toString();
+        }
+        if (obj["sponsorPoints"] != undefined) {
+            obj["sponsorPoints"] = new Number(obj["sponsorPoints"]).valueOf();
+        }
+        if (obj["childPoints"] != undefined) {
+            obj["childPoints"] = new Number(obj["childPoints"]).valueOf();
+        }
+        if (obj["cappingThreshold"] != undefined) {
+            obj["cappingThreshold"] = obj["cappingThreshold"].toString();
+        }
+        if (obj["sponsorshipFrequencyUnit"] != undefined) {
+            obj["sponsorshipFrequencyUnit"] = new Number(obj["sponsorshipFrequencyUnit"]).valueOf();
+        }
+        if (obj["sponsorshipMaxCount"] != undefined) {
+            obj["sponsorshipMaxCount"] = new Number(obj["sponsorshipMaxCount"]).valueOf();
+        }
+        if (obj["fixedEarnFrequencyUnit"] != undefined) {
+            obj["fixedEarnFrequencyUnit"] = new Number(obj["fixedEarnFrequencyUnit"]).valueOf();
+        }
+        if (obj["fixedEarnValue"] != undefined) {
+            obj["fixedEarnValue"] = new Number(obj["fixedEarnValue"]).valueOf();
+        }
+        if (obj["fixedEarnMaxCount"] != undefined) {
+            obj["fixedEarnMaxCount"] = new Number(obj["fixedEarnMaxCount"]).valueOf();
         }
     }
     static checkbddUrl(val, path = null) {
@@ -149,6 +174,123 @@ class Entity_service_celio_fid extends service_1.Entity_service {
             return res;
         }
     }
+    static checksponsorPoints(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isNumber(val)) {
+            res.push(`${path} is not a number`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkchildPoints(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isNumber(val)) {
+            res.push(`${path} is not a number`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkcappingThreshold(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checksponsorshipFrequencyUnit(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isNumber(val)) {
+            res.push(`${path} is not a number`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checksponsorshipMaxCount(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isNumber(val)) {
+            res.push(`${path} is not a number`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkfixedEarnFrequencyUnit(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isNumber(val)) {
+            res.push(`${path} is not a number`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkfixedEarnValue(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isNumber(val)) {
+            res.push(`${path} is not a number`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkfixedEarnMaxCount(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isNumber(val)) {
+            res.push(`${path} is not a number`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -216,6 +358,54 @@ class Entity_service_celio_fid extends service_1.Entity_service {
                 err = [...err, ...res];
             }
         }
+        if (target.sponsorPoints != null && target.sponsorPoints != undefined) {
+            res = Entity_service_celio_fid.checksponsorPoints(target.sponsorPoints, `${path}.sponsorPoints`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.childPoints != null && target.childPoints != undefined) {
+            res = Entity_service_celio_fid.checkchildPoints(target.childPoints, `${path}.childPoints`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.cappingThreshold != null && target.cappingThreshold != undefined) {
+            res = Entity_service_celio_fid.checkcappingThreshold(target.cappingThreshold, `${path}.cappingThreshold`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.sponsorshipFrequencyUnit != null && target.sponsorshipFrequencyUnit != undefined) {
+            res = Entity_service_celio_fid.checksponsorshipFrequencyUnit(target.sponsorshipFrequencyUnit, `${path}.sponsorshipFrequencyUnit`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.sponsorshipMaxCount != null && target.sponsorshipMaxCount != undefined) {
+            res = Entity_service_celio_fid.checksponsorshipMaxCount(target.sponsorshipMaxCount, `${path}.sponsorshipMaxCount`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.fixedEarnFrequencyUnit != null && target.fixedEarnFrequencyUnit != undefined) {
+            res = Entity_service_celio_fid.checkfixedEarnFrequencyUnit(target.fixedEarnFrequencyUnit, `${path}.fixedEarnFrequencyUnit`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.fixedEarnValue != null && target.fixedEarnValue != undefined) {
+            res = Entity_service_celio_fid.checkfixedEarnValue(target.fixedEarnValue, `${path}.fixedEarnValue`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.fixedEarnMaxCount != null && target.fixedEarnMaxCount != undefined) {
+            res = Entity_service_celio_fid.checkfixedEarnMaxCount(target.fixedEarnMaxCount, `${path}.fixedEarnMaxCount`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
         return err;
     }
     static castQueryParam(path, value) {
@@ -275,6 +465,38 @@ class Entity_service_celio_fid extends service_1.Entity_service {
                 //string
                 return new String(value).valueOf();
                 break;
+            case 'sponsorPoints':
+                //number
+                return new Number(value).valueOf();
+                break;
+            case 'childPoints':
+                //number
+                return new Number(value).valueOf();
+                break;
+            case 'cappingThreshold':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'sponsorshipFrequencyUnit':
+                //number
+                return new Number(value).valueOf();
+                break;
+            case 'sponsorshipMaxCount':
+                //number
+                return new Number(value).valueOf();
+                break;
+            case 'fixedEarnFrequencyUnit':
+                //number
+                return new Number(value).valueOf();
+                break;
+            case 'fixedEarnValue':
+                //number
+                return new Number(value).valueOf();
+                break;
+            case 'fixedEarnMaxCount':
+                //number
+                return new Number(value).valueOf();
+                break;
             default:
                 return service_1.Entity_service.castQueryParam(key, value);
                 break;
@@ -315,6 +537,22 @@ class Entity_service_celio_fid extends service_1.Entity_service {
             case 'serverUrl':
                 return null;
             case 'caPath':
+                return null;
+            case 'sponsorPoints':
+                return null;
+            case 'childPoints':
+                return null;
+            case 'cappingThreshold':
+                return null;
+            case 'sponsorshipFrequencyUnit':
+                return null;
+            case 'sponsorshipMaxCount':
+                return null;
+            case 'fixedEarnFrequencyUnit':
+                return null;
+            case 'fixedEarnValue':
+                return null;
+            case 'fixedEarnMaxCount':
                 return null;
             default:
                 return service_1.Entity_service.getClassNameOfProp(key);

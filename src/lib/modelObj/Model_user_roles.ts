@@ -23,8 +23,8 @@ export class Model_user_roles extends  Base  implements Interface.Iuser_roles {
             this["user"] = obj["user"];
           }else if(obj["user"]._id){
             this["user"] = obj["user"]._id ;
-          }else if((obj["user"]._bsontype && (obj["user"]._bsontype === 'ObjectID'){
-              this["user"] = `${value}` ;
+          }else if(obj["user"]._bsontype && (obj["user"]._bsontype === 'ObjectID')){
+              this["user"] = obj["user"] ;
             }
           
         }

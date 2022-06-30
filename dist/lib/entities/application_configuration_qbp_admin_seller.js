@@ -26,6 +26,15 @@ class Entity_application_configuration_qbp_admin_seller extends application_conf
             Index.Entity_MangoConf.cast(obj["mangoConf"]);
             //602e35837d6c5b63b790117e
         }
+        if (obj["orderService"] != undefined) {
+            obj["orderService"] = obj["orderService"].toString();
+        }
+        if (obj["ticketService"] != undefined) {
+            obj["ticketService"] = obj["ticketService"].toString();
+        }
+        if (obj["savService"] != undefined) {
+            obj["savService"] = obj["savService"].toString();
+        }
     }
     static checkqbpSellerApi(val, path = null) {
         if (val == null) {
@@ -84,6 +93,42 @@ class Entity_application_configuration_qbp_admin_seller extends application_conf
             return res;
         }
     }
+    static checkorderService(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkticketService(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checksavService(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -108,6 +153,24 @@ class Entity_application_configuration_qbp_admin_seller extends application_conf
         }
         if (target.mangoConf != null && target.mangoConf != undefined) {
             res = Entity_application_configuration_qbp_admin_seller.checkmangoConf(target.mangoConf, `${path}.mangoConf`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.orderService != null && target.orderService != undefined) {
+            res = Entity_application_configuration_qbp_admin_seller.checkorderService(target.orderService, `${path}.orderService`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.ticketService != null && target.ticketService != undefined) {
+            res = Entity_application_configuration_qbp_admin_seller.checkticketService(target.ticketService, `${path}.ticketService`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.savService != null && target.savService != undefined) {
+            res = Entity_application_configuration_qbp_admin_seller.checksavService(target.savService, `${path}.savService`);
             if (res && res.length > 0) {
                 err = [...err, ...res];
             }
@@ -156,6 +219,18 @@ class Entity_application_configuration_qbp_admin_seller extends application_conf
                     return Index.Entity_MangoConf.castQueryParam(subPath, value);
                 }
                 break;
+            case 'orderService':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'ticketService':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'savService':
+                //string
+                return new String(value).valueOf();
+                break;
             default:
                 return application_configuration_1.Entity_application_configuration.castQueryParam(key, value);
                 break;
@@ -187,6 +262,12 @@ class Entity_application_configuration_qbp_admin_seller extends application_conf
                 return null;
             case 'mangoConf':
                 return Index.Entity_MangoConf.getClassNameOfProp(subPath);
+            case 'orderService':
+                return null;
+            case 'ticketService':
+                return null;
+            case 'savService':
+                return null;
             default:
                 return application_configuration_1.Entity_application_configuration.getClassNameOfProp(key);
                 break;

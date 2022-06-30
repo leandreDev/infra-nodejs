@@ -49,8 +49,8 @@ export class Model_service_infra_admin extends   Model_service   implements Inte
             this["service_nginxMultiConfiguratorId"] = obj["service_nginxMultiConfiguratorId"];
           }else if(obj["service_nginxMultiConfiguratorId"]._id){
             this["service_nginxMultiConfiguratorId"] = obj["service_nginxMultiConfiguratorId"]._id ;
-          }else if((obj["service_nginxMultiConfiguratorId"]._bsontype && (obj["service_nginxMultiConfiguratorId"]._bsontype === 'ObjectID'){
-              this["service_nginxMultiConfiguratorId"] = `${value}` ;
+          }else if(obj["service_nginxMultiConfiguratorId"]._bsontype && (obj["service_nginxMultiConfiguratorId"]._bsontype === 'ObjectID')){
+              this["service_nginxMultiConfiguratorId"] = obj["service_nginxMultiConfiguratorId"] ;
             }
           
         }

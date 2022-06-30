@@ -39,8 +39,8 @@ export class Model_ParnerDeployConf extends  Base  implements Interface.IParnerD
             this["appClientTemplateId"] = obj["appClientTemplateId"];
           }else if(obj["appClientTemplateId"]._id){
             this["appClientTemplateId"] = obj["appClientTemplateId"]._id ;
-          }else if((obj["appClientTemplateId"]._bsontype && (obj["appClientTemplateId"]._bsontype === 'ObjectID'){
-              this["appClientTemplateId"] = `${value}` ;
+          }else if(obj["appClientTemplateId"]._bsontype && (obj["appClientTemplateId"]._bsontype === 'ObjectID')){
+              this["appClientTemplateId"] = obj["appClientTemplateId"] ;
             }
           
         }
@@ -53,8 +53,8 @@ export class Model_ParnerDeployConf extends  Base  implements Interface.IParnerD
             this["appAdminTemplateId"] = obj["appAdminTemplateId"];
           }else if(obj["appAdminTemplateId"]._id){
             this["appAdminTemplateId"] = obj["appAdminTemplateId"]._id ;
-          }else if((obj["appAdminTemplateId"]._bsontype && (obj["appAdminTemplateId"]._bsontype === 'ObjectID'){
-              this["appAdminTemplateId"] = `${value}` ;
+          }else if(obj["appAdminTemplateId"]._bsontype && (obj["appAdminTemplateId"]._bsontype === 'ObjectID')){
+              this["appAdminTemplateId"] = obj["appAdminTemplateId"] ;
             }
           
         }
@@ -67,8 +67,8 @@ export class Model_ParnerDeployConf extends  Base  implements Interface.IParnerD
             this["endClientTemplateId"] = obj["endClientTemplateId"];
           }else if(obj["endClientTemplateId"]._id){
             this["endClientTemplateId"] = obj["endClientTemplateId"]._id ;
-          }else if((obj["endClientTemplateId"]._bsontype && (obj["endClientTemplateId"]._bsontype === 'ObjectID'){
-              this["endClientTemplateId"] = `${value}` ;
+          }else if(obj["endClientTemplateId"]._bsontype && (obj["endClientTemplateId"]._bsontype === 'ObjectID')){
+              this["endClientTemplateId"] = obj["endClientTemplateId"] ;
             }
           
         }
@@ -81,8 +81,8 @@ export class Model_ParnerDeployConf extends  Base  implements Interface.IParnerD
             this["oidcTemplateId"] = obj["oidcTemplateId"];
           }else if(obj["oidcTemplateId"]._id){
             this["oidcTemplateId"] = obj["oidcTemplateId"]._id ;
-          }else if((obj["oidcTemplateId"]._bsontype && (obj["oidcTemplateId"]._bsontype === 'ObjectID'){
-              this["oidcTemplateId"] = `${value}` ;
+          }else if(obj["oidcTemplateId"]._bsontype && (obj["oidcTemplateId"]._bsontype === 'ObjectID')){
+              this["oidcTemplateId"] = obj["oidcTemplateId"] ;
             }
           
         }

@@ -45,6 +45,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             else if (obj["applicationClienteConfig"]._id) {
                 this["applicationClienteConfig"] = obj["applicationClienteConfig"]._id;
             }
+            else if (obj["applicationClienteConfig"]._bsontype && (obj["applicationClienteConfig"]._bsontype === 'ObjectID')) {
+                this["applicationClienteConfig"] = obj["applicationClienteConfig"];
+            }
         }
         if (obj["applicationAdminConfig"] != undefined) {
             if (_.isString(obj["applicationAdminConfig"])) {
@@ -52,6 +55,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             }
             else if (obj["applicationAdminConfig"]._id) {
                 this["applicationAdminConfig"] = obj["applicationAdminConfig"]._id;
+            }
+            else if (obj["applicationAdminConfig"]._bsontype && (obj["applicationAdminConfig"]._bsontype === 'ObjectID')) {
+                this["applicationAdminConfig"] = obj["applicationAdminConfig"];
             }
         }
         if (obj["ftpConf"] != undefined) {
@@ -69,6 +75,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             else if (obj["appId"]._id) {
                 this["appId"] = obj["appId"]._id;
             }
+            else if (obj["appId"]._bsontype && (obj["appId"]._bsontype === 'ObjectID')) {
+                this["appId"] = obj["appId"];
+            }
         }
         if (obj["adminAppId"] != undefined) {
             if (_.isString(obj["adminAppId"])) {
@@ -77,6 +86,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             else if (obj["adminAppId"]._id) {
                 this["adminAppId"] = obj["adminAppId"]._id;
             }
+            else if (obj["adminAppId"]._bsontype && (obj["adminAppId"]._bsontype === 'ObjectID')) {
+                this["adminAppId"] = obj["adminAppId"];
+            }
         }
         if (obj["end_client"] != undefined) {
             if (_.isString(obj["end_client"])) {
@@ -84,6 +96,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             }
             else if (obj["end_client"]._id) {
                 this["end_client"] = obj["end_client"]._id;
+            }
+            else if (obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')) {
+                this["end_client"] = obj["end_client"];
             }
         }
         if (obj["licenceStoreId"] != undefined) {
@@ -105,6 +120,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             else if (obj["mailIRelance360"]._id) {
                 this["mailIRelance360"] = obj["mailIRelance360"]._id;
             }
+            else if (obj["mailIRelance360"]._bsontype && (obj["mailIRelance360"]._bsontype === 'ObjectID')) {
+                this["mailIRelance360"] = obj["mailIRelance360"];
+            }
         }
         if (obj["mailInvitation360"] != undefined) {
             if (_.isString(obj["mailInvitation360"])) {
@@ -112,6 +130,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             }
             else if (obj["mailInvitation360"]._id) {
                 this["mailInvitation360"] = obj["mailInvitation360"]._id;
+            }
+            else if (obj["mailInvitation360"]._bsontype && (obj["mailInvitation360"]._bsontype === 'ObjectID')) {
+                this["mailInvitation360"] = obj["mailInvitation360"];
             }
         }
         if (obj["mailInvitationCampaign360"] != undefined) {
@@ -121,6 +142,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             else if (obj["mailInvitationCampaign360"]._id) {
                 this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"]._id;
             }
+            else if (obj["mailInvitationCampaign360"]._bsontype && (obj["mailInvitationCampaign360"]._bsontype === 'ObjectID')) {
+                this["mailInvitationCampaign360"] = obj["mailInvitationCampaign360"];
+            }
         }
         if (obj["mailCreation360"] != undefined) {
             if (_.isString(obj["mailCreation360"])) {
@@ -128,6 +152,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             }
             else if (obj["mailCreation360"]._id) {
                 this["mailCreation360"] = obj["mailCreation360"]._id;
+            }
+            else if (obj["mailCreation360"]._bsontype && (obj["mailCreation360"]._bsontype === 'ObjectID')) {
+                this["mailCreation360"] = obj["mailCreation360"];
             }
         }
         if (obj["appName"] != undefined) {
@@ -143,6 +170,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             else if (obj["mailInquiry360UserResponseInfo"]._id) {
                 this["mailInquiry360UserResponseInfo"] = obj["mailInquiry360UserResponseInfo"]._id;
             }
+            else if (obj["mailInquiry360UserResponseInfo"]._bsontype && (obj["mailInquiry360UserResponseInfo"]._bsontype === 'ObjectID')) {
+                this["mailInquiry360UserResponseInfo"] = obj["mailInquiry360UserResponseInfo"];
+            }
         }
         if (obj["mailInquiry360UserResponse"] != undefined) {
             if (_.isString(obj["mailInquiry360UserResponse"])) {
@@ -150,6 +180,9 @@ class Model_service_mindsUp extends Model_service_1.Model_service {
             }
             else if (obj["mailInquiry360UserResponse"]._id) {
                 this["mailInquiry360UserResponse"] = obj["mailInquiry360UserResponse"]._id;
+            }
+            else if (obj["mailInquiry360UserResponse"]._bsontype && (obj["mailInquiry360UserResponse"]._bsontype === 'ObjectID')) {
+                this["mailInquiry360UserResponse"] = obj["mailInquiry360UserResponse"];
             }
         }
         if (obj["langUrl"] != undefined && obj["langUrl"] != null && _.isArray(obj["langUrl"])) {

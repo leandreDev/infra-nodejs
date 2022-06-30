@@ -10,6 +10,8 @@ export declare class Entity_MangoConf extends Entity {
     static checkserverUrl(val: any, path?: string): string[];
     static checkpaymentRedirectUrl(val: any, path?: string): string[];
     static checkclientUserId(val: any, path?: string): string[];
+    static checkqbpUserIdInMangoPay(val: any, path?: string): string[];
+    static checkqbpWalletIdInMangoPay(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

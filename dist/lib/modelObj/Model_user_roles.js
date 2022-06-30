@@ -20,6 +20,9 @@ class Model_user_roles extends utils_1.Base {
             else if (obj["user"]._id) {
                 this["user"] = obj["user"]._id;
             }
+            else if (obj["user"]._bsontype && (obj["user"]._bsontype === 'ObjectID')) {
+                this["user"] = obj["user"];
+            }
         }
         if (obj["roles"] != undefined && obj["roles"] != null && _.isArray(obj["roles"])) {
             this["roles"] = obj["roles"].map((value) => {

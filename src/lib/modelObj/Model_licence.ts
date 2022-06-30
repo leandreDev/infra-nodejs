@@ -23,8 +23,8 @@ export class Model_licence extends  Base  implements Interface.Ilicence {
             this["end_client"] = obj["end_client"];
           }else if(obj["end_client"]._id){
             this["end_client"] = obj["end_client"]._id ;
-          }else if((obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID'){
-              this["end_client"] = `${value}` ;
+          }else if(obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')){
+              this["end_client"] = obj["end_client"] ;
             }
           
         }
@@ -37,8 +37,8 @@ export class Model_licence extends  Base  implements Interface.Ilicence {
             this["user"] = obj["user"];
           }else if(obj["user"]._id){
             this["user"] = obj["user"]._id ;
-          }else if((obj["user"]._bsontype && (obj["user"]._bsontype === 'ObjectID'){
-              this["user"] = `${value}` ;
+          }else if(obj["user"]._bsontype && (obj["user"]._bsontype === 'ObjectID')){
+              this["user"] = obj["user"] ;
             }
           
         }

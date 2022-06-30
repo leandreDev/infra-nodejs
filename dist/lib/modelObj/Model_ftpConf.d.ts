@@ -25,4 +25,8 @@ username
 password
 */
     "password"?: string;
+    /**
+chemin pour accéder privateKey pour identifier l'utyilisateur
+*/
+    "privateKey"?: string;
 }

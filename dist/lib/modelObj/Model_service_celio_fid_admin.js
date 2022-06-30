@@ -92,6 +92,21 @@ class Model_service_celio_fid_admin extends Model_service_1.Model_service {
         if (obj["scanOrderEaBurnPageSize"] != undefined) {
             this["scanOrderEaBurnPageSize"] = new Number(obj["scanOrderEaBurnPageSize"]).valueOf();
         }
+        if (obj["cashRegisterCapingFidPt"] != undefined) {
+            this["cashRegisterCapingFidPt"] = new Number(obj["cashRegisterCapingFidPt"]).valueOf();
+        }
+        if (obj["cashRegisterApiKey"] != undefined) {
+            this["cashRegisterApiKey"] = obj["cashRegisterApiKey"].toString();
+        }
+        if (obj["customerPrefix"] != undefined) {
+            this["customerPrefix"] = obj["customerPrefix"].toString();
+        }
+        if (obj["globalCappingFidPoint"] != undefined) {
+            this["globalCappingFidPoint"] = new Number(obj["globalCappingFidPoint"]).valueOf();
+        }
+        if (obj["disableEmbasment"] != undefined) {
+            this["disableEmbasment"] = new Boolean(obj["disableEmbasment"]).valueOf();
+        }
     }
 }
 exports.Model_service_celio_fid_admin = Model_service_celio_fid_admin;

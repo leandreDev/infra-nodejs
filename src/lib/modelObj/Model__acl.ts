@@ -23,8 +23,8 @@ export class Model__acl extends  Base  implements Interface.I_acl {
             this["creator"] = obj["creator"];
           }else if(obj["creator"]._id){
             this["creator"] = obj["creator"]._id ;
-          }else if((obj["creator"]._bsontype && (obj["creator"]._bsontype === 'ObjectID'){
-              this["creator"] = `${value}` ;
+          }else if(obj["creator"]._bsontype && (obj["creator"]._bsontype === 'ObjectID')){
+              this["creator"] = obj["creator"] ;
             }
           
         }

@@ -93,4 +93,24 @@ taille des pages scan earn
 taille des pages scan eaBurn
 */
     "scanOrderEaBurnPageSize"?: number;
+    /**
+nombre maximum de point que la caisse bloque lors de ça demande
+*/
+    "cashRegisterCapingFidPt"?: number;
+    /**
+clef d'api pour les caisses enregistreuse
+*/
+    "cashRegisterApiKey"?: string;
+    /**
+prefix d'export pour les customerId a destination de sfmc
+*/
+    "customerPrefix"?: string;
+    /**
+nombre maximum de point avant l’arrêt du earn
+*/
+    "globalCappingFidPoint"?: number;
+    /**
+désactive l'embasement
+*/
+    "disableEmbasment"?: boolean;
 }

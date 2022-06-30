@@ -8,6 +8,8 @@ export declare class Entity_application_configuration_qbp extends Entity_applica
     static checkqbpBddUrl(val: any, path?: string): string[];
     static checkfsoUrl(val: any, path?: string): string[];
     static checkmangoConf(val: any, path?: string): string[];
+    static checkassUrl(val: any, path?: string): string[];
+    static checkfeaturesConf(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

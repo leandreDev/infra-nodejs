@@ -1,7 +1,7 @@
 
 
 import {UtilsSecu ,  HttpServiceAdminBase ,HttpServiceBddBase ,HttpServiceBddAdminBase,HttpServiceBddBaseView, mongo , IBase, IHttpResult} from "@leandredev/utils" ;
-import * as Interfaces from "../../lib/modelObj/Interfaces" ;
+import * as Interface from "../../lib/modelObj/Interfaces" ;
 import * as Index from "../../lib/entities/Index" ;
 import * as fs from "fs" ;
 
@@ -16,13 +16,13 @@ export class bdd_collection_plateform  {
 	this.secure = conf.secure ;
 	<% _.forEach(datas , function(collection){ %>
 
-		this.<%=collection.name%>= new HttpServiceBddBase<Interfaces.I<%=collection.name%>>( {bdd: conf.bdd , collectionName:'<%=collection.mongoCollectionName%>', entity:Index.Entity_<%=collection.name%> , debug:conf.debug ,  collections:this }  )  ;
-		this.admin_<%=collection.name%>= new HttpServiceBddAdminBase<Interfaces.I<%=collection.name%>>( {bdd: conf.bdd , collectionName:'<%=collection.mongoCollectionName%>', entity:Index.Entity_<%=collection.name%> , debug:conf.debug} )  ;
+		this.<%=collection.name%>= new HttpServiceBddBase<Interface.I<%=collection.name%>>( {bdd: conf.bdd , collectionName:'<%=collection.mongoCollectionName%>', entity:Index.Entity_<%=collection.name%> , debug:conf.debug ,  collections:this }  )  ;
+		this.admin_<%=collection.name%>= new HttpServiceBddAdminBase<Interface.I<%=collection.name%>>( {bdd: conf.bdd , collectionName:'<%=collection.mongoCollectionName%>', entity:Index.Entity_<%=collection.name%> , debug:conf.debug} )  ;
 
 		<% _.forEach(collection._child , function(subcollection){ %>
 		 
-		this.<%=subcollection.name%>= new HttpServiceBddBase<Interfaces.I<%=subcollection.name%>>({bdd: conf.bdd , collectionName:'<%=collection.mongoCollectionName%>',  entity:Index.Entity_<%=subcollection.name%> , _class:'<%=subcollection.name%>' , debug:conf.debug ,  collections:this })  ;
-		this.admin_<%=subcollection.name%>= new HttpServiceBddAdminBase<Interfaces.I<%=subcollection.name%>>({bdd: conf.bdd , collectionName:'<%=collection.mongoCollectionName%>',  entity:Index.Entity_<%=subcollection.name%> , _class:'<%=subcollection.name%>' , debug:conf.debug})  ;
+		this.<%=subcollection.name%>= new HttpServiceBddBase<Interface.I<%=subcollection.name%>>({bdd: conf.bdd , collectionName:'<%=collection.mongoCollectionName%>',  entity:Index.Entity_<%=subcollection.name%> , _class:'<%=subcollection.name%>' , debug:conf.debug ,  collections:this })  ;
+		this.admin_<%=subcollection.name%>= new HttpServiceBddAdminBase<Interface.I<%=subcollection.name%>>({bdd: conf.bdd , collectionName:'<%=collection.mongoCollectionName%>',  entity:Index.Entity_<%=subcollection.name%> , _class:'<%=subcollection.name%>' , debug:conf.debug})  ;
 
 		 <%}) %>
 	<%}) %>
@@ -48,8 +48,8 @@ export class bdd_collection_plateform  {
 
 		 <%}%>
 		*/
-		public <%=collection.name%>:HttpServiceBddBase<Interfaces.I<%=collection.name%>> ;
-		public admin_<%=collection.name%>:HttpServiceBddAdminBase<Interfaces.I<%=collection.name%>> ;
+		public <%=collection.name%>:HttpServiceBddBase<Interface.I<%=collection.name%>> ;
+		public admin_<%=collection.name%>:HttpServiceBddAdminBase<Interface.I<%=collection.name%>> ;
 
 		<% _.forEach(collection._child , function(subcollection){ %>
 		 /**
@@ -57,8 +57,8 @@ export class bdd_collection_plateform  {
 		 desc: <%= subcollection.description %>
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
-		public <%=subcollection.name%>:HttpServiceBddBase<Interfaces.I<%=subcollection.name%>> ;
-		public admin_<%=subcollection.name%>:HttpServiceBddAdminBase<Interfaces.I<%=subcollection.name%>> ;
+		public <%=subcollection.name%>:HttpServiceBddBase<Interface.I<%=subcollection.name%>> ;
+		public admin_<%=subcollection.name%>:HttpServiceBddAdminBase<Interface.I<%=subcollection.name%>> ;
 
 		 <%}) %>
 	<%}) %>

@@ -63,8 +63,8 @@ export class Model_R3Mailer extends  Base  implements Interface.IR3Mailer {
             this["r3_group_resset_password"] = obj["r3_group_resset_password"];
           }else if(obj["r3_group_resset_password"]._id){
             this["r3_group_resset_password"] = obj["r3_group_resset_password"]._id ;
-          }else if((obj["r3_group_resset_password"]._bsontype && (obj["r3_group_resset_password"]._bsontype === 'ObjectID'){
-              this["r3_group_resset_password"] = `${value}` ;
+          }else if(obj["r3_group_resset_password"]._bsontype && (obj["r3_group_resset_password"]._bsontype === 'ObjectID')){
+              this["r3_group_resset_password"] = obj["r3_group_resset_password"] ;
             }
           
         }
@@ -77,8 +77,8 @@ export class Model_R3Mailer extends  Base  implements Interface.IR3Mailer {
             this["r3_group_welcome"] = obj["r3_group_welcome"];
           }else if(obj["r3_group_welcome"]._id){
             this["r3_group_welcome"] = obj["r3_group_welcome"]._id ;
-          }else if((obj["r3_group_welcome"]._bsontype && (obj["r3_group_welcome"]._bsontype === 'ObjectID'){
-              this["r3_group_welcome"] = `${value}` ;
+          }else if(obj["r3_group_welcome"]._bsontype && (obj["r3_group_welcome"]._bsontype === 'ObjectID')){
+              this["r3_group_welcome"] = obj["r3_group_welcome"] ;
             }
           
         }
@@ -91,8 +91,8 @@ export class Model_R3Mailer extends  Base  implements Interface.IR3Mailer {
             this["r3_contact_to_user"] = obj["r3_contact_to_user"];
           }else if(obj["r3_contact_to_user"]._id){
             this["r3_contact_to_user"] = obj["r3_contact_to_user"]._id ;
-          }else if((obj["r3_contact_to_user"]._bsontype && (obj["r3_contact_to_user"]._bsontype === 'ObjectID'){
-              this["r3_contact_to_user"] = `${value}` ;
+          }else if(obj["r3_contact_to_user"]._bsontype && (obj["r3_contact_to_user"]._bsontype === 'ObjectID')){
+              this["r3_contact_to_user"] = obj["r3_contact_to_user"] ;
             }
           
         }
@@ -105,8 +105,8 @@ export class Model_R3Mailer extends  Base  implements Interface.IR3Mailer {
             this["r3_contact_to_r3"] = obj["r3_contact_to_r3"];
           }else if(obj["r3_contact_to_r3"]._id){
             this["r3_contact_to_r3"] = obj["r3_contact_to_r3"]._id ;
-          }else if((obj["r3_contact_to_r3"]._bsontype && (obj["r3_contact_to_r3"]._bsontype === 'ObjectID'){
-              this["r3_contact_to_r3"] = `${value}` ;
+          }else if(obj["r3_contact_to_r3"]._bsontype && (obj["r3_contact_to_r3"]._bsontype === 'ObjectID')){
+              this["r3_contact_to_r3"] = obj["r3_contact_to_r3"] ;
             }
           
         }
@@ -119,8 +119,8 @@ export class Model_R3Mailer extends  Base  implements Interface.IR3Mailer {
             this["R3_prescriptor_invitation"] = obj["R3_prescriptor_invitation"];
           }else if(obj["R3_prescriptor_invitation"]._id){
             this["R3_prescriptor_invitation"] = obj["R3_prescriptor_invitation"]._id ;
-          }else if((obj["R3_prescriptor_invitation"]._bsontype && (obj["R3_prescriptor_invitation"]._bsontype === 'ObjectID'){
-              this["R3_prescriptor_invitation"] = `${value}` ;
+          }else if(obj["R3_prescriptor_invitation"]._bsontype && (obj["R3_prescriptor_invitation"]._bsontype === 'ObjectID')){
+              this["R3_prescriptor_invitation"] = obj["R3_prescriptor_invitation"] ;
             }
           
         }
@@ -133,8 +133,8 @@ export class Model_R3Mailer extends  Base  implements Interface.IR3Mailer {
             this["R3_analisys_end_to_r3_and_partner"] = obj["R3_analisys_end_to_r3_and_partner"];
           }else if(obj["R3_analisys_end_to_r3_and_partner"]._id){
             this["R3_analisys_end_to_r3_and_partner"] = obj["R3_analisys_end_to_r3_and_partner"]._id ;
-          }else if((obj["R3_analisys_end_to_r3_and_partner"]._bsontype && (obj["R3_analisys_end_to_r3_and_partner"]._bsontype === 'ObjectID'){
-              this["R3_analisys_end_to_r3_and_partner"] = `${value}` ;
+          }else if(obj["R3_analisys_end_to_r3_and_partner"]._bsontype && (obj["R3_analisys_end_to_r3_and_partner"]._bsontype === 'ObjectID')){
+              this["R3_analisys_end_to_r3_and_partner"] = obj["R3_analisys_end_to_r3_and_partner"] ;
             }
           
         }
@@ -147,8 +147,8 @@ export class Model_R3Mailer extends  Base  implements Interface.IR3Mailer {
             this["R3_analisys_end_to_user"] = obj["R3_analisys_end_to_user"];
           }else if(obj["R3_analisys_end_to_user"]._id){
             this["R3_analisys_end_to_user"] = obj["R3_analisys_end_to_user"]._id ;
-          }else if((obj["R3_analisys_end_to_user"]._bsontype && (obj["R3_analisys_end_to_user"]._bsontype === 'ObjectID'){
-              this["R3_analisys_end_to_user"] = `${value}` ;
+          }else if(obj["R3_analisys_end_to_user"]._bsontype && (obj["R3_analisys_end_to_user"]._bsontype === 'ObjectID')){
+              this["R3_analisys_end_to_user"] = obj["R3_analisys_end_to_user"] ;
             }
           
         }
@@ -161,8 +161,8 @@ export class Model_R3Mailer extends  Base  implements Interface.IR3Mailer {
             this["R3_partner_admin_created"] = obj["R3_partner_admin_created"];
           }else if(obj["R3_partner_admin_created"]._id){
             this["R3_partner_admin_created"] = obj["R3_partner_admin_created"]._id ;
-          }else if((obj["R3_partner_admin_created"]._bsontype && (obj["R3_partner_admin_created"]._bsontype === 'ObjectID'){
-              this["R3_partner_admin_created"] = `${value}` ;
+          }else if(obj["R3_partner_admin_created"]._bsontype && (obj["R3_partner_admin_created"]._bsontype === 'ObjectID')){
+              this["R3_partner_admin_created"] = obj["R3_partner_admin_created"] ;
             }
           
         }

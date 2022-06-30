@@ -32,6 +32,9 @@ class Model_service_comptoireOr extends Model_service_1.Model_service {
             else if (obj["adminConfId"]._id) {
                 this["adminConfId"] = obj["adminConfId"]._id;
             }
+            else if (obj["adminConfId"]._bsontype && (obj["adminConfId"]._bsontype === 'ObjectID')) {
+                this["adminConfId"] = obj["adminConfId"];
+            }
         }
         if (obj["end_client"] != undefined) {
             if (_.isString(obj["end_client"])) {
@@ -39,6 +42,9 @@ class Model_service_comptoireOr extends Model_service_1.Model_service {
             }
             else if (obj["end_client"]._id) {
                 this["end_client"] = obj["end_client"]._id;
+            }
+            else if (obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')) {
+                this["end_client"] = obj["end_client"];
             }
         }
         if (obj["adminLicenceStoreId"] != undefined) {
@@ -50,6 +56,9 @@ class Model_service_comptoireOr extends Model_service_1.Model_service {
             }
             else if (obj["adminAppId"]._id) {
                 this["adminAppId"] = obj["adminAppId"]._id;
+            }
+            else if (obj["adminAppId"]._bsontype && (obj["adminAppId"]._bsontype === 'ObjectID')) {
+                this["adminAppId"] = obj["adminAppId"];
             }
         }
         if (obj["sendgridApiUrl"] != undefined) {
@@ -67,6 +76,9 @@ class Model_service_comptoireOr extends Model_service_1.Model_service {
             }
             else if (obj["transactionEmailTemplate"]._id) {
                 this["transactionEmailTemplate"] = obj["transactionEmailTemplate"]._id;
+            }
+            else if (obj["transactionEmailTemplate"]._bsontype && (obj["transactionEmailTemplate"]._bsontype === 'ObjectID')) {
+                this["transactionEmailTemplate"] = obj["transactionEmailTemplate"];
             }
         }
     }

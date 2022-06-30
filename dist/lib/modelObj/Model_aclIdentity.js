@@ -20,6 +20,9 @@ class Model_aclIdentity extends utils_1.Base {
             else if (obj["end_client"]._id) {
                 this["end_client"] = obj["end_client"]._id;
             }
+            else if (obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')) {
+                this["end_client"] = obj["end_client"];
+            }
         }
         if (obj["applicaton_instance"] != undefined) {
             if (_.isString(obj["applicaton_instance"])) {
@@ -27,6 +30,9 @@ class Model_aclIdentity extends utils_1.Base {
             }
             else if (obj["applicaton_instance"]._id) {
                 this["applicaton_instance"] = obj["applicaton_instance"]._id;
+            }
+            else if (obj["applicaton_instance"]._bsontype && (obj["applicaton_instance"]._bsontype === 'ObjectID')) {
+                this["applicaton_instance"] = obj["applicaton_instance"];
             }
         }
         if (obj["role"] != undefined) {
@@ -38,6 +44,9 @@ class Model_aclIdentity extends utils_1.Base {
             }
             else if (obj["user"]._id) {
                 this["user"] = obj["user"]._id;
+            }
+            else if (obj["user"]._bsontype && (obj["user"]._bsontype === 'ObjectID')) {
+                this["user"] = obj["user"];
             }
         }
     }

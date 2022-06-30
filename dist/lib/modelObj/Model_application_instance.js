@@ -27,6 +27,9 @@ class Model_application_instance extends utils_1.Base {
             else if (obj["application"]._id) {
                 this["application"] = obj["application"]._id;
             }
+            else if (obj["application"]._bsontype && (obj["application"]._bsontype === 'ObjectID')) {
+                this["application"] = obj["application"];
+            }
         }
         if (obj["configuration"] != undefined) {
             if (_.isString(obj["configuration"])) {
@@ -34,6 +37,9 @@ class Model_application_instance extends utils_1.Base {
             }
             else if (obj["configuration"]._id) {
                 this["configuration"] = obj["configuration"]._id;
+            }
+            else if (obj["configuration"]._bsontype && (obj["configuration"]._bsontype === 'ObjectID')) {
+                this["configuration"] = obj["configuration"];
             }
         }
         if (obj["end_client"] != undefined) {
@@ -43,6 +49,9 @@ class Model_application_instance extends utils_1.Base {
             else if (obj["end_client"]._id) {
                 this["end_client"] = obj["end_client"]._id;
             }
+            else if (obj["end_client"]._bsontype && (obj["end_client"]._bsontype === 'ObjectID')) {
+                this["end_client"] = obj["end_client"];
+            }
         }
         if (obj["oidc_client"] != undefined) {
             if (_.isString(obj["oidc_client"])) {
@@ -50,6 +59,9 @@ class Model_application_instance extends utils_1.Base {
             }
             else if (obj["oidc_client"]._id) {
                 this["oidc_client"] = obj["oidc_client"]._id;
+            }
+            else if (obj["oidc_client"]._bsontype && (obj["oidc_client"]._bsontype === 'ObjectID')) {
+                this["oidc_client"] = obj["oidc_client"];
             }
         }
         if (obj["css"] != undefined) {

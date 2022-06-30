@@ -23,6 +23,18 @@ export declare class Entity_QBP_service extends Entity_service {
     static checksellerEndClientTemplate(val: any, path?: string): string[];
     static checksellerAppInstanceTemplate(val: any, path?: string): string[];
     static checkmangoConf(val: any, path?: string): string[];
+    static checkassuranceApiKey(val: any, path?: string): string[];
+    static checkbigBen(val: any, path?: string): string[];
+    static checkdpdServiceUrl(val: any, path?: string): string[];
+    static checksftpGS(val: any, path?: string): string[];
+    static checkQbpBaseUrl(val: any, path?: string): string[];
+    static checkqbpServiceUrl(val: any, path?: string): string[];
+    static checksellerDomainPatern(val: any, path?: string): string[];
+    static checkfsoServiceUrl(val: any, path?: string): string[];
+    static checkisInsuranceEnable(val: any, path?: string): string[];
+    static checksendGridConf(val: any, path?: string): string[];
+    static checkfeaturesConf(val: any, path?: string): string[];
+    static checkautomationConf(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

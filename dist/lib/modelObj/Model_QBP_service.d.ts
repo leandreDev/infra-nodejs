@@ -85,4 +85,52 @@ template de l application instance du vendeur
 données de configuration de mangopay
 */
     "mangoConf"?: Interface.IMangoConf;
+    /**
+api key pour l'api d assurance
+*/
+    "assuranceApiKey"?: string;
+    /**
+Configuration BigBen
+*/
+    "bigBen"?: Interface.IBigBenConf;
+    /**
+Url du service DPD
+*/
+    "dpdServiceUrl"?: string;
+    /**
+connecteur sftp gras savoie oi
+*/
+    "sftpGS"?: Interface.IftpConf;
+    /**
+Base url pour qbp
+*/
+    "QbpBaseUrl"?: string;
+    /**
+Configuration url quelbonplan
+*/
+    "qbpServiceUrl"?: string;
+    /**
+suffix de création du domaine de l application du partenaire
+*/
+    "sellerDomainPatern"?: string;
+    /**
+Url du service FSO
+*/
+    "fsoServiceUrl": string;
+    /**
+Affichage des assurances
+*/
+    "isInsuranceEnable"?: boolean;
+    /**
+configuration pour l'envoie de mails
+*/
+    "sendGridConf"?: Interface.IQbpMailer;
+    /**
+liste de functionalites active ou pas
+*/
+    "featuresConf"?: Interface.IQbpFeaturesConfiguration;
+    /**
+Configuration pour les taches auto
+*/
+    "automationConf"?: Interface.IConfAutomation;
 }

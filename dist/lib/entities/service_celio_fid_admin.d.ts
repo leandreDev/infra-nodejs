@@ -25,6 +25,11 @@ export declare class Entity_service_celio_fid_admin extends Entity_service {
     static checkticket_costCenterExcluded(val: any, path?: string): string[];
     static checkscanOrderEarnPageSize(val: any, path?: string): string[];
     static checkscanOrderEaBurnPageSize(val: any, path?: string): string[];
+    static checkcashRegisterCapingFidPt(val: any, path?: string): string[];
+    static checkcashRegisterApiKey(val: any, path?: string): string[];
+    static checkcustomerPrefix(val: any, path?: string): string[];
+    static checkglobalCappingFidPoint(val: any, path?: string): string[];
+    static checkdisableEmbasment(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

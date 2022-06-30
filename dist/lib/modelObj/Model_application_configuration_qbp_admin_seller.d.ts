@@ -25,4 +25,16 @@ url du service de fso
 données de configuration de mangopay
 */
     "mangoConf"?: Interface.IMangoConf;
+    /**
+Order service
+*/
+    "orderService"?: string;
+    /**
+Service pour ticket
+*/
+    "ticketService"?: string;
+    /**
+url du end point de l api sav
+*/
+    "savService"?: string;
 }

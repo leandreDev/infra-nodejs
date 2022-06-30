@@ -1364,40 +1364,6 @@ export interface IperiodicalDistrution_periode extends IperiodicalDistrution {
     "endDate"?: Date;
 }
 /**
-interface de la class mail_sendgrid
-description objet envoyé a l'api sendgrid
-*/
-export interface Imail_sendgrid extends Imail {
-    /**
-     *content
-     */
-    "content"?: string;
-    /**
-     *from
-     */
-    "from"?: string;
-    /**
-     *personalizations
-     */
-    "personalizations"?: string;
-    /**
-     *reply_to
-     */
-    "reply_to"?: string;
-    /**
-     *subject
-     */
-    "subject"?: string;
-    /**
-     *la date d'envoie demandé
-     */
-    "send_at"?: Date;
-    /**
-     *template_id
-     */
-    "template_id"?: string;
-}
-/**
 interface de la class schema_name
 description mapping de schema et de nom
 */
@@ -3370,48 +3336,6 @@ export interface Iservice_petit_moulin extends Iservice {
     "bddUrl"?: string;
 }
 /**
-interface de la class service_celio_fid
-description service celio fid
-*/
-export interface Iservice_celio_fid extends Iservice {
-    /**
-     *url du service de bdd
-     */
-    "bddUrl"?: string;
-    /**
-     *url du point d'acces des token
-     */
-    "accessTokenUrl": string;
-    /**
-     *client_id celio
-     */
-    "client_id": string;
-    /**
-     *client_secret celio
-     */
-    "client_secret"?: string;
-    /**
-     *url de l'api hybris
-     */
-    "hybrisUrl": string;
-    /**
-     *baseSiteId des api celio
-     */
-    "baseSiteId"?: string;
-    /**
-     *secretToken apm
-     */
-    "secretToken"?: string;
-    /**
-     *serverUrl apm
-     */
-    "serverUrl"?: string;
-    /**
-     *url du certificat de bdd si il est renseigné, la connection passe en ssl
-     */
-    "caPath"?: string;
-}
-/**
 interface de la class service_celio_qcm
 description service celio qcm
 */
@@ -3518,6 +3442,70 @@ export interface IMarketingCloudApisConf extends IBase {
     "subDomain"?: string;
 }
 /**
+interface de la class application_configuration_petit_moulin_admin
+description conf petit_moulin_admin
+*/
+export interface Iapplication_configuration_petit_moulin_admin extends Iapplication_configuration {
+    /**
+     *url du service
+     */
+    "serviceUrl"?: string;
+    /**
+     *url de la base de donnée
+     */
+    "bddUrl"?: string;
+    /**
+     *url du filesystem
+     */
+    "fsoUrl"?: string;
+}
+/**
+interface de la class service_airport
+description service airport
+*/
+export interface Iservice_airport extends Iservice {
+    /**
+     *url de la base de donnée
+     */
+    "bddUrl"?: string;
+}
+/**
+interface de la class application_configuration_airport_admin
+description config airport
+*/
+export interface Iapplication_configuration_airport_admin extends Iapplication_configuration {
+    /**
+     *url des api airport
+     */
+    "airportApi"?: string;
+    /**
+     *url de lapi de bdd airport
+     */
+    "airportBddUrl"?: string;
+    /**
+     *url du service fso airport
+     */
+    "fsoUrl"?: string;
+}
+/**
+interface de la class application_configuration_airport
+description config airport
+*/
+export interface Iapplication_configuration_airport extends Iapplication_configuration {
+    /**
+     *url des api airport
+     */
+    "airportApi"?: string;
+    /**
+     *url de lapi de bdd airport
+     */
+    "airportBddUrl"?: string;
+    /**
+     *url du service fso airport
+     */
+    "fsoUrl"?: string;
+}
+/**
 interface de la class service_celio_back_task
 description service celio back_task
 */
@@ -3570,46 +3558,90 @@ export interface Iservice_celio_back_task extends Iservice {
      *MarketingCloudApisConf
      */
     "marketingCloudApisConf"?: IMarketingCloudApisConf;
+    /**
+     *prefixe pour le customer de chez marketingCloud
+     */
+    "customerPrefix"?: string;
 }
 /**
-interface de la class ftpConf
-description configuration ftp
+interface de la class service_celio_fid
+description service celio fid
 */
-export interface IftpConf extends IBase {
+export interface Iservice_celio_fid extends Iservice {
     /**
-     *host
-     */
-    "host": string;
-    /**
-     *port
-     */
-    "port": number;
-    /**
-     *username
-     */
-    "username": string;
-    /**
-     *password
-     */
-    "password"?: string;
-}
-/**
-interface de la class application_configuration_petit_moulin_admin
-description conf petit_moulin_admin
-*/
-export interface Iapplication_configuration_petit_moulin_admin extends Iapplication_configuration {
-    /**
-     *url du service
-     */
-    "serviceUrl"?: string;
-    /**
-     *url de la base de donnée
+     *url du service de bdd
      */
     "bddUrl"?: string;
     /**
-     *url du filesystem
+     *url du point d'acces des token
      */
-    "fsoUrl"?: string;
+    "accessTokenUrl": string;
+    /**
+     *client_id celio
+     */
+    "client_id": string;
+    /**
+     *client_secret celio
+     */
+    "client_secret"?: string;
+    /**
+     *url de l'api hybris
+     */
+    "hybrisUrl": string;
+    /**
+     *baseSiteId des api celio
+     */
+    "baseSiteId"?: string;
+    /**
+     *secretToken apm
+     */
+    "secretToken"?: string;
+    /**
+     *serverUrl apm
+     */
+    "serverUrl"?: string;
+    /**
+     *url du certificat de bdd si il est renseigné, la connection passe en ssl
+     */
+    "caPath"?: string;
+    /**
+     *nombre de points qu'un sponsor peut gagner par parrainage
+     */
+    "sponsorPoints"?: number;
+    /**
+     *points gagnés par un filleul
+     */
+    "childPoints"?: number;
+    /**
+     *seuil pour activation du capping
+     */
+    "cappingThreshold"?: string;
+    /**
+     *Frequence de rafraîchissement des droits de parainage
+     */
+    "sponsorshipFrequencyUnit"?: number;
+    /**
+     *nombre de parainages autorisés par fréquence
+     */
+    "sponsorshipMaxCount"?: number;
+    /**
+     *unité de fréquence de répétition du earn fixe (semaine, mois, etc.)
+     */
+    "fixedEarnFrequencyUnit"?: number;
+    /**
+     *Nombre de points gagnés par EarnFixe
+     */
+    "fixedEarnValue"?: number;
+    /**
+     *nombre de earn fixes autorisés par période
+     */
+    "fixedEarnMaxCount"?: number;
+}
+/**
+interface de la class dpd_dervice
+description Proxy pou rles service c'evoi de colis de DPD
+*/
+export interface Idpd_dervice extends Iservice {
 }
 /**
 interface de la class service_celio_fid_admin
@@ -3700,16 +3732,52 @@ export interface Iservice_celio_fid_admin extends Iservice {
      *taille des pages scan eaBurn
      */
     "scanOrderEaBurnPageSize"?: number;
+    /**
+     *nombre maximum de point que la caisse bloque lors de ça demande
+     */
+    "cashRegisterCapingFidPt"?: number;
+    /**
+     *clef d'api pour les caisses enregistreuse
+     */
+    "cashRegisterApiKey"?: string;
+    /**
+     *prefix d'export pour les customerId a destination de sfmc
+     */
+    "customerPrefix"?: string;
+    /**
+     *nombre maximum de point avant l’arrêt du earn
+     */
+    "globalCappingFidPoint"?: number;
+    /**
+     *désactive l'embasement
+     */
+    "disableEmbasment"?: boolean;
 }
 /**
-interface de la class service_airport
-description service airport
+interface de la class ftpConf
+description configuration ftp
 */
-export interface Iservice_airport extends Iservice {
+export interface IftpConf extends IBase {
     /**
-     *url de la base de donnée
+     *host
      */
-    "bddUrl"?: string;
+    "host": string;
+    /**
+     *port
+     */
+    "port": number;
+    /**
+     *username
+     */
+    "username": string;
+    /**
+     *password
+     */
+    "password"?: string;
+    /**
+     *chemin pour accéder privateKey pour identifier l'utyilisateur
+     */
+    "privateKey"?: string;
 }
 /**
 interface de la class MangoConf
@@ -3740,6 +3808,106 @@ export interface IMangoConf extends IBase {
      *UserId propriétaire de l'instance mangopay
      */
     "clientUserId"?: string;
+    /**
+     *l'id d'utilisateur pour le compte QBP dans mangopay,  cette utilisatuer est celui qui reçois les fonds des différents transactions la valeur par default est celle du sandbox
+     */
+    "qbpUserIdInMangoPay": string;
+    /**
+     *l'id du portefeuille virtuelle pour le compte QBP dans mangopay,  cette portefeuille est celui qui reçois les fonds des différents transactions la valeur par default est celle du sandbox
+     */
+    "qbpWalletIdInMangoPay": string;
+}
+/**
+interface de la class application_configuration_boisdor
+description config boisdor
+*/
+export interface Iapplication_configuration_boisdor extends Iapplication_configuration {
+    /**
+     *url du service client de boisdor
+     */
+    "boisdorCustomerApi"?: string;
+    /**
+     *url de lapi de bdd boisdor
+     */
+    "boisdorBddUrl"?: string;
+    /**
+     *url du service fso boisdor
+     */
+    "fsoUrl"?: string;
+    /**
+     *url de l api de paiement
+     */
+    "payementUrl"?: string;
+}
+/**
+interface de la class application_configuration_r3
+description config r3
+*/
+export interface Iapplication_configuration_r3 extends Iapplication_configuration {
+    /**
+     *url de la bdd
+     */
+    "bddUrl"?: string;
+}
+/**
+interface de la class BigBenConf
+description Configuration de connexion BigBen
+*/
+export interface IBigBenConf extends IBase {
+    /**
+     *User
+     */
+    "u": string;
+    /**
+     *Password encrypté
+     */
+    "p": string;
+    /**
+     *Clé de l'api
+     */
+    "k": string;
+    /**
+     *Url de l'api
+     */
+    "apiUrl": string;
+    /**
+     *Clé API pour l'api MACRO qui permet de passer des commande
+     */
+    "marcoApiKey"?: string;
+    /**
+     *URL de l'api macro
+     */
+    "marcoApiUrl"?: string;
+    /**
+     *Switch entre ancienne api et nouvelle api
+     */
+    "isMarcoApiActive"?: boolean;
+}
+/**
+interface de la class application_configuration_boisdor_admin_seller
+description config boisdor admin
+*/
+export interface Iapplication_configuration_boisdor_admin_seller extends Iapplication_configuration {
+    /**
+     *url du service seller
+     */
+    "boisdorSellerApi"?: string;
+    /**
+     *boisdorBddUrl
+     */
+    "boisdorBddUrl"?: string;
+    /**
+     *url du service de fso
+     */
+    "fsoUrl"?: string;
+    /**
+     *url api public
+     */
+    "apiPublicUrl"?: string;
+    /**
+     *url du service d'envoie de mail
+     */
+    "boisdorMailService"?: string;
 }
 /**
 interface de la class application_configuration_qbp_admin
@@ -3762,6 +3930,304 @@ export interface Iapplication_configuration_qbp_admin extends Iapplication_confi
      *données de configuration de mangopay
      */
     "mangoConf"?: IMangoConf;
+    /**
+     *Order Service
+     */
+    "orderService"?: string;
+    /**
+     *url du end point de l api sav
+     */
+    "savService"?: string;
+}
+/**
+interface de la class application_configuration_qbp_admin_seller
+description config qbp admin
+*/
+export interface Iapplication_configuration_qbp_admin_seller extends Iapplication_configuration {
+    /**
+     *url du service seller
+     */
+    "qbpSellerApi"?: string;
+    /**
+     *qbpBddUrl
+     */
+    "qbpBddUrl"?: string;
+    /**
+     *url du service de fso
+     */
+    "fsoUrl"?: string;
+    /**
+     *données de configuration de mangopay
+     */
+    "mangoConf"?: IMangoConf;
+    /**
+     *Order service
+     */
+    "orderService"?: string;
+    /**
+     *Service pour ticket
+     */
+    "ticketService"?: string;
+    /**
+     *url du end point de l api sav
+     */
+    "savService"?: string;
+}
+/**
+interface de la class application_configuration_boisdor_admin
+description config boisdor admin
+*/
+export interface Iapplication_configuration_boisdor_admin extends Iapplication_configuration {
+    /**
+     *url de la bdd
+     */
+    "boisdorBddUrl"?: string;
+    /**
+     *url du service boisdor
+     */
+    "boisdorAdminService"?: string;
+    /**
+     *url du service fso
+     */
+    "fsoUrl"?: string;
+    /**
+     *boisdorMailService
+     */
+    "boisdorMailService"?: string;
+}
+/**
+interface de la class boisdor_service
+description service métier de boisdor
+*/
+export interface Iboisdor_service extends Iservice {
+    /**
+     *url de la bdd boisdor
+     */
+    "boisdorBddUrl"?: string;
+    /**
+     *url de l'api du sso
+     */
+    "ssoApiUrl"?: string;
+    /**
+     *licenceApiUrl
+     */
+    "licenceApiUrl"?: string;
+    /**
+     *sendgridApiUrl
+     */
+    "sendgridApiUrl"?: string;
+    /**
+     *appId
+     */
+    "appId"?: string;
+    /**
+     *end_client
+     */
+    "end_client"?: string;
+    /**
+     *licenceStoreId
+     */
+    "licenceStoreId"?: string;
+    /**
+     *url su service de bdd
+     */
+    "ssoBddUrl"?: string;
+    /**
+     *client_id sso
+     */
+    "client_id"?: string;
+    /**
+     *client_secret du sso
+     */
+    "client_secret"?: string;
+    /**
+     *application instance id of seller
+     */
+    "sellerAppId": string;
+    /**
+     *licenceStore for seller user licence
+     */
+    "sellerLicenceStoreId"?: string;
+    /**
+     *application instance id of the admin
+     */
+    "adminAppId"?: string;
+    /**
+     *licenceStoreId for admin
+     */
+    "adminLicenceStoreId"?: string;
+    /**
+     *url de la bdd d 'infra
+     */
+    "infraBddUrl"?: string;
+    /**
+     *template du sso client
+     */
+    "sellerSso_Client_template"?: string;
+    /**
+     *template du endClient seller
+     */
+    "sellerEndClientTemplate"?: string;
+    /**
+     *template de l application instance du vendeur
+     */
+    "sellerAppInstanceTemplate"?: string;
+    /**
+     *url de redirection de l'utilisateur pour réinitialiser sont mot de passe
+     */
+    "resetPasswordRedirect"?: string;
+    /**
+     *configuration de tous les templates de mail
+     */
+    "sendgrid_conf"?: Ibois_dor_mailer;
+}
+/**
+interface de la class mail_sendgrid
+description objet envoyé a l'api sendgrid
+*/
+export interface Imail_sendgrid extends Imail {
+    /**
+     *content
+     */
+    "content"?: string;
+    /**
+     *from
+     */
+    "from"?: string;
+    /**
+     *personalizations
+     */
+    "personalizations"?: string;
+    /**
+     *reply_to
+     */
+    "reply_to"?: string;
+    /**
+     *subject
+     */
+    "subject"?: string;
+    /**
+     *la date d'envoie demandé
+     */
+    "send_at"?: Date;
+    /**
+     *template_id
+     */
+    "template_id"?: string;
+}
+/**
+interface de la class QbpFeaturesConfiguration
+description liste de functionalites pouvant etre actives ou desactives
+*/
+export interface IQbpFeaturesConfiguration extends IBase {
+    /**
+     *determine se le payement par virement bancaire est active ou non
+     */
+    "bankWire"?: boolean;
+}
+/**
+interface de la class application_configuration_qbp
+description config qbp
+*/
+export interface Iapplication_configuration_qbp extends Iapplication_configuration {
+    /**
+     *url du service client de qbp
+     */
+    "qbpCustomerApi"?: string;
+    /**
+     *url de lapi de bdd qbp
+     */
+    "qbpBddUrl"?: string;
+    /**
+     *url du service fso qbp
+     */
+    "fsoUrl"?: string;
+    /**
+     *données de l'api mangopay
+     */
+    "mangoConf"?: IMangoConf;
+    /**
+     *url de base de redirection vers le site des assureurs
+     */
+    "assUrl": string;
+    /**
+     *liste de functionalites a activer uo pas dans le site quelbon plan , exemple {bankWire: false | true}
+     */
+    "featuresConf"?: IQbpFeaturesConfiguration;
+}
+/**
+interface de la class bois_dor_mailer
+description liste de tous les templates de mail pour bois d'or
+*/
+export interface Ibois_dor_mailer extends IBase {
+    /**
+     *comptoirOr_info
+     */
+    "comptoirOr_info"?: string;
+    /**
+     *boisdor_fr_orderDelivred
+     */
+    "boisdor_fr_orderDelivred"?: string;
+    /**
+     *boisdor_fr_orderRegister
+     */
+    "boisdor_fr_orderRegister"?: string;
+    /**
+     *boisdor_fr_resetPassword
+     */
+    "boisdor_fr_resetPassword"?: string;
+    /**
+     *boisdor_fr_accountCreated
+     */
+    "boisdor_fr_accountCreated"?: string;
+    /**
+     *boisdor_fr_orderRefund
+     */
+    "boisdor_fr_orderRefund"?: string;
+    /**
+     *boisdor_fr_orderCancelled
+     */
+    "boisdor_fr_orderCancelled"?: string;
+    /**
+     *boisdor_fr_orderValidatedForDelivery
+     */
+    "boisdor_fr_orderValidatedForDelivery"?: string;
+    /**
+     *boisdor_fr_orderValidatedForPickup
+     */
+    "boisdor_fr_orderValidatedForPickup"?: string;
+    /**
+     *boisdor_fr_orderToCustomer
+     */
+    "boisdor_fr_orderToCustomer"?: string;
+    /**
+     *boisdor_fr_orderToSeller
+     */
+    "boisdor_fr_orderToSeller"?: string;
+    /**
+     *boisdor_fr_sav
+     */
+    "boisdor_fr_sav"?: string;
+    /**
+     *boisdor_fr_contact
+     */
+    "boisdor_fr_contact"?: string;
+    /**
+     *boisdor_fr_reply_sav
+     */
+    "boisdor_fr_reply_sav"?: string;
+    /**
+     *boisdor_fr_reply_contact
+     */
+    "boisdor_fr_reply_contact"?: string;
+    /**
+     *boisdor_fr_orderToCustomerPending
+     */
+    "boisdor_fr_orderToCustomerPending"?: string;
+    /**
+     *boisdor_fr_orderToCustomerDiff
+     */
+    "boisdor_fr_orderToCustomerDiff"?: string;
 }
 /**
 interface de la class QBP_service
@@ -3844,48 +4310,450 @@ export interface IQBP_service extends Iservice {
      *données de configuration de mangopay
      */
     "mangoConf"?: IMangoConf;
+    /**
+     *api key pour l'api d assurance
+     */
+    "assuranceApiKey"?: string;
+    /**
+     *Configuration BigBen
+     */
+    "bigBen"?: IBigBenConf;
+    /**
+     *Url du service DPD
+     */
+    "dpdServiceUrl"?: string;
+    /**
+     *connecteur sftp gras savoie oi
+     */
+    "sftpGS"?: IftpConf;
+    /**
+     *Base url pour qbp
+     */
+    "QbpBaseUrl"?: string;
+    /**
+     *Configuration url quelbonplan
+     */
+    "qbpServiceUrl"?: string;
+    /**
+     *suffix de création du domaine de l application du partenaire
+     */
+    "sellerDomainPatern"?: string;
+    /**
+     *Url du service FSO
+     */
+    "fsoServiceUrl": string;
+    /**
+     *Affichage des assurances
+     */
+    "isInsuranceEnable"?: boolean;
+    /**
+     *configuration pour l'envoie de mails
+     */
+    "sendGridConf"?: IQbpMailer;
+    /**
+     *liste de functionalites active ou pas
+     */
+    "featuresConf"?: IQbpFeaturesConfiguration;
+    /**
+     *Configuration pour les taches auto
+     */
+    "automationConf"?: IConfAutomation;
 }
 /**
-interface de la class application_configuration_qbp_admin_seller
-description config qbp admin
+interface de la class ConfAutomation
+description Configuration pour les automation des services qbp
 */
-export interface Iapplication_configuration_qbp_admin_seller extends Iapplication_configuration {
+export interface IConfAutomation extends IBase {
     /**
-     *url du service seller
+     *Date auquel les payouts doivent etre effectuer
      */
-    "qbpSellerApi"?: string;
+    "datesForGeneratePayout"?: number[];
     /**
-     *qbpBddUrl
+     *Dates de generation des factures
      */
-    "qbpBddUrl"?: string;
-    /**
-     *url du service de fso
-     */
-    "fsoUrl"?: string;
-    /**
-     *données de configuration de mangopay
-     */
-    "mangoConf"?: IMangoConf;
+    "datesForGenerateInvoice"?: number[];
 }
 /**
-interface de la class application_configuration_qbp
-description config qbp
+interface de la class application_configuration_r3_admin_seller
+description config r3 admin
 */
-export interface Iapplication_configuration_qbp extends Iapplication_configuration {
+export interface Iapplication_configuration_r3_admin_seller extends Iapplication_configuration {
     /**
-     *url du service client de qbp
+     *url de la bdd
      */
-    "qbpCustomerApi"?: string;
+    "bddUrl"?: string;
     /**
-     *url de lapi de bdd qbp
+     *url du servie r3
      */
-    "qbpBddUrl"?: string;
+    "apiUrl"?: string;
     /**
-     *url du service fso qbp
+     *url du service de fichiers (fso)
      */
     "fsoUrl"?: string;
+}
+/**
+interface de la class application_configuration_r3_admin
+description config r3 admin
+*/
+export interface Iapplication_configuration_r3_admin extends Iapplication_configuration {
     /**
-     *données de l'api mangopay
+     *url de la bdd
      */
-    "mangoConf"?: IMangoConf;
+    "bddUrl"?: string;
+    /**
+     *uploadUrl url du service de telechargement des images
+     */
+    "uploadUrl"?: string;
+    /**
+     *l"url de l'api
+     */
+    "apiUrl"?: string;
+}
+/**
+interface de la class QbpMailer
+description configuration pour l'envoie d emails QBP
+*/
+export interface IQbpMailer extends IBase {
+    /**
+     *Email de qbp
+     */
+    "qbpEmailContact"?: string;
+    /**
+     *Adresse mail affiché lorsque l'utilisateur reçois un mail
+     */
+    "senderEmail"?: string;
+    /**
+     *Nom affiche dans les en-tete du mail
+     */
+    "senderName"?: string;
+    /**
+     *Adresse du site , exemple qbp.justplug.info en dev ou quelbonplan.fr en prod
+     */
+    "qbpBaseUrl"?: string;
+    /**
+     *Url de l'api sendgrid pour quelbonplan
+     */
+    "qbpSendgridApiUrl"?: string;
+    /**
+     *Commande annulé
+     */
+    "orderCanceled"?: string;
+    /**
+     *Délais de livraison pour la commande
+     */
+    "orderDeliveryDelais"?: string;
+    /**
+     *Demande de retour SAV
+     */
+    "afterSalesRequest"?: string;
+    /**
+     *Enlèvement colis pour retour 14 jours a bien été pris en charge par le transporteur
+     */
+    "fourteenDaysBackPickingConfirmed"?: string;
+    /**
+     *Demande de rétractation 14 jours a été acceptée
+     */
+    "fourteenDaysBackRefundAccepted"?: string;
+    /**
+     *Bon de transport pour effectuer retour 14 jours
+     */
+    "fourteenDaysBackShippingLabel"?: string;
+    /**
+     *Demande de retour sous 14 jours
+     */
+    "fourteenDaysBackRequest"?: string;
+    /**
+     *Retractations 14 jours refusé
+     */
+    "fourteenDaysBackRefusal"?: string;
+    /**
+     *Demande de rétractation 14 jours remboursé
+     */
+    "fourteenDaysBackRefund"?: string;
+    /**
+     *Demande de retour SAV a été acceptée
+     */
+    "afterSalesAccepted"?: string;
+    /**
+     *Bon de transport pour effectuer votre retour SAV
+     */
+    "afterSalesShippingLabel"?: string;
+    /**
+     *Colis pour votre retour SAV
+     */
+    "afterSalesPickingConfirmed"?: string;
+    /**
+     *Colis a bien été réceptionné par le vendeur.
+     */
+    "afterSalesDelivered"?: string;
+    /**
+     *Demande de retour SAV a été refusée
+     */
+    "afterSalesRefusal"?: string;
+    /**
+     *Retour SAV a été refusée par par le vendeur
+     */
+    "afterSalesVendorRefusal"?: string;
+    /**
+     *Préparation de la commande
+     */
+    "orderPreparation"?: string;
+    /**
+     *Commande délivré
+     */
+    "orderDelivered"?: string;
+    /**
+     *Réiniatialiser mot de passe
+     */
+    "errorPasswordCustomer"?: string;
+    /**
+     *Commande rembourser
+     */
+    "refund"?: string;
+    /**
+     *Message informatif
+     */
+    "infoShipmentCustomer"?: string;
+    /**
+     *Creation de compte client
+     */
+    "creationAccountCustomer"?: string;
+    /**
+     *Commande pris en charge par le transporteur
+     */
+    "orderShipped"?: string;
+    /**
+     *Avis client
+     */
+    "customerReview"?: string;
+    /**
+     *Vous avez reçu un message du client
+     */
+    "sellerCustomerRequest"?: string;
+    /**
+     *Mail pour prévenir DPD d'un ramassage a effectuer en point relais
+     */
+    "qbpRamassesDpd"?: string;
+    /**
+     *Prevenir le vendeur que une commande a été passer
+     */
+    "sellerOrderPreparation"?: string;
+    /**
+     *Demande d'ajout d'un nouveau model de la part d'un vendeur
+     */
+    "qbpProductRequest"?: string;
+    /**
+     *Confirmation de commande
+     */
+    "confirmOrderCustomer"?: string;
+    /**
+     *Notifié DPD pour un enlévement
+     */
+    "notifyDpd"?: boolean;
+    /**
+     *Previens le client quand vendeur lui a répondu
+     */
+    "sellerMessage"?: string;
+    /**
+     *Message comme quoi nous avons bien recus ça demande
+     */
+    "customerContactMessage"?: string;
+    /**
+     *Message de prise de contact a destination de quelbonplan
+     */
+    "contactMessage"?: string;
+    /**
+     *Demande de facture de la part d'un client pour une commande donné
+     */
+    "customerInvoiceRequest"?: string;
+    /**
+     *Message a destination d'un client pour le sav
+     */
+    "afterSalesMessageCustomer"?: string;
+    /**
+     *Message a destination d'un seller pour le sav
+     */
+    "afterSalesMessageSeller"?: string;
+    /**
+     *mail de ramassage en point relais
+     */
+    "qbpRelaisRamassesDpd"?: string;
+    /**
+     *Mail de fermeture de ticket
+     */
+    "qbpAfterSalesClose"?: string;
+    /**
+     *le mail qu'on envoie au client pour quil puisse realiser un virement bancaire pour payer sa commande
+     */
+    "qbpBankWireInformations"?: string;
+    /**
+     *template de mail pour informer le SAV qu'il y a un probleme avec un payin par virement bancaire
+     */
+    "bankWirePayinError"?: string;
+    /**
+     *Colis en retractation delivrer en vendeur
+     */
+    "retractationDeliveredToSeller"?: string;
+    /**
+     *Colis retour sav livre au vendeur
+     */
+    "savReturnDeliveredToSeller"?: string;
+    /**
+     *Confirmation de livraison chez le vendeur
+     */
+    "fourteenDaysBackConfirmation"?: string;
+}
+/**
+interface de la class service_qcbm
+description service_qcbm
+*/
+export interface Iservice_qcbm extends Iservice {
+}
+/**
+interface de la class R3Mailer
+description configurationpour l'envoie d emails R3
+*/
+export interface IR3Mailer extends IBase {
+    /**
+     *adresse mail affiché lorsque l user recoie le mail
+     */
+    "senderEMail"?: string;
+    /**
+     *nom affiche dans les en_tete du  mail
+     */
+    "senderName"?: string;
+    /**
+     *adresse du site , exemple r3.justeplug.info en dev ou r3.justeplug.fr en prod
+     */
+    "r3BaseUrl"?: string;
+    /**
+     *url de l'api sengGrid pour R3
+     */
+    "r3SendgridApiUrl"?: string;
+    /**
+     *la adresse mail qui recoi le mails de contact
+     */
+    "r3ContactMail"?: string;
+    /**
+     *id du template pour le resset du password
+     */
+    "r3_group_resset_password"?: string;
+    /**
+     *id du template du mail de bienvenue
+     */
+    "r3_group_welcome"?: string;
+    /**
+     *mail de contact
+     */
+    "r3_contact_to_user"?: string;
+    /**
+     *mail pour R3 avec le contenu de un mail de contact
+     */
+    "r3_contact_to_r3"?: string;
+    /**
+     *template de mail pour envoyer les invitaton pour creer son compte dans la page du partner
+     */
+    "R3_prescriptor_invitation"?: string;
+    /**
+     *le client a fini l'analisys et un envoie un mail a R3 et au partner
+     */
+    "R3_analisys_end_to_r3_and_partner"?: string;
+    /**
+     *on signale au client qu eson pdf est pret
+     */
+    "R3_analisys_end_to_user"?: string;
+    /**
+     *on informe a un partenaire que son admin est pret et qu'il peut sy conecter
+     */
+    "R3_partner_admin_created"?: string;
+}
+/**
+interface de la class application_configuration_dcbm_static
+description dcbm static
+*/
+export interface Iapplication_configuration_dcbm_static extends Iapplication_configuration {
+}
+/**
+interface de la class ParnerDeployConf
+description configuration du déploiement de partenaire
+*/
+export interface IParnerDeployConf extends IBase {
+    /**
+     *paterne de creation d'url d admin @name@ remplace le nom du partenaire
+     */
+    "adminUrl"?: string;
+    /**
+     *paterne de création de l 'url du site client d un partenaire @name@ remplace le nom du partenaire
+     */
+    "landingPageUrl"?: string;
+    /**
+     *id du template de l appinstance du client
+     */
+    "appClientTemplateId"?: string;
+    /**
+     *id du template de l app instance de l admin d un client
+     */
+    "appAdminTemplateId"?: string;
+    /**
+     *id du template de endClient pour un partnaire
+     */
+    "endClientTemplateId"?: string;
+    /**
+     *id du template de l'oidc_client pour un partnaire
+     */
+    "oidcTemplateId"?: string;
+}
+/**
+interface de la class r3_service
+description service métier de QBP
+*/
+export interface Ir3_service extends Iservice {
+    /**
+     *url de la bdd
+     */
+    "bddUrl"?: string;
+    /**
+     *url su service de bdd
+     */
+    "ssoBddUrl"?: string;
+    /**
+     *url de connexion a la bd  infra
+     */
+    "infraBddUrl"?: string;
+    /**
+     *url de l'api du sso
+     */
+    "ssoApiUrl"?: string;
+    /**
+     *licenceApiUrl
+     */
+    "licenceApiUrl"?: string;
+    /**
+     *client_id sso
+     */
+    "client_id"?: string;
+    /**
+     *client_secret pou rle sso
+     */
+    "client_secret"?: string;
+    /**
+     *configuration pour l'envoie de mails
+     */
+    "SendGridConf"?: IR3Mailer;
+    /**
+     *url du rip pdf
+     */
+    "pdfRipUrl": string;
+    /**
+     *url de l application de rendu pdf
+     */
+    "pdfAppUrl": string;
+    /**
+     *url du fso r3
+     */
+    "fsoUrl": string;
+    /**
+     *configuration de la génération des partnaires
+     */
+    "parntaireConfig"?: IParnerDeployConf;
 }

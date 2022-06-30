@@ -16,6 +16,7 @@ export declare class Entity_service_celio_back_task extends Entity_service {
     static checkclient_secret(val: any, path?: string): string[];
     static checkaccessTokenUrl(val: any, path?: string): string[];
     static checkmarketingCloudApisConf(val: any, path?: string): string[];
+    static checkcustomerPrefix(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

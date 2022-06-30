@@ -29,6 +29,9 @@ class Model_service_infra_admin extends Model_service_1.Model_service {
             else if (obj["service_nginxMultiConfiguratorId"]._id) {
                 this["service_nginxMultiConfiguratorId"] = obj["service_nginxMultiConfiguratorId"]._id;
             }
+            else if (obj["service_nginxMultiConfiguratorId"]._bsontype && (obj["service_nginxMultiConfiguratorId"]._bsontype === 'ObjectID')) {
+                this["service_nginxMultiConfiguratorId"] = obj["service_nginxMultiConfiguratorId"];
+            }
         }
         if (obj["nginxApplicationSuffix"] != undefined) {
             this["nginxApplicationSuffix"] = obj["nginxApplicationSuffix"].toString();

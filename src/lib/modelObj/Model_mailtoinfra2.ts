@@ -41,8 +41,8 @@ export class Model_mailtoinfra2 extends   Model_service   implements Interface.I
             this["savyLearnerId"] = obj["savyLearnerId"];
           }else if(obj["savyLearnerId"]._id){
             this["savyLearnerId"] = obj["savyLearnerId"]._id ;
-          }else if((obj["savyLearnerId"]._bsontype && (obj["savyLearnerId"]._bsontype === 'ObjectID'){
-              this["savyLearnerId"] = `${value}` ;
+          }else if(obj["savyLearnerId"]._bsontype && (obj["savyLearnerId"]._bsontype === 'ObjectID')){
+              this["savyLearnerId"] = obj["savyLearnerId"] ;
             }
           
         }

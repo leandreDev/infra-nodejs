@@ -3388,6 +3388,426 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
+    router.get('/collection/application_configuration_airport_admin/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_airport_admin.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/application_configuration_airport_admin/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_airport_admin.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/application_configuration_airport_admin/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_airport_admin.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/application_configuration_airport_admin', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_airport_admin.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/application_configuration_airport_admin/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_airport_admin.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/application_configuration_airport_admin/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_airport_admin.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/application_configuration_airport_admin/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_airport_admin.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/application_configuration_airport/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_airport.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/application_configuration_airport/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_airport.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/application_configuration_airport/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_airport.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/application_configuration_airport', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_airport.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/application_configuration_airport/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_airport.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/application_configuration_airport/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_airport.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/application_configuration_airport/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_airport.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/application_configuration_boisdor/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/application_configuration_boisdor/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/application_configuration_boisdor/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/application_configuration_boisdor', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/application_configuration_boisdor/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/application_configuration_boisdor/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_boisdor.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/application_configuration_boisdor/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_boisdor.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/application_configuration_r3/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/application_configuration_r3/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/application_configuration_r3/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/application_configuration_r3', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/application_configuration_r3/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/application_configuration_r3/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_r3.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/application_configuration_r3/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_r3.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/application_configuration_boisdor_admin_seller/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor_admin_seller.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/application_configuration_boisdor_admin_seller/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor_admin_seller.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/application_configuration_boisdor_admin_seller/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor_admin_seller.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/application_configuration_boisdor_admin_seller', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor_admin_seller.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/application_configuration_boisdor_admin_seller/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor_admin_seller.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/application_configuration_boisdor_admin_seller/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_boisdor_admin_seller.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/application_configuration_boisdor_admin_seller/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_boisdor_admin_seller.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
     router.get('/collection/application_configuration_qbp_admin/*', (req, res) => {
         Promise.resolve()
             .then(() => {
@@ -3556,6 +3976,90 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
+    router.get('/collection/application_configuration_boisdor_admin/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor_admin.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/application_configuration_boisdor_admin/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor_admin.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/application_configuration_boisdor_admin/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor_admin.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/application_configuration_boisdor_admin', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor_admin.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/application_configuration_boisdor_admin/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_boisdor_admin.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/application_configuration_boisdor_admin/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_boisdor_admin.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/application_configuration_boisdor_admin/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_boisdor_admin.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
     router.get('/collection/application_configuration_qbp/*', (req, res) => {
         Promise.resolve()
             .then(() => {
@@ -3632,6 +4136,258 @@ function expressRouterApi_service(currentApp, plateforme) {
         Promise.resolve()
             .then(() => {
             return bdd_plateforme.collections.admin_application_configuration_qbp.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/application_configuration_r3_admin_seller/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3_admin_seller.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/application_configuration_r3_admin_seller/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3_admin_seller.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/application_configuration_r3_admin_seller/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3_admin_seller.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/application_configuration_r3_admin_seller', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3_admin_seller.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/application_configuration_r3_admin_seller/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3_admin_seller.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/application_configuration_r3_admin_seller/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_r3_admin_seller.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/application_configuration_r3_admin_seller/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_r3_admin_seller.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/application_configuration_r3_admin/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3_admin.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/application_configuration_r3_admin/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3_admin.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/application_configuration_r3_admin/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3_admin.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/application_configuration_r3_admin', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3_admin.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/application_configuration_r3_admin/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_r3_admin.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/application_configuration_r3_admin/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_r3_admin.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/application_configuration_r3_admin/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_r3_admin.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/application_configuration_dcbm_static/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_dcbm_static.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/application_configuration_dcbm_static/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_dcbm_static.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/application_configuration_dcbm_static/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_dcbm_static.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/application_configuration_dcbm_static', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_dcbm_static.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/application_configuration_dcbm_static/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.application_configuration_dcbm_static.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/application_configuration_dcbm_static/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_dcbm_static.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/application_configuration_dcbm_static/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_application_configuration_dcbm_static.delete(req.params[0]);
         })
             .then(data => {
             res.send(data);
@@ -6748,90 +7504,6 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
-    router.get('/collection/service_celio_fid/*', (req, res) => {
-        Promise.resolve()
-            .then(() => {
-            return bdd_plateforme.collections.service_celio_fid.get(req.params[0]);
-        })
-            .then(data => {
-            res.send(data);
-        })
-            .catch(err => {
-            return res.send(this.toErrRes(err, 500, req));
-        });
-    });
-    router.post('/collection/service_celio_fid/*', parseBody, (req, res) => {
-        Promise.resolve()
-            .then(() => {
-            return bdd_plateforme.collections.service_celio_fid.post(req.body, req.params[0]);
-        })
-            .then(data => {
-            res.send(data);
-        })
-            .catch(err => {
-            return res.send(this.toErrRes(err, 500, req));
-        });
-    });
-    router.put('/collection/service_celio_fid/*', parseBody, (req, res) => {
-        Promise.resolve()
-            .then(() => {
-            return bdd_plateforme.collections.service_celio_fid.put(req.body, req.params[0]);
-        })
-            .then(data => {
-            res.send(data);
-        })
-            .catch(err => {
-            return res.send(this.toErrRes(err, 500, req));
-        });
-    });
-    router.patch('/collection/service_celio_fid', parseBody, (req, res) => {
-        Promise.resolve()
-            .then(() => {
-            return bdd_plateforme.collections.service_celio_fid.patch(req.body);
-        })
-            .then(data => {
-            res.send(data);
-        })
-            .catch(err => {
-            return res.send(this.toErrRes(err, 500, req));
-        });
-    });
-    router.delete('/collection/service_celio_fid/:id', (req, res) => {
-        Promise.resolve()
-            .then(() => {
-            return bdd_plateforme.collections.service_celio_fid.delete(req.params.id);
-        })
-            .then(data => {
-            res.send(data);
-        })
-            .catch(err => {
-            return res.send(this.toErrRes(err, 500, req));
-        });
-    });
-    router.patch('/admin/service_celio_fid/*', parseBody, (req, res) => {
-        Promise.resolve()
-            .then(() => {
-            return bdd_plateforme.collections.admin_service_celio_fid.patch(req.body, req.params[0]);
-        })
-            .then(data => {
-            res.send(data);
-        })
-            .catch(err => {
-            return res.send(this.toErrRes(err, 500, req));
-        });
-    });
-    router.delete('/admin/service_celio_fid/*', (req, res) => {
-        Promise.resolve()
-            .then(() => {
-            return bdd_plateforme.collections.admin_service_celio_fid.delete(req.params[0]);
-        })
-            .then(data => {
-            res.send(data);
-        })
-            .catch(err => {
-            return res.send(this.toErrRes(err, 500, req));
-        });
-    });
     router.get('/collection/service_celio_qcm/*', (req, res) => {
         Promise.resolve()
             .then(() => {
@@ -7000,6 +7672,90 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
+    router.get('/collection/service_airport/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_airport.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/service_airport/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_airport.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/service_airport/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_airport.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/service_airport', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_airport.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/service_airport/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_airport.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/service_airport/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_service_airport.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/service_airport/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_service_airport.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
     router.get('/collection/service_celio_back_task/*', (req, res) => {
         Promise.resolve()
             .then(() => {
@@ -7076,6 +7832,174 @@ function expressRouterApi_service(currentApp, plateforme) {
         Promise.resolve()
             .then(() => {
             return bdd_plateforme.collections.admin_service_celio_back_task.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/service_celio_fid/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_celio_fid.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/service_celio_fid/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_celio_fid.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/service_celio_fid/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_celio_fid.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/service_celio_fid', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_celio_fid.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/service_celio_fid/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_celio_fid.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/service_celio_fid/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_service_celio_fid.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/service_celio_fid/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_service_celio_fid.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/dpd_dervice/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.dpd_dervice.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/dpd_dervice/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.dpd_dervice.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/dpd_dervice/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.dpd_dervice.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/dpd_dervice', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.dpd_dervice.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/dpd_dervice/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.dpd_dervice.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/dpd_dervice/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_dpd_dervice.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/dpd_dervice/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_dpd_dervice.delete(req.params[0]);
         })
             .then(data => {
             res.send(data);
@@ -7168,10 +8092,10 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
-    router.get('/collection/service_airport/*', (req, res) => {
+    router.get('/collection/boisdor_service/*', (req, res) => {
         Promise.resolve()
             .then(() => {
-            return bdd_plateforme.collections.service_airport.get(req.params[0]);
+            return bdd_plateforme.collections.boisdor_service.get(req.params[0]);
         })
             .then(data => {
             res.send(data);
@@ -7180,10 +8104,10 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
-    router.post('/collection/service_airport/*', parseBody, (req, res) => {
+    router.post('/collection/boisdor_service/*', parseBody, (req, res) => {
         Promise.resolve()
             .then(() => {
-            return bdd_plateforme.collections.service_airport.post(req.body, req.params[0]);
+            return bdd_plateforme.collections.boisdor_service.post(req.body, req.params[0]);
         })
             .then(data => {
             res.send(data);
@@ -7192,10 +8116,10 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
-    router.put('/collection/service_airport/*', parseBody, (req, res) => {
+    router.put('/collection/boisdor_service/*', parseBody, (req, res) => {
         Promise.resolve()
             .then(() => {
-            return bdd_plateforme.collections.service_airport.put(req.body, req.params[0]);
+            return bdd_plateforme.collections.boisdor_service.put(req.body, req.params[0]);
         })
             .then(data => {
             res.send(data);
@@ -7204,10 +8128,10 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
-    router.patch('/collection/service_airport', parseBody, (req, res) => {
+    router.patch('/collection/boisdor_service', parseBody, (req, res) => {
         Promise.resolve()
             .then(() => {
-            return bdd_plateforme.collections.service_airport.patch(req.body);
+            return bdd_plateforme.collections.boisdor_service.patch(req.body);
         })
             .then(data => {
             res.send(data);
@@ -7216,10 +8140,10 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
-    router.delete('/collection/service_airport/:id', (req, res) => {
+    router.delete('/collection/boisdor_service/:id', (req, res) => {
         Promise.resolve()
             .then(() => {
-            return bdd_plateforme.collections.service_airport.delete(req.params.id);
+            return bdd_plateforme.collections.boisdor_service.delete(req.params.id);
         })
             .then(data => {
             res.send(data);
@@ -7228,10 +8152,10 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
-    router.patch('/admin/service_airport/*', parseBody, (req, res) => {
+    router.patch('/admin/boisdor_service/*', parseBody, (req, res) => {
         Promise.resolve()
             .then(() => {
-            return bdd_plateforme.collections.admin_service_airport.patch(req.body, req.params[0]);
+            return bdd_plateforme.collections.admin_boisdor_service.patch(req.body, req.params[0]);
         })
             .then(data => {
             res.send(data);
@@ -7240,10 +8164,10 @@ function expressRouterApi_service(currentApp, plateforme) {
             return res.send(this.toErrRes(err, 500, req));
         });
     });
-    router.delete('/admin/service_airport/*', (req, res) => {
+    router.delete('/admin/boisdor_service/*', (req, res) => {
         Promise.resolve()
             .then(() => {
-            return bdd_plateforme.collections.admin_service_airport.delete(req.params[0]);
+            return bdd_plateforme.collections.admin_boisdor_service.delete(req.params[0]);
         })
             .then(data => {
             res.send(data);
@@ -7328,6 +8252,258 @@ function expressRouterApi_service(currentApp, plateforme) {
         Promise.resolve()
             .then(() => {
             return bdd_plateforme.collections.admin_QBP_service.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/service_qcbm/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_qcbm.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/service_qcbm/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_qcbm.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/service_qcbm/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_qcbm.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/service_qcbm', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_qcbm.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/service_qcbm/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.service_qcbm.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/service_qcbm/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_service_qcbm.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/service_qcbm/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_service_qcbm.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/r3_service/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.r3_service.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/r3_service/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.r3_service.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/r3_service/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.r3_service.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/r3_service', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.r3_service.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/r3_service/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.r3_service.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/r3_service/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_r3_service.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/r3_service/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_r3_service.delete(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.get('/collection/bois_dor_mailer/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.bois_dor_mailer.get(req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.post('/collection/bois_dor_mailer/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.bois_dor_mailer.post(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.put('/collection/bois_dor_mailer/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.bois_dor_mailer.put(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/collection/bois_dor_mailer', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.bois_dor_mailer.patch(req.body);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/collection/bois_dor_mailer/:id', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.bois_dor_mailer.delete(req.params.id);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.patch('/admin/bois_dor_mailer/*', parseBody, (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_bois_dor_mailer.patch(req.body, req.params[0]);
+        })
+            .then(data => {
+            res.send(data);
+        })
+            .catch(err => {
+            return res.send(this.toErrRes(err, 500, req));
+        });
+    });
+    router.delete('/admin/bois_dor_mailer/*', (req, res) => {
+        Promise.resolve()
+            .then(() => {
+            return bdd_plateforme.collections.admin_bois_dor_mailer.delete(req.params[0]);
         })
             .then(data => {
             res.send(data);

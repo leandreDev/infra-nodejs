@@ -33,8 +33,8 @@ export class Model_Service_scorm_gateway extends   Model_service   implements In
             this["endClientId"] = obj["endClientId"];
           }else if(obj["endClientId"]._id){
             this["endClientId"] = obj["endClientId"]._id ;
-          }else if((obj["endClientId"]._bsontype && (obj["endClientId"]._bsontype === 'ObjectID'){
-              this["endClientId"] = `${value}` ;
+          }else if(obj["endClientId"]._bsontype && (obj["endClientId"]._bsontype === 'ObjectID')){
+              this["endClientId"] = obj["endClientId"] ;
             }
           
         }
