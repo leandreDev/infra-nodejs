@@ -61,4 +61,8 @@ on signale au client qu eson pdf est pret
 on informe a un partenaire que son admin est pret et qu'il peut sy conecter
 */
     "R3_partner_admin_created"?: string;
+    /**
+mail de bienvenu d un nouvelle admin
+*/
+    "r3_group_welcome_admin_templateId": string;
 }

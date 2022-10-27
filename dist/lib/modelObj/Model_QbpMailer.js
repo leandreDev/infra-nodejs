@@ -486,6 +486,50 @@ class Model_QbpMailer extends utils_1.Base {
                 this["fourteenDaysBackConfirmation"] = obj["fourteenDaysBackConfirmation"];
             }
         }
+        if (obj["errorOnWorkflowOrder"] != undefined) {
+            if (_.isString(obj["errorOnWorkflowOrder"])) {
+                this["errorOnWorkflowOrder"] = obj["errorOnWorkflowOrder"];
+            }
+            else if (obj["errorOnWorkflowOrder"]._id) {
+                this["errorOnWorkflowOrder"] = obj["errorOnWorkflowOrder"]._id;
+            }
+            else if (obj["errorOnWorkflowOrder"]._bsontype && (obj["errorOnWorkflowOrder"]._bsontype === 'ObjectID')) {
+                this["errorOnWorkflowOrder"] = obj["errorOnWorkflowOrder"];
+            }
+        }
+        if (obj["qbpRefundBankWire"] != undefined) {
+            if (_.isString(obj["qbpRefundBankWire"])) {
+                this["qbpRefundBankWire"] = obj["qbpRefundBankWire"];
+            }
+            else if (obj["qbpRefundBankWire"]._id) {
+                this["qbpRefundBankWire"] = obj["qbpRefundBankWire"]._id;
+            }
+            else if (obj["qbpRefundBankWire"]._bsontype && (obj["qbpRefundBankWire"]._bsontype === 'ObjectID')) {
+                this["qbpRefundBankWire"] = obj["qbpRefundBankWire"];
+            }
+        }
+        if (obj["qbpBankWireRecall"] != undefined) {
+            if (_.isString(obj["qbpBankWireRecall"])) {
+                this["qbpBankWireRecall"] = obj["qbpBankWireRecall"];
+            }
+            else if (obj["qbpBankWireRecall"]._id) {
+                this["qbpBankWireRecall"] = obj["qbpBankWireRecall"]._id;
+            }
+            else if (obj["qbpBankWireRecall"]._bsontype && (obj["qbpBankWireRecall"]._bsontype === 'ObjectID')) {
+                this["qbpBankWireRecall"] = obj["qbpBankWireRecall"];
+            }
+        }
+        if (obj["qbpAvisGarantis"] != undefined) {
+            if (_.isString(obj["qbpAvisGarantis"])) {
+                this["qbpAvisGarantis"] = obj["qbpAvisGarantis"];
+            }
+            else if (obj["qbpAvisGarantis"]._id) {
+                this["qbpAvisGarantis"] = obj["qbpAvisGarantis"]._id;
+            }
+            else if (obj["qbpAvisGarantis"]._bsontype && (obj["qbpAvisGarantis"]._bsontype === 'ObjectID')) {
+                this["qbpAvisGarantis"] = obj["qbpAvisGarantis"];
+            }
+        }
     }
 }
 exports.Model_QbpMailer = Model_QbpMailer;

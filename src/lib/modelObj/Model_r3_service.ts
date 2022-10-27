@@ -122,6 +122,24 @@ export class Model_r3_service extends   Model_service   implements Interface.Ir3
         }
         
     
+        
+        if(obj["authorizedDomaine"] != undefined && obj["authorizedDomaine"] != null && _.isArray(obj["authorizedDomaine"])){
+          
+           this["authorizedDomaine"] = obj["authorizedDomaine"].map((value)=>{
+              return value.toString();
+            })
+          
+        }
+        
+    
+        
+        if(obj["adminSiteUrl"] != undefined){
+          
+           this["adminSiteUrl"] = obj["adminSiteUrl"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -198,6 +216,18 @@ export class Model_r3_service extends   Model_service   implements Interface.Ir3
         configuration de la génération des partnaires
         */
                public "parntaireConfig"?:Interface.IParnerDeployConf;
+              
+       
+              /**
+        domaine autorisé pour la redirection lors des récupération de mot de passe (ex: jusplug.info)
+        */
+               public "authorizedDomaine"?:string[];
+              
+       
+              /**
+        url du site admin
+        */
+               public "adminSiteUrl":string ;
               
        
 

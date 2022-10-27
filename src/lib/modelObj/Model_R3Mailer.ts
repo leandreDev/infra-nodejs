@@ -168,6 +168,20 @@ export class Model_R3Mailer extends  Base  implements Interface.IR3Mailer {
         }
         
     
+        
+        if(obj["r3_group_welcome_admin_templateId"] != undefined){
+          
+          if(_.isString(obj["r3_group_welcome_admin_templateId"])){
+            this["r3_group_welcome_admin_templateId"] = obj["r3_group_welcome_admin_templateId"];
+          }else if(obj["r3_group_welcome_admin_templateId"]._id){
+            this["r3_group_welcome_admin_templateId"] = obj["r3_group_welcome_admin_templateId"]._id ;
+          }else if(obj["r3_group_welcome_admin_templateId"]._bsontype && (obj["r3_group_welcome_admin_templateId"]._bsontype === 'ObjectID')){
+              this["r3_group_welcome_admin_templateId"] = obj["r3_group_welcome_admin_templateId"] ;
+            }
+          
+        }
+        
+    
   }
   
 
@@ -250,6 +264,12 @@ export class Model_R3Mailer extends  Base  implements Interface.IR3Mailer {
         on informe a un partenaire que son admin est pret et qu'il peut sy conecter
         */
                public "R3_partner_admin_created"?:string ;
+              
+       
+              /**
+        mail de bienvenu d un nouvelle admin
+        */
+               public "r3_group_welcome_admin_templateId":string ;
               
        
 

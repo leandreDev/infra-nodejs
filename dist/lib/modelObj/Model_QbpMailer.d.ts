@@ -197,4 +197,20 @@ Colis retour sav livre au vendeur
 Confirmation de livraison chez le vendeur
 */
     "fourteenDaysBackConfirmation"?: string;
+    /**
+Mail pour les erreur de workflow sur le process d une commande
+*/
+    "errorOnWorkflowOrder"?: string;
+    /**
+Mail contact qbp support pour remboursement bankwire
+*/
+    "qbpRefundBankWire"?: string;
+    /**
+Rappelle de virement bancaire pour un client
+*/
+    "qbpBankWireRecall"?: string;
+    /**
+mail pour les avis garantie auto
+*/
+    "qbpAvisGarantis"?: string;
 }

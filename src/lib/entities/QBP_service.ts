@@ -314,6 +314,54 @@ export class Entity_QBP_service extends   Entity_service    {
         }
         
     
+        
+        if(obj["floaUrl"] != undefined){
+          
+           obj["floaUrl"] = obj["floaUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["floaApiKey"] != undefined){
+          
+           obj["floaApiKey"] = obj["floaApiKey"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["floaMangoWalletId"] != undefined){
+          
+           obj["floaMangoWalletId"] = obj["floaMangoWalletId"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpPromoWalletId"] != undefined){
+          
+           obj["qbpPromoWalletId"] = obj["qbpPromoWalletId"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpPromoMangoUserId"] != undefined){
+          
+           obj["qbpPromoMangoUserId"] = obj["qbpPromoMangoUserId"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["avisGarantisSecretEmail"] != undefined){
+          
+           obj["avisGarantisSecretEmail"] = obj["avisGarantisSecretEmail"].toString() ;
+           
+        }
+        
+    
   }
 
 
@@ -1205,6 +1253,168 @@ public static checkautomationConf(val:any, path:string =null):string[]{
        
  
 
+public static checkfloaUrl(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkfloaApiKey(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkfloaMangoWalletId(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkqbpPromoWalletId(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkqbpPromoMangoUserId(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkavisGarantisSecretEmail(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -1746,6 +1956,108 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
               
               
            
+              
+
+              
+
+              if(target.floaUrl != null && target.floaUrl != undefined ){
+                
+                
+                res = Entity_QBP_service.checkfloaUrl(target.floaUrl , `${path}.floaUrl`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.floaApiKey != null && target.floaApiKey != undefined ){
+                
+                
+                res = Entity_QBP_service.checkfloaApiKey(target.floaApiKey , `${path}.floaApiKey`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.floaMangoWalletId != null && target.floaMangoWalletId != undefined ){
+                
+                
+                res = Entity_QBP_service.checkfloaMangoWalletId(target.floaMangoWalletId , `${path}.floaMangoWalletId`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.qbpPromoWalletId != null && target.qbpPromoWalletId != undefined ){
+                
+                
+                res = Entity_QBP_service.checkqbpPromoWalletId(target.qbpPromoWalletId , `${path}.qbpPromoWalletId`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.qbpPromoMangoUserId != null && target.qbpPromoMangoUserId != undefined ){
+                
+                
+                res = Entity_QBP_service.checkqbpPromoMangoUserId(target.qbpPromoMangoUserId , `${path}.qbpPromoMangoUserId`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.avisGarantisSecretEmail != null && target.avisGarantisSecretEmail != undefined ){
+                
+                
+                res = Entity_QBP_service.checkavisGarantisSecretEmail(target.avisGarantisSecretEmail , `${path}.avisGarantisSecretEmail`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -2200,6 +2512,84 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'floaUrl':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'floaApiKey':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'floaMangoWalletId':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'qbpPromoWalletId':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'qbpPromoMangoUserId':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'avisGarantisSecretEmail':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
          
           default:
             return Entity_service  .castQueryParam(key, value) ;
@@ -2484,6 +2874,54 @@ public static getClassNameOfProp(path:string):string{
              return Index.Entity_ConfAutomation.getClassNameOfProp(subPath) ;
               
        
+       
+      
+      
+      case 'floaUrl':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'floaApiKey':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'floaMangoWalletId':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'qbpPromoWalletId':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'qbpPromoMangoUserId':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'avisGarantisSecretEmail':
+       
+             return null ;
+       
+        
        
       
       

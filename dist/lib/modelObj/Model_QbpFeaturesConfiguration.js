@@ -16,8 +16,18 @@ class Model_QbpFeaturesConfiguration extends utils_1.Base {
   determine se le payement par virement bancaire est active ou non
   */
         this["bankWire"] = false;
+        /**
+  Determine si l option floaPay est activer ou non
+  */
+        this["floaPay"] = false;
         if (obj["bankWire"] != undefined) {
             this["bankWire"] = new Boolean(obj["bankWire"]).valueOf();
+        }
+        if (obj["floaPay"] != undefined) {
+            this["floaPay"] = new Boolean(obj["floaPay"]).valueOf();
+        }
+        if (obj["searchByModel"] != undefined) {
+            this["searchByModel"] = new Boolean(obj["searchByModel"]).valueOf();
         }
     }
 }

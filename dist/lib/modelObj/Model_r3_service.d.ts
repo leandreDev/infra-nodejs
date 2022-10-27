@@ -57,4 +57,12 @@ url du fso r3
 configuration de la génération des partnaires
 */
     "parntaireConfig"?: Interface.IParnerDeployConf;
+    /**
+domaine autorisé pour la redirection lors des récupération de mot de passe (ex: jusplug.info)
+*/
+    "authorizedDomaine"?: string[];
+    /**
+url du site admin
+*/
+    "adminSiteUrl": string;
 }

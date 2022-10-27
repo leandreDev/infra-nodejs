@@ -562,6 +562,54 @@ export class Entity_QbpMailer extends  Entity   {
         }
         
     
+        
+        if(obj["errorOnWorkflowOrder"] != undefined){
+          
+          if(_.isString(obj["errorOnWorkflowOrder"])){
+            obj["errorOnWorkflowOrder"] = new mongo.ObjectId(obj["errorOnWorkflowOrder"]);
+          }else if(obj["errorOnWorkflowOrder"]._id){
+            obj["errorOnWorkflowOrder"] = new mongo.ObjectId(obj["errorOnWorkflowOrder"]._id) ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["qbpRefundBankWire"] != undefined){
+          
+          if(_.isString(obj["qbpRefundBankWire"])){
+            obj["qbpRefundBankWire"] = new mongo.ObjectId(obj["qbpRefundBankWire"]);
+          }else if(obj["qbpRefundBankWire"]._id){
+            obj["qbpRefundBankWire"] = new mongo.ObjectId(obj["qbpRefundBankWire"]._id) ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["qbpBankWireRecall"] != undefined){
+          
+          if(_.isString(obj["qbpBankWireRecall"])){
+            obj["qbpBankWireRecall"] = new mongo.ObjectId(obj["qbpBankWireRecall"]);
+          }else if(obj["qbpBankWireRecall"]._id){
+            obj["qbpBankWireRecall"] = new mongo.ObjectId(obj["qbpBankWireRecall"]._id) ;
+          }
+          
+        }
+        
+    
+        
+        if(obj["qbpAvisGarantis"] != undefined){
+          
+          if(_.isString(obj["qbpAvisGarantis"])){
+            obj["qbpAvisGarantis"] = new mongo.ObjectId(obj["qbpAvisGarantis"]);
+          }else if(obj["qbpAvisGarantis"]._id){
+            obj["qbpAvisGarantis"] = new mongo.ObjectId(obj["qbpAvisGarantis"]._id) ;
+          }
+          
+        }
+        
+    
   }
 
 
@@ -1878,6 +1926,118 @@ public static checkfourteenDaysBackConfirmation(val:any, path:string =null):stri
        
  
 
+public static checkerrorOnWorkflowOrder(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+          if( ! mongo.ObjectId.isValid(val)){
+            res.push(`${path}  is not an ObjectId`) ;     
+          }
+         
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkqbpRefundBankWire(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+          if( ! mongo.ObjectId.isValid(val)){
+            res.push(`${path}  is not an ObjectId`) ;     
+          }
+         
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkqbpBankWireRecall(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+          if( ! mongo.ObjectId.isValid(val)){
+            res.push(`${path}  is not an ObjectId`) ;     
+          }
+         
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkqbpAvisGarantis(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+          if( ! mongo.ObjectId.isValid(val)){
+            res.push(`${path}  is not an ObjectId`) ;     
+          }
+         
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -2683,6 +2843,74 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
               
               
            
+              
+
+              
+
+              if(target.errorOnWorkflowOrder != null && target.errorOnWorkflowOrder != undefined ){
+                
+                
+                res = Entity_QbpMailer.checkerrorOnWorkflowOrder(target.errorOnWorkflowOrder , `${path}.errorOnWorkflowOrder`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.qbpRefundBankWire != null && target.qbpRefundBankWire != undefined ){
+                
+                
+                res = Entity_QbpMailer.checkqbpRefundBankWire(target.qbpRefundBankWire , `${path}.qbpRefundBankWire`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.qbpBankWireRecall != null && target.qbpBankWireRecall != undefined ){
+                
+                
+                res = Entity_QbpMailer.checkqbpBankWireRecall(target.qbpBankWireRecall , `${path}.qbpBankWireRecall`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.qbpAvisGarantis != null && target.qbpAvisGarantis != undefined ){
+                
+                
+                res = Entity_QbpMailer.checkqbpAvisGarantis(target.qbpAvisGarantis , `${path}.qbpAvisGarantis`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -3321,6 +3549,58 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'errorOnWorkflowOrder':
+              //objectid
+              
+              
+              
+              
+              
+              
+              return new mongo.ObjectId(value) ;
+              
+              
+            break;
+          
+            case 'qbpRefundBankWire':
+              //objectid
+              
+              
+              
+              
+              
+              
+              return new mongo.ObjectId(value) ;
+              
+              
+            break;
+          
+            case 'qbpBankWireRecall':
+              //objectid
+              
+              
+              
+              
+              
+              
+              return new mongo.ObjectId(value) ;
+              
+              
+            break;
+          
+            case 'qbpAvisGarantis':
+              //objectid
+              
+              
+              
+              
+              
+              
+              return new mongo.ObjectId(value) ;
+              
+              
+            break;
+          
          
           default:
             return Entity.castQueryParam(key, value) ;
@@ -3717,6 +3997,38 @@ public static getClassNameOfProp(path:string):string{
       
       
       case 'fourteenDaysBackConfirmation':
+       
+        
+       
+              return 'MultilangSendGridTemplate' ;
+              
+      
+      
+      case 'errorOnWorkflowOrder':
+       
+        
+       
+              return 'MultilangSendGridTemplate' ;
+              
+      
+      
+      case 'qbpRefundBankWire':
+       
+        
+       
+              return 'MultilangSendGridTemplate' ;
+              
+      
+      
+      case 'qbpBankWireRecall':
+       
+        
+       
+              return 'MultilangSendGridTemplate' ;
+              
+      
+      
+      case 'qbpAvisGarantis':
        
         
        

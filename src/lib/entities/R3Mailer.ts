@@ -158,6 +158,18 @@ export class Entity_R3Mailer extends  Entity   {
         }
         
     
+        
+        if(obj["r3_group_welcome_admin_templateId"] != undefined){
+          
+          if(_.isString(obj["r3_group_welcome_admin_templateId"])){
+            obj["r3_group_welcome_admin_templateId"] = new mongo.ObjectId(obj["r3_group_welcome_admin_templateId"]);
+          }else if(obj["r3_group_welcome_admin_templateId"]._id){
+            obj["r3_group_welcome_admin_templateId"] = new mongo.ObjectId(obj["r3_group_welcome_admin_templateId"]._id) ;
+          }
+          
+        }
+        
+    
   }
 
 
@@ -522,6 +534,34 @@ public static checkR3_partner_admin_created(val:any, path:string =null):string[]
        
  
 
+public static checkr3_group_welcome_admin_templateId(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+          if( ! mongo.ObjectId.isValid(val)){
+            res.push(`${path}  is not an ObjectId`) ;     
+          }
+         
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -749,6 +789,27 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
               
               
            
+              
+
+              
+              if( isCompleteObj && (target.r3_group_welcome_admin_templateId == null || target.r3_group_welcome_admin_templateId == undefined) ){
+                err.push(path + ".r3_group_welcome_admin_templateId is required") ;
+              }
+              
+
+              if(target.r3_group_welcome_admin_templateId != null && target.r3_group_welcome_admin_templateId != undefined ){
+                
+                
+                res = Entity_R3Mailer.checkr3_group_welcome_admin_templateId(target.r3_group_welcome_admin_templateId , `${path}.r3_group_welcome_admin_templateId`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -945,6 +1006,19 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'r3_group_welcome_admin_templateId':
+              //objectid
+              
+              
+              
+              
+              
+              
+              return new mongo.ObjectId(value) ;
+              
+              
+            break;
+          
          
           default:
             return Entity.castQueryParam(key, value) ;
@@ -1069,6 +1143,14 @@ public static getClassNameOfProp(path:string):string{
       
       
       case 'R3_partner_admin_created':
+       
+        
+       
+              return 'MultilangSendGridTemplate' ;
+              
+      
+      
+      case 'r3_group_welcome_admin_templateId':
        
         
        

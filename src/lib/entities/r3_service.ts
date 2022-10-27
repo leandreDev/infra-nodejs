@@ -126,6 +126,24 @@ export class Entity_r3_service extends   Entity_service    {
         }
         
     
+        
+        if(obj["authorizedDomaine"] != undefined && obj["authorizedDomaine"] != null && _.isArray(obj["authorizedDomaine"])){
+          
+           obj["authorizedDomaine"] = obj["authorizedDomaine"].map((value)=>{
+              return value.toString();
+            })
+          
+        }
+        
+    
+        
+        if(obj["adminSiteUrl"] != undefined){
+          
+           obj["adminSiteUrl"] = obj["adminSiteUrl"].toString() ;
+           
+        }
+        
+    
   }
 
 
@@ -469,6 +487,60 @@ public static checkparntaireConfig(val:any, path:string =null):string[]{
        
  
 
+public static checkauthorizedDomaine(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkadminSiteUrl(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -691,6 +763,46 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
               
               
            
+              
+
+              
+
+              if(target.authorizedDomaine != null && target.authorizedDomaine != undefined ){
+                
+                
+                target.authorizedDomaine.forEach((data, index)=>{
+                  res = Entity_r3_service.checkauthorizedDomaine(target.authorizedDomaine[index] , `${path}.authorizedDomaine.${index}` ) ;
+                  if(res && res.length > 0){
+                    err = [...err , ...res] ;
+                  }
+                })
+                
+              }
+
+              
+              
+           
+              
+
+              
+              if( isCompleteObj && (target.adminSiteUrl == null || target.adminSiteUrl == undefined) ){
+                err.push(path + ".adminSiteUrl is required") ;
+              }
+              
+
+              if(target.adminSiteUrl != null && target.adminSiteUrl != undefined ){
+                
+                
+                res = Entity_r3_service.checkadminSiteUrl(target.adminSiteUrl , `${path}.adminSiteUrl`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -882,6 +994,32 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'authorizedDomaine':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
+            case 'adminSiteUrl':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
          
           default:
             return Entity_service  .castQueryParam(key, value) ;
@@ -1006,6 +1144,22 @@ public static getClassNameOfProp(path:string):string{
              return Index.Entity_ParnerDeployConf.getClassNameOfProp(subPath) ;
               
        
+       
+      
+      
+      case 'authorizedDomaine':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'adminSiteUrl':
+       
+             return null ;
+       
+        
        
       
       

@@ -133,4 +133,28 @@ liste de functionalites active ou pas
 Configuration pour les taches auto
 */
     "automationConf"?: Interface.IConfAutomation;
+    /**
+url de l api floa
+*/
+    "floaUrl"?: string;
+    /**
+key de l api floa
+*/
+    "floaApiKey"?: string;
+    /**
+id du wallet mango de floa
+*/
+    "floaMangoWalletId"?: string;
+    /**
+ID wallet dedier uniquement au promotion
+*/
+    "qbpPromoWalletId"?: string;
+    /**
+Id de l utilsateur mango qui effectue le transfert
+*/
+    "qbpPromoMangoUserId"?: string;
+    /**
+email secret avis garantie
+*/
+    "avisGarantisSecretEmail"?: string;
 }

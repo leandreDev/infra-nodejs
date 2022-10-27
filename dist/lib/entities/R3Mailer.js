@@ -93,6 +93,14 @@ class Entity_R3Mailer extends utils_1.Entity {
                 obj["R3_partner_admin_created"] = new utils_1.mongo.ObjectId(obj["R3_partner_admin_created"]._id);
             }
         }
+        if (obj["r3_group_welcome_admin_templateId"] != undefined) {
+            if (_.isString(obj["r3_group_welcome_admin_templateId"])) {
+                obj["r3_group_welcome_admin_templateId"] = new utils_1.mongo.ObjectId(obj["r3_group_welcome_admin_templateId"]);
+            }
+            else if (obj["r3_group_welcome_admin_templateId"]._id) {
+                obj["r3_group_welcome_admin_templateId"] = new utils_1.mongo.ObjectId(obj["r3_group_welcome_admin_templateId"]._id);
+            }
+        }
     }
     static checksenderEMail(val, path = null) {
         if (val == null) {
@@ -274,6 +282,21 @@ class Entity_R3Mailer extends utils_1.Entity {
             return res;
         }
     }
+    static checkr3_group_welcome_admin_templateId(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!utils_1.mongo.ObjectId.isValid(val)) {
+            res.push(`${path}  is not an ObjectId`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -355,6 +378,15 @@ class Entity_R3Mailer extends utils_1.Entity {
                 err = [...err, ...res];
             }
         }
+        if (isCompleteObj && (target.r3_group_welcome_admin_templateId == null || target.r3_group_welcome_admin_templateId == undefined)) {
+            err.push(path + ".r3_group_welcome_admin_templateId is required");
+        }
+        if (target.r3_group_welcome_admin_templateId != null && target.r3_group_welcome_admin_templateId != undefined) {
+            res = Entity_R3Mailer.checkr3_group_welcome_admin_templateId(target.r3_group_welcome_admin_templateId, `${path}.r3_group_welcome_admin_templateId`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
         return err;
     }
     static castQueryParam(path, value) {
@@ -430,6 +462,10 @@ class Entity_R3Mailer extends utils_1.Entity {
                 //objectid
                 return new utils_1.mongo.ObjectId(value);
                 break;
+            case 'r3_group_welcome_admin_templateId':
+                //objectid
+                return new utils_1.mongo.ObjectId(value);
+                break;
             default:
                 return utils_1.Entity.castQueryParam(key, value);
                 break;
@@ -478,6 +514,8 @@ class Entity_R3Mailer extends utils_1.Entity {
             case 'R3_analisys_end_to_user':
                 return 'MultilangSendGridTemplate';
             case 'R3_partner_admin_created':
+                return 'MultilangSendGridTemplate';
+            case 'r3_group_welcome_admin_templateId':
                 return 'MultilangSendGridTemplate';
             default:
                 return utils_1.Entity.getClassNameOfProp(key);

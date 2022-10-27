@@ -43,6 +43,9 @@ class Entity_service_licence_token extends service_1.Entity_service {
         if (obj["end_clientUrl"] != undefined) {
             obj["end_clientUrl"] = obj["end_clientUrl"].toString();
         }
+        if (obj["url_bdd"] != undefined) {
+            obj["url_bdd"] = obj["url_bdd"].toString();
+        }
     }
     static checklicenceUrl(val, path = null) {
         if (val == null) {
@@ -110,6 +113,18 @@ class Entity_service_licence_token extends service_1.Entity_service {
             return res;
         }
     }
+    static checkurl_bdd(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -142,6 +157,12 @@ class Entity_service_licence_token extends service_1.Entity_service {
         }
         if (target.end_clientUrl != null && target.end_clientUrl != undefined) {
             res = Entity_service_licence_token.checkend_clientUrl(target.end_clientUrl, `${path}.end_clientUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.url_bdd != null && target.url_bdd != undefined) {
+            res = Entity_service_licence_token.checkurl_bdd(target.url_bdd, `${path}.url_bdd`);
             if (res && res.length > 0) {
                 err = [...err, ...res];
             }
@@ -193,6 +214,10 @@ class Entity_service_licence_token extends service_1.Entity_service {
                 //string
                 return new String(value).valueOf();
                 break;
+            case 'url_bdd':
+                //string
+                return new String(value).valueOf();
+                break;
             default:
                 return service_1.Entity_service.castQueryParam(key, value);
                 break;
@@ -227,6 +252,8 @@ class Entity_service_licence_token extends service_1.Entity_service {
             case 'certificates':
                 return 'certificat';
             case 'end_clientUrl':
+                return null;
+            case 'url_bdd':
                 return null;
             default:
                 return service_1.Entity_service.getClassNameOfProp(key);

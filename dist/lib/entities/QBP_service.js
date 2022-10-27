@@ -144,6 +144,24 @@ class Entity_QBP_service extends service_1.Entity_service {
             Index.Entity_ConfAutomation.cast(obj["automationConf"]);
             //625416540ad16deb7903648a
         }
+        if (obj["floaUrl"] != undefined) {
+            obj["floaUrl"] = obj["floaUrl"].toString();
+        }
+        if (obj["floaApiKey"] != undefined) {
+            obj["floaApiKey"] = obj["floaApiKey"].toString();
+        }
+        if (obj["floaMangoWalletId"] != undefined) {
+            obj["floaMangoWalletId"] = obj["floaMangoWalletId"].toString();
+        }
+        if (obj["qbpPromoWalletId"] != undefined) {
+            obj["qbpPromoWalletId"] = obj["qbpPromoWalletId"].toString();
+        }
+        if (obj["qbpPromoMangoUserId"] != undefined) {
+            obj["qbpPromoMangoUserId"] = obj["qbpPromoMangoUserId"].toString();
+        }
+        if (obj["avisGarantisSecretEmail"] != undefined) {
+            obj["avisGarantisSecretEmail"] = obj["avisGarantisSecretEmail"].toString();
+        }
     }
     static checkQbpBddUrl(val, path = null) {
         if (val == null) {
@@ -592,6 +610,78 @@ class Entity_QBP_service extends service_1.Entity_service {
             return res;
         }
     }
+    static checkfloaUrl(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkfloaApiKey(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkfloaMangoWalletId(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkqbpPromoWalletId(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkqbpPromoMangoUserId(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkavisGarantisSecretEmail(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -788,6 +878,42 @@ class Entity_QBP_service extends service_1.Entity_service {
                 err = [...err, ...res];
             }
         }
+        if (target.floaUrl != null && target.floaUrl != undefined) {
+            res = Entity_QBP_service.checkfloaUrl(target.floaUrl, `${path}.floaUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.floaApiKey != null && target.floaApiKey != undefined) {
+            res = Entity_QBP_service.checkfloaApiKey(target.floaApiKey, `${path}.floaApiKey`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.floaMangoWalletId != null && target.floaMangoWalletId != undefined) {
+            res = Entity_QBP_service.checkfloaMangoWalletId(target.floaMangoWalletId, `${path}.floaMangoWalletId`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.qbpPromoWalletId != null && target.qbpPromoWalletId != undefined) {
+            res = Entity_QBP_service.checkqbpPromoWalletId(target.qbpPromoWalletId, `${path}.qbpPromoWalletId`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.qbpPromoMangoUserId != null && target.qbpPromoMangoUserId != undefined) {
+            res = Entity_QBP_service.checkqbpPromoMangoUserId(target.qbpPromoMangoUserId, `${path}.qbpPromoMangoUserId`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.avisGarantisSecretEmail != null && target.avisGarantisSecretEmail != undefined) {
+            res = Entity_QBP_service.checkavisGarantisSecretEmail(target.avisGarantisSecretEmail, `${path}.avisGarantisSecretEmail`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
         return err;
     }
     static castQueryParam(path, value) {
@@ -965,6 +1091,30 @@ class Entity_QBP_service extends service_1.Entity_service {
                     return Index.Entity_ConfAutomation.castQueryParam(subPath, value);
                 }
                 break;
+            case 'floaUrl':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'floaApiKey':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'floaMangoWalletId':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'qbpPromoWalletId':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'qbpPromoMangoUserId':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'avisGarantisSecretEmail':
+                //string
+                return new String(value).valueOf();
+                break;
             default:
                 return service_1.Entity_service.castQueryParam(key, value);
                 break;
@@ -1050,6 +1200,18 @@ class Entity_QBP_service extends service_1.Entity_service {
                 return Index.Entity_QbpFeaturesConfiguration.getClassNameOfProp(subPath);
             case 'automationConf':
                 return Index.Entity_ConfAutomation.getClassNameOfProp(subPath);
+            case 'floaUrl':
+                return null;
+            case 'floaApiKey':
+                return null;
+            case 'floaMangoWalletId':
+                return null;
+            case 'qbpPromoWalletId':
+                return null;
+            case 'qbpPromoMangoUserId':
+                return null;
+            case 'avisGarantisSecretEmail':
+                return null;
             default:
                 return service_1.Entity_service.getClassNameOfProp(key);
                 break;

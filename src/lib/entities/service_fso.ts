@@ -40,6 +40,20 @@ export class Entity_service_fso extends   Entity_service    {
         }
         
     
+        
+        if(obj["proxy"] != undefined && obj["proxy"] != null && _.isArray(obj["proxy"])){
+          
+
+            obj["proxy"].forEach((value)=>{
+              
+                Index.Entity_name_value.cast(value) ;
+                
+              
+            })
+          
+        }
+        
+    
   }
 
 
@@ -87,6 +101,40 @@ public static checkbddServiceUrl(val:any, path:string =null):string[]{
          
 
         
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkproxy(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+         
+
+         
+
+        
+        
+          let result:string[] ;
+          if( val._class ){
+            result = Index['Entity_' + val._class].check(val , false , path  ) ;
+          }else{
+            result = Index.Entity_name_value.check(val , false , path  ) ;
+            //59c62581c3c9d3a0f9e88616
+
+          }
+          res = [...res , ...result] ;
         
           if(res.length === 0){
             return null ;
@@ -147,6 +195,25 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
               
               
            
+              
+
+              
+
+              if(target.proxy != null && target.proxy != undefined ){
+                
+                
+                target.proxy.forEach((data, index)=>{
+                  res = Entity_service_fso.checkproxy(target.proxy[index] , `${path}.proxy.${index}` ) ;
+                  if(res && res.length > 0){
+                    err = [...err , ...res] ;
+                  }
+                })
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -200,6 +267,23 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'proxy':
+              //subdoc
+              
+              if(value._class){
+                return  Index['Entity_'+value._class].castQueryParam(subPath , value) ;
+              }else{
+                return Index.Entity_name_value.castQueryParam(subPath ,value) ;
+              }
+              
+              
+              
+              
+              
+              
+              
+            break;
+          
          
           default:
             return Entity_service  .castQueryParam(key, value) ;
@@ -240,6 +324,16 @@ public static getClassNameOfProp(path:string):string{
              return null ;
        
         
+       
+      
+      
+      case 'proxy':
+       
+        
+              
+             return Index.Entity_name_value.getClassNameOfProp(subPath) ;
+              
+       
        
       
       

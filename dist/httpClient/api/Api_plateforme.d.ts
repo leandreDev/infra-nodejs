@@ -196,6 +196,449 @@ export declare class api_collection_plateform {
     ftpsConfig: HttpServiceBase<Interfaces.IftpsConfig>;
     admin_ftpsConfig: HttpServiceAdminBase<Interfaces.IftpsConfig>;
     /**
+     service d'accès à la collection :application_instance
+     desc: c'est le couple application configuration
+     
+
+     
+    */
+    application_instance: HttpServiceBase<Interfaces.Iapplication_instance>;
+    admin_application_instance: HttpServiceAdminBase<Interfaces.Iapplication_instance>;
+    /**
+     service d'accès à la collection :service
+     desc: identification du service
+     
+     info: vous pouvez voir tous les objets de cette collection y compris les enfants
+     liste des interfaces héritées possibles:
+     
+        Iservice_sso      c'est un sso
+     
+        Iservice_init      service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
+     
+        Iservice_mailtoinfra      service qui permet de configurer l'authentification a partir d'un mail
+     
+        Iservice_goshabaGateway      passerelle pour goshaba
+     
+        Iservice_socketIo      communication temps réelle multi format
+     
+        Iservice_supervision      service_supervision
+     
+        Iservice_configuration      c'est le service de distribution des configurations des services
+     
+        Iservice_nginxConfigurator      service_nginxConfigurator
+     
+        Iservice_push_notification      Service pour gérer les notifications push des applications
+     
+        Iservice_like      service permettant de liker un objet de la base
+     
+        Iservice_dumy_fso      simple remote file system a n utiliser que pour des test
+     
+        Iservice_sendGrid      permet d'envoyer des mail via l'api send grid v3
+     
+        Iservice_trainingCoursesService      service de gestion des parcourts de formation
+     
+        Iservice_orchestrator      service d'orchestration
+     
+        Iservice_socket_io      service messagerie de soket.io
+     
+        Iservice_tutor      service de gestion des message tutoré
+     
+        Iservice_init_js      service qui retourne un init.js
+     
+        Iservice_infra_admin      administration de l'infra
+     
+        Imailtoinfra2      retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
+     
+        Iservice_planned_tasks      Service de Taches planifiées
+     
+        IService_scorm_gateway      service passerelle d'un package scorm vers l'interne
+     
+        Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
+     
+        Iservice_client_ftp      client ftps
+     
+        Iservice_polo_celio      service de tirage au sort de polo
+     
+        Iservice_pdfrip      service de creation de pdf
+     
+        Iservice_signin      service d'enregistrement
+     
+        Iservice_mindsUp      service minds up metier
+     
+        Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
+     
+        Iswagger_conv      convertisseur de swagger
+     
+        Iservice_mongo      configure un service mongo
+     
+        Iservice_celio_qcm_admin      service celio qcm admin
+     
+        Iservice_ferrand      service ferrand
+     
+        Iservice_petit_moulin      service petit moulin
+     
+        Iservice_celio_qcm      service celio qcm
+     
+        Iservice_comptoireOr      service_comptoireOr
+     
+        Iservice_airport      service airport
+     
+        Iservice_celio_back_task      service celio back_task
+     
+        Iservice_celio_fid      service celio fid
+     
+        Idpd_dervice      Proxy pou rles service c'evoi de colis de DPD
+     
+        Iservice_celio_fid_admin      service celio fid admin
+     
+        Iboisdor_service      service métier de boisdor
+     
+        Iservice_licence_token      c'est un service en charge de valider les licences et retourner les configurations des applications web
+     
+        Ir3_service      service métier de QBP
+     
+        Idcbm_service      service métier de DCBM
+     
+        IQBP_service      service métier de QBP
+     
+        Iservice_fso      remote file system
+     
+     
+    */
+    service: HttpServiceBase<Interfaces.Iservice>;
+    admin_service: HttpServiceAdminBase<Interfaces.Iservice>;
+    /**
+    service d'accès a la sous-collection :service_sso
+    desc: c'est un sso
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_sso: HttpServiceBase<Interfaces.Iservice_sso>;
+    admin_service_sso: HttpServiceAdminBase<Interfaces.Iservice_sso>;
+    /**
+    service d'accès a la sous-collection :service_init
+    desc: service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_init: HttpServiceBase<Interfaces.Iservice_init>;
+    admin_service_init: HttpServiceAdminBase<Interfaces.Iservice_init>;
+    /**
+    service d'accès a la sous-collection :service_mailtoinfra
+    desc: service qui permet de configurer l'authentification a partir d'un mail
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_mailtoinfra: HttpServiceBase<Interfaces.Iservice_mailtoinfra>;
+    admin_service_mailtoinfra: HttpServiceAdminBase<Interfaces.Iservice_mailtoinfra>;
+    /**
+    service d'accès a la sous-collection :service_goshabaGateway
+    desc: passerelle pour goshaba
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_goshabaGateway: HttpServiceBase<Interfaces.Iservice_goshabaGateway>;
+    admin_service_goshabaGateway: HttpServiceAdminBase<Interfaces.Iservice_goshabaGateway>;
+    /**
+    service d'accès a la sous-collection :service_socketIo
+    desc: communication temps réelle multi format
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_socketIo: HttpServiceBase<Interfaces.Iservice_socketIo>;
+    admin_service_socketIo: HttpServiceAdminBase<Interfaces.Iservice_socketIo>;
+    /**
+    service d'accès a la sous-collection :service_supervision
+    desc: service_supervision
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_supervision: HttpServiceBase<Interfaces.Iservice_supervision>;
+    admin_service_supervision: HttpServiceAdminBase<Interfaces.Iservice_supervision>;
+    /**
+    service d'accès a la sous-collection :service_configuration
+    desc: c'est le service de distribution des configurations des services
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_configuration: HttpServiceBase<Interfaces.Iservice_configuration>;
+    admin_service_configuration: HttpServiceAdminBase<Interfaces.Iservice_configuration>;
+    /**
+    service d'accès a la sous-collection :service_nginxConfigurator
+    desc: service_nginxConfigurator
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_nginxConfigurator: HttpServiceBase<Interfaces.Iservice_nginxConfigurator>;
+    admin_service_nginxConfigurator: HttpServiceAdminBase<Interfaces.Iservice_nginxConfigurator>;
+    /**
+    service d'accès a la sous-collection :service_push_notification
+    desc: Service pour gérer les notifications push des applications
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_push_notification: HttpServiceBase<Interfaces.Iservice_push_notification>;
+    admin_service_push_notification: HttpServiceAdminBase<Interfaces.Iservice_push_notification>;
+    /**
+    service d'accès a la sous-collection :service_like
+    desc: service permettant de liker un objet de la base
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_like: HttpServiceBase<Interfaces.Iservice_like>;
+    admin_service_like: HttpServiceAdminBase<Interfaces.Iservice_like>;
+    /**
+    service d'accès a la sous-collection :service_dumy_fso
+    desc: simple remote file system a n utiliser que pour des test
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_dumy_fso: HttpServiceBase<Interfaces.Iservice_dumy_fso>;
+    admin_service_dumy_fso: HttpServiceAdminBase<Interfaces.Iservice_dumy_fso>;
+    /**
+    service d'accès a la sous-collection :service_sendGrid
+    desc: permet d'envoyer des mail via l'api send grid v3
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_sendGrid: HttpServiceBase<Interfaces.Iservice_sendGrid>;
+    admin_service_sendGrid: HttpServiceAdminBase<Interfaces.Iservice_sendGrid>;
+    /**
+    service d'accès a la sous-collection :service_trainingCoursesService
+    desc: service de gestion des parcourts de formation
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_trainingCoursesService: HttpServiceBase<Interfaces.Iservice_trainingCoursesService>;
+    admin_service_trainingCoursesService: HttpServiceAdminBase<Interfaces.Iservice_trainingCoursesService>;
+    /**
+    service d'accès a la sous-collection :service_orchestrator
+    desc: service d'orchestration
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_orchestrator: HttpServiceBase<Interfaces.Iservice_orchestrator>;
+    admin_service_orchestrator: HttpServiceAdminBase<Interfaces.Iservice_orchestrator>;
+    /**
+    service d'accès a la sous-collection :service_socket_io
+    desc: service messagerie de soket.io
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_socket_io: HttpServiceBase<Interfaces.Iservice_socket_io>;
+    admin_service_socket_io: HttpServiceAdminBase<Interfaces.Iservice_socket_io>;
+    /**
+    service d'accès a la sous-collection :service_tutor
+    desc: service de gestion des message tutoré
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_tutor: HttpServiceBase<Interfaces.Iservice_tutor>;
+    admin_service_tutor: HttpServiceAdminBase<Interfaces.Iservice_tutor>;
+    /**
+    service d'accès a la sous-collection :service_init_js
+    desc: service qui retourne un init.js
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_init_js: HttpServiceBase<Interfaces.Iservice_init_js>;
+    admin_service_init_js: HttpServiceAdminBase<Interfaces.Iservice_init_js>;
+    /**
+    service d'accès a la sous-collection :service_infra_admin
+    desc: administration de l'infra
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_infra_admin: HttpServiceBase<Interfaces.Iservice_infra_admin>;
+    admin_service_infra_admin: HttpServiceAdminBase<Interfaces.Iservice_infra_admin>;
+    /**
+    service d'accès a la sous-collection :mailtoinfra2
+    desc: retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    mailtoinfra2: HttpServiceBase<Interfaces.Imailtoinfra2>;
+    admin_mailtoinfra2: HttpServiceAdminBase<Interfaces.Imailtoinfra2>;
+    /**
+    service d'accès a la sous-collection :service_planned_tasks
+    desc: Service de Taches planifiées
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_planned_tasks: HttpServiceBase<Interfaces.Iservice_planned_tasks>;
+    admin_service_planned_tasks: HttpServiceAdminBase<Interfaces.Iservice_planned_tasks>;
+    /**
+    service d'accès a la sous-collection :Service_scorm_gateway
+    desc: service passerelle d'un package scorm vers l'interne
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    Service_scorm_gateway: HttpServiceBase<Interfaces.IService_scorm_gateway>;
+    admin_Service_scorm_gateway: HttpServiceAdminBase<Interfaces.IService_scorm_gateway>;
+    /**
+    service d'accès a la sous-collection :service_nginxMultiConfigurator
+    desc: configuration d'un service nginx multi configuration
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_nginxMultiConfigurator: HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator>;
+    admin_service_nginxMultiConfigurator: HttpServiceAdminBase<Interfaces.Iservice_nginxMultiConfigurator>;
+    /**
+    service d'accès a la sous-collection :service_client_ftp
+    desc: client ftps
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_client_ftp: HttpServiceBase<Interfaces.Iservice_client_ftp>;
+    admin_service_client_ftp: HttpServiceAdminBase<Interfaces.Iservice_client_ftp>;
+    /**
+    service d'accès a la sous-collection :service_polo_celio
+    desc: service de tirage au sort de polo
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_polo_celio: HttpServiceBase<Interfaces.Iservice_polo_celio>;
+    admin_service_polo_celio: HttpServiceAdminBase<Interfaces.Iservice_polo_celio>;
+    /**
+    service d'accès a la sous-collection :service_pdfrip
+    desc: service de creation de pdf
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_pdfrip: HttpServiceBase<Interfaces.Iservice_pdfrip>;
+    admin_service_pdfrip: HttpServiceAdminBase<Interfaces.Iservice_pdfrip>;
+    /**
+    service d'accès a la sous-collection :service_signin
+    desc: service d'enregistrement
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_signin: HttpServiceBase<Interfaces.Iservice_signin>;
+    admin_service_signin: HttpServiceAdminBase<Interfaces.Iservice_signin>;
+    /**
+    service d'accès a la sous-collection :service_mindsUp
+    desc: service minds up metier
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_mindsUp: HttpServiceBase<Interfaces.Iservice_mindsUp>;
+    admin_service_mindsUp: HttpServiceAdminBase<Interfaces.Iservice_mindsUp>;
+    /**
+    service d'accès a la sous-collection :service_webAppConf
+    desc: permet de générer les fichier de conf des app (css, js, ...)
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_webAppConf: HttpServiceBase<Interfaces.Iservice_webAppConf>;
+    admin_service_webAppConf: HttpServiceAdminBase<Interfaces.Iservice_webAppConf>;
+    /**
+    service d'accès a la sous-collection :swagger_conv
+    desc: convertisseur de swagger
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    swagger_conv: HttpServiceBase<Interfaces.Iswagger_conv>;
+    admin_swagger_conv: HttpServiceAdminBase<Interfaces.Iswagger_conv>;
+    /**
+    service d'accès a la sous-collection :service_mongo
+    desc: configure un service mongo
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_mongo: HttpServiceBase<Interfaces.Iservice_mongo>;
+    admin_service_mongo: HttpServiceAdminBase<Interfaces.Iservice_mongo>;
+    /**
+    service d'accès a la sous-collection :service_celio_qcm_admin
+    desc: service celio qcm admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_celio_qcm_admin: HttpServiceBase<Interfaces.Iservice_celio_qcm_admin>;
+    admin_service_celio_qcm_admin: HttpServiceAdminBase<Interfaces.Iservice_celio_qcm_admin>;
+    /**
+    service d'accès a la sous-collection :service_ferrand
+    desc: service ferrand
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_ferrand: HttpServiceBase<Interfaces.Iservice_ferrand>;
+    admin_service_ferrand: HttpServiceAdminBase<Interfaces.Iservice_ferrand>;
+    /**
+    service d'accès a la sous-collection :service_petit_moulin
+    desc: service petit moulin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_petit_moulin: HttpServiceBase<Interfaces.Iservice_petit_moulin>;
+    admin_service_petit_moulin: HttpServiceAdminBase<Interfaces.Iservice_petit_moulin>;
+    /**
+    service d'accès a la sous-collection :service_celio_qcm
+    desc: service celio qcm
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_celio_qcm: HttpServiceBase<Interfaces.Iservice_celio_qcm>;
+    admin_service_celio_qcm: HttpServiceAdminBase<Interfaces.Iservice_celio_qcm>;
+    /**
+    service d'accès a la sous-collection :service_comptoireOr
+    desc: service_comptoireOr
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_comptoireOr: HttpServiceBase<Interfaces.Iservice_comptoireOr>;
+    admin_service_comptoireOr: HttpServiceAdminBase<Interfaces.Iservice_comptoireOr>;
+    /**
+    service d'accès a la sous-collection :service_airport
+    desc: service airport
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_airport: HttpServiceBase<Interfaces.Iservice_airport>;
+    admin_service_airport: HttpServiceAdminBase<Interfaces.Iservice_airport>;
+    /**
+    service d'accès a la sous-collection :service_celio_back_task
+    desc: service celio back_task
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_celio_back_task: HttpServiceBase<Interfaces.Iservice_celio_back_task>;
+    admin_service_celio_back_task: HttpServiceAdminBase<Interfaces.Iservice_celio_back_task>;
+    /**
+    service d'accès a la sous-collection :service_celio_fid
+    desc: service celio fid
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_celio_fid: HttpServiceBase<Interfaces.Iservice_celio_fid>;
+    admin_service_celio_fid: HttpServiceAdminBase<Interfaces.Iservice_celio_fid>;
+    /**
+    service d'accès a la sous-collection :dpd_dervice
+    desc: Proxy pou rles service c'evoi de colis de DPD
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    dpd_dervice: HttpServiceBase<Interfaces.Idpd_dervice>;
+    admin_dpd_dervice: HttpServiceAdminBase<Interfaces.Idpd_dervice>;
+    /**
+    service d'accès a la sous-collection :service_celio_fid_admin
+    desc: service celio fid admin
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_celio_fid_admin: HttpServiceBase<Interfaces.Iservice_celio_fid_admin>;
+    admin_service_celio_fid_admin: HttpServiceAdminBase<Interfaces.Iservice_celio_fid_admin>;
+    /**
+    service d'accès a la sous-collection :boisdor_service
+    desc: service métier de boisdor
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    boisdor_service: HttpServiceBase<Interfaces.Iboisdor_service>;
+    admin_boisdor_service: HttpServiceAdminBase<Interfaces.Iboisdor_service>;
+    /**
+    service d'accès a la sous-collection :service_licence_token
+    desc: c'est un service en charge de valider les licences et retourner les configurations des applications web
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_licence_token: HttpServiceBase<Interfaces.Iservice_licence_token>;
+    admin_service_licence_token: HttpServiceAdminBase<Interfaces.Iservice_licence_token>;
+    /**
+    service d'accès a la sous-collection :r3_service
+    desc: service métier de QBP
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    r3_service: HttpServiceBase<Interfaces.Ir3_service>;
+    admin_r3_service: HttpServiceAdminBase<Interfaces.Ir3_service>;
+    /**
+    service d'accès a la sous-collection :dcbm_service
+    desc: service métier de DCBM
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    dcbm_service: HttpServiceBase<Interfaces.Idcbm_service>;
+    admin_dcbm_service: HttpServiceAdminBase<Interfaces.Idcbm_service>;
+    /**
+    service d'accès a la sous-collection :QBP_service
+    desc: service métier de QBP
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    QBP_service: HttpServiceBase<Interfaces.IQBP_service>;
+    admin_QBP_service: HttpServiceAdminBase<Interfaces.IQBP_service>;
+    /**
+    service d'accès a la sous-collection :service_fso
+    desc: remote file system
+    info: vous ne pouvez voir que ce type d'objet
+   */
+    service_fso: HttpServiceBase<Interfaces.Iservice_fso>;
+    admin_service_fso: HttpServiceAdminBase<Interfaces.Iservice_fso>;
+    /**
+     service d'accès à la collection :bois_dor_mailer
+     desc: liste de tous les templates de mail pour bois d'or
+     
+
+     
+    */
+    bois_dor_mailer: HttpServiceBase<Interfaces.Ibois_dor_mailer>;
+    admin_bois_dor_mailer: HttpServiceAdminBase<Interfaces.Ibois_dor_mailer>;
+    /**
      service d'accès à la collection :application_configuration
      desc: c'est la configuration d'une application
      
@@ -260,9 +703,13 @@ export declare class api_collection_plateform {
      
         Iapplication_configuration_r3_admin_seller      config r3 admin
      
-        Iapplication_configuration_r3_admin      config r3 admin
-     
         Iapplication_configuration_dcbm_static      dcbm static
+     
+        Iapplication_configuration_dcbm      config DCBM
+     
+        Iapplication_configuration_dcbm_admin      configiration de dcbm admin
+     
+        Iapplication_configuration_r3_admin      config r3 admin
      
      
     */
@@ -472,13 +919,6 @@ export declare class api_collection_plateform {
     application_configuration_r3_admin_seller: HttpServiceBase<Interfaces.Iapplication_configuration_r3_admin_seller>;
     admin_application_configuration_r3_admin_seller: HttpServiceAdminBase<Interfaces.Iapplication_configuration_r3_admin_seller>;
     /**
-    service d'accès a la sous-collection :application_configuration_r3_admin
-    desc: config r3 admin
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    application_configuration_r3_admin: HttpServiceBase<Interfaces.Iapplication_configuration_r3_admin>;
-    admin_application_configuration_r3_admin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_r3_admin>;
-    /**
     service d'accès a la sous-collection :application_configuration_dcbm_static
     desc: dcbm static
     info: vous ne pouvez voir que ce type d'objet
@@ -486,448 +926,26 @@ export declare class api_collection_plateform {
     application_configuration_dcbm_static: HttpServiceBase<Interfaces.Iapplication_configuration_dcbm_static>;
     admin_application_configuration_dcbm_static: HttpServiceAdminBase<Interfaces.Iapplication_configuration_dcbm_static>;
     /**
-     service d'accès à la collection :application_instance
-     desc: c'est le couple application configuration
-     
-
-     
-    */
-    application_instance: HttpServiceBase<Interfaces.Iapplication_instance>;
-    admin_application_instance: HttpServiceAdminBase<Interfaces.Iapplication_instance>;
-    /**
-     service d'accès à la collection :service
-     desc: identification du service
-     
-     info: vous pouvez voir tous les objets de cette collection y compris les enfants
-     liste des interfaces héritées possibles:
-     
-        Iservice_sso      c'est un sso
-     
-        Iservice_init      service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
-     
-        Iservice_mailtoinfra      service qui permet de configurer l'authentification a partir d'un mail
-     
-        Iservice_licence_token      c'est un service en charge de valider les licences et retourner les configurations des applications web
-     
-        Iservice_goshabaGateway      passerelle pour goshaba
-     
-        Iservice_socketIo      communication temps réelle multi format
-     
-        Iservice_supervision      service_supervision
-     
-        Iservice_configuration      c'est le service de distribution des configurations des services
-     
-        Iservice_nginxConfigurator      service_nginxConfigurator
-     
-        Iservice_push_notification      Service pour gérer les notifications push des applications
-     
-        Iservice_like      service permettant de liker un objet de la base
-     
-        Iservice_dumy_fso      simple remote file system a n utiliser que pour des test
-     
-        Iservice_sendGrid      permet d'envoyer des mail via l'api send grid v3
-     
-        Iservice_trainingCoursesService      service de gestion des parcourts de formation
-     
-        Iservice_orchestrator      service d'orchestration
-     
-        Iservice_socket_io      service messagerie de soket.io
-     
-        Iservice_tutor      service de gestion des message tutoré
-     
-        Iservice_init_js      service qui retourne un init.js
-     
-        Iservice_infra_admin      administration de l'infra
-     
-        Imailtoinfra2      retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
-     
-        Iservice_planned_tasks      Service de Taches planifiées
-     
-        IService_scorm_gateway      service passerelle d'un package scorm vers l'interne
-     
-        Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
-     
-        Iservice_client_ftp      client ftps
-     
-        Iservice_polo_celio      service de tirage au sort de polo
-     
-        Iservice_fso      remote file system
-     
-        Iservice_pdfrip      service de creation de pdf
-     
-        Iservice_signin      service d'enregistrement
-     
-        Iservice_mindsUp      service minds up metier
-     
-        Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
-     
-        Iswagger_conv      convertisseur de swagger
-     
-        Iservice_mongo      configure un service mongo
-     
-        Iservice_celio_qcm_admin      service celio qcm admin
-     
-        Iservice_ferrand      service ferrand
-     
-        Iservice_petit_moulin      service petit moulin
-     
-        Iservice_celio_qcm      service celio qcm
-     
-        Iservice_comptoireOr      service_comptoireOr
-     
-        Iservice_airport      service airport
-     
-        Iservice_celio_back_task      service celio back_task
-     
-        Iservice_celio_fid      service celio fid
-     
-        Idpd_dervice      Proxy pou rles service c'evoi de colis de DPD
-     
-        Iservice_celio_fid_admin      service celio fid admin
-     
-        Iboisdor_service      service métier de boisdor
-     
-        IQBP_service      service métier de QBP
-     
-        Iservice_qcbm      service_qcbm
-     
-        Ir3_service      service métier de QBP
-     
-     
-    */
-    service: HttpServiceBase<Interfaces.Iservice>;
-    admin_service: HttpServiceAdminBase<Interfaces.Iservice>;
-    /**
-    service d'accès a la sous-collection :service_sso
-    desc: c'est un sso
+    service d'accès a la sous-collection :application_configuration_dcbm
+    desc: config DCBM
     info: vous ne pouvez voir que ce type d'objet
    */
-    service_sso: HttpServiceBase<Interfaces.Iservice_sso>;
-    admin_service_sso: HttpServiceAdminBase<Interfaces.Iservice_sso>;
+    application_configuration_dcbm: HttpServiceBase<Interfaces.Iapplication_configuration_dcbm>;
+    admin_application_configuration_dcbm: HttpServiceAdminBase<Interfaces.Iapplication_configuration_dcbm>;
     /**
-    service d'accès a la sous-collection :service_init
-    desc: service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
+    service d'accès a la sous-collection :application_configuration_dcbm_admin
+    desc: configiration de dcbm admin
     info: vous ne pouvez voir que ce type d'objet
    */
-    service_init: HttpServiceBase<Interfaces.Iservice_init>;
-    admin_service_init: HttpServiceAdminBase<Interfaces.Iservice_init>;
+    application_configuration_dcbm_admin: HttpServiceBase<Interfaces.Iapplication_configuration_dcbm_admin>;
+    admin_application_configuration_dcbm_admin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_dcbm_admin>;
     /**
-    service d'accès a la sous-collection :service_mailtoinfra
-    desc: service qui permet de configurer l'authentification a partir d'un mail
+    service d'accès a la sous-collection :application_configuration_r3_admin
+    desc: config r3 admin
     info: vous ne pouvez voir que ce type d'objet
    */
-    service_mailtoinfra: HttpServiceBase<Interfaces.Iservice_mailtoinfra>;
-    admin_service_mailtoinfra: HttpServiceAdminBase<Interfaces.Iservice_mailtoinfra>;
-    /**
-    service d'accès a la sous-collection :service_licence_token
-    desc: c'est un service en charge de valider les licences et retourner les configurations des applications web
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_licence_token: HttpServiceBase<Interfaces.Iservice_licence_token>;
-    admin_service_licence_token: HttpServiceAdminBase<Interfaces.Iservice_licence_token>;
-    /**
-    service d'accès a la sous-collection :service_goshabaGateway
-    desc: passerelle pour goshaba
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_goshabaGateway: HttpServiceBase<Interfaces.Iservice_goshabaGateway>;
-    admin_service_goshabaGateway: HttpServiceAdminBase<Interfaces.Iservice_goshabaGateway>;
-    /**
-    service d'accès a la sous-collection :service_socketIo
-    desc: communication temps réelle multi format
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_socketIo: HttpServiceBase<Interfaces.Iservice_socketIo>;
-    admin_service_socketIo: HttpServiceAdminBase<Interfaces.Iservice_socketIo>;
-    /**
-    service d'accès a la sous-collection :service_supervision
-    desc: service_supervision
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_supervision: HttpServiceBase<Interfaces.Iservice_supervision>;
-    admin_service_supervision: HttpServiceAdminBase<Interfaces.Iservice_supervision>;
-    /**
-    service d'accès a la sous-collection :service_configuration
-    desc: c'est le service de distribution des configurations des services
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_configuration: HttpServiceBase<Interfaces.Iservice_configuration>;
-    admin_service_configuration: HttpServiceAdminBase<Interfaces.Iservice_configuration>;
-    /**
-    service d'accès a la sous-collection :service_nginxConfigurator
-    desc: service_nginxConfigurator
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_nginxConfigurator: HttpServiceBase<Interfaces.Iservice_nginxConfigurator>;
-    admin_service_nginxConfigurator: HttpServiceAdminBase<Interfaces.Iservice_nginxConfigurator>;
-    /**
-    service d'accès a la sous-collection :service_push_notification
-    desc: Service pour gérer les notifications push des applications
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_push_notification: HttpServiceBase<Interfaces.Iservice_push_notification>;
-    admin_service_push_notification: HttpServiceAdminBase<Interfaces.Iservice_push_notification>;
-    /**
-    service d'accès a la sous-collection :service_like
-    desc: service permettant de liker un objet de la base
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_like: HttpServiceBase<Interfaces.Iservice_like>;
-    admin_service_like: HttpServiceAdminBase<Interfaces.Iservice_like>;
-    /**
-    service d'accès a la sous-collection :service_dumy_fso
-    desc: simple remote file system a n utiliser que pour des test
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_dumy_fso: HttpServiceBase<Interfaces.Iservice_dumy_fso>;
-    admin_service_dumy_fso: HttpServiceAdminBase<Interfaces.Iservice_dumy_fso>;
-    /**
-    service d'accès a la sous-collection :service_sendGrid
-    desc: permet d'envoyer des mail via l'api send grid v3
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_sendGrid: HttpServiceBase<Interfaces.Iservice_sendGrid>;
-    admin_service_sendGrid: HttpServiceAdminBase<Interfaces.Iservice_sendGrid>;
-    /**
-    service d'accès a la sous-collection :service_trainingCoursesService
-    desc: service de gestion des parcourts de formation
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_trainingCoursesService: HttpServiceBase<Interfaces.Iservice_trainingCoursesService>;
-    admin_service_trainingCoursesService: HttpServiceAdminBase<Interfaces.Iservice_trainingCoursesService>;
-    /**
-    service d'accès a la sous-collection :service_orchestrator
-    desc: service d'orchestration
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_orchestrator: HttpServiceBase<Interfaces.Iservice_orchestrator>;
-    admin_service_orchestrator: HttpServiceAdminBase<Interfaces.Iservice_orchestrator>;
-    /**
-    service d'accès a la sous-collection :service_socket_io
-    desc: service messagerie de soket.io
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_socket_io: HttpServiceBase<Interfaces.Iservice_socket_io>;
-    admin_service_socket_io: HttpServiceAdminBase<Interfaces.Iservice_socket_io>;
-    /**
-    service d'accès a la sous-collection :service_tutor
-    desc: service de gestion des message tutoré
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_tutor: HttpServiceBase<Interfaces.Iservice_tutor>;
-    admin_service_tutor: HttpServiceAdminBase<Interfaces.Iservice_tutor>;
-    /**
-    service d'accès a la sous-collection :service_init_js
-    desc: service qui retourne un init.js
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_init_js: HttpServiceBase<Interfaces.Iservice_init_js>;
-    admin_service_init_js: HttpServiceAdminBase<Interfaces.Iservice_init_js>;
-    /**
-    service d'accès a la sous-collection :service_infra_admin
-    desc: administration de l'infra
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_infra_admin: HttpServiceBase<Interfaces.Iservice_infra_admin>;
-    admin_service_infra_admin: HttpServiceAdminBase<Interfaces.Iservice_infra_admin>;
-    /**
-    service d'accès a la sous-collection :mailtoinfra2
-    desc: retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    mailtoinfra2: HttpServiceBase<Interfaces.Imailtoinfra2>;
-    admin_mailtoinfra2: HttpServiceAdminBase<Interfaces.Imailtoinfra2>;
-    /**
-    service d'accès a la sous-collection :service_planned_tasks
-    desc: Service de Taches planifiées
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_planned_tasks: HttpServiceBase<Interfaces.Iservice_planned_tasks>;
-    admin_service_planned_tasks: HttpServiceAdminBase<Interfaces.Iservice_planned_tasks>;
-    /**
-    service d'accès a la sous-collection :Service_scorm_gateway
-    desc: service passerelle d'un package scorm vers l'interne
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    Service_scorm_gateway: HttpServiceBase<Interfaces.IService_scorm_gateway>;
-    admin_Service_scorm_gateway: HttpServiceAdminBase<Interfaces.IService_scorm_gateway>;
-    /**
-    service d'accès a la sous-collection :service_nginxMultiConfigurator
-    desc: configuration d'un service nginx multi configuration
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_nginxMultiConfigurator: HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator>;
-    admin_service_nginxMultiConfigurator: HttpServiceAdminBase<Interfaces.Iservice_nginxMultiConfigurator>;
-    /**
-    service d'accès a la sous-collection :service_client_ftp
-    desc: client ftps
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_client_ftp: HttpServiceBase<Interfaces.Iservice_client_ftp>;
-    admin_service_client_ftp: HttpServiceAdminBase<Interfaces.Iservice_client_ftp>;
-    /**
-    service d'accès a la sous-collection :service_polo_celio
-    desc: service de tirage au sort de polo
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_polo_celio: HttpServiceBase<Interfaces.Iservice_polo_celio>;
-    admin_service_polo_celio: HttpServiceAdminBase<Interfaces.Iservice_polo_celio>;
-    /**
-    service d'accès a la sous-collection :service_fso
-    desc: remote file system
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_fso: HttpServiceBase<Interfaces.Iservice_fso>;
-    admin_service_fso: HttpServiceAdminBase<Interfaces.Iservice_fso>;
-    /**
-    service d'accès a la sous-collection :service_pdfrip
-    desc: service de creation de pdf
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_pdfrip: HttpServiceBase<Interfaces.Iservice_pdfrip>;
-    admin_service_pdfrip: HttpServiceAdminBase<Interfaces.Iservice_pdfrip>;
-    /**
-    service d'accès a la sous-collection :service_signin
-    desc: service d'enregistrement
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_signin: HttpServiceBase<Interfaces.Iservice_signin>;
-    admin_service_signin: HttpServiceAdminBase<Interfaces.Iservice_signin>;
-    /**
-    service d'accès a la sous-collection :service_mindsUp
-    desc: service minds up metier
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_mindsUp: HttpServiceBase<Interfaces.Iservice_mindsUp>;
-    admin_service_mindsUp: HttpServiceAdminBase<Interfaces.Iservice_mindsUp>;
-    /**
-    service d'accès a la sous-collection :service_webAppConf
-    desc: permet de générer les fichier de conf des app (css, js, ...)
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_webAppConf: HttpServiceBase<Interfaces.Iservice_webAppConf>;
-    admin_service_webAppConf: HttpServiceAdminBase<Interfaces.Iservice_webAppConf>;
-    /**
-    service d'accès a la sous-collection :swagger_conv
-    desc: convertisseur de swagger
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    swagger_conv: HttpServiceBase<Interfaces.Iswagger_conv>;
-    admin_swagger_conv: HttpServiceAdminBase<Interfaces.Iswagger_conv>;
-    /**
-    service d'accès a la sous-collection :service_mongo
-    desc: configure un service mongo
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_mongo: HttpServiceBase<Interfaces.Iservice_mongo>;
-    admin_service_mongo: HttpServiceAdminBase<Interfaces.Iservice_mongo>;
-    /**
-    service d'accès a la sous-collection :service_celio_qcm_admin
-    desc: service celio qcm admin
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_celio_qcm_admin: HttpServiceBase<Interfaces.Iservice_celio_qcm_admin>;
-    admin_service_celio_qcm_admin: HttpServiceAdminBase<Interfaces.Iservice_celio_qcm_admin>;
-    /**
-    service d'accès a la sous-collection :service_ferrand
-    desc: service ferrand
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_ferrand: HttpServiceBase<Interfaces.Iservice_ferrand>;
-    admin_service_ferrand: HttpServiceAdminBase<Interfaces.Iservice_ferrand>;
-    /**
-    service d'accès a la sous-collection :service_petit_moulin
-    desc: service petit moulin
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_petit_moulin: HttpServiceBase<Interfaces.Iservice_petit_moulin>;
-    admin_service_petit_moulin: HttpServiceAdminBase<Interfaces.Iservice_petit_moulin>;
-    /**
-    service d'accès a la sous-collection :service_celio_qcm
-    desc: service celio qcm
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_celio_qcm: HttpServiceBase<Interfaces.Iservice_celio_qcm>;
-    admin_service_celio_qcm: HttpServiceAdminBase<Interfaces.Iservice_celio_qcm>;
-    /**
-    service d'accès a la sous-collection :service_comptoireOr
-    desc: service_comptoireOr
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_comptoireOr: HttpServiceBase<Interfaces.Iservice_comptoireOr>;
-    admin_service_comptoireOr: HttpServiceAdminBase<Interfaces.Iservice_comptoireOr>;
-    /**
-    service d'accès a la sous-collection :service_airport
-    desc: service airport
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_airport: HttpServiceBase<Interfaces.Iservice_airport>;
-    admin_service_airport: HttpServiceAdminBase<Interfaces.Iservice_airport>;
-    /**
-    service d'accès a la sous-collection :service_celio_back_task
-    desc: service celio back_task
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_celio_back_task: HttpServiceBase<Interfaces.Iservice_celio_back_task>;
-    admin_service_celio_back_task: HttpServiceAdminBase<Interfaces.Iservice_celio_back_task>;
-    /**
-    service d'accès a la sous-collection :service_celio_fid
-    desc: service celio fid
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_celio_fid: HttpServiceBase<Interfaces.Iservice_celio_fid>;
-    admin_service_celio_fid: HttpServiceAdminBase<Interfaces.Iservice_celio_fid>;
-    /**
-    service d'accès a la sous-collection :dpd_dervice
-    desc: Proxy pou rles service c'evoi de colis de DPD
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    dpd_dervice: HttpServiceBase<Interfaces.Idpd_dervice>;
-    admin_dpd_dervice: HttpServiceAdminBase<Interfaces.Idpd_dervice>;
-    /**
-    service d'accès a la sous-collection :service_celio_fid_admin
-    desc: service celio fid admin
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_celio_fid_admin: HttpServiceBase<Interfaces.Iservice_celio_fid_admin>;
-    admin_service_celio_fid_admin: HttpServiceAdminBase<Interfaces.Iservice_celio_fid_admin>;
-    /**
-    service d'accès a la sous-collection :boisdor_service
-    desc: service métier de boisdor
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    boisdor_service: HttpServiceBase<Interfaces.Iboisdor_service>;
-    admin_boisdor_service: HttpServiceAdminBase<Interfaces.Iboisdor_service>;
-    /**
-    service d'accès a la sous-collection :QBP_service
-    desc: service métier de QBP
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    QBP_service: HttpServiceBase<Interfaces.IQBP_service>;
-    admin_QBP_service: HttpServiceAdminBase<Interfaces.IQBP_service>;
-    /**
-    service d'accès a la sous-collection :service_qcbm
-    desc: service_qcbm
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    service_qcbm: HttpServiceBase<Interfaces.Iservice_qcbm>;
-    admin_service_qcbm: HttpServiceAdminBase<Interfaces.Iservice_qcbm>;
-    /**
-    service d'accès a la sous-collection :r3_service
-    desc: service métier de QBP
-    info: vous ne pouvez voir que ce type d'objet
-   */
-    r3_service: HttpServiceBase<Interfaces.Ir3_service>;
-    admin_r3_service: HttpServiceAdminBase<Interfaces.Ir3_service>;
-    /**
-     service d'accès à la collection :bois_dor_mailer
-     desc: liste de tous les templates de mail pour bois d'or
-     
-
-     
-    */
-    bois_dor_mailer: HttpServiceBase<Interfaces.Ibois_dor_mailer>;
-    admin_bois_dor_mailer: HttpServiceAdminBase<Interfaces.Ibois_dor_mailer>;
+    application_configuration_r3_admin: HttpServiceBase<Interfaces.Iapplication_configuration_r3_admin>;
+    admin_application_configuration_r3_admin: HttpServiceAdminBase<Interfaces.Iapplication_configuration_r3_admin>;
 }
 /**
     accès à la vue :Client

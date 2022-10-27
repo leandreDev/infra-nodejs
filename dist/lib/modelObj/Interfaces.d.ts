@@ -1028,36 +1028,6 @@ description licence store dont les applications sont le catalogue du client
 export interface IlicenceStore_global extends IlicenceStore {
 }
 /**
-interface de la class service_licence_token
-description c'est un service en charge de valider les licences et retourner les configurations des applications web
-*/
-export interface Iservice_licence_token extends Iservice {
-    /**
-     *l'url du la base hébergeant les licences
-     */
-    "licenceUrl"?: string;
-    /**
-     *l'url de la base contenant les instances d'application
-     */
-    "application_instanceUrl"?: string;
-    /**
-     *durée du token d’accès aux services
-     */
-    "tockenDuration"?: number;
-    /**
-     *l'url de la configuration du serveur sso
-     */
-    "sso_well-known"?: string;
-    /**
-     *liste des certificats
-     */
-    "certificates"?: string[];
-    /**
-     *url de la collection endClient
-     */
-    "end_clientUrl"?: string;
-}
-/**
 interface de la class oidc_account
 description compte de l'utilisateur
 */
@@ -2704,24 +2674,6 @@ export interface Ifield extends IBase {
     "humanName"?: string;
 }
 /**
-interface de la class application_configuration
-description c'est la configuration d'une application
-*/
-export interface Iapplication_configuration extends IBase {
-    /**
-     *le nom de la configuration
-     */
-    "name"?: string;
-    /**
-     *configurations de services
-     */
-    "services"?: string[];
-    /**
-     *nom de l'application a afficher
-     */
-    "appName"?: string;
-}
-/**
 interface de la class service_polo_celio
 description service de tirage au sort de polo
 */
@@ -2742,20 +2694,6 @@ export interface Iservice_polo_celio extends Iservice {
      *stat de tirage du gros lot
      */
     "bigDrawStat"?: number;
-}
-/**
-interface de la class service_fso
-description remote file system
-*/
-export interface Iservice_fso extends Iservice {
-    /**
-     *local file path
-     */
-    "filePath": string;
-    /**
-     *url du service de bd
-     */
-    "bddServiceUrl": string;
 }
 /**
 interface de la class AppConf_minds_up_admin
@@ -4116,16 +4054,6 @@ export interface Imail_sendgrid extends Imail {
     "template_id"?: string;
 }
 /**
-interface de la class QbpFeaturesConfiguration
-description liste de functionalites pouvant etre actives ou desactives
-*/
-export interface IQbpFeaturesConfiguration extends IBase {
-    /**
-     *determine se le payement par virement bancaire est active ou non
-     */
-    "bankWire"?: boolean;
-}
-/**
 interface de la class application_configuration_qbp
 description config qbp
 */
@@ -4230,136 +4158,6 @@ export interface Ibois_dor_mailer extends IBase {
     "boisdor_fr_orderToCustomerDiff"?: string;
 }
 /**
-interface de la class QBP_service
-description service métier de QBP
-*/
-export interface IQBP_service extends Iservice {
-    /**
-     *url de la bdd QBP
-     */
-    "QbpBddUrl"?: string;
-    /**
-     *url de l'api du sso
-     */
-    "ssoApiUrl"?: string;
-    /**
-     *licenceApiUrl
-     */
-    "licenceApiUrl"?: string;
-    /**
-     *sendgridApiUrl
-     */
-    "sendgridApiUrl"?: string;
-    /**
-     *appId
-     */
-    "appId"?: string;
-    /**
-     *end_client
-     */
-    "end_client"?: string;
-    /**
-     *licenceStoreId
-     */
-    "licenceStoreId"?: string;
-    /**
-     *url su service de bdd
-     */
-    "ssoBddUrl"?: string;
-    /**
-     *client_id sso
-     */
-    "client_id"?: string;
-    /**
-     *client_secret du sso
-     */
-    "client_secret"?: string;
-    /**
-     *application instance id of seller
-     */
-    "sellerAppId": string;
-    /**
-     *licenceStore for seller user licence
-     */
-    "sellerLicenceStoreId"?: string;
-    /**
-     *application instance id of the admin
-     */
-    "adminAppId"?: string;
-    /**
-     *licenceStoreId for admin
-     */
-    "adminLicenceStoreId"?: string;
-    /**
-     *url de la bdd d 'infra
-     */
-    "infraBddUrl"?: string;
-    /**
-     *template du sso client
-     */
-    "sellerSso_Client_template"?: string;
-    /**
-     *template du endClient seller
-     */
-    "sellerEndClientTemplate"?: string;
-    /**
-     *template de l application instance du vendeur
-     */
-    "sellerAppInstanceTemplate"?: string;
-    /**
-     *données de configuration de mangopay
-     */
-    "mangoConf"?: IMangoConf;
-    /**
-     *api key pour l'api d assurance
-     */
-    "assuranceApiKey"?: string;
-    /**
-     *Configuration BigBen
-     */
-    "bigBen"?: IBigBenConf;
-    /**
-     *Url du service DPD
-     */
-    "dpdServiceUrl"?: string;
-    /**
-     *connecteur sftp gras savoie oi
-     */
-    "sftpGS"?: IftpConf;
-    /**
-     *Base url pour qbp
-     */
-    "QbpBaseUrl"?: string;
-    /**
-     *Configuration url quelbonplan
-     */
-    "qbpServiceUrl"?: string;
-    /**
-     *suffix de création du domaine de l application du partenaire
-     */
-    "sellerDomainPatern"?: string;
-    /**
-     *Url du service FSO
-     */
-    "fsoServiceUrl": string;
-    /**
-     *Affichage des assurances
-     */
-    "isInsuranceEnable"?: boolean;
-    /**
-     *configuration pour l'envoie de mails
-     */
-    "sendGridConf"?: IQbpMailer;
-    /**
-     *liste de functionalites active ou pas
-     */
-    "featuresConf"?: IQbpFeaturesConfiguration;
-    /**
-     *Configuration pour les taches auto
-     */
-    "automationConf"?: IConfAutomation;
-}
-/**
 interface de la class ConfAutomation
 description Configuration pour les automation des services qbp
 */
@@ -4390,6 +4188,368 @@ export interface Iapplication_configuration_r3_admin_seller extends Iapplication
      *url du service de fichiers (fso)
      */
     "fsoUrl"?: string;
+}
+/**
+interface de la class application_configuration_dcbm_static
+description dcbm static
+*/
+export interface Iapplication_configuration_dcbm_static extends Iapplication_configuration {
+}
+/**
+interface de la class ParnerDeployConf
+description configuration du déploiement de partenaire
+*/
+export interface IParnerDeployConf extends IBase {
+    /**
+     *paterne de creation d'url d admin @name@ remplace le nom du partenaire
+     */
+    "adminUrl"?: string;
+    /**
+     *paterne de création de l 'url du site client d un partenaire @name@ remplace le nom du partenaire
+     */
+    "landingPageUrl"?: string;
+    /**
+     *id du template de l appinstance du client
+     */
+    "appClientTemplateId"?: string;
+    /**
+     *id du template de l app instance de l admin d un client
+     */
+    "appAdminTemplateId"?: string;
+    /**
+     *id du template de endClient pour un partnaire
+     */
+    "endClientTemplateId"?: string;
+    /**
+     *id du template de l'oidc_client pour un partnaire
+     */
+    "oidcTemplateId"?: string;
+}
+/**
+interface de la class R3Mailer
+description configurationpour l'envoie d emails R3
+*/
+export interface IR3Mailer extends IBase {
+    /**
+     *adresse mail affiché lorsque l user recoie le mail
+     */
+    "senderEMail"?: string;
+    /**
+     *nom affiche dans les en_tete du  mail
+     */
+    "senderName"?: string;
+    /**
+     *adresse du site , exemple r3.justeplug.info en dev ou r3.justeplug.fr en prod
+     */
+    "r3BaseUrl"?: string;
+    /**
+     *url de l'api sengGrid pour R3
+     */
+    "r3SendgridApiUrl"?: string;
+    /**
+     *la adresse mail qui recoi le mails de contact
+     */
+    "r3ContactMail"?: string;
+    /**
+     *id du template pour le resset du password
+     */
+    "r3_group_resset_password"?: string;
+    /**
+     *id du template du mail de bienvenue
+     */
+    "r3_group_welcome"?: string;
+    /**
+     *mail de contact
+     */
+    "r3_contact_to_user"?: string;
+    /**
+     *mail pour R3 avec le contenu de un mail de contact
+     */
+    "r3_contact_to_r3"?: string;
+    /**
+     *template de mail pour envoyer les invitaton pour creer son compte dans la page du partner
+     */
+    "R3_prescriptor_invitation"?: string;
+    /**
+     *le client a fini l'analisys et un envoie un mail a R3 et au partner
+     */
+    "R3_analisys_end_to_r3_and_partner"?: string;
+    /**
+     *on signale au client qu eson pdf est pret
+     */
+    "R3_analisys_end_to_user"?: string;
+    /**
+     *on informe a un partenaire que son admin est pret et qu'il peut sy conecter
+     */
+    "R3_partner_admin_created"?: string;
+    /**
+     *mail de bienvenu d un nouvelle admin
+     */
+    "r3_group_welcome_admin_templateId": string;
+}
+/**
+interface de la class service_licence_token
+description c'est un service en charge de valider les licences et retourner les configurations des applications web
+*/
+export interface Iservice_licence_token extends Iservice {
+    /**
+     *l'url du la base hébergeant les licences
+     */
+    "licenceUrl"?: string;
+    /**
+     *l'url de la base contenant les instances d'application
+     */
+    "application_instanceUrl"?: string;
+    /**
+     *durée du token d’accès aux services
+     */
+    "tockenDuration"?: number;
+    /**
+     *l'url de la configuration du serveur sso
+     */
+    "sso_well-known"?: string;
+    /**
+     *liste des certificats
+     */
+    "certificates"?: string[];
+    /**
+     *url de la collection endClient
+     */
+    "end_clientUrl"?: string;
+    /**
+     *url de la bdd de licence de l'infra
+     */
+    "url_bdd"?: string;
+}
+/**
+interface de la class QbpFeaturesConfiguration
+description liste de functionalites pouvant etre actives ou desactives
+*/
+export interface IQbpFeaturesConfiguration extends IBase {
+    /**
+     *determine se le payement par virement bancaire est active ou non
+     */
+    "bankWire"?: boolean;
+    /**
+     *Determine si l option floaPay est activer ou non
+     */
+    "floaPay"?: boolean;
+    /**
+     *Switch entre recherche par model ou productStock
+     */
+    "searchByModel"?: boolean;
+}
+/**
+interface de la class r3_service
+description service métier de QBP
+*/
+export interface Ir3_service extends Iservice {
+    /**
+     *url de la bdd
+     */
+    "bddUrl"?: string;
+    /**
+     *url su service de bdd
+     */
+    "ssoBddUrl"?: string;
+    /**
+     *url de connexion a la bd  infra
+     */
+    "infraBddUrl"?: string;
+    /**
+     *url de l'api du sso
+     */
+    "ssoApiUrl"?: string;
+    /**
+     *licenceApiUrl
+     */
+    "licenceApiUrl"?: string;
+    /**
+     *client_id sso
+     */
+    "client_id"?: string;
+    /**
+     *client_secret pou rle sso
+     */
+    "client_secret"?: string;
+    /**
+     *configuration pour l'envoie de mails
+     */
+    "SendGridConf"?: IR3Mailer;
+    /**
+     *url du rip pdf
+     */
+    "pdfRipUrl": string;
+    /**
+     *url de l application de rendu pdf
+     */
+    "pdfAppUrl": string;
+    /**
+     *url du fso r3
+     */
+    "fsoUrl": string;
+    /**
+     *configuration de la génération des partnaires
+     */
+    "parntaireConfig"?: IParnerDeployConf;
+    /**
+     *domaine autorisé pour la redirection lors des récupération de mot de passe (ex: jusplug.info)
+     */
+    "authorizedDomaine"?: string[];
+    /**
+     *url du site admin
+     */
+    "adminSiteUrl": string;
+}
+/**
+interface de la class application_configuration_dcbm
+description config DCBM
+*/
+export interface Iapplication_configuration_dcbm extends Iapplication_configuration {
+    /**
+     *url de la bdd
+     */
+    "bddUrl"?: string;
+}
+/**
+interface de la class application_configuration
+description c'est la configuration d'une application
+*/
+export interface Iapplication_configuration extends IBase {
+    /**
+     *le nom de la configuration
+     */
+    "name"?: string;
+    /**
+     *configurations de services
+     */
+    "services"?: string[];
+    /**
+     *nom de l'application a afficher
+     */
+    "appName"?: string;
+}
+/**
+interface de la class application_configuration_dcbm_admin
+description configiration de dcbm admin
+*/
+export interface Iapplication_configuration_dcbm_admin extends Iapplication_configuration {
+    /**
+     *url de la bdd
+     */
+    "bddUrl"?: string;
+    /**
+     *uploadUrl url du service de telechargement des images
+     */
+    "uploadUrl"?: string;
+    /**
+     *l"url de l'api
+     */
+    "apiUrl"?: string;
+}
+/**
+interface de la class dcbm_service
+description service métier de DCBM
+*/
+export interface Idcbm_service extends Iservice {
+    /**
+     *url de la bdd
+     */
+    "bddUrl": string;
+    /**
+     *url su service de bdd
+     */
+    "ssoBddUrl": string;
+    /**
+     *url de connexion a la bd  infra
+     */
+    "infraBddUrl": string;
+    /**
+     *url de l'api du sso
+     */
+    "ssoApiUrl": string;
+    /**
+     *licenceApiUrl
+     */
+    "licenceApiUrl": string;
+    /**
+     *client_id sso
+     */
+    "client_id": string;
+    /**
+     *client_secret pou rle sso
+     */
+    "client_secret": string;
+    /**
+     *configuration pour l'envoie de mails
+     */
+    "SendGridConf": IDCBMMailer;
+    /**
+     *url du rip pdf
+     */
+    "pdfRipUrl": string;
+    /**
+     *url de l application de rendu pdf
+     */
+    "pdfAppUrl": string;
+    /**
+     *url du fso DCBM
+     */
+    "fsoUrl": string;
+    /**
+     *domaine autorisé pour la redirection lors des récupération de mot de passe (ex: jusplug.info)
+     */
+    "authorizedDomaine": string[];
+    /**
+     *url du site admin
+     */
+    "adminSiteUrl": string;
+}
+/**
+interface de la class DCBMMailer
+description configuration pour l'envoie d emails DCBM
+*/
+export interface IDCBMMailer extends IBase {
+    /**
+     *adresse mail affiché lorsque l user reçoie le mail
+     */
+    "senderEMail"?: string;
+    /**
+     *nom affiche dans les en_tete du  mail
+     */
+    "senderName"?: string;
+    /**
+     *adresse du site , exemple dcbm.justeplug.info en dev ou dcbm.justplug.fr en prod
+     */
+    "dcbmBaseUrl"?: string;
+    /**
+     *url de l'api sengGrid pour DCBM
+     */
+    "dcbmSendgridApiUrl"?: string;
+    /**
+     *la adresse mail qui reçoi le mails de contact
+     */
+    "dcbmContactMail"?: string;
+    /**
+     *id du template pour le resset du password
+     */
+    "dcbm_group_resset_password"?: string;
+    /**
+     *id du template du mail de bienvenue
+     */
+    "dcbm_group_welcome"?: string;
+    /**
+     *mail de contact
+     */
+    "dcbm_contact_to_user"?: string;
+    /**
+     *mail pour DCBM avec le contenu de un mail de contact
+     */
+    "dcbm_contact_to_dcbm"?: string;
+    /**
+     *mail de bienvenu d un nouvelle admin
+     */
+    "dcbm_group_welcome_admin_templateId": string;
 }
 /**
 interface de la class application_configuration_r3_admin
@@ -4602,124 +4762,32 @@ export interface IQbpMailer extends IBase {
      *Confirmation de livraison chez le vendeur
      */
     "fourteenDaysBackConfirmation"?: string;
+    /**
+     *Mail pour les erreur de workflow sur le process d une commande
+     */
+    "errorOnWorkflowOrder"?: string;
+    /**
+     *Mail contact qbp support pour remboursement bankwire
+     */
+    "qbpRefundBankWire"?: string;
+    /**
+     *Rappelle de virement bancaire pour un client
+     */
+    "qbpBankWireRecall"?: string;
+    /**
+     *mail pour les avis garantie auto
+     */
+    "qbpAvisGarantis"?: string;
 }
 /**
-interface de la class service_qcbm
-description service_qcbm
-*/
-export interface Iservice_qcbm extends Iservice {
-}
-/**
-interface de la class R3Mailer
-description configurationpour l'envoie d emails R3
-*/
-export interface IR3Mailer extends IBase {
-    /**
-     *adresse mail affiché lorsque l user recoie le mail
-     */
-    "senderEMail"?: string;
-    /**
-     *nom affiche dans les en_tete du  mail
-     */
-    "senderName"?: string;
-    /**
-     *adresse du site , exemple r3.justeplug.info en dev ou r3.justeplug.fr en prod
-     */
-    "r3BaseUrl"?: string;
-    /**
-     *url de l'api sengGrid pour R3
-     */
-    "r3SendgridApiUrl"?: string;
-    /**
-     *la adresse mail qui recoi le mails de contact
-     */
-    "r3ContactMail"?: string;
-    /**
-     *id du template pour le resset du password
-     */
-    "r3_group_resset_password"?: string;
-    /**
-     *id du template du mail de bienvenue
-     */
-    "r3_group_welcome"?: string;
-    /**
-     *mail de contact
-     */
-    "r3_contact_to_user"?: string;
-    /**
-     *mail pour R3 avec le contenu de un mail de contact
-     */
-    "r3_contact_to_r3"?: string;
-    /**
-     *template de mail pour envoyer les invitaton pour creer son compte dans la page du partner
-     */
-    "R3_prescriptor_invitation"?: string;
-    /**
-     *le client a fini l'analisys et un envoie un mail a R3 et au partner
-     */
-    "R3_analisys_end_to_r3_and_partner"?: string;
-    /**
-     *on signale au client qu eson pdf est pret
-     */
-    "R3_analisys_end_to_user"?: string;
-    /**
-     *on informe a un partenaire que son admin est pret et qu'il peut sy conecter
-     */
-    "R3_partner_admin_created"?: string;
-}
-/**
-interface de la class application_configuration_dcbm_static
-description dcbm static
-*/
-export interface Iapplication_configuration_dcbm_static extends Iapplication_configuration {
-}
-/**
-interface de la class ParnerDeployConf
-description configuration du déploiement de partenaire
-*/
-export interface IParnerDeployConf extends IBase {
-    /**
-     *paterne de creation d'url d admin @name@ remplace le nom du partenaire
-     */
-    "adminUrl"?: string;
-    /**
-     *paterne de création de l 'url du site client d un partenaire @name@ remplace le nom du partenaire
-     */
-    "landingPageUrl"?: string;
-    /**
-     *id du template de l appinstance du client
-     */
-    "appClientTemplateId"?: string;
-    /**
-     *id du template de l app instance de l admin d un client
-     */
-    "appAdminTemplateId"?: string;
-    /**
-     *id du template de endClient pour un partnaire
-     */
-    "endClientTemplateId"?: string;
-    /**
-     *id du template de l'oidc_client pour un partnaire
-     */
-    "oidcTemplateId"?: string;
-}
-/**
-interface de la class r3_service
+interface de la class QBP_service
 description service métier de QBP
 */
-export interface Ir3_service extends Iservice {
+export interface IQBP_service extends Iservice {
     /**
-     *url de la bdd
+     *url de la bdd QBP
      */
-    "bddUrl"?: string;
-    /**
-     *url su service de bdd
-     */
-    "ssoBddUrl"?: string;
-    /**
-     *url de connexion a la bd  infra
-     */
-    "infraBddUrl"?: string;
+    "QbpBddUrl"?: string;
     /**
      *url de l'api du sso
      */
@@ -4729,31 +4797,157 @@ export interface Ir3_service extends Iservice {
      */
     "licenceApiUrl"?: string;
     /**
+     *sendgridApiUrl
+     */
+    "sendgridApiUrl"?: string;
+    /**
+     *appId
+     */
+    "appId"?: string;
+    /**
+     *end_client
+     */
+    "end_client"?: string;
+    /**
+     *licenceStoreId
+     */
+    "licenceStoreId"?: string;
+    /**
+     *url su service de bdd
+     */
+    "ssoBddUrl"?: string;
+    /**
      *client_id sso
      */
     "client_id"?: string;
     /**
-     *client_secret pou rle sso
+     *client_secret du sso
      */
     "client_secret"?: string;
     /**
+     *application instance id of seller
+     */
+    "sellerAppId": string;
+    /**
+     *licenceStore for seller user licence
+     */
+    "sellerLicenceStoreId"?: string;
+    /**
+     *application instance id of the admin
+     */
+    "adminAppId"?: string;
+    /**
+     *licenceStoreId for admin
+     */
+    "adminLicenceStoreId"?: string;
+    /**
+     *url de la bdd d 'infra
+     */
+    "infraBddUrl"?: string;
+    /**
+     *template du sso client
+     */
+    "sellerSso_Client_template"?: string;
+    /**
+     *template du endClient seller
+     */
+    "sellerEndClientTemplate"?: string;
+    /**
+     *template de l application instance du vendeur
+     */
+    "sellerAppInstanceTemplate"?: string;
+    /**
+     *données de configuration de mangopay
+     */
+    "mangoConf"?: IMangoConf;
+    /**
+     *api key pour l'api d assurance
+     */
+    "assuranceApiKey"?: string;
+    /**
+     *Configuration BigBen
+     */
+    "bigBen"?: IBigBenConf;
+    /**
+     *Url du service DPD
+     */
+    "dpdServiceUrl"?: string;
+    /**
+     *connecteur sftp gras savoie oi
+     */
+    "sftpGS"?: IftpConf;
+    /**
+     *Base url pour qbp
+     */
+    "QbpBaseUrl"?: string;
+    /**
+     *Configuration url quelbonplan
+     */
+    "qbpServiceUrl"?: string;
+    /**
+     *suffix de création du domaine de l application du partenaire
+     */
+    "sellerDomainPatern"?: string;
+    /**
+     *Url du service FSO
+     */
+    "fsoServiceUrl": string;
+    /**
+     *Affichage des assurances
+     */
+    "isInsuranceEnable"?: boolean;
+    /**
      *configuration pour l'envoie de mails
      */
-    "SendGridConf"?: IR3Mailer;
+    "sendGridConf"?: IQbpMailer;
     /**
-     *url du rip pdf
+     *liste de functionalites active ou pas
      */
-    "pdfRipUrl": string;
+    "featuresConf"?: IQbpFeaturesConfiguration;
     /**
-     *url de l application de rendu pdf
+     *Configuration pour les taches auto
      */
-    "pdfAppUrl": string;
+    "automationConf"?: IConfAutomation;
     /**
-     *url du fso r3
+     *url de l api floa
      */
-    "fsoUrl": string;
+    "floaUrl"?: string;
     /**
-     *configuration de la génération des partnaires
+     *key de l api floa
      */
-    "parntaireConfig"?: IParnerDeployConf;
+    "floaApiKey"?: string;
+    /**
+     *id du wallet mango de floa
+     */
+    "floaMangoWalletId"?: string;
+    /**
+     *ID wallet dedier uniquement au promotion
+     */
+    "qbpPromoWalletId"?: string;
+    /**
+     *Id de l utilsateur mango qui effectue le transfert
+     */
+    "qbpPromoMangoUserId"?: string;
+    /**
+     *email secret avis garantie
+     */
+    "avisGarantisSecretEmail"?: string;
+}
+/**
+interface de la class service_fso
+description remote file system
+*/
+export interface Iservice_fso extends Iservice {
+    /**
+     *local file path
+     */
+    "filePath": string;
+    /**
+     *url du service de bd
+     */
+    "bddServiceUrl": string;
+    /**
+     *la collection des clef url disponible
+     */
+    "proxy"?: Iname_value[];
 }

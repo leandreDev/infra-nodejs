@@ -24,6 +24,22 @@ export class Model_QbpFeaturesConfiguration extends  Base  implements Interface.
         }
         
     
+        
+        if(obj["floaPay"] != undefined){
+          
+           this["floaPay"] = new Boolean(obj["floaPay"]).valueOf() ;
+          
+        }
+        
+    
+        
+        if(obj["searchByModel"] != undefined){
+          
+           this["searchByModel"] = new Boolean(obj["searchByModel"]).valueOf() ;
+          
+        }
+        
+    
   }
   
 
@@ -34,6 +50,18 @@ export class Model_QbpFeaturesConfiguration extends  Base  implements Interface.
         determine se le payement par virement bancaire est active ou non
         */
                public "bankWire"?:boolean =false;
+              
+       
+              /**
+        Determine si l option floaPay est activer ou non
+        */
+               public "floaPay"?:boolean =false;
+              
+       
+              /**
+        Switch entre recherche par model ou productStock
+        */
+               public "searchByModel"?:boolean ;
               
        
 

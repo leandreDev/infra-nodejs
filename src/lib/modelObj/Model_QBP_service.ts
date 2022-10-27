@@ -326,6 +326,54 @@ export class Model_QBP_service extends   Model_service   implements Interface.IQ
         }
         
     
+        
+        if(obj["floaUrl"] != undefined){
+          
+           this["floaUrl"] = obj["floaUrl"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["floaApiKey"] != undefined){
+          
+           this["floaApiKey"] = obj["floaApiKey"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["floaMangoWalletId"] != undefined){
+          
+           this["floaMangoWalletId"] = obj["floaMangoWalletId"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpPromoWalletId"] != undefined){
+          
+           this["qbpPromoWalletId"] = obj["qbpPromoWalletId"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["qbpPromoMangoUserId"] != undefined){
+          
+           this["qbpPromoMangoUserId"] = obj["qbpPromoMangoUserId"].toString() ;
+           
+        }
+        
+    
+        
+        if(obj["avisGarantisSecretEmail"] != undefined){
+          
+           this["avisGarantisSecretEmail"] = obj["avisGarantisSecretEmail"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -516,6 +564,42 @@ export class Model_QBP_service extends   Model_service   implements Interface.IQ
         Configuration pour les taches auto
         */
                public "automationConf"?:Interface.IConfAutomation;
+              
+       
+              /**
+        url de l api floa
+        */
+               public "floaUrl"?:string ;
+              
+       
+              /**
+        key de l api floa
+        */
+               public "floaApiKey"?:string ;
+              
+       
+              /**
+        id du wallet mango de floa
+        */
+               public "floaMangoWalletId"?:string ;
+              
+       
+              /**
+        ID wallet dedier uniquement au promotion 
+        */
+               public "qbpPromoWalletId"?:string ;
+              
+       
+              /**
+        Id de l utilsateur mango qui effectue le transfert
+        */
+               public "qbpPromoMangoUserId"?:string ;
+              
+       
+              /**
+        email secret avis garantie
+        */
+               public "avisGarantisSecretEmail"?:string ;
               
        
 

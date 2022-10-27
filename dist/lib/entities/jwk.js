@@ -9,48 +9,41 @@ const utils_1 = require("@leandredev/utils");
 */
 class Entity_jwk extends utils_1.Entity {
     static cast(obj = {}, castChildClass = false) {
-        if (!castChildClass &&
-            obj._class &&
-            obj._class != 'jwk' &&
-            [].indexOf(obj._class) !== -1) {
+        if ((!castChildClass) && obj._class && obj._class != 'jwk' && [].indexOf(obj._class) !== -1) {
             Index['Entity_' + obj._class].cast(obj, true);
             return;
         }
         utils_1.Entity.cast(obj, true);
-        if (obj['kty'] != undefined) {
-            obj['kty'] = obj['kty'].toString();
+        if (obj["kty"] != undefined) {
+            obj["kty"] = obj["kty"].toString();
         }
-        if (obj['use'] != undefined) {
-            obj['use'] = obj['use'].toString();
+        if (obj["use"] != undefined) {
+            obj["use"] = obj["use"].toString();
         }
-        if (obj['key_ops'] != undefined &&
-            obj['key_ops'] != null &&
-            _.isArray(obj['key_ops'])) {
-            obj['key_ops'] = obj['key_ops'].map((value) => {
+        if (obj["key_ops"] != undefined && obj["key_ops"] != null && _.isArray(obj["key_ops"])) {
+            obj["key_ops"] = obj["key_ops"].map((value) => {
                 return value.toString();
             });
         }
-        if (obj['alg'] != undefined) {
-            obj['alg'] = obj['alg'].toString();
+        if (obj["alg"] != undefined) {
+            obj["alg"] = obj["alg"].toString();
         }
-        if (obj['kid'] != undefined) {
-            obj['kid'] = obj['kid'].toString();
+        if (obj["kid"] != undefined) {
+            obj["kid"] = obj["kid"].toString();
         }
-        if (obj['x5u'] != undefined) {
-            obj['x5u'] = obj['x5u'].toString();
+        if (obj["x5u"] != undefined) {
+            obj["x5u"] = obj["x5u"].toString();
         }
-        if (obj['x5c'] != undefined &&
-            obj['x5c'] != null &&
-            _.isArray(obj['x5c'])) {
-            obj['x5c'] = obj['x5c'].map((value) => {
+        if (obj["x5c"] != undefined && obj["x5c"] != null && _.isArray(obj["x5c"])) {
+            obj["x5c"] = obj["x5c"].map((value) => {
                 return value.toString();
             });
         }
-        if (obj['x5t'] != undefined) {
-            obj['x5t'] = obj['x5t'].toString();
+        if (obj["x5t"] != undefined) {
+            obj["x5t"] = obj["x5t"].toString();
         }
-        if (obj['x5t#S256'] != undefined) {
-            obj['x5t#S256'] = obj['x5t#S256'].toString();
+        if (obj["x5t#S256"] != undefined) {
+            obj["x5t#S256"] = obj["x5t#S256"].toString();
         }
     }
     static checkkty(val, path = null) {
@@ -149,7 +142,7 @@ class Entity_jwk extends utils_1.Entity {
             return res;
         }
     }
-    static 'checkx5t#S256'(val, path = null) {
+    static "checkx5t#S256"(val, path = null) {
         if (val == null) {
             return null;
         }
@@ -161,7 +154,7 @@ class Entity_jwk extends utils_1.Entity {
             return res;
         }
     }
-    static check(target, isCompleteObj = true, path = '') {
+    static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
         if (target.kty != null && target.kty != undefined) {
@@ -216,8 +209,8 @@ class Entity_jwk extends utils_1.Entity {
                 err = [...err, ...res];
             }
         }
-        if (target['x5t#S256'] != null && target['x5t#S256'] != undefined) {
-            res = Entity_jwk['checkx5t#S256'](target['x5t#S256'], `${path}.x5t#S256`);
+        if (target["x5t#S256"] != null && target["x5t#S256"] != undefined) {
+            res = Entity_jwk["checkx5t#S256"](target["x5t#S256"], `${path}["x5t#S256"]`);
             if (res && res.length > 0) {
                 err = [...err, ...res];
             }

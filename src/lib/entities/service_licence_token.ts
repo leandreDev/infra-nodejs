@@ -80,6 +80,14 @@ export class Entity_service_licence_token extends   Entity_service    {
         }
         
     
+        
+        if(obj["url_bdd"] != undefined){
+          
+           obj["url_bdd"] = obj["url_bdd"].toString() ;
+           
+        }
+        
+    
   }
 
 
@@ -232,6 +240,33 @@ public static checkend_clientUrl(val:any, path:string =null):string[]{
        
  
 
+public static checkurl_bdd(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+          
+          
+         
+         
+
+         
+
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
 public static check(target:any, isCompleteObj:boolean=true,  path:string=""):string[]{
         var err:string[]  = []; 
         let res:string[] ;
@@ -319,6 +354,23 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
                 
                 
                 res = Entity_service_licence_token.checkend_clientUrl(target.end_clientUrl , `${path}.end_clientUrl`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.url_bdd != null && target.url_bdd != undefined ){
+                
+                
+                res = Entity_service_licence_token.checkurl_bdd(target.url_bdd , `${path}.url_bdd`) ;
                 if(res && res.length > 0){
                   err = [...err , ...res] ;
                 }               
@@ -433,6 +485,19 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'url_bdd':
+              //string
+              
+              
+              
+              
+              
+              
+              
+              return new String(value).valueOf() ;
+              
+            break;
+          
          
           default:
             return Entity_service  .castQueryParam(key, value) ;
@@ -501,6 +566,14 @@ public static getClassNameOfProp(path:string):string{
       
       
       case 'end_clientUrl':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'url_bdd':
        
              return null ;
        

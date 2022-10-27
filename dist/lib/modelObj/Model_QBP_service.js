@@ -185,6 +185,24 @@ class Model_QBP_service extends Model_service_1.Model_service {
                 this["automationConf"] = new Index["ConfAutomation"](obj["automationConf"]);
             }
         }
+        if (obj["floaUrl"] != undefined) {
+            this["floaUrl"] = obj["floaUrl"].toString();
+        }
+        if (obj["floaApiKey"] != undefined) {
+            this["floaApiKey"] = obj["floaApiKey"].toString();
+        }
+        if (obj["floaMangoWalletId"] != undefined) {
+            this["floaMangoWalletId"] = obj["floaMangoWalletId"].toString();
+        }
+        if (obj["qbpPromoWalletId"] != undefined) {
+            this["qbpPromoWalletId"] = obj["qbpPromoWalletId"].toString();
+        }
+        if (obj["qbpPromoMangoUserId"] != undefined) {
+            this["qbpPromoMangoUserId"] = obj["qbpPromoMangoUserId"].toString();
+        }
+        if (obj["avisGarantisSecretEmail"] != undefined) {
+            this["avisGarantisSecretEmail"] = obj["avisGarantisSecretEmail"].toString();
+        }
     }
 }
 exports.Model_QBP_service = Model_QBP_service;

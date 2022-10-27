@@ -69,8 +69,6 @@
     
         export * from "./licenceStore_global" ;
     
-        export * from "./service_licence_token" ;
-    
         export * from "./oidc_account" ;
     
         export * from "./service_access" ;
@@ -237,11 +235,7 @@
     
         export * from "./field" ;
     
-        export * from "./application_configuration" ;
-    
         export * from "./service_polo_celio" ;
-    
-        export * from "./service_fso" ;
     
         export * from "./AppConf_minds_up_admin" ;
     
@@ -337,30 +331,42 @@
     
         export * from "./mail_sendgrid" ;
     
-        export * from "./QbpFeaturesConfiguration" ;
-    
         export * from "./application_configuration_qbp" ;
     
         export * from "./bois_dor_mailer" ;
-    
-        export * from "./QBP_service" ;
     
         export * from "./ConfAutomation" ;
     
         export * from "./application_configuration_r3_admin_seller" ;
     
-        export * from "./application_configuration_r3_admin" ;
-    
-        export * from "./QbpMailer" ;
-    
-        export * from "./service_qcbm" ;
-    
-        export * from "./R3Mailer" ;
-    
         export * from "./application_configuration_dcbm_static" ;
     
         export * from "./ParnerDeployConf" ;
     
+        export * from "./R3Mailer" ;
+    
+        export * from "./service_licence_token" ;
+    
+        export * from "./QbpFeaturesConfiguration" ;
+    
         export * from "./r3_service" ;
+    
+        export * from "./application_configuration_dcbm" ;
+    
+        export * from "./application_configuration" ;
+    
+        export * from "./application_configuration_dcbm_admin" ;
+    
+        export * from "./dcbm_service" ;
+    
+        export * from "./DCBMMailer" ;
+    
+        export * from "./application_configuration_r3_admin" ;
+    
+        export * from "./QbpMailer" ;
+    
+        export * from "./QBP_service" ;
+    
+        export * from "./service_fso" ;
     
     

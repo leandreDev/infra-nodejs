@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Model_r3_service = void 0;
+const _ = require("lodash");
 const Index = require("./Index");
 const Model_service_1 = require("./Model_service");
 /**
@@ -58,6 +59,14 @@ class Model_r3_service extends Model_service_1.Model_service {
             else {
                 this["parntaireConfig"] = new Index["ParnerDeployConf"](obj["parntaireConfig"]);
             }
+        }
+        if (obj["authorizedDomaine"] != undefined && obj["authorizedDomaine"] != null && _.isArray(obj["authorizedDomaine"])) {
+            this["authorizedDomaine"] = obj["authorizedDomaine"].map((value) => {
+                return value.toString();
+            });
+        }
+        if (obj["adminSiteUrl"] != undefined) {
+            this["adminSiteUrl"] = obj["adminSiteUrl"].toString();
         }
     }
 }

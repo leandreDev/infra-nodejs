@@ -75,6 +75,14 @@ export class Model_service_licence_token extends   Model_service   implements In
         }
         
     
+        
+        if(obj["url_bdd"] != undefined){
+          
+           this["url_bdd"] = obj["url_bdd"].toString() ;
+           
+        }
+        
+    
   }
   
 
@@ -115,6 +123,12 @@ export class Model_service_licence_token extends   Model_service   implements In
         url de la collection endClient
         */
                public "end_clientUrl"?:string ;
+              
+       
+              /**
+        url de la bdd de licence de l'infra
+        */
+               public "url_bdd"?:string ;
               
        
 

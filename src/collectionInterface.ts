@@ -755,38 +755,6 @@
   
 
     /**
-    interface de la class application_configuration 
-    description c'est la configuration d'une application
-   */
-    export class application_configuration extends  IBase {
-        
-              /**
-               *le nom de la configuration 
-               */
-              
-               "name"?:string;
-              
-       
-              /**
-               *configurations de services 
-               */
-              
-               "services"?:string[] | Iservice_access[];
-              
-       
-              /**
-               *nom de l'application a afficher 
-               */
-              
-               "appName"?:string;
-              
-       
-   }
-
-
-  
-
-    /**
     interface de la class application_instance 
     description c'est le couple application configuration 
    */
@@ -978,6 +946,38 @@
                */
               
                "boisdor_fr_orderToCustomerDiff"?:string | IMultilangSendGridTemplate;
+              
+       
+   }
+
+
+  
+
+    /**
+    interface de la class application_configuration 
+    description c'est la configuration d'une application
+   */
+    export class application_configuration extends  IBase {
+        
+              /**
+               *le nom de la configuration 
+               */
+              
+               "name"?:string;
+              
+       
+              /**
+               *configurations de services 
+               */
+              
+               "services"?:string[] | Iservice_access[];
+              
+       
+              /**
+               *nom de l'application a afficher 
+               */
+              
+               "appName"?:string;
               
        
    }
@@ -1187,6 +1187,16 @@
   
 
 
+
+  
+
+
+
+  
+
+
+
+  
 
   
 
@@ -2200,6 +2210,64 @@
    
 
     /**
+    interface de la class application_configuration_dcbm_static 
+    description dcbm static
+   */
+    export class application_configuration_dcbm_static extends   Iapplication_configuration{
+        
+   }
+  
+   
+
+    /**
+    interface de la class application_configuration_dcbm 
+    description config DCBM
+   */
+    export class application_configuration_dcbm extends   Iapplication_configuration{
+        
+              /**
+               *url de la bdd 
+               */
+              
+               "bddUrl"?:string;
+              
+       
+   }
+  
+   
+
+    /**
+    interface de la class application_configuration_dcbm_admin 
+    description configiration de dcbm admin
+   */
+    export class application_configuration_dcbm_admin extends   Iapplication_configuration{
+        
+              /**
+               *url de la bdd 
+               */
+              
+               "bddUrl"?:string;
+              
+       
+              /**
+               *uploadUrl url du service de telechargement des images 
+               */
+              
+               "uploadUrl"?:string;
+              
+       
+              /**
+               *l"url de l'api 
+               */
+              
+               "apiUrl"?:string;
+              
+       
+   }
+  
+   
+
+    /**
     interface de la class application_configuration_r3_admin 
     description config r3 admin
    */
@@ -2229,24 +2297,4 @@
    }
   
    
-
-    /**
-    interface de la class application_configuration_dcbm_static 
-    description dcbm static
-   */
-    export class application_configuration_dcbm_static extends   Iapplication_configuration{
-        
-   }
-  
-   
-
-
-  
-
-
-
-  
-
-  
-
 

@@ -13,4 +13,12 @@ export declare class Model_QbpFeaturesConfiguration extends Base implements Inte
 determine se le payement par virement bancaire est active ou non
 */
     "bankWire"?: boolean;
+    /**
+Determine si l option floaPay est activer ou non
+*/
+    "floaPay"?: boolean;
+    /**
+Switch entre recherche par model ou productStock
+*/
+    "searchByModel"?: boolean;
 }

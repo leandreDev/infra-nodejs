@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Entity_r3_service = void 0;
+const _ = require("lodash");
 const Index = require("./Index");
 const service_1 = require("./service");
 /**
@@ -50,6 +51,14 @@ class Entity_r3_service extends service_1.Entity_service {
         if (obj["parntaireConfig"] != undefined) {
             Index.Entity_ParnerDeployConf.cast(obj["parntaireConfig"]);
             //62b41c98f1e11a1957bf37c6
+        }
+        if (obj["authorizedDomaine"] != undefined && obj["authorizedDomaine"] != null && _.isArray(obj["authorizedDomaine"])) {
+            obj["authorizedDomaine"] = obj["authorizedDomaine"].map((value) => {
+                return value.toString();
+            });
+        }
+        if (obj["adminSiteUrl"] != undefined) {
+            obj["adminSiteUrl"] = obj["adminSiteUrl"].toString();
         }
     }
     static checkbddUrl(val, path = null) {
@@ -214,6 +223,30 @@ class Entity_r3_service extends service_1.Entity_service {
             return res;
         }
     }
+    static checkauthorizedDomaine(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkadminSiteUrl(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
     static check(target, isCompleteObj = true, path = "") {
         var err = [];
         let res;
@@ -299,6 +332,23 @@ class Entity_r3_service extends service_1.Entity_service {
                 err = [...err, ...res];
             }
         }
+        if (target.authorizedDomaine != null && target.authorizedDomaine != undefined) {
+            target.authorizedDomaine.forEach((data, index) => {
+                res = Entity_r3_service.checkauthorizedDomaine(target.authorizedDomaine[index], `${path}.authorizedDomaine.${index}`);
+                if (res && res.length > 0) {
+                    err = [...err, ...res];
+                }
+            });
+        }
+        if (isCompleteObj && (target.adminSiteUrl == null || target.adminSiteUrl == undefined)) {
+            err.push(path + ".adminSiteUrl is required");
+        }
+        if (target.adminSiteUrl != null && target.adminSiteUrl != undefined) {
+            res = Entity_r3_service.checkadminSiteUrl(target.adminSiteUrl, `${path}.adminSiteUrl`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
         return err;
     }
     static castQueryParam(path, value) {
@@ -380,6 +430,14 @@ class Entity_r3_service extends service_1.Entity_service {
                     return Index.Entity_ParnerDeployConf.castQueryParam(subPath, value);
                 }
                 break;
+            case 'authorizedDomaine':
+                //string
+                return new String(value).valueOf();
+                break;
+            case 'adminSiteUrl':
+                //string
+                return new String(value).valueOf();
+                break;
             default:
                 return service_1.Entity_service.castQueryParam(key, value);
                 break;
@@ -427,6 +485,10 @@ class Entity_r3_service extends service_1.Entity_service {
                 return null;
             case 'parntaireConfig':
                 return Index.Entity_ParnerDeployConf.getClassNameOfProp(subPath);
+            case 'authorizedDomaine':
+                return null;
+            case 'adminSiteUrl':
+                return null;
             default:
                 return service_1.Entity_service.getClassNameOfProp(key);
                 break;

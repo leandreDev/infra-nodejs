@@ -51,6 +51,10 @@ export declare class Entity_QbpMailer extends Entity {
     static checkretractationDeliveredToSeller(val: any, path?: string): string[];
     static checksavReturnDeliveredToSeller(val: any, path?: string): string[];
     static checkfourteenDaysBackConfirmation(val: any, path?: string): string[];
+    static checkerrorOnWorkflowOrder(val: any, path?: string): string[];
+    static checkqbpRefundBankWire(val: any, path?: string): string[];
+    static checkqbpBankWireRecall(val: any, path?: string): string[];
+    static checkqbpAvisGarantis(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

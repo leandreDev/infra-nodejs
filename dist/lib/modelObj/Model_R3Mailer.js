@@ -116,6 +116,17 @@ class Model_R3Mailer extends utils_1.Base {
                 this["R3_partner_admin_created"] = obj["R3_partner_admin_created"];
             }
         }
+        if (obj["r3_group_welcome_admin_templateId"] != undefined) {
+            if (_.isString(obj["r3_group_welcome_admin_templateId"])) {
+                this["r3_group_welcome_admin_templateId"] = obj["r3_group_welcome_admin_templateId"];
+            }
+            else if (obj["r3_group_welcome_admin_templateId"]._id) {
+                this["r3_group_welcome_admin_templateId"] = obj["r3_group_welcome_admin_templateId"]._id;
+            }
+            else if (obj["r3_group_welcome_admin_templateId"]._bsontype && (obj["r3_group_welcome_admin_templateId"]._bsontype === 'ObjectID')) {
+                this["r3_group_welcome_admin_templateId"] = obj["r3_group_welcome_admin_templateId"];
+            }
+        }
     }
 }
 exports.Model_R3Mailer = Model_R3Mailer;

@@ -33,4 +33,8 @@ liste des certificats
 url de la collection endClient
 */
     "end_clientUrl"?: string;
+    /**
+url de la bdd de licence de l'infra
+*/
+    "url_bdd"?: string;
 }

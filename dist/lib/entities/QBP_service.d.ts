@@ -35,6 +35,12 @@ export declare class Entity_QBP_service extends Entity_service {
     static checksendGridConf(val: any, path?: string): string[];
     static checkfeaturesConf(val: any, path?: string): string[];
     static checkautomationConf(val: any, path?: string): string[];
+    static checkfloaUrl(val: any, path?: string): string[];
+    static checkfloaApiKey(val: any, path?: string): string[];
+    static checkfloaMangoWalletId(val: any, path?: string): string[];
+    static checkqbpPromoWalletId(val: any, path?: string): string[];
+    static checkqbpPromoMangoUserId(val: any, path?: string): string[];
+    static checkavisGarantisSecretEmail(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

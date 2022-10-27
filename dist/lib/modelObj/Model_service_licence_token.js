@@ -41,6 +41,9 @@ class Model_service_licence_token extends Model_service_1.Model_service {
         if (obj["end_clientUrl"] != undefined) {
             this["end_clientUrl"] = obj["end_clientUrl"].toString();
         }
+        if (obj["url_bdd"] != undefined) {
+            this["url_bdd"] = obj["url_bdd"].toString();
+        }
     }
 }
 exports.Model_service_licence_token = Model_service_licence_token;

@@ -30,12 +30,84 @@ export class Entity_QbpFeaturesConfiguration extends  Entity   {
         }
         
     
+        
+        if(obj["floaPay"] != undefined){
+          
+           obj["floaPay"] = new Boolean(obj["floaPay"]).valueOf() ;
+          
+        }
+        
+    
+        
+        if(obj["searchByModel"] != undefined){
+          
+           obj["searchByModel"] = new Boolean(obj["searchByModel"]).valueOf() ;
+          
+        }
+        
+    
   }
 
 
  
 
 public static checkbankWire(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+         
+
+         
+
+        
+          if( ! _.isBoolean(val)){
+            res.push(`${path}  is not a boolean`) ;   
+          }
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checkfloaPay(val:any, path:string =null):string[]{
+         if(val == null){
+            return null ;
+         }
+         let res:string[] = [] ;
+         
+         
+         
+
+         
+
+        
+          if( ! _.isBoolean(val)){
+            res.push(`${path}  is not a boolean`) ;   
+          }
+        
+        
+          if(res.length === 0){
+            return null ;
+          }else{
+            return res ;
+          }
+        }
+
+
+       
+ 
+
+public static checksearchByModel(val:any, path:string =null):string[]{
          if(val == null){
             return null ;
          }
@@ -86,6 +158,40 @@ public static check(target:any, isCompleteObj:boolean=true,  path:string=""):str
               
               
            
+              
+
+              
+
+              if(target.floaPay != null && target.floaPay != undefined ){
+                
+                
+                res = Entity_QbpFeaturesConfiguration.checkfloaPay(target.floaPay , `${path}.floaPay`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
+              
+
+              
+
+              if(target.searchByModel != null && target.searchByModel != undefined ){
+                
+                
+                res = Entity_QbpFeaturesConfiguration.checksearchByModel(target.searchByModel , `${path}.searchByModel`) ;
+                if(res && res.length > 0){
+                  err = [...err , ...res] ;
+                }               
+                
+              }
+
+              
+              
+           
            
 
         return err ;
@@ -126,6 +232,32 @@ public static castQueryParam(path: string, value: any): any {
               
             break;
           
+            case 'floaPay':
+              //boolean
+              
+              
+              
+              return new Boolean(value).valueOf() ;
+              
+              
+              
+              
+              
+            break;
+          
+            case 'searchByModel':
+              //boolean
+              
+              
+              
+              return new Boolean(value).valueOf() ;
+              
+              
+              
+              
+              
+            break;
+          
          
           default:
             return Entity.castQueryParam(key, value) ;
@@ -154,6 +286,22 @@ public static getClassNameOfProp(path:string):string{
           
       
       case 'bankWire':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'floaPay':
+       
+             return null ;
+       
+        
+       
+      
+      
+      case 'searchByModel':
        
              return null ;
        

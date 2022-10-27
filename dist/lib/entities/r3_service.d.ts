@@ -16,6 +16,8 @@ export declare class Entity_r3_service extends Entity_service {
     static checkpdfAppUrl(val: any, path?: string): string[];
     static checkfsoUrl(val: any, path?: string): string[];
     static checkparntaireConfig(val: any, path?: string): string[];
+    static checkauthorizedDomaine(val: any, path?: string): string[];
+    static checkadminSiteUrl(val: any, path?: string): string[];
     static check(target: any, isCompleteObj?: boolean, path?: string): string[];
     static castQueryParam(path: string, value: any): any;
     static getClassNameOfProp(path: string): string;

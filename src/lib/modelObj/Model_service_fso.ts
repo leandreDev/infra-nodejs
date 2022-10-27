@@ -34,6 +34,22 @@ export class Model_service_fso extends   Model_service   implements Interface.Is
         }
         
     
+        
+        if(obj["proxy"] != undefined && obj["proxy"] != null && _.isArray(obj["proxy"])){
+          
+
+            this["proxy"] = obj["proxy"].map((value)=>{
+              if(value._class){
+                return new Index[value._class](value) ;
+              }else{
+                return new Index["name_value"](value) ;
+              }
+            })
+            
+          
+        }
+        
+    
   }
   
 
@@ -50,6 +66,12 @@ export class Model_service_fso extends   Model_service   implements Interface.Is
         url du service de bd
         */
                public "bddServiceUrl":string ;
+              
+       
+              /**
+        la collection des clef url disponible
+        */
+               public "proxy"?:Interface.Iname_value[];
               
        
 

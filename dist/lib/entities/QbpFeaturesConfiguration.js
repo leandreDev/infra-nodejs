@@ -17,8 +17,44 @@ class Entity_QbpFeaturesConfiguration extends utils_1.Entity {
         if (obj["bankWire"] != undefined) {
             obj["bankWire"] = new Boolean(obj["bankWire"]).valueOf();
         }
+        if (obj["floaPay"] != undefined) {
+            obj["floaPay"] = new Boolean(obj["floaPay"]).valueOf();
+        }
+        if (obj["searchByModel"] != undefined) {
+            obj["searchByModel"] = new Boolean(obj["searchByModel"]).valueOf();
+        }
     }
     static checkbankWire(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isBoolean(val)) {
+            res.push(`${path}  is not a boolean`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checkfloaPay(val, path = null) {
+        if (val == null) {
+            return null;
+        }
+        let res = [];
+        if (!_.isBoolean(val)) {
+            res.push(`${path}  is not a boolean`);
+        }
+        if (res.length === 0) {
+            return null;
+        }
+        else {
+            return res;
+        }
+    }
+    static checksearchByModel(val, path = null) {
         if (val == null) {
             return null;
         }
@@ -38,6 +74,18 @@ class Entity_QbpFeaturesConfiguration extends utils_1.Entity {
         let res;
         if (target.bankWire != null && target.bankWire != undefined) {
             res = Entity_QbpFeaturesConfiguration.checkbankWire(target.bankWire, `${path}.bankWire`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.floaPay != null && target.floaPay != undefined) {
+            res = Entity_QbpFeaturesConfiguration.checkfloaPay(target.floaPay, `${path}.floaPay`);
+            if (res && res.length > 0) {
+                err = [...err, ...res];
+            }
+        }
+        if (target.searchByModel != null && target.searchByModel != undefined) {
+            res = Entity_QbpFeaturesConfiguration.checksearchByModel(target.searchByModel, `${path}.searchByModel`);
             if (res && res.length > 0) {
                 err = [...err, ...res];
             }
@@ -69,6 +117,14 @@ class Entity_QbpFeaturesConfiguration extends utils_1.Entity {
                 //boolean
                 return new Boolean(value).valueOf();
                 break;
+            case 'floaPay':
+                //boolean
+                return new Boolean(value).valueOf();
+                break;
+            case 'searchByModel':
+                //boolean
+                return new Boolean(value).valueOf();
+                break;
             default:
                 return utils_1.Entity.castQueryParam(key, value);
                 break;
@@ -93,6 +149,10 @@ class Entity_QbpFeaturesConfiguration extends utils_1.Entity {
         }
         switch (key) {
             case 'bankWire':
+                return null;
+            case 'floaPay':
+                return null;
+            case 'searchByModel':
                 return null;
             default:
                 return utils_1.Entity.getClassNameOfProp(key);

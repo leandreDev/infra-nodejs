@@ -128,6 +128,254 @@ export class api_collection_plateform  {
 		
 	
 
+		this.application_instance= new HttpServiceBase<Interfaces.Iapplication_instance>( {url:conf.url + "collection/application_instance/" , secure:conf.secure} )  ;
+		this.admin_application_instance= new HttpServiceAdminBase<Interfaces.Iapplication_instance>( {url:conf.url + "admin/application_instance/" , secure:conf.secure} )  ;
+
+		
+	
+
+		this.service= new HttpServiceBase<Interfaces.Iservice>( {url:conf.url + "collection/service/" , secure:conf.secure} )  ;
+		this.admin_service= new HttpServiceAdminBase<Interfaces.Iservice>( {url:conf.url + "admin/service/" , secure:conf.secure} )  ;
+
+		
+		 
+		this.service_sso= new HttpServiceBase<Interfaces.Iservice_sso>({url:conf.url + "collection/service_sso/" , secure:conf.secure})  ;
+		this.admin_service_sso= new HttpServiceAdminBase<Interfaces.Iservice_sso>({url:conf.url + "admin/service_sso/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_init= new HttpServiceBase<Interfaces.Iservice_init>({url:conf.url + "collection/service_init/" , secure:conf.secure})  ;
+		this.admin_service_init= new HttpServiceAdminBase<Interfaces.Iservice_init>({url:conf.url + "admin/service_init/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_mailtoinfra= new HttpServiceBase<Interfaces.Iservice_mailtoinfra>({url:conf.url + "collection/service_mailtoinfra/" , secure:conf.secure})  ;
+		this.admin_service_mailtoinfra= new HttpServiceAdminBase<Interfaces.Iservice_mailtoinfra>({url:conf.url + "admin/service_mailtoinfra/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_goshabaGateway= new HttpServiceBase<Interfaces.Iservice_goshabaGateway>({url:conf.url + "collection/service_goshabaGateway/" , secure:conf.secure})  ;
+		this.admin_service_goshabaGateway= new HttpServiceAdminBase<Interfaces.Iservice_goshabaGateway>({url:conf.url + "admin/service_goshabaGateway/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_socketIo= new HttpServiceBase<Interfaces.Iservice_socketIo>({url:conf.url + "collection/service_socketIo/" , secure:conf.secure})  ;
+		this.admin_service_socketIo= new HttpServiceAdminBase<Interfaces.Iservice_socketIo>({url:conf.url + "admin/service_socketIo/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_supervision= new HttpServiceBase<Interfaces.Iservice_supervision>({url:conf.url + "collection/service_supervision/" , secure:conf.secure})  ;
+		this.admin_service_supervision= new HttpServiceAdminBase<Interfaces.Iservice_supervision>({url:conf.url + "admin/service_supervision/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_configuration= new HttpServiceBase<Interfaces.Iservice_configuration>({url:conf.url + "collection/service_configuration/" , secure:conf.secure})  ;
+		this.admin_service_configuration= new HttpServiceAdminBase<Interfaces.Iservice_configuration>({url:conf.url + "admin/service_configuration/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_nginxConfigurator= new HttpServiceBase<Interfaces.Iservice_nginxConfigurator>({url:conf.url + "collection/service_nginxConfigurator/" , secure:conf.secure})  ;
+		this.admin_service_nginxConfigurator= new HttpServiceAdminBase<Interfaces.Iservice_nginxConfigurator>({url:conf.url + "admin/service_nginxConfigurator/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_push_notification= new HttpServiceBase<Interfaces.Iservice_push_notification>({url:conf.url + "collection/service_push_notification/" , secure:conf.secure})  ;
+		this.admin_service_push_notification= new HttpServiceAdminBase<Interfaces.Iservice_push_notification>({url:conf.url + "admin/service_push_notification/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_like= new HttpServiceBase<Interfaces.Iservice_like>({url:conf.url + "collection/service_like/" , secure:conf.secure})  ;
+		this.admin_service_like= new HttpServiceAdminBase<Interfaces.Iservice_like>({url:conf.url + "admin/service_like/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_dumy_fso= new HttpServiceBase<Interfaces.Iservice_dumy_fso>({url:conf.url + "collection/service_dumy_fso/" , secure:conf.secure})  ;
+		this.admin_service_dumy_fso= new HttpServiceAdminBase<Interfaces.Iservice_dumy_fso>({url:conf.url + "admin/service_dumy_fso/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_sendGrid= new HttpServiceBase<Interfaces.Iservice_sendGrid>({url:conf.url + "collection/service_sendGrid/" , secure:conf.secure})  ;
+		this.admin_service_sendGrid= new HttpServiceAdminBase<Interfaces.Iservice_sendGrid>({url:conf.url + "admin/service_sendGrid/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_trainingCoursesService= new HttpServiceBase<Interfaces.Iservice_trainingCoursesService>({url:conf.url + "collection/service_trainingCoursesService/" , secure:conf.secure})  ;
+		this.admin_service_trainingCoursesService= new HttpServiceAdminBase<Interfaces.Iservice_trainingCoursesService>({url:conf.url + "admin/service_trainingCoursesService/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_orchestrator= new HttpServiceBase<Interfaces.Iservice_orchestrator>({url:conf.url + "collection/service_orchestrator/" , secure:conf.secure})  ;
+		this.admin_service_orchestrator= new HttpServiceAdminBase<Interfaces.Iservice_orchestrator>({url:conf.url + "admin/service_orchestrator/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_socket_io= new HttpServiceBase<Interfaces.Iservice_socket_io>({url:conf.url + "collection/service_socket_io/" , secure:conf.secure})  ;
+		this.admin_service_socket_io= new HttpServiceAdminBase<Interfaces.Iservice_socket_io>({url:conf.url + "admin/service_socket_io/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_tutor= new HttpServiceBase<Interfaces.Iservice_tutor>({url:conf.url + "collection/service_tutor/" , secure:conf.secure})  ;
+		this.admin_service_tutor= new HttpServiceAdminBase<Interfaces.Iservice_tutor>({url:conf.url + "admin/service_tutor/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_init_js= new HttpServiceBase<Interfaces.Iservice_init_js>({url:conf.url + "collection/service_init_js/" , secure:conf.secure})  ;
+		this.admin_service_init_js= new HttpServiceAdminBase<Interfaces.Iservice_init_js>({url:conf.url + "admin/service_init_js/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_infra_admin= new HttpServiceBase<Interfaces.Iservice_infra_admin>({url:conf.url + "collection/service_infra_admin/" , secure:conf.secure})  ;
+		this.admin_service_infra_admin= new HttpServiceAdminBase<Interfaces.Iservice_infra_admin>({url:conf.url + "admin/service_infra_admin/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.mailtoinfra2= new HttpServiceBase<Interfaces.Imailtoinfra2>({url:conf.url + "collection/mailtoinfra2/" , secure:conf.secure})  ;
+		this.admin_mailtoinfra2= new HttpServiceAdminBase<Interfaces.Imailtoinfra2>({url:conf.url + "admin/mailtoinfra2/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_planned_tasks= new HttpServiceBase<Interfaces.Iservice_planned_tasks>({url:conf.url + "collection/service_planned_tasks/" , secure:conf.secure})  ;
+		this.admin_service_planned_tasks= new HttpServiceAdminBase<Interfaces.Iservice_planned_tasks>({url:conf.url + "admin/service_planned_tasks/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.Service_scorm_gateway= new HttpServiceBase<Interfaces.IService_scorm_gateway>({url:conf.url + "collection/Service_scorm_gateway/" , secure:conf.secure})  ;
+		this.admin_Service_scorm_gateway= new HttpServiceAdminBase<Interfaces.IService_scorm_gateway>({url:conf.url + "admin/Service_scorm_gateway/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_nginxMultiConfigurator= new HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator>({url:conf.url + "collection/service_nginxMultiConfigurator/" , secure:conf.secure})  ;
+		this.admin_service_nginxMultiConfigurator= new HttpServiceAdminBase<Interfaces.Iservice_nginxMultiConfigurator>({url:conf.url + "admin/service_nginxMultiConfigurator/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_client_ftp= new HttpServiceBase<Interfaces.Iservice_client_ftp>({url:conf.url + "collection/service_client_ftp/" , secure:conf.secure})  ;
+		this.admin_service_client_ftp= new HttpServiceAdminBase<Interfaces.Iservice_client_ftp>({url:conf.url + "admin/service_client_ftp/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_polo_celio= new HttpServiceBase<Interfaces.Iservice_polo_celio>({url:conf.url + "collection/service_polo_celio/" , secure:conf.secure})  ;
+		this.admin_service_polo_celio= new HttpServiceAdminBase<Interfaces.Iservice_polo_celio>({url:conf.url + "admin/service_polo_celio/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_pdfrip= new HttpServiceBase<Interfaces.Iservice_pdfrip>({url:conf.url + "collection/service_pdfrip/" , secure:conf.secure})  ;
+		this.admin_service_pdfrip= new HttpServiceAdminBase<Interfaces.Iservice_pdfrip>({url:conf.url + "admin/service_pdfrip/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_signin= new HttpServiceBase<Interfaces.Iservice_signin>({url:conf.url + "collection/service_signin/" , secure:conf.secure})  ;
+		this.admin_service_signin= new HttpServiceAdminBase<Interfaces.Iservice_signin>({url:conf.url + "admin/service_signin/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
+		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_webAppConf= new HttpServiceBase<Interfaces.Iservice_webAppConf>({url:conf.url + "collection/service_webAppConf/" , secure:conf.secure})  ;
+		this.admin_service_webAppConf= new HttpServiceAdminBase<Interfaces.Iservice_webAppConf>({url:conf.url + "admin/service_webAppConf/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.swagger_conv= new HttpServiceBase<Interfaces.Iswagger_conv>({url:conf.url + "collection/swagger_conv/" , secure:conf.secure})  ;
+		this.admin_swagger_conv= new HttpServiceAdminBase<Interfaces.Iswagger_conv>({url:conf.url + "admin/swagger_conv/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_mongo= new HttpServiceBase<Interfaces.Iservice_mongo>({url:conf.url + "collection/service_mongo/" , secure:conf.secure})  ;
+		this.admin_service_mongo= new HttpServiceAdminBase<Interfaces.Iservice_mongo>({url:conf.url + "admin/service_mongo/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_celio_qcm_admin= new HttpServiceBase<Interfaces.Iservice_celio_qcm_admin>({url:conf.url + "collection/service_celio_qcm_admin/" , secure:conf.secure})  ;
+		this.admin_service_celio_qcm_admin= new HttpServiceAdminBase<Interfaces.Iservice_celio_qcm_admin>({url:conf.url + "admin/service_celio_qcm_admin/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_ferrand= new HttpServiceBase<Interfaces.Iservice_ferrand>({url:conf.url + "collection/service_ferrand/" , secure:conf.secure})  ;
+		this.admin_service_ferrand= new HttpServiceAdminBase<Interfaces.Iservice_ferrand>({url:conf.url + "admin/service_ferrand/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_petit_moulin= new HttpServiceBase<Interfaces.Iservice_petit_moulin>({url:conf.url + "collection/service_petit_moulin/" , secure:conf.secure})  ;
+		this.admin_service_petit_moulin= new HttpServiceAdminBase<Interfaces.Iservice_petit_moulin>({url:conf.url + "admin/service_petit_moulin/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_celio_qcm= new HttpServiceBase<Interfaces.Iservice_celio_qcm>({url:conf.url + "collection/service_celio_qcm/" , secure:conf.secure})  ;
+		this.admin_service_celio_qcm= new HttpServiceAdminBase<Interfaces.Iservice_celio_qcm>({url:conf.url + "admin/service_celio_qcm/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_comptoireOr= new HttpServiceBase<Interfaces.Iservice_comptoireOr>({url:conf.url + "collection/service_comptoireOr/" , secure:conf.secure})  ;
+		this.admin_service_comptoireOr= new HttpServiceAdminBase<Interfaces.Iservice_comptoireOr>({url:conf.url + "admin/service_comptoireOr/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_airport= new HttpServiceBase<Interfaces.Iservice_airport>({url:conf.url + "collection/service_airport/" , secure:conf.secure})  ;
+		this.admin_service_airport= new HttpServiceAdminBase<Interfaces.Iservice_airport>({url:conf.url + "admin/service_airport/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_celio_back_task= new HttpServiceBase<Interfaces.Iservice_celio_back_task>({url:conf.url + "collection/service_celio_back_task/" , secure:conf.secure})  ;
+		this.admin_service_celio_back_task= new HttpServiceAdminBase<Interfaces.Iservice_celio_back_task>({url:conf.url + "admin/service_celio_back_task/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_celio_fid= new HttpServiceBase<Interfaces.Iservice_celio_fid>({url:conf.url + "collection/service_celio_fid/" , secure:conf.secure})  ;
+		this.admin_service_celio_fid= new HttpServiceAdminBase<Interfaces.Iservice_celio_fid>({url:conf.url + "admin/service_celio_fid/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.dpd_dervice= new HttpServiceBase<Interfaces.Idpd_dervice>({url:conf.url + "collection/dpd_dervice/" , secure:conf.secure})  ;
+		this.admin_dpd_dervice= new HttpServiceAdminBase<Interfaces.Idpd_dervice>({url:conf.url + "admin/dpd_dervice/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_celio_fid_admin= new HttpServiceBase<Interfaces.Iservice_celio_fid_admin>({url:conf.url + "collection/service_celio_fid_admin/" , secure:conf.secure})  ;
+		this.admin_service_celio_fid_admin= new HttpServiceAdminBase<Interfaces.Iservice_celio_fid_admin>({url:conf.url + "admin/service_celio_fid_admin/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.boisdor_service= new HttpServiceBase<Interfaces.Iboisdor_service>({url:conf.url + "collection/boisdor_service/" , secure:conf.secure})  ;
+		this.admin_boisdor_service= new HttpServiceAdminBase<Interfaces.Iboisdor_service>({url:conf.url + "admin/boisdor_service/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_licence_token= new HttpServiceBase<Interfaces.Iservice_licence_token>({url:conf.url + "collection/service_licence_token/" , secure:conf.secure})  ;
+		this.admin_service_licence_token= new HttpServiceAdminBase<Interfaces.Iservice_licence_token>({url:conf.url + "admin/service_licence_token/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.r3_service= new HttpServiceBase<Interfaces.Ir3_service>({url:conf.url + "collection/r3_service/" , secure:conf.secure})  ;
+		this.admin_r3_service= new HttpServiceAdminBase<Interfaces.Ir3_service>({url:conf.url + "admin/r3_service/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.dcbm_service= new HttpServiceBase<Interfaces.Idcbm_service>({url:conf.url + "collection/dcbm_service/" , secure:conf.secure})  ;
+		this.admin_dcbm_service= new HttpServiceAdminBase<Interfaces.Idcbm_service>({url:conf.url + "admin/dcbm_service/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.QBP_service= new HttpServiceBase<Interfaces.IQBP_service>({url:conf.url + "collection/QBP_service/" , secure:conf.secure})  ;
+		this.admin_QBP_service= new HttpServiceAdminBase<Interfaces.IQBP_service>({url:conf.url + "admin/QBP_service/" , secure:conf.secure})  ;
+
+		 
+		 
+		this.service_fso= new HttpServiceBase<Interfaces.Iservice_fso>({url:conf.url + "collection/service_fso/" , secure:conf.secure})  ;
+		this.admin_service_fso= new HttpServiceAdminBase<Interfaces.Iservice_fso>({url:conf.url + "admin/service_fso/" , secure:conf.secure})  ;
+
+		 
+	
+
+		this.bois_dor_mailer= new HttpServiceBase<Interfaces.Ibois_dor_mailer>( {url:conf.url + "collection/bois_dor_mailer/" , secure:conf.secure} )  ;
+		this.admin_bois_dor_mailer= new HttpServiceAdminBase<Interfaces.Ibois_dor_mailer>( {url:conf.url + "admin/bois_dor_mailer/" , secure:conf.secure} )  ;
+
+		
+	
+
 		this.application_configuration= new HttpServiceBase<Interfaces.Iapplication_configuration>( {url:conf.url + "collection/application_configuration/" , secure:conf.secure} )  ;
 		this.admin_application_configuration= new HttpServiceAdminBase<Interfaces.Iapplication_configuration>( {url:conf.url + "admin/application_configuration/" , secure:conf.secure} )  ;
 
@@ -278,263 +526,25 @@ export class api_collection_plateform  {
 
 		 
 		 
-		this.application_configuration_r3_admin= new HttpServiceBase<Interfaces.Iapplication_configuration_r3_admin>({url:conf.url + "collection/application_configuration_r3_admin/" , secure:conf.secure})  ;
-		this.admin_application_configuration_r3_admin= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_r3_admin>({url:conf.url + "admin/application_configuration_r3_admin/" , secure:conf.secure})  ;
-
-		 
-		 
 		this.application_configuration_dcbm_static= new HttpServiceBase<Interfaces.Iapplication_configuration_dcbm_static>({url:conf.url + "collection/application_configuration_dcbm_static/" , secure:conf.secure})  ;
 		this.admin_application_configuration_dcbm_static= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_dcbm_static>({url:conf.url + "admin/application_configuration_dcbm_static/" , secure:conf.secure})  ;
 
 		 
-	
-
-		this.application_instance= new HttpServiceBase<Interfaces.Iapplication_instance>( {url:conf.url + "collection/application_instance/" , secure:conf.secure} )  ;
-		this.admin_application_instance= new HttpServiceAdminBase<Interfaces.Iapplication_instance>( {url:conf.url + "admin/application_instance/" , secure:conf.secure} )  ;
-
-		
-	
-
-		this.service= new HttpServiceBase<Interfaces.Iservice>( {url:conf.url + "collection/service/" , secure:conf.secure} )  ;
-		this.admin_service= new HttpServiceAdminBase<Interfaces.Iservice>( {url:conf.url + "admin/service/" , secure:conf.secure} )  ;
-
-		
 		 
-		this.service_sso= new HttpServiceBase<Interfaces.Iservice_sso>({url:conf.url + "collection/service_sso/" , secure:conf.secure})  ;
-		this.admin_service_sso= new HttpServiceAdminBase<Interfaces.Iservice_sso>({url:conf.url + "admin/service_sso/" , secure:conf.secure})  ;
+		this.application_configuration_dcbm= new HttpServiceBase<Interfaces.Iapplication_configuration_dcbm>({url:conf.url + "collection/application_configuration_dcbm/" , secure:conf.secure})  ;
+		this.admin_application_configuration_dcbm= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_dcbm>({url:conf.url + "admin/application_configuration_dcbm/" , secure:conf.secure})  ;
 
 		 
 		 
-		this.service_init= new HttpServiceBase<Interfaces.Iservice_init>({url:conf.url + "collection/service_init/" , secure:conf.secure})  ;
-		this.admin_service_init= new HttpServiceAdminBase<Interfaces.Iservice_init>({url:conf.url + "admin/service_init/" , secure:conf.secure})  ;
+		this.application_configuration_dcbm_admin= new HttpServiceBase<Interfaces.Iapplication_configuration_dcbm_admin>({url:conf.url + "collection/application_configuration_dcbm_admin/" , secure:conf.secure})  ;
+		this.admin_application_configuration_dcbm_admin= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_dcbm_admin>({url:conf.url + "admin/application_configuration_dcbm_admin/" , secure:conf.secure})  ;
 
 		 
 		 
-		this.service_mailtoinfra= new HttpServiceBase<Interfaces.Iservice_mailtoinfra>({url:conf.url + "collection/service_mailtoinfra/" , secure:conf.secure})  ;
-		this.admin_service_mailtoinfra= new HttpServiceAdminBase<Interfaces.Iservice_mailtoinfra>({url:conf.url + "admin/service_mailtoinfra/" , secure:conf.secure})  ;
+		this.application_configuration_r3_admin= new HttpServiceBase<Interfaces.Iapplication_configuration_r3_admin>({url:conf.url + "collection/application_configuration_r3_admin/" , secure:conf.secure})  ;
+		this.admin_application_configuration_r3_admin= new HttpServiceAdminBase<Interfaces.Iapplication_configuration_r3_admin>({url:conf.url + "admin/application_configuration_r3_admin/" , secure:conf.secure})  ;
 
 		 
-		 
-		this.service_licence_token= new HttpServiceBase<Interfaces.Iservice_licence_token>({url:conf.url + "collection/service_licence_token/" , secure:conf.secure})  ;
-		this.admin_service_licence_token= new HttpServiceAdminBase<Interfaces.Iservice_licence_token>({url:conf.url + "admin/service_licence_token/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_goshabaGateway= new HttpServiceBase<Interfaces.Iservice_goshabaGateway>({url:conf.url + "collection/service_goshabaGateway/" , secure:conf.secure})  ;
-		this.admin_service_goshabaGateway= new HttpServiceAdminBase<Interfaces.Iservice_goshabaGateway>({url:conf.url + "admin/service_goshabaGateway/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_socketIo= new HttpServiceBase<Interfaces.Iservice_socketIo>({url:conf.url + "collection/service_socketIo/" , secure:conf.secure})  ;
-		this.admin_service_socketIo= new HttpServiceAdminBase<Interfaces.Iservice_socketIo>({url:conf.url + "admin/service_socketIo/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_supervision= new HttpServiceBase<Interfaces.Iservice_supervision>({url:conf.url + "collection/service_supervision/" , secure:conf.secure})  ;
-		this.admin_service_supervision= new HttpServiceAdminBase<Interfaces.Iservice_supervision>({url:conf.url + "admin/service_supervision/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_configuration= new HttpServiceBase<Interfaces.Iservice_configuration>({url:conf.url + "collection/service_configuration/" , secure:conf.secure})  ;
-		this.admin_service_configuration= new HttpServiceAdminBase<Interfaces.Iservice_configuration>({url:conf.url + "admin/service_configuration/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_nginxConfigurator= new HttpServiceBase<Interfaces.Iservice_nginxConfigurator>({url:conf.url + "collection/service_nginxConfigurator/" , secure:conf.secure})  ;
-		this.admin_service_nginxConfigurator= new HttpServiceAdminBase<Interfaces.Iservice_nginxConfigurator>({url:conf.url + "admin/service_nginxConfigurator/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_push_notification= new HttpServiceBase<Interfaces.Iservice_push_notification>({url:conf.url + "collection/service_push_notification/" , secure:conf.secure})  ;
-		this.admin_service_push_notification= new HttpServiceAdminBase<Interfaces.Iservice_push_notification>({url:conf.url + "admin/service_push_notification/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_like= new HttpServiceBase<Interfaces.Iservice_like>({url:conf.url + "collection/service_like/" , secure:conf.secure})  ;
-		this.admin_service_like= new HttpServiceAdminBase<Interfaces.Iservice_like>({url:conf.url + "admin/service_like/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_dumy_fso= new HttpServiceBase<Interfaces.Iservice_dumy_fso>({url:conf.url + "collection/service_dumy_fso/" , secure:conf.secure})  ;
-		this.admin_service_dumy_fso= new HttpServiceAdminBase<Interfaces.Iservice_dumy_fso>({url:conf.url + "admin/service_dumy_fso/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_sendGrid= new HttpServiceBase<Interfaces.Iservice_sendGrid>({url:conf.url + "collection/service_sendGrid/" , secure:conf.secure})  ;
-		this.admin_service_sendGrid= new HttpServiceAdminBase<Interfaces.Iservice_sendGrid>({url:conf.url + "admin/service_sendGrid/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_trainingCoursesService= new HttpServiceBase<Interfaces.Iservice_trainingCoursesService>({url:conf.url + "collection/service_trainingCoursesService/" , secure:conf.secure})  ;
-		this.admin_service_trainingCoursesService= new HttpServiceAdminBase<Interfaces.Iservice_trainingCoursesService>({url:conf.url + "admin/service_trainingCoursesService/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_orchestrator= new HttpServiceBase<Interfaces.Iservice_orchestrator>({url:conf.url + "collection/service_orchestrator/" , secure:conf.secure})  ;
-		this.admin_service_orchestrator= new HttpServiceAdminBase<Interfaces.Iservice_orchestrator>({url:conf.url + "admin/service_orchestrator/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_socket_io= new HttpServiceBase<Interfaces.Iservice_socket_io>({url:conf.url + "collection/service_socket_io/" , secure:conf.secure})  ;
-		this.admin_service_socket_io= new HttpServiceAdminBase<Interfaces.Iservice_socket_io>({url:conf.url + "admin/service_socket_io/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_tutor= new HttpServiceBase<Interfaces.Iservice_tutor>({url:conf.url + "collection/service_tutor/" , secure:conf.secure})  ;
-		this.admin_service_tutor= new HttpServiceAdminBase<Interfaces.Iservice_tutor>({url:conf.url + "admin/service_tutor/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_init_js= new HttpServiceBase<Interfaces.Iservice_init_js>({url:conf.url + "collection/service_init_js/" , secure:conf.secure})  ;
-		this.admin_service_init_js= new HttpServiceAdminBase<Interfaces.Iservice_init_js>({url:conf.url + "admin/service_init_js/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_infra_admin= new HttpServiceBase<Interfaces.Iservice_infra_admin>({url:conf.url + "collection/service_infra_admin/" , secure:conf.secure})  ;
-		this.admin_service_infra_admin= new HttpServiceAdminBase<Interfaces.Iservice_infra_admin>({url:conf.url + "admin/service_infra_admin/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.mailtoinfra2= new HttpServiceBase<Interfaces.Imailtoinfra2>({url:conf.url + "collection/mailtoinfra2/" , secure:conf.secure})  ;
-		this.admin_mailtoinfra2= new HttpServiceAdminBase<Interfaces.Imailtoinfra2>({url:conf.url + "admin/mailtoinfra2/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_planned_tasks= new HttpServiceBase<Interfaces.Iservice_planned_tasks>({url:conf.url + "collection/service_planned_tasks/" , secure:conf.secure})  ;
-		this.admin_service_planned_tasks= new HttpServiceAdminBase<Interfaces.Iservice_planned_tasks>({url:conf.url + "admin/service_planned_tasks/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.Service_scorm_gateway= new HttpServiceBase<Interfaces.IService_scorm_gateway>({url:conf.url + "collection/Service_scorm_gateway/" , secure:conf.secure})  ;
-		this.admin_Service_scorm_gateway= new HttpServiceAdminBase<Interfaces.IService_scorm_gateway>({url:conf.url + "admin/Service_scorm_gateway/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_nginxMultiConfigurator= new HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator>({url:conf.url + "collection/service_nginxMultiConfigurator/" , secure:conf.secure})  ;
-		this.admin_service_nginxMultiConfigurator= new HttpServiceAdminBase<Interfaces.Iservice_nginxMultiConfigurator>({url:conf.url + "admin/service_nginxMultiConfigurator/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_client_ftp= new HttpServiceBase<Interfaces.Iservice_client_ftp>({url:conf.url + "collection/service_client_ftp/" , secure:conf.secure})  ;
-		this.admin_service_client_ftp= new HttpServiceAdminBase<Interfaces.Iservice_client_ftp>({url:conf.url + "admin/service_client_ftp/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_polo_celio= new HttpServiceBase<Interfaces.Iservice_polo_celio>({url:conf.url + "collection/service_polo_celio/" , secure:conf.secure})  ;
-		this.admin_service_polo_celio= new HttpServiceAdminBase<Interfaces.Iservice_polo_celio>({url:conf.url + "admin/service_polo_celio/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_fso= new HttpServiceBase<Interfaces.Iservice_fso>({url:conf.url + "collection/service_fso/" , secure:conf.secure})  ;
-		this.admin_service_fso= new HttpServiceAdminBase<Interfaces.Iservice_fso>({url:conf.url + "admin/service_fso/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_pdfrip= new HttpServiceBase<Interfaces.Iservice_pdfrip>({url:conf.url + "collection/service_pdfrip/" , secure:conf.secure})  ;
-		this.admin_service_pdfrip= new HttpServiceAdminBase<Interfaces.Iservice_pdfrip>({url:conf.url + "admin/service_pdfrip/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_signin= new HttpServiceBase<Interfaces.Iservice_signin>({url:conf.url + "collection/service_signin/" , secure:conf.secure})  ;
-		this.admin_service_signin= new HttpServiceAdminBase<Interfaces.Iservice_signin>({url:conf.url + "admin/service_signin/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_mindsUp= new HttpServiceBase<Interfaces.Iservice_mindsUp>({url:conf.url + "collection/service_mindsUp/" , secure:conf.secure})  ;
-		this.admin_service_mindsUp= new HttpServiceAdminBase<Interfaces.Iservice_mindsUp>({url:conf.url + "admin/service_mindsUp/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_webAppConf= new HttpServiceBase<Interfaces.Iservice_webAppConf>({url:conf.url + "collection/service_webAppConf/" , secure:conf.secure})  ;
-		this.admin_service_webAppConf= new HttpServiceAdminBase<Interfaces.Iservice_webAppConf>({url:conf.url + "admin/service_webAppConf/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.swagger_conv= new HttpServiceBase<Interfaces.Iswagger_conv>({url:conf.url + "collection/swagger_conv/" , secure:conf.secure})  ;
-		this.admin_swagger_conv= new HttpServiceAdminBase<Interfaces.Iswagger_conv>({url:conf.url + "admin/swagger_conv/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_mongo= new HttpServiceBase<Interfaces.Iservice_mongo>({url:conf.url + "collection/service_mongo/" , secure:conf.secure})  ;
-		this.admin_service_mongo= new HttpServiceAdminBase<Interfaces.Iservice_mongo>({url:conf.url + "admin/service_mongo/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_celio_qcm_admin= new HttpServiceBase<Interfaces.Iservice_celio_qcm_admin>({url:conf.url + "collection/service_celio_qcm_admin/" , secure:conf.secure})  ;
-		this.admin_service_celio_qcm_admin= new HttpServiceAdminBase<Interfaces.Iservice_celio_qcm_admin>({url:conf.url + "admin/service_celio_qcm_admin/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_ferrand= new HttpServiceBase<Interfaces.Iservice_ferrand>({url:conf.url + "collection/service_ferrand/" , secure:conf.secure})  ;
-		this.admin_service_ferrand= new HttpServiceAdminBase<Interfaces.Iservice_ferrand>({url:conf.url + "admin/service_ferrand/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_petit_moulin= new HttpServiceBase<Interfaces.Iservice_petit_moulin>({url:conf.url + "collection/service_petit_moulin/" , secure:conf.secure})  ;
-		this.admin_service_petit_moulin= new HttpServiceAdminBase<Interfaces.Iservice_petit_moulin>({url:conf.url + "admin/service_petit_moulin/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_celio_qcm= new HttpServiceBase<Interfaces.Iservice_celio_qcm>({url:conf.url + "collection/service_celio_qcm/" , secure:conf.secure})  ;
-		this.admin_service_celio_qcm= new HttpServiceAdminBase<Interfaces.Iservice_celio_qcm>({url:conf.url + "admin/service_celio_qcm/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_comptoireOr= new HttpServiceBase<Interfaces.Iservice_comptoireOr>({url:conf.url + "collection/service_comptoireOr/" , secure:conf.secure})  ;
-		this.admin_service_comptoireOr= new HttpServiceAdminBase<Interfaces.Iservice_comptoireOr>({url:conf.url + "admin/service_comptoireOr/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_airport= new HttpServiceBase<Interfaces.Iservice_airport>({url:conf.url + "collection/service_airport/" , secure:conf.secure})  ;
-		this.admin_service_airport= new HttpServiceAdminBase<Interfaces.Iservice_airport>({url:conf.url + "admin/service_airport/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_celio_back_task= new HttpServiceBase<Interfaces.Iservice_celio_back_task>({url:conf.url + "collection/service_celio_back_task/" , secure:conf.secure})  ;
-		this.admin_service_celio_back_task= new HttpServiceAdminBase<Interfaces.Iservice_celio_back_task>({url:conf.url + "admin/service_celio_back_task/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_celio_fid= new HttpServiceBase<Interfaces.Iservice_celio_fid>({url:conf.url + "collection/service_celio_fid/" , secure:conf.secure})  ;
-		this.admin_service_celio_fid= new HttpServiceAdminBase<Interfaces.Iservice_celio_fid>({url:conf.url + "admin/service_celio_fid/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.dpd_dervice= new HttpServiceBase<Interfaces.Idpd_dervice>({url:conf.url + "collection/dpd_dervice/" , secure:conf.secure})  ;
-		this.admin_dpd_dervice= new HttpServiceAdminBase<Interfaces.Idpd_dervice>({url:conf.url + "admin/dpd_dervice/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_celio_fid_admin= new HttpServiceBase<Interfaces.Iservice_celio_fid_admin>({url:conf.url + "collection/service_celio_fid_admin/" , secure:conf.secure})  ;
-		this.admin_service_celio_fid_admin= new HttpServiceAdminBase<Interfaces.Iservice_celio_fid_admin>({url:conf.url + "admin/service_celio_fid_admin/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.boisdor_service= new HttpServiceBase<Interfaces.Iboisdor_service>({url:conf.url + "collection/boisdor_service/" , secure:conf.secure})  ;
-		this.admin_boisdor_service= new HttpServiceAdminBase<Interfaces.Iboisdor_service>({url:conf.url + "admin/boisdor_service/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.QBP_service= new HttpServiceBase<Interfaces.IQBP_service>({url:conf.url + "collection/QBP_service/" , secure:conf.secure})  ;
-		this.admin_QBP_service= new HttpServiceAdminBase<Interfaces.IQBP_service>({url:conf.url + "admin/QBP_service/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.service_qcbm= new HttpServiceBase<Interfaces.Iservice_qcbm>({url:conf.url + "collection/service_qcbm/" , secure:conf.secure})  ;
-		this.admin_service_qcbm= new HttpServiceAdminBase<Interfaces.Iservice_qcbm>({url:conf.url + "admin/service_qcbm/" , secure:conf.secure})  ;
-
-		 
-		 
-		this.r3_service= new HttpServiceBase<Interfaces.Ir3_service>({url:conf.url + "collection/r3_service/" , secure:conf.secure})  ;
-		this.admin_r3_service= new HttpServiceAdminBase<Interfaces.Ir3_service>({url:conf.url + "admin/r3_service/" , secure:conf.secure})  ;
-
-		 
-	
-
-		this.bois_dor_mailer= new HttpServiceBase<Interfaces.Ibois_dor_mailer>( {url:conf.url + "collection/bois_dor_mailer/" , secure:conf.secure} )  ;
-		this.admin_bois_dor_mailer= new HttpServiceAdminBase<Interfaces.Ibois_dor_mailer>( {url:conf.url + "admin/bois_dor_mailer/" , secure:conf.secure} )  ;
-
-		
 	
 	}
 	protected url:string ;
@@ -786,6 +796,550 @@ export class api_collection_plateform  {
 		
 	
 		/**
+		 service d'accès à la collection :application_instance
+		 desc: c'est le couple application configuration 
+		 
+
+		 
+		*/
+		public application_instance:HttpServiceBase<Interfaces.Iapplication_instance> ;
+		public admin_application_instance:HttpServiceAdminBase<Interfaces.Iapplication_instance> ;
+
+		
+	
+		/**
+		 service d'accès à la collection :service
+		 desc: identification du service
+		 
+		 info: vous pouvez voir tous les objets de cette collection y compris les enfants
+		 liste des interfaces héritées possibles:
+		 
+		 	Iservice_sso      c'est un sso
+		 
+		 	Iservice_init      service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
+		 
+		 	Iservice_mailtoinfra      service qui permet de configurer l'authentification a partir d'un mail
+		 
+		 	Iservice_goshabaGateway      passerelle pour goshaba
+		 
+		 	Iservice_socketIo      communication temps réelle multi format
+		 
+		 	Iservice_supervision      service_supervision
+		 
+		 	Iservice_configuration      c'est le service de distribution des configurations des services
+		 
+		 	Iservice_nginxConfigurator      service_nginxConfigurator
+		 
+		 	Iservice_push_notification      Service pour gérer les notifications push des applications
+		 
+		 	Iservice_like      service permettant de liker un objet de la base
+		 
+		 	Iservice_dumy_fso      simple remote file system a n utiliser que pour des test
+		 
+		 	Iservice_sendGrid      permet d'envoyer des mail via l'api send grid v3
+		 
+		 	Iservice_trainingCoursesService      service de gestion des parcourts de formation
+		 
+		 	Iservice_orchestrator      service d'orchestration
+		 
+		 	Iservice_socket_io      service messagerie de soket.io
+		 
+		 	Iservice_tutor      service de gestion des message tutoré
+		 
+		 	Iservice_init_js      service qui retourne un init.js
+		 
+		 	Iservice_infra_admin      administration de l'infra
+		 
+		 	Imailtoinfra2      retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
+		 
+		 	Iservice_planned_tasks      Service de Taches planifiées
+		 
+		 	IService_scorm_gateway      service passerelle d'un package scorm vers l'interne
+		 
+		 	Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
+		 
+		 	Iservice_client_ftp      client ftps
+		 
+		 	Iservice_polo_celio      service de tirage au sort de polo
+		 
+		 	Iservice_pdfrip      service de creation de pdf
+		 
+		 	Iservice_signin      service d'enregistrement
+		 
+		 	Iservice_mindsUp      service minds up metier
+		 
+		 	Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
+		 
+		 	Iswagger_conv      convertisseur de swagger
+		 
+		 	Iservice_mongo      configure un service mongo
+		 
+		 	Iservice_celio_qcm_admin      service celio qcm admin
+		 
+		 	Iservice_ferrand      service ferrand
+		 
+		 	Iservice_petit_moulin      service petit moulin
+		 
+		 	Iservice_celio_qcm      service celio qcm
+		 
+		 	Iservice_comptoireOr      service_comptoireOr
+		 
+		 	Iservice_airport      service airport
+		 
+		 	Iservice_celio_back_task      service celio back_task
+		 
+		 	Iservice_celio_fid      service celio fid
+		 
+		 	Idpd_dervice      Proxy pou rles service c'evoi de colis de DPD
+		 
+		 	Iservice_celio_fid_admin      service celio fid admin
+		 
+		 	Iboisdor_service      service métier de boisdor
+		 
+		 	Iservice_licence_token      c'est un service en charge de valider les licences et retourner les configurations des applications web
+		 
+		 	Ir3_service      service métier de QBP
+		 
+		 	Idcbm_service      service métier de DCBM
+		 
+		 	IQBP_service      service métier de QBP
+		 
+		 	Iservice_fso      remote file system
+		 
+		 
+		*/
+		public service:HttpServiceBase<Interfaces.Iservice> ;
+		public admin_service:HttpServiceAdminBase<Interfaces.Iservice> ;
+
+		
+		 /**
+		 service d'accès a la sous-collection :service_sso
+		 desc: c'est un sso
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_sso:HttpServiceBase<Interfaces.Iservice_sso> ;
+		public admin_service_sso:HttpServiceAdminBase<Interfaces.Iservice_sso> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_init
+		 desc: service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_init:HttpServiceBase<Interfaces.Iservice_init> ;
+		public admin_service_init:HttpServiceAdminBase<Interfaces.Iservice_init> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_mailtoinfra
+		 desc: service qui permet de configurer l'authentification a partir d'un mail
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_mailtoinfra:HttpServiceBase<Interfaces.Iservice_mailtoinfra> ;
+		public admin_service_mailtoinfra:HttpServiceAdminBase<Interfaces.Iservice_mailtoinfra> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_goshabaGateway
+		 desc: passerelle pour goshaba
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_goshabaGateway:HttpServiceBase<Interfaces.Iservice_goshabaGateway> ;
+		public admin_service_goshabaGateway:HttpServiceAdminBase<Interfaces.Iservice_goshabaGateway> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_socketIo
+		 desc: communication temps réelle multi format
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_socketIo:HttpServiceBase<Interfaces.Iservice_socketIo> ;
+		public admin_service_socketIo:HttpServiceAdminBase<Interfaces.Iservice_socketIo> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_supervision
+		 desc: service_supervision
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_supervision:HttpServiceBase<Interfaces.Iservice_supervision> ;
+		public admin_service_supervision:HttpServiceAdminBase<Interfaces.Iservice_supervision> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_configuration
+		 desc: c'est le service de distribution des configurations des services
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_configuration:HttpServiceBase<Interfaces.Iservice_configuration> ;
+		public admin_service_configuration:HttpServiceAdminBase<Interfaces.Iservice_configuration> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_nginxConfigurator
+		 desc: service_nginxConfigurator
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_nginxConfigurator:HttpServiceBase<Interfaces.Iservice_nginxConfigurator> ;
+		public admin_service_nginxConfigurator:HttpServiceAdminBase<Interfaces.Iservice_nginxConfigurator> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_push_notification
+		 desc: Service pour gérer les notifications push des applications
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_push_notification:HttpServiceBase<Interfaces.Iservice_push_notification> ;
+		public admin_service_push_notification:HttpServiceAdminBase<Interfaces.Iservice_push_notification> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_like
+		 desc: service permettant de liker un objet de la base
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_like:HttpServiceBase<Interfaces.Iservice_like> ;
+		public admin_service_like:HttpServiceAdminBase<Interfaces.Iservice_like> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_dumy_fso
+		 desc: simple remote file system a n utiliser que pour des test
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_dumy_fso:HttpServiceBase<Interfaces.Iservice_dumy_fso> ;
+		public admin_service_dumy_fso:HttpServiceAdminBase<Interfaces.Iservice_dumy_fso> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_sendGrid
+		 desc: permet d'envoyer des mail via l'api send grid v3
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_sendGrid:HttpServiceBase<Interfaces.Iservice_sendGrid> ;
+		public admin_service_sendGrid:HttpServiceAdminBase<Interfaces.Iservice_sendGrid> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_trainingCoursesService
+		 desc: service de gestion des parcourts de formation
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_trainingCoursesService:HttpServiceBase<Interfaces.Iservice_trainingCoursesService> ;
+		public admin_service_trainingCoursesService:HttpServiceAdminBase<Interfaces.Iservice_trainingCoursesService> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_orchestrator
+		 desc: service d'orchestration
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_orchestrator:HttpServiceBase<Interfaces.Iservice_orchestrator> ;
+		public admin_service_orchestrator:HttpServiceAdminBase<Interfaces.Iservice_orchestrator> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_socket_io
+		 desc: service messagerie de soket.io
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_socket_io:HttpServiceBase<Interfaces.Iservice_socket_io> ;
+		public admin_service_socket_io:HttpServiceAdminBase<Interfaces.Iservice_socket_io> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_tutor
+		 desc: service de gestion des message tutoré
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_tutor:HttpServiceBase<Interfaces.Iservice_tutor> ;
+		public admin_service_tutor:HttpServiceAdminBase<Interfaces.Iservice_tutor> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_init_js
+		 desc: service qui retourne un init.js
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_init_js:HttpServiceBase<Interfaces.Iservice_init_js> ;
+		public admin_service_init_js:HttpServiceAdminBase<Interfaces.Iservice_init_js> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_infra_admin
+		 desc: administration de l'infra
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_infra_admin:HttpServiceBase<Interfaces.Iservice_infra_admin> ;
+		public admin_service_infra_admin:HttpServiceAdminBase<Interfaces.Iservice_infra_admin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :mailtoinfra2
+		 desc: retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public mailtoinfra2:HttpServiceBase<Interfaces.Imailtoinfra2> ;
+		public admin_mailtoinfra2:HttpServiceAdminBase<Interfaces.Imailtoinfra2> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_planned_tasks
+		 desc: Service de Taches planifiées
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_planned_tasks:HttpServiceBase<Interfaces.Iservice_planned_tasks> ;
+		public admin_service_planned_tasks:HttpServiceAdminBase<Interfaces.Iservice_planned_tasks> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :Service_scorm_gateway
+		 desc: service passerelle d'un package scorm vers l'interne
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public Service_scorm_gateway:HttpServiceBase<Interfaces.IService_scorm_gateway> ;
+		public admin_Service_scorm_gateway:HttpServiceAdminBase<Interfaces.IService_scorm_gateway> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_nginxMultiConfigurator
+		 desc: configuration d'un service nginx multi configuration
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_nginxMultiConfigurator:HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator> ;
+		public admin_service_nginxMultiConfigurator:HttpServiceAdminBase<Interfaces.Iservice_nginxMultiConfigurator> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_client_ftp
+		 desc: client ftps
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_client_ftp:HttpServiceBase<Interfaces.Iservice_client_ftp> ;
+		public admin_service_client_ftp:HttpServiceAdminBase<Interfaces.Iservice_client_ftp> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_polo_celio
+		 desc: service de tirage au sort de polo
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_polo_celio:HttpServiceBase<Interfaces.Iservice_polo_celio> ;
+		public admin_service_polo_celio:HttpServiceAdminBase<Interfaces.Iservice_polo_celio> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_pdfrip
+		 desc: service de creation de pdf
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_pdfrip:HttpServiceBase<Interfaces.Iservice_pdfrip> ;
+		public admin_service_pdfrip:HttpServiceAdminBase<Interfaces.Iservice_pdfrip> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_signin
+		 desc: service d'enregistrement
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_signin:HttpServiceBase<Interfaces.Iservice_signin> ;
+		public admin_service_signin:HttpServiceAdminBase<Interfaces.Iservice_signin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_mindsUp
+		 desc: service minds up metier
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
+		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_webAppConf
+		 desc: permet de générer les fichier de conf des app (css, js, ...)
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_webAppConf:HttpServiceBase<Interfaces.Iservice_webAppConf> ;
+		public admin_service_webAppConf:HttpServiceAdminBase<Interfaces.Iservice_webAppConf> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :swagger_conv
+		 desc: convertisseur de swagger
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public swagger_conv:HttpServiceBase<Interfaces.Iswagger_conv> ;
+		public admin_swagger_conv:HttpServiceAdminBase<Interfaces.Iswagger_conv> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_mongo
+		 desc: configure un service mongo
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_mongo:HttpServiceBase<Interfaces.Iservice_mongo> ;
+		public admin_service_mongo:HttpServiceAdminBase<Interfaces.Iservice_mongo> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_qcm_admin
+		 desc: service celio qcm admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_qcm_admin:HttpServiceBase<Interfaces.Iservice_celio_qcm_admin> ;
+		public admin_service_celio_qcm_admin:HttpServiceAdminBase<Interfaces.Iservice_celio_qcm_admin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_ferrand
+		 desc: service ferrand
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_ferrand:HttpServiceBase<Interfaces.Iservice_ferrand> ;
+		public admin_service_ferrand:HttpServiceAdminBase<Interfaces.Iservice_ferrand> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_petit_moulin
+		 desc: service petit moulin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_petit_moulin:HttpServiceBase<Interfaces.Iservice_petit_moulin> ;
+		public admin_service_petit_moulin:HttpServiceAdminBase<Interfaces.Iservice_petit_moulin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_qcm
+		 desc: service celio qcm
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_qcm:HttpServiceBase<Interfaces.Iservice_celio_qcm> ;
+		public admin_service_celio_qcm:HttpServiceAdminBase<Interfaces.Iservice_celio_qcm> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_comptoireOr
+		 desc: service_comptoireOr
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_comptoireOr:HttpServiceBase<Interfaces.Iservice_comptoireOr> ;
+		public admin_service_comptoireOr:HttpServiceAdminBase<Interfaces.Iservice_comptoireOr> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_airport
+		 desc: service airport
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_airport:HttpServiceBase<Interfaces.Iservice_airport> ;
+		public admin_service_airport:HttpServiceAdminBase<Interfaces.Iservice_airport> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_back_task
+		 desc: service celio back_task
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_back_task:HttpServiceBase<Interfaces.Iservice_celio_back_task> ;
+		public admin_service_celio_back_task:HttpServiceAdminBase<Interfaces.Iservice_celio_back_task> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_fid
+		 desc: service celio fid
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_fid:HttpServiceBase<Interfaces.Iservice_celio_fid> ;
+		public admin_service_celio_fid:HttpServiceAdminBase<Interfaces.Iservice_celio_fid> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :dpd_dervice
+		 desc: Proxy pou rles service c'evoi de colis de DPD
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public dpd_dervice:HttpServiceBase<Interfaces.Idpd_dervice> ;
+		public admin_dpd_dervice:HttpServiceAdminBase<Interfaces.Idpd_dervice> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_fid_admin
+		 desc: service celio fid admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_fid_admin:HttpServiceBase<Interfaces.Iservice_celio_fid_admin> ;
+		public admin_service_celio_fid_admin:HttpServiceAdminBase<Interfaces.Iservice_celio_fid_admin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :boisdor_service
+		 desc: service métier de boisdor
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public boisdor_service:HttpServiceBase<Interfaces.Iboisdor_service> ;
+		public admin_boisdor_service:HttpServiceAdminBase<Interfaces.Iboisdor_service> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_licence_token
+		 desc: c'est un service en charge de valider les licences et retourner les configurations des applications web
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_licence_token:HttpServiceBase<Interfaces.Iservice_licence_token> ;
+		public admin_service_licence_token:HttpServiceAdminBase<Interfaces.Iservice_licence_token> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :r3_service
+		 desc: service métier de QBP
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public r3_service:HttpServiceBase<Interfaces.Ir3_service> ;
+		public admin_r3_service:HttpServiceAdminBase<Interfaces.Ir3_service> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :dcbm_service
+		 desc: service métier de DCBM
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public dcbm_service:HttpServiceBase<Interfaces.Idcbm_service> ;
+		public admin_dcbm_service:HttpServiceAdminBase<Interfaces.Idcbm_service> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :QBP_service
+		 desc: service métier de QBP
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public QBP_service:HttpServiceBase<Interfaces.IQBP_service> ;
+		public admin_QBP_service:HttpServiceAdminBase<Interfaces.IQBP_service> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_fso
+		 desc: remote file system
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_fso:HttpServiceBase<Interfaces.Iservice_fso> ;
+		public admin_service_fso:HttpServiceAdminBase<Interfaces.Iservice_fso> ;
+
+		 
+	
+		/**
+		 service d'accès à la collection :bois_dor_mailer
+		 desc: liste de tous les templates de mail pour bois d'or
+		 
+
+		 
+		*/
+		public bois_dor_mailer:HttpServiceBase<Interfaces.Ibois_dor_mailer> ;
+		public admin_bois_dor_mailer:HttpServiceAdminBase<Interfaces.Ibois_dor_mailer> ;
+
+		
+	
+		/**
 		 service d'accès à la collection :application_configuration
 		 desc: c'est la configuration d'une application
 		 
@@ -850,9 +1404,13 @@ export class api_collection_plateform  {
 		 
 		 	Iapplication_configuration_r3_admin_seller      config r3 admin
 		 
-		 	Iapplication_configuration_r3_admin      config r3 admin
-		 
 		 	Iapplication_configuration_dcbm_static      dcbm static
+		 
+		 	Iapplication_configuration_dcbm      config DCBM
+		 
+		 	Iapplication_configuration_dcbm_admin      configiration de dcbm admin
+		 
+		 	Iapplication_configuration_r3_admin      config r3 admin
 		 
 		 
 		*/
@@ -1122,15 +1680,6 @@ export class api_collection_plateform  {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :application_configuration_r3_admin
-		 desc: config r3 admin
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public application_configuration_r3_admin:HttpServiceBase<Interfaces.Iapplication_configuration_r3_admin> ;
-		public admin_application_configuration_r3_admin:HttpServiceAdminBase<Interfaces.Iapplication_configuration_r3_admin> ;
-
-		 
-		 /**
 		 service d'accès a la sous-collection :application_configuration_dcbm_static
 		 desc: dcbm static
 		 info: vous ne pouvez voir que ce type d'objet
@@ -1139,550 +1688,33 @@ export class api_collection_plateform  {
 		public admin_application_configuration_dcbm_static:HttpServiceAdminBase<Interfaces.Iapplication_configuration_dcbm_static> ;
 
 		 
-	
-		/**
-		 service d'accès à la collection :application_instance
-		 desc: c'est le couple application configuration 
-		 
-
-		 
-		*/
-		public application_instance:HttpServiceBase<Interfaces.Iapplication_instance> ;
-		public admin_application_instance:HttpServiceAdminBase<Interfaces.Iapplication_instance> ;
-
-		
-	
-		/**
-		 service d'accès à la collection :service
-		 desc: identification du service
-		 
-		 info: vous pouvez voir tous les objets de cette collection y compris les enfants
-		 liste des interfaces héritées possibles:
-		 
-		 	Iservice_sso      c'est un sso
-		 
-		 	Iservice_init      service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
-		 
-		 	Iservice_mailtoinfra      service qui permet de configurer l'authentification a partir d'un mail
-		 
-		 	Iservice_licence_token      c'est un service en charge de valider les licences et retourner les configurations des applications web
-		 
-		 	Iservice_goshabaGateway      passerelle pour goshaba
-		 
-		 	Iservice_socketIo      communication temps réelle multi format
-		 
-		 	Iservice_supervision      service_supervision
-		 
-		 	Iservice_configuration      c'est le service de distribution des configurations des services
-		 
-		 	Iservice_nginxConfigurator      service_nginxConfigurator
-		 
-		 	Iservice_push_notification      Service pour gérer les notifications push des applications
-		 
-		 	Iservice_like      service permettant de liker un objet de la base
-		 
-		 	Iservice_dumy_fso      simple remote file system a n utiliser que pour des test
-		 
-		 	Iservice_sendGrid      permet d'envoyer des mail via l'api send grid v3
-		 
-		 	Iservice_trainingCoursesService      service de gestion des parcourts de formation
-		 
-		 	Iservice_orchestrator      service d'orchestration
-		 
-		 	Iservice_socket_io      service messagerie de soket.io
-		 
-		 	Iservice_tutor      service de gestion des message tutoré
-		 
-		 	Iservice_init_js      service qui retourne un init.js
-		 
-		 	Iservice_infra_admin      administration de l'infra
-		 
-		 	Imailtoinfra2      retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
-		 
-		 	Iservice_planned_tasks      Service de Taches planifiées
-		 
-		 	IService_scorm_gateway      service passerelle d'un package scorm vers l'interne
-		 
-		 	Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
-		 
-		 	Iservice_client_ftp      client ftps
-		 
-		 	Iservice_polo_celio      service de tirage au sort de polo
-		 
-		 	Iservice_fso      remote file system
-		 
-		 	Iservice_pdfrip      service de creation de pdf
-		 
-		 	Iservice_signin      service d'enregistrement
-		 
-		 	Iservice_mindsUp      service minds up metier
-		 
-		 	Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
-		 
-		 	Iswagger_conv      convertisseur de swagger
-		 
-		 	Iservice_mongo      configure un service mongo
-		 
-		 	Iservice_celio_qcm_admin      service celio qcm admin
-		 
-		 	Iservice_ferrand      service ferrand
-		 
-		 	Iservice_petit_moulin      service petit moulin
-		 
-		 	Iservice_celio_qcm      service celio qcm
-		 
-		 	Iservice_comptoireOr      service_comptoireOr
-		 
-		 	Iservice_airport      service airport
-		 
-		 	Iservice_celio_back_task      service celio back_task
-		 
-		 	Iservice_celio_fid      service celio fid
-		 
-		 	Idpd_dervice      Proxy pou rles service c'evoi de colis de DPD
-		 
-		 	Iservice_celio_fid_admin      service celio fid admin
-		 
-		 	Iboisdor_service      service métier de boisdor
-		 
-		 	IQBP_service      service métier de QBP
-		 
-		 	Iservice_qcbm      service_qcbm
-		 
-		 	Ir3_service      service métier de QBP
-		 
-		 
-		*/
-		public service:HttpServiceBase<Interfaces.Iservice> ;
-		public admin_service:HttpServiceAdminBase<Interfaces.Iservice> ;
-
-		
 		 /**
-		 service d'accès a la sous-collection :service_sso
-		 desc: c'est un sso
+		 service d'accès a la sous-collection :application_configuration_dcbm
+		 desc: config DCBM
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
-		public service_sso:HttpServiceBase<Interfaces.Iservice_sso> ;
-		public admin_service_sso:HttpServiceAdminBase<Interfaces.Iservice_sso> ;
+		public application_configuration_dcbm:HttpServiceBase<Interfaces.Iapplication_configuration_dcbm> ;
+		public admin_application_configuration_dcbm:HttpServiceAdminBase<Interfaces.Iapplication_configuration_dcbm> ;
 
 		 
 		 /**
-		 service d'accès a la sous-collection :service_init
-		 desc: service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
+		 service d'accès a la sous-collection :application_configuration_dcbm_admin
+		 desc: configiration de dcbm admin
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
-		public service_init:HttpServiceBase<Interfaces.Iservice_init> ;
-		public admin_service_init:HttpServiceAdminBase<Interfaces.Iservice_init> ;
+		public application_configuration_dcbm_admin:HttpServiceBase<Interfaces.Iapplication_configuration_dcbm_admin> ;
+		public admin_application_configuration_dcbm_admin:HttpServiceAdminBase<Interfaces.Iapplication_configuration_dcbm_admin> ;
 
 		 
 		 /**
-		 service d'accès a la sous-collection :service_mailtoinfra
-		 desc: service qui permet de configurer l'authentification a partir d'un mail
+		 service d'accès a la sous-collection :application_configuration_r3_admin
+		 desc: config r3 admin
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
-		public service_mailtoinfra:HttpServiceBase<Interfaces.Iservice_mailtoinfra> ;
-		public admin_service_mailtoinfra:HttpServiceAdminBase<Interfaces.Iservice_mailtoinfra> ;
+		public application_configuration_r3_admin:HttpServiceBase<Interfaces.Iapplication_configuration_r3_admin> ;
+		public admin_application_configuration_r3_admin:HttpServiceAdminBase<Interfaces.Iapplication_configuration_r3_admin> ;
 
 		 
-		 /**
-		 service d'accès a la sous-collection :service_licence_token
-		 desc: c'est un service en charge de valider les licences et retourner les configurations des applications web
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_licence_token:HttpServiceBase<Interfaces.Iservice_licence_token> ;
-		public admin_service_licence_token:HttpServiceAdminBase<Interfaces.Iservice_licence_token> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_goshabaGateway
-		 desc: passerelle pour goshaba
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_goshabaGateway:HttpServiceBase<Interfaces.Iservice_goshabaGateway> ;
-		public admin_service_goshabaGateway:HttpServiceAdminBase<Interfaces.Iservice_goshabaGateway> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_socketIo
-		 desc: communication temps réelle multi format
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_socketIo:HttpServiceBase<Interfaces.Iservice_socketIo> ;
-		public admin_service_socketIo:HttpServiceAdminBase<Interfaces.Iservice_socketIo> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_supervision
-		 desc: service_supervision
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_supervision:HttpServiceBase<Interfaces.Iservice_supervision> ;
-		public admin_service_supervision:HttpServiceAdminBase<Interfaces.Iservice_supervision> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_configuration
-		 desc: c'est le service de distribution des configurations des services
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_configuration:HttpServiceBase<Interfaces.Iservice_configuration> ;
-		public admin_service_configuration:HttpServiceAdminBase<Interfaces.Iservice_configuration> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_nginxConfigurator
-		 desc: service_nginxConfigurator
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_nginxConfigurator:HttpServiceBase<Interfaces.Iservice_nginxConfigurator> ;
-		public admin_service_nginxConfigurator:HttpServiceAdminBase<Interfaces.Iservice_nginxConfigurator> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_push_notification
-		 desc: Service pour gérer les notifications push des applications
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_push_notification:HttpServiceBase<Interfaces.Iservice_push_notification> ;
-		public admin_service_push_notification:HttpServiceAdminBase<Interfaces.Iservice_push_notification> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_like
-		 desc: service permettant de liker un objet de la base
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_like:HttpServiceBase<Interfaces.Iservice_like> ;
-		public admin_service_like:HttpServiceAdminBase<Interfaces.Iservice_like> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_dumy_fso
-		 desc: simple remote file system a n utiliser que pour des test
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_dumy_fso:HttpServiceBase<Interfaces.Iservice_dumy_fso> ;
-		public admin_service_dumy_fso:HttpServiceAdminBase<Interfaces.Iservice_dumy_fso> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_sendGrid
-		 desc: permet d'envoyer des mail via l'api send grid v3
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_sendGrid:HttpServiceBase<Interfaces.Iservice_sendGrid> ;
-		public admin_service_sendGrid:HttpServiceAdminBase<Interfaces.Iservice_sendGrid> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_trainingCoursesService
-		 desc: service de gestion des parcourts de formation
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_trainingCoursesService:HttpServiceBase<Interfaces.Iservice_trainingCoursesService> ;
-		public admin_service_trainingCoursesService:HttpServiceAdminBase<Interfaces.Iservice_trainingCoursesService> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_orchestrator
-		 desc: service d'orchestration
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_orchestrator:HttpServiceBase<Interfaces.Iservice_orchestrator> ;
-		public admin_service_orchestrator:HttpServiceAdminBase<Interfaces.Iservice_orchestrator> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_socket_io
-		 desc: service messagerie de soket.io
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_socket_io:HttpServiceBase<Interfaces.Iservice_socket_io> ;
-		public admin_service_socket_io:HttpServiceAdminBase<Interfaces.Iservice_socket_io> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_tutor
-		 desc: service de gestion des message tutoré
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_tutor:HttpServiceBase<Interfaces.Iservice_tutor> ;
-		public admin_service_tutor:HttpServiceAdminBase<Interfaces.Iservice_tutor> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_init_js
-		 desc: service qui retourne un init.js
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_init_js:HttpServiceBase<Interfaces.Iservice_init_js> ;
-		public admin_service_init_js:HttpServiceAdminBase<Interfaces.Iservice_init_js> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_infra_admin
-		 desc: administration de l'infra
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_infra_admin:HttpServiceBase<Interfaces.Iservice_infra_admin> ;
-		public admin_service_infra_admin:HttpServiceAdminBase<Interfaces.Iservice_infra_admin> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :mailtoinfra2
-		 desc: retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public mailtoinfra2:HttpServiceBase<Interfaces.Imailtoinfra2> ;
-		public admin_mailtoinfra2:HttpServiceAdminBase<Interfaces.Imailtoinfra2> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_planned_tasks
-		 desc: Service de Taches planifiées
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_planned_tasks:HttpServiceBase<Interfaces.Iservice_planned_tasks> ;
-		public admin_service_planned_tasks:HttpServiceAdminBase<Interfaces.Iservice_planned_tasks> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :Service_scorm_gateway
-		 desc: service passerelle d'un package scorm vers l'interne
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public Service_scorm_gateway:HttpServiceBase<Interfaces.IService_scorm_gateway> ;
-		public admin_Service_scorm_gateway:HttpServiceAdminBase<Interfaces.IService_scorm_gateway> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_nginxMultiConfigurator
-		 desc: configuration d'un service nginx multi configuration
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_nginxMultiConfigurator:HttpServiceBase<Interfaces.Iservice_nginxMultiConfigurator> ;
-		public admin_service_nginxMultiConfigurator:HttpServiceAdminBase<Interfaces.Iservice_nginxMultiConfigurator> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_client_ftp
-		 desc: client ftps
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_client_ftp:HttpServiceBase<Interfaces.Iservice_client_ftp> ;
-		public admin_service_client_ftp:HttpServiceAdminBase<Interfaces.Iservice_client_ftp> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_polo_celio
-		 desc: service de tirage au sort de polo
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_polo_celio:HttpServiceBase<Interfaces.Iservice_polo_celio> ;
-		public admin_service_polo_celio:HttpServiceAdminBase<Interfaces.Iservice_polo_celio> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_fso
-		 desc: remote file system
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_fso:HttpServiceBase<Interfaces.Iservice_fso> ;
-		public admin_service_fso:HttpServiceAdminBase<Interfaces.Iservice_fso> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_pdfrip
-		 desc: service de creation de pdf
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_pdfrip:HttpServiceBase<Interfaces.Iservice_pdfrip> ;
-		public admin_service_pdfrip:HttpServiceAdminBase<Interfaces.Iservice_pdfrip> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_signin
-		 desc: service d'enregistrement
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_signin:HttpServiceBase<Interfaces.Iservice_signin> ;
-		public admin_service_signin:HttpServiceAdminBase<Interfaces.Iservice_signin> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_mindsUp
-		 desc: service minds up metier
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_mindsUp:HttpServiceBase<Interfaces.Iservice_mindsUp> ;
-		public admin_service_mindsUp:HttpServiceAdminBase<Interfaces.Iservice_mindsUp> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_webAppConf
-		 desc: permet de générer les fichier de conf des app (css, js, ...)
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_webAppConf:HttpServiceBase<Interfaces.Iservice_webAppConf> ;
-		public admin_service_webAppConf:HttpServiceAdminBase<Interfaces.Iservice_webAppConf> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :swagger_conv
-		 desc: convertisseur de swagger
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public swagger_conv:HttpServiceBase<Interfaces.Iswagger_conv> ;
-		public admin_swagger_conv:HttpServiceAdminBase<Interfaces.Iswagger_conv> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_mongo
-		 desc: configure un service mongo
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_mongo:HttpServiceBase<Interfaces.Iservice_mongo> ;
-		public admin_service_mongo:HttpServiceAdminBase<Interfaces.Iservice_mongo> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_celio_qcm_admin
-		 desc: service celio qcm admin
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_qcm_admin:HttpServiceBase<Interfaces.Iservice_celio_qcm_admin> ;
-		public admin_service_celio_qcm_admin:HttpServiceAdminBase<Interfaces.Iservice_celio_qcm_admin> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_ferrand
-		 desc: service ferrand
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_ferrand:HttpServiceBase<Interfaces.Iservice_ferrand> ;
-		public admin_service_ferrand:HttpServiceAdminBase<Interfaces.Iservice_ferrand> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_petit_moulin
-		 desc: service petit moulin
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_petit_moulin:HttpServiceBase<Interfaces.Iservice_petit_moulin> ;
-		public admin_service_petit_moulin:HttpServiceAdminBase<Interfaces.Iservice_petit_moulin> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_celio_qcm
-		 desc: service celio qcm
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_qcm:HttpServiceBase<Interfaces.Iservice_celio_qcm> ;
-		public admin_service_celio_qcm:HttpServiceAdminBase<Interfaces.Iservice_celio_qcm> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_comptoireOr
-		 desc: service_comptoireOr
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_comptoireOr:HttpServiceBase<Interfaces.Iservice_comptoireOr> ;
-		public admin_service_comptoireOr:HttpServiceAdminBase<Interfaces.Iservice_comptoireOr> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_airport
-		 desc: service airport
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_airport:HttpServiceBase<Interfaces.Iservice_airport> ;
-		public admin_service_airport:HttpServiceAdminBase<Interfaces.Iservice_airport> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_celio_back_task
-		 desc: service celio back_task
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_back_task:HttpServiceBase<Interfaces.Iservice_celio_back_task> ;
-		public admin_service_celio_back_task:HttpServiceAdminBase<Interfaces.Iservice_celio_back_task> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_celio_fid
-		 desc: service celio fid
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_fid:HttpServiceBase<Interfaces.Iservice_celio_fid> ;
-		public admin_service_celio_fid:HttpServiceAdminBase<Interfaces.Iservice_celio_fid> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :dpd_dervice
-		 desc: Proxy pou rles service c'evoi de colis de DPD
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public dpd_dervice:HttpServiceBase<Interfaces.Idpd_dervice> ;
-		public admin_dpd_dervice:HttpServiceAdminBase<Interfaces.Idpd_dervice> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_celio_fid_admin
-		 desc: service celio fid admin
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_fid_admin:HttpServiceBase<Interfaces.Iservice_celio_fid_admin> ;
-		public admin_service_celio_fid_admin:HttpServiceAdminBase<Interfaces.Iservice_celio_fid_admin> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :boisdor_service
-		 desc: service métier de boisdor
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public boisdor_service:HttpServiceBase<Interfaces.Iboisdor_service> ;
-		public admin_boisdor_service:HttpServiceAdminBase<Interfaces.Iboisdor_service> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :QBP_service
-		 desc: service métier de QBP
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public QBP_service:HttpServiceBase<Interfaces.IQBP_service> ;
-		public admin_QBP_service:HttpServiceAdminBase<Interfaces.IQBP_service> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_qcbm
-		 desc: service_qcbm
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_qcbm:HttpServiceBase<Interfaces.Iservice_qcbm> ;
-		public admin_service_qcbm:HttpServiceAdminBase<Interfaces.Iservice_qcbm> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :r3_service
-		 desc: service métier de QBP
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public r3_service:HttpServiceBase<Interfaces.Ir3_service> ;
-		public admin_r3_service:HttpServiceAdminBase<Interfaces.Ir3_service> ;
-
-		 
-	
-		/**
-		 service d'accès à la collection :bois_dor_mailer
-		 desc: liste de tous les templates de mail pour bois d'or
-		 
-
-		 
-		*/
-		public bois_dor_mailer:HttpServiceBase<Interfaces.Ibois_dor_mailer> ;
-		public admin_bois_dor_mailer:HttpServiceAdminBase<Interfaces.Ibois_dor_mailer> ;
-
-		
 	
 	
 }

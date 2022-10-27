@@ -131,6 +131,254 @@ export class bdd_collection_plateform  {
 		
 	
 
+		this.application_instance= new HttpServiceBddBase<Interface.Iapplication_instance>( {bdd: conf.bdd , collectionName:'application_instances', entity:Index.Entity_application_instance , debug:conf.debug ,  collections:this }  )  ;
+		this.admin_application_instance= new HttpServiceBddAdminBase<Interface.Iapplication_instance>( {bdd: conf.bdd , collectionName:'application_instances', entity:Index.Entity_application_instance , debug:conf.debug} )  ;
+
+		
+	
+
+		this.service= new HttpServiceBddBase<Interface.Iservice>( {bdd: conf.bdd , collectionName:'services', entity:Index.Entity_service , debug:conf.debug ,  collections:this }  )  ;
+		this.admin_service= new HttpServiceBddAdminBase<Interface.Iservice>( {bdd: conf.bdd , collectionName:'services', entity:Index.Entity_service , debug:conf.debug} )  ;
+
+		
+		 
+		this.service_sso= new HttpServiceBddBase<Interface.Iservice_sso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_sso , _class:'service_sso' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_sso= new HttpServiceBddAdminBase<Interface.Iservice_sso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_sso , _class:'service_sso' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_init= new HttpServiceBddBase<Interface.Iservice_init>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_init , _class:'service_init' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_init= new HttpServiceBddAdminBase<Interface.Iservice_init>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_init , _class:'service_init' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_mailtoinfra= new HttpServiceBddBase<Interface.Iservice_mailtoinfra>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mailtoinfra , _class:'service_mailtoinfra' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_mailtoinfra= new HttpServiceBddAdminBase<Interface.Iservice_mailtoinfra>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mailtoinfra , _class:'service_mailtoinfra' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_goshabaGateway= new HttpServiceBddBase<Interface.Iservice_goshabaGateway>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_goshabaGateway , _class:'service_goshabaGateway' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_goshabaGateway= new HttpServiceBddAdminBase<Interface.Iservice_goshabaGateway>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_goshabaGateway , _class:'service_goshabaGateway' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_socketIo= new HttpServiceBddBase<Interface.Iservice_socketIo>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_socketIo , _class:'service_socketIo' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_socketIo= new HttpServiceBddAdminBase<Interface.Iservice_socketIo>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_socketIo , _class:'service_socketIo' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_supervision= new HttpServiceBddBase<Interface.Iservice_supervision>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_supervision , _class:'service_supervision' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_supervision= new HttpServiceBddAdminBase<Interface.Iservice_supervision>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_supervision , _class:'service_supervision' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_configuration= new HttpServiceBddBase<Interface.Iservice_configuration>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_configuration , _class:'service_configuration' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_configuration= new HttpServiceBddAdminBase<Interface.Iservice_configuration>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_configuration , _class:'service_configuration' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_nginxConfigurator= new HttpServiceBddBase<Interface.Iservice_nginxConfigurator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_nginxConfigurator , _class:'service_nginxConfigurator' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_nginxConfigurator= new HttpServiceBddAdminBase<Interface.Iservice_nginxConfigurator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_nginxConfigurator , _class:'service_nginxConfigurator' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_push_notification= new HttpServiceBddBase<Interface.Iservice_push_notification>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_push_notification , _class:'service_push_notification' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_push_notification= new HttpServiceBddAdminBase<Interface.Iservice_push_notification>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_push_notification , _class:'service_push_notification' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_like= new HttpServiceBddBase<Interface.Iservice_like>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_like , _class:'service_like' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_like= new HttpServiceBddAdminBase<Interface.Iservice_like>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_like , _class:'service_like' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_dumy_fso= new HttpServiceBddBase<Interface.Iservice_dumy_fso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_dumy_fso , _class:'service_dumy_fso' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_dumy_fso= new HttpServiceBddAdminBase<Interface.Iservice_dumy_fso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_dumy_fso , _class:'service_dumy_fso' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_sendGrid= new HttpServiceBddBase<Interface.Iservice_sendGrid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_sendGrid , _class:'service_sendGrid' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_sendGrid= new HttpServiceBddAdminBase<Interface.Iservice_sendGrid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_sendGrid , _class:'service_sendGrid' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_trainingCoursesService= new HttpServiceBddBase<Interface.Iservice_trainingCoursesService>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_trainingCoursesService , _class:'service_trainingCoursesService' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_trainingCoursesService= new HttpServiceBddAdminBase<Interface.Iservice_trainingCoursesService>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_trainingCoursesService , _class:'service_trainingCoursesService' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_orchestrator= new HttpServiceBddBase<Interface.Iservice_orchestrator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_orchestrator , _class:'service_orchestrator' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_orchestrator= new HttpServiceBddAdminBase<Interface.Iservice_orchestrator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_orchestrator , _class:'service_orchestrator' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_socket_io= new HttpServiceBddBase<Interface.Iservice_socket_io>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_socket_io , _class:'service_socket_io' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_socket_io= new HttpServiceBddAdminBase<Interface.Iservice_socket_io>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_socket_io , _class:'service_socket_io' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_tutor= new HttpServiceBddBase<Interface.Iservice_tutor>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_tutor , _class:'service_tutor' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_tutor= new HttpServiceBddAdminBase<Interface.Iservice_tutor>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_tutor , _class:'service_tutor' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_init_js= new HttpServiceBddBase<Interface.Iservice_init_js>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_init_js , _class:'service_init_js' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_init_js= new HttpServiceBddAdminBase<Interface.Iservice_init_js>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_init_js , _class:'service_init_js' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_infra_admin= new HttpServiceBddBase<Interface.Iservice_infra_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_infra_admin , _class:'service_infra_admin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_infra_admin= new HttpServiceBddAdminBase<Interface.Iservice_infra_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_infra_admin , _class:'service_infra_admin' , debug:conf.debug})  ;
+
+		 
+		 
+		this.mailtoinfra2= new HttpServiceBddBase<Interface.Imailtoinfra2>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_mailtoinfra2 , _class:'mailtoinfra2' , debug:conf.debug ,  collections:this })  ;
+		this.admin_mailtoinfra2= new HttpServiceBddAdminBase<Interface.Imailtoinfra2>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_mailtoinfra2 , _class:'mailtoinfra2' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_planned_tasks= new HttpServiceBddBase<Interface.Iservice_planned_tasks>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_planned_tasks , _class:'service_planned_tasks' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_planned_tasks= new HttpServiceBddAdminBase<Interface.Iservice_planned_tasks>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_planned_tasks , _class:'service_planned_tasks' , debug:conf.debug})  ;
+
+		 
+		 
+		this.Service_scorm_gateway= new HttpServiceBddBase<Interface.IService_scorm_gateway>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_Service_scorm_gateway , _class:'Service_scorm_gateway' , debug:conf.debug ,  collections:this })  ;
+		this.admin_Service_scorm_gateway= new HttpServiceBddAdminBase<Interface.IService_scorm_gateway>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_Service_scorm_gateway , _class:'Service_scorm_gateway' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_nginxMultiConfigurator= new HttpServiceBddBase<Interface.Iservice_nginxMultiConfigurator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_nginxMultiConfigurator , _class:'service_nginxMultiConfigurator' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_nginxMultiConfigurator= new HttpServiceBddAdminBase<Interface.Iservice_nginxMultiConfigurator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_nginxMultiConfigurator , _class:'service_nginxMultiConfigurator' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_client_ftp= new HttpServiceBddBase<Interface.Iservice_client_ftp>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_client_ftp , _class:'service_client_ftp' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_client_ftp= new HttpServiceBddAdminBase<Interface.Iservice_client_ftp>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_client_ftp , _class:'service_client_ftp' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_polo_celio= new HttpServiceBddBase<Interface.Iservice_polo_celio>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_polo_celio , _class:'service_polo_celio' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_polo_celio= new HttpServiceBddAdminBase<Interface.Iservice_polo_celio>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_polo_celio , _class:'service_polo_celio' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_pdfrip= new HttpServiceBddBase<Interface.Iservice_pdfrip>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_pdfrip , _class:'service_pdfrip' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_pdfrip= new HttpServiceBddAdminBase<Interface.Iservice_pdfrip>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_pdfrip , _class:'service_pdfrip' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_signin= new HttpServiceBddBase<Interface.Iservice_signin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_signin , _class:'service_signin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_signin= new HttpServiceBddAdminBase<Interface.Iservice_signin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_signin , _class:'service_signin' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_mindsUp= new HttpServiceBddBase<Interface.Iservice_mindsUp>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mindsUp , _class:'service_mindsUp' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_mindsUp= new HttpServiceBddAdminBase<Interface.Iservice_mindsUp>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mindsUp , _class:'service_mindsUp' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_webAppConf= new HttpServiceBddBase<Interface.Iservice_webAppConf>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_webAppConf , _class:'service_webAppConf' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_webAppConf= new HttpServiceBddAdminBase<Interface.Iservice_webAppConf>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_webAppConf , _class:'service_webAppConf' , debug:conf.debug})  ;
+
+		 
+		 
+		this.swagger_conv= new HttpServiceBddBase<Interface.Iswagger_conv>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_swagger_conv , _class:'swagger_conv' , debug:conf.debug ,  collections:this })  ;
+		this.admin_swagger_conv= new HttpServiceBddAdminBase<Interface.Iswagger_conv>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_swagger_conv , _class:'swagger_conv' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_mongo= new HttpServiceBddBase<Interface.Iservice_mongo>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mongo , _class:'service_mongo' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_mongo= new HttpServiceBddAdminBase<Interface.Iservice_mongo>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mongo , _class:'service_mongo' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_celio_qcm_admin= new HttpServiceBddBase<Interface.Iservice_celio_qcm_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_qcm_admin , _class:'service_celio_qcm_admin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_celio_qcm_admin= new HttpServiceBddAdminBase<Interface.Iservice_celio_qcm_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_qcm_admin , _class:'service_celio_qcm_admin' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_ferrand= new HttpServiceBddBase<Interface.Iservice_ferrand>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_ferrand , _class:'service_ferrand' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_ferrand= new HttpServiceBddAdminBase<Interface.Iservice_ferrand>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_ferrand , _class:'service_ferrand' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_petit_moulin= new HttpServiceBddBase<Interface.Iservice_petit_moulin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_petit_moulin , _class:'service_petit_moulin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_petit_moulin= new HttpServiceBddAdminBase<Interface.Iservice_petit_moulin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_petit_moulin , _class:'service_petit_moulin' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_celio_qcm= new HttpServiceBddBase<Interface.Iservice_celio_qcm>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_qcm , _class:'service_celio_qcm' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_celio_qcm= new HttpServiceBddAdminBase<Interface.Iservice_celio_qcm>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_qcm , _class:'service_celio_qcm' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_comptoireOr= new HttpServiceBddBase<Interface.Iservice_comptoireOr>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_comptoireOr , _class:'service_comptoireOr' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_comptoireOr= new HttpServiceBddAdminBase<Interface.Iservice_comptoireOr>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_comptoireOr , _class:'service_comptoireOr' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_airport= new HttpServiceBddBase<Interface.Iservice_airport>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_airport , _class:'service_airport' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_airport= new HttpServiceBddAdminBase<Interface.Iservice_airport>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_airport , _class:'service_airport' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_celio_back_task= new HttpServiceBddBase<Interface.Iservice_celio_back_task>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_back_task , _class:'service_celio_back_task' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_celio_back_task= new HttpServiceBddAdminBase<Interface.Iservice_celio_back_task>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_back_task , _class:'service_celio_back_task' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_celio_fid= new HttpServiceBddBase<Interface.Iservice_celio_fid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid , _class:'service_celio_fid' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_celio_fid= new HttpServiceBddAdminBase<Interface.Iservice_celio_fid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid , _class:'service_celio_fid' , debug:conf.debug})  ;
+
+		 
+		 
+		this.dpd_dervice= new HttpServiceBddBase<Interface.Idpd_dervice>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_dpd_dervice , _class:'dpd_dervice' , debug:conf.debug ,  collections:this })  ;
+		this.admin_dpd_dervice= new HttpServiceBddAdminBase<Interface.Idpd_dervice>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_dpd_dervice , _class:'dpd_dervice' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_celio_fid_admin= new HttpServiceBddBase<Interface.Iservice_celio_fid_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid_admin , _class:'service_celio_fid_admin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_celio_fid_admin= new HttpServiceBddAdminBase<Interface.Iservice_celio_fid_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid_admin , _class:'service_celio_fid_admin' , debug:conf.debug})  ;
+
+		 
+		 
+		this.boisdor_service= new HttpServiceBddBase<Interface.Iboisdor_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_boisdor_service , _class:'boisdor_service' , debug:conf.debug ,  collections:this })  ;
+		this.admin_boisdor_service= new HttpServiceBddAdminBase<Interface.Iboisdor_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_boisdor_service , _class:'boisdor_service' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_licence_token= new HttpServiceBddBase<Interface.Iservice_licence_token>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_licence_token , _class:'service_licence_token' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_licence_token= new HttpServiceBddAdminBase<Interface.Iservice_licence_token>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_licence_token , _class:'service_licence_token' , debug:conf.debug})  ;
+
+		 
+		 
+		this.r3_service= new HttpServiceBddBase<Interface.Ir3_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_r3_service , _class:'r3_service' , debug:conf.debug ,  collections:this })  ;
+		this.admin_r3_service= new HttpServiceBddAdminBase<Interface.Ir3_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_r3_service , _class:'r3_service' , debug:conf.debug})  ;
+
+		 
+		 
+		this.dcbm_service= new HttpServiceBddBase<Interface.Idcbm_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_dcbm_service , _class:'dcbm_service' , debug:conf.debug ,  collections:this })  ;
+		this.admin_dcbm_service= new HttpServiceBddAdminBase<Interface.Idcbm_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_dcbm_service , _class:'dcbm_service' , debug:conf.debug})  ;
+
+		 
+		 
+		this.QBP_service= new HttpServiceBddBase<Interface.IQBP_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_QBP_service , _class:'QBP_service' , debug:conf.debug ,  collections:this })  ;
+		this.admin_QBP_service= new HttpServiceBddAdminBase<Interface.IQBP_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_QBP_service , _class:'QBP_service' , debug:conf.debug})  ;
+
+		 
+		 
+		this.service_fso= new HttpServiceBddBase<Interface.Iservice_fso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_fso , _class:'service_fso' , debug:conf.debug ,  collections:this })  ;
+		this.admin_service_fso= new HttpServiceBddAdminBase<Interface.Iservice_fso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_fso , _class:'service_fso' , debug:conf.debug})  ;
+
+		 
+	
+
+		this.bois_dor_mailer= new HttpServiceBddBase<Interface.Ibois_dor_mailer>( {bdd: conf.bdd , collectionName:'bois_dor_mailers', entity:Index.Entity_bois_dor_mailer , debug:conf.debug ,  collections:this }  )  ;
+		this.admin_bois_dor_mailer= new HttpServiceBddAdminBase<Interface.Ibois_dor_mailer>( {bdd: conf.bdd , collectionName:'bois_dor_mailers', entity:Index.Entity_bois_dor_mailer , debug:conf.debug} )  ;
+
+		
+	
+
 		this.application_configuration= new HttpServiceBddBase<Interface.Iapplication_configuration>( {bdd: conf.bdd , collectionName:'application_configurations', entity:Index.Entity_application_configuration , debug:conf.debug ,  collections:this }  )  ;
 		this.admin_application_configuration= new HttpServiceBddAdminBase<Interface.Iapplication_configuration>( {bdd: conf.bdd , collectionName:'application_configurations', entity:Index.Entity_application_configuration , debug:conf.debug} )  ;
 
@@ -281,263 +529,25 @@ export class bdd_collection_plateform  {
 
 		 
 		 
-		this.application_configuration_r3_admin= new HttpServiceBddBase<Interface.Iapplication_configuration_r3_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_r3_admin , _class:'application_configuration_r3_admin' , debug:conf.debug ,  collections:this })  ;
-		this.admin_application_configuration_r3_admin= new HttpServiceBddAdminBase<Interface.Iapplication_configuration_r3_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_r3_admin , _class:'application_configuration_r3_admin' , debug:conf.debug})  ;
-
-		 
-		 
 		this.application_configuration_dcbm_static= new HttpServiceBddBase<Interface.Iapplication_configuration_dcbm_static>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_dcbm_static , _class:'application_configuration_dcbm_static' , debug:conf.debug ,  collections:this })  ;
 		this.admin_application_configuration_dcbm_static= new HttpServiceBddAdminBase<Interface.Iapplication_configuration_dcbm_static>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_dcbm_static , _class:'application_configuration_dcbm_static' , debug:conf.debug})  ;
 
 		 
-	
-
-		this.application_instance= new HttpServiceBddBase<Interface.Iapplication_instance>( {bdd: conf.bdd , collectionName:'application_instances', entity:Index.Entity_application_instance , debug:conf.debug ,  collections:this }  )  ;
-		this.admin_application_instance= new HttpServiceBddAdminBase<Interface.Iapplication_instance>( {bdd: conf.bdd , collectionName:'application_instances', entity:Index.Entity_application_instance , debug:conf.debug} )  ;
-
-		
-	
-
-		this.service= new HttpServiceBddBase<Interface.Iservice>( {bdd: conf.bdd , collectionName:'services', entity:Index.Entity_service , debug:conf.debug ,  collections:this }  )  ;
-		this.admin_service= new HttpServiceBddAdminBase<Interface.Iservice>( {bdd: conf.bdd , collectionName:'services', entity:Index.Entity_service , debug:conf.debug} )  ;
-
-		
 		 
-		this.service_sso= new HttpServiceBddBase<Interface.Iservice_sso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_sso , _class:'service_sso' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_sso= new HttpServiceBddAdminBase<Interface.Iservice_sso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_sso , _class:'service_sso' , debug:conf.debug})  ;
+		this.application_configuration_dcbm= new HttpServiceBddBase<Interface.Iapplication_configuration_dcbm>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_dcbm , _class:'application_configuration_dcbm' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_dcbm= new HttpServiceBddAdminBase<Interface.Iapplication_configuration_dcbm>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_dcbm , _class:'application_configuration_dcbm' , debug:conf.debug})  ;
 
 		 
 		 
-		this.service_init= new HttpServiceBddBase<Interface.Iservice_init>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_init , _class:'service_init' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_init= new HttpServiceBddAdminBase<Interface.Iservice_init>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_init , _class:'service_init' , debug:conf.debug})  ;
+		this.application_configuration_dcbm_admin= new HttpServiceBddBase<Interface.Iapplication_configuration_dcbm_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_dcbm_admin , _class:'application_configuration_dcbm_admin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_dcbm_admin= new HttpServiceBddAdminBase<Interface.Iapplication_configuration_dcbm_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_dcbm_admin , _class:'application_configuration_dcbm_admin' , debug:conf.debug})  ;
 
 		 
 		 
-		this.service_mailtoinfra= new HttpServiceBddBase<Interface.Iservice_mailtoinfra>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mailtoinfra , _class:'service_mailtoinfra' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_mailtoinfra= new HttpServiceBddAdminBase<Interface.Iservice_mailtoinfra>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mailtoinfra , _class:'service_mailtoinfra' , debug:conf.debug})  ;
+		this.application_configuration_r3_admin= new HttpServiceBddBase<Interface.Iapplication_configuration_r3_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_r3_admin , _class:'application_configuration_r3_admin' , debug:conf.debug ,  collections:this })  ;
+		this.admin_application_configuration_r3_admin= new HttpServiceBddAdminBase<Interface.Iapplication_configuration_r3_admin>({bdd: conf.bdd , collectionName:'application_configurations',  entity:Index.Entity_application_configuration_r3_admin , _class:'application_configuration_r3_admin' , debug:conf.debug})  ;
 
 		 
-		 
-		this.service_licence_token= new HttpServiceBddBase<Interface.Iservice_licence_token>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_licence_token , _class:'service_licence_token' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_licence_token= new HttpServiceBddAdminBase<Interface.Iservice_licence_token>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_licence_token , _class:'service_licence_token' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_goshabaGateway= new HttpServiceBddBase<Interface.Iservice_goshabaGateway>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_goshabaGateway , _class:'service_goshabaGateway' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_goshabaGateway= new HttpServiceBddAdminBase<Interface.Iservice_goshabaGateway>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_goshabaGateway , _class:'service_goshabaGateway' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_socketIo= new HttpServiceBddBase<Interface.Iservice_socketIo>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_socketIo , _class:'service_socketIo' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_socketIo= new HttpServiceBddAdminBase<Interface.Iservice_socketIo>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_socketIo , _class:'service_socketIo' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_supervision= new HttpServiceBddBase<Interface.Iservice_supervision>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_supervision , _class:'service_supervision' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_supervision= new HttpServiceBddAdminBase<Interface.Iservice_supervision>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_supervision , _class:'service_supervision' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_configuration= new HttpServiceBddBase<Interface.Iservice_configuration>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_configuration , _class:'service_configuration' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_configuration= new HttpServiceBddAdminBase<Interface.Iservice_configuration>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_configuration , _class:'service_configuration' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_nginxConfigurator= new HttpServiceBddBase<Interface.Iservice_nginxConfigurator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_nginxConfigurator , _class:'service_nginxConfigurator' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_nginxConfigurator= new HttpServiceBddAdminBase<Interface.Iservice_nginxConfigurator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_nginxConfigurator , _class:'service_nginxConfigurator' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_push_notification= new HttpServiceBddBase<Interface.Iservice_push_notification>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_push_notification , _class:'service_push_notification' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_push_notification= new HttpServiceBddAdminBase<Interface.Iservice_push_notification>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_push_notification , _class:'service_push_notification' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_like= new HttpServiceBddBase<Interface.Iservice_like>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_like , _class:'service_like' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_like= new HttpServiceBddAdminBase<Interface.Iservice_like>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_like , _class:'service_like' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_dumy_fso= new HttpServiceBddBase<Interface.Iservice_dumy_fso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_dumy_fso , _class:'service_dumy_fso' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_dumy_fso= new HttpServiceBddAdminBase<Interface.Iservice_dumy_fso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_dumy_fso , _class:'service_dumy_fso' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_sendGrid= new HttpServiceBddBase<Interface.Iservice_sendGrid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_sendGrid , _class:'service_sendGrid' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_sendGrid= new HttpServiceBddAdminBase<Interface.Iservice_sendGrid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_sendGrid , _class:'service_sendGrid' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_trainingCoursesService= new HttpServiceBddBase<Interface.Iservice_trainingCoursesService>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_trainingCoursesService , _class:'service_trainingCoursesService' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_trainingCoursesService= new HttpServiceBddAdminBase<Interface.Iservice_trainingCoursesService>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_trainingCoursesService , _class:'service_trainingCoursesService' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_orchestrator= new HttpServiceBddBase<Interface.Iservice_orchestrator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_orchestrator , _class:'service_orchestrator' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_orchestrator= new HttpServiceBddAdminBase<Interface.Iservice_orchestrator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_orchestrator , _class:'service_orchestrator' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_socket_io= new HttpServiceBddBase<Interface.Iservice_socket_io>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_socket_io , _class:'service_socket_io' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_socket_io= new HttpServiceBddAdminBase<Interface.Iservice_socket_io>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_socket_io , _class:'service_socket_io' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_tutor= new HttpServiceBddBase<Interface.Iservice_tutor>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_tutor , _class:'service_tutor' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_tutor= new HttpServiceBddAdminBase<Interface.Iservice_tutor>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_tutor , _class:'service_tutor' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_init_js= new HttpServiceBddBase<Interface.Iservice_init_js>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_init_js , _class:'service_init_js' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_init_js= new HttpServiceBddAdminBase<Interface.Iservice_init_js>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_init_js , _class:'service_init_js' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_infra_admin= new HttpServiceBddBase<Interface.Iservice_infra_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_infra_admin , _class:'service_infra_admin' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_infra_admin= new HttpServiceBddAdminBase<Interface.Iservice_infra_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_infra_admin , _class:'service_infra_admin' , debug:conf.debug})  ;
-
-		 
-		 
-		this.mailtoinfra2= new HttpServiceBddBase<Interface.Imailtoinfra2>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_mailtoinfra2 , _class:'mailtoinfra2' , debug:conf.debug ,  collections:this })  ;
-		this.admin_mailtoinfra2= new HttpServiceBddAdminBase<Interface.Imailtoinfra2>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_mailtoinfra2 , _class:'mailtoinfra2' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_planned_tasks= new HttpServiceBddBase<Interface.Iservice_planned_tasks>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_planned_tasks , _class:'service_planned_tasks' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_planned_tasks= new HttpServiceBddAdminBase<Interface.Iservice_planned_tasks>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_planned_tasks , _class:'service_planned_tasks' , debug:conf.debug})  ;
-
-		 
-		 
-		this.Service_scorm_gateway= new HttpServiceBddBase<Interface.IService_scorm_gateway>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_Service_scorm_gateway , _class:'Service_scorm_gateway' , debug:conf.debug ,  collections:this })  ;
-		this.admin_Service_scorm_gateway= new HttpServiceBddAdminBase<Interface.IService_scorm_gateway>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_Service_scorm_gateway , _class:'Service_scorm_gateway' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_nginxMultiConfigurator= new HttpServiceBddBase<Interface.Iservice_nginxMultiConfigurator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_nginxMultiConfigurator , _class:'service_nginxMultiConfigurator' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_nginxMultiConfigurator= new HttpServiceBddAdminBase<Interface.Iservice_nginxMultiConfigurator>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_nginxMultiConfigurator , _class:'service_nginxMultiConfigurator' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_client_ftp= new HttpServiceBddBase<Interface.Iservice_client_ftp>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_client_ftp , _class:'service_client_ftp' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_client_ftp= new HttpServiceBddAdminBase<Interface.Iservice_client_ftp>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_client_ftp , _class:'service_client_ftp' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_polo_celio= new HttpServiceBddBase<Interface.Iservice_polo_celio>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_polo_celio , _class:'service_polo_celio' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_polo_celio= new HttpServiceBddAdminBase<Interface.Iservice_polo_celio>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_polo_celio , _class:'service_polo_celio' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_fso= new HttpServiceBddBase<Interface.Iservice_fso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_fso , _class:'service_fso' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_fso= new HttpServiceBddAdminBase<Interface.Iservice_fso>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_fso , _class:'service_fso' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_pdfrip= new HttpServiceBddBase<Interface.Iservice_pdfrip>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_pdfrip , _class:'service_pdfrip' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_pdfrip= new HttpServiceBddAdminBase<Interface.Iservice_pdfrip>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_pdfrip , _class:'service_pdfrip' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_signin= new HttpServiceBddBase<Interface.Iservice_signin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_signin , _class:'service_signin' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_signin= new HttpServiceBddAdminBase<Interface.Iservice_signin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_signin , _class:'service_signin' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_mindsUp= new HttpServiceBddBase<Interface.Iservice_mindsUp>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mindsUp , _class:'service_mindsUp' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_mindsUp= new HttpServiceBddAdminBase<Interface.Iservice_mindsUp>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mindsUp , _class:'service_mindsUp' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_webAppConf= new HttpServiceBddBase<Interface.Iservice_webAppConf>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_webAppConf , _class:'service_webAppConf' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_webAppConf= new HttpServiceBddAdminBase<Interface.Iservice_webAppConf>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_webAppConf , _class:'service_webAppConf' , debug:conf.debug})  ;
-
-		 
-		 
-		this.swagger_conv= new HttpServiceBddBase<Interface.Iswagger_conv>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_swagger_conv , _class:'swagger_conv' , debug:conf.debug ,  collections:this })  ;
-		this.admin_swagger_conv= new HttpServiceBddAdminBase<Interface.Iswagger_conv>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_swagger_conv , _class:'swagger_conv' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_mongo= new HttpServiceBddBase<Interface.Iservice_mongo>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mongo , _class:'service_mongo' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_mongo= new HttpServiceBddAdminBase<Interface.Iservice_mongo>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_mongo , _class:'service_mongo' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_celio_qcm_admin= new HttpServiceBddBase<Interface.Iservice_celio_qcm_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_qcm_admin , _class:'service_celio_qcm_admin' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_celio_qcm_admin= new HttpServiceBddAdminBase<Interface.Iservice_celio_qcm_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_qcm_admin , _class:'service_celio_qcm_admin' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_ferrand= new HttpServiceBddBase<Interface.Iservice_ferrand>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_ferrand , _class:'service_ferrand' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_ferrand= new HttpServiceBddAdminBase<Interface.Iservice_ferrand>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_ferrand , _class:'service_ferrand' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_petit_moulin= new HttpServiceBddBase<Interface.Iservice_petit_moulin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_petit_moulin , _class:'service_petit_moulin' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_petit_moulin= new HttpServiceBddAdminBase<Interface.Iservice_petit_moulin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_petit_moulin , _class:'service_petit_moulin' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_celio_qcm= new HttpServiceBddBase<Interface.Iservice_celio_qcm>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_qcm , _class:'service_celio_qcm' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_celio_qcm= new HttpServiceBddAdminBase<Interface.Iservice_celio_qcm>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_qcm , _class:'service_celio_qcm' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_comptoireOr= new HttpServiceBddBase<Interface.Iservice_comptoireOr>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_comptoireOr , _class:'service_comptoireOr' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_comptoireOr= new HttpServiceBddAdminBase<Interface.Iservice_comptoireOr>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_comptoireOr , _class:'service_comptoireOr' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_airport= new HttpServiceBddBase<Interface.Iservice_airport>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_airport , _class:'service_airport' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_airport= new HttpServiceBddAdminBase<Interface.Iservice_airport>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_airport , _class:'service_airport' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_celio_back_task= new HttpServiceBddBase<Interface.Iservice_celio_back_task>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_back_task , _class:'service_celio_back_task' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_celio_back_task= new HttpServiceBddAdminBase<Interface.Iservice_celio_back_task>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_back_task , _class:'service_celio_back_task' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_celio_fid= new HttpServiceBddBase<Interface.Iservice_celio_fid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid , _class:'service_celio_fid' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_celio_fid= new HttpServiceBddAdminBase<Interface.Iservice_celio_fid>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid , _class:'service_celio_fid' , debug:conf.debug})  ;
-
-		 
-		 
-		this.dpd_dervice= new HttpServiceBddBase<Interface.Idpd_dervice>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_dpd_dervice , _class:'dpd_dervice' , debug:conf.debug ,  collections:this })  ;
-		this.admin_dpd_dervice= new HttpServiceBddAdminBase<Interface.Idpd_dervice>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_dpd_dervice , _class:'dpd_dervice' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_celio_fid_admin= new HttpServiceBddBase<Interface.Iservice_celio_fid_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid_admin , _class:'service_celio_fid_admin' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_celio_fid_admin= new HttpServiceBddAdminBase<Interface.Iservice_celio_fid_admin>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_celio_fid_admin , _class:'service_celio_fid_admin' , debug:conf.debug})  ;
-
-		 
-		 
-		this.boisdor_service= new HttpServiceBddBase<Interface.Iboisdor_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_boisdor_service , _class:'boisdor_service' , debug:conf.debug ,  collections:this })  ;
-		this.admin_boisdor_service= new HttpServiceBddAdminBase<Interface.Iboisdor_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_boisdor_service , _class:'boisdor_service' , debug:conf.debug})  ;
-
-		 
-		 
-		this.QBP_service= new HttpServiceBddBase<Interface.IQBP_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_QBP_service , _class:'QBP_service' , debug:conf.debug ,  collections:this })  ;
-		this.admin_QBP_service= new HttpServiceBddAdminBase<Interface.IQBP_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_QBP_service , _class:'QBP_service' , debug:conf.debug})  ;
-
-		 
-		 
-		this.service_qcbm= new HttpServiceBddBase<Interface.Iservice_qcbm>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_qcbm , _class:'service_qcbm' , debug:conf.debug ,  collections:this })  ;
-		this.admin_service_qcbm= new HttpServiceBddAdminBase<Interface.Iservice_qcbm>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_service_qcbm , _class:'service_qcbm' , debug:conf.debug})  ;
-
-		 
-		 
-		this.r3_service= new HttpServiceBddBase<Interface.Ir3_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_r3_service , _class:'r3_service' , debug:conf.debug ,  collections:this })  ;
-		this.admin_r3_service= new HttpServiceBddAdminBase<Interface.Ir3_service>({bdd: conf.bdd , collectionName:'services',  entity:Index.Entity_r3_service , _class:'r3_service' , debug:conf.debug})  ;
-
-		 
-	
-
-		this.bois_dor_mailer= new HttpServiceBddBase<Interface.Ibois_dor_mailer>( {bdd: conf.bdd , collectionName:'bois_dor_mailers', entity:Index.Entity_bois_dor_mailer , debug:conf.debug ,  collections:this }  )  ;
-		this.admin_bois_dor_mailer= new HttpServiceBddAdminBase<Interface.Ibois_dor_mailer>( {bdd: conf.bdd , collectionName:'bois_dor_mailers', entity:Index.Entity_bois_dor_mailer , debug:conf.debug} )  ;
-
-		
 	
 	}
 
@@ -794,6 +804,550 @@ export class bdd_collection_plateform  {
 		
 	
 		/**
+		 service d'accès à la collection :application_instance
+		 desc: c'est le couple application configuration 
+		 
+
+		 
+		*/
+		public application_instance:HttpServiceBddBase<Interface.Iapplication_instance> ;
+		public admin_application_instance:HttpServiceBddAdminBase<Interface.Iapplication_instance> ;
+
+		
+	
+		/**
+		 service d'accès à la collection :service
+		 desc: identification du service
+		 
+		 info: vous pouvez voir tous les objets de cette collection y compris les enfants
+		 liste des interfaces héritées possibles:
+		 
+		 	Iservice_sso      c'est un sso
+		 
+		 	Iservice_init      service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
+		 
+		 	Iservice_mailtoinfra      service qui permet de configurer l'authentification a partir d'un mail
+		 
+		 	Iservice_goshabaGateway      passerelle pour goshaba
+		 
+		 	Iservice_socketIo      communication temps réelle multi format
+		 
+		 	Iservice_supervision      service_supervision
+		 
+		 	Iservice_configuration      c'est le service de distribution des configurations des services
+		 
+		 	Iservice_nginxConfigurator      service_nginxConfigurator
+		 
+		 	Iservice_push_notification      Service pour gérer les notifications push des applications
+		 
+		 	Iservice_like      service permettant de liker un objet de la base
+		 
+		 	Iservice_dumy_fso      simple remote file system a n utiliser que pour des test
+		 
+		 	Iservice_sendGrid      permet d'envoyer des mail via l'api send grid v3
+		 
+		 	Iservice_trainingCoursesService      service de gestion des parcourts de formation
+		 
+		 	Iservice_orchestrator      service d'orchestration
+		 
+		 	Iservice_socket_io      service messagerie de soket.io
+		 
+		 	Iservice_tutor      service de gestion des message tutoré
+		 
+		 	Iservice_init_js      service qui retourne un init.js
+		 
+		 	Iservice_infra_admin      administration de l'infra
+		 
+		 	Imailtoinfra2      retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
+		 
+		 	Iservice_planned_tasks      Service de Taches planifiées
+		 
+		 	IService_scorm_gateway      service passerelle d'un package scorm vers l'interne
+		 
+		 	Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
+		 
+		 	Iservice_client_ftp      client ftps
+		 
+		 	Iservice_polo_celio      service de tirage au sort de polo
+		 
+		 	Iservice_pdfrip      service de creation de pdf
+		 
+		 	Iservice_signin      service d'enregistrement
+		 
+		 	Iservice_mindsUp      service minds up metier
+		 
+		 	Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
+		 
+		 	Iswagger_conv      convertisseur de swagger
+		 
+		 	Iservice_mongo      configure un service mongo
+		 
+		 	Iservice_celio_qcm_admin      service celio qcm admin
+		 
+		 	Iservice_ferrand      service ferrand
+		 
+		 	Iservice_petit_moulin      service petit moulin
+		 
+		 	Iservice_celio_qcm      service celio qcm
+		 
+		 	Iservice_comptoireOr      service_comptoireOr
+		 
+		 	Iservice_airport      service airport
+		 
+		 	Iservice_celio_back_task      service celio back_task
+		 
+		 	Iservice_celio_fid      service celio fid
+		 
+		 	Idpd_dervice      Proxy pou rles service c'evoi de colis de DPD
+		 
+		 	Iservice_celio_fid_admin      service celio fid admin
+		 
+		 	Iboisdor_service      service métier de boisdor
+		 
+		 	Iservice_licence_token      c'est un service en charge de valider les licences et retourner les configurations des applications web
+		 
+		 	Ir3_service      service métier de QBP
+		 
+		 	Idcbm_service      service métier de DCBM
+		 
+		 	IQBP_service      service métier de QBP
+		 
+		 	Iservice_fso      remote file system
+		 
+		 
+		*/
+		public service:HttpServiceBddBase<Interface.Iservice> ;
+		public admin_service:HttpServiceBddAdminBase<Interface.Iservice> ;
+
+		
+		 /**
+		 service d'accès a la sous-collection :service_sso
+		 desc: c'est un sso
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_sso:HttpServiceBddBase<Interface.Iservice_sso> ;
+		public admin_service_sso:HttpServiceBddAdminBase<Interface.Iservice_sso> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_init
+		 desc: service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_init:HttpServiceBddBase<Interface.Iservice_init> ;
+		public admin_service_init:HttpServiceBddAdminBase<Interface.Iservice_init> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_mailtoinfra
+		 desc: service qui permet de configurer l'authentification a partir d'un mail
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_mailtoinfra:HttpServiceBddBase<Interface.Iservice_mailtoinfra> ;
+		public admin_service_mailtoinfra:HttpServiceBddAdminBase<Interface.Iservice_mailtoinfra> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_goshabaGateway
+		 desc: passerelle pour goshaba
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_goshabaGateway:HttpServiceBddBase<Interface.Iservice_goshabaGateway> ;
+		public admin_service_goshabaGateway:HttpServiceBddAdminBase<Interface.Iservice_goshabaGateway> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_socketIo
+		 desc: communication temps réelle multi format
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_socketIo:HttpServiceBddBase<Interface.Iservice_socketIo> ;
+		public admin_service_socketIo:HttpServiceBddAdminBase<Interface.Iservice_socketIo> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_supervision
+		 desc: service_supervision
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_supervision:HttpServiceBddBase<Interface.Iservice_supervision> ;
+		public admin_service_supervision:HttpServiceBddAdminBase<Interface.Iservice_supervision> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_configuration
+		 desc: c'est le service de distribution des configurations des services
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_configuration:HttpServiceBddBase<Interface.Iservice_configuration> ;
+		public admin_service_configuration:HttpServiceBddAdminBase<Interface.Iservice_configuration> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_nginxConfigurator
+		 desc: service_nginxConfigurator
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_nginxConfigurator:HttpServiceBddBase<Interface.Iservice_nginxConfigurator> ;
+		public admin_service_nginxConfigurator:HttpServiceBddAdminBase<Interface.Iservice_nginxConfigurator> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_push_notification
+		 desc: Service pour gérer les notifications push des applications
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_push_notification:HttpServiceBddBase<Interface.Iservice_push_notification> ;
+		public admin_service_push_notification:HttpServiceBddAdminBase<Interface.Iservice_push_notification> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_like
+		 desc: service permettant de liker un objet de la base
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_like:HttpServiceBddBase<Interface.Iservice_like> ;
+		public admin_service_like:HttpServiceBddAdminBase<Interface.Iservice_like> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_dumy_fso
+		 desc: simple remote file system a n utiliser que pour des test
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_dumy_fso:HttpServiceBddBase<Interface.Iservice_dumy_fso> ;
+		public admin_service_dumy_fso:HttpServiceBddAdminBase<Interface.Iservice_dumy_fso> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_sendGrid
+		 desc: permet d'envoyer des mail via l'api send grid v3
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_sendGrid:HttpServiceBddBase<Interface.Iservice_sendGrid> ;
+		public admin_service_sendGrid:HttpServiceBddAdminBase<Interface.Iservice_sendGrid> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_trainingCoursesService
+		 desc: service de gestion des parcourts de formation
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_trainingCoursesService:HttpServiceBddBase<Interface.Iservice_trainingCoursesService> ;
+		public admin_service_trainingCoursesService:HttpServiceBddAdminBase<Interface.Iservice_trainingCoursesService> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_orchestrator
+		 desc: service d'orchestration
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_orchestrator:HttpServiceBddBase<Interface.Iservice_orchestrator> ;
+		public admin_service_orchestrator:HttpServiceBddAdminBase<Interface.Iservice_orchestrator> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_socket_io
+		 desc: service messagerie de soket.io
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_socket_io:HttpServiceBddBase<Interface.Iservice_socket_io> ;
+		public admin_service_socket_io:HttpServiceBddAdminBase<Interface.Iservice_socket_io> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_tutor
+		 desc: service de gestion des message tutoré
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_tutor:HttpServiceBddBase<Interface.Iservice_tutor> ;
+		public admin_service_tutor:HttpServiceBddAdminBase<Interface.Iservice_tutor> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_init_js
+		 desc: service qui retourne un init.js
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_init_js:HttpServiceBddBase<Interface.Iservice_init_js> ;
+		public admin_service_init_js:HttpServiceBddAdminBase<Interface.Iservice_init_js> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_infra_admin
+		 desc: administration de l'infra
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_infra_admin:HttpServiceBddBase<Interface.Iservice_infra_admin> ;
+		public admin_service_infra_admin:HttpServiceBddAdminBase<Interface.Iservice_infra_admin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :mailtoinfra2
+		 desc: retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public mailtoinfra2:HttpServiceBddBase<Interface.Imailtoinfra2> ;
+		public admin_mailtoinfra2:HttpServiceBddAdminBase<Interface.Imailtoinfra2> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_planned_tasks
+		 desc: Service de Taches planifiées
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_planned_tasks:HttpServiceBddBase<Interface.Iservice_planned_tasks> ;
+		public admin_service_planned_tasks:HttpServiceBddAdminBase<Interface.Iservice_planned_tasks> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :Service_scorm_gateway
+		 desc: service passerelle d'un package scorm vers l'interne
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public Service_scorm_gateway:HttpServiceBddBase<Interface.IService_scorm_gateway> ;
+		public admin_Service_scorm_gateway:HttpServiceBddAdminBase<Interface.IService_scorm_gateway> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_nginxMultiConfigurator
+		 desc: configuration d'un service nginx multi configuration
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_nginxMultiConfigurator:HttpServiceBddBase<Interface.Iservice_nginxMultiConfigurator> ;
+		public admin_service_nginxMultiConfigurator:HttpServiceBddAdminBase<Interface.Iservice_nginxMultiConfigurator> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_client_ftp
+		 desc: client ftps
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_client_ftp:HttpServiceBddBase<Interface.Iservice_client_ftp> ;
+		public admin_service_client_ftp:HttpServiceBddAdminBase<Interface.Iservice_client_ftp> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_polo_celio
+		 desc: service de tirage au sort de polo
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_polo_celio:HttpServiceBddBase<Interface.Iservice_polo_celio> ;
+		public admin_service_polo_celio:HttpServiceBddAdminBase<Interface.Iservice_polo_celio> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_pdfrip
+		 desc: service de creation de pdf
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_pdfrip:HttpServiceBddBase<Interface.Iservice_pdfrip> ;
+		public admin_service_pdfrip:HttpServiceBddAdminBase<Interface.Iservice_pdfrip> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_signin
+		 desc: service d'enregistrement
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_signin:HttpServiceBddBase<Interface.Iservice_signin> ;
+		public admin_service_signin:HttpServiceBddAdminBase<Interface.Iservice_signin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_mindsUp
+		 desc: service minds up metier
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_mindsUp:HttpServiceBddBase<Interface.Iservice_mindsUp> ;
+		public admin_service_mindsUp:HttpServiceBddAdminBase<Interface.Iservice_mindsUp> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_webAppConf
+		 desc: permet de générer les fichier de conf des app (css, js, ...)
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_webAppConf:HttpServiceBddBase<Interface.Iservice_webAppConf> ;
+		public admin_service_webAppConf:HttpServiceBddAdminBase<Interface.Iservice_webAppConf> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :swagger_conv
+		 desc: convertisseur de swagger
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public swagger_conv:HttpServiceBddBase<Interface.Iswagger_conv> ;
+		public admin_swagger_conv:HttpServiceBddAdminBase<Interface.Iswagger_conv> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_mongo
+		 desc: configure un service mongo
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_mongo:HttpServiceBddBase<Interface.Iservice_mongo> ;
+		public admin_service_mongo:HttpServiceBddAdminBase<Interface.Iservice_mongo> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_qcm_admin
+		 desc: service celio qcm admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_qcm_admin:HttpServiceBddBase<Interface.Iservice_celio_qcm_admin> ;
+		public admin_service_celio_qcm_admin:HttpServiceBddAdminBase<Interface.Iservice_celio_qcm_admin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_ferrand
+		 desc: service ferrand
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_ferrand:HttpServiceBddBase<Interface.Iservice_ferrand> ;
+		public admin_service_ferrand:HttpServiceBddAdminBase<Interface.Iservice_ferrand> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_petit_moulin
+		 desc: service petit moulin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_petit_moulin:HttpServiceBddBase<Interface.Iservice_petit_moulin> ;
+		public admin_service_petit_moulin:HttpServiceBddAdminBase<Interface.Iservice_petit_moulin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_qcm
+		 desc: service celio qcm
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_qcm:HttpServiceBddBase<Interface.Iservice_celio_qcm> ;
+		public admin_service_celio_qcm:HttpServiceBddAdminBase<Interface.Iservice_celio_qcm> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_comptoireOr
+		 desc: service_comptoireOr
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_comptoireOr:HttpServiceBddBase<Interface.Iservice_comptoireOr> ;
+		public admin_service_comptoireOr:HttpServiceBddAdminBase<Interface.Iservice_comptoireOr> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_airport
+		 desc: service airport
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_airport:HttpServiceBddBase<Interface.Iservice_airport> ;
+		public admin_service_airport:HttpServiceBddAdminBase<Interface.Iservice_airport> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_back_task
+		 desc: service celio back_task
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_back_task:HttpServiceBddBase<Interface.Iservice_celio_back_task> ;
+		public admin_service_celio_back_task:HttpServiceBddAdminBase<Interface.Iservice_celio_back_task> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_fid
+		 desc: service celio fid
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_fid:HttpServiceBddBase<Interface.Iservice_celio_fid> ;
+		public admin_service_celio_fid:HttpServiceBddAdminBase<Interface.Iservice_celio_fid> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :dpd_dervice
+		 desc: Proxy pou rles service c'evoi de colis de DPD
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public dpd_dervice:HttpServiceBddBase<Interface.Idpd_dervice> ;
+		public admin_dpd_dervice:HttpServiceBddAdminBase<Interface.Idpd_dervice> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_celio_fid_admin
+		 desc: service celio fid admin
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_celio_fid_admin:HttpServiceBddBase<Interface.Iservice_celio_fid_admin> ;
+		public admin_service_celio_fid_admin:HttpServiceBddAdminBase<Interface.Iservice_celio_fid_admin> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :boisdor_service
+		 desc: service métier de boisdor
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public boisdor_service:HttpServiceBddBase<Interface.Iboisdor_service> ;
+		public admin_boisdor_service:HttpServiceBddAdminBase<Interface.Iboisdor_service> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_licence_token
+		 desc: c'est un service en charge de valider les licences et retourner les configurations des applications web
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_licence_token:HttpServiceBddBase<Interface.Iservice_licence_token> ;
+		public admin_service_licence_token:HttpServiceBddAdminBase<Interface.Iservice_licence_token> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :r3_service
+		 desc: service métier de QBP
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public r3_service:HttpServiceBddBase<Interface.Ir3_service> ;
+		public admin_r3_service:HttpServiceBddAdminBase<Interface.Ir3_service> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :dcbm_service
+		 desc: service métier de DCBM
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public dcbm_service:HttpServiceBddBase<Interface.Idcbm_service> ;
+		public admin_dcbm_service:HttpServiceBddAdminBase<Interface.Idcbm_service> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :QBP_service
+		 desc: service métier de QBP
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public QBP_service:HttpServiceBddBase<Interface.IQBP_service> ;
+		public admin_QBP_service:HttpServiceBddAdminBase<Interface.IQBP_service> ;
+
+		 
+		 /**
+		 service d'accès a la sous-collection :service_fso
+		 desc: remote file system
+		 info: vous ne pouvez voir que ce type d'objet
+		*/
+		public service_fso:HttpServiceBddBase<Interface.Iservice_fso> ;
+		public admin_service_fso:HttpServiceBddAdminBase<Interface.Iservice_fso> ;
+
+		 
+	
+		/**
+		 service d'accès à la collection :bois_dor_mailer
+		 desc: liste de tous les templates de mail pour bois d'or
+		 
+
+		 
+		*/
+		public bois_dor_mailer:HttpServiceBddBase<Interface.Ibois_dor_mailer> ;
+		public admin_bois_dor_mailer:HttpServiceBddAdminBase<Interface.Ibois_dor_mailer> ;
+
+		
+	
+		/**
 		 service d'accès à la collection :application_configuration
 		 desc: c'est la configuration d'une application
 		 
@@ -858,9 +1412,13 @@ export class bdd_collection_plateform  {
 		 
 		 	Iapplication_configuration_r3_admin_seller      config r3 admin
 		 
-		 	Iapplication_configuration_r3_admin      config r3 admin
-		 
 		 	Iapplication_configuration_dcbm_static      dcbm static
+		 
+		 	Iapplication_configuration_dcbm      config DCBM
+		 
+		 	Iapplication_configuration_dcbm_admin      configiration de dcbm admin
+		 
+		 	Iapplication_configuration_r3_admin      config r3 admin
 		 
 		 
 		*/
@@ -1130,15 +1688,6 @@ export class bdd_collection_plateform  {
 
 		 
 		 /**
-		 service d'accès a la sous-collection :application_configuration_r3_admin
-		 desc: config r3 admin
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public application_configuration_r3_admin:HttpServiceBddBase<Interface.Iapplication_configuration_r3_admin> ;
-		public admin_application_configuration_r3_admin:HttpServiceBddAdminBase<Interface.Iapplication_configuration_r3_admin> ;
-
-		 
-		 /**
 		 service d'accès a la sous-collection :application_configuration_dcbm_static
 		 desc: dcbm static
 		 info: vous ne pouvez voir que ce type d'objet
@@ -1147,550 +1696,33 @@ export class bdd_collection_plateform  {
 		public admin_application_configuration_dcbm_static:HttpServiceBddAdminBase<Interface.Iapplication_configuration_dcbm_static> ;
 
 		 
-	
-		/**
-		 service d'accès à la collection :application_instance
-		 desc: c'est le couple application configuration 
-		 
-
-		 
-		*/
-		public application_instance:HttpServiceBddBase<Interface.Iapplication_instance> ;
-		public admin_application_instance:HttpServiceBddAdminBase<Interface.Iapplication_instance> ;
-
-		
-	
-		/**
-		 service d'accès à la collection :service
-		 desc: identification du service
-		 
-		 info: vous pouvez voir tous les objets de cette collection y compris les enfants
-		 liste des interfaces héritées possibles:
-		 
-		 	Iservice_sso      c'est un sso
-		 
-		 	Iservice_init      service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
-		 
-		 	Iservice_mailtoinfra      service qui permet de configurer l'authentification a partir d'un mail
-		 
-		 	Iservice_licence_token      c'est un service en charge de valider les licences et retourner les configurations des applications web
-		 
-		 	Iservice_goshabaGateway      passerelle pour goshaba
-		 
-		 	Iservice_socketIo      communication temps réelle multi format
-		 
-		 	Iservice_supervision      service_supervision
-		 
-		 	Iservice_configuration      c'est le service de distribution des configurations des services
-		 
-		 	Iservice_nginxConfigurator      service_nginxConfigurator
-		 
-		 	Iservice_push_notification      Service pour gérer les notifications push des applications
-		 
-		 	Iservice_like      service permettant de liker un objet de la base
-		 
-		 	Iservice_dumy_fso      simple remote file system a n utiliser que pour des test
-		 
-		 	Iservice_sendGrid      permet d'envoyer des mail via l'api send grid v3
-		 
-		 	Iservice_trainingCoursesService      service de gestion des parcourts de formation
-		 
-		 	Iservice_orchestrator      service d'orchestration
-		 
-		 	Iservice_socket_io      service messagerie de soket.io
-		 
-		 	Iservice_tutor      service de gestion des message tutoré
-		 
-		 	Iservice_init_js      service qui retourne un init.js
-		 
-		 	Iservice_infra_admin      administration de l'infra
-		 
-		 	Imailtoinfra2      retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
-		 
-		 	Iservice_planned_tasks      Service de Taches planifiées
-		 
-		 	IService_scorm_gateway      service passerelle d'un package scorm vers l'interne
-		 
-		 	Iservice_nginxMultiConfigurator      configuration d'un service nginx multi configuration
-		 
-		 	Iservice_client_ftp      client ftps
-		 
-		 	Iservice_polo_celio      service de tirage au sort de polo
-		 
-		 	Iservice_fso      remote file system
-		 
-		 	Iservice_pdfrip      service de creation de pdf
-		 
-		 	Iservice_signin      service d'enregistrement
-		 
-		 	Iservice_mindsUp      service minds up metier
-		 
-		 	Iservice_webAppConf      permet de générer les fichier de conf des app (css, js, ...)
-		 
-		 	Iswagger_conv      convertisseur de swagger
-		 
-		 	Iservice_mongo      configure un service mongo
-		 
-		 	Iservice_celio_qcm_admin      service celio qcm admin
-		 
-		 	Iservice_ferrand      service ferrand
-		 
-		 	Iservice_petit_moulin      service petit moulin
-		 
-		 	Iservice_celio_qcm      service celio qcm
-		 
-		 	Iservice_comptoireOr      service_comptoireOr
-		 
-		 	Iservice_airport      service airport
-		 
-		 	Iservice_celio_back_task      service celio back_task
-		 
-		 	Iservice_celio_fid      service celio fid
-		 
-		 	Idpd_dervice      Proxy pou rles service c'evoi de colis de DPD
-		 
-		 	Iservice_celio_fid_admin      service celio fid admin
-		 
-		 	Iboisdor_service      service métier de boisdor
-		 
-		 	IQBP_service      service métier de QBP
-		 
-		 	Iservice_qcbm      service_qcbm
-		 
-		 	Ir3_service      service métier de QBP
-		 
-		 
-		*/
-		public service:HttpServiceBddBase<Interface.Iservice> ;
-		public admin_service:HttpServiceBddAdminBase<Interface.Iservice> ;
-
-		
 		 /**
-		 service d'accès a la sous-collection :service_sso
-		 desc: c'est un sso
+		 service d'accès a la sous-collection :application_configuration_dcbm
+		 desc: config DCBM
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
-		public service_sso:HttpServiceBddBase<Interface.Iservice_sso> ;
-		public admin_service_sso:HttpServiceBddAdminBase<Interface.Iservice_sso> ;
+		public application_configuration_dcbm:HttpServiceBddBase<Interface.Iapplication_configuration_dcbm> ;
+		public admin_application_configuration_dcbm:HttpServiceBddAdminBase<Interface.Iapplication_configuration_dcbm> ;
 
 		 
 		 /**
-		 service d'accès a la sous-collection :service_init
-		 desc: service qui génére la configuration d'une application cliente (url du sso, id client, id_instance...)
+		 service d'accès a la sous-collection :application_configuration_dcbm_admin
+		 desc: configiration de dcbm admin
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
-		public service_init:HttpServiceBddBase<Interface.Iservice_init> ;
-		public admin_service_init:HttpServiceBddAdminBase<Interface.Iservice_init> ;
+		public application_configuration_dcbm_admin:HttpServiceBddBase<Interface.Iapplication_configuration_dcbm_admin> ;
+		public admin_application_configuration_dcbm_admin:HttpServiceBddAdminBase<Interface.Iapplication_configuration_dcbm_admin> ;
 
 		 
 		 /**
-		 service d'accès a la sous-collection :service_mailtoinfra
-		 desc: service qui permet de configurer l'authentification a partir d'un mail
+		 service d'accès a la sous-collection :application_configuration_r3_admin
+		 desc: config r3 admin
 		 info: vous ne pouvez voir que ce type d'objet
 		*/
-		public service_mailtoinfra:HttpServiceBddBase<Interface.Iservice_mailtoinfra> ;
-		public admin_service_mailtoinfra:HttpServiceBddAdminBase<Interface.Iservice_mailtoinfra> ;
+		public application_configuration_r3_admin:HttpServiceBddBase<Interface.Iapplication_configuration_r3_admin> ;
+		public admin_application_configuration_r3_admin:HttpServiceBddAdminBase<Interface.Iapplication_configuration_r3_admin> ;
 
 		 
-		 /**
-		 service d'accès a la sous-collection :service_licence_token
-		 desc: c'est un service en charge de valider les licences et retourner les configurations des applications web
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_licence_token:HttpServiceBddBase<Interface.Iservice_licence_token> ;
-		public admin_service_licence_token:HttpServiceBddAdminBase<Interface.Iservice_licence_token> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_goshabaGateway
-		 desc: passerelle pour goshaba
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_goshabaGateway:HttpServiceBddBase<Interface.Iservice_goshabaGateway> ;
-		public admin_service_goshabaGateway:HttpServiceBddAdminBase<Interface.Iservice_goshabaGateway> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_socketIo
-		 desc: communication temps réelle multi format
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_socketIo:HttpServiceBddBase<Interface.Iservice_socketIo> ;
-		public admin_service_socketIo:HttpServiceBddAdminBase<Interface.Iservice_socketIo> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_supervision
-		 desc: service_supervision
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_supervision:HttpServiceBddBase<Interface.Iservice_supervision> ;
-		public admin_service_supervision:HttpServiceBddAdminBase<Interface.Iservice_supervision> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_configuration
-		 desc: c'est le service de distribution des configurations des services
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_configuration:HttpServiceBddBase<Interface.Iservice_configuration> ;
-		public admin_service_configuration:HttpServiceBddAdminBase<Interface.Iservice_configuration> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_nginxConfigurator
-		 desc: service_nginxConfigurator
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_nginxConfigurator:HttpServiceBddBase<Interface.Iservice_nginxConfigurator> ;
-		public admin_service_nginxConfigurator:HttpServiceBddAdminBase<Interface.Iservice_nginxConfigurator> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_push_notification
-		 desc: Service pour gérer les notifications push des applications
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_push_notification:HttpServiceBddBase<Interface.Iservice_push_notification> ;
-		public admin_service_push_notification:HttpServiceBddAdminBase<Interface.Iservice_push_notification> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_like
-		 desc: service permettant de liker un objet de la base
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_like:HttpServiceBddBase<Interface.Iservice_like> ;
-		public admin_service_like:HttpServiceBddAdminBase<Interface.Iservice_like> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_dumy_fso
-		 desc: simple remote file system a n utiliser que pour des test
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_dumy_fso:HttpServiceBddBase<Interface.Iservice_dumy_fso> ;
-		public admin_service_dumy_fso:HttpServiceBddAdminBase<Interface.Iservice_dumy_fso> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_sendGrid
-		 desc: permet d'envoyer des mail via l'api send grid v3
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_sendGrid:HttpServiceBddBase<Interface.Iservice_sendGrid> ;
-		public admin_service_sendGrid:HttpServiceBddAdminBase<Interface.Iservice_sendGrid> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_trainingCoursesService
-		 desc: service de gestion des parcourts de formation
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_trainingCoursesService:HttpServiceBddBase<Interface.Iservice_trainingCoursesService> ;
-		public admin_service_trainingCoursesService:HttpServiceBddAdminBase<Interface.Iservice_trainingCoursesService> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_orchestrator
-		 desc: service d'orchestration
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_orchestrator:HttpServiceBddBase<Interface.Iservice_orchestrator> ;
-		public admin_service_orchestrator:HttpServiceBddAdminBase<Interface.Iservice_orchestrator> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_socket_io
-		 desc: service messagerie de soket.io
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_socket_io:HttpServiceBddBase<Interface.Iservice_socket_io> ;
-		public admin_service_socket_io:HttpServiceBddAdminBase<Interface.Iservice_socket_io> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_tutor
-		 desc: service de gestion des message tutoré
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_tutor:HttpServiceBddBase<Interface.Iservice_tutor> ;
-		public admin_service_tutor:HttpServiceBddAdminBase<Interface.Iservice_tutor> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_init_js
-		 desc: service qui retourne un init.js
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_init_js:HttpServiceBddBase<Interface.Iservice_init_js> ;
-		public admin_service_init_js:HttpServiceBddAdminBase<Interface.Iservice_init_js> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_infra_admin
-		 desc: administration de l'infra
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_infra_admin:HttpServiceBddBase<Interface.Iservice_infra_admin> ;
-		public admin_service_infra_admin:HttpServiceBddAdminBase<Interface.Iservice_infra_admin> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :mailtoinfra2
-		 desc: retrouve la configuration de connection de l'app savy a partir du mail de l'utilisateur
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public mailtoinfra2:HttpServiceBddBase<Interface.Imailtoinfra2> ;
-		public admin_mailtoinfra2:HttpServiceBddAdminBase<Interface.Imailtoinfra2> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_planned_tasks
-		 desc: Service de Taches planifiées
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_planned_tasks:HttpServiceBddBase<Interface.Iservice_planned_tasks> ;
-		public admin_service_planned_tasks:HttpServiceBddAdminBase<Interface.Iservice_planned_tasks> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :Service_scorm_gateway
-		 desc: service passerelle d'un package scorm vers l'interne
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public Service_scorm_gateway:HttpServiceBddBase<Interface.IService_scorm_gateway> ;
-		public admin_Service_scorm_gateway:HttpServiceBddAdminBase<Interface.IService_scorm_gateway> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_nginxMultiConfigurator
-		 desc: configuration d'un service nginx multi configuration
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_nginxMultiConfigurator:HttpServiceBddBase<Interface.Iservice_nginxMultiConfigurator> ;
-		public admin_service_nginxMultiConfigurator:HttpServiceBddAdminBase<Interface.Iservice_nginxMultiConfigurator> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_client_ftp
-		 desc: client ftps
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_client_ftp:HttpServiceBddBase<Interface.Iservice_client_ftp> ;
-		public admin_service_client_ftp:HttpServiceBddAdminBase<Interface.Iservice_client_ftp> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_polo_celio
-		 desc: service de tirage au sort de polo
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_polo_celio:HttpServiceBddBase<Interface.Iservice_polo_celio> ;
-		public admin_service_polo_celio:HttpServiceBddAdminBase<Interface.Iservice_polo_celio> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_fso
-		 desc: remote file system
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_fso:HttpServiceBddBase<Interface.Iservice_fso> ;
-		public admin_service_fso:HttpServiceBddAdminBase<Interface.Iservice_fso> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_pdfrip
-		 desc: service de creation de pdf
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_pdfrip:HttpServiceBddBase<Interface.Iservice_pdfrip> ;
-		public admin_service_pdfrip:HttpServiceBddAdminBase<Interface.Iservice_pdfrip> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_signin
-		 desc: service d'enregistrement
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_signin:HttpServiceBddBase<Interface.Iservice_signin> ;
-		public admin_service_signin:HttpServiceBddAdminBase<Interface.Iservice_signin> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_mindsUp
-		 desc: service minds up metier
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_mindsUp:HttpServiceBddBase<Interface.Iservice_mindsUp> ;
-		public admin_service_mindsUp:HttpServiceBddAdminBase<Interface.Iservice_mindsUp> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_webAppConf
-		 desc: permet de générer les fichier de conf des app (css, js, ...)
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_webAppConf:HttpServiceBddBase<Interface.Iservice_webAppConf> ;
-		public admin_service_webAppConf:HttpServiceBddAdminBase<Interface.Iservice_webAppConf> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :swagger_conv
-		 desc: convertisseur de swagger
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public swagger_conv:HttpServiceBddBase<Interface.Iswagger_conv> ;
-		public admin_swagger_conv:HttpServiceBddAdminBase<Interface.Iswagger_conv> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_mongo
-		 desc: configure un service mongo
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_mongo:HttpServiceBddBase<Interface.Iservice_mongo> ;
-		public admin_service_mongo:HttpServiceBddAdminBase<Interface.Iservice_mongo> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_celio_qcm_admin
-		 desc: service celio qcm admin
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_qcm_admin:HttpServiceBddBase<Interface.Iservice_celio_qcm_admin> ;
-		public admin_service_celio_qcm_admin:HttpServiceBddAdminBase<Interface.Iservice_celio_qcm_admin> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_ferrand
-		 desc: service ferrand
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_ferrand:HttpServiceBddBase<Interface.Iservice_ferrand> ;
-		public admin_service_ferrand:HttpServiceBddAdminBase<Interface.Iservice_ferrand> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_petit_moulin
-		 desc: service petit moulin
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_petit_moulin:HttpServiceBddBase<Interface.Iservice_petit_moulin> ;
-		public admin_service_petit_moulin:HttpServiceBddAdminBase<Interface.Iservice_petit_moulin> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_celio_qcm
-		 desc: service celio qcm
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_qcm:HttpServiceBddBase<Interface.Iservice_celio_qcm> ;
-		public admin_service_celio_qcm:HttpServiceBddAdminBase<Interface.Iservice_celio_qcm> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_comptoireOr
-		 desc: service_comptoireOr
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_comptoireOr:HttpServiceBddBase<Interface.Iservice_comptoireOr> ;
-		public admin_service_comptoireOr:HttpServiceBddAdminBase<Interface.Iservice_comptoireOr> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_airport
-		 desc: service airport
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_airport:HttpServiceBddBase<Interface.Iservice_airport> ;
-		public admin_service_airport:HttpServiceBddAdminBase<Interface.Iservice_airport> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_celio_back_task
-		 desc: service celio back_task
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_back_task:HttpServiceBddBase<Interface.Iservice_celio_back_task> ;
-		public admin_service_celio_back_task:HttpServiceBddAdminBase<Interface.Iservice_celio_back_task> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_celio_fid
-		 desc: service celio fid
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_fid:HttpServiceBddBase<Interface.Iservice_celio_fid> ;
-		public admin_service_celio_fid:HttpServiceBddAdminBase<Interface.Iservice_celio_fid> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :dpd_dervice
-		 desc: Proxy pou rles service c'evoi de colis de DPD
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public dpd_dervice:HttpServiceBddBase<Interface.Idpd_dervice> ;
-		public admin_dpd_dervice:HttpServiceBddAdminBase<Interface.Idpd_dervice> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_celio_fid_admin
-		 desc: service celio fid admin
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_celio_fid_admin:HttpServiceBddBase<Interface.Iservice_celio_fid_admin> ;
-		public admin_service_celio_fid_admin:HttpServiceBddAdminBase<Interface.Iservice_celio_fid_admin> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :boisdor_service
-		 desc: service métier de boisdor
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public boisdor_service:HttpServiceBddBase<Interface.Iboisdor_service> ;
-		public admin_boisdor_service:HttpServiceBddAdminBase<Interface.Iboisdor_service> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :QBP_service
-		 desc: service métier de QBP
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public QBP_service:HttpServiceBddBase<Interface.IQBP_service> ;
-		public admin_QBP_service:HttpServiceBddAdminBase<Interface.IQBP_service> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :service_qcbm
-		 desc: service_qcbm
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public service_qcbm:HttpServiceBddBase<Interface.Iservice_qcbm> ;
-		public admin_service_qcbm:HttpServiceBddAdminBase<Interface.Iservice_qcbm> ;
-
-		 
-		 /**
-		 service d'accès a la sous-collection :r3_service
-		 desc: service métier de QBP
-		 info: vous ne pouvez voir que ce type d'objet
-		*/
-		public r3_service:HttpServiceBddBase<Interface.Ir3_service> ;
-		public admin_r3_service:HttpServiceBddAdminBase<Interface.Ir3_service> ;
-
-		 
-	
-		/**
-		 service d'accès à la collection :bois_dor_mailer
-		 desc: liste de tous les templates de mail pour bois d'or
-		 
-
-		 
-		*/
-		public bois_dor_mailer:HttpServiceBddBase<Interface.Ibois_dor_mailer> ;
-		public admin_bois_dor_mailer:HttpServiceBddAdminBase<Interface.Ibois_dor_mailer> ;
-
-		
 	
 	
 }

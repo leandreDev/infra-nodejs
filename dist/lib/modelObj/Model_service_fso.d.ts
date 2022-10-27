@@ -17,4 +17,8 @@ local file path
 url du service de bd
 */
     "bddServiceUrl": string;
+    /**
+la collection des clef url disponible
+*/
+    "proxy"?: Interface.Iname_value[];
 }
